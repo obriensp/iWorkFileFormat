@@ -1,0 +1,836 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		572CA50E182334A700A2FFC5 /* KNArchives.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = 572CA4CB182334A700A2FFC5 /* KNArchives.pb.cc */; };
+		572CA50F182334A700A2FFC5 /* KNCommandArchives.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = 572CA4CD182334A700A2FFC5 /* KNCommandArchives.pb.cc */; };
+		572CA526182334A700A2FFC5 /* TSAArchives.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = 572CA4E6182334A700A2FFC5 /* TSAArchives.pb.cc */; };
+		572CA527182334A700A2FFC5 /* TSCEArchives.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = 572CA4E8182334A700A2FFC5 /* TSCEArchives.pb.cc */; };
+		572CA528182334A700A2FFC5 /* TSCH3DArchives.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = 572CA4EA182334A700A2FFC5 /* TSCH3DArchives.pb.cc */; };
+		572CA529182334A700A2FFC5 /* TSCHArchives.Common.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = 572CA4EC182334A700A2FFC5 /* TSCHArchives.Common.pb.cc */; };
+		572CA52A182334A700A2FFC5 /* TSCHArchives.GEN.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = 572CA4EE182334A700A2FFC5 /* TSCHArchives.GEN.pb.cc */; };
+		572CA52B182334A700A2FFC5 /* TSCHArchives.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = 572CA4F0182334A700A2FFC5 /* TSCHArchives.pb.cc */; };
+		572CA52C182334A700A2FFC5 /* TSCHCommandArchives.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = 572CA4F2182334A700A2FFC5 /* TSCHCommandArchives.pb.cc */; };
+		572CA52D182334A700A2FFC5 /* TSCHPreUFFArchives.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = 572CA4F4182334A700A2FFC5 /* TSCHPreUFFArchives.pb.cc */; };
+		572CA52E182334A700A2FFC5 /* TSDArchives.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = 572CA4F6182334A700A2FFC5 /* TSDArchives.pb.cc */; };
+		572CA52F182334A700A2FFC5 /* TSDCommandArchives.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = 572CA4F8182334A700A2FFC5 /* TSDCommandArchives.pb.cc */; };
+		572CA530182334A700A2FFC5 /* TSKArchives.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = 572CA4FA182334A700A2FFC5 /* TSKArchives.pb.cc */; };
+		572CA531182334A700A2FFC5 /* TSPArchiveMessages.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = 572CA4FC182334A700A2FFC5 /* TSPArchiveMessages.pb.cc */; };
+		572CA532182334A700A2FFC5 /* TSPDatabaseMessages.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = 572CA4FE182334A700A2FFC5 /* TSPDatabaseMessages.pb.cc */; };
+		572CA533182334A700A2FFC5 /* TSPMessages.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = 572CA500182334A700A2FFC5 /* TSPMessages.pb.cc */; };
+		572CA534182334A700A2FFC5 /* TSSArchives.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = 572CA502182334A700A2FFC5 /* TSSArchives.pb.cc */; };
+		572CA535182334A700A2FFC5 /* TSTArchives.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = 572CA504182334A700A2FFC5 /* TSTArchives.pb.cc */; };
+		572CA536182334A700A2FFC5 /* TSTCommandArchives.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = 572CA506182334A700A2FFC5 /* TSTCommandArchives.pb.cc */; };
+		572CA537182334A700A2FFC5 /* TSTStylePropertyArchiving.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = 572CA508182334A700A2FFC5 /* TSTStylePropertyArchiving.pb.cc */; };
+		572CA538182334A700A2FFC5 /* TSWPArchives.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = 572CA50A182334A700A2FFC5 /* TSWPArchives.pb.cc */; };
+		572CA539182334A700A2FFC5 /* TSWPCommandArchives.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = 572CA50C182334A700A2FFC5 /* TSWPCommandArchives.pb.cc */; };
+		57329BEA1828CF98003E702B /* NSData+IWSnappy.mm in Sources */ = {isa = PBXBuildFile; fileRef = 57329BE91828CF98003E702B /* NSData+IWSnappy.mm */; };
+		57329BED1828D076003E702B /* NSData+IWCrypto.m in Sources */ = {isa = PBXBuildFile; fileRef = 57329BEC1828D076003E702B /* NSData+IWCrypto.m */; };
+		575CD91118239F4D00C90192 /* IWPasswordVerifier.m in Sources */ = {isa = PBXBuildFile; fileRef = 575CD91018239F4D00C90192 /* IWPasswordVerifier.m */; };
+		575CD9151823A7D500C90192 /* IWDocumentPasswordWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 575CD9131823A7D500C90192 /* IWDocumentPasswordWindowController.m */; };
+		575CD9161823A7D500C90192 /* IWDocumentPasswordWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 575CD9141823A7D500C90192 /* IWDocumentPasswordWindowController.xib */; };
+		575CD91A1823BAC400C90192 /* IWBadgedImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 575CD9191823BAC400C90192 /* IWBadgedImageView.m */; };
+		575CD91C1823BDA300C90192 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 575CD91B1823BDA300C90192 /* QuartzCore.framework */; };
+		575CD9241823CB9A00C90192 /* IWKeychainUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 575CD9231823CB9A00C90192 /* IWKeychainUtils.m */; };
+		575CD9291823D3C600C90192 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 575CD9281823D3C600C90192 /* Security.framework */; };
+		576B646218228DDE005D22E3 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 576B646118228DDE005D22E3 /* Cocoa.framework */; };
+		576B646E18228DDE005D22E3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 576B646D18228DDE005D22E3 /* main.m */; };
+		576B648418228DDE005D22E3 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 576B648318228DDE005D22E3 /* XCTest.framework */; };
+		576B648518228DDE005D22E3 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 576B646118228DDE005D22E3 /* Cocoa.framework */; };
+		576B648D18228DDE005D22E3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 576B648B18228DDE005D22E3 /* InfoPlist.strings */; };
+		576B648F18228DDE005D22E3 /* iWork_File_InspectorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 576B648E18228DDE005D22E3 /* iWork_File_InspectorTests.m */; };
+		576B64D218230836005D22E3 /* IWZipArchive.m in Sources */ = {isa = PBXBuildFile; fileRef = 576B64D118230836005D22E3 /* IWZipArchive.m */; };
+		576B64DD1823223D005D22E3 /* libsnappy.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 576B64DC1823223D005D22E3 /* libsnappy.a */; };
+		576B64DF1823224F005D22E3 /* libprotobuf.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 576B64DE1823224F005D22E3 /* libprotobuf.a */; };
+		576FBEFB18234D4F00A27553 /* IWMessageTypeRegistry.mm in Sources */ = {isa = PBXBuildFile; fileRef = 576FBEFA18234D4F00A27553 /* IWMessageTypeRegistry.mm */; };
+		5773C1421825CD310095FAA9 /* IWWindowShakeAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5773C1411825CD310095FAA9 /* IWWindowShakeAnimation.m */; };
+		577FF8C81829F06800E0B200 /* IWBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = 577FF8C71829F06800E0B200 /* IWBundle.m */; };
+		577FF8CF1829F0A600E0B200 /* IWDocument.mm in Sources */ = {isa = PBXBuildFile; fileRef = 577FF8CB1829F0A600E0B200 /* IWDocument.mm */; };
+		577FF8D01829F0A600E0B200 /* IWDocument.xib in Resources */ = {isa = PBXBuildFile; fileRef = 577FF8CC1829F0A600E0B200 /* IWDocument.xib */; };
+		577FF8D11829F0A600E0B200 /* IWDocumentMessage.mm in Sources */ = {isa = PBXBuildFile; fileRef = 577FF8CE1829F0A600E0B200 /* IWDocumentMessage.mm */; };
+		577FF8D61829F0CD00E0B200 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 577FF8D31829F0CD00E0B200 /* MainMenu.xib */; };
+		577FF8D71829F0CD00E0B200 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 577FF8D51829F0CD00E0B200 /* Images.xcassets */; };
+		577FF8DE1829F3EE00E0B200 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 577FF8DC1829F3EE00E0B200 /* InfoPlist.strings */; };
+		577FF8E11829F52C00E0B200 /* IWBundleProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 577FF8E01829F52C00E0B200 /* IWBundleProperties.m */; };
+		579AFD371825E58300842F91 /* crc32.c in Sources */ = {isa = PBXBuildFile; fileRef = 579AFD361825E58300842F91 /* crc32.c */; };
+		57EC5BD718276EEF00EB8D0E /* TNArchives.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = 57EC5BCF18276EEF00EB8D0E /* TNArchives.pb.cc */; };
+		57EC5BD818276EEF00EB8D0E /* TNCommandArchives.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = 57EC5BD118276EEF00EB8D0E /* TNCommandArchives.pb.cc */; };
+		57EC5BD918276EEF00EB8D0E /* TPArchives.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = 57EC5BD318276EEF00EB8D0E /* TPArchives.pb.cc */; };
+		57EC5BDA18276EEF00EB8D0E /* TPCommandArchives.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = 57EC5BD518276EEF00EB8D0E /* TPCommandArchives.pb.cc */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		576B648618228DDE005D22E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 576B645618228DDE005D22E3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 576B645D18228DDE005D22E3;
+			remoteInfo = iWorkFileInspector;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		576B64CB182305CD005D22E3 /* Copy Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Copy Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		572CA4CB182334A700A2FFC5 /* KNArchives.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = KNArchives.pb.cc; sourceTree = "<group>"; };
+		572CA4CC182334A700A2FFC5 /* KNArchives.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KNArchives.pb.h; sourceTree = "<group>"; };
+		572CA4CD182334A700A2FFC5 /* KNCommandArchives.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = KNCommandArchives.pb.cc; sourceTree = "<group>"; };
+		572CA4CE182334A700A2FFC5 /* KNCommandArchives.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KNCommandArchives.pb.h; sourceTree = "<group>"; };
+		572CA4E6182334A700A2FFC5 /* TSAArchives.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TSAArchives.pb.cc; sourceTree = "<group>"; };
+		572CA4E7182334A700A2FFC5 /* TSAArchives.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSAArchives.pb.h; sourceTree = "<group>"; };
+		572CA4E8182334A700A2FFC5 /* TSCEArchives.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TSCEArchives.pb.cc; sourceTree = "<group>"; };
+		572CA4E9182334A700A2FFC5 /* TSCEArchives.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSCEArchives.pb.h; sourceTree = "<group>"; };
+		572CA4EA182334A700A2FFC5 /* TSCH3DArchives.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TSCH3DArchives.pb.cc; sourceTree = "<group>"; };
+		572CA4EB182334A700A2FFC5 /* TSCH3DArchives.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSCH3DArchives.pb.h; sourceTree = "<group>"; };
+		572CA4EC182334A700A2FFC5 /* TSCHArchives.Common.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TSCHArchives.Common.pb.cc; sourceTree = "<group>"; };
+		572CA4ED182334A700A2FFC5 /* TSCHArchives.Common.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSCHArchives.Common.pb.h; sourceTree = "<group>"; };
+		572CA4EE182334A700A2FFC5 /* TSCHArchives.GEN.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TSCHArchives.GEN.pb.cc; sourceTree = "<group>"; };
+		572CA4EF182334A700A2FFC5 /* TSCHArchives.GEN.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSCHArchives.GEN.pb.h; sourceTree = "<group>"; };
+		572CA4F0182334A700A2FFC5 /* TSCHArchives.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TSCHArchives.pb.cc; sourceTree = "<group>"; };
+		572CA4F1182334A700A2FFC5 /* TSCHArchives.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSCHArchives.pb.h; sourceTree = "<group>"; };
+		572CA4F2182334A700A2FFC5 /* TSCHCommandArchives.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TSCHCommandArchives.pb.cc; sourceTree = "<group>"; };
+		572CA4F3182334A700A2FFC5 /* TSCHCommandArchives.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSCHCommandArchives.pb.h; sourceTree = "<group>"; };
+		572CA4F4182334A700A2FFC5 /* TSCHPreUFFArchives.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TSCHPreUFFArchives.pb.cc; sourceTree = "<group>"; };
+		572CA4F5182334A700A2FFC5 /* TSCHPreUFFArchives.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSCHPreUFFArchives.pb.h; sourceTree = "<group>"; };
+		572CA4F6182334A700A2FFC5 /* TSDArchives.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TSDArchives.pb.cc; sourceTree = "<group>"; };
+		572CA4F7182334A700A2FFC5 /* TSDArchives.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSDArchives.pb.h; sourceTree = "<group>"; };
+		572CA4F8182334A700A2FFC5 /* TSDCommandArchives.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TSDCommandArchives.pb.cc; sourceTree = "<group>"; };
+		572CA4F9182334A700A2FFC5 /* TSDCommandArchives.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSDCommandArchives.pb.h; sourceTree = "<group>"; };
+		572CA4FA182334A700A2FFC5 /* TSKArchives.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TSKArchives.pb.cc; sourceTree = "<group>"; };
+		572CA4FB182334A700A2FFC5 /* TSKArchives.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSKArchives.pb.h; sourceTree = "<group>"; };
+		572CA4FC182334A700A2FFC5 /* TSPArchiveMessages.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TSPArchiveMessages.pb.cc; sourceTree = "<group>"; };
+		572CA4FD182334A700A2FFC5 /* TSPArchiveMessages.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSPArchiveMessages.pb.h; sourceTree = "<group>"; };
+		572CA4FE182334A700A2FFC5 /* TSPDatabaseMessages.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TSPDatabaseMessages.pb.cc; sourceTree = "<group>"; };
+		572CA4FF182334A700A2FFC5 /* TSPDatabaseMessages.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSPDatabaseMessages.pb.h; sourceTree = "<group>"; };
+		572CA500182334A700A2FFC5 /* TSPMessages.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TSPMessages.pb.cc; sourceTree = "<group>"; };
+		572CA501182334A700A2FFC5 /* TSPMessages.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSPMessages.pb.h; sourceTree = "<group>"; };
+		572CA502182334A700A2FFC5 /* TSSArchives.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TSSArchives.pb.cc; sourceTree = "<group>"; };
+		572CA503182334A700A2FFC5 /* TSSArchives.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSSArchives.pb.h; sourceTree = "<group>"; };
+		572CA504182334A700A2FFC5 /* TSTArchives.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TSTArchives.pb.cc; sourceTree = "<group>"; };
+		572CA505182334A700A2FFC5 /* TSTArchives.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSTArchives.pb.h; sourceTree = "<group>"; };
+		572CA506182334A700A2FFC5 /* TSTCommandArchives.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TSTCommandArchives.pb.cc; sourceTree = "<group>"; };
+		572CA507182334A700A2FFC5 /* TSTCommandArchives.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSTCommandArchives.pb.h; sourceTree = "<group>"; };
+		572CA508182334A700A2FFC5 /* TSTStylePropertyArchiving.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TSTStylePropertyArchiving.pb.cc; sourceTree = "<group>"; };
+		572CA509182334A700A2FFC5 /* TSTStylePropertyArchiving.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSTStylePropertyArchiving.pb.h; sourceTree = "<group>"; };
+		572CA50A182334A700A2FFC5 /* TSWPArchives.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TSWPArchives.pb.cc; sourceTree = "<group>"; };
+		572CA50B182334A700A2FFC5 /* TSWPArchives.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSWPArchives.pb.h; sourceTree = "<group>"; };
+		572CA50C182334A700A2FFC5 /* TSWPCommandArchives.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TSWPCommandArchives.pb.cc; sourceTree = "<group>"; };
+		572CA50D182334A700A2FFC5 /* TSWPCommandArchives.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSWPCommandArchives.pb.h; sourceTree = "<group>"; };
+		57329BE81828CF98003E702B /* NSData+IWSnappy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+IWSnappy.h"; sourceTree = "<group>"; };
+		57329BE91828CF98003E702B /* NSData+IWSnappy.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "NSData+IWSnappy.mm"; sourceTree = "<group>"; };
+		57329BEB1828D076003E702B /* NSData+IWCrypto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+IWCrypto.h"; sourceTree = "<group>"; };
+		57329BEC1828D076003E702B /* NSData+IWCrypto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+IWCrypto.m"; sourceTree = "<group>"; };
+		575CD90F18239F4D00C90192 /* IWPasswordVerifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IWPasswordVerifier.h; sourceTree = "<group>"; };
+		575CD91018239F4D00C90192 /* IWPasswordVerifier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IWPasswordVerifier.m; sourceTree = "<group>"; };
+		575CD9121823A7D500C90192 /* IWDocumentPasswordWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IWDocumentPasswordWindowController.h; sourceTree = "<group>"; };
+		575CD9131823A7D500C90192 /* IWDocumentPasswordWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IWDocumentPasswordWindowController.m; sourceTree = "<group>"; };
+		575CD9141823A7D500C90192 /* IWDocumentPasswordWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IWDocumentPasswordWindowController.xib; sourceTree = "<group>"; };
+		575CD9181823BAC400C90192 /* IWBadgedImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IWBadgedImageView.h; sourceTree = "<group>"; };
+		575CD9191823BAC400C90192 /* IWBadgedImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IWBadgedImageView.m; sourceTree = "<group>"; };
+		575CD91B1823BDA300C90192 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		575CD9221823CB9A00C90192 /* IWKeychainUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IWKeychainUtils.h; sourceTree = "<group>"; };
+		575CD9231823CB9A00C90192 /* IWKeychainUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IWKeychainUtils.m; sourceTree = "<group>"; };
+		575CD9281823D3C600C90192 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		576B645E18228DDE005D22E3 /* iWorkFileInspector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iWorkFileInspector.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		576B646118228DDE005D22E3 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		576B646418228DDE005D22E3 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		576B646518228DDE005D22E3 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		576B646618228DDE005D22E3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		576B646918228DDE005D22E3 /* iWorkFileInspector-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iWorkFileInspector-Info.plist"; sourceTree = "<group>"; };
+		576B646D18228DDE005D22E3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		576B646F18228DDE005D22E3 /* iWorkFileInspector-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iWorkFileInspector-Prefix.pch"; sourceTree = "<group>"; };
+		576B648218228DDE005D22E3 /* iWorkFileInspectorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iWorkFileInspectorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		576B648318228DDE005D22E3 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		576B648A18228DDE005D22E3 /* iWorkFileInspectorTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iWorkFileInspectorTests-Info.plist"; sourceTree = "<group>"; };
+		576B648C18228DDE005D22E3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		576B648E18228DDE005D22E3 /* iWork_File_InspectorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iWork_File_InspectorTests.m; sourceTree = "<group>"; };
+		576B64D018230836005D22E3 /* IWZipArchive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IWZipArchive.h; sourceTree = "<group>"; };
+		576B64D118230836005D22E3 /* IWZipArchive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IWZipArchive.m; sourceTree = "<group>"; };
+		576B64DC1823223D005D22E3 /* libsnappy.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libsnappy.a; path = Externals/prebuilt/lib/libsnappy.a; sourceTree = "<group>"; };
+		576B64DE1823224F005D22E3 /* libprotobuf.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libprotobuf.a; path = Externals/prebuilt/lib/libprotobuf.a; sourceTree = "<group>"; };
+		576FBEF918234D4F00A27553 /* IWMessageTypeRegistry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IWMessageTypeRegistry.h; sourceTree = "<group>"; };
+		576FBEFA18234D4F00A27553 /* IWMessageTypeRegistry.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = IWMessageTypeRegistry.mm; sourceTree = "<group>"; };
+		5773C1401825CD310095FAA9 /* IWWindowShakeAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IWWindowShakeAnimation.h; sourceTree = "<group>"; };
+		5773C1411825CD310095FAA9 /* IWWindowShakeAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IWWindowShakeAnimation.m; sourceTree = "<group>"; };
+		577FF8C61829F06800E0B200 /* IWBundle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IWBundle.h; sourceTree = "<group>"; };
+		577FF8C71829F06800E0B200 /* IWBundle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IWBundle.m; sourceTree = "<group>"; };
+		577FF8CA1829F0A600E0B200 /* IWDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IWDocument.h; sourceTree = "<group>"; };
+		577FF8CB1829F0A600E0B200 /* IWDocument.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = IWDocument.mm; sourceTree = "<group>"; };
+		577FF8CC1829F0A600E0B200 /* IWDocument.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IWDocument.xib; sourceTree = "<group>"; };
+		577FF8CD1829F0A600E0B200 /* IWDocumentMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IWDocumentMessage.h; sourceTree = "<group>"; };
+		577FF8CE1829F0A600E0B200 /* IWDocumentMessage.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = IWDocumentMessage.mm; sourceTree = "<group>"; };
+		577FF8D41829F0CD00E0B200 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		577FF8D51829F0CD00E0B200 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		577FF8DD1829F3EE00E0B200 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		577FF8DF1829F52C00E0B200 /* IWBundleProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IWBundleProperties.h; sourceTree = "<group>"; };
+		577FF8E01829F52C00E0B200 /* IWBundleProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IWBundleProperties.m; sourceTree = "<group>"; };
+		579AFD361825E58300842F91 /* crc32.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = crc32.c; sourceTree = "<group>"; };
+		57EC5BCF18276EEF00EB8D0E /* TNArchives.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TNArchives.pb.cc; sourceTree = "<group>"; };
+		57EC5BD018276EEF00EB8D0E /* TNArchives.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TNArchives.pb.h; sourceTree = "<group>"; };
+		57EC5BD118276EEF00EB8D0E /* TNCommandArchives.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TNCommandArchives.pb.cc; sourceTree = "<group>"; };
+		57EC5BD218276EEF00EB8D0E /* TNCommandArchives.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TNCommandArchives.pb.h; sourceTree = "<group>"; };
+		57EC5BD318276EEF00EB8D0E /* TPArchives.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TPArchives.pb.cc; sourceTree = "<group>"; };
+		57EC5BD418276EEF00EB8D0E /* TPArchives.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPArchives.pb.h; sourceTree = "<group>"; };
+		57EC5BD518276EEF00EB8D0E /* TPCommandArchives.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TPCommandArchives.pb.cc; sourceTree = "<group>"; };
+		57EC5BD618276EEF00EB8D0E /* TPCommandArchives.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPCommandArchives.pb.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		576B645B18228DDE005D22E3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				576B646218228DDE005D22E3 /* Cocoa.framework in Frameworks */,
+				576B64DF1823224F005D22E3 /* libprotobuf.a in Frameworks */,
+				576B64DD1823223D005D22E3 /* libsnappy.a in Frameworks */,
+				575CD91C1823BDA300C90192 /* QuartzCore.framework in Frameworks */,
+				575CD9291823D3C600C90192 /* Security.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		576B647F18228DDE005D22E3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				576B648518228DDE005D22E3 /* Cocoa.framework in Frameworks */,
+				576B648418228DDE005D22E3 /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		572CA4CA182334A700A2FFC5 /* Messages */ = {
+			isa = PBXGroup;
+			children = (
+				572CA4CB182334A700A2FFC5 /* KNArchives.pb.cc */,
+				572CA4CC182334A700A2FFC5 /* KNArchives.pb.h */,
+				572CA4CD182334A700A2FFC5 /* KNCommandArchives.pb.cc */,
+				572CA4CE182334A700A2FFC5 /* KNCommandArchives.pb.h */,
+				57EC5BCF18276EEF00EB8D0E /* TNArchives.pb.cc */,
+				57EC5BD018276EEF00EB8D0E /* TNArchives.pb.h */,
+				57EC5BD118276EEF00EB8D0E /* TNCommandArchives.pb.cc */,
+				57EC5BD218276EEF00EB8D0E /* TNCommandArchives.pb.h */,
+				57EC5BD318276EEF00EB8D0E /* TPArchives.pb.cc */,
+				57EC5BD418276EEF00EB8D0E /* TPArchives.pb.h */,
+				57EC5BD518276EEF00EB8D0E /* TPCommandArchives.pb.cc */,
+				57EC5BD618276EEF00EB8D0E /* TPCommandArchives.pb.h */,
+				572CA4E6182334A700A2FFC5 /* TSAArchives.pb.cc */,
+				572CA4E7182334A700A2FFC5 /* TSAArchives.pb.h */,
+				572CA4E8182334A700A2FFC5 /* TSCEArchives.pb.cc */,
+				572CA4E9182334A700A2FFC5 /* TSCEArchives.pb.h */,
+				572CA4EA182334A700A2FFC5 /* TSCH3DArchives.pb.cc */,
+				572CA4EB182334A700A2FFC5 /* TSCH3DArchives.pb.h */,
+				572CA4EC182334A700A2FFC5 /* TSCHArchives.Common.pb.cc */,
+				572CA4ED182334A700A2FFC5 /* TSCHArchives.Common.pb.h */,
+				572CA4EE182334A700A2FFC5 /* TSCHArchives.GEN.pb.cc */,
+				572CA4EF182334A700A2FFC5 /* TSCHArchives.GEN.pb.h */,
+				572CA4F0182334A700A2FFC5 /* TSCHArchives.pb.cc */,
+				572CA4F1182334A700A2FFC5 /* TSCHArchives.pb.h */,
+				572CA4F2182334A700A2FFC5 /* TSCHCommandArchives.pb.cc */,
+				572CA4F3182334A700A2FFC5 /* TSCHCommandArchives.pb.h */,
+				572CA4F4182334A700A2FFC5 /* TSCHPreUFFArchives.pb.cc */,
+				572CA4F5182334A700A2FFC5 /* TSCHPreUFFArchives.pb.h */,
+				572CA4F6182334A700A2FFC5 /* TSDArchives.pb.cc */,
+				572CA4F7182334A700A2FFC5 /* TSDArchives.pb.h */,
+				572CA4F8182334A700A2FFC5 /* TSDCommandArchives.pb.cc */,
+				572CA4F9182334A700A2FFC5 /* TSDCommandArchives.pb.h */,
+				572CA4FA182334A700A2FFC5 /* TSKArchives.pb.cc */,
+				572CA4FB182334A700A2FFC5 /* TSKArchives.pb.h */,
+				572CA4FC182334A700A2FFC5 /* TSPArchiveMessages.pb.cc */,
+				572CA4FD182334A700A2FFC5 /* TSPArchiveMessages.pb.h */,
+				572CA4FE182334A700A2FFC5 /* TSPDatabaseMessages.pb.cc */,
+				572CA4FF182334A700A2FFC5 /* TSPDatabaseMessages.pb.h */,
+				572CA500182334A700A2FFC5 /* TSPMessages.pb.cc */,
+				572CA501182334A700A2FFC5 /* TSPMessages.pb.h */,
+				572CA502182334A700A2FFC5 /* TSSArchives.pb.cc */,
+				572CA503182334A700A2FFC5 /* TSSArchives.pb.h */,
+				572CA504182334A700A2FFC5 /* TSTArchives.pb.cc */,
+				572CA505182334A700A2FFC5 /* TSTArchives.pb.h */,
+				572CA506182334A700A2FFC5 /* TSTCommandArchives.pb.cc */,
+				572CA507182334A700A2FFC5 /* TSTCommandArchives.pb.h */,
+				572CA508182334A700A2FFC5 /* TSTStylePropertyArchiving.pb.cc */,
+				572CA509182334A700A2FFC5 /* TSTStylePropertyArchiving.pb.h */,
+				572CA50A182334A700A2FFC5 /* TSWPArchives.pb.cc */,
+				572CA50B182334A700A2FFC5 /* TSWPArchives.pb.h */,
+				572CA50C182334A700A2FFC5 /* TSWPCommandArchives.pb.cc */,
+				572CA50D182334A700A2FFC5 /* TSWPCommandArchives.pb.h */,
+			);
+			path = Messages;
+			sourceTree = "<group>";
+		};
+		57329BE71828CF7C003E702B /* Snappy */ = {
+			isa = PBXGroup;
+			children = (
+				57329BE81828CF98003E702B /* NSData+IWSnappy.h */,
+				57329BE91828CF98003E702B /* NSData+IWSnappy.mm */,
+			);
+			path = Snappy;
+			sourceTree = "<group>";
+		};
+		575CD9081823987E00C90192 /* Crypto */ = {
+			isa = PBXGroup;
+			children = (
+				575CD9121823A7D500C90192 /* IWDocumentPasswordWindowController.h */,
+				575CD9131823A7D500C90192 /* IWDocumentPasswordWindowController.m */,
+				575CD9141823A7D500C90192 /* IWDocumentPasswordWindowController.xib */,
+				575CD9221823CB9A00C90192 /* IWKeychainUtils.h */,
+				575CD9231823CB9A00C90192 /* IWKeychainUtils.m */,
+				575CD90F18239F4D00C90192 /* IWPasswordVerifier.h */,
+				575CD91018239F4D00C90192 /* IWPasswordVerifier.m */,
+				57329BEB1828D076003E702B /* NSData+IWCrypto.h */,
+				57329BEC1828D076003E702B /* NSData+IWCrypto.m */,
+			);
+			path = Crypto;
+			sourceTree = "<group>";
+		};
+		575CD9171823BAB000C90192 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				575CD9181823BAC400C90192 /* IWBadgedImageView.h */,
+				575CD9191823BAC400C90192 /* IWBadgedImageView.m */,
+				5773C1401825CD310095FAA9 /* IWWindowShakeAnimation.h */,
+				5773C1411825CD310095FAA9 /* IWWindowShakeAnimation.m */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		576B645518228DDE005D22E3 = {
+			isa = PBXGroup;
+			children = (
+				576B646718228DDE005D22E3 /* iWorkFileInspector */,
+				576B648818228DDE005D22E3 /* iWorkFileInspectorTests */,
+				576B649818230564005D22E3 /* Externals */,
+				576B646018228DDE005D22E3 /* Frameworks */,
+				576B645F18228DDE005D22E3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		576B645F18228DDE005D22E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				576B645E18228DDE005D22E3 /* iWorkFileInspector.app */,
+				576B648218228DDE005D22E3 /* iWorkFileInspectorTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		576B646018228DDE005D22E3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				576B646118228DDE005D22E3 /* Cocoa.framework */,
+				576B646318228DDE005D22E3 /* Other Frameworks */,
+				575CD91B1823BDA300C90192 /* QuartzCore.framework */,
+				575CD9281823D3C600C90192 /* Security.framework */,
+				576B648318228DDE005D22E3 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		576B646318228DDE005D22E3 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				576B646418228DDE005D22E3 /* AppKit.framework */,
+				576B646518228DDE005D22E3 /* CoreData.framework */,
+				576B646618228DDE005D22E3 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		576B646718228DDE005D22E3 /* iWorkFileInspector */ = {
+			isa = PBXGroup;
+			children = (
+				577FF8C51829F06800E0B200 /* Bundle */,
+				575CD9081823987E00C90192 /* Crypto */,
+				577FF8C91829F0A600E0B200 /* Document */,
+				572CA4CA182334A700A2FFC5 /* Messages */,
+				576FBEF818234D4500A27553 /* Persistence */,
+				577FF8D21829F0CD00E0B200 /* Resources */,
+				57329BE71828CF7C003E702B /* Snappy */,
+				576B646818228DDE005D22E3 /* Target */,
+				575CD9171823BAB000C90192 /* UI */,
+				576B64CF1823080F005D22E3 /* Zip */,
+			);
+			path = iWorkFileInspector;
+			sourceTree = "<group>";
+		};
+		576B646818228DDE005D22E3 /* Target */ = {
+			isa = PBXGroup;
+			children = (
+				576B646918228DDE005D22E3 /* iWorkFileInspector-Info.plist */,
+				576B646F18228DDE005D22E3 /* iWorkFileInspector-Prefix.pch */,
+				576B646D18228DDE005D22E3 /* main.m */,
+			);
+			path = Target;
+			sourceTree = "<group>";
+		};
+		576B648818228DDE005D22E3 /* iWorkFileInspectorTests */ = {
+			isa = PBXGroup;
+			children = (
+				576B648E18228DDE005D22E3 /* iWork_File_InspectorTests.m */,
+				576B648918228DDE005D22E3 /* Supporting Files */,
+			);
+			path = iWorkFileInspectorTests;
+			sourceTree = "<group>";
+		};
+		576B648918228DDE005D22E3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				576B648A18228DDE005D22E3 /* iWorkFileInspectorTests-Info.plist */,
+				576B648B18228DDE005D22E3 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		576B649818230564005D22E3 /* Externals */ = {
+			isa = PBXGroup;
+			children = (
+				576B64DE1823224F005D22E3 /* libprotobuf.a */,
+				576B64DC1823223D005D22E3 /* libsnappy.a */,
+			);
+			name = Externals;
+			sourceTree = "<group>";
+		};
+		576B64CF1823080F005D22E3 /* Zip */ = {
+			isa = PBXGroup;
+			children = (
+				579AFD361825E58300842F91 /* crc32.c */,
+				576B64D018230836005D22E3 /* IWZipArchive.h */,
+				576B64D118230836005D22E3 /* IWZipArchive.m */,
+			);
+			path = Zip;
+			sourceTree = "<group>";
+		};
+		576FBEF818234D4500A27553 /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				576FBEF918234D4F00A27553 /* IWMessageTypeRegistry.h */,
+				576FBEFA18234D4F00A27553 /* IWMessageTypeRegistry.mm */,
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
+		577FF8C51829F06800E0B200 /* Bundle */ = {
+			isa = PBXGroup;
+			children = (
+				577FF8C61829F06800E0B200 /* IWBundle.h */,
+				577FF8C71829F06800E0B200 /* IWBundle.m */,
+				577FF8DF1829F52C00E0B200 /* IWBundleProperties.h */,
+				577FF8E01829F52C00E0B200 /* IWBundleProperties.m */,
+			);
+			path = Bundle;
+			sourceTree = "<group>";
+		};
+		577FF8C91829F0A600E0B200 /* Document */ = {
+			isa = PBXGroup;
+			children = (
+				577FF8CA1829F0A600E0B200 /* IWDocument.h */,
+				577FF8CB1829F0A600E0B200 /* IWDocument.mm */,
+				577FF8CC1829F0A600E0B200 /* IWDocument.xib */,
+				577FF8CD1829F0A600E0B200 /* IWDocumentMessage.h */,
+				577FF8CE1829F0A600E0B200 /* IWDocumentMessage.mm */,
+			);
+			path = Document;
+			sourceTree = "<group>";
+		};
+		577FF8D21829F0CD00E0B200 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				577FF8D51829F0CD00E0B200 /* Images.xcassets */,
+				577FF8DC1829F3EE00E0B200 /* InfoPlist.strings */,
+				577FF8D31829F0CD00E0B200 /* MainMenu.xib */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		576B645D18228DDE005D22E3 /* iWorkFileInspector */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 576B649218228DDE005D22E3 /* Build configuration list for PBXNativeTarget "iWorkFileInspector" */;
+			buildPhases = (
+				576B645A18228DDE005D22E3 /* Sources */,
+				576B645B18228DDE005D22E3 /* Frameworks */,
+				576B645C18228DDE005D22E3 /* Resources */,
+				576B64CB182305CD005D22E3 /* Copy Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iWorkFileInspector;
+			productName = iWorkFileInspector;
+			productReference = 576B645E18228DDE005D22E3 /* iWorkFileInspector.app */;
+			productType = "com.apple.product-type.application";
+		};
+		576B648118228DDE005D22E3 /* iWorkFileInspectorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 576B649518228DDE005D22E3 /* Build configuration list for PBXNativeTarget "iWorkFileInspectorTests" */;
+			buildPhases = (
+				576B647E18228DDE005D22E3 /* Sources */,
+				576B647F18228DDE005D22E3 /* Frameworks */,
+				576B648018228DDE005D22E3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				576B648718228DDE005D22E3 /* PBXTargetDependency */,
+			);
+			name = iWorkFileInspectorTests;
+			productName = iWorkFileInspectorTests;
+			productReference = 576B648218228DDE005D22E3 /* iWorkFileInspectorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		576B645618228DDE005D22E3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = IW;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Sean Patrick O'Brien";
+				TargetAttributes = {
+					576B648118228DDE005D22E3 = {
+						TestTargetID = 576B645D18228DDE005D22E3;
+					};
+				};
+			};
+			buildConfigurationList = 576B645918228DDE005D22E3 /* Build configuration list for PBXProject "iWorkFileInspector" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 576B645518228DDE005D22E3;
+			productRefGroup = 576B645F18228DDE005D22E3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				576B645D18228DDE005D22E3 /* iWorkFileInspector */,
+				576B648118228DDE005D22E3 /* iWorkFileInspectorTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		576B645C18228DDE005D22E3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				575CD9161823A7D500C90192 /* IWDocumentPasswordWindowController.xib in Resources */,
+				577FF8D61829F0CD00E0B200 /* MainMenu.xib in Resources */,
+				577FF8D71829F0CD00E0B200 /* Images.xcassets in Resources */,
+				577FF8D01829F0A600E0B200 /* IWDocument.xib in Resources */,
+				577FF8DE1829F3EE00E0B200 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		576B648018228DDE005D22E3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				576B648D18228DDE005D22E3 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		576B645A18228DDE005D22E3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				57EC5BD918276EEF00EB8D0E /* TPArchives.pb.cc in Sources */,
+				572CA52B182334A700A2FFC5 /* TSCHArchives.pb.cc in Sources */,
+				572CA539182334A700A2FFC5 /* TSWPCommandArchives.pb.cc in Sources */,
+				572CA527182334A700A2FFC5 /* TSCEArchives.pb.cc in Sources */,
+				577FF8CF1829F0A600E0B200 /* IWDocument.mm in Sources */,
+				575CD9241823CB9A00C90192 /* IWKeychainUtils.m in Sources */,
+				572CA530182334A700A2FFC5 /* TSKArchives.pb.cc in Sources */,
+				576FBEFB18234D4F00A27553 /* IWMessageTypeRegistry.mm in Sources */,
+				572CA531182334A700A2FFC5 /* TSPArchiveMessages.pb.cc in Sources */,
+				577FF8C81829F06800E0B200 /* IWBundle.m in Sources */,
+				572CA50F182334A700A2FFC5 /* KNCommandArchives.pb.cc in Sources */,
+				572CA532182334A700A2FFC5 /* TSPDatabaseMessages.pb.cc in Sources */,
+				57EC5BD718276EEF00EB8D0E /* TNArchives.pb.cc in Sources */,
+				572CA534182334A700A2FFC5 /* TSSArchives.pb.cc in Sources */,
+				575CD91118239F4D00C90192 /* IWPasswordVerifier.m in Sources */,
+				572CA537182334A700A2FFC5 /* TSTStylePropertyArchiving.pb.cc in Sources */,
+				572CA529182334A700A2FFC5 /* TSCHArchives.Common.pb.cc in Sources */,
+				572CA533182334A700A2FFC5 /* TSPMessages.pb.cc in Sources */,
+				577FF8E11829F52C00E0B200 /* IWBundleProperties.m in Sources */,
+				572CA535182334A700A2FFC5 /* TSTArchives.pb.cc in Sources */,
+				572CA536182334A700A2FFC5 /* TSTCommandArchives.pb.cc in Sources */,
+				572CA52E182334A700A2FFC5 /* TSDArchives.pb.cc in Sources */,
+				572CA52F182334A700A2FFC5 /* TSDCommandArchives.pb.cc in Sources */,
+				572CA52D182334A700A2FFC5 /* TSCHPreUFFArchives.pb.cc in Sources */,
+				5773C1421825CD310095FAA9 /* IWWindowShakeAnimation.m in Sources */,
+				57329BEA1828CF98003E702B /* NSData+IWSnappy.mm in Sources */,
+				575CD91A1823BAC400C90192 /* IWBadgedImageView.m in Sources */,
+				57EC5BD818276EEF00EB8D0E /* TNCommandArchives.pb.cc in Sources */,
+				572CA526182334A700A2FFC5 /* TSAArchives.pb.cc in Sources */,
+				572CA538182334A700A2FFC5 /* TSWPArchives.pb.cc in Sources */,
+				572CA528182334A700A2FFC5 /* TSCH3DArchives.pb.cc in Sources */,
+				57329BED1828D076003E702B /* NSData+IWCrypto.m in Sources */,
+				576B64D218230836005D22E3 /* IWZipArchive.m in Sources */,
+				579AFD371825E58300842F91 /* crc32.c in Sources */,
+				572CA52A182334A700A2FFC5 /* TSCHArchives.GEN.pb.cc in Sources */,
+				577FF8D11829F0A600E0B200 /* IWDocumentMessage.mm in Sources */,
+				57EC5BDA18276EEF00EB8D0E /* TPCommandArchives.pb.cc in Sources */,
+				572CA52C182334A700A2FFC5 /* TSCHCommandArchives.pb.cc in Sources */,
+				572CA50E182334A700A2FFC5 /* KNArchives.pb.cc in Sources */,
+				575CD9151823A7D500C90192 /* IWDocumentPasswordWindowController.m in Sources */,
+				576B646E18228DDE005D22E3 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		576B647E18228DDE005D22E3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				576B648F18228DDE005D22E3 /* iWork_File_InspectorTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		576B648718228DDE005D22E3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 576B645D18228DDE005D22E3 /* iWorkFileInspector */;
+			targetProxy = 576B648618228DDE005D22E3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		576B648B18228DDE005D22E3 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				576B648C18228DDE005D22E3 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		577FF8D31829F0CD00E0B200 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				577FF8D41829F0CD00E0B200 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		577FF8DC1829F3EE00E0B200 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				577FF8DD1829F3EE00E0B200 /* Base */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		576B649018228DDE005D22E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		576B649118228DDE005D22E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		576B649318228DDE005D22E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iWorkFileInspector/Target/iWorkFileInspector-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/Externals/prebuilt/include",
+				);
+				INFOPLIST_FILE = "iWorkFileInspector/Target/iWorkFileInspector-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/Externals/prebuilt/lib",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		576B649418228DDE005D22E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iWorkFileInspector/Target/iWorkFileInspector-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/Externals/prebuilt/include",
+				);
+				INFOPLIST_FILE = "iWorkFileInspector/Target/iWorkFileInspector-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/Externals/prebuilt/lib",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		576B649618228DDE005D22E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/iWorkFileInspector.app/Contents/MacOS/iWorkFileInspector";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iWorkFileInspector/iWorkFileInspector-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "iWorkFileInspectorTests/iWorkFileInspectorTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		576B649718228DDE005D22E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/iWorkFileInspector.app/Contents/MacOS/iWorkFileInspector";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iWorkFileInspector/iWorkFileInspector-Prefix.pch";
+				INFOPLIST_FILE = "iWorkFileInspectorTests/iWorkFileInspectorTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		576B645918228DDE005D22E3 /* Build configuration list for PBXProject "iWorkFileInspector" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				576B649018228DDE005D22E3 /* Debug */,
+				576B649118228DDE005D22E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		576B649218228DDE005D22E3 /* Build configuration list for PBXNativeTarget "iWorkFileInspector" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				576B649318228DDE005D22E3 /* Debug */,
+				576B649418228DDE005D22E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		576B649518228DDE005D22E3 /* Build configuration list for PBXNativeTarget "iWorkFileInspectorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				576B649618228DDE005D22E3 /* Debug */,
+				576B649718228DDE005D22E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 576B645618228DDE005D22E3 /* Project object */;
+}
