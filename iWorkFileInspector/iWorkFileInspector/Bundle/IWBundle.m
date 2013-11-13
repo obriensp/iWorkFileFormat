@@ -56,11 +56,13 @@ NSString * const IWBundlePasswordVerifierFileName = @".iwpv2";
 		}
 		
 		NSArray *pathComponents = entryName.pathComponents;
-		if (pathComponents.count != 2 || ![pathComponents[0] isEqualToString:IWBundleComponentBasePath]) {
+		if (pathComponents.count < 2 || ![pathComponents[0] isEqualToString:IWBundleComponentBasePath]) {
 			continue;
 		}
 		
-		[componentNames addObject:[pathComponents[1] stringByDeletingPathExtension]];
+		// Strip off the leading "Index/" and the trailing ".iwa"
+		NSString *path = [NSString pathWithComponents:[pathComponents subarrayWithRange:NSMakeRange(1, pathComponents.count - 1)]];
+		[componentNames addObject:path.stringByDeletingPathExtension];
 	}
 	
 	[componentNames sortUsingSelector:@selector(compare:)];
@@ -73,6 +75,10 @@ NSString * const IWBundlePasswordVerifierFileName = @".iwpv2";
 	NSString *fileName = [componentName stringByAppendingPathExtension:IWBundleArchivePathExtension];
 	NSString *path = [IWBundleComponentBasePath stringByAppendingPathComponent:fileName];
 	NSData *data = [_objectArchive dataForEntryName:path];
+	
+	if (data == nil) {
+		NSLog(@"Unable to get data from archive for component: %@, path: %@", componentName, path);
+	}
 	
 	if (_decryptionKey != nil) {
 		data = [data decryptUsingIWAKey:_decryptionKey];
