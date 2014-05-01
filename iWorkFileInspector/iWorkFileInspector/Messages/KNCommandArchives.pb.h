@@ -80,6 +80,7 @@ class CommandShowSetSlideNumberVisibilityArchive;
 class CommandMasterRescaleArchive;
 class CommandMasterSetThumbnailTextArchive;
 class CommandMasterSetBodyStylesArchive;
+class CommandMasterSetSlideObjectsLayerWithMasterArchive;
 class CommandSlideApplyThemeArchive;
 class CommandChangeMasterSlideArchive;
 class CommandSlidePrimitiveSetMasterArchive;
@@ -87,6 +88,7 @@ class CommandSlideReapplyMasterArchive;
 class CommandShowSetSoundtrack;
 class CommandSoundtrackSetValue;
 class CommandSoundtrackSetValue_PropertyValue;
+class CommandSlideUpdateMasterDrawables;
 class SlideCollectionCommandSelectionBehaviorArchive;
 class ChartInfoGeometryCommandArchive;
 
@@ -3197,6 +3199,13 @@ class CommandRemoveMasterArchive : public ::google::protobuf::Message {
   inline ::TSP::Reference* release_master_change_commands();
   inline void set_allocated_master_change_commands(::TSP::Reference* master_change_commands);
 
+  // optional bool default_master_slide_node_was_replaced = 6;
+  inline bool has_default_master_slide_node_was_replaced() const;
+  inline void clear_default_master_slide_node_was_replaced();
+  static const int kDefaultMasterSlideNodeWasReplacedFieldNumber = 6;
+  inline bool default_master_slide_node_was_replaced() const;
+  inline void set_default_master_slide_node_was_replaced(bool value);
+
   // @@protoc_insertion_point(class_scope:KN.CommandRemoveMasterArchive)
  private:
   inline void set_has_super();
@@ -3209,6 +3218,8 @@ class CommandRemoveMasterArchive : public ::google::protobuf::Message {
   inline void clear_has_previous_index();
   inline void set_has_master_change_commands();
   inline void clear_has_master_change_commands();
+  inline void set_has_default_master_slide_node_was_replaced();
+  inline void clear_has_default_master_slide_node_was_replaced();
 
   ::google::protobuf::UnknownFieldSet _unknown_fields_;
 
@@ -3217,9 +3228,10 @@ class CommandRemoveMasterArchive : public ::google::protobuf::Message {
   ::TSP::Reference* master_slide_node_;
   ::TSP::Reference* master_change_commands_;
   ::google::protobuf::uint32 previous_index_;
+  bool default_master_slide_node_was_replaced_;
 
   mutable int _cached_size_;
-  ::google::protobuf::uint32 _has_bits_[(5 + 31) / 32];
+  ::google::protobuf::uint32 _has_bits_[(6 + 31) / 32];
 
   friend void  protobuf_AddDesc_KNCommandArchives_2eproto();
   friend void protobuf_AssignDesc_KNCommandArchives_2eproto();
@@ -4368,37 +4380,37 @@ class CommandBuildSetValueArchive : public ::google::protobuf::Message {
   inline ::std::string* release_property();
   inline void set_allocated_property(::std::string* property);
 
-  // repeated string effects = 4;
-  inline int effects_size() const;
-  inline void clear_effects();
+  // repeated string effects = 4 [deprecated = true];
+  inline int effects_size() const PROTOBUF_DEPRECATED;
+  inline void clear_effects() PROTOBUF_DEPRECATED;
   static const int kEffectsFieldNumber = 4;
-  inline const ::std::string& effects(int index) const;
-  inline ::std::string* mutable_effects(int index);
-  inline void set_effects(int index, const ::std::string& value);
-  inline void set_effects(int index, const char* value);
-  inline void set_effects(int index, const char* value, size_t size);
-  inline ::std::string* add_effects();
-  inline void add_effects(const ::std::string& value);
-  inline void add_effects(const char* value);
-  inline void add_effects(const char* value, size_t size);
-  inline const ::google::protobuf::RepeatedPtrField< ::std::string>& effects() const;
-  inline ::google::protobuf::RepeatedPtrField< ::std::string>* mutable_effects();
+  inline const ::std::string& effects(int index) const PROTOBUF_DEPRECATED;
+  inline ::std::string* mutable_effects(int index) PROTOBUF_DEPRECATED;
+  inline void set_effects(int index, const ::std::string& value) PROTOBUF_DEPRECATED;
+  inline void set_effects(int index, const char* value) PROTOBUF_DEPRECATED;
+  inline void set_effects(int index, const char* value, size_t size) PROTOBUF_DEPRECATED;
+  inline ::std::string* add_effects() PROTOBUF_DEPRECATED;
+  inline void add_effects(const ::std::string& value) PROTOBUF_DEPRECATED;
+  inline void add_effects(const char* value) PROTOBUF_DEPRECATED;
+  inline void add_effects(const char* value, size_t size) PROTOBUF_DEPRECATED;
+  inline const ::google::protobuf::RepeatedPtrField< ::std::string>& effects() const PROTOBUF_DEPRECATED;
+  inline ::google::protobuf::RepeatedPtrField< ::std::string>* mutable_effects() PROTOBUF_DEPRECATED;
 
-  // repeated string types = 5;
-  inline int types_size() const;
-  inline void clear_types();
+  // repeated string types = 5 [deprecated = true];
+  inline int types_size() const PROTOBUF_DEPRECATED;
+  inline void clear_types() PROTOBUF_DEPRECATED;
   static const int kTypesFieldNumber = 5;
-  inline const ::std::string& types(int index) const;
-  inline ::std::string* mutable_types(int index);
-  inline void set_types(int index, const ::std::string& value);
-  inline void set_types(int index, const char* value);
-  inline void set_types(int index, const char* value, size_t size);
-  inline ::std::string* add_types();
-  inline void add_types(const ::std::string& value);
-  inline void add_types(const char* value);
-  inline void add_types(const char* value, size_t size);
-  inline const ::google::protobuf::RepeatedPtrField< ::std::string>& types() const;
-  inline ::google::protobuf::RepeatedPtrField< ::std::string>* mutable_types();
+  inline const ::std::string& types(int index) const PROTOBUF_DEPRECATED;
+  inline ::std::string* mutable_types(int index) PROTOBUF_DEPRECATED;
+  inline void set_types(int index, const ::std::string& value) PROTOBUF_DEPRECATED;
+  inline void set_types(int index, const char* value) PROTOBUF_DEPRECATED;
+  inline void set_types(int index, const char* value, size_t size) PROTOBUF_DEPRECATED;
+  inline ::std::string* add_types() PROTOBUF_DEPRECATED;
+  inline void add_types(const ::std::string& value) PROTOBUF_DEPRECATED;
+  inline void add_types(const char* value) PROTOBUF_DEPRECATED;
+  inline void add_types(const char* value, size_t size) PROTOBUF_DEPRECATED;
+  inline const ::google::protobuf::RepeatedPtrField< ::std::string>& types() const PROTOBUF_DEPRECATED;
+  inline ::google::protobuf::RepeatedPtrField< ::std::string>* mutable_types() PROTOBUF_DEPRECATED;
 
   // repeated string deliveries = 6;
   inline int deliveries_size() const;
@@ -4416,77 +4428,95 @@ class CommandBuildSetValueArchive : public ::google::protobuf::Message {
   inline const ::google::protobuf::RepeatedPtrField< ::std::string>& deliveries() const;
   inline ::google::protobuf::RepeatedPtrField< ::std::string>* mutable_deliveries();
 
-  // repeated uint32 directions = 7;
-  inline int directions_size() const;
-  inline void clear_directions();
+  // repeated uint32 directions = 7 [deprecated = true];
+  inline int directions_size() const PROTOBUF_DEPRECATED;
+  inline void clear_directions() PROTOBUF_DEPRECATED;
   static const int kDirectionsFieldNumber = 7;
-  inline ::google::protobuf::uint32 directions(int index) const;
-  inline void set_directions(int index, ::google::protobuf::uint32 value);
-  inline void add_directions(::google::protobuf::uint32 value);
+  inline ::google::protobuf::uint32 directions(int index) const PROTOBUF_DEPRECATED;
+  inline void set_directions(int index, ::google::protobuf::uint32 value) PROTOBUF_DEPRECATED;
+  inline void add_directions(::google::protobuf::uint32 value) PROTOBUF_DEPRECATED;
   inline const ::google::protobuf::RepeatedField< ::google::protobuf::uint32 >&
-      directions() const;
+      directions() const PROTOBUF_DEPRECATED;
   inline ::google::protobuf::RepeatedField< ::google::protobuf::uint32 >*
-      mutable_directions();
+      mutable_directions() PROTOBUF_DEPRECATED;
 
-  // repeated double durations = 8;
-  inline int durations_size() const;
-  inline void clear_durations();
+  // repeated double durations = 8 [deprecated = true];
+  inline int durations_size() const PROTOBUF_DEPRECATED;
+  inline void clear_durations() PROTOBUF_DEPRECATED;
   static const int kDurationsFieldNumber = 8;
-  inline double durations(int index) const;
-  inline void set_durations(int index, double value);
-  inline void add_durations(double value);
+  inline double durations(int index) const PROTOBUF_DEPRECATED;
+  inline void set_durations(int index, double value) PROTOBUF_DEPRECATED;
+  inline void add_durations(double value) PROTOBUF_DEPRECATED;
   inline const ::google::protobuf::RepeatedField< double >&
-      durations() const;
+      durations() const PROTOBUF_DEPRECATED;
   inline ::google::protobuf::RepeatedField< double >*
-      mutable_durations();
+      mutable_durations() PROTOBUF_DEPRECATED;
 
-  // repeated double delays = 9;
-  inline int delays_size() const;
-  inline void clear_delays();
+  // repeated double delays = 9 [deprecated = true];
+  inline int delays_size() const PROTOBUF_DEPRECATED;
+  inline void clear_delays() PROTOBUF_DEPRECATED;
   static const int kDelaysFieldNumber = 9;
-  inline double delays(int index) const;
-  inline void set_delays(int index, double value);
-  inline void add_delays(double value);
+  inline double delays(int index) const PROTOBUF_DEPRECATED;
+  inline void set_delays(int index, double value) PROTOBUF_DEPRECATED;
+  inline void add_delays(double value) PROTOBUF_DEPRECATED;
   inline const ::google::protobuf::RepeatedField< double >&
-      delays() const;
+      delays() const PROTOBUF_DEPRECATED;
   inline ::google::protobuf::RepeatedField< double >*
-      mutable_delays();
+      mutable_delays() PROTOBUF_DEPRECATED;
 
-  // repeated double delayAutomaticAfters = 10;
-  inline int delayautomaticafters_size() const;
-  inline void clear_delayautomaticafters();
+  // repeated double delayAutomaticAfters = 10 [deprecated = true];
+  inline int delayautomaticafters_size() const PROTOBUF_DEPRECATED;
+  inline void clear_delayautomaticafters() PROTOBUF_DEPRECATED;
   static const int kDelayAutomaticAftersFieldNumber = 10;
-  inline double delayautomaticafters(int index) const;
-  inline void set_delayautomaticafters(int index, double value);
-  inline void add_delayautomaticafters(double value);
+  inline double delayautomaticafters(int index) const PROTOBUF_DEPRECATED;
+  inline void set_delayautomaticafters(int index, double value) PROTOBUF_DEPRECATED;
+  inline void add_delayautomaticafters(double value) PROTOBUF_DEPRECATED;
   inline const ::google::protobuf::RepeatedField< double >&
-      delayautomaticafters() const;
+      delayautomaticafters() const PROTOBUF_DEPRECATED;
   inline ::google::protobuf::RepeatedField< double >*
-      mutable_delayautomaticafters();
+      mutable_delayautomaticafters() PROTOBUF_DEPRECATED;
 
-  // repeated double delayAutomaticWiths = 11;
-  inline int delayautomaticwiths_size() const;
-  inline void clear_delayautomaticwiths();
+  // repeated double delayAutomaticWiths = 11 [deprecated = true];
+  inline int delayautomaticwiths_size() const PROTOBUF_DEPRECATED;
+  inline void clear_delayautomaticwiths() PROTOBUF_DEPRECATED;
   static const int kDelayAutomaticWithsFieldNumber = 11;
-  inline double delayautomaticwiths(int index) const;
-  inline void set_delayautomaticwiths(int index, double value);
-  inline void add_delayautomaticwiths(double value);
+  inline double delayautomaticwiths(int index) const PROTOBUF_DEPRECATED;
+  inline void set_delayautomaticwiths(int index, double value) PROTOBUF_DEPRECATED;
+  inline void add_delayautomaticwiths(double value) PROTOBUF_DEPRECATED;
   inline const ::google::protobuf::RepeatedField< double >&
-      delayautomaticwiths() const;
+      delayautomaticwiths() const PROTOBUF_DEPRECATED;
   inline ::google::protobuf::RepeatedField< double >*
-      mutable_delayautomaticwiths();
+      mutable_delayautomaticwiths() PROTOBUF_DEPRECATED;
 
-  // repeated bool eventTriggers = 12;
-  inline int eventtriggers_size() const;
-  inline void clear_eventtriggers();
+  // repeated bool eventTriggers = 12 [deprecated = true];
+  inline int eventtriggers_size() const PROTOBUF_DEPRECATED;
+  inline void clear_eventtriggers() PROTOBUF_DEPRECATED;
   static const int kEventTriggersFieldNumber = 12;
-  inline bool eventtriggers(int index) const;
-  inline void set_eventtriggers(int index, bool value);
-  inline void add_eventtriggers(bool value);
+  inline bool eventtriggers(int index) const PROTOBUF_DEPRECATED;
+  inline void set_eventtriggers(int index, bool value) PROTOBUF_DEPRECATED;
+  inline void add_eventtriggers(bool value) PROTOBUF_DEPRECATED;
   inline const ::google::protobuf::RepeatedField< bool >&
-      eventtriggers() const;
+      eventtriggers() const PROTOBUF_DEPRECATED;
   inline ::google::protobuf::RepeatedField< bool >*
-      mutable_eventtriggers();
+      mutable_eventtriggers() PROTOBUF_DEPRECATED;
+
+  // optional .KN.BuildAttributesArchive oldAttributes = 13;
+  inline bool has_oldattributes() const;
+  inline void clear_oldattributes();
+  static const int kOldAttributesFieldNumber = 13;
+  inline const ::KN::BuildAttributesArchive& oldattributes() const;
+  inline ::KN::BuildAttributesArchive* mutable_oldattributes();
+  inline ::KN::BuildAttributesArchive* release_oldattributes();
+  inline void set_allocated_oldattributes(::KN::BuildAttributesArchive* oldattributes);
+
+  // optional .KN.BuildAttributesArchive currentAttributes = 14;
+  inline bool has_currentattributes() const;
+  inline void clear_currentattributes();
+  static const int kCurrentAttributesFieldNumber = 14;
+  inline const ::KN::BuildAttributesArchive& currentattributes() const;
+  inline ::KN::BuildAttributesArchive* mutable_currentattributes();
+  inline ::KN::BuildAttributesArchive* release_currentattributes();
+  inline void set_allocated_currentattributes(::KN::BuildAttributesArchive* currentattributes);
 
   // @@protoc_insertion_point(class_scope:KN.CommandBuildSetValueArchive)
  private:
@@ -4496,6 +4526,10 @@ class CommandBuildSetValueArchive : public ::google::protobuf::Message {
   inline void clear_has_build();
   inline void set_has_property();
   inline void clear_has_property();
+  inline void set_has_oldattributes();
+  inline void clear_has_oldattributes();
+  inline void set_has_currentattributes();
+  inline void clear_has_currentattributes();
 
   ::google::protobuf::UnknownFieldSet _unknown_fields_;
 
@@ -4511,9 +4545,11 @@ class CommandBuildSetValueArchive : public ::google::protobuf::Message {
   ::google::protobuf::RepeatedField< double > delayautomaticafters_;
   ::google::protobuf::RepeatedField< double > delayautomaticwiths_;
   ::google::protobuf::RepeatedField< bool > eventtriggers_;
+  ::KN::BuildAttributesArchive* oldattributes_;
+  ::KN::BuildAttributesArchive* currentattributes_;
 
   mutable int _cached_size_;
-  ::google::protobuf::uint32 _has_bits_[(12 + 31) / 32];
+  ::google::protobuf::uint32 _has_bits_[(14 + 31) / 32];
 
   friend void  protobuf_AddDesc_KNCommandArchives_2eproto();
   friend void protobuf_AssignDesc_KNCommandArchives_2eproto();
@@ -4656,12 +4692,12 @@ class CommandBuildChunkSetValueArchive : public ::google::protobuf::Message {
   inline ::google::protobuf::RepeatedField< double >*
       mutable_delays();
 
-  // optional bool oldOwnsValue = 8;
-  inline bool has_oldownsvalue() const;
-  inline void clear_oldownsvalue();
+  // optional bool oldOwnsValue = 8 [deprecated = true];
+  inline bool has_oldownsvalue() const PROTOBUF_DEPRECATED;
+  inline void clear_oldownsvalue() PROTOBUF_DEPRECATED;
   static const int kOldOwnsValueFieldNumber = 8;
-  inline bool oldownsvalue() const;
-  inline void set_oldownsvalue(bool value);
+  inline bool oldownsvalue() const PROTOBUF_DEPRECATED;
+  inline void set_oldownsvalue(bool value) PROTOBUF_DEPRECATED;
 
   // @@protoc_insertion_point(class_scope:KN.CommandBuildChunkSetValueArchive)
  private:
@@ -4781,117 +4817,135 @@ class CommandTransitionSetValueArchive : public ::google::protobuf::Message {
   inline ::std::string* release_property();
   inline void set_allocated_property(::std::string* property);
 
-  // repeated string effects = 4;
-  inline int effects_size() const;
-  inline void clear_effects();
+  // repeated string effects = 4 [deprecated = true];
+  inline int effects_size() const PROTOBUF_DEPRECATED;
+  inline void clear_effects() PROTOBUF_DEPRECATED;
   static const int kEffectsFieldNumber = 4;
-  inline const ::std::string& effects(int index) const;
-  inline ::std::string* mutable_effects(int index);
-  inline void set_effects(int index, const ::std::string& value);
-  inline void set_effects(int index, const char* value);
-  inline void set_effects(int index, const char* value, size_t size);
-  inline ::std::string* add_effects();
-  inline void add_effects(const ::std::string& value);
-  inline void add_effects(const char* value);
-  inline void add_effects(const char* value, size_t size);
-  inline const ::google::protobuf::RepeatedPtrField< ::std::string>& effects() const;
-  inline ::google::protobuf::RepeatedPtrField< ::std::string>* mutable_effects();
+  inline const ::std::string& effects(int index) const PROTOBUF_DEPRECATED;
+  inline ::std::string* mutable_effects(int index) PROTOBUF_DEPRECATED;
+  inline void set_effects(int index, const ::std::string& value) PROTOBUF_DEPRECATED;
+  inline void set_effects(int index, const char* value) PROTOBUF_DEPRECATED;
+  inline void set_effects(int index, const char* value, size_t size) PROTOBUF_DEPRECATED;
+  inline ::std::string* add_effects() PROTOBUF_DEPRECATED;
+  inline void add_effects(const ::std::string& value) PROTOBUF_DEPRECATED;
+  inline void add_effects(const char* value) PROTOBUF_DEPRECATED;
+  inline void add_effects(const char* value, size_t size) PROTOBUF_DEPRECATED;
+  inline const ::google::protobuf::RepeatedPtrField< ::std::string>& effects() const PROTOBUF_DEPRECATED;
+  inline ::google::protobuf::RepeatedPtrField< ::std::string>* mutable_effects() PROTOBUF_DEPRECATED;
 
-  // repeated string unused = 5;
-  inline int unused_size() const;
-  inline void clear_unused();
+  // repeated string unused = 5 [deprecated = true];
+  inline int unused_size() const PROTOBUF_DEPRECATED;
+  inline void clear_unused() PROTOBUF_DEPRECATED;
   static const int kUnusedFieldNumber = 5;
-  inline const ::std::string& unused(int index) const;
-  inline ::std::string* mutable_unused(int index);
-  inline void set_unused(int index, const ::std::string& value);
-  inline void set_unused(int index, const char* value);
-  inline void set_unused(int index, const char* value, size_t size);
-  inline ::std::string* add_unused();
-  inline void add_unused(const ::std::string& value);
-  inline void add_unused(const char* value);
-  inline void add_unused(const char* value, size_t size);
-  inline const ::google::protobuf::RepeatedPtrField< ::std::string>& unused() const;
-  inline ::google::protobuf::RepeatedPtrField< ::std::string>* mutable_unused();
+  inline const ::std::string& unused(int index) const PROTOBUF_DEPRECATED;
+  inline ::std::string* mutable_unused(int index) PROTOBUF_DEPRECATED;
+  inline void set_unused(int index, const ::std::string& value) PROTOBUF_DEPRECATED;
+  inline void set_unused(int index, const char* value) PROTOBUF_DEPRECATED;
+  inline void set_unused(int index, const char* value, size_t size) PROTOBUF_DEPRECATED;
+  inline ::std::string* add_unused() PROTOBUF_DEPRECATED;
+  inline void add_unused(const ::std::string& value) PROTOBUF_DEPRECATED;
+  inline void add_unused(const char* value) PROTOBUF_DEPRECATED;
+  inline void add_unused(const char* value, size_t size) PROTOBUF_DEPRECATED;
+  inline const ::google::protobuf::RepeatedPtrField< ::std::string>& unused() const PROTOBUF_DEPRECATED;
+  inline ::google::protobuf::RepeatedPtrField< ::std::string>* mutable_unused() PROTOBUF_DEPRECATED;
 
-  // repeated string unused2 = 6;
-  inline int unused2_size() const;
-  inline void clear_unused2();
+  // repeated string unused2 = 6 [deprecated = true];
+  inline int unused2_size() const PROTOBUF_DEPRECATED;
+  inline void clear_unused2() PROTOBUF_DEPRECATED;
   static const int kUnused2FieldNumber = 6;
-  inline const ::std::string& unused2(int index) const;
-  inline ::std::string* mutable_unused2(int index);
-  inline void set_unused2(int index, const ::std::string& value);
-  inline void set_unused2(int index, const char* value);
-  inline void set_unused2(int index, const char* value, size_t size);
-  inline ::std::string* add_unused2();
-  inline void add_unused2(const ::std::string& value);
-  inline void add_unused2(const char* value);
-  inline void add_unused2(const char* value, size_t size);
-  inline const ::google::protobuf::RepeatedPtrField< ::std::string>& unused2() const;
-  inline ::google::protobuf::RepeatedPtrField< ::std::string>* mutable_unused2();
+  inline const ::std::string& unused2(int index) const PROTOBUF_DEPRECATED;
+  inline ::std::string* mutable_unused2(int index) PROTOBUF_DEPRECATED;
+  inline void set_unused2(int index, const ::std::string& value) PROTOBUF_DEPRECATED;
+  inline void set_unused2(int index, const char* value) PROTOBUF_DEPRECATED;
+  inline void set_unused2(int index, const char* value, size_t size) PROTOBUF_DEPRECATED;
+  inline ::std::string* add_unused2() PROTOBUF_DEPRECATED;
+  inline void add_unused2(const ::std::string& value) PROTOBUF_DEPRECATED;
+  inline void add_unused2(const char* value) PROTOBUF_DEPRECATED;
+  inline void add_unused2(const char* value, size_t size) PROTOBUF_DEPRECATED;
+  inline const ::google::protobuf::RepeatedPtrField< ::std::string>& unused2() const PROTOBUF_DEPRECATED;
+  inline ::google::protobuf::RepeatedPtrField< ::std::string>* mutable_unused2() PROTOBUF_DEPRECATED;
 
-  // repeated string unused3 = 7;
-  inline int unused3_size() const;
-  inline void clear_unused3();
+  // repeated string unused3 = 7 [deprecated = true];
+  inline int unused3_size() const PROTOBUF_DEPRECATED;
+  inline void clear_unused3() PROTOBUF_DEPRECATED;
   static const int kUnused3FieldNumber = 7;
-  inline const ::std::string& unused3(int index) const;
-  inline ::std::string* mutable_unused3(int index);
-  inline void set_unused3(int index, const ::std::string& value);
-  inline void set_unused3(int index, const char* value);
-  inline void set_unused3(int index, const char* value, size_t size);
-  inline ::std::string* add_unused3();
-  inline void add_unused3(const ::std::string& value);
-  inline void add_unused3(const char* value);
-  inline void add_unused3(const char* value, size_t size);
-  inline const ::google::protobuf::RepeatedPtrField< ::std::string>& unused3() const;
-  inline ::google::protobuf::RepeatedPtrField< ::std::string>* mutable_unused3();
+  inline const ::std::string& unused3(int index) const PROTOBUF_DEPRECATED;
+  inline ::std::string* mutable_unused3(int index) PROTOBUF_DEPRECATED;
+  inline void set_unused3(int index, const ::std::string& value) PROTOBUF_DEPRECATED;
+  inline void set_unused3(int index, const char* value) PROTOBUF_DEPRECATED;
+  inline void set_unused3(int index, const char* value, size_t size) PROTOBUF_DEPRECATED;
+  inline ::std::string* add_unused3() PROTOBUF_DEPRECATED;
+  inline void add_unused3(const ::std::string& value) PROTOBUF_DEPRECATED;
+  inline void add_unused3(const char* value) PROTOBUF_DEPRECATED;
+  inline void add_unused3(const char* value, size_t size) PROTOBUF_DEPRECATED;
+  inline const ::google::protobuf::RepeatedPtrField< ::std::string>& unused3() const PROTOBUF_DEPRECATED;
+  inline ::google::protobuf::RepeatedPtrField< ::std::string>* mutable_unused3() PROTOBUF_DEPRECATED;
 
-  // repeated double durations = 8;
-  inline int durations_size() const;
-  inline void clear_durations();
+  // repeated double durations = 8 [deprecated = true];
+  inline int durations_size() const PROTOBUF_DEPRECATED;
+  inline void clear_durations() PROTOBUF_DEPRECATED;
   static const int kDurationsFieldNumber = 8;
-  inline double durations(int index) const;
-  inline void set_durations(int index, double value);
-  inline void add_durations(double value);
+  inline double durations(int index) const PROTOBUF_DEPRECATED;
+  inline void set_durations(int index, double value) PROTOBUF_DEPRECATED;
+  inline void add_durations(double value) PROTOBUF_DEPRECATED;
   inline const ::google::protobuf::RepeatedField< double >&
-      durations() const;
+      durations() const PROTOBUF_DEPRECATED;
   inline ::google::protobuf::RepeatedField< double >*
-      mutable_durations();
+      mutable_durations() PROTOBUF_DEPRECATED;
 
-  // repeated uint32 directions = 9;
-  inline int directions_size() const;
-  inline void clear_directions();
+  // repeated uint32 directions = 9 [deprecated = true];
+  inline int directions_size() const PROTOBUF_DEPRECATED;
+  inline void clear_directions() PROTOBUF_DEPRECATED;
   static const int kDirectionsFieldNumber = 9;
-  inline ::google::protobuf::uint32 directions(int index) const;
-  inline void set_directions(int index, ::google::protobuf::uint32 value);
-  inline void add_directions(::google::protobuf::uint32 value);
+  inline ::google::protobuf::uint32 directions(int index) const PROTOBUF_DEPRECATED;
+  inline void set_directions(int index, ::google::protobuf::uint32 value) PROTOBUF_DEPRECATED;
+  inline void add_directions(::google::protobuf::uint32 value) PROTOBUF_DEPRECATED;
   inline const ::google::protobuf::RepeatedField< ::google::protobuf::uint32 >&
-      directions() const;
+      directions() const PROTOBUF_DEPRECATED;
   inline ::google::protobuf::RepeatedField< ::google::protobuf::uint32 >*
-      mutable_directions();
+      mutable_directions() PROTOBUF_DEPRECATED;
 
-  // repeated bool isAutomatics = 10;
-  inline int isautomatics_size() const;
-  inline void clear_isautomatics();
+  // repeated bool isAutomatics = 10 [deprecated = true];
+  inline int isautomatics_size() const PROTOBUF_DEPRECATED;
+  inline void clear_isautomatics() PROTOBUF_DEPRECATED;
   static const int kIsAutomaticsFieldNumber = 10;
-  inline bool isautomatics(int index) const;
-  inline void set_isautomatics(int index, bool value);
-  inline void add_isautomatics(bool value);
+  inline bool isautomatics(int index) const PROTOBUF_DEPRECATED;
+  inline void set_isautomatics(int index, bool value) PROTOBUF_DEPRECATED;
+  inline void add_isautomatics(bool value) PROTOBUF_DEPRECATED;
   inline const ::google::protobuf::RepeatedField< bool >&
-      isautomatics() const;
+      isautomatics() const PROTOBUF_DEPRECATED;
   inline ::google::protobuf::RepeatedField< bool >*
-      mutable_isautomatics();
+      mutable_isautomatics() PROTOBUF_DEPRECATED;
 
-  // repeated double delays = 11;
-  inline int delays_size() const;
-  inline void clear_delays();
+  // repeated double delays = 11 [deprecated = true];
+  inline int delays_size() const PROTOBUF_DEPRECATED;
+  inline void clear_delays() PROTOBUF_DEPRECATED;
   static const int kDelaysFieldNumber = 11;
-  inline double delays(int index) const;
-  inline void set_delays(int index, double value);
-  inline void add_delays(double value);
+  inline double delays(int index) const PROTOBUF_DEPRECATED;
+  inline void set_delays(int index, double value) PROTOBUF_DEPRECATED;
+  inline void add_delays(double value) PROTOBUF_DEPRECATED;
   inline const ::google::protobuf::RepeatedField< double >&
-      delays() const;
+      delays() const PROTOBUF_DEPRECATED;
   inline ::google::protobuf::RepeatedField< double >*
-      mutable_delays();
+      mutable_delays() PROTOBUF_DEPRECATED;
+
+  // optional .KN.TransitionAttributesArchive oldAttributes = 12;
+  inline bool has_oldattributes() const;
+  inline void clear_oldattributes();
+  static const int kOldAttributesFieldNumber = 12;
+  inline const ::KN::TransitionAttributesArchive& oldattributes() const;
+  inline ::KN::TransitionAttributesArchive* mutable_oldattributes();
+  inline ::KN::TransitionAttributesArchive* release_oldattributes();
+  inline void set_allocated_oldattributes(::KN::TransitionAttributesArchive* oldattributes);
+
+  // optional .KN.TransitionAttributesArchive currentAttributes = 13;
+  inline bool has_currentattributes() const;
+  inline void clear_currentattributes();
+  static const int kCurrentAttributesFieldNumber = 13;
+  inline const ::KN::TransitionAttributesArchive& currentattributes() const;
+  inline ::KN::TransitionAttributesArchive* mutable_currentattributes();
+  inline ::KN::TransitionAttributesArchive* release_currentattributes();
+  inline void set_allocated_currentattributes(::KN::TransitionAttributesArchive* currentattributes);
 
   // @@protoc_insertion_point(class_scope:KN.CommandTransitionSetValueArchive)
  private:
@@ -4901,6 +4955,10 @@ class CommandTransitionSetValueArchive : public ::google::protobuf::Message {
   inline void clear_has_slidenode();
   inline void set_has_property();
   inline void clear_has_property();
+  inline void set_has_oldattributes();
+  inline void clear_has_oldattributes();
+  inline void set_has_currentattributes();
+  inline void clear_has_currentattributes();
 
   ::google::protobuf::UnknownFieldSet _unknown_fields_;
 
@@ -4915,9 +4973,11 @@ class CommandTransitionSetValueArchive : public ::google::protobuf::Message {
   ::google::protobuf::RepeatedField< ::google::protobuf::uint32 > directions_;
   ::google::protobuf::RepeatedField< bool > isautomatics_;
   ::google::protobuf::RepeatedField< double > delays_;
+  ::KN::TransitionAttributesArchive* oldattributes_;
+  ::KN::TransitionAttributesArchive* currentattributes_;
 
   mutable int _cached_size_;
-  ::google::protobuf::uint32 _has_bits_[(11 + 31) / 32];
+  ::google::protobuf::uint32 _has_bits_[(13 + 31) / 32];
 
   friend void  protobuf_AddDesc_KNCommandArchives_2eproto();
   friend void protobuf_AssignDesc_KNCommandArchives_2eproto();
@@ -5423,6 +5483,122 @@ class CommandMasterSetBodyStylesArchive : public ::google::protobuf::Message {
 
   void InitAsDefaultInstance();
   static CommandMasterSetBodyStylesArchive* default_instance_;
+};
+// -------------------------------------------------------------------
+
+class CommandMasterSetSlideObjectsLayerWithMasterArchive : public ::google::protobuf::Message {
+ public:
+  CommandMasterSetSlideObjectsLayerWithMasterArchive();
+  virtual ~CommandMasterSetSlideObjectsLayerWithMasterArchive();
+
+  CommandMasterSetSlideObjectsLayerWithMasterArchive(const CommandMasterSetSlideObjectsLayerWithMasterArchive& from);
+
+  inline CommandMasterSetSlideObjectsLayerWithMasterArchive& operator=(const CommandMasterSetSlideObjectsLayerWithMasterArchive& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _unknown_fields_;
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return &_unknown_fields_;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const CommandMasterSetSlideObjectsLayerWithMasterArchive& default_instance();
+
+  void Swap(CommandMasterSetSlideObjectsLayerWithMasterArchive* other);
+
+  // implements Message ----------------------------------------------
+
+  CommandMasterSetSlideObjectsLayerWithMasterArchive* New() const;
+  void CopyFrom(const ::google::protobuf::Message& from);
+  void MergeFrom(const ::google::protobuf::Message& from);
+  void CopyFrom(const CommandMasterSetSlideObjectsLayerWithMasterArchive& from);
+  void MergeFrom(const CommandMasterSetSlideObjectsLayerWithMasterArchive& from);
+  void Clear();
+  bool IsInitialized() const;
+
+  int ByteSize() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // required .TSK.CommandArchive super = 1;
+  inline bool has_super() const;
+  inline void clear_super();
+  static const int kSuperFieldNumber = 1;
+  inline const ::TSK::CommandArchive& super() const;
+  inline ::TSK::CommandArchive* mutable_super();
+  inline ::TSK::CommandArchive* release_super();
+  inline void set_allocated_super(::TSK::CommandArchive* super);
+
+  // required .TSP.Reference master = 2;
+  inline bool has_master() const;
+  inline void clear_master();
+  static const int kMasterFieldNumber = 2;
+  inline const ::TSP::Reference& master() const;
+  inline ::TSP::Reference* mutable_master();
+  inline ::TSP::Reference* release_master();
+  inline void set_allocated_master(::TSP::Reference* master);
+
+  // required bool new_value = 3;
+  inline bool has_new_value() const;
+  inline void clear_new_value();
+  static const int kNewValueFieldNumber = 3;
+  inline bool new_value() const;
+  inline void set_new_value(bool value);
+
+  // required bool old_value = 4;
+  inline bool has_old_value() const;
+  inline void clear_old_value();
+  static const int kOldValueFieldNumber = 4;
+  inline bool old_value() const;
+  inline void set_old_value(bool value);
+
+  // @@protoc_insertion_point(class_scope:KN.CommandMasterSetSlideObjectsLayerWithMasterArchive)
+ private:
+  inline void set_has_super();
+  inline void clear_has_super();
+  inline void set_has_master();
+  inline void clear_has_master();
+  inline void set_has_new_value();
+  inline void clear_has_new_value();
+  inline void set_has_old_value();
+  inline void clear_has_old_value();
+
+  ::google::protobuf::UnknownFieldSet _unknown_fields_;
+
+  ::TSK::CommandArchive* super_;
+  ::TSP::Reference* master_;
+  bool new_value_;
+  bool old_value_;
+
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 _has_bits_[(4 + 31) / 32];
+
+  friend void  protobuf_AddDesc_KNCommandArchives_2eproto();
+  friend void protobuf_AssignDesc_KNCommandArchives_2eproto();
+  friend void protobuf_ShutdownFile_KNCommandArchives_2eproto();
+
+  void InitAsDefaultInstance();
+  static CommandMasterSetSlideObjectsLayerWithMasterArchive* default_instance_;
 };
 // -------------------------------------------------------------------
 
@@ -6217,6 +6393,140 @@ class CommandSoundtrackSetValue : public ::google::protobuf::Message {
 
   void InitAsDefaultInstance();
   static CommandSoundtrackSetValue* default_instance_;
+};
+// -------------------------------------------------------------------
+
+class CommandSlideUpdateMasterDrawables : public ::google::protobuf::Message {
+ public:
+  CommandSlideUpdateMasterDrawables();
+  virtual ~CommandSlideUpdateMasterDrawables();
+
+  CommandSlideUpdateMasterDrawables(const CommandSlideUpdateMasterDrawables& from);
+
+  inline CommandSlideUpdateMasterDrawables& operator=(const CommandSlideUpdateMasterDrawables& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _unknown_fields_;
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return &_unknown_fields_;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const CommandSlideUpdateMasterDrawables& default_instance();
+
+  void Swap(CommandSlideUpdateMasterDrawables* other);
+
+  // implements Message ----------------------------------------------
+
+  CommandSlideUpdateMasterDrawables* New() const;
+  void CopyFrom(const ::google::protobuf::Message& from);
+  void MergeFrom(const ::google::protobuf::Message& from);
+  void CopyFrom(const CommandSlideUpdateMasterDrawables& from);
+  void MergeFrom(const CommandSlideUpdateMasterDrawables& from);
+  void Clear();
+  bool IsInitialized() const;
+
+  int ByteSize() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // required .TSK.CommandArchive super = 1;
+  inline bool has_super() const;
+  inline void clear_super();
+  static const int kSuperFieldNumber = 1;
+  inline const ::TSK::CommandArchive& super() const;
+  inline ::TSK::CommandArchive* mutable_super();
+  inline ::TSK::CommandArchive* release_super();
+  inline void set_allocated_super(::TSK::CommandArchive* super);
+
+  // required .TSP.Reference slide = 2;
+  inline bool has_slide() const;
+  inline void clear_slide();
+  static const int kSlideFieldNumber = 2;
+  inline const ::TSP::Reference& slide() const;
+  inline ::TSP::Reference* mutable_slide();
+  inline ::TSP::Reference* release_slide();
+  inline void set_allocated_slide(::TSP::Reference* slide);
+
+  // repeated .TSP.Reference drawables_to_insert = 3;
+  inline int drawables_to_insert_size() const;
+  inline void clear_drawables_to_insert();
+  static const int kDrawablesToInsertFieldNumber = 3;
+  inline const ::TSP::Reference& drawables_to_insert(int index) const;
+  inline ::TSP::Reference* mutable_drawables_to_insert(int index);
+  inline ::TSP::Reference* add_drawables_to_insert();
+  inline const ::google::protobuf::RepeatedPtrField< ::TSP::Reference >&
+      drawables_to_insert() const;
+  inline ::google::protobuf::RepeatedPtrField< ::TSP::Reference >*
+      mutable_drawables_to_insert();
+
+  // repeated .TSP.Reference sorted_drawables_to_remove = 4;
+  inline int sorted_drawables_to_remove_size() const;
+  inline void clear_sorted_drawables_to_remove();
+  static const int kSortedDrawablesToRemoveFieldNumber = 4;
+  inline const ::TSP::Reference& sorted_drawables_to_remove(int index) const;
+  inline ::TSP::Reference* mutable_sorted_drawables_to_remove(int index);
+  inline ::TSP::Reference* add_sorted_drawables_to_remove();
+  inline const ::google::protobuf::RepeatedPtrField< ::TSP::Reference >&
+      sorted_drawables_to_remove() const;
+  inline ::google::protobuf::RepeatedPtrField< ::TSP::Reference >*
+      mutable_sorted_drawables_to_remove();
+
+  // required .TSP.IndexSet indexes_of_removed_drawables = 5;
+  inline bool has_indexes_of_removed_drawables() const;
+  inline void clear_indexes_of_removed_drawables();
+  static const int kIndexesOfRemovedDrawablesFieldNumber = 5;
+  inline const ::TSP::IndexSet& indexes_of_removed_drawables() const;
+  inline ::TSP::IndexSet* mutable_indexes_of_removed_drawables();
+  inline ::TSP::IndexSet* release_indexes_of_removed_drawables();
+  inline void set_allocated_indexes_of_removed_drawables(::TSP::IndexSet* indexes_of_removed_drawables);
+
+  // @@protoc_insertion_point(class_scope:KN.CommandSlideUpdateMasterDrawables)
+ private:
+  inline void set_has_super();
+  inline void clear_has_super();
+  inline void set_has_slide();
+  inline void clear_has_slide();
+  inline void set_has_indexes_of_removed_drawables();
+  inline void clear_has_indexes_of_removed_drawables();
+
+  ::google::protobuf::UnknownFieldSet _unknown_fields_;
+
+  ::TSK::CommandArchive* super_;
+  ::TSP::Reference* slide_;
+  ::google::protobuf::RepeatedPtrField< ::TSP::Reference > drawables_to_insert_;
+  ::google::protobuf::RepeatedPtrField< ::TSP::Reference > sorted_drawables_to_remove_;
+  ::TSP::IndexSet* indexes_of_removed_drawables_;
+
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 _has_bits_[(5 + 31) / 32];
+
+  friend void  protobuf_AddDesc_KNCommandArchives_2eproto();
+  friend void protobuf_AssignDesc_KNCommandArchives_2eproto();
+  friend void protobuf_ShutdownFile_KNCommandArchives_2eproto();
+
+  void InitAsDefaultInstance();
+  static CommandSlideUpdateMasterDrawables* default_instance_;
 };
 // -------------------------------------------------------------------
 
@@ -10630,6 +10940,28 @@ inline void CommandRemoveMasterArchive::set_allocated_master_change_commands(::T
   }
 }
 
+// optional bool default_master_slide_node_was_replaced = 6;
+inline bool CommandRemoveMasterArchive::has_default_master_slide_node_was_replaced() const {
+  return (_has_bits_[0] & 0x00000020u) != 0;
+}
+inline void CommandRemoveMasterArchive::set_has_default_master_slide_node_was_replaced() {
+  _has_bits_[0] |= 0x00000020u;
+}
+inline void CommandRemoveMasterArchive::clear_has_default_master_slide_node_was_replaced() {
+  _has_bits_[0] &= ~0x00000020u;
+}
+inline void CommandRemoveMasterArchive::clear_default_master_slide_node_was_replaced() {
+  default_master_slide_node_was_replaced_ = false;
+  clear_has_default_master_slide_node_was_replaced();
+}
+inline bool CommandRemoveMasterArchive::default_master_slide_node_was_replaced() const {
+  return default_master_slide_node_was_replaced_;
+}
+inline void CommandRemoveMasterArchive::set_default_master_slide_node_was_replaced(bool value) {
+  set_has_default_master_slide_node_was_replaced();
+  default_master_slide_node_was_replaced_ = value;
+}
+
 // -------------------------------------------------------------------
 
 // CommandRenameMasterArchive
@@ -12008,7 +12340,7 @@ inline void CommandBuildSetValueArchive::set_allocated_property(::std::string* p
   }
 }
 
-// repeated string effects = 4;
+// repeated string effects = 4 [deprecated = true];
 inline int CommandBuildSetValueArchive::effects_size() const {
   return effects_.size();
 }
@@ -12052,7 +12384,7 @@ CommandBuildSetValueArchive::mutable_effects() {
   return &effects_;
 }
 
-// repeated string types = 5;
+// repeated string types = 5 [deprecated = true];
 inline int CommandBuildSetValueArchive::types_size() const {
   return types_.size();
 }
@@ -12140,7 +12472,7 @@ CommandBuildSetValueArchive::mutable_deliveries() {
   return &deliveries_;
 }
 
-// repeated uint32 directions = 7;
+// repeated uint32 directions = 7 [deprecated = true];
 inline int CommandBuildSetValueArchive::directions_size() const {
   return directions_.size();
 }
@@ -12165,7 +12497,7 @@ CommandBuildSetValueArchive::mutable_directions() {
   return &directions_;
 }
 
-// repeated double durations = 8;
+// repeated double durations = 8 [deprecated = true];
 inline int CommandBuildSetValueArchive::durations_size() const {
   return durations_.size();
 }
@@ -12190,7 +12522,7 @@ CommandBuildSetValueArchive::mutable_durations() {
   return &durations_;
 }
 
-// repeated double delays = 9;
+// repeated double delays = 9 [deprecated = true];
 inline int CommandBuildSetValueArchive::delays_size() const {
   return delays_.size();
 }
@@ -12215,7 +12547,7 @@ CommandBuildSetValueArchive::mutable_delays() {
   return &delays_;
 }
 
-// repeated double delayAutomaticAfters = 10;
+// repeated double delayAutomaticAfters = 10 [deprecated = true];
 inline int CommandBuildSetValueArchive::delayautomaticafters_size() const {
   return delayautomaticafters_.size();
 }
@@ -12240,7 +12572,7 @@ CommandBuildSetValueArchive::mutable_delayautomaticafters() {
   return &delayautomaticafters_;
 }
 
-// repeated double delayAutomaticWiths = 11;
+// repeated double delayAutomaticWiths = 11 [deprecated = true];
 inline int CommandBuildSetValueArchive::delayautomaticwiths_size() const {
   return delayautomaticwiths_.size();
 }
@@ -12265,7 +12597,7 @@ CommandBuildSetValueArchive::mutable_delayautomaticwiths() {
   return &delayautomaticwiths_;
 }
 
-// repeated bool eventTriggers = 12;
+// repeated bool eventTriggers = 12 [deprecated = true];
 inline int CommandBuildSetValueArchive::eventtriggers_size() const {
   return eventtriggers_.size();
 }
@@ -12288,6 +12620,82 @@ CommandBuildSetValueArchive::eventtriggers() const {
 inline ::google::protobuf::RepeatedField< bool >*
 CommandBuildSetValueArchive::mutable_eventtriggers() {
   return &eventtriggers_;
+}
+
+// optional .KN.BuildAttributesArchive oldAttributes = 13;
+inline bool CommandBuildSetValueArchive::has_oldattributes() const {
+  return (_has_bits_[0] & 0x00001000u) != 0;
+}
+inline void CommandBuildSetValueArchive::set_has_oldattributes() {
+  _has_bits_[0] |= 0x00001000u;
+}
+inline void CommandBuildSetValueArchive::clear_has_oldattributes() {
+  _has_bits_[0] &= ~0x00001000u;
+}
+inline void CommandBuildSetValueArchive::clear_oldattributes() {
+  if (oldattributes_ != NULL) oldattributes_->::KN::BuildAttributesArchive::Clear();
+  clear_has_oldattributes();
+}
+inline const ::KN::BuildAttributesArchive& CommandBuildSetValueArchive::oldattributes() const {
+  return oldattributes_ != NULL ? *oldattributes_ : *default_instance_->oldattributes_;
+}
+inline ::KN::BuildAttributesArchive* CommandBuildSetValueArchive::mutable_oldattributes() {
+  set_has_oldattributes();
+  if (oldattributes_ == NULL) oldattributes_ = new ::KN::BuildAttributesArchive;
+  return oldattributes_;
+}
+inline ::KN::BuildAttributesArchive* CommandBuildSetValueArchive::release_oldattributes() {
+  clear_has_oldattributes();
+  ::KN::BuildAttributesArchive* temp = oldattributes_;
+  oldattributes_ = NULL;
+  return temp;
+}
+inline void CommandBuildSetValueArchive::set_allocated_oldattributes(::KN::BuildAttributesArchive* oldattributes) {
+  delete oldattributes_;
+  oldattributes_ = oldattributes;
+  if (oldattributes) {
+    set_has_oldattributes();
+  } else {
+    clear_has_oldattributes();
+  }
+}
+
+// optional .KN.BuildAttributesArchive currentAttributes = 14;
+inline bool CommandBuildSetValueArchive::has_currentattributes() const {
+  return (_has_bits_[0] & 0x00002000u) != 0;
+}
+inline void CommandBuildSetValueArchive::set_has_currentattributes() {
+  _has_bits_[0] |= 0x00002000u;
+}
+inline void CommandBuildSetValueArchive::clear_has_currentattributes() {
+  _has_bits_[0] &= ~0x00002000u;
+}
+inline void CommandBuildSetValueArchive::clear_currentattributes() {
+  if (currentattributes_ != NULL) currentattributes_->::KN::BuildAttributesArchive::Clear();
+  clear_has_currentattributes();
+}
+inline const ::KN::BuildAttributesArchive& CommandBuildSetValueArchive::currentattributes() const {
+  return currentattributes_ != NULL ? *currentattributes_ : *default_instance_->currentattributes_;
+}
+inline ::KN::BuildAttributesArchive* CommandBuildSetValueArchive::mutable_currentattributes() {
+  set_has_currentattributes();
+  if (currentattributes_ == NULL) currentattributes_ = new ::KN::BuildAttributesArchive;
+  return currentattributes_;
+}
+inline ::KN::BuildAttributesArchive* CommandBuildSetValueArchive::release_currentattributes() {
+  clear_has_currentattributes();
+  ::KN::BuildAttributesArchive* temp = currentattributes_;
+  currentattributes_ = NULL;
+  return temp;
+}
+inline void CommandBuildSetValueArchive::set_allocated_currentattributes(::KN::BuildAttributesArchive* currentattributes) {
+  delete currentattributes_;
+  currentattributes_ = currentattributes;
+  if (currentattributes) {
+    set_has_currentattributes();
+  } else {
+    clear_has_currentattributes();
+  }
 }
 
 // -------------------------------------------------------------------
@@ -12540,7 +12948,7 @@ CommandBuildChunkSetValueArchive::mutable_delays() {
   return &delays_;
 }
 
-// optional bool oldOwnsValue = 8;
+// optional bool oldOwnsValue = 8 [deprecated = true];
 inline bool CommandBuildChunkSetValueArchive::has_oldownsvalue() const {
   return (_has_bits_[0] & 0x00000080u) != 0;
 }
@@ -12712,7 +13120,7 @@ inline void CommandTransitionSetValueArchive::set_allocated_property(::std::stri
   }
 }
 
-// repeated string effects = 4;
+// repeated string effects = 4 [deprecated = true];
 inline int CommandTransitionSetValueArchive::effects_size() const {
   return effects_.size();
 }
@@ -12756,7 +13164,7 @@ CommandTransitionSetValueArchive::mutable_effects() {
   return &effects_;
 }
 
-// repeated string unused = 5;
+// repeated string unused = 5 [deprecated = true];
 inline int CommandTransitionSetValueArchive::unused_size() const {
   return unused_.size();
 }
@@ -12800,7 +13208,7 @@ CommandTransitionSetValueArchive::mutable_unused() {
   return &unused_;
 }
 
-// repeated string unused2 = 6;
+// repeated string unused2 = 6 [deprecated = true];
 inline int CommandTransitionSetValueArchive::unused2_size() const {
   return unused2_.size();
 }
@@ -12844,7 +13252,7 @@ CommandTransitionSetValueArchive::mutable_unused2() {
   return &unused2_;
 }
 
-// repeated string unused3 = 7;
+// repeated string unused3 = 7 [deprecated = true];
 inline int CommandTransitionSetValueArchive::unused3_size() const {
   return unused3_.size();
 }
@@ -12888,7 +13296,7 @@ CommandTransitionSetValueArchive::mutable_unused3() {
   return &unused3_;
 }
 
-// repeated double durations = 8;
+// repeated double durations = 8 [deprecated = true];
 inline int CommandTransitionSetValueArchive::durations_size() const {
   return durations_.size();
 }
@@ -12913,7 +13321,7 @@ CommandTransitionSetValueArchive::mutable_durations() {
   return &durations_;
 }
 
-// repeated uint32 directions = 9;
+// repeated uint32 directions = 9 [deprecated = true];
 inline int CommandTransitionSetValueArchive::directions_size() const {
   return directions_.size();
 }
@@ -12938,7 +13346,7 @@ CommandTransitionSetValueArchive::mutable_directions() {
   return &directions_;
 }
 
-// repeated bool isAutomatics = 10;
+// repeated bool isAutomatics = 10 [deprecated = true];
 inline int CommandTransitionSetValueArchive::isautomatics_size() const {
   return isautomatics_.size();
 }
@@ -12963,7 +13371,7 @@ CommandTransitionSetValueArchive::mutable_isautomatics() {
   return &isautomatics_;
 }
 
-// repeated double delays = 11;
+// repeated double delays = 11 [deprecated = true];
 inline int CommandTransitionSetValueArchive::delays_size() const {
   return delays_.size();
 }
@@ -12986,6 +13394,82 @@ CommandTransitionSetValueArchive::delays() const {
 inline ::google::protobuf::RepeatedField< double >*
 CommandTransitionSetValueArchive::mutable_delays() {
   return &delays_;
+}
+
+// optional .KN.TransitionAttributesArchive oldAttributes = 12;
+inline bool CommandTransitionSetValueArchive::has_oldattributes() const {
+  return (_has_bits_[0] & 0x00000800u) != 0;
+}
+inline void CommandTransitionSetValueArchive::set_has_oldattributes() {
+  _has_bits_[0] |= 0x00000800u;
+}
+inline void CommandTransitionSetValueArchive::clear_has_oldattributes() {
+  _has_bits_[0] &= ~0x00000800u;
+}
+inline void CommandTransitionSetValueArchive::clear_oldattributes() {
+  if (oldattributes_ != NULL) oldattributes_->::KN::TransitionAttributesArchive::Clear();
+  clear_has_oldattributes();
+}
+inline const ::KN::TransitionAttributesArchive& CommandTransitionSetValueArchive::oldattributes() const {
+  return oldattributes_ != NULL ? *oldattributes_ : *default_instance_->oldattributes_;
+}
+inline ::KN::TransitionAttributesArchive* CommandTransitionSetValueArchive::mutable_oldattributes() {
+  set_has_oldattributes();
+  if (oldattributes_ == NULL) oldattributes_ = new ::KN::TransitionAttributesArchive;
+  return oldattributes_;
+}
+inline ::KN::TransitionAttributesArchive* CommandTransitionSetValueArchive::release_oldattributes() {
+  clear_has_oldattributes();
+  ::KN::TransitionAttributesArchive* temp = oldattributes_;
+  oldattributes_ = NULL;
+  return temp;
+}
+inline void CommandTransitionSetValueArchive::set_allocated_oldattributes(::KN::TransitionAttributesArchive* oldattributes) {
+  delete oldattributes_;
+  oldattributes_ = oldattributes;
+  if (oldattributes) {
+    set_has_oldattributes();
+  } else {
+    clear_has_oldattributes();
+  }
+}
+
+// optional .KN.TransitionAttributesArchive currentAttributes = 13;
+inline bool CommandTransitionSetValueArchive::has_currentattributes() const {
+  return (_has_bits_[0] & 0x00001000u) != 0;
+}
+inline void CommandTransitionSetValueArchive::set_has_currentattributes() {
+  _has_bits_[0] |= 0x00001000u;
+}
+inline void CommandTransitionSetValueArchive::clear_has_currentattributes() {
+  _has_bits_[0] &= ~0x00001000u;
+}
+inline void CommandTransitionSetValueArchive::clear_currentattributes() {
+  if (currentattributes_ != NULL) currentattributes_->::KN::TransitionAttributesArchive::Clear();
+  clear_has_currentattributes();
+}
+inline const ::KN::TransitionAttributesArchive& CommandTransitionSetValueArchive::currentattributes() const {
+  return currentattributes_ != NULL ? *currentattributes_ : *default_instance_->currentattributes_;
+}
+inline ::KN::TransitionAttributesArchive* CommandTransitionSetValueArchive::mutable_currentattributes() {
+  set_has_currentattributes();
+  if (currentattributes_ == NULL) currentattributes_ = new ::KN::TransitionAttributesArchive;
+  return currentattributes_;
+}
+inline ::KN::TransitionAttributesArchive* CommandTransitionSetValueArchive::release_currentattributes() {
+  clear_has_currentattributes();
+  ::KN::TransitionAttributesArchive* temp = currentattributes_;
+  currentattributes_ = NULL;
+  return temp;
+}
+inline void CommandTransitionSetValueArchive::set_allocated_currentattributes(::KN::TransitionAttributesArchive* currentattributes) {
+  delete currentattributes_;
+  currentattributes_ = currentattributes;
+  if (currentattributes) {
+    set_has_currentattributes();
+  } else {
+    clear_has_currentattributes();
+  }
 }
 
 // -------------------------------------------------------------------
@@ -13628,6 +14112,130 @@ CommandMasterSetBodyStylesArchive::old_list_styles() const {
 inline ::google::protobuf::RepeatedPtrField< ::TSP::Reference >*
 CommandMasterSetBodyStylesArchive::mutable_old_list_styles() {
   return &old_list_styles_;
+}
+
+// -------------------------------------------------------------------
+
+// CommandMasterSetSlideObjectsLayerWithMasterArchive
+
+// required .TSK.CommandArchive super = 1;
+inline bool CommandMasterSetSlideObjectsLayerWithMasterArchive::has_super() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void CommandMasterSetSlideObjectsLayerWithMasterArchive::set_has_super() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void CommandMasterSetSlideObjectsLayerWithMasterArchive::clear_has_super() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void CommandMasterSetSlideObjectsLayerWithMasterArchive::clear_super() {
+  if (super_ != NULL) super_->::TSK::CommandArchive::Clear();
+  clear_has_super();
+}
+inline const ::TSK::CommandArchive& CommandMasterSetSlideObjectsLayerWithMasterArchive::super() const {
+  return super_ != NULL ? *super_ : *default_instance_->super_;
+}
+inline ::TSK::CommandArchive* CommandMasterSetSlideObjectsLayerWithMasterArchive::mutable_super() {
+  set_has_super();
+  if (super_ == NULL) super_ = new ::TSK::CommandArchive;
+  return super_;
+}
+inline ::TSK::CommandArchive* CommandMasterSetSlideObjectsLayerWithMasterArchive::release_super() {
+  clear_has_super();
+  ::TSK::CommandArchive* temp = super_;
+  super_ = NULL;
+  return temp;
+}
+inline void CommandMasterSetSlideObjectsLayerWithMasterArchive::set_allocated_super(::TSK::CommandArchive* super) {
+  delete super_;
+  super_ = super;
+  if (super) {
+    set_has_super();
+  } else {
+    clear_has_super();
+  }
+}
+
+// required .TSP.Reference master = 2;
+inline bool CommandMasterSetSlideObjectsLayerWithMasterArchive::has_master() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void CommandMasterSetSlideObjectsLayerWithMasterArchive::set_has_master() {
+  _has_bits_[0] |= 0x00000002u;
+}
+inline void CommandMasterSetSlideObjectsLayerWithMasterArchive::clear_has_master() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline void CommandMasterSetSlideObjectsLayerWithMasterArchive::clear_master() {
+  if (master_ != NULL) master_->::TSP::Reference::Clear();
+  clear_has_master();
+}
+inline const ::TSP::Reference& CommandMasterSetSlideObjectsLayerWithMasterArchive::master() const {
+  return master_ != NULL ? *master_ : *default_instance_->master_;
+}
+inline ::TSP::Reference* CommandMasterSetSlideObjectsLayerWithMasterArchive::mutable_master() {
+  set_has_master();
+  if (master_ == NULL) master_ = new ::TSP::Reference;
+  return master_;
+}
+inline ::TSP::Reference* CommandMasterSetSlideObjectsLayerWithMasterArchive::release_master() {
+  clear_has_master();
+  ::TSP::Reference* temp = master_;
+  master_ = NULL;
+  return temp;
+}
+inline void CommandMasterSetSlideObjectsLayerWithMasterArchive::set_allocated_master(::TSP::Reference* master) {
+  delete master_;
+  master_ = master;
+  if (master) {
+    set_has_master();
+  } else {
+    clear_has_master();
+  }
+}
+
+// required bool new_value = 3;
+inline bool CommandMasterSetSlideObjectsLayerWithMasterArchive::has_new_value() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void CommandMasterSetSlideObjectsLayerWithMasterArchive::set_has_new_value() {
+  _has_bits_[0] |= 0x00000004u;
+}
+inline void CommandMasterSetSlideObjectsLayerWithMasterArchive::clear_has_new_value() {
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline void CommandMasterSetSlideObjectsLayerWithMasterArchive::clear_new_value() {
+  new_value_ = false;
+  clear_has_new_value();
+}
+inline bool CommandMasterSetSlideObjectsLayerWithMasterArchive::new_value() const {
+  return new_value_;
+}
+inline void CommandMasterSetSlideObjectsLayerWithMasterArchive::set_new_value(bool value) {
+  set_has_new_value();
+  new_value_ = value;
+}
+
+// required bool old_value = 4;
+inline bool CommandMasterSetSlideObjectsLayerWithMasterArchive::has_old_value() const {
+  return (_has_bits_[0] & 0x00000008u) != 0;
+}
+inline void CommandMasterSetSlideObjectsLayerWithMasterArchive::set_has_old_value() {
+  _has_bits_[0] |= 0x00000008u;
+}
+inline void CommandMasterSetSlideObjectsLayerWithMasterArchive::clear_has_old_value() {
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline void CommandMasterSetSlideObjectsLayerWithMasterArchive::clear_old_value() {
+  old_value_ = false;
+  clear_has_old_value();
+}
+inline bool CommandMasterSetSlideObjectsLayerWithMasterArchive::old_value() const {
+  return old_value_;
+}
+inline void CommandMasterSetSlideObjectsLayerWithMasterArchive::set_old_value(bool value) {
+  set_has_old_value();
+  old_value_ = value;
 }
 
 // -------------------------------------------------------------------
@@ -14555,6 +15163,174 @@ inline void CommandSoundtrackSetValue::set_allocated_new_value(::KN::CommandSoun
     set_has_new_value();
   } else {
     clear_has_new_value();
+  }
+}
+
+// -------------------------------------------------------------------
+
+// CommandSlideUpdateMasterDrawables
+
+// required .TSK.CommandArchive super = 1;
+inline bool CommandSlideUpdateMasterDrawables::has_super() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void CommandSlideUpdateMasterDrawables::set_has_super() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void CommandSlideUpdateMasterDrawables::clear_has_super() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void CommandSlideUpdateMasterDrawables::clear_super() {
+  if (super_ != NULL) super_->::TSK::CommandArchive::Clear();
+  clear_has_super();
+}
+inline const ::TSK::CommandArchive& CommandSlideUpdateMasterDrawables::super() const {
+  return super_ != NULL ? *super_ : *default_instance_->super_;
+}
+inline ::TSK::CommandArchive* CommandSlideUpdateMasterDrawables::mutable_super() {
+  set_has_super();
+  if (super_ == NULL) super_ = new ::TSK::CommandArchive;
+  return super_;
+}
+inline ::TSK::CommandArchive* CommandSlideUpdateMasterDrawables::release_super() {
+  clear_has_super();
+  ::TSK::CommandArchive* temp = super_;
+  super_ = NULL;
+  return temp;
+}
+inline void CommandSlideUpdateMasterDrawables::set_allocated_super(::TSK::CommandArchive* super) {
+  delete super_;
+  super_ = super;
+  if (super) {
+    set_has_super();
+  } else {
+    clear_has_super();
+  }
+}
+
+// required .TSP.Reference slide = 2;
+inline bool CommandSlideUpdateMasterDrawables::has_slide() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void CommandSlideUpdateMasterDrawables::set_has_slide() {
+  _has_bits_[0] |= 0x00000002u;
+}
+inline void CommandSlideUpdateMasterDrawables::clear_has_slide() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline void CommandSlideUpdateMasterDrawables::clear_slide() {
+  if (slide_ != NULL) slide_->::TSP::Reference::Clear();
+  clear_has_slide();
+}
+inline const ::TSP::Reference& CommandSlideUpdateMasterDrawables::slide() const {
+  return slide_ != NULL ? *slide_ : *default_instance_->slide_;
+}
+inline ::TSP::Reference* CommandSlideUpdateMasterDrawables::mutable_slide() {
+  set_has_slide();
+  if (slide_ == NULL) slide_ = new ::TSP::Reference;
+  return slide_;
+}
+inline ::TSP::Reference* CommandSlideUpdateMasterDrawables::release_slide() {
+  clear_has_slide();
+  ::TSP::Reference* temp = slide_;
+  slide_ = NULL;
+  return temp;
+}
+inline void CommandSlideUpdateMasterDrawables::set_allocated_slide(::TSP::Reference* slide) {
+  delete slide_;
+  slide_ = slide;
+  if (slide) {
+    set_has_slide();
+  } else {
+    clear_has_slide();
+  }
+}
+
+// repeated .TSP.Reference drawables_to_insert = 3;
+inline int CommandSlideUpdateMasterDrawables::drawables_to_insert_size() const {
+  return drawables_to_insert_.size();
+}
+inline void CommandSlideUpdateMasterDrawables::clear_drawables_to_insert() {
+  drawables_to_insert_.Clear();
+}
+inline const ::TSP::Reference& CommandSlideUpdateMasterDrawables::drawables_to_insert(int index) const {
+  return drawables_to_insert_.Get(index);
+}
+inline ::TSP::Reference* CommandSlideUpdateMasterDrawables::mutable_drawables_to_insert(int index) {
+  return drawables_to_insert_.Mutable(index);
+}
+inline ::TSP::Reference* CommandSlideUpdateMasterDrawables::add_drawables_to_insert() {
+  return drawables_to_insert_.Add();
+}
+inline const ::google::protobuf::RepeatedPtrField< ::TSP::Reference >&
+CommandSlideUpdateMasterDrawables::drawables_to_insert() const {
+  return drawables_to_insert_;
+}
+inline ::google::protobuf::RepeatedPtrField< ::TSP::Reference >*
+CommandSlideUpdateMasterDrawables::mutable_drawables_to_insert() {
+  return &drawables_to_insert_;
+}
+
+// repeated .TSP.Reference sorted_drawables_to_remove = 4;
+inline int CommandSlideUpdateMasterDrawables::sorted_drawables_to_remove_size() const {
+  return sorted_drawables_to_remove_.size();
+}
+inline void CommandSlideUpdateMasterDrawables::clear_sorted_drawables_to_remove() {
+  sorted_drawables_to_remove_.Clear();
+}
+inline const ::TSP::Reference& CommandSlideUpdateMasterDrawables::sorted_drawables_to_remove(int index) const {
+  return sorted_drawables_to_remove_.Get(index);
+}
+inline ::TSP::Reference* CommandSlideUpdateMasterDrawables::mutable_sorted_drawables_to_remove(int index) {
+  return sorted_drawables_to_remove_.Mutable(index);
+}
+inline ::TSP::Reference* CommandSlideUpdateMasterDrawables::add_sorted_drawables_to_remove() {
+  return sorted_drawables_to_remove_.Add();
+}
+inline const ::google::protobuf::RepeatedPtrField< ::TSP::Reference >&
+CommandSlideUpdateMasterDrawables::sorted_drawables_to_remove() const {
+  return sorted_drawables_to_remove_;
+}
+inline ::google::protobuf::RepeatedPtrField< ::TSP::Reference >*
+CommandSlideUpdateMasterDrawables::mutable_sorted_drawables_to_remove() {
+  return &sorted_drawables_to_remove_;
+}
+
+// required .TSP.IndexSet indexes_of_removed_drawables = 5;
+inline bool CommandSlideUpdateMasterDrawables::has_indexes_of_removed_drawables() const {
+  return (_has_bits_[0] & 0x00000010u) != 0;
+}
+inline void CommandSlideUpdateMasterDrawables::set_has_indexes_of_removed_drawables() {
+  _has_bits_[0] |= 0x00000010u;
+}
+inline void CommandSlideUpdateMasterDrawables::clear_has_indexes_of_removed_drawables() {
+  _has_bits_[0] &= ~0x00000010u;
+}
+inline void CommandSlideUpdateMasterDrawables::clear_indexes_of_removed_drawables() {
+  if (indexes_of_removed_drawables_ != NULL) indexes_of_removed_drawables_->::TSP::IndexSet::Clear();
+  clear_has_indexes_of_removed_drawables();
+}
+inline const ::TSP::IndexSet& CommandSlideUpdateMasterDrawables::indexes_of_removed_drawables() const {
+  return indexes_of_removed_drawables_ != NULL ? *indexes_of_removed_drawables_ : *default_instance_->indexes_of_removed_drawables_;
+}
+inline ::TSP::IndexSet* CommandSlideUpdateMasterDrawables::mutable_indexes_of_removed_drawables() {
+  set_has_indexes_of_removed_drawables();
+  if (indexes_of_removed_drawables_ == NULL) indexes_of_removed_drawables_ = new ::TSP::IndexSet;
+  return indexes_of_removed_drawables_;
+}
+inline ::TSP::IndexSet* CommandSlideUpdateMasterDrawables::release_indexes_of_removed_drawables() {
+  clear_has_indexes_of_removed_drawables();
+  ::TSP::IndexSet* temp = indexes_of_removed_drawables_;
+  indexes_of_removed_drawables_ = NULL;
+  return temp;
+}
+inline void CommandSlideUpdateMasterDrawables::set_allocated_indexes_of_removed_drawables(::TSP::IndexSet* indexes_of_removed_drawables) {
+  delete indexes_of_removed_drawables_;
+  indexes_of_removed_drawables_ = indexes_of_removed_drawables;
+  if (indexes_of_removed_drawables) {
+    set_has_indexes_of_removed_drawables();
+  } else {
+    clear_has_indexes_of_removed_drawables();
   }
 }
 

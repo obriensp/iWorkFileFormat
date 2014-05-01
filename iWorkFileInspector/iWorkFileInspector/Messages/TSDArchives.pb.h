@@ -269,6 +269,26 @@ inline bool ShadowArchive_ShadowType_Parse(
   return ::google::protobuf::internal::ParseNamedEnum<ShadowArchive_ShadowType>(
     ShadowArchive_ShadowType_descriptor(), name, value);
 }
+enum MovieArchive_MovieLoopOption {
+  MovieArchive_MovieLoopOption_None = 0,
+  MovieArchive_MovieLoopOption_Repeat = 1,
+  MovieArchive_MovieLoopOption_BackAndForth = 2
+};
+bool MovieArchive_MovieLoopOption_IsValid(int value);
+const MovieArchive_MovieLoopOption MovieArchive_MovieLoopOption_MovieLoopOption_MIN = MovieArchive_MovieLoopOption_None;
+const MovieArchive_MovieLoopOption MovieArchive_MovieLoopOption_MovieLoopOption_MAX = MovieArchive_MovieLoopOption_BackAndForth;
+const int MovieArchive_MovieLoopOption_MovieLoopOption_ARRAYSIZE = MovieArchive_MovieLoopOption_MovieLoopOption_MAX + 1;
+
+const ::google::protobuf::EnumDescriptor* MovieArchive_MovieLoopOption_descriptor();
+inline const ::std::string& MovieArchive_MovieLoopOption_Name(MovieArchive_MovieLoopOption value) {
+  return ::google::protobuf::internal::NameOfEnum(
+    MovieArchive_MovieLoopOption_descriptor(), value);
+}
+inline bool MovieArchive_MovieLoopOption_Parse(
+    const ::std::string& name, MovieArchive_MovieLoopOption* value) {
+  return ::google::protobuf::internal::ParseNamedEnum<MovieArchive_MovieLoopOption>(
+    MovieArchive_MovieLoopOption_descriptor(), name, value);
+}
 enum GuideArchive_GuideType {
   GuideArchive_GuideType_Horizontal = 0,
   GuideArchive_GuideType_Vertical = 1
@@ -5781,6 +5801,31 @@ class MovieArchive : public ::google::protobuf::Message {
 
   // nested types ----------------------------------------------------
 
+  typedef MovieArchive_MovieLoopOption MovieLoopOption;
+  static const MovieLoopOption None = MovieArchive_MovieLoopOption_None;
+  static const MovieLoopOption Repeat = MovieArchive_MovieLoopOption_Repeat;
+  static const MovieLoopOption BackAndForth = MovieArchive_MovieLoopOption_BackAndForth;
+  static inline bool MovieLoopOption_IsValid(int value) {
+    return MovieArchive_MovieLoopOption_IsValid(value);
+  }
+  static const MovieLoopOption MovieLoopOption_MIN =
+    MovieArchive_MovieLoopOption_MovieLoopOption_MIN;
+  static const MovieLoopOption MovieLoopOption_MAX =
+    MovieArchive_MovieLoopOption_MovieLoopOption_MAX;
+  static const int MovieLoopOption_ARRAYSIZE =
+    MovieArchive_MovieLoopOption_MovieLoopOption_ARRAYSIZE;
+  static inline const ::google::protobuf::EnumDescriptor*
+  MovieLoopOption_descriptor() {
+    return MovieArchive_MovieLoopOption_descriptor();
+  }
+  static inline const ::std::string& MovieLoopOption_Name(MovieLoopOption value) {
+    return MovieArchive_MovieLoopOption_Name(value);
+  }
+  static inline bool MovieLoopOption_Parse(const ::std::string& name,
+      MovieLoopOption* value) {
+    return MovieArchive_MovieLoopOption_Parse(name, value);
+  }
+
   // accessors -------------------------------------------------------
 
   // required .TSD.DrawableArchive super = 1;
@@ -5843,12 +5888,19 @@ class MovieArchive : public ::google::protobuf::Message {
   inline float postertime() const;
   inline void set_postertime(float value);
 
-  // optional uint32 loopOption = 6;
-  inline bool has_loopoption() const;
-  inline void clear_loopoption();
-  static const int kLoopOptionFieldNumber = 6;
-  inline ::google::protobuf::uint32 loopoption() const;
-  inline void set_loopoption(::google::protobuf::uint32 value);
+  // optional uint32 loopOptionAsInteger = 6 [deprecated = true];
+  inline bool has_loopoptionasinteger() const PROTOBUF_DEPRECATED;
+  inline void clear_loopoptionasinteger() PROTOBUF_DEPRECATED;
+  static const int kLoopOptionAsIntegerFieldNumber = 6;
+  inline ::google::protobuf::uint32 loopoptionasinteger() const PROTOBUF_DEPRECATED;
+  inline void set_loopoptionasinteger(::google::protobuf::uint32 value) PROTOBUF_DEPRECATED;
+
+  // optional .TSD.MovieArchive.MovieLoopOption loop_option = 24 [default = None];
+  inline bool has_loop_option() const;
+  inline void clear_loop_option();
+  static const int kLoopOptionFieldNumber = 24;
+  inline ::TSD::MovieArchive_MovieLoopOption loop_option() const;
+  inline void set_loop_option(::TSD::MovieArchive_MovieLoopOption value);
 
   // optional float volume = 7;
   inline bool has_volume() const;
@@ -5895,6 +5947,13 @@ class MovieArchive : public ::google::protobuf::Message {
   inline ::TSP::DataReference* mutable_audioonlyimagedata();
   inline ::TSP::DataReference* release_audioonlyimagedata();
   inline void set_allocated_audioonlyimagedata(::TSP::DataReference* audioonlyimagedata);
+
+  // optional bool poster_image_generated_with_alpha_support = 23;
+  inline bool has_poster_image_generated_with_alpha_support() const;
+  inline void clear_poster_image_generated_with_alpha_support();
+  static const int kPosterImageGeneratedWithAlphaSupportFieldNumber = 23;
+  inline bool poster_image_generated_with_alpha_support() const;
+  inline void set_poster_image_generated_with_alpha_support(bool value);
 
   // optional uint32 playableState = 12;
   inline bool has_playablestate() const;
@@ -5980,8 +6039,10 @@ class MovieArchive : public ::google::protobuf::Message {
   inline void clear_has_endtime();
   inline void set_has_postertime();
   inline void clear_has_postertime();
-  inline void set_has_loopoption();
-  inline void clear_has_loopoption();
+  inline void set_has_loopoptionasinteger();
+  inline void clear_has_loopoptionasinteger();
+  inline void set_has_loop_option();
+  inline void clear_has_loop_option();
   inline void set_has_volume();
   inline void clear_has_volume();
   inline void set_has_autoplay();
@@ -5994,6 +6055,8 @@ class MovieArchive : public ::google::protobuf::Message {
   inline void clear_has_posterimagedata();
   inline void set_has_audioonlyimagedata();
   inline void clear_has_audioonlyimagedata();
+  inline void set_has_poster_image_generated_with_alpha_support();
+  inline void clear_has_poster_image_generated_with_alpha_support();
   inline void set_has_playablestate();
   inline void clear_has_playablestate();
   inline void set_has_flags();
@@ -6020,24 +6083,26 @@ class MovieArchive : public ::google::protobuf::Message {
   float starttime_;
   float endtime_;
   float postertime_;
-  ::google::protobuf::uint32 loopoption_;
+  ::google::protobuf::uint32 loopoptionasinteger_;
+  int loop_option_;
   float volume_;
   bool autoplay_;
   bool audioonly_;
   bool streaming_;
+  bool poster_image_generated_with_alpha_support_;
+  ::google::protobuf::uint32 playablestate_;
   ::TSP::DataReference* posterimagedata_;
   ::TSP::DataReference* audioonlyimagedata_;
-  ::google::protobuf::uint32 playablestate_;
-  ::google::protobuf::uint32 flags_;
   ::TSP::Reference* database_moviedata_;
   ::TSP::Reference* database_posterimagedata_;
   ::TSP::Reference* database_audioonlyimagedata_;
   ::TSP::Reference* style_;
   ::TSP::Size* originalsize_;
   ::TSP::Size* naturalsize_;
+  ::google::protobuf::uint32 flags_;
 
   mutable int _cached_size_;
-  ::google::protobuf::uint32 _has_bits_[(22 + 31) / 32];
+  ::google::protobuf::uint32 _has_bits_[(24 + 31) / 32];
 
   friend void  protobuf_AddDesc_TSDArchives_2eproto();
   friend void protobuf_AssignDesc_TSDArchives_2eproto();
@@ -13191,37 +13256,60 @@ inline void MovieArchive::set_postertime(float value) {
   postertime_ = value;
 }
 
-// optional uint32 loopOption = 6;
-inline bool MovieArchive::has_loopoption() const {
+// optional uint32 loopOptionAsInteger = 6 [deprecated = true];
+inline bool MovieArchive::has_loopoptionasinteger() const {
   return (_has_bits_[0] & 0x00000080u) != 0;
 }
-inline void MovieArchive::set_has_loopoption() {
+inline void MovieArchive::set_has_loopoptionasinteger() {
   _has_bits_[0] |= 0x00000080u;
 }
-inline void MovieArchive::clear_has_loopoption() {
+inline void MovieArchive::clear_has_loopoptionasinteger() {
   _has_bits_[0] &= ~0x00000080u;
 }
-inline void MovieArchive::clear_loopoption() {
-  loopoption_ = 0u;
-  clear_has_loopoption();
+inline void MovieArchive::clear_loopoptionasinteger() {
+  loopoptionasinteger_ = 0u;
+  clear_has_loopoptionasinteger();
 }
-inline ::google::protobuf::uint32 MovieArchive::loopoption() const {
-  return loopoption_;
+inline ::google::protobuf::uint32 MovieArchive::loopoptionasinteger() const {
+  return loopoptionasinteger_;
 }
-inline void MovieArchive::set_loopoption(::google::protobuf::uint32 value) {
-  set_has_loopoption();
-  loopoption_ = value;
+inline void MovieArchive::set_loopoptionasinteger(::google::protobuf::uint32 value) {
+  set_has_loopoptionasinteger();
+  loopoptionasinteger_ = value;
+}
+
+// optional .TSD.MovieArchive.MovieLoopOption loop_option = 24 [default = None];
+inline bool MovieArchive::has_loop_option() const {
+  return (_has_bits_[0] & 0x00000100u) != 0;
+}
+inline void MovieArchive::set_has_loop_option() {
+  _has_bits_[0] |= 0x00000100u;
+}
+inline void MovieArchive::clear_has_loop_option() {
+  _has_bits_[0] &= ~0x00000100u;
+}
+inline void MovieArchive::clear_loop_option() {
+  loop_option_ = 0;
+  clear_has_loop_option();
+}
+inline ::TSD::MovieArchive_MovieLoopOption MovieArchive::loop_option() const {
+  return static_cast< ::TSD::MovieArchive_MovieLoopOption >(loop_option_);
+}
+inline void MovieArchive::set_loop_option(::TSD::MovieArchive_MovieLoopOption value) {
+  assert(::TSD::MovieArchive_MovieLoopOption_IsValid(value));
+  set_has_loop_option();
+  loop_option_ = value;
 }
 
 // optional float volume = 7;
 inline bool MovieArchive::has_volume() const {
-  return (_has_bits_[0] & 0x00000100u) != 0;
+  return (_has_bits_[0] & 0x00000200u) != 0;
 }
 inline void MovieArchive::set_has_volume() {
-  _has_bits_[0] |= 0x00000100u;
+  _has_bits_[0] |= 0x00000200u;
 }
 inline void MovieArchive::clear_has_volume() {
-  _has_bits_[0] &= ~0x00000100u;
+  _has_bits_[0] &= ~0x00000200u;
 }
 inline void MovieArchive::clear_volume() {
   volume_ = 0;
@@ -13237,13 +13325,13 @@ inline void MovieArchive::set_volume(float value) {
 
 // optional bool autoPlay = 8 [deprecated = true];
 inline bool MovieArchive::has_autoplay() const {
-  return (_has_bits_[0] & 0x00000200u) != 0;
+  return (_has_bits_[0] & 0x00000400u) != 0;
 }
 inline void MovieArchive::set_has_autoplay() {
-  _has_bits_[0] |= 0x00000200u;
+  _has_bits_[0] |= 0x00000400u;
 }
 inline void MovieArchive::clear_has_autoplay() {
-  _has_bits_[0] &= ~0x00000200u;
+  _has_bits_[0] &= ~0x00000400u;
 }
 inline void MovieArchive::clear_autoplay() {
   autoplay_ = false;
@@ -13259,13 +13347,13 @@ inline void MovieArchive::set_autoplay(bool value) {
 
 // optional bool audioOnly = 9;
 inline bool MovieArchive::has_audioonly() const {
-  return (_has_bits_[0] & 0x00000400u) != 0;
+  return (_has_bits_[0] & 0x00000800u) != 0;
 }
 inline void MovieArchive::set_has_audioonly() {
-  _has_bits_[0] |= 0x00000400u;
+  _has_bits_[0] |= 0x00000800u;
 }
 inline void MovieArchive::clear_has_audioonly() {
-  _has_bits_[0] &= ~0x00000400u;
+  _has_bits_[0] &= ~0x00000800u;
 }
 inline void MovieArchive::clear_audioonly() {
   audioonly_ = false;
@@ -13281,13 +13369,13 @@ inline void MovieArchive::set_audioonly(bool value) {
 
 // optional bool streaming = 18;
 inline bool MovieArchive::has_streaming() const {
-  return (_has_bits_[0] & 0x00000800u) != 0;
+  return (_has_bits_[0] & 0x00001000u) != 0;
 }
 inline void MovieArchive::set_has_streaming() {
-  _has_bits_[0] |= 0x00000800u;
+  _has_bits_[0] |= 0x00001000u;
 }
 inline void MovieArchive::clear_has_streaming() {
-  _has_bits_[0] &= ~0x00000800u;
+  _has_bits_[0] &= ~0x00001000u;
 }
 inline void MovieArchive::clear_streaming() {
   streaming_ = false;
@@ -13303,13 +13391,13 @@ inline void MovieArchive::set_streaming(bool value) {
 
 // optional .TSP.DataReference posterImageData = 15;
 inline bool MovieArchive::has_posterimagedata() const {
-  return (_has_bits_[0] & 0x00001000u) != 0;
+  return (_has_bits_[0] & 0x00002000u) != 0;
 }
 inline void MovieArchive::set_has_posterimagedata() {
-  _has_bits_[0] |= 0x00001000u;
+  _has_bits_[0] |= 0x00002000u;
 }
 inline void MovieArchive::clear_has_posterimagedata() {
-  _has_bits_[0] &= ~0x00001000u;
+  _has_bits_[0] &= ~0x00002000u;
 }
 inline void MovieArchive::clear_posterimagedata() {
   if (posterimagedata_ != NULL) posterimagedata_->::TSP::DataReference::Clear();
@@ -13341,13 +13429,13 @@ inline void MovieArchive::set_allocated_posterimagedata(::TSP::DataReference* po
 
 // optional .TSP.DataReference audioOnlyImageData = 16;
 inline bool MovieArchive::has_audioonlyimagedata() const {
-  return (_has_bits_[0] & 0x00002000u) != 0;
+  return (_has_bits_[0] & 0x00004000u) != 0;
 }
 inline void MovieArchive::set_has_audioonlyimagedata() {
-  _has_bits_[0] |= 0x00002000u;
+  _has_bits_[0] |= 0x00004000u;
 }
 inline void MovieArchive::clear_has_audioonlyimagedata() {
-  _has_bits_[0] &= ~0x00002000u;
+  _has_bits_[0] &= ~0x00004000u;
 }
 inline void MovieArchive::clear_audioonlyimagedata() {
   if (audioonlyimagedata_ != NULL) audioonlyimagedata_->::TSP::DataReference::Clear();
@@ -13377,15 +13465,37 @@ inline void MovieArchive::set_allocated_audioonlyimagedata(::TSP::DataReference*
   }
 }
 
+// optional bool poster_image_generated_with_alpha_support = 23;
+inline bool MovieArchive::has_poster_image_generated_with_alpha_support() const {
+  return (_has_bits_[0] & 0x00008000u) != 0;
+}
+inline void MovieArchive::set_has_poster_image_generated_with_alpha_support() {
+  _has_bits_[0] |= 0x00008000u;
+}
+inline void MovieArchive::clear_has_poster_image_generated_with_alpha_support() {
+  _has_bits_[0] &= ~0x00008000u;
+}
+inline void MovieArchive::clear_poster_image_generated_with_alpha_support() {
+  poster_image_generated_with_alpha_support_ = false;
+  clear_has_poster_image_generated_with_alpha_support();
+}
+inline bool MovieArchive::poster_image_generated_with_alpha_support() const {
+  return poster_image_generated_with_alpha_support_;
+}
+inline void MovieArchive::set_poster_image_generated_with_alpha_support(bool value) {
+  set_has_poster_image_generated_with_alpha_support();
+  poster_image_generated_with_alpha_support_ = value;
+}
+
 // optional uint32 playableState = 12;
 inline bool MovieArchive::has_playablestate() const {
-  return (_has_bits_[0] & 0x00004000u) != 0;
+  return (_has_bits_[0] & 0x00010000u) != 0;
 }
 inline void MovieArchive::set_has_playablestate() {
-  _has_bits_[0] |= 0x00004000u;
+  _has_bits_[0] |= 0x00010000u;
 }
 inline void MovieArchive::clear_has_playablestate() {
-  _has_bits_[0] &= ~0x00004000u;
+  _has_bits_[0] &= ~0x00010000u;
 }
 inline void MovieArchive::clear_playablestate() {
   playablestate_ = 0u;
@@ -13401,13 +13511,13 @@ inline void MovieArchive::set_playablestate(::google::protobuf::uint32 value) {
 
 // optional uint32 flags = 13;
 inline bool MovieArchive::has_flags() const {
-  return (_has_bits_[0] & 0x00008000u) != 0;
+  return (_has_bits_[0] & 0x00020000u) != 0;
 }
 inline void MovieArchive::set_has_flags() {
-  _has_bits_[0] |= 0x00008000u;
+  _has_bits_[0] |= 0x00020000u;
 }
 inline void MovieArchive::clear_has_flags() {
-  _has_bits_[0] &= ~0x00008000u;
+  _has_bits_[0] &= ~0x00020000u;
 }
 inline void MovieArchive::clear_flags() {
   flags_ = 0u;
@@ -13423,13 +13533,13 @@ inline void MovieArchive::set_flags(::google::protobuf::uint32 value) {
 
 // optional .TSP.Reference database_movieData = 2;
 inline bool MovieArchive::has_database_moviedata() const {
-  return (_has_bits_[0] & 0x00010000u) != 0;
+  return (_has_bits_[0] & 0x00040000u) != 0;
 }
 inline void MovieArchive::set_has_database_moviedata() {
-  _has_bits_[0] |= 0x00010000u;
+  _has_bits_[0] |= 0x00040000u;
 }
 inline void MovieArchive::clear_has_database_moviedata() {
-  _has_bits_[0] &= ~0x00010000u;
+  _has_bits_[0] &= ~0x00040000u;
 }
 inline void MovieArchive::clear_database_moviedata() {
   if (database_moviedata_ != NULL) database_moviedata_->::TSP::Reference::Clear();
@@ -13461,13 +13571,13 @@ inline void MovieArchive::set_allocated_database_moviedata(::TSP::Reference* dat
 
 // optional .TSP.Reference database_posterImageData = 10;
 inline bool MovieArchive::has_database_posterimagedata() const {
-  return (_has_bits_[0] & 0x00020000u) != 0;
+  return (_has_bits_[0] & 0x00080000u) != 0;
 }
 inline void MovieArchive::set_has_database_posterimagedata() {
-  _has_bits_[0] |= 0x00020000u;
+  _has_bits_[0] |= 0x00080000u;
 }
 inline void MovieArchive::clear_has_database_posterimagedata() {
-  _has_bits_[0] &= ~0x00020000u;
+  _has_bits_[0] &= ~0x00080000u;
 }
 inline void MovieArchive::clear_database_posterimagedata() {
   if (database_posterimagedata_ != NULL) database_posterimagedata_->::TSP::Reference::Clear();
@@ -13499,13 +13609,13 @@ inline void MovieArchive::set_allocated_database_posterimagedata(::TSP::Referenc
 
 // optional .TSP.Reference database_audioOnlyImageData = 11;
 inline bool MovieArchive::has_database_audioonlyimagedata() const {
-  return (_has_bits_[0] & 0x00040000u) != 0;
+  return (_has_bits_[0] & 0x00100000u) != 0;
 }
 inline void MovieArchive::set_has_database_audioonlyimagedata() {
-  _has_bits_[0] |= 0x00040000u;
+  _has_bits_[0] |= 0x00100000u;
 }
 inline void MovieArchive::clear_has_database_audioonlyimagedata() {
-  _has_bits_[0] &= ~0x00040000u;
+  _has_bits_[0] &= ~0x00100000u;
 }
 inline void MovieArchive::clear_database_audioonlyimagedata() {
   if (database_audioonlyimagedata_ != NULL) database_audioonlyimagedata_->::TSP::Reference::Clear();
@@ -13537,13 +13647,13 @@ inline void MovieArchive::set_allocated_database_audioonlyimagedata(::TSP::Refer
 
 // optional .TSP.Reference style = 19;
 inline bool MovieArchive::has_style() const {
-  return (_has_bits_[0] & 0x00080000u) != 0;
+  return (_has_bits_[0] & 0x00200000u) != 0;
 }
 inline void MovieArchive::set_has_style() {
-  _has_bits_[0] |= 0x00080000u;
+  _has_bits_[0] |= 0x00200000u;
 }
 inline void MovieArchive::clear_has_style() {
-  _has_bits_[0] &= ~0x00080000u;
+  _has_bits_[0] &= ~0x00200000u;
 }
 inline void MovieArchive::clear_style() {
   if (style_ != NULL) style_->::TSP::Reference::Clear();
@@ -13575,13 +13685,13 @@ inline void MovieArchive::set_allocated_style(::TSP::Reference* style) {
 
 // optional .TSP.Size originalSize = 20;
 inline bool MovieArchive::has_originalsize() const {
-  return (_has_bits_[0] & 0x00100000u) != 0;
+  return (_has_bits_[0] & 0x00400000u) != 0;
 }
 inline void MovieArchive::set_has_originalsize() {
-  _has_bits_[0] |= 0x00100000u;
+  _has_bits_[0] |= 0x00400000u;
 }
 inline void MovieArchive::clear_has_originalsize() {
-  _has_bits_[0] &= ~0x00100000u;
+  _has_bits_[0] &= ~0x00400000u;
 }
 inline void MovieArchive::clear_originalsize() {
   if (originalsize_ != NULL) originalsize_->::TSP::Size::Clear();
@@ -13613,13 +13723,13 @@ inline void MovieArchive::set_allocated_originalsize(::TSP::Size* originalsize) 
 
 // optional .TSP.Size naturalSize = 21;
 inline bool MovieArchive::has_naturalsize() const {
-  return (_has_bits_[0] & 0x00200000u) != 0;
+  return (_has_bits_[0] & 0x00800000u) != 0;
 }
 inline void MovieArchive::set_has_naturalsize() {
-  _has_bits_[0] |= 0x00200000u;
+  _has_bits_[0] |= 0x00800000u;
 }
 inline void MovieArchive::clear_has_naturalsize() {
-  _has_bits_[0] &= ~0x00200000u;
+  _has_bits_[0] &= ~0x00800000u;
 }
 inline void MovieArchive::clear_naturalsize() {
   if (naturalsize_ != NULL) naturalsize_->::TSP::Size::Clear();
@@ -14261,6 +14371,10 @@ inline const EnumDescriptor* GetEnumDescriptor< ::TSD::StrokeArchive_LineCap>() 
 template <>
 inline const EnumDescriptor* GetEnumDescriptor< ::TSD::ShadowArchive_ShadowType>() {
   return ::TSD::ShadowArchive_ShadowType_descriptor();
+}
+template <>
+inline const EnumDescriptor* GetEnumDescriptor< ::TSD::MovieArchive_MovieLoopOption>() {
+  return ::TSD::MovieArchive_MovieLoopOption_descriptor();
 }
 template <>
 inline const EnumDescriptor* GetEnumDescriptor< ::TSD::GuideArchive_GuideType>() {

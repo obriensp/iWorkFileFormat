@@ -68,6 +68,7 @@ const ::google::protobuf::internal::GeneratedMessageReflection*
 const ::google::protobuf::Descriptor* ThemeReplaceStylePresetCommandArchive_descriptor_ = NULL;
 const ::google::protobuf::internal::GeneratedMessageReflection*
   ThemeReplaceStylePresetCommandArchive_reflection_ = NULL;
+const ::google::protobuf::EnumDescriptor* ValueType_descriptor_ = NULL;
 
 }  // namespace
 
@@ -367,6 +368,7 @@ void protobuf_AssignDesc_TSSArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(ThemeReplaceStylePresetCommandArchive));
+  ValueType_descriptor_ = file->enum_type(0);
 }
 
 namespace {
@@ -527,7 +529,9 @@ void protobuf_AddDesc_TSSArchives_2eproto() {
     "laceStylePresetCommandArchive\022\"\n\005super\030\001"
     " \002(\0132\023.TSK.CommandArchive\022\036\n\006preset\030\003 \002("
     "\0132\016.TSP.Reference\022\"\n\nold_preset\030\004 \002(\0132\016."
-    "TSP.Reference", 2733);
+    "TSP.Reference*G\n\tValueType\022\016\n\nObjectType"
+    "\020\000\022\013\n\007IntType\020\001\022\r\n\tFloatType\020\002\022\016\n\nDouble"
+    "Type\020\003", 2806);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "TSSArchives.proto", &protobuf_RegisterTypes);
   StyleArchive::default_instance_ = new StyleArchive();
@@ -571,6 +575,22 @@ struct StaticDescriptorInitializer_TSSArchives_2eproto {
     protobuf_AddDesc_TSSArchives_2eproto();
   }
 } static_descriptor_initializer_TSSArchives_2eproto_;
+const ::google::protobuf::EnumDescriptor* ValueType_descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return ValueType_descriptor_;
+}
+bool ValueType_IsValid(int value) {
+  switch(value) {
+    case 0:
+    case 1:
+    case 2:
+    case 3:
+      return true;
+    default:
+      return false;
+  }
+}
+
 
 // ===================================================================
 

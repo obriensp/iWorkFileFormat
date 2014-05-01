@@ -757,59 +757,66 @@ class TransitionAttributesArchive : public ::google::protobuf::Message {
   inline ::KN::TransitionAttributesArchive_TransitionCustomAttributesTextDeliveryType custom_text_delivery_type() const;
   inline void set_custom_text_delivery_type(::KN::TransitionAttributesArchive_TransitionCustomAttributesTextDeliveryType value);
 
-  // optional string database_animationType = 1;
-  inline bool has_database_animationtype() const;
-  inline void clear_database_animationtype();
+  // optional bool custom_motion_blur = 17;
+  inline bool has_custom_motion_blur() const;
+  inline void clear_custom_motion_blur();
+  static const int kCustomMotionBlurFieldNumber = 17;
+  inline bool custom_motion_blur() const;
+  inline void set_custom_motion_blur(bool value);
+
+  // optional string database_animationType = 1 [deprecated = true];
+  inline bool has_database_animationtype() const PROTOBUF_DEPRECATED;
+  inline void clear_database_animationtype() PROTOBUF_DEPRECATED;
   static const int kDatabaseAnimationTypeFieldNumber = 1;
-  inline const ::std::string& database_animationtype() const;
-  inline void set_database_animationtype(const ::std::string& value);
-  inline void set_database_animationtype(const char* value);
-  inline void set_database_animationtype(const char* value, size_t size);
-  inline ::std::string* mutable_database_animationtype();
-  inline ::std::string* release_database_animationtype();
-  inline void set_allocated_database_animationtype(::std::string* database_animationtype);
+  inline const ::std::string& database_animationtype() const PROTOBUF_DEPRECATED;
+  inline void set_database_animationtype(const ::std::string& value) PROTOBUF_DEPRECATED;
+  inline void set_database_animationtype(const char* value) PROTOBUF_DEPRECATED;
+  inline void set_database_animationtype(const char* value, size_t size) PROTOBUF_DEPRECATED;
+  inline ::std::string* mutable_database_animationtype() PROTOBUF_DEPRECATED;
+  inline ::std::string* release_database_animationtype() PROTOBUF_DEPRECATED;
+  inline void set_allocated_database_animationtype(::std::string* database_animationtype) PROTOBUF_DEPRECATED;
 
-  // optional string database_effect = 2;
-  inline bool has_database_effect() const;
-  inline void clear_database_effect();
+  // optional string database_effect = 2 [deprecated = true];
+  inline bool has_database_effect() const PROTOBUF_DEPRECATED;
+  inline void clear_database_effect() PROTOBUF_DEPRECATED;
   static const int kDatabaseEffectFieldNumber = 2;
-  inline const ::std::string& database_effect() const;
-  inline void set_database_effect(const ::std::string& value);
-  inline void set_database_effect(const char* value);
-  inline void set_database_effect(const char* value, size_t size);
-  inline ::std::string* mutable_database_effect();
-  inline ::std::string* release_database_effect();
-  inline void set_allocated_database_effect(::std::string* database_effect);
+  inline const ::std::string& database_effect() const PROTOBUF_DEPRECATED;
+  inline void set_database_effect(const ::std::string& value) PROTOBUF_DEPRECATED;
+  inline void set_database_effect(const char* value) PROTOBUF_DEPRECATED;
+  inline void set_database_effect(const char* value, size_t size) PROTOBUF_DEPRECATED;
+  inline ::std::string* mutable_database_effect() PROTOBUF_DEPRECATED;
+  inline ::std::string* release_database_effect() PROTOBUF_DEPRECATED;
+  inline void set_allocated_database_effect(::std::string* database_effect) PROTOBUF_DEPRECATED;
 
-  // optional double database_duration = 3;
-  inline bool has_database_duration() const;
-  inline void clear_database_duration();
+  // optional double database_duration = 3 [deprecated = true];
+  inline bool has_database_duration() const PROTOBUF_DEPRECATED;
+  inline void clear_database_duration() PROTOBUF_DEPRECATED;
   static const int kDatabaseDurationFieldNumber = 3;
-  inline double database_duration() const;
-  inline void set_database_duration(double value);
+  inline double database_duration() const PROTOBUF_DEPRECATED;
+  inline void set_database_duration(double value) PROTOBUF_DEPRECATED;
 
-  // optional uint32 database_direction = 4;
-  inline bool has_database_direction() const;
-  inline void clear_database_direction();
+  // optional uint32 database_direction = 4 [deprecated = true];
+  inline bool has_database_direction() const PROTOBUF_DEPRECATED;
+  inline void clear_database_direction() PROTOBUF_DEPRECATED;
   static const int kDatabaseDirectionFieldNumber = 4;
-  inline ::google::protobuf::uint32 database_direction() const;
-  inline void set_database_direction(::google::protobuf::uint32 value);
+  inline ::google::protobuf::uint32 database_direction() const PROTOBUF_DEPRECATED;
+  inline void set_database_direction(::google::protobuf::uint32 value) PROTOBUF_DEPRECATED;
 
-  // optional float database_delay = 5;
-  inline bool has_database_delay() const;
-  inline void clear_database_delay();
+  // optional float database_delay = 5 [deprecated = true];
+  inline bool has_database_delay() const PROTOBUF_DEPRECATED;
+  inline void clear_database_delay() PROTOBUF_DEPRECATED;
   static const int kDatabaseDelayFieldNumber = 5;
-  inline float database_delay() const;
-  inline void set_database_delay(float value);
+  inline float database_delay() const PROTOBUF_DEPRECATED;
+  inline void set_database_delay(float value) PROTOBUF_DEPRECATED;
 
-  // optional .TSP.Color database_color = 7;
-  inline bool has_database_color() const;
-  inline void clear_database_color();
+  // optional .TSP.Color database_color = 7 [deprecated = true];
+  inline bool has_database_color() const PROTOBUF_DEPRECATED;
+  inline void clear_database_color() PROTOBUF_DEPRECATED;
   static const int kDatabaseColorFieldNumber = 7;
-  inline const ::TSP::Color& database_color() const;
-  inline ::TSP::Color* mutable_database_color();
-  inline ::TSP::Color* release_database_color();
-  inline void set_allocated_database_color(::TSP::Color* database_color);
+  inline const ::TSP::Color& database_color() const PROTOBUF_DEPRECATED;
+  inline ::TSP::Color* mutable_database_color() PROTOBUF_DEPRECATED;
+  inline ::TSP::Color* release_database_color() PROTOBUF_DEPRECATED;
+  inline void set_allocated_database_color(::TSP::Color* database_color) PROTOBUF_DEPRECATED;
 
   // @@protoc_insertion_point(class_scope:KN.TransitionAttributesArchive)
  private:
@@ -831,6 +838,8 @@ class TransitionAttributesArchive : public ::google::protobuf::Message {
   inline void clear_has_custom_timing_curve();
   inline void set_has_custom_text_delivery_type();
   inline void clear_has_custom_text_delivery_type();
+  inline void set_has_custom_motion_blur();
+  inline void clear_has_custom_motion_blur();
   inline void set_has_database_animationtype();
   inline void clear_has_database_animationtype();
   inline void set_has_database_effect();
@@ -853,6 +862,7 @@ class TransitionAttributesArchive : public ::google::protobuf::Message {
   bool isautomatic_;
   bool custom_bounce_;
   bool custom_magic_move_fade_unmatched_objects_;
+  bool custom_motion_blur_;
   int custom_timing_curve_;
   int custom_text_delivery_type_;
   ::std::string* database_animationtype_;
@@ -863,7 +873,7 @@ class TransitionAttributesArchive : public ::google::protobuf::Message {
   ::TSP::Color* database_color_;
 
   mutable int _cached_size_;
-  ::google::protobuf::uint32 _has_bits_[(15 + 31) / 32];
+  ::google::protobuf::uint32 _has_bits_[(16 + 31) / 32];
 
   friend void  protobuf_AddDesc_KNArchives_2eproto();
   friend void protobuf_AssignDesc_KNArchives_2eproto();
@@ -1316,19 +1326,19 @@ class BuildAttributesArchive : public ::google::protobuf::Message {
   inline ::google::protobuf::uint32 eventtrigger() const;
   inline void set_eventtrigger(::google::protobuf::uint32 value);
 
-  // optional double delayAutomaticAfter = 6;
-  inline bool has_delayautomaticafter() const;
-  inline void clear_delayautomaticafter();
+  // optional double delayAutomaticAfter = 6 [deprecated = true];
+  inline bool has_delayautomaticafter() const PROTOBUF_DEPRECATED;
+  inline void clear_delayautomaticafter() PROTOBUF_DEPRECATED;
   static const int kDelayAutomaticAfterFieldNumber = 6;
-  inline double delayautomaticafter() const;
-  inline void set_delayautomaticafter(double value);
+  inline double delayautomaticafter() const PROTOBUF_DEPRECATED;
+  inline void set_delayautomaticafter(double value) PROTOBUF_DEPRECATED;
 
-  // optional double delayAutomaticWith = 7;
-  inline bool has_delayautomaticwith() const;
-  inline void clear_delayautomaticwith();
+  // optional double delayAutomaticWith = 7 [deprecated = true];
+  inline bool has_delayautomaticwith() const PROTOBUF_DEPRECATED;
+  inline void clear_delayautomaticwith() PROTOBUF_DEPRECATED;
   static const int kDelayAutomaticWithFieldNumber = 7;
-  inline double delayautomaticwith() const;
-  inline void set_delayautomaticwith(double value);
+  inline double delayautomaticwith() const PROTOBUF_DEPRECATED;
+  inline void set_delayautomaticwith(double value) PROTOBUF_DEPRECATED;
 
   // optional .KN.BuildAttributesArchive.BuildAttributesCurveStyle curveStyle = 14;
   inline bool has_curvestyle() const;
@@ -1451,59 +1461,66 @@ class BuildAttributesArchive : public ::google::protobuf::Message {
   inline ::KN::BuildAttributesArchive_ActionBuildAttributesJiggleIntensity custom_action_jiggleintensity() const;
   inline void set_custom_action_jiggleintensity(::KN::BuildAttributesArchive_ActionBuildAttributesJiggleIntensity value);
 
-  // optional string database_animationType = 1;
-  inline bool has_database_animationtype() const;
-  inline void clear_database_animationtype();
+  // optional bool custom_motion_blur = 29;
+  inline bool has_custom_motion_blur() const;
+  inline void clear_custom_motion_blur();
+  static const int kCustomMotionBlurFieldNumber = 29;
+  inline bool custom_motion_blur() const;
+  inline void set_custom_motion_blur(bool value);
+
+  // optional string database_animationType = 1 [deprecated = true];
+  inline bool has_database_animationtype() const PROTOBUF_DEPRECATED;
+  inline void clear_database_animationtype() PROTOBUF_DEPRECATED;
   static const int kDatabaseAnimationTypeFieldNumber = 1;
-  inline const ::std::string& database_animationtype() const;
-  inline void set_database_animationtype(const ::std::string& value);
-  inline void set_database_animationtype(const char* value);
-  inline void set_database_animationtype(const char* value, size_t size);
-  inline ::std::string* mutable_database_animationtype();
-  inline ::std::string* release_database_animationtype();
-  inline void set_allocated_database_animationtype(::std::string* database_animationtype);
+  inline const ::std::string& database_animationtype() const PROTOBUF_DEPRECATED;
+  inline void set_database_animationtype(const ::std::string& value) PROTOBUF_DEPRECATED;
+  inline void set_database_animationtype(const char* value) PROTOBUF_DEPRECATED;
+  inline void set_database_animationtype(const char* value, size_t size) PROTOBUF_DEPRECATED;
+  inline ::std::string* mutable_database_animationtype() PROTOBUF_DEPRECATED;
+  inline ::std::string* release_database_animationtype() PROTOBUF_DEPRECATED;
+  inline void set_allocated_database_animationtype(::std::string* database_animationtype) PROTOBUF_DEPRECATED;
 
-  // optional string database_effect = 2;
-  inline bool has_database_effect() const;
-  inline void clear_database_effect();
+  // optional string database_effect = 2 [deprecated = true];
+  inline bool has_database_effect() const PROTOBUF_DEPRECATED;
+  inline void clear_database_effect() PROTOBUF_DEPRECATED;
   static const int kDatabaseEffectFieldNumber = 2;
-  inline const ::std::string& database_effect() const;
-  inline void set_database_effect(const ::std::string& value);
-  inline void set_database_effect(const char* value);
-  inline void set_database_effect(const char* value, size_t size);
-  inline ::std::string* mutable_database_effect();
-  inline ::std::string* release_database_effect();
-  inline void set_allocated_database_effect(::std::string* database_effect);
+  inline const ::std::string& database_effect() const PROTOBUF_DEPRECATED;
+  inline void set_database_effect(const ::std::string& value) PROTOBUF_DEPRECATED;
+  inline void set_database_effect(const char* value) PROTOBUF_DEPRECATED;
+  inline void set_database_effect(const char* value, size_t size) PROTOBUF_DEPRECATED;
+  inline ::std::string* mutable_database_effect() PROTOBUF_DEPRECATED;
+  inline ::std::string* release_database_effect() PROTOBUF_DEPRECATED;
+  inline void set_allocated_database_effect(::std::string* database_effect) PROTOBUF_DEPRECATED;
 
-  // optional uint32 database_direction = 3;
-  inline bool has_database_direction() const;
-  inline void clear_database_direction();
+  // optional uint32 database_direction = 3 [deprecated = true];
+  inline bool has_database_direction() const PROTOBUF_DEPRECATED;
+  inline void clear_database_direction() PROTOBUF_DEPRECATED;
   static const int kDatabaseDirectionFieldNumber = 3;
-  inline ::google::protobuf::uint32 database_direction() const;
-  inline void set_database_direction(::google::protobuf::uint32 value);
+  inline ::google::protobuf::uint32 database_direction() const PROTOBUF_DEPRECATED;
+  inline void set_database_direction(::google::protobuf::uint32 value) PROTOBUF_DEPRECATED;
 
-  // optional double database_delay = 5;
-  inline bool has_database_delay() const;
-  inline void clear_database_delay();
+  // optional double database_delay = 5 [deprecated = true];
+  inline bool has_database_delay() const PROTOBUF_DEPRECATED;
+  inline void clear_database_delay() PROTOBUF_DEPRECATED;
   static const int kDatabaseDelayFieldNumber = 5;
-  inline double database_delay() const;
-  inline void set_database_delay(double value);
+  inline double database_delay() const PROTOBUF_DEPRECATED;
+  inline void set_database_delay(double value) PROTOBUF_DEPRECATED;
 
-  // optional double database_duration = 8;
-  inline bool has_database_duration() const;
-  inline void clear_database_duration();
+  // optional double database_duration = 8 [deprecated = true];
+  inline bool has_database_duration() const PROTOBUF_DEPRECATED;
+  inline void clear_database_duration() PROTOBUF_DEPRECATED;
   static const int kDatabaseDurationFieldNumber = 8;
-  inline double database_duration() const;
-  inline void set_database_duration(double value);
+  inline double database_duration() const PROTOBUF_DEPRECATED;
+  inline void set_database_duration(double value) PROTOBUF_DEPRECATED;
 
-  // optional .TSP.Color database_color = 16;
-  inline bool has_database_color() const;
-  inline void clear_database_color();
+  // optional .TSP.Color database_color = 16 [deprecated = true];
+  inline bool has_database_color() const PROTOBUF_DEPRECATED;
+  inline void clear_database_color() PROTOBUF_DEPRECATED;
   static const int kDatabaseColorFieldNumber = 16;
-  inline const ::TSP::Color& database_color() const;
-  inline ::TSP::Color* mutable_database_color();
-  inline ::TSP::Color* release_database_color();
-  inline void set_allocated_database_color(::TSP::Color* database_color);
+  inline const ::TSP::Color& database_color() const PROTOBUF_DEPRECATED;
+  inline ::TSP::Color* mutable_database_color() PROTOBUF_DEPRECATED;
+  inline ::TSP::Color* release_database_color() PROTOBUF_DEPRECATED;
+  inline void set_allocated_database_color(::TSP::Color* database_color) PROTOBUF_DEPRECATED;
 
   // optional string motionPathString = 15 [deprecated = true];
   inline bool has_motionpathstring() const PROTOBUF_DEPRECATED;
@@ -1561,6 +1578,8 @@ class BuildAttributesArchive : public ::google::protobuf::Message {
   inline void clear_has_custom_action_scale();
   inline void set_has_custom_action_jiggleintensity();
   inline void clear_has_custom_action_jiggleintensity();
+  inline void set_has_custom_motion_blur();
+  inline void clear_has_custom_motion_blur();
   inline void set_has_database_animationtype();
   inline void clear_has_database_animationtype();
   inline void set_has_database_effect();
@@ -1593,14 +1612,15 @@ class BuildAttributesArchive : public ::google::protobuf::Message {
   double action_coloralpha_;
   ::TSD::PathSourceArchive* action_motionpathsource_;
   int custom_textdelivery_;
+  int custom_deliveryoption_;
   bool custom_bounce_;
   bool custom_action_decay_;
-  int custom_deliveryoption_;
+  bool custom_motion_blur_;
   ::google::protobuf::uint32 custom_action_repeatcount_;
   double custom_action_scale_;
-  ::std::string* database_animationtype_;
   int custom_action_jiggleintensity_;
   ::google::protobuf::uint32 database_direction_;
+  ::std::string* database_animationtype_;
   ::std::string* database_effect_;
   double database_delay_;
   double database_duration_;
@@ -1608,7 +1628,7 @@ class BuildAttributesArchive : public ::google::protobuf::Message {
   ::std::string* motionpathstring_;
 
   mutable int _cached_size_;
-  ::google::protobuf::uint32 _has_bits_[(28 + 31) / 32];
+  ::google::protobuf::uint32 _has_bits_[(29 + 31) / 32];
 
   friend void  protobuf_AddDesc_KNArchives_2eproto();
   friend void protobuf_AssignDesc_KNArchives_2eproto();
@@ -2387,17 +2407,29 @@ class SlideArchive : public ::google::protobuf::Message {
   inline ::TSP::Reference* release_slidenumberplaceholder();
   inline void set_allocated_slidenumberplaceholder(::TSP::Reference* slidenumberplaceholder);
 
-  // repeated .TSP.Reference drawables = 7;
-  inline int drawables_size() const;
-  inline void clear_drawables();
-  static const int kDrawablesFieldNumber = 7;
-  inline const ::TSP::Reference& drawables(int index) const;
-  inline ::TSP::Reference* mutable_drawables(int index);
-  inline ::TSP::Reference* add_drawables();
+  // repeated .TSP.Reference owned_drawables = 7;
+  inline int owned_drawables_size() const;
+  inline void clear_owned_drawables();
+  static const int kOwnedDrawablesFieldNumber = 7;
+  inline const ::TSP::Reference& owned_drawables(int index) const;
+  inline ::TSP::Reference* mutable_owned_drawables(int index);
+  inline ::TSP::Reference* add_owned_drawables();
   inline const ::google::protobuf::RepeatedPtrField< ::TSP::Reference >&
-      drawables() const;
+      owned_drawables() const;
   inline ::google::protobuf::RepeatedPtrField< ::TSP::Reference >*
-      mutable_drawables();
+      mutable_owned_drawables();
+
+  // repeated .TSP.Reference drawables_z_order = 42;
+  inline int drawables_z_order_size() const;
+  inline void clear_drawables_z_order();
+  static const int kDrawablesZOrderFieldNumber = 42;
+  inline const ::TSP::Reference& drawables_z_order(int index) const;
+  inline ::TSP::Reference* mutable_drawables_z_order(int index);
+  inline ::TSP::Reference* add_drawables_z_order();
+  inline const ::google::protobuf::RepeatedPtrField< ::TSP::Reference >&
+      drawables_z_order() const;
+  inline ::google::protobuf::RepeatedPtrField< ::TSP::Reference >*
+      mutable_drawables_z_order();
 
   // repeated .KN.SlideArchive.SageTagMapEntry sage_tag_to_info_map = 28;
   inline int sage_tag_to_info_map_size() const;
@@ -2576,6 +2608,13 @@ class SlideArchive : public ::google::protobuf::Message {
   inline ::std::string* release_thumbnailtextforbodyplaceholder();
   inline void set_allocated_thumbnailtextforbodyplaceholder(::std::string* thumbnailtextforbodyplaceholder);
 
+  // optional bool slideObjectsLayerWithMaster = 41 [default = false];
+  inline bool has_slideobjectslayerwithmaster() const;
+  inline void clear_slideobjectslayerwithmaster();
+  static const int kSlideObjectsLayerWithMasterFieldNumber = 41;
+  inline bool slideobjectslayerwithmaster() const;
+  inline void set_slideobjectslayerwithmaster(bool value);
+
   // optional .TSP.Reference master = 17;
   inline bool has_master() const;
   inline void clear_master();
@@ -2691,6 +2730,8 @@ class SlideArchive : public ::google::protobuf::Message {
   inline void clear_has_thumbnailtextfortitleplaceholder();
   inline void set_has_thumbnailtextforbodyplaceholder();
   inline void clear_has_thumbnailtextforbodyplaceholder();
+  inline void set_has_slideobjectslayerwithmaster();
+  inline void clear_has_slideobjectslayerwithmaster();
   inline void set_has_master();
   inline void clear_has_master();
   inline void set_has_userdefinedguidestorage();
@@ -2716,7 +2757,8 @@ class SlideArchive : public ::google::protobuf::Message {
   ::TSP::Reference* bodyplaceholder_;
   ::TSP::Reference* objectplaceholder_;
   ::TSP::Reference* slidenumberplaceholder_;
-  ::google::protobuf::RepeatedPtrField< ::TSP::Reference > drawables_;
+  ::google::protobuf::RepeatedPtrField< ::TSP::Reference > owned_drawables_;
+  ::google::protobuf::RepeatedPtrField< ::TSP::Reference > drawables_z_order_;
   ::google::protobuf::RepeatedPtrField< ::KN::SlideArchive_SageTagMapEntry > sage_tag_to_info_map_;
   ::std::string* name_;
   ::TSD::GeometryArchive* titleplaceholdergeometry_;
@@ -2741,12 +2783,13 @@ class SlideArchive : public ::google::protobuf::Message {
   ::TSP::Reference* userdefinedguidestorage_;
   ::TSP::Reference* note_;
   ::TSP::Reference* info_using_object_placeholder_geometry_;
+  bool slideobjectslayerwithmaster_;
   bool indocument_;
   bool info_using_object_placeholder_geometry_matches_object_placeholder_geometry_;
   bool deprecated_objectplaceholdervisibleforexport_;
 
   mutable int _cached_size_;
-  ::google::protobuf::uint32 _has_bits_[(36 + 31) / 32];
+  ::google::protobuf::uint32 _has_bits_[(38 + 31) / 32];
 
   friend void  protobuf_AddDesc_KNArchives_2eproto();
   friend void protobuf_AssignDesc_KNArchives_2eproto();
@@ -2891,12 +2934,12 @@ class SlideNodeArchive : public ::google::protobuf::Message {
   inline bool hasbodyinoutlineview() const;
   inline void set_hasbodyinoutlineview(bool value);
 
-  // required bool hasBuilds = 6;
-  inline bool has_hasbuilds() const;
-  inline void clear_hasbuilds();
+  // required bool hasBuilds = 6 [deprecated = true];
+  inline bool has_hasbuilds() const PROTOBUF_DEPRECATED;
+  inline void clear_hasbuilds() PROTOBUF_DEPRECATED;
   static const int kHasBuildsFieldNumber = 6;
-  inline bool hasbuilds() const;
-  inline void set_hasbuilds(bool value);
+  inline bool hasbuilds() const PROTOBUF_DEPRECATED;
+  inline void set_hasbuilds(bool value) PROTOBUF_DEPRECATED;
 
   // required bool hasTransition = 7;
   inline bool has_hastransition() const;
@@ -2957,6 +3000,13 @@ class SlideNodeArchive : public ::google::protobuf::Message {
   inline ::google::protobuf::uint32 eventcount() const;
   inline void set_eventcount(::google::protobuf::uint32 value);
 
+  // optional bool has_explicit_builds = 20;
+  inline bool has_has_explicit_builds() const;
+  inline void clear_has_explicit_builds();
+  static const int kHasExplicitBuildsFieldNumber = 20;
+  inline bool has_explicit_builds() const;
+  inline void set_has_explicit_builds(bool value);
+
   // optional .TSP.Reference database_thumbnail = 3;
   inline bool has_database_thumbnail() const;
   inline void clear_database_thumbnail();
@@ -3008,6 +3058,8 @@ class SlideNodeArchive : public ::google::protobuf::Message {
   inline void clear_has_slidespecifichyperlinkcount();
   inline void set_has_eventcount();
   inline void clear_has_eventcount();
+  inline void set_has_has_explicit_builds();
+  inline void clear_has_has_explicit_builds();
   inline void set_has_database_thumbnail();
   inline void clear_has_database_thumbnail();
 
@@ -3026,15 +3078,16 @@ class SlideNodeArchive : public ::google::protobuf::Message {
   bool hastransition_;
   bool hasnote_;
   ::std::string* uniqueidentifier_;
-  bool isslidenumbervisible_;
-  ::google::protobuf::uint32 slidespecifichyperlinkcount_;
   ::std::string* copyfromslideidentifier_;
+  bool isslidenumbervisible_;
+  bool has_explicit_builds_;
+  ::google::protobuf::uint32 slidespecifichyperlinkcount_;
   ::TSP::Reference* database_thumbnail_;
   ::google::protobuf::RepeatedPtrField< ::TSP::Reference > database_thumbnails_;
   ::google::protobuf::uint32 eventcount_;
 
   mutable int _cached_size_;
-  ::google::protobuf::uint32 _has_bits_[(19 + 31) / 32];
+  ::google::protobuf::uint32 _has_bits_[(20 + 31) / 32];
 
   friend void  protobuf_AddDesc_KNArchives_2eproto();
   friend void protobuf_AssignDesc_KNArchives_2eproto();
@@ -3481,6 +3534,29 @@ class UIStateArchive : public ::google::protobuf::Message {
   inline ::TSP::Size* release_desktop_main_content_size();
   inline void set_allocated_desktop_main_content_size(::TSP::Size* desktop_main_content_size);
 
+  // optional float desktop_presenter_notes_view_height = 25;
+  inline bool has_desktop_presenter_notes_view_height() const;
+  inline void clear_desktop_presenter_notes_view_height();
+  static const int kDesktopPresenterNotesViewHeightFieldNumber = 25;
+  inline float desktop_presenter_notes_view_height() const;
+  inline void set_desktop_presenter_notes_view_height(float value);
+
+  // optional .TSP.Point desktop_main_window_origin = 26;
+  inline bool has_desktop_main_window_origin() const;
+  inline void clear_desktop_main_window_origin();
+  static const int kDesktopMainWindowOriginFieldNumber = 26;
+  inline const ::TSP::Point& desktop_main_window_origin() const;
+  inline ::TSP::Point* mutable_desktop_main_window_origin();
+  inline ::TSP::Point* release_desktop_main_window_origin();
+  inline void set_allocated_desktop_main_window_origin(::TSP::Point* desktop_main_window_origin);
+
+  // optional bool light_table_hides_skipped_slides = 27;
+  inline bool has_light_table_hides_skipped_slides() const;
+  inline void clear_light_table_hides_skipped_slides();
+  static const int kLightTableHidesSkippedSlidesFieldNumber = 27;
+  inline bool light_table_hides_skipped_slides() const;
+  inline void set_light_table_hides_skipped_slides(bool value);
+
   // @@protoc_insertion_point(class_scope:KN.UIStateArchive)
  private:
   inline void set_has_slidenodetoedit();
@@ -3525,6 +3601,12 @@ class UIStateArchive : public ::google::protobuf::Message {
   inline void clear_has_desktop_outline_view_width();
   inline void set_has_desktop_main_content_size();
   inline void clear_has_desktop_main_content_size();
+  inline void set_has_desktop_presenter_notes_view_height();
+  inline void clear_has_desktop_presenter_notes_view_height();
+  inline void set_has_desktop_main_window_origin();
+  inline void clear_has_desktop_main_window_origin();
+  inline void set_has_light_table_hides_skipped_slides();
+  inline void clear_has_light_table_hides_skipped_slides();
 
   ::google::protobuf::UnknownFieldSet _unknown_fields_;
 
@@ -3548,13 +3630,16 @@ class UIStateArchive : public ::google::protobuf::Message {
   bool show_master_guides_;
   bool shows_comments_;
   ::google::protobuf::RepeatedPtrField< ::TSP::Reference > collapsed_slide_nodes_;
-  bool shows_ruler_;
   float desktop_navigator_view_width_;
-  ::TSP::Size* desktop_main_content_size_;
   float desktop_outline_view_width_;
+  ::TSP::Size* desktop_main_content_size_;
+  bool shows_ruler_;
+  bool light_table_hides_skipped_slides_;
+  float desktop_presenter_notes_view_height_;
+  ::TSP::Point* desktop_main_window_origin_;
 
   mutable int _cached_size_;
-  ::google::protobuf::uint32 _has_bits_[(24 + 31) / 32];
+  ::google::protobuf::uint32 _has_bits_[(27 + 31) / 32];
 
   friend void  protobuf_AddDesc_KNArchives_2eproto();
   friend void protobuf_AssignDesc_KNArchives_2eproto();
@@ -3784,6 +3869,22 @@ class ThemeArchive : public ::google::protobuf::Message {
   inline ::TSP::Reference* release_defaultmasterslidenode();
   inline void set_allocated_defaultmasterslidenode(::TSP::Reference* defaultmasterslidenode);
 
+  // optional .TSP.Reference default_master_slide_node_reference = 6;
+  inline bool has_default_master_slide_node_reference() const;
+  inline void clear_default_master_slide_node_reference();
+  static const int kDefaultMasterSlideNodeReferenceFieldNumber = 6;
+  inline const ::TSP::Reference& default_master_slide_node_reference() const;
+  inline ::TSP::Reference* mutable_default_master_slide_node_reference();
+  inline ::TSP::Reference* release_default_master_slide_node_reference();
+  inline void set_allocated_default_master_slide_node_reference(::TSP::Reference* default_master_slide_node_reference);
+
+  // optional bool default_master_slide_node_is_our_best_guess = 7;
+  inline bool has_default_master_slide_node_is_our_best_guess() const;
+  inline void clear_default_master_slide_node_is_our_best_guess();
+  static const int kDefaultMasterSlideNodeIsOurBestGuessFieldNumber = 7;
+  inline bool default_master_slide_node_is_our_best_guess() const;
+  inline void set_default_master_slide_node_is_our_best_guess(bool value);
+
   // @@protoc_insertion_point(class_scope:KN.ThemeArchive)
  private:
   inline void set_has_super();
@@ -3792,6 +3893,10 @@ class ThemeArchive : public ::google::protobuf::Message {
   inline void clear_has_uuid();
   inline void set_has_defaultmasterslidenode();
   inline void clear_has_defaultmasterslidenode();
+  inline void set_has_default_master_slide_node_reference();
+  inline void clear_has_default_master_slide_node_reference();
+  inline void set_has_default_master_slide_node_is_our_best_guess();
+  inline void clear_has_default_master_slide_node_is_our_best_guess();
 
   ::google::protobuf::UnknownFieldSet _unknown_fields_;
 
@@ -3800,9 +3905,11 @@ class ThemeArchive : public ::google::protobuf::Message {
   ::std::string* uuid_;
   ::google::protobuf::RepeatedPtrField< ::TSP::Reference > classicthemerecords_;
   ::TSP::Reference* defaultmasterslidenode_;
+  ::TSP::Reference* default_master_slide_node_reference_;
+  bool default_master_slide_node_is_our_best_guess_;
 
   mutable int _cached_size_;
-  ::google::protobuf::uint32 _has_bits_[(5 + 31) / 32];
+  ::google::protobuf::uint32 _has_bits_[(7 + 31) / 32];
 
   friend void  protobuf_AddDesc_KNArchives_2eproto();
   friend void protobuf_AssignDesc_KNArchives_2eproto();
@@ -4620,6 +4727,18 @@ class PasteboardNativeStorageArchive : public ::google::protobuf::Message {
   inline ::google::protobuf::RepeatedPtrField< ::TSP::Reference >*
       mutable_slidenodes();
 
+  // repeated .TSP.Reference masterSlideNodes = 9;
+  inline int masterslidenodes_size() const;
+  inline void clear_masterslidenodes();
+  static const int kMasterSlideNodesFieldNumber = 9;
+  inline const ::TSP::Reference& masterslidenodes(int index) const;
+  inline ::TSP::Reference* mutable_masterslidenodes(int index);
+  inline ::TSP::Reference* add_masterslidenodes();
+  inline const ::google::protobuf::RepeatedPtrField< ::TSP::Reference >&
+      masterslidenodes() const;
+  inline ::google::protobuf::RepeatedPtrField< ::TSP::Reference >*
+      mutable_masterslidenodes();
+
   // optional .TSP.Size originalShowSize = 5;
   inline bool has_originalshowsize() const;
   inline void clear_originalshowsize();
@@ -4641,10 +4760,36 @@ class PasteboardNativeStorageArchive : public ::google::protobuf::Message {
   inline ::google::protobuf::RepeatedPtrField< ::TSP::Range >*
       mutable_titleranges();
 
+  // repeated .TSD.GeometryArchive geometries_in_root = 7;
+  inline int geometries_in_root_size() const;
+  inline void clear_geometries_in_root();
+  static const int kGeometriesInRootFieldNumber = 7;
+  inline const ::TSD::GeometryArchive& geometries_in_root(int index) const;
+  inline ::TSD::GeometryArchive* mutable_geometries_in_root(int index);
+  inline ::TSD::GeometryArchive* add_geometries_in_root();
+  inline const ::google::protobuf::RepeatedPtrField< ::TSD::GeometryArchive >&
+      geometries_in_root() const;
+  inline ::google::protobuf::RepeatedPtrField< ::TSD::GeometryArchive >*
+      mutable_geometries_in_root();
+
+  // optional string slide_node_unique_identifier = 8;
+  inline bool has_slide_node_unique_identifier() const;
+  inline void clear_slide_node_unique_identifier();
+  static const int kSlideNodeUniqueIdentifierFieldNumber = 8;
+  inline const ::std::string& slide_node_unique_identifier() const;
+  inline void set_slide_node_unique_identifier(const ::std::string& value);
+  inline void set_slide_node_unique_identifier(const char* value);
+  inline void set_slide_node_unique_identifier(const char* value, size_t size);
+  inline ::std::string* mutable_slide_node_unique_identifier();
+  inline ::std::string* release_slide_node_unique_identifier();
+  inline void set_allocated_slide_node_unique_identifier(::std::string* slide_node_unique_identifier);
+
   // @@protoc_insertion_point(class_scope:KN.PasteboardNativeStorageArchive)
  private:
   inline void set_has_originalshowsize();
   inline void clear_has_originalshowsize();
+  inline void set_has_slide_node_unique_identifier();
+  inline void clear_has_slide_node_unique_identifier();
 
   ::google::protobuf::UnknownFieldSet _unknown_fields_;
 
@@ -4652,11 +4797,14 @@ class PasteboardNativeStorageArchive : public ::google::protobuf::Message {
   ::google::protobuf::RepeatedPtrField< ::TSP::Reference > builds_;
   ::google::protobuf::RepeatedPtrField< ::KN::BuildChunkArchive > buildchunks_;
   ::google::protobuf::RepeatedPtrField< ::TSP::Reference > slidenodes_;
+  ::google::protobuf::RepeatedPtrField< ::TSP::Reference > masterslidenodes_;
   ::TSP::Size* originalshowsize_;
   ::google::protobuf::RepeatedPtrField< ::TSP::Range > titleranges_;
+  ::google::protobuf::RepeatedPtrField< ::TSD::GeometryArchive > geometries_in_root_;
+  ::std::string* slide_node_unique_identifier_;
 
   mutable int _cached_size_;
-  ::google::protobuf::uint32 _has_bits_[(6 + 31) / 32];
+  ::google::protobuf::uint32 _has_bits_[(9 + 31) / 32];
 
   friend void  protobuf_AddDesc_KNArchives_2eproto();
   friend void protobuf_AssignDesc_KNArchives_2eproto();
@@ -5390,26 +5538,38 @@ class RecordingLaserEventArchive : public ::google::protobuf::Message {
 
   // accessors -------------------------------------------------------
 
-  // optional .TSP.Point unscaled_location = 1;
-  inline bool has_unscaled_location() const;
-  inline void clear_unscaled_location();
+  // optional .TSP.Point unscaled_location = 1 [deprecated = true];
+  inline bool has_unscaled_location() const PROTOBUF_DEPRECATED;
+  inline void clear_unscaled_location() PROTOBUF_DEPRECATED;
   static const int kUnscaledLocationFieldNumber = 1;
-  inline const ::TSP::Point& unscaled_location() const;
-  inline ::TSP::Point* mutable_unscaled_location();
-  inline ::TSP::Point* release_unscaled_location();
-  inline void set_allocated_unscaled_location(::TSP::Point* unscaled_location);
+  inline const ::TSP::Point& unscaled_location() const PROTOBUF_DEPRECATED;
+  inline ::TSP::Point* mutable_unscaled_location() PROTOBUF_DEPRECATED;
+  inline ::TSP::Point* release_unscaled_location() PROTOBUF_DEPRECATED;
+  inline void set_allocated_unscaled_location(::TSP::Point* unscaled_location) PROTOBUF_DEPRECATED;
+
+  // optional .TSP.Point unit_location = 2;
+  inline bool has_unit_location() const;
+  inline void clear_unit_location();
+  static const int kUnitLocationFieldNumber = 2;
+  inline const ::TSP::Point& unit_location() const;
+  inline ::TSP::Point* mutable_unit_location();
+  inline ::TSP::Point* release_unit_location();
+  inline void set_allocated_unit_location(::TSP::Point* unit_location);
 
   // @@protoc_insertion_point(class_scope:KN.RecordingLaserEventArchive)
  private:
   inline void set_has_unscaled_location();
   inline void clear_has_unscaled_location();
+  inline void set_has_unit_location();
+  inline void clear_has_unit_location();
 
   ::google::protobuf::UnknownFieldSet _unknown_fields_;
 
   ::TSP::Point* unscaled_location_;
+  ::TSP::Point* unit_location_;
 
   mutable int _cached_size_;
-  ::google::protobuf::uint32 _has_bits_[(1 + 31) / 32];
+  ::google::protobuf::uint32 _has_bits_[(2 + 31) / 32];
 
   friend void  protobuf_AddDesc_KNArchives_2eproto();
   friend void protobuf_AssignDesc_KNArchives_2eproto();
@@ -6777,15 +6937,37 @@ inline void TransitionAttributesArchive::set_custom_text_delivery_type(::KN::Tra
   custom_text_delivery_type_ = value;
 }
 
-// optional string database_animationType = 1;
-inline bool TransitionAttributesArchive::has_database_animationtype() const {
+// optional bool custom_motion_blur = 17;
+inline bool TransitionAttributesArchive::has_custom_motion_blur() const {
   return (_has_bits_[0] & 0x00000200u) != 0;
 }
-inline void TransitionAttributesArchive::set_has_database_animationtype() {
+inline void TransitionAttributesArchive::set_has_custom_motion_blur() {
   _has_bits_[0] |= 0x00000200u;
 }
-inline void TransitionAttributesArchive::clear_has_database_animationtype() {
+inline void TransitionAttributesArchive::clear_has_custom_motion_blur() {
   _has_bits_[0] &= ~0x00000200u;
+}
+inline void TransitionAttributesArchive::clear_custom_motion_blur() {
+  custom_motion_blur_ = false;
+  clear_has_custom_motion_blur();
+}
+inline bool TransitionAttributesArchive::custom_motion_blur() const {
+  return custom_motion_blur_;
+}
+inline void TransitionAttributesArchive::set_custom_motion_blur(bool value) {
+  set_has_custom_motion_blur();
+  custom_motion_blur_ = value;
+}
+
+// optional string database_animationType = 1 [deprecated = true];
+inline bool TransitionAttributesArchive::has_database_animationtype() const {
+  return (_has_bits_[0] & 0x00000400u) != 0;
+}
+inline void TransitionAttributesArchive::set_has_database_animationtype() {
+  _has_bits_[0] |= 0x00000400u;
+}
+inline void TransitionAttributesArchive::clear_has_database_animationtype() {
+  _has_bits_[0] &= ~0x00000400u;
 }
 inline void TransitionAttributesArchive::clear_database_animationtype() {
   if (database_animationtype_ != &::google::protobuf::internal::kEmptyString) {
@@ -6847,15 +7029,15 @@ inline void TransitionAttributesArchive::set_allocated_database_animationtype(::
   }
 }
 
-// optional string database_effect = 2;
+// optional string database_effect = 2 [deprecated = true];
 inline bool TransitionAttributesArchive::has_database_effect() const {
-  return (_has_bits_[0] & 0x00000400u) != 0;
+  return (_has_bits_[0] & 0x00000800u) != 0;
 }
 inline void TransitionAttributesArchive::set_has_database_effect() {
-  _has_bits_[0] |= 0x00000400u;
+  _has_bits_[0] |= 0x00000800u;
 }
 inline void TransitionAttributesArchive::clear_has_database_effect() {
-  _has_bits_[0] &= ~0x00000400u;
+  _has_bits_[0] &= ~0x00000800u;
 }
 inline void TransitionAttributesArchive::clear_database_effect() {
   if (database_effect_ != &::google::protobuf::internal::kEmptyString) {
@@ -6917,15 +7099,15 @@ inline void TransitionAttributesArchive::set_allocated_database_effect(::std::st
   }
 }
 
-// optional double database_duration = 3;
+// optional double database_duration = 3 [deprecated = true];
 inline bool TransitionAttributesArchive::has_database_duration() const {
-  return (_has_bits_[0] & 0x00000800u) != 0;
+  return (_has_bits_[0] & 0x00001000u) != 0;
 }
 inline void TransitionAttributesArchive::set_has_database_duration() {
-  _has_bits_[0] |= 0x00000800u;
+  _has_bits_[0] |= 0x00001000u;
 }
 inline void TransitionAttributesArchive::clear_has_database_duration() {
-  _has_bits_[0] &= ~0x00000800u;
+  _has_bits_[0] &= ~0x00001000u;
 }
 inline void TransitionAttributesArchive::clear_database_duration() {
   database_duration_ = 0;
@@ -6939,15 +7121,15 @@ inline void TransitionAttributesArchive::set_database_duration(double value) {
   database_duration_ = value;
 }
 
-// optional uint32 database_direction = 4;
+// optional uint32 database_direction = 4 [deprecated = true];
 inline bool TransitionAttributesArchive::has_database_direction() const {
-  return (_has_bits_[0] & 0x00001000u) != 0;
+  return (_has_bits_[0] & 0x00002000u) != 0;
 }
 inline void TransitionAttributesArchive::set_has_database_direction() {
-  _has_bits_[0] |= 0x00001000u;
+  _has_bits_[0] |= 0x00002000u;
 }
 inline void TransitionAttributesArchive::clear_has_database_direction() {
-  _has_bits_[0] &= ~0x00001000u;
+  _has_bits_[0] &= ~0x00002000u;
 }
 inline void TransitionAttributesArchive::clear_database_direction() {
   database_direction_ = 0u;
@@ -6961,15 +7143,15 @@ inline void TransitionAttributesArchive::set_database_direction(::google::protob
   database_direction_ = value;
 }
 
-// optional float database_delay = 5;
+// optional float database_delay = 5 [deprecated = true];
 inline bool TransitionAttributesArchive::has_database_delay() const {
-  return (_has_bits_[0] & 0x00002000u) != 0;
+  return (_has_bits_[0] & 0x00004000u) != 0;
 }
 inline void TransitionAttributesArchive::set_has_database_delay() {
-  _has_bits_[0] |= 0x00002000u;
+  _has_bits_[0] |= 0x00004000u;
 }
 inline void TransitionAttributesArchive::clear_has_database_delay() {
-  _has_bits_[0] &= ~0x00002000u;
+  _has_bits_[0] &= ~0x00004000u;
 }
 inline void TransitionAttributesArchive::clear_database_delay() {
   database_delay_ = 0;
@@ -6983,15 +7165,15 @@ inline void TransitionAttributesArchive::set_database_delay(float value) {
   database_delay_ = value;
 }
 
-// optional .TSP.Color database_color = 7;
+// optional .TSP.Color database_color = 7 [deprecated = true];
 inline bool TransitionAttributesArchive::has_database_color() const {
-  return (_has_bits_[0] & 0x00004000u) != 0;
+  return (_has_bits_[0] & 0x00008000u) != 0;
 }
 inline void TransitionAttributesArchive::set_has_database_color() {
-  _has_bits_[0] |= 0x00004000u;
+  _has_bits_[0] |= 0x00008000u;
 }
 inline void TransitionAttributesArchive::clear_has_database_color() {
-  _has_bits_[0] &= ~0x00004000u;
+  _has_bits_[0] &= ~0x00008000u;
 }
 inline void TransitionAttributesArchive::clear_database_color() {
   if (database_color_ != NULL) database_color_->::TSP::Color::Clear();
@@ -7279,7 +7461,7 @@ inline void BuildAttributesArchive::set_eventtrigger(::google::protobuf::uint32 
   eventtrigger_ = value;
 }
 
-// optional double delayAutomaticAfter = 6;
+// optional double delayAutomaticAfter = 6 [deprecated = true];
 inline bool BuildAttributesArchive::has_delayautomaticafter() const {
   return (_has_bits_[0] & 0x00000004u) != 0;
 }
@@ -7301,7 +7483,7 @@ inline void BuildAttributesArchive::set_delayautomaticafter(double value) {
   delayautomaticafter_ = value;
 }
 
-// optional double delayAutomaticWith = 7;
+// optional double delayAutomaticWith = 7 [deprecated = true];
 inline bool BuildAttributesArchive::has_delayautomaticwith() const {
   return (_has_bits_[0] & 0x00000008u) != 0;
 }
@@ -7719,15 +7901,37 @@ inline void BuildAttributesArchive::set_custom_action_jiggleintensity(::KN::Buil
   custom_action_jiggleintensity_ = value;
 }
 
-// optional string database_animationType = 1;
-inline bool BuildAttributesArchive::has_database_animationtype() const {
+// optional bool custom_motion_blur = 29;
+inline bool BuildAttributesArchive::has_custom_motion_blur() const {
   return (_has_bits_[0] & 0x00200000u) != 0;
 }
-inline void BuildAttributesArchive::set_has_database_animationtype() {
+inline void BuildAttributesArchive::set_has_custom_motion_blur() {
   _has_bits_[0] |= 0x00200000u;
 }
-inline void BuildAttributesArchive::clear_has_database_animationtype() {
+inline void BuildAttributesArchive::clear_has_custom_motion_blur() {
   _has_bits_[0] &= ~0x00200000u;
+}
+inline void BuildAttributesArchive::clear_custom_motion_blur() {
+  custom_motion_blur_ = false;
+  clear_has_custom_motion_blur();
+}
+inline bool BuildAttributesArchive::custom_motion_blur() const {
+  return custom_motion_blur_;
+}
+inline void BuildAttributesArchive::set_custom_motion_blur(bool value) {
+  set_has_custom_motion_blur();
+  custom_motion_blur_ = value;
+}
+
+// optional string database_animationType = 1 [deprecated = true];
+inline bool BuildAttributesArchive::has_database_animationtype() const {
+  return (_has_bits_[0] & 0x00400000u) != 0;
+}
+inline void BuildAttributesArchive::set_has_database_animationtype() {
+  _has_bits_[0] |= 0x00400000u;
+}
+inline void BuildAttributesArchive::clear_has_database_animationtype() {
+  _has_bits_[0] &= ~0x00400000u;
 }
 inline void BuildAttributesArchive::clear_database_animationtype() {
   if (database_animationtype_ != &::google::protobuf::internal::kEmptyString) {
@@ -7789,15 +7993,15 @@ inline void BuildAttributesArchive::set_allocated_database_animationtype(::std::
   }
 }
 
-// optional string database_effect = 2;
+// optional string database_effect = 2 [deprecated = true];
 inline bool BuildAttributesArchive::has_database_effect() const {
-  return (_has_bits_[0] & 0x00400000u) != 0;
+  return (_has_bits_[0] & 0x00800000u) != 0;
 }
 inline void BuildAttributesArchive::set_has_database_effect() {
-  _has_bits_[0] |= 0x00400000u;
+  _has_bits_[0] |= 0x00800000u;
 }
 inline void BuildAttributesArchive::clear_has_database_effect() {
-  _has_bits_[0] &= ~0x00400000u;
+  _has_bits_[0] &= ~0x00800000u;
 }
 inline void BuildAttributesArchive::clear_database_effect() {
   if (database_effect_ != &::google::protobuf::internal::kEmptyString) {
@@ -7859,15 +8063,15 @@ inline void BuildAttributesArchive::set_allocated_database_effect(::std::string*
   }
 }
 
-// optional uint32 database_direction = 3;
+// optional uint32 database_direction = 3 [deprecated = true];
 inline bool BuildAttributesArchive::has_database_direction() const {
-  return (_has_bits_[0] & 0x00800000u) != 0;
+  return (_has_bits_[0] & 0x01000000u) != 0;
 }
 inline void BuildAttributesArchive::set_has_database_direction() {
-  _has_bits_[0] |= 0x00800000u;
+  _has_bits_[0] |= 0x01000000u;
 }
 inline void BuildAttributesArchive::clear_has_database_direction() {
-  _has_bits_[0] &= ~0x00800000u;
+  _has_bits_[0] &= ~0x01000000u;
 }
 inline void BuildAttributesArchive::clear_database_direction() {
   database_direction_ = 0u;
@@ -7881,15 +8085,15 @@ inline void BuildAttributesArchive::set_database_direction(::google::protobuf::u
   database_direction_ = value;
 }
 
-// optional double database_delay = 5;
+// optional double database_delay = 5 [deprecated = true];
 inline bool BuildAttributesArchive::has_database_delay() const {
-  return (_has_bits_[0] & 0x01000000u) != 0;
+  return (_has_bits_[0] & 0x02000000u) != 0;
 }
 inline void BuildAttributesArchive::set_has_database_delay() {
-  _has_bits_[0] |= 0x01000000u;
+  _has_bits_[0] |= 0x02000000u;
 }
 inline void BuildAttributesArchive::clear_has_database_delay() {
-  _has_bits_[0] &= ~0x01000000u;
+  _has_bits_[0] &= ~0x02000000u;
 }
 inline void BuildAttributesArchive::clear_database_delay() {
   database_delay_ = 0;
@@ -7903,15 +8107,15 @@ inline void BuildAttributesArchive::set_database_delay(double value) {
   database_delay_ = value;
 }
 
-// optional double database_duration = 8;
+// optional double database_duration = 8 [deprecated = true];
 inline bool BuildAttributesArchive::has_database_duration() const {
-  return (_has_bits_[0] & 0x02000000u) != 0;
+  return (_has_bits_[0] & 0x04000000u) != 0;
 }
 inline void BuildAttributesArchive::set_has_database_duration() {
-  _has_bits_[0] |= 0x02000000u;
+  _has_bits_[0] |= 0x04000000u;
 }
 inline void BuildAttributesArchive::clear_has_database_duration() {
-  _has_bits_[0] &= ~0x02000000u;
+  _has_bits_[0] &= ~0x04000000u;
 }
 inline void BuildAttributesArchive::clear_database_duration() {
   database_duration_ = 0;
@@ -7925,15 +8129,15 @@ inline void BuildAttributesArchive::set_database_duration(double value) {
   database_duration_ = value;
 }
 
-// optional .TSP.Color database_color = 16;
+// optional .TSP.Color database_color = 16 [deprecated = true];
 inline bool BuildAttributesArchive::has_database_color() const {
-  return (_has_bits_[0] & 0x04000000u) != 0;
+  return (_has_bits_[0] & 0x08000000u) != 0;
 }
 inline void BuildAttributesArchive::set_has_database_color() {
-  _has_bits_[0] |= 0x04000000u;
+  _has_bits_[0] |= 0x08000000u;
 }
 inline void BuildAttributesArchive::clear_has_database_color() {
-  _has_bits_[0] &= ~0x04000000u;
+  _has_bits_[0] &= ~0x08000000u;
 }
 inline void BuildAttributesArchive::clear_database_color() {
   if (database_color_ != NULL) database_color_->::TSP::Color::Clear();
@@ -7965,13 +8169,13 @@ inline void BuildAttributesArchive::set_allocated_database_color(::TSP::Color* d
 
 // optional string motionPathString = 15 [deprecated = true];
 inline bool BuildAttributesArchive::has_motionpathstring() const {
-  return (_has_bits_[0] & 0x08000000u) != 0;
+  return (_has_bits_[0] & 0x10000000u) != 0;
 }
 inline void BuildAttributesArchive::set_has_motionpathstring() {
-  _has_bits_[0] |= 0x08000000u;
+  _has_bits_[0] |= 0x10000000u;
 }
 inline void BuildAttributesArchive::clear_has_motionpathstring() {
-  _has_bits_[0] &= ~0x08000000u;
+  _has_bits_[0] &= ~0x10000000u;
 }
 inline void BuildAttributesArchive::clear_motionpathstring() {
   if (motionpathstring_ != &::google::protobuf::internal::kEmptyString) {
@@ -8910,29 +9114,54 @@ inline void SlideArchive::set_allocated_slidenumberplaceholder(::TSP::Reference*
   }
 }
 
-// repeated .TSP.Reference drawables = 7;
-inline int SlideArchive::drawables_size() const {
-  return drawables_.size();
+// repeated .TSP.Reference owned_drawables = 7;
+inline int SlideArchive::owned_drawables_size() const {
+  return owned_drawables_.size();
 }
-inline void SlideArchive::clear_drawables() {
-  drawables_.Clear();
+inline void SlideArchive::clear_owned_drawables() {
+  owned_drawables_.Clear();
 }
-inline const ::TSP::Reference& SlideArchive::drawables(int index) const {
-  return drawables_.Get(index);
+inline const ::TSP::Reference& SlideArchive::owned_drawables(int index) const {
+  return owned_drawables_.Get(index);
 }
-inline ::TSP::Reference* SlideArchive::mutable_drawables(int index) {
-  return drawables_.Mutable(index);
+inline ::TSP::Reference* SlideArchive::mutable_owned_drawables(int index) {
+  return owned_drawables_.Mutable(index);
 }
-inline ::TSP::Reference* SlideArchive::add_drawables() {
-  return drawables_.Add();
+inline ::TSP::Reference* SlideArchive::add_owned_drawables() {
+  return owned_drawables_.Add();
 }
 inline const ::google::protobuf::RepeatedPtrField< ::TSP::Reference >&
-SlideArchive::drawables() const {
-  return drawables_;
+SlideArchive::owned_drawables() const {
+  return owned_drawables_;
 }
 inline ::google::protobuf::RepeatedPtrField< ::TSP::Reference >*
-SlideArchive::mutable_drawables() {
-  return &drawables_;
+SlideArchive::mutable_owned_drawables() {
+  return &owned_drawables_;
+}
+
+// repeated .TSP.Reference drawables_z_order = 42;
+inline int SlideArchive::drawables_z_order_size() const {
+  return drawables_z_order_.size();
+}
+inline void SlideArchive::clear_drawables_z_order() {
+  drawables_z_order_.Clear();
+}
+inline const ::TSP::Reference& SlideArchive::drawables_z_order(int index) const {
+  return drawables_z_order_.Get(index);
+}
+inline ::TSP::Reference* SlideArchive::mutable_drawables_z_order(int index) {
+  return drawables_z_order_.Mutable(index);
+}
+inline ::TSP::Reference* SlideArchive::add_drawables_z_order() {
+  return drawables_z_order_.Add();
+}
+inline const ::google::protobuf::RepeatedPtrField< ::TSP::Reference >&
+SlideArchive::drawables_z_order() const {
+  return drawables_z_order_;
+}
+inline ::google::protobuf::RepeatedPtrField< ::TSP::Reference >*
+SlideArchive::mutable_drawables_z_order() {
+  return &drawables_z_order_;
 }
 
 // repeated .KN.SlideArchive.SageTagMapEntry sage_tag_to_info_map = 28;
@@ -8962,13 +9191,13 @@ SlideArchive::mutable_sage_tag_to_info_map() {
 
 // optional string name = 10;
 inline bool SlideArchive::has_name() const {
-  return (_has_bits_[0] & 0x00000400u) != 0;
+  return (_has_bits_[0] & 0x00000800u) != 0;
 }
 inline void SlideArchive::set_has_name() {
-  _has_bits_[0] |= 0x00000400u;
+  _has_bits_[0] |= 0x00000800u;
 }
 inline void SlideArchive::clear_has_name() {
-  _has_bits_[0] &= ~0x00000400u;
+  _has_bits_[0] &= ~0x00000800u;
 }
 inline void SlideArchive::clear_name() {
   if (name_ != &::google::protobuf::internal::kEmptyString) {
@@ -9032,13 +9261,13 @@ inline void SlideArchive::set_allocated_name(::std::string* name) {
 
 // optional .TSD.GeometryArchive titlePlaceholderGeometry = 11;
 inline bool SlideArchive::has_titleplaceholdergeometry() const {
-  return (_has_bits_[0] & 0x00000800u) != 0;
+  return (_has_bits_[0] & 0x00001000u) != 0;
 }
 inline void SlideArchive::set_has_titleplaceholdergeometry() {
-  _has_bits_[0] |= 0x00000800u;
+  _has_bits_[0] |= 0x00001000u;
 }
 inline void SlideArchive::clear_has_titleplaceholdergeometry() {
-  _has_bits_[0] &= ~0x00000800u;
+  _has_bits_[0] &= ~0x00001000u;
 }
 inline void SlideArchive::clear_titleplaceholdergeometry() {
   if (titleplaceholdergeometry_ != NULL) titleplaceholdergeometry_->::TSD::GeometryArchive::Clear();
@@ -9070,13 +9299,13 @@ inline void SlideArchive::set_allocated_titleplaceholdergeometry(::TSD::Geometry
 
 // optional uint32 titlePlaceholderShapeStyleIndex = 12;
 inline bool SlideArchive::has_titleplaceholdershapestyleindex() const {
-  return (_has_bits_[0] & 0x00001000u) != 0;
+  return (_has_bits_[0] & 0x00002000u) != 0;
 }
 inline void SlideArchive::set_has_titleplaceholdershapestyleindex() {
-  _has_bits_[0] |= 0x00001000u;
+  _has_bits_[0] |= 0x00002000u;
 }
 inline void SlideArchive::clear_has_titleplaceholdershapestyleindex() {
-  _has_bits_[0] &= ~0x00001000u;
+  _has_bits_[0] &= ~0x00002000u;
 }
 inline void SlideArchive::clear_titleplaceholdershapestyleindex() {
   titleplaceholdershapestyleindex_ = 0u;
@@ -9092,13 +9321,13 @@ inline void SlideArchive::set_titleplaceholdershapestyleindex(::google::protobuf
 
 // optional uint32 titlePlaceholderTextStyleIndex = 13;
 inline bool SlideArchive::has_titleplaceholdertextstyleindex() const {
-  return (_has_bits_[0] & 0x00002000u) != 0;
+  return (_has_bits_[0] & 0x00004000u) != 0;
 }
 inline void SlideArchive::set_has_titleplaceholdertextstyleindex() {
-  _has_bits_[0] |= 0x00002000u;
+  _has_bits_[0] |= 0x00004000u;
 }
 inline void SlideArchive::clear_has_titleplaceholdertextstyleindex() {
-  _has_bits_[0] &= ~0x00002000u;
+  _has_bits_[0] &= ~0x00004000u;
 }
 inline void SlideArchive::clear_titleplaceholdertextstyleindex() {
   titleplaceholdertextstyleindex_ = 0u;
@@ -9114,13 +9343,13 @@ inline void SlideArchive::set_titleplaceholdertextstyleindex(::google::protobuf:
 
 // optional .TSWP.ShapeStylePropertiesArchive titleLayoutProperties = 24;
 inline bool SlideArchive::has_titlelayoutproperties() const {
-  return (_has_bits_[0] & 0x00004000u) != 0;
+  return (_has_bits_[0] & 0x00008000u) != 0;
 }
 inline void SlideArchive::set_has_titlelayoutproperties() {
-  _has_bits_[0] |= 0x00004000u;
+  _has_bits_[0] |= 0x00008000u;
 }
 inline void SlideArchive::clear_has_titlelayoutproperties() {
-  _has_bits_[0] &= ~0x00004000u;
+  _has_bits_[0] &= ~0x00008000u;
 }
 inline void SlideArchive::clear_titlelayoutproperties() {
   if (titlelayoutproperties_ != NULL) titlelayoutproperties_->::TSWP::ShapeStylePropertiesArchive::Clear();
@@ -9152,13 +9381,13 @@ inline void SlideArchive::set_allocated_titlelayoutproperties(::TSWP::ShapeStyle
 
 // optional .TSD.GeometryArchive bodyPlaceholderGeometry = 14;
 inline bool SlideArchive::has_bodyplaceholdergeometry() const {
-  return (_has_bits_[0] & 0x00008000u) != 0;
+  return (_has_bits_[0] & 0x00010000u) != 0;
 }
 inline void SlideArchive::set_has_bodyplaceholdergeometry() {
-  _has_bits_[0] |= 0x00008000u;
+  _has_bits_[0] |= 0x00010000u;
 }
 inline void SlideArchive::clear_has_bodyplaceholdergeometry() {
-  _has_bits_[0] &= ~0x00008000u;
+  _has_bits_[0] &= ~0x00010000u;
 }
 inline void SlideArchive::clear_bodyplaceholdergeometry() {
   if (bodyplaceholdergeometry_ != NULL) bodyplaceholdergeometry_->::TSD::GeometryArchive::Clear();
@@ -9190,13 +9419,13 @@ inline void SlideArchive::set_allocated_bodyplaceholdergeometry(::TSD::GeometryA
 
 // optional uint32 bodyPlaceholderShapeStyleIndex = 15;
 inline bool SlideArchive::has_bodyplaceholdershapestyleindex() const {
-  return (_has_bits_[0] & 0x00010000u) != 0;
+  return (_has_bits_[0] & 0x00020000u) != 0;
 }
 inline void SlideArchive::set_has_bodyplaceholdershapestyleindex() {
-  _has_bits_[0] |= 0x00010000u;
+  _has_bits_[0] |= 0x00020000u;
 }
 inline void SlideArchive::clear_has_bodyplaceholdershapestyleindex() {
-  _has_bits_[0] &= ~0x00010000u;
+  _has_bits_[0] &= ~0x00020000u;
 }
 inline void SlideArchive::clear_bodyplaceholdershapestyleindex() {
   bodyplaceholdershapestyleindex_ = 0u;
@@ -9212,13 +9441,13 @@ inline void SlideArchive::set_bodyplaceholdershapestyleindex(::google::protobuf:
 
 // optional uint32 bodyPlaceholderTextStyleIndex = 16;
 inline bool SlideArchive::has_bodyplaceholdertextstyleindex() const {
-  return (_has_bits_[0] & 0x00020000u) != 0;
+  return (_has_bits_[0] & 0x00040000u) != 0;
 }
 inline void SlideArchive::set_has_bodyplaceholdertextstyleindex() {
-  _has_bits_[0] |= 0x00020000u;
+  _has_bits_[0] |= 0x00040000u;
 }
 inline void SlideArchive::clear_has_bodyplaceholdertextstyleindex() {
-  _has_bits_[0] &= ~0x00020000u;
+  _has_bits_[0] &= ~0x00040000u;
 }
 inline void SlideArchive::clear_bodyplaceholdertextstyleindex() {
   bodyplaceholdertextstyleindex_ = 0u;
@@ -9234,13 +9463,13 @@ inline void SlideArchive::set_bodyplaceholdertextstyleindex(::google::protobuf::
 
 // optional .TSWP.ShapeStylePropertiesArchive bodyLayoutProperties = 25;
 inline bool SlideArchive::has_bodylayoutproperties() const {
-  return (_has_bits_[0] & 0x00040000u) != 0;
+  return (_has_bits_[0] & 0x00080000u) != 0;
 }
 inline void SlideArchive::set_has_bodylayoutproperties() {
-  _has_bits_[0] |= 0x00040000u;
+  _has_bits_[0] |= 0x00080000u;
 }
 inline void SlideArchive::clear_has_bodylayoutproperties() {
-  _has_bits_[0] &= ~0x00040000u;
+  _has_bits_[0] &= ~0x00080000u;
 }
 inline void SlideArchive::clear_bodylayoutproperties() {
   if (bodylayoutproperties_ != NULL) bodylayoutproperties_->::TSWP::ShapeStylePropertiesArchive::Clear();
@@ -9272,13 +9501,13 @@ inline void SlideArchive::set_allocated_bodylayoutproperties(::TSWP::ShapeStyleP
 
 // optional .TSD.GeometryArchive slideNumberPlaceholderGeometry = 21;
 inline bool SlideArchive::has_slidenumberplaceholdergeometry() const {
-  return (_has_bits_[0] & 0x00080000u) != 0;
+  return (_has_bits_[0] & 0x00100000u) != 0;
 }
 inline void SlideArchive::set_has_slidenumberplaceholdergeometry() {
-  _has_bits_[0] |= 0x00080000u;
+  _has_bits_[0] |= 0x00100000u;
 }
 inline void SlideArchive::clear_has_slidenumberplaceholdergeometry() {
-  _has_bits_[0] &= ~0x00080000u;
+  _has_bits_[0] &= ~0x00100000u;
 }
 inline void SlideArchive::clear_slidenumberplaceholdergeometry() {
   if (slidenumberplaceholdergeometry_ != NULL) slidenumberplaceholdergeometry_->::TSD::GeometryArchive::Clear();
@@ -9310,13 +9539,13 @@ inline void SlideArchive::set_allocated_slidenumberplaceholdergeometry(::TSD::Ge
 
 // optional uint32 slideNumberPlaceholderShapeStyleIndex = 22;
 inline bool SlideArchive::has_slidenumberplaceholdershapestyleindex() const {
-  return (_has_bits_[0] & 0x00100000u) != 0;
+  return (_has_bits_[0] & 0x00200000u) != 0;
 }
 inline void SlideArchive::set_has_slidenumberplaceholdershapestyleindex() {
-  _has_bits_[0] |= 0x00100000u;
+  _has_bits_[0] |= 0x00200000u;
 }
 inline void SlideArchive::clear_has_slidenumberplaceholdershapestyleindex() {
-  _has_bits_[0] &= ~0x00100000u;
+  _has_bits_[0] &= ~0x00200000u;
 }
 inline void SlideArchive::clear_slidenumberplaceholdershapestyleindex() {
   slidenumberplaceholdershapestyleindex_ = 0u;
@@ -9332,13 +9561,13 @@ inline void SlideArchive::set_slidenumberplaceholdershapestyleindex(::google::pr
 
 // optional uint32 slideNumberPlaceholderTextStyleIndex = 23;
 inline bool SlideArchive::has_slidenumberplaceholdertextstyleindex() const {
-  return (_has_bits_[0] & 0x00200000u) != 0;
+  return (_has_bits_[0] & 0x00400000u) != 0;
 }
 inline void SlideArchive::set_has_slidenumberplaceholdertextstyleindex() {
-  _has_bits_[0] |= 0x00200000u;
+  _has_bits_[0] |= 0x00400000u;
 }
 inline void SlideArchive::clear_has_slidenumberplaceholdertextstyleindex() {
-  _has_bits_[0] &= ~0x00200000u;
+  _has_bits_[0] &= ~0x00400000u;
 }
 inline void SlideArchive::clear_slidenumberplaceholdertextstyleindex() {
   slidenumberplaceholdertextstyleindex_ = 0u;
@@ -9354,13 +9583,13 @@ inline void SlideArchive::set_slidenumberplaceholdertextstyleindex(::google::pro
 
 // optional .TSWP.ShapeStylePropertiesArchive slideNumberLayoutProperties = 26;
 inline bool SlideArchive::has_slidenumberlayoutproperties() const {
-  return (_has_bits_[0] & 0x00400000u) != 0;
+  return (_has_bits_[0] & 0x00800000u) != 0;
 }
 inline void SlideArchive::set_has_slidenumberlayoutproperties() {
-  _has_bits_[0] |= 0x00400000u;
+  _has_bits_[0] |= 0x00800000u;
 }
 inline void SlideArchive::clear_has_slidenumberlayoutproperties() {
-  _has_bits_[0] &= ~0x00400000u;
+  _has_bits_[0] &= ~0x00800000u;
 }
 inline void SlideArchive::clear_slidenumberlayoutproperties() {
   if (slidenumberlayoutproperties_ != NULL) slidenumberlayoutproperties_->::TSWP::ShapeStylePropertiesArchive::Clear();
@@ -9392,13 +9621,13 @@ inline void SlideArchive::set_allocated_slidenumberlayoutproperties(::TSWP::Shap
 
 // optional .TSP.Reference classicStylesheetRecord = 29;
 inline bool SlideArchive::has_classicstylesheetrecord() const {
-  return (_has_bits_[0] & 0x00800000u) != 0;
+  return (_has_bits_[0] & 0x01000000u) != 0;
 }
 inline void SlideArchive::set_has_classicstylesheetrecord() {
-  _has_bits_[0] |= 0x00800000u;
+  _has_bits_[0] |= 0x01000000u;
 }
 inline void SlideArchive::clear_has_classicstylesheetrecord() {
-  _has_bits_[0] &= ~0x00800000u;
+  _has_bits_[0] &= ~0x01000000u;
 }
 inline void SlideArchive::clear_classicstylesheetrecord() {
   if (classicstylesheetrecord_ != NULL) classicstylesheetrecord_->::TSP::Reference::Clear();
@@ -9480,13 +9709,13 @@ SlideArchive::mutable_bodyliststyles() {
 
 // optional string thumbnailTextForTitlePlaceholder = 37;
 inline bool SlideArchive::has_thumbnailtextfortitleplaceholder() const {
-  return (_has_bits_[0] & 0x04000000u) != 0;
+  return (_has_bits_[0] & 0x08000000u) != 0;
 }
 inline void SlideArchive::set_has_thumbnailtextfortitleplaceholder() {
-  _has_bits_[0] |= 0x04000000u;
+  _has_bits_[0] |= 0x08000000u;
 }
 inline void SlideArchive::clear_has_thumbnailtextfortitleplaceholder() {
-  _has_bits_[0] &= ~0x04000000u;
+  _has_bits_[0] &= ~0x08000000u;
 }
 inline void SlideArchive::clear_thumbnailtextfortitleplaceholder() {
   if (thumbnailtextfortitleplaceholder_ != &::google::protobuf::internal::kEmptyString) {
@@ -9550,13 +9779,13 @@ inline void SlideArchive::set_allocated_thumbnailtextfortitleplaceholder(::std::
 
 // optional string thumbnailTextForBodyPlaceholder = 38;
 inline bool SlideArchive::has_thumbnailtextforbodyplaceholder() const {
-  return (_has_bits_[0] & 0x08000000u) != 0;
+  return (_has_bits_[0] & 0x10000000u) != 0;
 }
 inline void SlideArchive::set_has_thumbnailtextforbodyplaceholder() {
-  _has_bits_[0] |= 0x08000000u;
+  _has_bits_[0] |= 0x10000000u;
 }
 inline void SlideArchive::clear_has_thumbnailtextforbodyplaceholder() {
-  _has_bits_[0] &= ~0x08000000u;
+  _has_bits_[0] &= ~0x10000000u;
 }
 inline void SlideArchive::clear_thumbnailtextforbodyplaceholder() {
   if (thumbnailtextforbodyplaceholder_ != &::google::protobuf::internal::kEmptyString) {
@@ -9618,15 +9847,37 @@ inline void SlideArchive::set_allocated_thumbnailtextforbodyplaceholder(::std::s
   }
 }
 
+// optional bool slideObjectsLayerWithMaster = 41 [default = false];
+inline bool SlideArchive::has_slideobjectslayerwithmaster() const {
+  return (_has_bits_[0] & 0x20000000u) != 0;
+}
+inline void SlideArchive::set_has_slideobjectslayerwithmaster() {
+  _has_bits_[0] |= 0x20000000u;
+}
+inline void SlideArchive::clear_has_slideobjectslayerwithmaster() {
+  _has_bits_[0] &= ~0x20000000u;
+}
+inline void SlideArchive::clear_slideobjectslayerwithmaster() {
+  slideobjectslayerwithmaster_ = false;
+  clear_has_slideobjectslayerwithmaster();
+}
+inline bool SlideArchive::slideobjectslayerwithmaster() const {
+  return slideobjectslayerwithmaster_;
+}
+inline void SlideArchive::set_slideobjectslayerwithmaster(bool value) {
+  set_has_slideobjectslayerwithmaster();
+  slideobjectslayerwithmaster_ = value;
+}
+
 // optional .TSP.Reference master = 17;
 inline bool SlideArchive::has_master() const {
-  return (_has_bits_[0] & 0x10000000u) != 0;
+  return (_has_bits_[0] & 0x40000000u) != 0;
 }
 inline void SlideArchive::set_has_master() {
-  _has_bits_[0] |= 0x10000000u;
+  _has_bits_[0] |= 0x40000000u;
 }
 inline void SlideArchive::clear_has_master() {
-  _has_bits_[0] &= ~0x10000000u;
+  _has_bits_[0] &= ~0x40000000u;
 }
 inline void SlideArchive::clear_master() {
   if (master_ != NULL) master_->::TSP::Reference::Clear();
@@ -9683,13 +9934,13 @@ SlideArchive::mutable_staticguides() {
 
 // optional .TSP.Reference userDefinedGuideStorage = 36;
 inline bool SlideArchive::has_userdefinedguidestorage() const {
-  return (_has_bits_[0] & 0x40000000u) != 0;
+  return (_has_bits_[1] & 0x00000001u) != 0;
 }
 inline void SlideArchive::set_has_userdefinedguidestorage() {
-  _has_bits_[0] |= 0x40000000u;
+  _has_bits_[1] |= 0x00000001u;
 }
 inline void SlideArchive::clear_has_userdefinedguidestorage() {
-  _has_bits_[0] &= ~0x40000000u;
+  _has_bits_[1] &= ~0x00000001u;
 }
 inline void SlideArchive::clear_userdefinedguidestorage() {
   if (userdefinedguidestorage_ != NULL) userdefinedguidestorage_->::TSP::Reference::Clear();
@@ -9721,13 +9972,13 @@ inline void SlideArchive::set_allocated_userdefinedguidestorage(::TSP::Reference
 
 // required bool inDocument = 19;
 inline bool SlideArchive::has_indocument() const {
-  return (_has_bits_[0] & 0x80000000u) != 0;
+  return (_has_bits_[1] & 0x00000002u) != 0;
 }
 inline void SlideArchive::set_has_indocument() {
-  _has_bits_[0] |= 0x80000000u;
+  _has_bits_[1] |= 0x00000002u;
 }
 inline void SlideArchive::clear_has_indocument() {
-  _has_bits_[0] &= ~0x80000000u;
+  _has_bits_[1] &= ~0x00000002u;
 }
 inline void SlideArchive::clear_indocument() {
   indocument_ = false;
@@ -9743,13 +9994,13 @@ inline void SlideArchive::set_indocument(bool value) {
 
 // optional .TSP.Reference note = 27;
 inline bool SlideArchive::has_note() const {
-  return (_has_bits_[1] & 0x00000001u) != 0;
+  return (_has_bits_[1] & 0x00000004u) != 0;
 }
 inline void SlideArchive::set_has_note() {
-  _has_bits_[1] |= 0x00000001u;
+  _has_bits_[1] |= 0x00000004u;
 }
 inline void SlideArchive::clear_has_note() {
-  _has_bits_[1] &= ~0x00000001u;
+  _has_bits_[1] &= ~0x00000004u;
 }
 inline void SlideArchive::clear_note() {
   if (note_ != NULL) note_->::TSP::Reference::Clear();
@@ -9781,13 +10032,13 @@ inline void SlideArchive::set_allocated_note(::TSP::Reference* note) {
 
 // optional .TSP.Reference info_using_object_placeholder_geometry = 39;
 inline bool SlideArchive::has_info_using_object_placeholder_geometry() const {
-  return (_has_bits_[1] & 0x00000002u) != 0;
+  return (_has_bits_[1] & 0x00000008u) != 0;
 }
 inline void SlideArchive::set_has_info_using_object_placeholder_geometry() {
-  _has_bits_[1] |= 0x00000002u;
+  _has_bits_[1] |= 0x00000008u;
 }
 inline void SlideArchive::clear_has_info_using_object_placeholder_geometry() {
-  _has_bits_[1] &= ~0x00000002u;
+  _has_bits_[1] &= ~0x00000008u;
 }
 inline void SlideArchive::clear_info_using_object_placeholder_geometry() {
   if (info_using_object_placeholder_geometry_ != NULL) info_using_object_placeholder_geometry_->::TSP::Reference::Clear();
@@ -9819,13 +10070,13 @@ inline void SlideArchive::set_allocated_info_using_object_placeholder_geometry(:
 
 // optional bool info_using_object_placeholder_geometry_matches_object_placeholder_geometry = 40;
 inline bool SlideArchive::has_info_using_object_placeholder_geometry_matches_object_placeholder_geometry() const {
-  return (_has_bits_[1] & 0x00000004u) != 0;
+  return (_has_bits_[1] & 0x00000010u) != 0;
 }
 inline void SlideArchive::set_has_info_using_object_placeholder_geometry_matches_object_placeholder_geometry() {
-  _has_bits_[1] |= 0x00000004u;
+  _has_bits_[1] |= 0x00000010u;
 }
 inline void SlideArchive::clear_has_info_using_object_placeholder_geometry_matches_object_placeholder_geometry() {
-  _has_bits_[1] &= ~0x00000004u;
+  _has_bits_[1] &= ~0x00000010u;
 }
 inline void SlideArchive::clear_info_using_object_placeholder_geometry_matches_object_placeholder_geometry() {
   info_using_object_placeholder_geometry_matches_object_placeholder_geometry_ = false;
@@ -9841,13 +10092,13 @@ inline void SlideArchive::set_info_using_object_placeholder_geometry_matches_obj
 
 // optional bool deprecated_objectPlaceholderVisibleForExport = 34;
 inline bool SlideArchive::has_deprecated_objectplaceholdervisibleforexport() const {
-  return (_has_bits_[1] & 0x00000008u) != 0;
+  return (_has_bits_[1] & 0x00000020u) != 0;
 }
 inline void SlideArchive::set_has_deprecated_objectplaceholdervisibleforexport() {
-  _has_bits_[1] |= 0x00000008u;
+  _has_bits_[1] |= 0x00000020u;
 }
 inline void SlideArchive::clear_has_deprecated_objectplaceholdervisibleforexport() {
-  _has_bits_[1] &= ~0x00000008u;
+  _has_bits_[1] &= ~0x00000020u;
 }
 inline void SlideArchive::clear_deprecated_objectplaceholdervisibleforexport() {
   deprecated_objectplaceholdervisibleforexport_ = false;
@@ -10088,7 +10339,7 @@ inline void SlideNodeArchive::set_hasbodyinoutlineview(bool value) {
   hasbodyinoutlineview_ = value;
 }
 
-// required bool hasBuilds = 6;
+// required bool hasBuilds = 6 [deprecated = true];
 inline bool SlideNodeArchive::has_hasbuilds() const {
   return (_has_bits_[0] & 0x00000200u) != 0;
 }
@@ -10360,15 +10611,37 @@ inline void SlideNodeArchive::set_eventcount(::google::protobuf::uint32 value) {
   eventcount_ = value;
 }
 
-// optional .TSP.Reference database_thumbnail = 3;
-inline bool SlideNodeArchive::has_database_thumbnail() const {
+// optional bool has_explicit_builds = 20;
+inline bool SlideNodeArchive::has_has_explicit_builds() const {
   return (_has_bits_[0] & 0x00020000u) != 0;
 }
-inline void SlideNodeArchive::set_has_database_thumbnail() {
+inline void SlideNodeArchive::set_has_has_explicit_builds() {
   _has_bits_[0] |= 0x00020000u;
 }
-inline void SlideNodeArchive::clear_has_database_thumbnail() {
+inline void SlideNodeArchive::clear_has_has_explicit_builds() {
   _has_bits_[0] &= ~0x00020000u;
+}
+inline void SlideNodeArchive::clear_has_explicit_builds() {
+  has_explicit_builds_ = false;
+  clear_has_has_explicit_builds();
+}
+inline bool SlideNodeArchive::has_explicit_builds() const {
+  return has_explicit_builds_;
+}
+inline void SlideNodeArchive::set_has_explicit_builds(bool value) {
+  set_has_has_explicit_builds();
+  has_explicit_builds_ = value;
+}
+
+// optional .TSP.Reference database_thumbnail = 3;
+inline bool SlideNodeArchive::has_database_thumbnail() const {
+  return (_has_bits_[0] & 0x00040000u) != 0;
+}
+inline void SlideNodeArchive::set_has_database_thumbnail() {
+  _has_bits_[0] |= 0x00040000u;
+}
+inline void SlideNodeArchive::clear_has_database_thumbnail() {
+  _has_bits_[0] &= ~0x00040000u;
 }
 inline void SlideNodeArchive::clear_database_thumbnail() {
   if (database_thumbnail_ != NULL) database_thumbnail_->::TSP::Reference::Clear();
@@ -11246,6 +11519,88 @@ inline void UIStateArchive::set_allocated_desktop_main_content_size(::TSP::Size*
   }
 }
 
+// optional float desktop_presenter_notes_view_height = 25;
+inline bool UIStateArchive::has_desktop_presenter_notes_view_height() const {
+  return (_has_bits_[0] & 0x01000000u) != 0;
+}
+inline void UIStateArchive::set_has_desktop_presenter_notes_view_height() {
+  _has_bits_[0] |= 0x01000000u;
+}
+inline void UIStateArchive::clear_has_desktop_presenter_notes_view_height() {
+  _has_bits_[0] &= ~0x01000000u;
+}
+inline void UIStateArchive::clear_desktop_presenter_notes_view_height() {
+  desktop_presenter_notes_view_height_ = 0;
+  clear_has_desktop_presenter_notes_view_height();
+}
+inline float UIStateArchive::desktop_presenter_notes_view_height() const {
+  return desktop_presenter_notes_view_height_;
+}
+inline void UIStateArchive::set_desktop_presenter_notes_view_height(float value) {
+  set_has_desktop_presenter_notes_view_height();
+  desktop_presenter_notes_view_height_ = value;
+}
+
+// optional .TSP.Point desktop_main_window_origin = 26;
+inline bool UIStateArchive::has_desktop_main_window_origin() const {
+  return (_has_bits_[0] & 0x02000000u) != 0;
+}
+inline void UIStateArchive::set_has_desktop_main_window_origin() {
+  _has_bits_[0] |= 0x02000000u;
+}
+inline void UIStateArchive::clear_has_desktop_main_window_origin() {
+  _has_bits_[0] &= ~0x02000000u;
+}
+inline void UIStateArchive::clear_desktop_main_window_origin() {
+  if (desktop_main_window_origin_ != NULL) desktop_main_window_origin_->::TSP::Point::Clear();
+  clear_has_desktop_main_window_origin();
+}
+inline const ::TSP::Point& UIStateArchive::desktop_main_window_origin() const {
+  return desktop_main_window_origin_ != NULL ? *desktop_main_window_origin_ : *default_instance_->desktop_main_window_origin_;
+}
+inline ::TSP::Point* UIStateArchive::mutable_desktop_main_window_origin() {
+  set_has_desktop_main_window_origin();
+  if (desktop_main_window_origin_ == NULL) desktop_main_window_origin_ = new ::TSP::Point;
+  return desktop_main_window_origin_;
+}
+inline ::TSP::Point* UIStateArchive::release_desktop_main_window_origin() {
+  clear_has_desktop_main_window_origin();
+  ::TSP::Point* temp = desktop_main_window_origin_;
+  desktop_main_window_origin_ = NULL;
+  return temp;
+}
+inline void UIStateArchive::set_allocated_desktop_main_window_origin(::TSP::Point* desktop_main_window_origin) {
+  delete desktop_main_window_origin_;
+  desktop_main_window_origin_ = desktop_main_window_origin;
+  if (desktop_main_window_origin) {
+    set_has_desktop_main_window_origin();
+  } else {
+    clear_has_desktop_main_window_origin();
+  }
+}
+
+// optional bool light_table_hides_skipped_slides = 27;
+inline bool UIStateArchive::has_light_table_hides_skipped_slides() const {
+  return (_has_bits_[0] & 0x04000000u) != 0;
+}
+inline void UIStateArchive::set_has_light_table_hides_skipped_slides() {
+  _has_bits_[0] |= 0x04000000u;
+}
+inline void UIStateArchive::clear_has_light_table_hides_skipped_slides() {
+  _has_bits_[0] &= ~0x04000000u;
+}
+inline void UIStateArchive::clear_light_table_hides_skipped_slides() {
+  light_table_hides_skipped_slides_ = false;
+  clear_has_light_table_hides_skipped_slides();
+}
+inline bool UIStateArchive::light_table_hides_skipped_slides() const {
+  return light_table_hides_skipped_slides_;
+}
+inline void UIStateArchive::set_light_table_hides_skipped_slides(bool value) {
+  set_has_light_table_hides_skipped_slides();
+  light_table_hides_skipped_slides_ = value;
+}
+
 // -------------------------------------------------------------------
 
 // CanvasSelectionArchive
@@ -11523,6 +11878,66 @@ inline void ThemeArchive::set_allocated_defaultmasterslidenode(::TSP::Reference*
   } else {
     clear_has_defaultmasterslidenode();
   }
+}
+
+// optional .TSP.Reference default_master_slide_node_reference = 6;
+inline bool ThemeArchive::has_default_master_slide_node_reference() const {
+  return (_has_bits_[0] & 0x00000020u) != 0;
+}
+inline void ThemeArchive::set_has_default_master_slide_node_reference() {
+  _has_bits_[0] |= 0x00000020u;
+}
+inline void ThemeArchive::clear_has_default_master_slide_node_reference() {
+  _has_bits_[0] &= ~0x00000020u;
+}
+inline void ThemeArchive::clear_default_master_slide_node_reference() {
+  if (default_master_slide_node_reference_ != NULL) default_master_slide_node_reference_->::TSP::Reference::Clear();
+  clear_has_default_master_slide_node_reference();
+}
+inline const ::TSP::Reference& ThemeArchive::default_master_slide_node_reference() const {
+  return default_master_slide_node_reference_ != NULL ? *default_master_slide_node_reference_ : *default_instance_->default_master_slide_node_reference_;
+}
+inline ::TSP::Reference* ThemeArchive::mutable_default_master_slide_node_reference() {
+  set_has_default_master_slide_node_reference();
+  if (default_master_slide_node_reference_ == NULL) default_master_slide_node_reference_ = new ::TSP::Reference;
+  return default_master_slide_node_reference_;
+}
+inline ::TSP::Reference* ThemeArchive::release_default_master_slide_node_reference() {
+  clear_has_default_master_slide_node_reference();
+  ::TSP::Reference* temp = default_master_slide_node_reference_;
+  default_master_slide_node_reference_ = NULL;
+  return temp;
+}
+inline void ThemeArchive::set_allocated_default_master_slide_node_reference(::TSP::Reference* default_master_slide_node_reference) {
+  delete default_master_slide_node_reference_;
+  default_master_slide_node_reference_ = default_master_slide_node_reference;
+  if (default_master_slide_node_reference) {
+    set_has_default_master_slide_node_reference();
+  } else {
+    clear_has_default_master_slide_node_reference();
+  }
+}
+
+// optional bool default_master_slide_node_is_our_best_guess = 7;
+inline bool ThemeArchive::has_default_master_slide_node_is_our_best_guess() const {
+  return (_has_bits_[0] & 0x00000040u) != 0;
+}
+inline void ThemeArchive::set_has_default_master_slide_node_is_our_best_guess() {
+  _has_bits_[0] |= 0x00000040u;
+}
+inline void ThemeArchive::clear_has_default_master_slide_node_is_our_best_guess() {
+  _has_bits_[0] &= ~0x00000040u;
+}
+inline void ThemeArchive::clear_default_master_slide_node_is_our_best_guess() {
+  default_master_slide_node_is_our_best_guess_ = false;
+  clear_has_default_master_slide_node_is_our_best_guess();
+}
+inline bool ThemeArchive::default_master_slide_node_is_our_best_guess() const {
+  return default_master_slide_node_is_our_best_guess_;
+}
+inline void ThemeArchive::set_default_master_slide_node_is_our_best_guess(bool value) {
+  set_has_default_master_slide_node_is_our_best_guess();
+  default_master_slide_node_is_our_best_guess_ = value;
 }
 
 // -------------------------------------------------------------------
@@ -12528,15 +12943,40 @@ PasteboardNativeStorageArchive::mutable_slidenodes() {
   return &slidenodes_;
 }
 
+// repeated .TSP.Reference masterSlideNodes = 9;
+inline int PasteboardNativeStorageArchive::masterslidenodes_size() const {
+  return masterslidenodes_.size();
+}
+inline void PasteboardNativeStorageArchive::clear_masterslidenodes() {
+  masterslidenodes_.Clear();
+}
+inline const ::TSP::Reference& PasteboardNativeStorageArchive::masterslidenodes(int index) const {
+  return masterslidenodes_.Get(index);
+}
+inline ::TSP::Reference* PasteboardNativeStorageArchive::mutable_masterslidenodes(int index) {
+  return masterslidenodes_.Mutable(index);
+}
+inline ::TSP::Reference* PasteboardNativeStorageArchive::add_masterslidenodes() {
+  return masterslidenodes_.Add();
+}
+inline const ::google::protobuf::RepeatedPtrField< ::TSP::Reference >&
+PasteboardNativeStorageArchive::masterslidenodes() const {
+  return masterslidenodes_;
+}
+inline ::google::protobuf::RepeatedPtrField< ::TSP::Reference >*
+PasteboardNativeStorageArchive::mutable_masterslidenodes() {
+  return &masterslidenodes_;
+}
+
 // optional .TSP.Size originalShowSize = 5;
 inline bool PasteboardNativeStorageArchive::has_originalshowsize() const {
-  return (_has_bits_[0] & 0x00000010u) != 0;
+  return (_has_bits_[0] & 0x00000020u) != 0;
 }
 inline void PasteboardNativeStorageArchive::set_has_originalshowsize() {
-  _has_bits_[0] |= 0x00000010u;
+  _has_bits_[0] |= 0x00000020u;
 }
 inline void PasteboardNativeStorageArchive::clear_has_originalshowsize() {
-  _has_bits_[0] &= ~0x00000010u;
+  _has_bits_[0] &= ~0x00000020u;
 }
 inline void PasteboardNativeStorageArchive::clear_originalshowsize() {
   if (originalshowsize_ != NULL) originalshowsize_->::TSP::Size::Clear();
@@ -12589,6 +13029,101 @@ PasteboardNativeStorageArchive::titleranges() const {
 inline ::google::protobuf::RepeatedPtrField< ::TSP::Range >*
 PasteboardNativeStorageArchive::mutable_titleranges() {
   return &titleranges_;
+}
+
+// repeated .TSD.GeometryArchive geometries_in_root = 7;
+inline int PasteboardNativeStorageArchive::geometries_in_root_size() const {
+  return geometries_in_root_.size();
+}
+inline void PasteboardNativeStorageArchive::clear_geometries_in_root() {
+  geometries_in_root_.Clear();
+}
+inline const ::TSD::GeometryArchive& PasteboardNativeStorageArchive::geometries_in_root(int index) const {
+  return geometries_in_root_.Get(index);
+}
+inline ::TSD::GeometryArchive* PasteboardNativeStorageArchive::mutable_geometries_in_root(int index) {
+  return geometries_in_root_.Mutable(index);
+}
+inline ::TSD::GeometryArchive* PasteboardNativeStorageArchive::add_geometries_in_root() {
+  return geometries_in_root_.Add();
+}
+inline const ::google::protobuf::RepeatedPtrField< ::TSD::GeometryArchive >&
+PasteboardNativeStorageArchive::geometries_in_root() const {
+  return geometries_in_root_;
+}
+inline ::google::protobuf::RepeatedPtrField< ::TSD::GeometryArchive >*
+PasteboardNativeStorageArchive::mutable_geometries_in_root() {
+  return &geometries_in_root_;
+}
+
+// optional string slide_node_unique_identifier = 8;
+inline bool PasteboardNativeStorageArchive::has_slide_node_unique_identifier() const {
+  return (_has_bits_[0] & 0x00000100u) != 0;
+}
+inline void PasteboardNativeStorageArchive::set_has_slide_node_unique_identifier() {
+  _has_bits_[0] |= 0x00000100u;
+}
+inline void PasteboardNativeStorageArchive::clear_has_slide_node_unique_identifier() {
+  _has_bits_[0] &= ~0x00000100u;
+}
+inline void PasteboardNativeStorageArchive::clear_slide_node_unique_identifier() {
+  if (slide_node_unique_identifier_ != &::google::protobuf::internal::kEmptyString) {
+    slide_node_unique_identifier_->clear();
+  }
+  clear_has_slide_node_unique_identifier();
+}
+inline const ::std::string& PasteboardNativeStorageArchive::slide_node_unique_identifier() const {
+  return *slide_node_unique_identifier_;
+}
+inline void PasteboardNativeStorageArchive::set_slide_node_unique_identifier(const ::std::string& value) {
+  set_has_slide_node_unique_identifier();
+  if (slide_node_unique_identifier_ == &::google::protobuf::internal::kEmptyString) {
+    slide_node_unique_identifier_ = new ::std::string;
+  }
+  slide_node_unique_identifier_->assign(value);
+}
+inline void PasteboardNativeStorageArchive::set_slide_node_unique_identifier(const char* value) {
+  set_has_slide_node_unique_identifier();
+  if (slide_node_unique_identifier_ == &::google::protobuf::internal::kEmptyString) {
+    slide_node_unique_identifier_ = new ::std::string;
+  }
+  slide_node_unique_identifier_->assign(value);
+}
+inline void PasteboardNativeStorageArchive::set_slide_node_unique_identifier(const char* value, size_t size) {
+  set_has_slide_node_unique_identifier();
+  if (slide_node_unique_identifier_ == &::google::protobuf::internal::kEmptyString) {
+    slide_node_unique_identifier_ = new ::std::string;
+  }
+  slide_node_unique_identifier_->assign(reinterpret_cast<const char*>(value), size);
+}
+inline ::std::string* PasteboardNativeStorageArchive::mutable_slide_node_unique_identifier() {
+  set_has_slide_node_unique_identifier();
+  if (slide_node_unique_identifier_ == &::google::protobuf::internal::kEmptyString) {
+    slide_node_unique_identifier_ = new ::std::string;
+  }
+  return slide_node_unique_identifier_;
+}
+inline ::std::string* PasteboardNativeStorageArchive::release_slide_node_unique_identifier() {
+  clear_has_slide_node_unique_identifier();
+  if (slide_node_unique_identifier_ == &::google::protobuf::internal::kEmptyString) {
+    return NULL;
+  } else {
+    ::std::string* temp = slide_node_unique_identifier_;
+    slide_node_unique_identifier_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+    return temp;
+  }
+}
+inline void PasteboardNativeStorageArchive::set_allocated_slide_node_unique_identifier(::std::string* slide_node_unique_identifier) {
+  if (slide_node_unique_identifier_ != &::google::protobuf::internal::kEmptyString) {
+    delete slide_node_unique_identifier_;
+  }
+  if (slide_node_unique_identifier) {
+    set_has_slide_node_unique_identifier();
+    slide_node_unique_identifier_ = slide_node_unique_identifier;
+  } else {
+    clear_has_slide_node_unique_identifier();
+    slide_node_unique_identifier_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+  }
 }
 
 // -------------------------------------------------------------------
@@ -13366,7 +13901,7 @@ inline void RecordingNavigationEventArchive::set_animation_phase(::KN::Recording
 
 // RecordingLaserEventArchive
 
-// optional .TSP.Point unscaled_location = 1;
+// optional .TSP.Point unscaled_location = 1 [deprecated = true];
 inline bool RecordingLaserEventArchive::has_unscaled_location() const {
   return (_has_bits_[0] & 0x00000001u) != 0;
 }
@@ -13401,6 +13936,44 @@ inline void RecordingLaserEventArchive::set_allocated_unscaled_location(::TSP::P
     set_has_unscaled_location();
   } else {
     clear_has_unscaled_location();
+  }
+}
+
+// optional .TSP.Point unit_location = 2;
+inline bool RecordingLaserEventArchive::has_unit_location() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void RecordingLaserEventArchive::set_has_unit_location() {
+  _has_bits_[0] |= 0x00000002u;
+}
+inline void RecordingLaserEventArchive::clear_has_unit_location() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline void RecordingLaserEventArchive::clear_unit_location() {
+  if (unit_location_ != NULL) unit_location_->::TSP::Point::Clear();
+  clear_has_unit_location();
+}
+inline const ::TSP::Point& RecordingLaserEventArchive::unit_location() const {
+  return unit_location_ != NULL ? *unit_location_ : *default_instance_->unit_location_;
+}
+inline ::TSP::Point* RecordingLaserEventArchive::mutable_unit_location() {
+  set_has_unit_location();
+  if (unit_location_ == NULL) unit_location_ = new ::TSP::Point;
+  return unit_location_;
+}
+inline ::TSP::Point* RecordingLaserEventArchive::release_unit_location() {
+  clear_has_unit_location();
+  ::TSP::Point* temp = unit_location_;
+  unit_location_ = NULL;
+  return temp;
+}
+inline void RecordingLaserEventArchive::set_allocated_unit_location(::TSP::Point* unit_location) {
+  delete unit_location_;
+  unit_location_ = unit_location;
+  if (unit_location) {
+    set_has_unit_location();
+  } else {
+    clear_has_unit_location();
   }
 }
 

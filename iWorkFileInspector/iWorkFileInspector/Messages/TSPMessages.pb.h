@@ -46,6 +46,8 @@ class Path;
 class Path_Element;
 class ReferenceDictionary;
 class ReferenceDictionary_Entry;
+class UUID;
+class UUIDPath;
 class PasteboardObject;
 class ObjectContainer;
 
@@ -1309,6 +1311,183 @@ class ReferenceDictionary : public ::google::protobuf::Message {
 };
 // -------------------------------------------------------------------
 
+class UUID : public ::google::protobuf::Message {
+ public:
+  UUID();
+  virtual ~UUID();
+
+  UUID(const UUID& from);
+
+  inline UUID& operator=(const UUID& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _unknown_fields_;
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return &_unknown_fields_;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const UUID& default_instance();
+
+  void Swap(UUID* other);
+
+  // implements Message ----------------------------------------------
+
+  UUID* New() const;
+  void CopyFrom(const ::google::protobuf::Message& from);
+  void MergeFrom(const ::google::protobuf::Message& from);
+  void CopyFrom(const UUID& from);
+  void MergeFrom(const UUID& from);
+  void Clear();
+  bool IsInitialized() const;
+
+  int ByteSize() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // required uint64 lower = 1;
+  inline bool has_lower() const;
+  inline void clear_lower();
+  static const int kLowerFieldNumber = 1;
+  inline ::google::protobuf::uint64 lower() const;
+  inline void set_lower(::google::protobuf::uint64 value);
+
+  // required uint64 upper = 2;
+  inline bool has_upper() const;
+  inline void clear_upper();
+  static const int kUpperFieldNumber = 2;
+  inline ::google::protobuf::uint64 upper() const;
+  inline void set_upper(::google::protobuf::uint64 value);
+
+  // @@protoc_insertion_point(class_scope:TSP.UUID)
+ private:
+  inline void set_has_lower();
+  inline void clear_has_lower();
+  inline void set_has_upper();
+  inline void clear_has_upper();
+
+  ::google::protobuf::UnknownFieldSet _unknown_fields_;
+
+  ::google::protobuf::uint64 lower_;
+  ::google::protobuf::uint64 upper_;
+
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 _has_bits_[(2 + 31) / 32];
+
+  friend void  protobuf_AddDesc_TSPMessages_2eproto();
+  friend void protobuf_AssignDesc_TSPMessages_2eproto();
+  friend void protobuf_ShutdownFile_TSPMessages_2eproto();
+
+  void InitAsDefaultInstance();
+  static UUID* default_instance_;
+};
+// -------------------------------------------------------------------
+
+class UUIDPath : public ::google::protobuf::Message {
+ public:
+  UUIDPath();
+  virtual ~UUIDPath();
+
+  UUIDPath(const UUIDPath& from);
+
+  inline UUIDPath& operator=(const UUIDPath& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _unknown_fields_;
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return &_unknown_fields_;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const UUIDPath& default_instance();
+
+  void Swap(UUIDPath* other);
+
+  // implements Message ----------------------------------------------
+
+  UUIDPath* New() const;
+  void CopyFrom(const ::google::protobuf::Message& from);
+  void MergeFrom(const ::google::protobuf::Message& from);
+  void CopyFrom(const UUIDPath& from);
+  void MergeFrom(const UUIDPath& from);
+  void Clear();
+  bool IsInitialized() const;
+
+  int ByteSize() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // repeated .TSP.UUID uuids = 1;
+  inline int uuids_size() const;
+  inline void clear_uuids();
+  static const int kUuidsFieldNumber = 1;
+  inline const ::TSP::UUID& uuids(int index) const;
+  inline ::TSP::UUID* mutable_uuids(int index);
+  inline ::TSP::UUID* add_uuids();
+  inline const ::google::protobuf::RepeatedPtrField< ::TSP::UUID >&
+      uuids() const;
+  inline ::google::protobuf::RepeatedPtrField< ::TSP::UUID >*
+      mutable_uuids();
+
+  // @@protoc_insertion_point(class_scope:TSP.UUIDPath)
+ private:
+
+  ::google::protobuf::UnknownFieldSet _unknown_fields_;
+
+  ::google::protobuf::RepeatedPtrField< ::TSP::UUID > uuids_;
+
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 _has_bits_[(1 + 31) / 32];
+
+  friend void  protobuf_AddDesc_TSPMessages_2eproto();
+  friend void protobuf_AssignDesc_TSPMessages_2eproto();
+  friend void protobuf_ShutdownFile_TSPMessages_2eproto();
+
+  void InitAsDefaultInstance();
+  static UUIDPath* default_instance_;
+};
+// -------------------------------------------------------------------
+
 class PasteboardObject : public ::google::protobuf::Message {
  public:
   PasteboardObject();
@@ -2291,6 +2470,83 @@ ReferenceDictionary::entries() const {
 inline ::google::protobuf::RepeatedPtrField< ::TSP::ReferenceDictionary_Entry >*
 ReferenceDictionary::mutable_entries() {
   return &entries_;
+}
+
+// -------------------------------------------------------------------
+
+// UUID
+
+// required uint64 lower = 1;
+inline bool UUID::has_lower() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void UUID::set_has_lower() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void UUID::clear_has_lower() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void UUID::clear_lower() {
+  lower_ = GOOGLE_ULONGLONG(0);
+  clear_has_lower();
+}
+inline ::google::protobuf::uint64 UUID::lower() const {
+  return lower_;
+}
+inline void UUID::set_lower(::google::protobuf::uint64 value) {
+  set_has_lower();
+  lower_ = value;
+}
+
+// required uint64 upper = 2;
+inline bool UUID::has_upper() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void UUID::set_has_upper() {
+  _has_bits_[0] |= 0x00000002u;
+}
+inline void UUID::clear_has_upper() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline void UUID::clear_upper() {
+  upper_ = GOOGLE_ULONGLONG(0);
+  clear_has_upper();
+}
+inline ::google::protobuf::uint64 UUID::upper() const {
+  return upper_;
+}
+inline void UUID::set_upper(::google::protobuf::uint64 value) {
+  set_has_upper();
+  upper_ = value;
+}
+
+// -------------------------------------------------------------------
+
+// UUIDPath
+
+// repeated .TSP.UUID uuids = 1;
+inline int UUIDPath::uuids_size() const {
+  return uuids_.size();
+}
+inline void UUIDPath::clear_uuids() {
+  uuids_.Clear();
+}
+inline const ::TSP::UUID& UUIDPath::uuids(int index) const {
+  return uuids_.Get(index);
+}
+inline ::TSP::UUID* UUIDPath::mutable_uuids(int index) {
+  return uuids_.Mutable(index);
+}
+inline ::TSP::UUID* UUIDPath::add_uuids() {
+  return uuids_.Add();
+}
+inline const ::google::protobuf::RepeatedPtrField< ::TSP::UUID >&
+UUIDPath::uuids() const {
+  return uuids_;
+}
+inline ::google::protobuf::RepeatedPtrField< ::TSP::UUID >*
+UUIDPath::mutable_uuids() {
+  return &uuids_;
 }
 
 // -------------------------------------------------------------------

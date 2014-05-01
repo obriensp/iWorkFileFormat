@@ -76,6 +76,15 @@ message ReferenceDictionary {
   repeated .TSP.ReferenceDictionary.Entry entries = 1;
 }
 
+message UUID {
+  required uint64 lower = 1;
+  required uint64 upper = 2;
+}
+
+message UUIDPath {
+  repeated .TSP.UUID uuids = 1;
+}
+
 message PasteboardObject {
   optional .TSP.Reference stylesheet = 1;
   repeated .TSP.Reference drawables = 2;

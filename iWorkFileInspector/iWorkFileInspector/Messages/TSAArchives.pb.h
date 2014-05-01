@@ -40,7 +40,13 @@ void protobuf_ShutdownFile_TSAArchives_2eproto();
 class DocumentArchive;
 class FunctionBrowserStateArchive;
 class TestDocumentArchive;
+class ShortcutControllerArchive;
+class ShortcutControllerArchive_ShortcutMapEntry;
 class PropagatePresetCommandArchive;
+class ShortcutCommandArchive;
+class AddCustomFormatCommandArchive;
+class UpdateCustomFormatCommandArchive;
+class ReplaceCustomFormatCommandArchive;
 
 // ===================================================================
 
@@ -186,6 +192,15 @@ class DocumentArchive : public ::google::protobuf::Message {
   inline ::std::string* release_template_identifier();
   inline void set_allocated_template_identifier(::std::string* template_identifier);
 
+  // optional .TSP.Reference shortcut_controller = 10;
+  inline bool has_shortcut_controller() const;
+  inline void clear_shortcut_controller();
+  static const int kShortcutControllerFieldNumber = 10;
+  inline const ::TSP::Reference& shortcut_controller() const;
+  inline ::TSP::Reference* mutable_shortcut_controller();
+  inline ::TSP::Reference* release_shortcut_controller();
+  inline void set_allocated_shortcut_controller(::TSP::Reference* shortcut_controller);
+
   // @@protoc_insertion_point(class_scope:TSA.DocumentArchive)
  private:
   inline void set_has_super();
@@ -204,6 +219,8 @@ class DocumentArchive : public ::google::protobuf::Message {
   inline void clear_has_needs_movie_compatibility_upgrade();
   inline void set_has_template_identifier();
   inline void clear_has_template_identifier();
+  inline void set_has_shortcut_controller();
+  inline void clear_has_shortcut_controller();
 
   ::google::protobuf::UnknownFieldSet _unknown_fields_;
 
@@ -215,10 +232,11 @@ class DocumentArchive : public ::google::protobuf::Message {
   ::TSP::Reference* function_browser_state_;
   ::TSP::Reference* tables_custom_format_list_;
   ::std::string* template_identifier_;
+  ::TSP::Reference* shortcut_controller_;
   bool needs_movie_compatibility_upgrade_;
 
   mutable int _cached_size_;
-  ::google::protobuf::uint32 _has_bits_[(9 + 31) / 32];
+  ::google::protobuf::uint32 _has_bits_[(10 + 31) / 32];
 
   friend void  protobuf_AddDesc_TSAArchives_2eproto();
   friend void protobuf_AssignDesc_TSAArchives_2eproto();
@@ -449,6 +467,192 @@ class TestDocumentArchive : public ::google::protobuf::Message {
 };
 // -------------------------------------------------------------------
 
+class ShortcutControllerArchive_ShortcutMapEntry : public ::google::protobuf::Message {
+ public:
+  ShortcutControllerArchive_ShortcutMapEntry();
+  virtual ~ShortcutControllerArchive_ShortcutMapEntry();
+
+  ShortcutControllerArchive_ShortcutMapEntry(const ShortcutControllerArchive_ShortcutMapEntry& from);
+
+  inline ShortcutControllerArchive_ShortcutMapEntry& operator=(const ShortcutControllerArchive_ShortcutMapEntry& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _unknown_fields_;
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return &_unknown_fields_;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const ShortcutControllerArchive_ShortcutMapEntry& default_instance();
+
+  void Swap(ShortcutControllerArchive_ShortcutMapEntry* other);
+
+  // implements Message ----------------------------------------------
+
+  ShortcutControllerArchive_ShortcutMapEntry* New() const;
+  void CopyFrom(const ::google::protobuf::Message& from);
+  void MergeFrom(const ::google::protobuf::Message& from);
+  void CopyFrom(const ShortcutControllerArchive_ShortcutMapEntry& from);
+  void MergeFrom(const ShortcutControllerArchive_ShortcutMapEntry& from);
+  void Clear();
+  bool IsInitialized() const;
+
+  int ByteSize() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // required string shortcut = 1;
+  inline bool has_shortcut() const;
+  inline void clear_shortcut();
+  static const int kShortcutFieldNumber = 1;
+  inline const ::std::string& shortcut() const;
+  inline void set_shortcut(const ::std::string& value);
+  inline void set_shortcut(const char* value);
+  inline void set_shortcut(const char* value, size_t size);
+  inline ::std::string* mutable_shortcut();
+  inline ::std::string* release_shortcut();
+  inline void set_allocated_shortcut(::std::string* shortcut);
+
+  // required .TSP.Reference style = 2;
+  inline bool has_style() const;
+  inline void clear_style();
+  static const int kStyleFieldNumber = 2;
+  inline const ::TSP::Reference& style() const;
+  inline ::TSP::Reference* mutable_style();
+  inline ::TSP::Reference* release_style();
+  inline void set_allocated_style(::TSP::Reference* style);
+
+  // @@protoc_insertion_point(class_scope:TSA.ShortcutControllerArchive.ShortcutMapEntry)
+ private:
+  inline void set_has_shortcut();
+  inline void clear_has_shortcut();
+  inline void set_has_style();
+  inline void clear_has_style();
+
+  ::google::protobuf::UnknownFieldSet _unknown_fields_;
+
+  ::std::string* shortcut_;
+  ::TSP::Reference* style_;
+
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 _has_bits_[(2 + 31) / 32];
+
+  friend void  protobuf_AddDesc_TSAArchives_2eproto();
+  friend void protobuf_AssignDesc_TSAArchives_2eproto();
+  friend void protobuf_ShutdownFile_TSAArchives_2eproto();
+
+  void InitAsDefaultInstance();
+  static ShortcutControllerArchive_ShortcutMapEntry* default_instance_;
+};
+// -------------------------------------------------------------------
+
+class ShortcutControllerArchive : public ::google::protobuf::Message {
+ public:
+  ShortcutControllerArchive();
+  virtual ~ShortcutControllerArchive();
+
+  ShortcutControllerArchive(const ShortcutControllerArchive& from);
+
+  inline ShortcutControllerArchive& operator=(const ShortcutControllerArchive& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _unknown_fields_;
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return &_unknown_fields_;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const ShortcutControllerArchive& default_instance();
+
+  void Swap(ShortcutControllerArchive* other);
+
+  // implements Message ----------------------------------------------
+
+  ShortcutControllerArchive* New() const;
+  void CopyFrom(const ::google::protobuf::Message& from);
+  void MergeFrom(const ::google::protobuf::Message& from);
+  void CopyFrom(const ShortcutControllerArchive& from);
+  void MergeFrom(const ShortcutControllerArchive& from);
+  void Clear();
+  bool IsInitialized() const;
+
+  int ByteSize() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const;
+
+  // nested types ----------------------------------------------------
+
+  typedef ShortcutControllerArchive_ShortcutMapEntry ShortcutMapEntry;
+
+  // accessors -------------------------------------------------------
+
+  // repeated .TSA.ShortcutControllerArchive.ShortcutMapEntry entries = 1;
+  inline int entries_size() const;
+  inline void clear_entries();
+  static const int kEntriesFieldNumber = 1;
+  inline const ::TSA::ShortcutControllerArchive_ShortcutMapEntry& entries(int index) const;
+  inline ::TSA::ShortcutControllerArchive_ShortcutMapEntry* mutable_entries(int index);
+  inline ::TSA::ShortcutControllerArchive_ShortcutMapEntry* add_entries();
+  inline const ::google::protobuf::RepeatedPtrField< ::TSA::ShortcutControllerArchive_ShortcutMapEntry >&
+      entries() const;
+  inline ::google::protobuf::RepeatedPtrField< ::TSA::ShortcutControllerArchive_ShortcutMapEntry >*
+      mutable_entries();
+
+  // @@protoc_insertion_point(class_scope:TSA.ShortcutControllerArchive)
+ private:
+
+  ::google::protobuf::UnknownFieldSet _unknown_fields_;
+
+  ::google::protobuf::RepeatedPtrField< ::TSA::ShortcutControllerArchive_ShortcutMapEntry > entries_;
+
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 _has_bits_[(1 + 31) / 32];
+
+  friend void  protobuf_AddDesc_TSAArchives_2eproto();
+  friend void protobuf_AssignDesc_TSAArchives_2eproto();
+  friend void protobuf_ShutdownFile_TSAArchives_2eproto();
+
+  void InitAsDefaultInstance();
+  static ShortcutControllerArchive* default_instance_;
+};
+// -------------------------------------------------------------------
+
 class PropagatePresetCommandArchive : public ::google::protobuf::Message {
  public:
   PropagatePresetCommandArchive();
@@ -530,6 +734,486 @@ class PropagatePresetCommandArchive : public ::google::protobuf::Message {
 
   void InitAsDefaultInstance();
   static PropagatePresetCommandArchive* default_instance_;
+};
+// -------------------------------------------------------------------
+
+class ShortcutCommandArchive : public ::google::protobuf::Message {
+ public:
+  ShortcutCommandArchive();
+  virtual ~ShortcutCommandArchive();
+
+  ShortcutCommandArchive(const ShortcutCommandArchive& from);
+
+  inline ShortcutCommandArchive& operator=(const ShortcutCommandArchive& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _unknown_fields_;
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return &_unknown_fields_;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const ShortcutCommandArchive& default_instance();
+
+  void Swap(ShortcutCommandArchive* other);
+
+  // implements Message ----------------------------------------------
+
+  ShortcutCommandArchive* New() const;
+  void CopyFrom(const ::google::protobuf::Message& from);
+  void MergeFrom(const ::google::protobuf::Message& from);
+  void CopyFrom(const ShortcutCommandArchive& from);
+  void MergeFrom(const ShortcutCommandArchive& from);
+  void Clear();
+  bool IsInitialized() const;
+
+  int ByteSize() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional .TSK.CommandArchive super = 1;
+  inline bool has_super() const;
+  inline void clear_super();
+  static const int kSuperFieldNumber = 1;
+  inline const ::TSK::CommandArchive& super() const;
+  inline ::TSK::CommandArchive* mutable_super();
+  inline ::TSK::CommandArchive* release_super();
+  inline void set_allocated_super(::TSK::CommandArchive* super);
+
+  // optional .TSP.Reference old_style = 2;
+  inline bool has_old_style() const;
+  inline void clear_old_style();
+  static const int kOldStyleFieldNumber = 2;
+  inline const ::TSP::Reference& old_style() const;
+  inline ::TSP::Reference* mutable_old_style();
+  inline ::TSP::Reference* release_old_style();
+  inline void set_allocated_old_style(::TSP::Reference* old_style);
+
+  // optional .TSP.Reference new_style = 3;
+  inline bool has_new_style() const;
+  inline void clear_new_style();
+  static const int kNewStyleFieldNumber = 3;
+  inline const ::TSP::Reference& new_style() const;
+  inline ::TSP::Reference* mutable_new_style();
+  inline ::TSP::Reference* release_new_style();
+  inline void set_allocated_new_style(::TSP::Reference* new_style);
+
+  // optional string old_shortcut = 4;
+  inline bool has_old_shortcut() const;
+  inline void clear_old_shortcut();
+  static const int kOldShortcutFieldNumber = 4;
+  inline const ::std::string& old_shortcut() const;
+  inline void set_old_shortcut(const ::std::string& value);
+  inline void set_old_shortcut(const char* value);
+  inline void set_old_shortcut(const char* value, size_t size);
+  inline ::std::string* mutable_old_shortcut();
+  inline ::std::string* release_old_shortcut();
+  inline void set_allocated_old_shortcut(::std::string* old_shortcut);
+
+  // optional string new_shortcut = 5;
+  inline bool has_new_shortcut() const;
+  inline void clear_new_shortcut();
+  static const int kNewShortcutFieldNumber = 5;
+  inline const ::std::string& new_shortcut() const;
+  inline void set_new_shortcut(const ::std::string& value);
+  inline void set_new_shortcut(const char* value);
+  inline void set_new_shortcut(const char* value, size_t size);
+  inline ::std::string* mutable_new_shortcut();
+  inline ::std::string* release_new_shortcut();
+  inline void set_allocated_new_shortcut(::std::string* new_shortcut);
+
+  // @@protoc_insertion_point(class_scope:TSA.ShortcutCommandArchive)
+ private:
+  inline void set_has_super();
+  inline void clear_has_super();
+  inline void set_has_old_style();
+  inline void clear_has_old_style();
+  inline void set_has_new_style();
+  inline void clear_has_new_style();
+  inline void set_has_old_shortcut();
+  inline void clear_has_old_shortcut();
+  inline void set_has_new_shortcut();
+  inline void clear_has_new_shortcut();
+
+  ::google::protobuf::UnknownFieldSet _unknown_fields_;
+
+  ::TSK::CommandArchive* super_;
+  ::TSP::Reference* old_style_;
+  ::TSP::Reference* new_style_;
+  ::std::string* old_shortcut_;
+  ::std::string* new_shortcut_;
+
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 _has_bits_[(5 + 31) / 32];
+
+  friend void  protobuf_AddDesc_TSAArchives_2eproto();
+  friend void protobuf_AssignDesc_TSAArchives_2eproto();
+  friend void protobuf_ShutdownFile_TSAArchives_2eproto();
+
+  void InitAsDefaultInstance();
+  static ShortcutCommandArchive* default_instance_;
+};
+// -------------------------------------------------------------------
+
+class AddCustomFormatCommandArchive : public ::google::protobuf::Message {
+ public:
+  AddCustomFormatCommandArchive();
+  virtual ~AddCustomFormatCommandArchive();
+
+  AddCustomFormatCommandArchive(const AddCustomFormatCommandArchive& from);
+
+  inline AddCustomFormatCommandArchive& operator=(const AddCustomFormatCommandArchive& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _unknown_fields_;
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return &_unknown_fields_;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const AddCustomFormatCommandArchive& default_instance();
+
+  void Swap(AddCustomFormatCommandArchive* other);
+
+  // implements Message ----------------------------------------------
+
+  AddCustomFormatCommandArchive* New() const;
+  void CopyFrom(const ::google::protobuf::Message& from);
+  void MergeFrom(const ::google::protobuf::Message& from);
+  void CopyFrom(const AddCustomFormatCommandArchive& from);
+  void MergeFrom(const AddCustomFormatCommandArchive& from);
+  void Clear();
+  bool IsInitialized() const;
+
+  int ByteSize() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // required .TSK.CommandArchive super = 1;
+  inline bool has_super() const;
+  inline void clear_super();
+  static const int kSuperFieldNumber = 1;
+  inline const ::TSK::CommandArchive& super() const;
+  inline ::TSK::CommandArchive* mutable_super();
+  inline ::TSK::CommandArchive* release_super();
+  inline void set_allocated_super(::TSK::CommandArchive* super);
+
+  // optional .TSK.CustomFormatArchive custom_format = 2;
+  inline bool has_custom_format() const;
+  inline void clear_custom_format();
+  static const int kCustomFormatFieldNumber = 2;
+  inline const ::TSK::CustomFormatArchive& custom_format() const;
+  inline ::TSK::CustomFormatArchive* mutable_custom_format();
+  inline ::TSK::CustomFormatArchive* release_custom_format();
+  inline void set_allocated_custom_format(::TSK::CustomFormatArchive* custom_format);
+
+  // optional bool for_replacement = 3;
+  inline bool has_for_replacement() const;
+  inline void clear_for_replacement();
+  static const int kForReplacementFieldNumber = 3;
+  inline bool for_replacement() const;
+  inline void set_for_replacement(bool value);
+
+  // @@protoc_insertion_point(class_scope:TSA.AddCustomFormatCommandArchive)
+ private:
+  inline void set_has_super();
+  inline void clear_has_super();
+  inline void set_has_custom_format();
+  inline void clear_has_custom_format();
+  inline void set_has_for_replacement();
+  inline void clear_has_for_replacement();
+
+  ::google::protobuf::UnknownFieldSet _unknown_fields_;
+
+  ::TSK::CommandArchive* super_;
+  ::TSK::CustomFormatArchive* custom_format_;
+  bool for_replacement_;
+
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 _has_bits_[(3 + 31) / 32];
+
+  friend void  protobuf_AddDesc_TSAArchives_2eproto();
+  friend void protobuf_AssignDesc_TSAArchives_2eproto();
+  friend void protobuf_ShutdownFile_TSAArchives_2eproto();
+
+  void InitAsDefaultInstance();
+  static AddCustomFormatCommandArchive* default_instance_;
+};
+// -------------------------------------------------------------------
+
+class UpdateCustomFormatCommandArchive : public ::google::protobuf::Message {
+ public:
+  UpdateCustomFormatCommandArchive();
+  virtual ~UpdateCustomFormatCommandArchive();
+
+  UpdateCustomFormatCommandArchive(const UpdateCustomFormatCommandArchive& from);
+
+  inline UpdateCustomFormatCommandArchive& operator=(const UpdateCustomFormatCommandArchive& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _unknown_fields_;
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return &_unknown_fields_;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const UpdateCustomFormatCommandArchive& default_instance();
+
+  void Swap(UpdateCustomFormatCommandArchive* other);
+
+  // implements Message ----------------------------------------------
+
+  UpdateCustomFormatCommandArchive* New() const;
+  void CopyFrom(const ::google::protobuf::Message& from);
+  void MergeFrom(const ::google::protobuf::Message& from);
+  void CopyFrom(const UpdateCustomFormatCommandArchive& from);
+  void MergeFrom(const UpdateCustomFormatCommandArchive& from);
+  void Clear();
+  bool IsInitialized() const;
+
+  int ByteSize() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional .TSK.CommandArchive super = 1;
+  inline bool has_super() const;
+  inline void clear_super();
+  static const int kSuperFieldNumber = 1;
+  inline const ::TSK::CommandArchive& super() const;
+  inline ::TSK::CommandArchive* mutable_super();
+  inline ::TSK::CommandArchive* release_super();
+  inline void set_allocated_super(::TSK::CommandArchive* super);
+
+  // optional .TSK.CustomFormatArchive custom_format = 2;
+  inline bool has_custom_format() const;
+  inline void clear_custom_format();
+  static const int kCustomFormatFieldNumber = 2;
+  inline const ::TSK::CustomFormatArchive& custom_format() const;
+  inline ::TSK::CustomFormatArchive* mutable_custom_format();
+  inline ::TSK::CustomFormatArchive* release_custom_format();
+  inline void set_allocated_custom_format(::TSK::CustomFormatArchive* custom_format);
+
+  // optional .TSK.CustomFormatArchive old_custom_format = 3;
+  inline bool has_old_custom_format() const;
+  inline void clear_old_custom_format();
+  static const int kOldCustomFormatFieldNumber = 3;
+  inline const ::TSK::CustomFormatArchive& old_custom_format() const;
+  inline ::TSK::CustomFormatArchive* mutable_old_custom_format();
+  inline ::TSK::CustomFormatArchive* release_old_custom_format();
+  inline void set_allocated_old_custom_format(::TSK::CustomFormatArchive* old_custom_format);
+
+  // optional uint32 custom_format_id = 4;
+  inline bool has_custom_format_id() const;
+  inline void clear_custom_format_id();
+  static const int kCustomFormatIdFieldNumber = 4;
+  inline ::google::protobuf::uint32 custom_format_id() const;
+  inline void set_custom_format_id(::google::protobuf::uint32 value);
+
+  // @@protoc_insertion_point(class_scope:TSA.UpdateCustomFormatCommandArchive)
+ private:
+  inline void set_has_super();
+  inline void clear_has_super();
+  inline void set_has_custom_format();
+  inline void clear_has_custom_format();
+  inline void set_has_old_custom_format();
+  inline void clear_has_old_custom_format();
+  inline void set_has_custom_format_id();
+  inline void clear_has_custom_format_id();
+
+  ::google::protobuf::UnknownFieldSet _unknown_fields_;
+
+  ::TSK::CommandArchive* super_;
+  ::TSK::CustomFormatArchive* custom_format_;
+  ::TSK::CustomFormatArchive* old_custom_format_;
+  ::google::protobuf::uint32 custom_format_id_;
+
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 _has_bits_[(4 + 31) / 32];
+
+  friend void  protobuf_AddDesc_TSAArchives_2eproto();
+  friend void protobuf_AssignDesc_TSAArchives_2eproto();
+  friend void protobuf_ShutdownFile_TSAArchives_2eproto();
+
+  void InitAsDefaultInstance();
+  static UpdateCustomFormatCommandArchive* default_instance_;
+};
+// -------------------------------------------------------------------
+
+class ReplaceCustomFormatCommandArchive : public ::google::protobuf::Message {
+ public:
+  ReplaceCustomFormatCommandArchive();
+  virtual ~ReplaceCustomFormatCommandArchive();
+
+  ReplaceCustomFormatCommandArchive(const ReplaceCustomFormatCommandArchive& from);
+
+  inline ReplaceCustomFormatCommandArchive& operator=(const ReplaceCustomFormatCommandArchive& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _unknown_fields_;
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return &_unknown_fields_;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const ReplaceCustomFormatCommandArchive& default_instance();
+
+  void Swap(ReplaceCustomFormatCommandArchive* other);
+
+  // implements Message ----------------------------------------------
+
+  ReplaceCustomFormatCommandArchive* New() const;
+  void CopyFrom(const ::google::protobuf::Message& from);
+  void MergeFrom(const ::google::protobuf::Message& from);
+  void CopyFrom(const ReplaceCustomFormatCommandArchive& from);
+  void MergeFrom(const ReplaceCustomFormatCommandArchive& from);
+  void Clear();
+  bool IsInitialized() const;
+
+  int ByteSize() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional .TSK.CommandArchive super = 1;
+  inline bool has_super() const;
+  inline void clear_super();
+  static const int kSuperFieldNumber = 1;
+  inline const ::TSK::CommandArchive& super() const;
+  inline ::TSK::CommandArchive* mutable_super();
+  inline ::TSK::CommandArchive* release_super();
+  inline void set_allocated_super(::TSK::CommandArchive* super);
+
+  // optional .TSK.CustomFormatArchive custom_format = 2;
+  inline bool has_custom_format() const;
+  inline void clear_custom_format();
+  static const int kCustomFormatFieldNumber = 2;
+  inline const ::TSK::CustomFormatArchive& custom_format() const;
+  inline ::TSK::CustomFormatArchive* mutable_custom_format();
+  inline ::TSK::CustomFormatArchive* release_custom_format();
+  inline void set_allocated_custom_format(::TSK::CustomFormatArchive* custom_format);
+
+  // optional uint32 custom_format_id = 3;
+  inline bool has_custom_format_id() const;
+  inline void clear_custom_format_id();
+  static const int kCustomFormatIdFieldNumber = 3;
+  inline ::google::protobuf::uint32 custom_format_id() const;
+  inline void set_custom_format_id(::google::protobuf::uint32 value);
+
+  // optional .TSK.FormatStructArchive replacement_format = 4;
+  inline bool has_replacement_format() const;
+  inline void clear_replacement_format();
+  static const int kReplacementFormatFieldNumber = 4;
+  inline const ::TSK::FormatStructArchive& replacement_format() const;
+  inline ::TSK::FormatStructArchive* mutable_replacement_format();
+  inline ::TSK::FormatStructArchive* release_replacement_format();
+  inline void set_allocated_replacement_format(::TSK::FormatStructArchive* replacement_format);
+
+  // @@protoc_insertion_point(class_scope:TSA.ReplaceCustomFormatCommandArchive)
+ private:
+  inline void set_has_super();
+  inline void clear_has_super();
+  inline void set_has_custom_format();
+  inline void clear_has_custom_format();
+  inline void set_has_custom_format_id();
+  inline void clear_has_custom_format_id();
+  inline void set_has_replacement_format();
+  inline void clear_has_replacement_format();
+
+  ::google::protobuf::UnknownFieldSet _unknown_fields_;
+
+  ::TSK::CommandArchive* super_;
+  ::TSK::CustomFormatArchive* custom_format_;
+  ::TSK::FormatStructArchive* replacement_format_;
+  ::google::protobuf::uint32 custom_format_id_;
+
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 _has_bits_[(4 + 31) / 32];
+
+  friend void  protobuf_AddDesc_TSAArchives_2eproto();
+  friend void protobuf_AssignDesc_TSAArchives_2eproto();
+  friend void protobuf_ShutdownFile_TSAArchives_2eproto();
+
+  void InitAsDefaultInstance();
+  static ReplaceCustomFormatCommandArchive* default_instance_;
 };
 // ===================================================================
 
@@ -915,6 +1599,44 @@ inline void DocumentArchive::set_allocated_template_identifier(::std::string* te
   }
 }
 
+// optional .TSP.Reference shortcut_controller = 10;
+inline bool DocumentArchive::has_shortcut_controller() const {
+  return (_has_bits_[0] & 0x00000200u) != 0;
+}
+inline void DocumentArchive::set_has_shortcut_controller() {
+  _has_bits_[0] |= 0x00000200u;
+}
+inline void DocumentArchive::clear_has_shortcut_controller() {
+  _has_bits_[0] &= ~0x00000200u;
+}
+inline void DocumentArchive::clear_shortcut_controller() {
+  if (shortcut_controller_ != NULL) shortcut_controller_->::TSP::Reference::Clear();
+  clear_has_shortcut_controller();
+}
+inline const ::TSP::Reference& DocumentArchive::shortcut_controller() const {
+  return shortcut_controller_ != NULL ? *shortcut_controller_ : *default_instance_->shortcut_controller_;
+}
+inline ::TSP::Reference* DocumentArchive::mutable_shortcut_controller() {
+  set_has_shortcut_controller();
+  if (shortcut_controller_ == NULL) shortcut_controller_ = new ::TSP::Reference;
+  return shortcut_controller_;
+}
+inline ::TSP::Reference* DocumentArchive::release_shortcut_controller() {
+  clear_has_shortcut_controller();
+  ::TSP::Reference* temp = shortcut_controller_;
+  shortcut_controller_ = NULL;
+  return temp;
+}
+inline void DocumentArchive::set_allocated_shortcut_controller(::TSP::Reference* shortcut_controller) {
+  delete shortcut_controller_;
+  shortcut_controller_ = shortcut_controller;
+  if (shortcut_controller) {
+    set_has_shortcut_controller();
+  } else {
+    clear_has_shortcut_controller();
+  }
+}
+
 // -------------------------------------------------------------------
 
 // FunctionBrowserStateArchive
@@ -1130,6 +1852,147 @@ inline void TestDocumentArchive::set_allocated_value(::std::string* value) {
 
 // -------------------------------------------------------------------
 
+// ShortcutControllerArchive_ShortcutMapEntry
+
+// required string shortcut = 1;
+inline bool ShortcutControllerArchive_ShortcutMapEntry::has_shortcut() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void ShortcutControllerArchive_ShortcutMapEntry::set_has_shortcut() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void ShortcutControllerArchive_ShortcutMapEntry::clear_has_shortcut() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void ShortcutControllerArchive_ShortcutMapEntry::clear_shortcut() {
+  if (shortcut_ != &::google::protobuf::internal::kEmptyString) {
+    shortcut_->clear();
+  }
+  clear_has_shortcut();
+}
+inline const ::std::string& ShortcutControllerArchive_ShortcutMapEntry::shortcut() const {
+  return *shortcut_;
+}
+inline void ShortcutControllerArchive_ShortcutMapEntry::set_shortcut(const ::std::string& value) {
+  set_has_shortcut();
+  if (shortcut_ == &::google::protobuf::internal::kEmptyString) {
+    shortcut_ = new ::std::string;
+  }
+  shortcut_->assign(value);
+}
+inline void ShortcutControllerArchive_ShortcutMapEntry::set_shortcut(const char* value) {
+  set_has_shortcut();
+  if (shortcut_ == &::google::protobuf::internal::kEmptyString) {
+    shortcut_ = new ::std::string;
+  }
+  shortcut_->assign(value);
+}
+inline void ShortcutControllerArchive_ShortcutMapEntry::set_shortcut(const char* value, size_t size) {
+  set_has_shortcut();
+  if (shortcut_ == &::google::protobuf::internal::kEmptyString) {
+    shortcut_ = new ::std::string;
+  }
+  shortcut_->assign(reinterpret_cast<const char*>(value), size);
+}
+inline ::std::string* ShortcutControllerArchive_ShortcutMapEntry::mutable_shortcut() {
+  set_has_shortcut();
+  if (shortcut_ == &::google::protobuf::internal::kEmptyString) {
+    shortcut_ = new ::std::string;
+  }
+  return shortcut_;
+}
+inline ::std::string* ShortcutControllerArchive_ShortcutMapEntry::release_shortcut() {
+  clear_has_shortcut();
+  if (shortcut_ == &::google::protobuf::internal::kEmptyString) {
+    return NULL;
+  } else {
+    ::std::string* temp = shortcut_;
+    shortcut_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+    return temp;
+  }
+}
+inline void ShortcutControllerArchive_ShortcutMapEntry::set_allocated_shortcut(::std::string* shortcut) {
+  if (shortcut_ != &::google::protobuf::internal::kEmptyString) {
+    delete shortcut_;
+  }
+  if (shortcut) {
+    set_has_shortcut();
+    shortcut_ = shortcut;
+  } else {
+    clear_has_shortcut();
+    shortcut_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+  }
+}
+
+// required .TSP.Reference style = 2;
+inline bool ShortcutControllerArchive_ShortcutMapEntry::has_style() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void ShortcutControllerArchive_ShortcutMapEntry::set_has_style() {
+  _has_bits_[0] |= 0x00000002u;
+}
+inline void ShortcutControllerArchive_ShortcutMapEntry::clear_has_style() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline void ShortcutControllerArchive_ShortcutMapEntry::clear_style() {
+  if (style_ != NULL) style_->::TSP::Reference::Clear();
+  clear_has_style();
+}
+inline const ::TSP::Reference& ShortcutControllerArchive_ShortcutMapEntry::style() const {
+  return style_ != NULL ? *style_ : *default_instance_->style_;
+}
+inline ::TSP::Reference* ShortcutControllerArchive_ShortcutMapEntry::mutable_style() {
+  set_has_style();
+  if (style_ == NULL) style_ = new ::TSP::Reference;
+  return style_;
+}
+inline ::TSP::Reference* ShortcutControllerArchive_ShortcutMapEntry::release_style() {
+  clear_has_style();
+  ::TSP::Reference* temp = style_;
+  style_ = NULL;
+  return temp;
+}
+inline void ShortcutControllerArchive_ShortcutMapEntry::set_allocated_style(::TSP::Reference* style) {
+  delete style_;
+  style_ = style;
+  if (style) {
+    set_has_style();
+  } else {
+    clear_has_style();
+  }
+}
+
+// -------------------------------------------------------------------
+
+// ShortcutControllerArchive
+
+// repeated .TSA.ShortcutControllerArchive.ShortcutMapEntry entries = 1;
+inline int ShortcutControllerArchive::entries_size() const {
+  return entries_.size();
+}
+inline void ShortcutControllerArchive::clear_entries() {
+  entries_.Clear();
+}
+inline const ::TSA::ShortcutControllerArchive_ShortcutMapEntry& ShortcutControllerArchive::entries(int index) const {
+  return entries_.Get(index);
+}
+inline ::TSA::ShortcutControllerArchive_ShortcutMapEntry* ShortcutControllerArchive::mutable_entries(int index) {
+  return entries_.Mutable(index);
+}
+inline ::TSA::ShortcutControllerArchive_ShortcutMapEntry* ShortcutControllerArchive::add_entries() {
+  return entries_.Add();
+}
+inline const ::google::protobuf::RepeatedPtrField< ::TSA::ShortcutControllerArchive_ShortcutMapEntry >&
+ShortcutControllerArchive::entries() const {
+  return entries_;
+}
+inline ::google::protobuf::RepeatedPtrField< ::TSA::ShortcutControllerArchive_ShortcutMapEntry >*
+ShortcutControllerArchive::mutable_entries() {
+  return &entries_;
+}
+
+// -------------------------------------------------------------------
+
 // PropagatePresetCommandArchive
 
 // required .TSK.CommandArchive super = 1;
@@ -1167,6 +2030,646 @@ inline void PropagatePresetCommandArchive::set_allocated_super(::TSK::CommandArc
     set_has_super();
   } else {
     clear_has_super();
+  }
+}
+
+// -------------------------------------------------------------------
+
+// ShortcutCommandArchive
+
+// optional .TSK.CommandArchive super = 1;
+inline bool ShortcutCommandArchive::has_super() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void ShortcutCommandArchive::set_has_super() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void ShortcutCommandArchive::clear_has_super() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void ShortcutCommandArchive::clear_super() {
+  if (super_ != NULL) super_->::TSK::CommandArchive::Clear();
+  clear_has_super();
+}
+inline const ::TSK::CommandArchive& ShortcutCommandArchive::super() const {
+  return super_ != NULL ? *super_ : *default_instance_->super_;
+}
+inline ::TSK::CommandArchive* ShortcutCommandArchive::mutable_super() {
+  set_has_super();
+  if (super_ == NULL) super_ = new ::TSK::CommandArchive;
+  return super_;
+}
+inline ::TSK::CommandArchive* ShortcutCommandArchive::release_super() {
+  clear_has_super();
+  ::TSK::CommandArchive* temp = super_;
+  super_ = NULL;
+  return temp;
+}
+inline void ShortcutCommandArchive::set_allocated_super(::TSK::CommandArchive* super) {
+  delete super_;
+  super_ = super;
+  if (super) {
+    set_has_super();
+  } else {
+    clear_has_super();
+  }
+}
+
+// optional .TSP.Reference old_style = 2;
+inline bool ShortcutCommandArchive::has_old_style() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void ShortcutCommandArchive::set_has_old_style() {
+  _has_bits_[0] |= 0x00000002u;
+}
+inline void ShortcutCommandArchive::clear_has_old_style() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline void ShortcutCommandArchive::clear_old_style() {
+  if (old_style_ != NULL) old_style_->::TSP::Reference::Clear();
+  clear_has_old_style();
+}
+inline const ::TSP::Reference& ShortcutCommandArchive::old_style() const {
+  return old_style_ != NULL ? *old_style_ : *default_instance_->old_style_;
+}
+inline ::TSP::Reference* ShortcutCommandArchive::mutable_old_style() {
+  set_has_old_style();
+  if (old_style_ == NULL) old_style_ = new ::TSP::Reference;
+  return old_style_;
+}
+inline ::TSP::Reference* ShortcutCommandArchive::release_old_style() {
+  clear_has_old_style();
+  ::TSP::Reference* temp = old_style_;
+  old_style_ = NULL;
+  return temp;
+}
+inline void ShortcutCommandArchive::set_allocated_old_style(::TSP::Reference* old_style) {
+  delete old_style_;
+  old_style_ = old_style;
+  if (old_style) {
+    set_has_old_style();
+  } else {
+    clear_has_old_style();
+  }
+}
+
+// optional .TSP.Reference new_style = 3;
+inline bool ShortcutCommandArchive::has_new_style() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void ShortcutCommandArchive::set_has_new_style() {
+  _has_bits_[0] |= 0x00000004u;
+}
+inline void ShortcutCommandArchive::clear_has_new_style() {
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline void ShortcutCommandArchive::clear_new_style() {
+  if (new_style_ != NULL) new_style_->::TSP::Reference::Clear();
+  clear_has_new_style();
+}
+inline const ::TSP::Reference& ShortcutCommandArchive::new_style() const {
+  return new_style_ != NULL ? *new_style_ : *default_instance_->new_style_;
+}
+inline ::TSP::Reference* ShortcutCommandArchive::mutable_new_style() {
+  set_has_new_style();
+  if (new_style_ == NULL) new_style_ = new ::TSP::Reference;
+  return new_style_;
+}
+inline ::TSP::Reference* ShortcutCommandArchive::release_new_style() {
+  clear_has_new_style();
+  ::TSP::Reference* temp = new_style_;
+  new_style_ = NULL;
+  return temp;
+}
+inline void ShortcutCommandArchive::set_allocated_new_style(::TSP::Reference* new_style) {
+  delete new_style_;
+  new_style_ = new_style;
+  if (new_style) {
+    set_has_new_style();
+  } else {
+    clear_has_new_style();
+  }
+}
+
+// optional string old_shortcut = 4;
+inline bool ShortcutCommandArchive::has_old_shortcut() const {
+  return (_has_bits_[0] & 0x00000008u) != 0;
+}
+inline void ShortcutCommandArchive::set_has_old_shortcut() {
+  _has_bits_[0] |= 0x00000008u;
+}
+inline void ShortcutCommandArchive::clear_has_old_shortcut() {
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline void ShortcutCommandArchive::clear_old_shortcut() {
+  if (old_shortcut_ != &::google::protobuf::internal::kEmptyString) {
+    old_shortcut_->clear();
+  }
+  clear_has_old_shortcut();
+}
+inline const ::std::string& ShortcutCommandArchive::old_shortcut() const {
+  return *old_shortcut_;
+}
+inline void ShortcutCommandArchive::set_old_shortcut(const ::std::string& value) {
+  set_has_old_shortcut();
+  if (old_shortcut_ == &::google::protobuf::internal::kEmptyString) {
+    old_shortcut_ = new ::std::string;
+  }
+  old_shortcut_->assign(value);
+}
+inline void ShortcutCommandArchive::set_old_shortcut(const char* value) {
+  set_has_old_shortcut();
+  if (old_shortcut_ == &::google::protobuf::internal::kEmptyString) {
+    old_shortcut_ = new ::std::string;
+  }
+  old_shortcut_->assign(value);
+}
+inline void ShortcutCommandArchive::set_old_shortcut(const char* value, size_t size) {
+  set_has_old_shortcut();
+  if (old_shortcut_ == &::google::protobuf::internal::kEmptyString) {
+    old_shortcut_ = new ::std::string;
+  }
+  old_shortcut_->assign(reinterpret_cast<const char*>(value), size);
+}
+inline ::std::string* ShortcutCommandArchive::mutable_old_shortcut() {
+  set_has_old_shortcut();
+  if (old_shortcut_ == &::google::protobuf::internal::kEmptyString) {
+    old_shortcut_ = new ::std::string;
+  }
+  return old_shortcut_;
+}
+inline ::std::string* ShortcutCommandArchive::release_old_shortcut() {
+  clear_has_old_shortcut();
+  if (old_shortcut_ == &::google::protobuf::internal::kEmptyString) {
+    return NULL;
+  } else {
+    ::std::string* temp = old_shortcut_;
+    old_shortcut_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+    return temp;
+  }
+}
+inline void ShortcutCommandArchive::set_allocated_old_shortcut(::std::string* old_shortcut) {
+  if (old_shortcut_ != &::google::protobuf::internal::kEmptyString) {
+    delete old_shortcut_;
+  }
+  if (old_shortcut) {
+    set_has_old_shortcut();
+    old_shortcut_ = old_shortcut;
+  } else {
+    clear_has_old_shortcut();
+    old_shortcut_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+  }
+}
+
+// optional string new_shortcut = 5;
+inline bool ShortcutCommandArchive::has_new_shortcut() const {
+  return (_has_bits_[0] & 0x00000010u) != 0;
+}
+inline void ShortcutCommandArchive::set_has_new_shortcut() {
+  _has_bits_[0] |= 0x00000010u;
+}
+inline void ShortcutCommandArchive::clear_has_new_shortcut() {
+  _has_bits_[0] &= ~0x00000010u;
+}
+inline void ShortcutCommandArchive::clear_new_shortcut() {
+  if (new_shortcut_ != &::google::protobuf::internal::kEmptyString) {
+    new_shortcut_->clear();
+  }
+  clear_has_new_shortcut();
+}
+inline const ::std::string& ShortcutCommandArchive::new_shortcut() const {
+  return *new_shortcut_;
+}
+inline void ShortcutCommandArchive::set_new_shortcut(const ::std::string& value) {
+  set_has_new_shortcut();
+  if (new_shortcut_ == &::google::protobuf::internal::kEmptyString) {
+    new_shortcut_ = new ::std::string;
+  }
+  new_shortcut_->assign(value);
+}
+inline void ShortcutCommandArchive::set_new_shortcut(const char* value) {
+  set_has_new_shortcut();
+  if (new_shortcut_ == &::google::protobuf::internal::kEmptyString) {
+    new_shortcut_ = new ::std::string;
+  }
+  new_shortcut_->assign(value);
+}
+inline void ShortcutCommandArchive::set_new_shortcut(const char* value, size_t size) {
+  set_has_new_shortcut();
+  if (new_shortcut_ == &::google::protobuf::internal::kEmptyString) {
+    new_shortcut_ = new ::std::string;
+  }
+  new_shortcut_->assign(reinterpret_cast<const char*>(value), size);
+}
+inline ::std::string* ShortcutCommandArchive::mutable_new_shortcut() {
+  set_has_new_shortcut();
+  if (new_shortcut_ == &::google::protobuf::internal::kEmptyString) {
+    new_shortcut_ = new ::std::string;
+  }
+  return new_shortcut_;
+}
+inline ::std::string* ShortcutCommandArchive::release_new_shortcut() {
+  clear_has_new_shortcut();
+  if (new_shortcut_ == &::google::protobuf::internal::kEmptyString) {
+    return NULL;
+  } else {
+    ::std::string* temp = new_shortcut_;
+    new_shortcut_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+    return temp;
+  }
+}
+inline void ShortcutCommandArchive::set_allocated_new_shortcut(::std::string* new_shortcut) {
+  if (new_shortcut_ != &::google::protobuf::internal::kEmptyString) {
+    delete new_shortcut_;
+  }
+  if (new_shortcut) {
+    set_has_new_shortcut();
+    new_shortcut_ = new_shortcut;
+  } else {
+    clear_has_new_shortcut();
+    new_shortcut_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+  }
+}
+
+// -------------------------------------------------------------------
+
+// AddCustomFormatCommandArchive
+
+// required .TSK.CommandArchive super = 1;
+inline bool AddCustomFormatCommandArchive::has_super() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void AddCustomFormatCommandArchive::set_has_super() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void AddCustomFormatCommandArchive::clear_has_super() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void AddCustomFormatCommandArchive::clear_super() {
+  if (super_ != NULL) super_->::TSK::CommandArchive::Clear();
+  clear_has_super();
+}
+inline const ::TSK::CommandArchive& AddCustomFormatCommandArchive::super() const {
+  return super_ != NULL ? *super_ : *default_instance_->super_;
+}
+inline ::TSK::CommandArchive* AddCustomFormatCommandArchive::mutable_super() {
+  set_has_super();
+  if (super_ == NULL) super_ = new ::TSK::CommandArchive;
+  return super_;
+}
+inline ::TSK::CommandArchive* AddCustomFormatCommandArchive::release_super() {
+  clear_has_super();
+  ::TSK::CommandArchive* temp = super_;
+  super_ = NULL;
+  return temp;
+}
+inline void AddCustomFormatCommandArchive::set_allocated_super(::TSK::CommandArchive* super) {
+  delete super_;
+  super_ = super;
+  if (super) {
+    set_has_super();
+  } else {
+    clear_has_super();
+  }
+}
+
+// optional .TSK.CustomFormatArchive custom_format = 2;
+inline bool AddCustomFormatCommandArchive::has_custom_format() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void AddCustomFormatCommandArchive::set_has_custom_format() {
+  _has_bits_[0] |= 0x00000002u;
+}
+inline void AddCustomFormatCommandArchive::clear_has_custom_format() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline void AddCustomFormatCommandArchive::clear_custom_format() {
+  if (custom_format_ != NULL) custom_format_->::TSK::CustomFormatArchive::Clear();
+  clear_has_custom_format();
+}
+inline const ::TSK::CustomFormatArchive& AddCustomFormatCommandArchive::custom_format() const {
+  return custom_format_ != NULL ? *custom_format_ : *default_instance_->custom_format_;
+}
+inline ::TSK::CustomFormatArchive* AddCustomFormatCommandArchive::mutable_custom_format() {
+  set_has_custom_format();
+  if (custom_format_ == NULL) custom_format_ = new ::TSK::CustomFormatArchive;
+  return custom_format_;
+}
+inline ::TSK::CustomFormatArchive* AddCustomFormatCommandArchive::release_custom_format() {
+  clear_has_custom_format();
+  ::TSK::CustomFormatArchive* temp = custom_format_;
+  custom_format_ = NULL;
+  return temp;
+}
+inline void AddCustomFormatCommandArchive::set_allocated_custom_format(::TSK::CustomFormatArchive* custom_format) {
+  delete custom_format_;
+  custom_format_ = custom_format;
+  if (custom_format) {
+    set_has_custom_format();
+  } else {
+    clear_has_custom_format();
+  }
+}
+
+// optional bool for_replacement = 3;
+inline bool AddCustomFormatCommandArchive::has_for_replacement() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void AddCustomFormatCommandArchive::set_has_for_replacement() {
+  _has_bits_[0] |= 0x00000004u;
+}
+inline void AddCustomFormatCommandArchive::clear_has_for_replacement() {
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline void AddCustomFormatCommandArchive::clear_for_replacement() {
+  for_replacement_ = false;
+  clear_has_for_replacement();
+}
+inline bool AddCustomFormatCommandArchive::for_replacement() const {
+  return for_replacement_;
+}
+inline void AddCustomFormatCommandArchive::set_for_replacement(bool value) {
+  set_has_for_replacement();
+  for_replacement_ = value;
+}
+
+// -------------------------------------------------------------------
+
+// UpdateCustomFormatCommandArchive
+
+// optional .TSK.CommandArchive super = 1;
+inline bool UpdateCustomFormatCommandArchive::has_super() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void UpdateCustomFormatCommandArchive::set_has_super() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void UpdateCustomFormatCommandArchive::clear_has_super() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void UpdateCustomFormatCommandArchive::clear_super() {
+  if (super_ != NULL) super_->::TSK::CommandArchive::Clear();
+  clear_has_super();
+}
+inline const ::TSK::CommandArchive& UpdateCustomFormatCommandArchive::super() const {
+  return super_ != NULL ? *super_ : *default_instance_->super_;
+}
+inline ::TSK::CommandArchive* UpdateCustomFormatCommandArchive::mutable_super() {
+  set_has_super();
+  if (super_ == NULL) super_ = new ::TSK::CommandArchive;
+  return super_;
+}
+inline ::TSK::CommandArchive* UpdateCustomFormatCommandArchive::release_super() {
+  clear_has_super();
+  ::TSK::CommandArchive* temp = super_;
+  super_ = NULL;
+  return temp;
+}
+inline void UpdateCustomFormatCommandArchive::set_allocated_super(::TSK::CommandArchive* super) {
+  delete super_;
+  super_ = super;
+  if (super) {
+    set_has_super();
+  } else {
+    clear_has_super();
+  }
+}
+
+// optional .TSK.CustomFormatArchive custom_format = 2;
+inline bool UpdateCustomFormatCommandArchive::has_custom_format() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void UpdateCustomFormatCommandArchive::set_has_custom_format() {
+  _has_bits_[0] |= 0x00000002u;
+}
+inline void UpdateCustomFormatCommandArchive::clear_has_custom_format() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline void UpdateCustomFormatCommandArchive::clear_custom_format() {
+  if (custom_format_ != NULL) custom_format_->::TSK::CustomFormatArchive::Clear();
+  clear_has_custom_format();
+}
+inline const ::TSK::CustomFormatArchive& UpdateCustomFormatCommandArchive::custom_format() const {
+  return custom_format_ != NULL ? *custom_format_ : *default_instance_->custom_format_;
+}
+inline ::TSK::CustomFormatArchive* UpdateCustomFormatCommandArchive::mutable_custom_format() {
+  set_has_custom_format();
+  if (custom_format_ == NULL) custom_format_ = new ::TSK::CustomFormatArchive;
+  return custom_format_;
+}
+inline ::TSK::CustomFormatArchive* UpdateCustomFormatCommandArchive::release_custom_format() {
+  clear_has_custom_format();
+  ::TSK::CustomFormatArchive* temp = custom_format_;
+  custom_format_ = NULL;
+  return temp;
+}
+inline void UpdateCustomFormatCommandArchive::set_allocated_custom_format(::TSK::CustomFormatArchive* custom_format) {
+  delete custom_format_;
+  custom_format_ = custom_format;
+  if (custom_format) {
+    set_has_custom_format();
+  } else {
+    clear_has_custom_format();
+  }
+}
+
+// optional .TSK.CustomFormatArchive old_custom_format = 3;
+inline bool UpdateCustomFormatCommandArchive::has_old_custom_format() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void UpdateCustomFormatCommandArchive::set_has_old_custom_format() {
+  _has_bits_[0] |= 0x00000004u;
+}
+inline void UpdateCustomFormatCommandArchive::clear_has_old_custom_format() {
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline void UpdateCustomFormatCommandArchive::clear_old_custom_format() {
+  if (old_custom_format_ != NULL) old_custom_format_->::TSK::CustomFormatArchive::Clear();
+  clear_has_old_custom_format();
+}
+inline const ::TSK::CustomFormatArchive& UpdateCustomFormatCommandArchive::old_custom_format() const {
+  return old_custom_format_ != NULL ? *old_custom_format_ : *default_instance_->old_custom_format_;
+}
+inline ::TSK::CustomFormatArchive* UpdateCustomFormatCommandArchive::mutable_old_custom_format() {
+  set_has_old_custom_format();
+  if (old_custom_format_ == NULL) old_custom_format_ = new ::TSK::CustomFormatArchive;
+  return old_custom_format_;
+}
+inline ::TSK::CustomFormatArchive* UpdateCustomFormatCommandArchive::release_old_custom_format() {
+  clear_has_old_custom_format();
+  ::TSK::CustomFormatArchive* temp = old_custom_format_;
+  old_custom_format_ = NULL;
+  return temp;
+}
+inline void UpdateCustomFormatCommandArchive::set_allocated_old_custom_format(::TSK::CustomFormatArchive* old_custom_format) {
+  delete old_custom_format_;
+  old_custom_format_ = old_custom_format;
+  if (old_custom_format) {
+    set_has_old_custom_format();
+  } else {
+    clear_has_old_custom_format();
+  }
+}
+
+// optional uint32 custom_format_id = 4;
+inline bool UpdateCustomFormatCommandArchive::has_custom_format_id() const {
+  return (_has_bits_[0] & 0x00000008u) != 0;
+}
+inline void UpdateCustomFormatCommandArchive::set_has_custom_format_id() {
+  _has_bits_[0] |= 0x00000008u;
+}
+inline void UpdateCustomFormatCommandArchive::clear_has_custom_format_id() {
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline void UpdateCustomFormatCommandArchive::clear_custom_format_id() {
+  custom_format_id_ = 0u;
+  clear_has_custom_format_id();
+}
+inline ::google::protobuf::uint32 UpdateCustomFormatCommandArchive::custom_format_id() const {
+  return custom_format_id_;
+}
+inline void UpdateCustomFormatCommandArchive::set_custom_format_id(::google::protobuf::uint32 value) {
+  set_has_custom_format_id();
+  custom_format_id_ = value;
+}
+
+// -------------------------------------------------------------------
+
+// ReplaceCustomFormatCommandArchive
+
+// optional .TSK.CommandArchive super = 1;
+inline bool ReplaceCustomFormatCommandArchive::has_super() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void ReplaceCustomFormatCommandArchive::set_has_super() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void ReplaceCustomFormatCommandArchive::clear_has_super() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void ReplaceCustomFormatCommandArchive::clear_super() {
+  if (super_ != NULL) super_->::TSK::CommandArchive::Clear();
+  clear_has_super();
+}
+inline const ::TSK::CommandArchive& ReplaceCustomFormatCommandArchive::super() const {
+  return super_ != NULL ? *super_ : *default_instance_->super_;
+}
+inline ::TSK::CommandArchive* ReplaceCustomFormatCommandArchive::mutable_super() {
+  set_has_super();
+  if (super_ == NULL) super_ = new ::TSK::CommandArchive;
+  return super_;
+}
+inline ::TSK::CommandArchive* ReplaceCustomFormatCommandArchive::release_super() {
+  clear_has_super();
+  ::TSK::CommandArchive* temp = super_;
+  super_ = NULL;
+  return temp;
+}
+inline void ReplaceCustomFormatCommandArchive::set_allocated_super(::TSK::CommandArchive* super) {
+  delete super_;
+  super_ = super;
+  if (super) {
+    set_has_super();
+  } else {
+    clear_has_super();
+  }
+}
+
+// optional .TSK.CustomFormatArchive custom_format = 2;
+inline bool ReplaceCustomFormatCommandArchive::has_custom_format() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void ReplaceCustomFormatCommandArchive::set_has_custom_format() {
+  _has_bits_[0] |= 0x00000002u;
+}
+inline void ReplaceCustomFormatCommandArchive::clear_has_custom_format() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline void ReplaceCustomFormatCommandArchive::clear_custom_format() {
+  if (custom_format_ != NULL) custom_format_->::TSK::CustomFormatArchive::Clear();
+  clear_has_custom_format();
+}
+inline const ::TSK::CustomFormatArchive& ReplaceCustomFormatCommandArchive::custom_format() const {
+  return custom_format_ != NULL ? *custom_format_ : *default_instance_->custom_format_;
+}
+inline ::TSK::CustomFormatArchive* ReplaceCustomFormatCommandArchive::mutable_custom_format() {
+  set_has_custom_format();
+  if (custom_format_ == NULL) custom_format_ = new ::TSK::CustomFormatArchive;
+  return custom_format_;
+}
+inline ::TSK::CustomFormatArchive* ReplaceCustomFormatCommandArchive::release_custom_format() {
+  clear_has_custom_format();
+  ::TSK::CustomFormatArchive* temp = custom_format_;
+  custom_format_ = NULL;
+  return temp;
+}
+inline void ReplaceCustomFormatCommandArchive::set_allocated_custom_format(::TSK::CustomFormatArchive* custom_format) {
+  delete custom_format_;
+  custom_format_ = custom_format;
+  if (custom_format) {
+    set_has_custom_format();
+  } else {
+    clear_has_custom_format();
+  }
+}
+
+// optional uint32 custom_format_id = 3;
+inline bool ReplaceCustomFormatCommandArchive::has_custom_format_id() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void ReplaceCustomFormatCommandArchive::set_has_custom_format_id() {
+  _has_bits_[0] |= 0x00000004u;
+}
+inline void ReplaceCustomFormatCommandArchive::clear_has_custom_format_id() {
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline void ReplaceCustomFormatCommandArchive::clear_custom_format_id() {
+  custom_format_id_ = 0u;
+  clear_has_custom_format_id();
+}
+inline ::google::protobuf::uint32 ReplaceCustomFormatCommandArchive::custom_format_id() const {
+  return custom_format_id_;
+}
+inline void ReplaceCustomFormatCommandArchive::set_custom_format_id(::google::protobuf::uint32 value) {
+  set_has_custom_format_id();
+  custom_format_id_ = value;
+}
+
+// optional .TSK.FormatStructArchive replacement_format = 4;
+inline bool ReplaceCustomFormatCommandArchive::has_replacement_format() const {
+  return (_has_bits_[0] & 0x00000008u) != 0;
+}
+inline void ReplaceCustomFormatCommandArchive::set_has_replacement_format() {
+  _has_bits_[0] |= 0x00000008u;
+}
+inline void ReplaceCustomFormatCommandArchive::clear_has_replacement_format() {
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline void ReplaceCustomFormatCommandArchive::clear_replacement_format() {
+  if (replacement_format_ != NULL) replacement_format_->::TSK::FormatStructArchive::Clear();
+  clear_has_replacement_format();
+}
+inline const ::TSK::FormatStructArchive& ReplaceCustomFormatCommandArchive::replacement_format() const {
+  return replacement_format_ != NULL ? *replacement_format_ : *default_instance_->replacement_format_;
+}
+inline ::TSK::FormatStructArchive* ReplaceCustomFormatCommandArchive::mutable_replacement_format() {
+  set_has_replacement_format();
+  if (replacement_format_ == NULL) replacement_format_ = new ::TSK::FormatStructArchive;
+  return replacement_format_;
+}
+inline ::TSK::FormatStructArchive* ReplaceCustomFormatCommandArchive::release_replacement_format() {
+  clear_has_replacement_format();
+  ::TSK::FormatStructArchive* temp = replacement_format_;
+  replacement_format_ = NULL;
+  return temp;
+}
+inline void ReplaceCustomFormatCommandArchive::set_allocated_replacement_format(::TSK::FormatStructArchive* replacement_format) {
+  delete replacement_format_;
+  replacement_format_ = replacement_format;
+  if (replacement_format) {
+    set_has_replacement_format();
+  } else {
+    clear_has_replacement_format();
   }
 }
 

@@ -47,6 +47,8 @@ class ChartPasteboardAdditionsArchive;
 class ChartGridArchive;
 class ChartGridArchive_GridRow;
 class ChartGridArchive_GridRow_GridValue;
+class ChartGridArchive_ChartGridRowColumnIdMap;
+class ChartGridArchive_ChartGridRowColumnIdMap_Entry;
 class ChartMediatorArchive;
 class ChartStylePreset;
 class ChartPresetsArchive;
@@ -548,6 +550,10 @@ class ChartPasteboardAdditionsArchive : public ::google::protobuf::Message {
   static ::google::protobuf::internal::ExtensionIdentifier< ::TSCH::ChartArchive,
       ::google::protobuf::internal::StringTypeTraits, 12, false >
     preset_uuid_for_pasteboard;
+  static const int kCustomFormatListForPasteboardFieldNumber = 10003;
+  static ::google::protobuf::internal::ExtensionIdentifier< ::TSCH::ChartArchive,
+      ::google::protobuf::internal::MessageTypeTraits< ::TSP::Reference >, 11, false >
+    custom_format_list_for_pasteboard;
   // @@protoc_insertion_point(class_scope:TSCH.ChartPasteboardAdditionsArchive)
  private:
 
@@ -627,10 +633,24 @@ class ChartGridArchive_GridRow_GridValue : public ::google::protobuf::Message {
   inline double numeric_value() const;
   inline void set_numeric_value(double value);
 
-  // optional double date_value = 2;
+  // optional double date_value_1_0 = 2;
+  inline bool has_date_value_1_0() const;
+  inline void clear_date_value_1_0();
+  static const int kDateValue10FieldNumber = 2;
+  inline double date_value_1_0() const;
+  inline void set_date_value_1_0(double value);
+
+  // optional double duration_value = 3;
+  inline bool has_duration_value() const;
+  inline void clear_duration_value();
+  static const int kDurationValueFieldNumber = 3;
+  inline double duration_value() const;
+  inline void set_duration_value(double value);
+
+  // optional double date_value = 4;
   inline bool has_date_value() const;
   inline void clear_date_value();
-  static const int kDateValueFieldNumber = 2;
+  static const int kDateValueFieldNumber = 4;
   inline double date_value() const;
   inline void set_date_value(double value);
 
@@ -638,16 +658,22 @@ class ChartGridArchive_GridRow_GridValue : public ::google::protobuf::Message {
  private:
   inline void set_has_numeric_value();
   inline void clear_has_numeric_value();
+  inline void set_has_date_value_1_0();
+  inline void clear_has_date_value_1_0();
+  inline void set_has_duration_value();
+  inline void clear_has_duration_value();
   inline void set_has_date_value();
   inline void clear_has_date_value();
 
   ::google::protobuf::UnknownFieldSet _unknown_fields_;
 
   double numeric_value_;
+  double date_value_1_0_;
+  double duration_value_;
   double date_value_;
 
   mutable int _cached_size_;
-  ::google::protobuf::uint32 _has_bits_[(2 + 31) / 32];
+  ::google::protobuf::uint32 _has_bits_[(4 + 31) / 32];
 
   friend void  protobuf_AddDesc_TSCHArchives_2eproto();
   friend void protobuf_AssignDesc_TSCHArchives_2eproto();
@@ -745,6 +771,203 @@ class ChartGridArchive_GridRow : public ::google::protobuf::Message {
 };
 // -------------------------------------------------------------------
 
+class ChartGridArchive_ChartGridRowColumnIdMap_Entry : public ::google::protobuf::Message {
+ public:
+  ChartGridArchive_ChartGridRowColumnIdMap_Entry();
+  virtual ~ChartGridArchive_ChartGridRowColumnIdMap_Entry();
+
+  ChartGridArchive_ChartGridRowColumnIdMap_Entry(const ChartGridArchive_ChartGridRowColumnIdMap_Entry& from);
+
+  inline ChartGridArchive_ChartGridRowColumnIdMap_Entry& operator=(const ChartGridArchive_ChartGridRowColumnIdMap_Entry& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _unknown_fields_;
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return &_unknown_fields_;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const ChartGridArchive_ChartGridRowColumnIdMap_Entry& default_instance();
+
+  void Swap(ChartGridArchive_ChartGridRowColumnIdMap_Entry* other);
+
+  // implements Message ----------------------------------------------
+
+  ChartGridArchive_ChartGridRowColumnIdMap_Entry* New() const;
+  void CopyFrom(const ::google::protobuf::Message& from);
+  void MergeFrom(const ::google::protobuf::Message& from);
+  void CopyFrom(const ChartGridArchive_ChartGridRowColumnIdMap_Entry& from);
+  void MergeFrom(const ChartGridArchive_ChartGridRowColumnIdMap_Entry& from);
+  void Clear();
+  bool IsInitialized() const;
+
+  int ByteSize() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // required string uniqueId = 1;
+  inline bool has_uniqueid() const;
+  inline void clear_uniqueid();
+  static const int kUniqueIdFieldNumber = 1;
+  inline const ::std::string& uniqueid() const;
+  inline void set_uniqueid(const ::std::string& value);
+  inline void set_uniqueid(const char* value);
+  inline void set_uniqueid(const char* value, size_t size);
+  inline ::std::string* mutable_uniqueid();
+  inline ::std::string* release_uniqueid();
+  inline void set_allocated_uniqueid(::std::string* uniqueid);
+
+  // required uint32 index = 2;
+  inline bool has_index() const;
+  inline void clear_index();
+  static const int kIndexFieldNumber = 2;
+  inline ::google::protobuf::uint32 index() const;
+  inline void set_index(::google::protobuf::uint32 value);
+
+  // @@protoc_insertion_point(class_scope:TSCH.ChartGridArchive.ChartGridRowColumnIdMap.Entry)
+ private:
+  inline void set_has_uniqueid();
+  inline void clear_has_uniqueid();
+  inline void set_has_index();
+  inline void clear_has_index();
+
+  ::google::protobuf::UnknownFieldSet _unknown_fields_;
+
+  ::std::string* uniqueid_;
+  ::google::protobuf::uint32 index_;
+
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 _has_bits_[(2 + 31) / 32];
+
+  friend void  protobuf_AddDesc_TSCHArchives_2eproto();
+  friend void protobuf_AssignDesc_TSCHArchives_2eproto();
+  friend void protobuf_ShutdownFile_TSCHArchives_2eproto();
+
+  void InitAsDefaultInstance();
+  static ChartGridArchive_ChartGridRowColumnIdMap_Entry* default_instance_;
+};
+// -------------------------------------------------------------------
+
+class ChartGridArchive_ChartGridRowColumnIdMap : public ::google::protobuf::Message {
+ public:
+  ChartGridArchive_ChartGridRowColumnIdMap();
+  virtual ~ChartGridArchive_ChartGridRowColumnIdMap();
+
+  ChartGridArchive_ChartGridRowColumnIdMap(const ChartGridArchive_ChartGridRowColumnIdMap& from);
+
+  inline ChartGridArchive_ChartGridRowColumnIdMap& operator=(const ChartGridArchive_ChartGridRowColumnIdMap& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _unknown_fields_;
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return &_unknown_fields_;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const ChartGridArchive_ChartGridRowColumnIdMap& default_instance();
+
+  void Swap(ChartGridArchive_ChartGridRowColumnIdMap* other);
+
+  // implements Message ----------------------------------------------
+
+  ChartGridArchive_ChartGridRowColumnIdMap* New() const;
+  void CopyFrom(const ::google::protobuf::Message& from);
+  void MergeFrom(const ::google::protobuf::Message& from);
+  void CopyFrom(const ChartGridArchive_ChartGridRowColumnIdMap& from);
+  void MergeFrom(const ChartGridArchive_ChartGridRowColumnIdMap& from);
+  void Clear();
+  bool IsInitialized() const;
+
+  int ByteSize() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const;
+
+  // nested types ----------------------------------------------------
+
+  typedef ChartGridArchive_ChartGridRowColumnIdMap_Entry Entry;
+
+  // accessors -------------------------------------------------------
+
+  // repeated .TSCH.ChartGridArchive.ChartGridRowColumnIdMap.Entry row_id_map = 1;
+  inline int row_id_map_size() const;
+  inline void clear_row_id_map();
+  static const int kRowIdMapFieldNumber = 1;
+  inline const ::TSCH::ChartGridArchive_ChartGridRowColumnIdMap_Entry& row_id_map(int index) const;
+  inline ::TSCH::ChartGridArchive_ChartGridRowColumnIdMap_Entry* mutable_row_id_map(int index);
+  inline ::TSCH::ChartGridArchive_ChartGridRowColumnIdMap_Entry* add_row_id_map();
+  inline const ::google::protobuf::RepeatedPtrField< ::TSCH::ChartGridArchive_ChartGridRowColumnIdMap_Entry >&
+      row_id_map() const;
+  inline ::google::protobuf::RepeatedPtrField< ::TSCH::ChartGridArchive_ChartGridRowColumnIdMap_Entry >*
+      mutable_row_id_map();
+
+  // repeated .TSCH.ChartGridArchive.ChartGridRowColumnIdMap.Entry column_id_map = 2;
+  inline int column_id_map_size() const;
+  inline void clear_column_id_map();
+  static const int kColumnIdMapFieldNumber = 2;
+  inline const ::TSCH::ChartGridArchive_ChartGridRowColumnIdMap_Entry& column_id_map(int index) const;
+  inline ::TSCH::ChartGridArchive_ChartGridRowColumnIdMap_Entry* mutable_column_id_map(int index);
+  inline ::TSCH::ChartGridArchive_ChartGridRowColumnIdMap_Entry* add_column_id_map();
+  inline const ::google::protobuf::RepeatedPtrField< ::TSCH::ChartGridArchive_ChartGridRowColumnIdMap_Entry >&
+      column_id_map() const;
+  inline ::google::protobuf::RepeatedPtrField< ::TSCH::ChartGridArchive_ChartGridRowColumnIdMap_Entry >*
+      mutable_column_id_map();
+
+  // @@protoc_insertion_point(class_scope:TSCH.ChartGridArchive.ChartGridRowColumnIdMap)
+ private:
+
+  ::google::protobuf::UnknownFieldSet _unknown_fields_;
+
+  ::google::protobuf::RepeatedPtrField< ::TSCH::ChartGridArchive_ChartGridRowColumnIdMap_Entry > row_id_map_;
+  ::google::protobuf::RepeatedPtrField< ::TSCH::ChartGridArchive_ChartGridRowColumnIdMap_Entry > column_id_map_;
+
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 _has_bits_[(2 + 31) / 32];
+
+  friend void  protobuf_AddDesc_TSCHArchives_2eproto();
+  friend void protobuf_AssignDesc_TSCHArchives_2eproto();
+  friend void protobuf_ShutdownFile_TSCHArchives_2eproto();
+
+  void InitAsDefaultInstance();
+  static ChartGridArchive_ChartGridRowColumnIdMap* default_instance_;
+};
+// -------------------------------------------------------------------
+
 class ChartGridArchive : public ::google::protobuf::Message {
  public:
   ChartGridArchive();
@@ -798,6 +1021,7 @@ class ChartGridArchive : public ::google::protobuf::Message {
   // nested types ----------------------------------------------------
 
   typedef ChartGridArchive_GridRow GridRow;
+  typedef ChartGridArchive_ChartGridRowColumnIdMap ChartGridRowColumnIdMap;
 
   // accessors -------------------------------------------------------
 
@@ -845,17 +1069,29 @@ class ChartGridArchive : public ::google::protobuf::Message {
   inline ::google::protobuf::RepeatedPtrField< ::TSCH::ChartGridArchive_GridRow >*
       mutable_grid_row();
 
+  // optional .TSCH.ChartGridArchive.ChartGridRowColumnIdMap idMap = 4;
+  inline bool has_idmap() const;
+  inline void clear_idmap();
+  static const int kIdMapFieldNumber = 4;
+  inline const ::TSCH::ChartGridArchive_ChartGridRowColumnIdMap& idmap() const;
+  inline ::TSCH::ChartGridArchive_ChartGridRowColumnIdMap* mutable_idmap();
+  inline ::TSCH::ChartGridArchive_ChartGridRowColumnIdMap* release_idmap();
+  inline void set_allocated_idmap(::TSCH::ChartGridArchive_ChartGridRowColumnIdMap* idmap);
+
   // @@protoc_insertion_point(class_scope:TSCH.ChartGridArchive)
  private:
+  inline void set_has_idmap();
+  inline void clear_has_idmap();
 
   ::google::protobuf::UnknownFieldSet _unknown_fields_;
 
   ::google::protobuf::RepeatedPtrField< ::std::string> row_name_;
   ::google::protobuf::RepeatedPtrField< ::std::string> column_name_;
   ::google::protobuf::RepeatedPtrField< ::TSCH::ChartGridArchive_GridRow > grid_row_;
+  ::TSCH::ChartGridArchive_ChartGridRowColumnIdMap* idmap_;
 
   mutable int _cached_size_;
-  ::google::protobuf::uint32 _has_bits_[(3 + 31) / 32];
+  ::google::protobuf::uint32 _has_bits_[(4 + 31) / 32];
 
   friend void  protobuf_AddDesc_TSCHArchives_2eproto();
   friend void protobuf_AssignDesc_TSCHArchives_2eproto();
@@ -2135,6 +2371,13 @@ class ChartUIState : public ::google::protobuf::Message {
   inline ::google::protobuf::int32 cde_last_col_count() const;
   inline void set_cde_last_col_count(::google::protobuf::int32 value);
 
+  // optional bool cde_use_full_keyboard = 6;
+  inline bool has_cde_use_full_keyboard() const;
+  inline void clear_cde_use_full_keyboard();
+  static const int kCdeUseFullKeyboardFieldNumber = 6;
+  inline bool cde_use_full_keyboard() const;
+  inline void set_cde_use_full_keyboard(bool value);
+
   // @@protoc_insertion_point(class_scope:TSCH.ChartUIState)
  private:
   inline void set_has_chart();
@@ -2147,6 +2390,8 @@ class ChartUIState : public ::google::protobuf::Message {
   inline void clear_has_cde_last_row_count();
   inline void set_has_cde_last_col_count();
   inline void clear_has_cde_last_col_count();
+  inline void set_has_cde_use_full_keyboard();
+  inline void clear_has_cde_use_full_keyboard();
 
   ::google::protobuf::UnknownFieldSet _unknown_fields_;
 
@@ -2155,9 +2400,10 @@ class ChartUIState : public ::google::protobuf::Message {
   ::google::protobuf::int32 cde_last_col_selected_;
   ::google::protobuf::int32 cde_last_row_count_;
   ::google::protobuf::int32 cde_last_col_count_;
+  bool cde_use_full_keyboard_;
 
   mutable int _cached_size_;
-  ::google::protobuf::uint32 _has_bits_[(5 + 31) / 32];
+  ::google::protobuf::uint32 _has_bits_[(6 + 31) / 32];
 
   friend void  protobuf_AddDesc_TSCHArchives_2eproto();
   friend void protobuf_AssignDesc_TSCHArchives_2eproto();
@@ -2252,6 +2498,26 @@ static const int kScene3DSettingsConstantDepthFieldNumber = 10002;
 extern ::google::protobuf::internal::ExtensionIdentifier< ::TSCH::ChartArchive,
     ::google::protobuf::internal::PrimitiveTypeTraits< bool >, 8, false >
   scene3d_settings_constant_depth;
+static const int kLastAppliedFillSetLookupStringFieldNumber = 10004;
+extern ::google::protobuf::internal::ExtensionIdentifier< ::TSCH::ChartArchive,
+    ::google::protobuf::internal::StringTypeTraits, 9, false >
+  last_applied_fill_set_lookup_string;
+static const int kSeriesSupportsCustomNumberFormatFieldNumber = 10001;
+extern ::google::protobuf::internal::ExtensionIdentifier< ::TSCH::ChartSeriesNonStyleArchive,
+    ::google::protobuf::internal::PrimitiveTypeTraits< bool >, 8, false >
+  series_supports_custom_number_format;
+static const int kSeriesSupportsCustomDateFormatFieldNumber = 10002;
+extern ::google::protobuf::internal::ExtensionIdentifier< ::TSCH::ChartSeriesNonStyleArchive,
+    ::google::protobuf::internal::PrimitiveTypeTraits< bool >, 8, false >
+  series_supports_custom_date_format;
+static const int kAxisSupportsCustomNumberFormatFieldNumber = 10001;
+extern ::google::protobuf::internal::ExtensionIdentifier< ::TSCH::ChartAxisNonStyleArchive,
+    ::google::protobuf::internal::PrimitiveTypeTraits< bool >, 8, false >
+  axis_supports_custom_number_format;
+static const int kAxisSupportsCustomDateFormatFieldNumber = 10002;
+extern ::google::protobuf::internal::ExtensionIdentifier< ::TSCH::ChartAxisNonStyleArchive,
+    ::google::protobuf::internal::PrimitiveTypeTraits< bool >, 8, false >
+  axis_supports_custom_date_format;
 
 // ===================================================================
 
@@ -2994,15 +3260,59 @@ inline void ChartGridArchive_GridRow_GridValue::set_numeric_value(double value) 
   numeric_value_ = value;
 }
 
-// optional double date_value = 2;
-inline bool ChartGridArchive_GridRow_GridValue::has_date_value() const {
+// optional double date_value_1_0 = 2;
+inline bool ChartGridArchive_GridRow_GridValue::has_date_value_1_0() const {
   return (_has_bits_[0] & 0x00000002u) != 0;
 }
-inline void ChartGridArchive_GridRow_GridValue::set_has_date_value() {
+inline void ChartGridArchive_GridRow_GridValue::set_has_date_value_1_0() {
   _has_bits_[0] |= 0x00000002u;
 }
-inline void ChartGridArchive_GridRow_GridValue::clear_has_date_value() {
+inline void ChartGridArchive_GridRow_GridValue::clear_has_date_value_1_0() {
   _has_bits_[0] &= ~0x00000002u;
+}
+inline void ChartGridArchive_GridRow_GridValue::clear_date_value_1_0() {
+  date_value_1_0_ = 0;
+  clear_has_date_value_1_0();
+}
+inline double ChartGridArchive_GridRow_GridValue::date_value_1_0() const {
+  return date_value_1_0_;
+}
+inline void ChartGridArchive_GridRow_GridValue::set_date_value_1_0(double value) {
+  set_has_date_value_1_0();
+  date_value_1_0_ = value;
+}
+
+// optional double duration_value = 3;
+inline bool ChartGridArchive_GridRow_GridValue::has_duration_value() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void ChartGridArchive_GridRow_GridValue::set_has_duration_value() {
+  _has_bits_[0] |= 0x00000004u;
+}
+inline void ChartGridArchive_GridRow_GridValue::clear_has_duration_value() {
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline void ChartGridArchive_GridRow_GridValue::clear_duration_value() {
+  duration_value_ = 0;
+  clear_has_duration_value();
+}
+inline double ChartGridArchive_GridRow_GridValue::duration_value() const {
+  return duration_value_;
+}
+inline void ChartGridArchive_GridRow_GridValue::set_duration_value(double value) {
+  set_has_duration_value();
+  duration_value_ = value;
+}
+
+// optional double date_value = 4;
+inline bool ChartGridArchive_GridRow_GridValue::has_date_value() const {
+  return (_has_bits_[0] & 0x00000008u) != 0;
+}
+inline void ChartGridArchive_GridRow_GridValue::set_has_date_value() {
+  _has_bits_[0] |= 0x00000008u;
+}
+inline void ChartGridArchive_GridRow_GridValue::clear_has_date_value() {
+  _has_bits_[0] &= ~0x00000008u;
 }
 inline void ChartGridArchive_GridRow_GridValue::clear_date_value() {
   date_value_ = 0;
@@ -3043,6 +3353,156 @@ ChartGridArchive_GridRow::value() const {
 inline ::google::protobuf::RepeatedPtrField< ::TSCH::ChartGridArchive_GridRow_GridValue >*
 ChartGridArchive_GridRow::mutable_value() {
   return &value_;
+}
+
+// -------------------------------------------------------------------
+
+// ChartGridArchive_ChartGridRowColumnIdMap_Entry
+
+// required string uniqueId = 1;
+inline bool ChartGridArchive_ChartGridRowColumnIdMap_Entry::has_uniqueid() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void ChartGridArchive_ChartGridRowColumnIdMap_Entry::set_has_uniqueid() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void ChartGridArchive_ChartGridRowColumnIdMap_Entry::clear_has_uniqueid() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void ChartGridArchive_ChartGridRowColumnIdMap_Entry::clear_uniqueid() {
+  if (uniqueid_ != &::google::protobuf::internal::kEmptyString) {
+    uniqueid_->clear();
+  }
+  clear_has_uniqueid();
+}
+inline const ::std::string& ChartGridArchive_ChartGridRowColumnIdMap_Entry::uniqueid() const {
+  return *uniqueid_;
+}
+inline void ChartGridArchive_ChartGridRowColumnIdMap_Entry::set_uniqueid(const ::std::string& value) {
+  set_has_uniqueid();
+  if (uniqueid_ == &::google::protobuf::internal::kEmptyString) {
+    uniqueid_ = new ::std::string;
+  }
+  uniqueid_->assign(value);
+}
+inline void ChartGridArchive_ChartGridRowColumnIdMap_Entry::set_uniqueid(const char* value) {
+  set_has_uniqueid();
+  if (uniqueid_ == &::google::protobuf::internal::kEmptyString) {
+    uniqueid_ = new ::std::string;
+  }
+  uniqueid_->assign(value);
+}
+inline void ChartGridArchive_ChartGridRowColumnIdMap_Entry::set_uniqueid(const char* value, size_t size) {
+  set_has_uniqueid();
+  if (uniqueid_ == &::google::protobuf::internal::kEmptyString) {
+    uniqueid_ = new ::std::string;
+  }
+  uniqueid_->assign(reinterpret_cast<const char*>(value), size);
+}
+inline ::std::string* ChartGridArchive_ChartGridRowColumnIdMap_Entry::mutable_uniqueid() {
+  set_has_uniqueid();
+  if (uniqueid_ == &::google::protobuf::internal::kEmptyString) {
+    uniqueid_ = new ::std::string;
+  }
+  return uniqueid_;
+}
+inline ::std::string* ChartGridArchive_ChartGridRowColumnIdMap_Entry::release_uniqueid() {
+  clear_has_uniqueid();
+  if (uniqueid_ == &::google::protobuf::internal::kEmptyString) {
+    return NULL;
+  } else {
+    ::std::string* temp = uniqueid_;
+    uniqueid_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+    return temp;
+  }
+}
+inline void ChartGridArchive_ChartGridRowColumnIdMap_Entry::set_allocated_uniqueid(::std::string* uniqueid) {
+  if (uniqueid_ != &::google::protobuf::internal::kEmptyString) {
+    delete uniqueid_;
+  }
+  if (uniqueid) {
+    set_has_uniqueid();
+    uniqueid_ = uniqueid;
+  } else {
+    clear_has_uniqueid();
+    uniqueid_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+  }
+}
+
+// required uint32 index = 2;
+inline bool ChartGridArchive_ChartGridRowColumnIdMap_Entry::has_index() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void ChartGridArchive_ChartGridRowColumnIdMap_Entry::set_has_index() {
+  _has_bits_[0] |= 0x00000002u;
+}
+inline void ChartGridArchive_ChartGridRowColumnIdMap_Entry::clear_has_index() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline void ChartGridArchive_ChartGridRowColumnIdMap_Entry::clear_index() {
+  index_ = 0u;
+  clear_has_index();
+}
+inline ::google::protobuf::uint32 ChartGridArchive_ChartGridRowColumnIdMap_Entry::index() const {
+  return index_;
+}
+inline void ChartGridArchive_ChartGridRowColumnIdMap_Entry::set_index(::google::protobuf::uint32 value) {
+  set_has_index();
+  index_ = value;
+}
+
+// -------------------------------------------------------------------
+
+// ChartGridArchive_ChartGridRowColumnIdMap
+
+// repeated .TSCH.ChartGridArchive.ChartGridRowColumnIdMap.Entry row_id_map = 1;
+inline int ChartGridArchive_ChartGridRowColumnIdMap::row_id_map_size() const {
+  return row_id_map_.size();
+}
+inline void ChartGridArchive_ChartGridRowColumnIdMap::clear_row_id_map() {
+  row_id_map_.Clear();
+}
+inline const ::TSCH::ChartGridArchive_ChartGridRowColumnIdMap_Entry& ChartGridArchive_ChartGridRowColumnIdMap::row_id_map(int index) const {
+  return row_id_map_.Get(index);
+}
+inline ::TSCH::ChartGridArchive_ChartGridRowColumnIdMap_Entry* ChartGridArchive_ChartGridRowColumnIdMap::mutable_row_id_map(int index) {
+  return row_id_map_.Mutable(index);
+}
+inline ::TSCH::ChartGridArchive_ChartGridRowColumnIdMap_Entry* ChartGridArchive_ChartGridRowColumnIdMap::add_row_id_map() {
+  return row_id_map_.Add();
+}
+inline const ::google::protobuf::RepeatedPtrField< ::TSCH::ChartGridArchive_ChartGridRowColumnIdMap_Entry >&
+ChartGridArchive_ChartGridRowColumnIdMap::row_id_map() const {
+  return row_id_map_;
+}
+inline ::google::protobuf::RepeatedPtrField< ::TSCH::ChartGridArchive_ChartGridRowColumnIdMap_Entry >*
+ChartGridArchive_ChartGridRowColumnIdMap::mutable_row_id_map() {
+  return &row_id_map_;
+}
+
+// repeated .TSCH.ChartGridArchive.ChartGridRowColumnIdMap.Entry column_id_map = 2;
+inline int ChartGridArchive_ChartGridRowColumnIdMap::column_id_map_size() const {
+  return column_id_map_.size();
+}
+inline void ChartGridArchive_ChartGridRowColumnIdMap::clear_column_id_map() {
+  column_id_map_.Clear();
+}
+inline const ::TSCH::ChartGridArchive_ChartGridRowColumnIdMap_Entry& ChartGridArchive_ChartGridRowColumnIdMap::column_id_map(int index) const {
+  return column_id_map_.Get(index);
+}
+inline ::TSCH::ChartGridArchive_ChartGridRowColumnIdMap_Entry* ChartGridArchive_ChartGridRowColumnIdMap::mutable_column_id_map(int index) {
+  return column_id_map_.Mutable(index);
+}
+inline ::TSCH::ChartGridArchive_ChartGridRowColumnIdMap_Entry* ChartGridArchive_ChartGridRowColumnIdMap::add_column_id_map() {
+  return column_id_map_.Add();
+}
+inline const ::google::protobuf::RepeatedPtrField< ::TSCH::ChartGridArchive_ChartGridRowColumnIdMap_Entry >&
+ChartGridArchive_ChartGridRowColumnIdMap::column_id_map() const {
+  return column_id_map_;
+}
+inline ::google::protobuf::RepeatedPtrField< ::TSCH::ChartGridArchive_ChartGridRowColumnIdMap_Entry >*
+ChartGridArchive_ChartGridRowColumnIdMap::mutable_column_id_map() {
+  return &column_id_map_;
 }
 
 // -------------------------------------------------------------------
@@ -3160,6 +3620,44 @@ ChartGridArchive::grid_row() const {
 inline ::google::protobuf::RepeatedPtrField< ::TSCH::ChartGridArchive_GridRow >*
 ChartGridArchive::mutable_grid_row() {
   return &grid_row_;
+}
+
+// optional .TSCH.ChartGridArchive.ChartGridRowColumnIdMap idMap = 4;
+inline bool ChartGridArchive::has_idmap() const {
+  return (_has_bits_[0] & 0x00000008u) != 0;
+}
+inline void ChartGridArchive::set_has_idmap() {
+  _has_bits_[0] |= 0x00000008u;
+}
+inline void ChartGridArchive::clear_has_idmap() {
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline void ChartGridArchive::clear_idmap() {
+  if (idmap_ != NULL) idmap_->::TSCH::ChartGridArchive_ChartGridRowColumnIdMap::Clear();
+  clear_has_idmap();
+}
+inline const ::TSCH::ChartGridArchive_ChartGridRowColumnIdMap& ChartGridArchive::idmap() const {
+  return idmap_ != NULL ? *idmap_ : *default_instance_->idmap_;
+}
+inline ::TSCH::ChartGridArchive_ChartGridRowColumnIdMap* ChartGridArchive::mutable_idmap() {
+  set_has_idmap();
+  if (idmap_ == NULL) idmap_ = new ::TSCH::ChartGridArchive_ChartGridRowColumnIdMap;
+  return idmap_;
+}
+inline ::TSCH::ChartGridArchive_ChartGridRowColumnIdMap* ChartGridArchive::release_idmap() {
+  clear_has_idmap();
+  ::TSCH::ChartGridArchive_ChartGridRowColumnIdMap* temp = idmap_;
+  idmap_ = NULL;
+  return temp;
+}
+inline void ChartGridArchive::set_allocated_idmap(::TSCH::ChartGridArchive_ChartGridRowColumnIdMap* idmap) {
+  delete idmap_;
+  idmap_ = idmap;
+  if (idmap) {
+    set_has_idmap();
+  } else {
+    clear_has_idmap();
+  }
 }
 
 // -------------------------------------------------------------------
@@ -4652,6 +5150,28 @@ inline ::google::protobuf::int32 ChartUIState::cde_last_col_count() const {
 inline void ChartUIState::set_cde_last_col_count(::google::protobuf::int32 value) {
   set_has_cde_last_col_count();
   cde_last_col_count_ = value;
+}
+
+// optional bool cde_use_full_keyboard = 6;
+inline bool ChartUIState::has_cde_use_full_keyboard() const {
+  return (_has_bits_[0] & 0x00000020u) != 0;
+}
+inline void ChartUIState::set_has_cde_use_full_keyboard() {
+  _has_bits_[0] |= 0x00000020u;
+}
+inline void ChartUIState::clear_has_cde_use_full_keyboard() {
+  _has_bits_[0] &= ~0x00000020u;
+}
+inline void ChartUIState::clear_cde_use_full_keyboard() {
+  cde_use_full_keyboard_ = false;
+  clear_has_cde_use_full_keyboard();
+}
+inline bool ChartUIState::cde_use_full_keyboard() const {
+  return cde_use_full_keyboard_;
+}
+inline void ChartUIState::set_cde_use_full_keyboard(bool value) {
+  set_has_cde_use_full_keyboard();
+  cde_use_full_keyboard_ = value;
 }
 
 // -------------------------------------------------------------------

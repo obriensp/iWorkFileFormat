@@ -1617,6 +1617,30 @@ class VolatileDependenciesArchive : public ::google::protobuf::Message {
   inline ::google::protobuf::RepeatedField< ::google::protobuf::uint32 >*
       mutable_volatile_compass_cell_row();
 
+  // repeated uint32 volatile_sheet_table_name_cell_column = 17;
+  inline int volatile_sheet_table_name_cell_column_size() const;
+  inline void clear_volatile_sheet_table_name_cell_column();
+  static const int kVolatileSheetTableNameCellColumnFieldNumber = 17;
+  inline ::google::protobuf::uint32 volatile_sheet_table_name_cell_column(int index) const;
+  inline void set_volatile_sheet_table_name_cell_column(int index, ::google::protobuf::uint32 value);
+  inline void add_volatile_sheet_table_name_cell_column(::google::protobuf::uint32 value);
+  inline const ::google::protobuf::RepeatedField< ::google::protobuf::uint32 >&
+      volatile_sheet_table_name_cell_column() const;
+  inline ::google::protobuf::RepeatedField< ::google::protobuf::uint32 >*
+      mutable_volatile_sheet_table_name_cell_column();
+
+  // repeated uint32 volatile_sheet_table_name_cell_row = 18;
+  inline int volatile_sheet_table_name_cell_row_size() const;
+  inline void clear_volatile_sheet_table_name_cell_row();
+  static const int kVolatileSheetTableNameCellRowFieldNumber = 18;
+  inline ::google::protobuf::uint32 volatile_sheet_table_name_cell_row(int index) const;
+  inline void set_volatile_sheet_table_name_cell_row(int index, ::google::protobuf::uint32 value);
+  inline void add_volatile_sheet_table_name_cell_row(::google::protobuf::uint32 value);
+  inline const ::google::protobuf::RepeatedField< ::google::protobuf::uint32 >&
+      volatile_sheet_table_name_cell_row() const;
+  inline ::google::protobuf::RepeatedField< ::google::protobuf::uint32 >*
+      mutable_volatile_sheet_table_name_cell_row();
+
   // repeated uint32 calculated_dependency_cell_column = 9;
   inline int calculated_dependency_cell_column_size() const;
   inline void clear_calculated_dependency_cell_column();
@@ -1680,13 +1704,15 @@ class VolatileDependenciesArchive : public ::google::protobuf::Message {
   ::google::protobuf::RepeatedField< ::google::protobuf::uint32 > volatile_location_cell_row_;
   ::google::protobuf::RepeatedField< ::google::protobuf::uint32 > volatile_compass_cell_column_;
   ::google::protobuf::RepeatedField< ::google::protobuf::uint32 > volatile_compass_cell_row_;
+  ::google::protobuf::RepeatedField< ::google::protobuf::uint32 > volatile_sheet_table_name_cell_column_;
+  ::google::protobuf::RepeatedField< ::google::protobuf::uint32 > volatile_sheet_table_name_cell_row_;
   ::google::protobuf::RepeatedField< ::google::protobuf::uint32 > calculated_dependency_cell_column_;
   ::google::protobuf::RepeatedField< ::google::protobuf::uint32 > calculated_dependency_cell_row_;
   ::google::protobuf::RepeatedPtrField< ::TSCE::CellReferenceArchive > volatile_geometry_cell_reference_;
   ::google::protobuf::RepeatedPtrField< ::TSCE::CellCoordinateArchive > volatile_geometry_cell_;
 
   mutable int _cached_size_;
-  ::google::protobuf::uint32 _has_bits_[(14 + 31) / 32];
+  ::google::protobuf::uint32 _has_bits_[(16 + 31) / 32];
 
   friend void  protobuf_AddDesc_TSCEArchives_2eproto();
   friend void protobuf_AssignDesc_TSCEArchives_2eproto();
@@ -3298,29 +3324,29 @@ class DependencyTrackerArchive : public ::google::protobuf::Message {
   inline ::google::protobuf::RepeatedPtrField< ::TSCE::FormulaOwnerInfoArchive >*
       mutable_formula_owner_info();
 
-  // repeated .TSCE.CellReferenceArchive dirty_leaf = 2;
-  inline int dirty_leaf_size() const;
-  inline void clear_dirty_leaf();
+  // repeated .TSCE.CellReferenceArchive dirty_leaf = 2 [deprecated = true];
+  inline int dirty_leaf_size() const PROTOBUF_DEPRECATED;
+  inline void clear_dirty_leaf() PROTOBUF_DEPRECATED;
   static const int kDirtyLeafFieldNumber = 2;
-  inline const ::TSCE::CellReferenceArchive& dirty_leaf(int index) const;
-  inline ::TSCE::CellReferenceArchive* mutable_dirty_leaf(int index);
-  inline ::TSCE::CellReferenceArchive* add_dirty_leaf();
+  inline const ::TSCE::CellReferenceArchive& dirty_leaf(int index) const PROTOBUF_DEPRECATED;
+  inline ::TSCE::CellReferenceArchive* mutable_dirty_leaf(int index) PROTOBUF_DEPRECATED;
+  inline ::TSCE::CellReferenceArchive* add_dirty_leaf() PROTOBUF_DEPRECATED;
   inline const ::google::protobuf::RepeatedPtrField< ::TSCE::CellReferenceArchive >&
-      dirty_leaf() const;
+      dirty_leaf() const PROTOBUF_DEPRECATED;
   inline ::google::protobuf::RepeatedPtrField< ::TSCE::CellReferenceArchive >*
-      mutable_dirty_leaf();
+      mutable_dirty_leaf() PROTOBUF_DEPRECATED;
 
-  // repeated .TSCE.InternalCellReferenceArchive internal_dirty_leaf = 4;
-  inline int internal_dirty_leaf_size() const;
-  inline void clear_internal_dirty_leaf();
+  // repeated .TSCE.InternalCellReferenceArchive internal_dirty_leaf = 4 [deprecated = true];
+  inline int internal_dirty_leaf_size() const PROTOBUF_DEPRECATED;
+  inline void clear_internal_dirty_leaf() PROTOBUF_DEPRECATED;
   static const int kInternalDirtyLeafFieldNumber = 4;
-  inline const ::TSCE::InternalCellReferenceArchive& internal_dirty_leaf(int index) const;
-  inline ::TSCE::InternalCellReferenceArchive* mutable_internal_dirty_leaf(int index);
-  inline ::TSCE::InternalCellReferenceArchive* add_internal_dirty_leaf();
+  inline const ::TSCE::InternalCellReferenceArchive& internal_dirty_leaf(int index) const PROTOBUF_DEPRECATED;
+  inline ::TSCE::InternalCellReferenceArchive* mutable_internal_dirty_leaf(int index) PROTOBUF_DEPRECATED;
+  inline ::TSCE::InternalCellReferenceArchive* add_internal_dirty_leaf() PROTOBUF_DEPRECATED;
   inline const ::google::protobuf::RepeatedPtrField< ::TSCE::InternalCellReferenceArchive >&
-      internal_dirty_leaf() const;
+      internal_dirty_leaf() const PROTOBUF_DEPRECATED;
   inline ::google::protobuf::RepeatedPtrField< ::TSCE::InternalCellReferenceArchive >*
-      mutable_internal_dirty_leaf();
+      mutable_internal_dirty_leaf() PROTOBUF_DEPRECATED;
 
   // optional .TSCE.OwnerIDMapArchive owner_id_map = 3;
   inline bool has_owner_id_map() const;
@@ -7805,12 +7831,24 @@ class NumberCellValueArchive : public ::google::protobuf::Message {
   inline double value() const;
   inline void set_value(double value);
 
-  // required int32 unit = 2;
-  inline bool has_unit() const;
-  inline void clear_unit();
-  static const int kUnitFieldNumber = 2;
-  inline ::google::protobuf::int32 unit() const;
-  inline void set_unit(::google::protobuf::int32 value);
+  // optional int32 unit_index = 2;
+  inline bool has_unit_index() const;
+  inline void clear_unit_index();
+  static const int kUnitIndexFieldNumber = 2;
+  inline ::google::protobuf::int32 unit_index() const;
+  inline void set_unit_index(::google::protobuf::int32 value);
+
+  // optional string currency_code = 5;
+  inline bool has_currency_code() const;
+  inline void clear_currency_code();
+  static const int kCurrencyCodeFieldNumber = 5;
+  inline const ::std::string& currency_code() const;
+  inline void set_currency_code(const ::std::string& value);
+  inline void set_currency_code(const char* value);
+  inline void set_currency_code(const char* value, size_t size);
+  inline ::std::string* mutable_currency_code();
+  inline ::std::string* release_currency_code();
+  inline void set_allocated_currency_code(::std::string* currency_code);
 
   // required .TSK.FormatStructArchive format = 3;
   inline bool has_format() const;
@@ -7832,8 +7870,10 @@ class NumberCellValueArchive : public ::google::protobuf::Message {
  private:
   inline void set_has_value();
   inline void clear_has_value();
-  inline void set_has_unit();
-  inline void clear_has_unit();
+  inline void set_has_unit_index();
+  inline void clear_has_unit_index();
+  inline void set_has_currency_code();
+  inline void clear_has_currency_code();
   inline void set_has_format();
   inline void clear_has_format();
   inline void set_has_format_is_implicit();
@@ -7842,12 +7882,13 @@ class NumberCellValueArchive : public ::google::protobuf::Message {
   ::google::protobuf::UnknownFieldSet _unknown_fields_;
 
   double value_;
-  ::TSK::FormatStructArchive* format_;
-  ::google::protobuf::int32 unit_;
+  ::std::string* currency_code_;
+  ::google::protobuf::int32 unit_index_;
   bool format_is_implicit_;
+  ::TSK::FormatStructArchive* format_;
 
   mutable int _cached_size_;
-  ::google::protobuf::uint32 _has_bits_[(4 + 31) / 32];
+  ::google::protobuf::uint32 _has_bits_[(5 + 31) / 32];
 
   friend void  protobuf_AddDesc_TSCEArchives_2eproto();
   friend void protobuf_AssignDesc_TSCEArchives_2eproto();
@@ -9494,6 +9535,56 @@ VolatileDependenciesArchive::mutable_volatile_compass_cell_row() {
   return &volatile_compass_cell_row_;
 }
 
+// repeated uint32 volatile_sheet_table_name_cell_column = 17;
+inline int VolatileDependenciesArchive::volatile_sheet_table_name_cell_column_size() const {
+  return volatile_sheet_table_name_cell_column_.size();
+}
+inline void VolatileDependenciesArchive::clear_volatile_sheet_table_name_cell_column() {
+  volatile_sheet_table_name_cell_column_.Clear();
+}
+inline ::google::protobuf::uint32 VolatileDependenciesArchive::volatile_sheet_table_name_cell_column(int index) const {
+  return volatile_sheet_table_name_cell_column_.Get(index);
+}
+inline void VolatileDependenciesArchive::set_volatile_sheet_table_name_cell_column(int index, ::google::protobuf::uint32 value) {
+  volatile_sheet_table_name_cell_column_.Set(index, value);
+}
+inline void VolatileDependenciesArchive::add_volatile_sheet_table_name_cell_column(::google::protobuf::uint32 value) {
+  volatile_sheet_table_name_cell_column_.Add(value);
+}
+inline const ::google::protobuf::RepeatedField< ::google::protobuf::uint32 >&
+VolatileDependenciesArchive::volatile_sheet_table_name_cell_column() const {
+  return volatile_sheet_table_name_cell_column_;
+}
+inline ::google::protobuf::RepeatedField< ::google::protobuf::uint32 >*
+VolatileDependenciesArchive::mutable_volatile_sheet_table_name_cell_column() {
+  return &volatile_sheet_table_name_cell_column_;
+}
+
+// repeated uint32 volatile_sheet_table_name_cell_row = 18;
+inline int VolatileDependenciesArchive::volatile_sheet_table_name_cell_row_size() const {
+  return volatile_sheet_table_name_cell_row_.size();
+}
+inline void VolatileDependenciesArchive::clear_volatile_sheet_table_name_cell_row() {
+  volatile_sheet_table_name_cell_row_.Clear();
+}
+inline ::google::protobuf::uint32 VolatileDependenciesArchive::volatile_sheet_table_name_cell_row(int index) const {
+  return volatile_sheet_table_name_cell_row_.Get(index);
+}
+inline void VolatileDependenciesArchive::set_volatile_sheet_table_name_cell_row(int index, ::google::protobuf::uint32 value) {
+  volatile_sheet_table_name_cell_row_.Set(index, value);
+}
+inline void VolatileDependenciesArchive::add_volatile_sheet_table_name_cell_row(::google::protobuf::uint32 value) {
+  volatile_sheet_table_name_cell_row_.Add(value);
+}
+inline const ::google::protobuf::RepeatedField< ::google::protobuf::uint32 >&
+VolatileDependenciesArchive::volatile_sheet_table_name_cell_row() const {
+  return volatile_sheet_table_name_cell_row_;
+}
+inline ::google::protobuf::RepeatedField< ::google::protobuf::uint32 >*
+VolatileDependenciesArchive::mutable_volatile_sheet_table_name_cell_row() {
+  return &volatile_sheet_table_name_cell_row_;
+}
+
 // repeated uint32 calculated_dependency_cell_column = 9;
 inline int VolatileDependenciesArchive::calculated_dependency_cell_column_size() const {
   return calculated_dependency_cell_column_.size();
@@ -11077,7 +11168,7 @@ DependencyTrackerArchive::mutable_formula_owner_info() {
   return &formula_owner_info_;
 }
 
-// repeated .TSCE.CellReferenceArchive dirty_leaf = 2;
+// repeated .TSCE.CellReferenceArchive dirty_leaf = 2 [deprecated = true];
 inline int DependencyTrackerArchive::dirty_leaf_size() const {
   return dirty_leaf_.size();
 }
@@ -11102,7 +11193,7 @@ DependencyTrackerArchive::mutable_dirty_leaf() {
   return &dirty_leaf_;
 }
 
-// repeated .TSCE.InternalCellReferenceArchive internal_dirty_leaf = 4;
+// repeated .TSCE.InternalCellReferenceArchive internal_dirty_leaf = 4 [deprecated = true];
 inline int DependencyTrackerArchive::internal_dirty_leaf_size() const {
   return internal_dirty_leaf_.size();
 }
@@ -16349,37 +16440,107 @@ inline void NumberCellValueArchive::set_value(double value) {
   value_ = value;
 }
 
-// required int32 unit = 2;
-inline bool NumberCellValueArchive::has_unit() const {
+// optional int32 unit_index = 2;
+inline bool NumberCellValueArchive::has_unit_index() const {
   return (_has_bits_[0] & 0x00000002u) != 0;
 }
-inline void NumberCellValueArchive::set_has_unit() {
+inline void NumberCellValueArchive::set_has_unit_index() {
   _has_bits_[0] |= 0x00000002u;
 }
-inline void NumberCellValueArchive::clear_has_unit() {
+inline void NumberCellValueArchive::clear_has_unit_index() {
   _has_bits_[0] &= ~0x00000002u;
 }
-inline void NumberCellValueArchive::clear_unit() {
-  unit_ = 0;
-  clear_has_unit();
+inline void NumberCellValueArchive::clear_unit_index() {
+  unit_index_ = 0;
+  clear_has_unit_index();
 }
-inline ::google::protobuf::int32 NumberCellValueArchive::unit() const {
-  return unit_;
+inline ::google::protobuf::int32 NumberCellValueArchive::unit_index() const {
+  return unit_index_;
 }
-inline void NumberCellValueArchive::set_unit(::google::protobuf::int32 value) {
-  set_has_unit();
-  unit_ = value;
+inline void NumberCellValueArchive::set_unit_index(::google::protobuf::int32 value) {
+  set_has_unit_index();
+  unit_index_ = value;
+}
+
+// optional string currency_code = 5;
+inline bool NumberCellValueArchive::has_currency_code() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void NumberCellValueArchive::set_has_currency_code() {
+  _has_bits_[0] |= 0x00000004u;
+}
+inline void NumberCellValueArchive::clear_has_currency_code() {
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline void NumberCellValueArchive::clear_currency_code() {
+  if (currency_code_ != &::google::protobuf::internal::kEmptyString) {
+    currency_code_->clear();
+  }
+  clear_has_currency_code();
+}
+inline const ::std::string& NumberCellValueArchive::currency_code() const {
+  return *currency_code_;
+}
+inline void NumberCellValueArchive::set_currency_code(const ::std::string& value) {
+  set_has_currency_code();
+  if (currency_code_ == &::google::protobuf::internal::kEmptyString) {
+    currency_code_ = new ::std::string;
+  }
+  currency_code_->assign(value);
+}
+inline void NumberCellValueArchive::set_currency_code(const char* value) {
+  set_has_currency_code();
+  if (currency_code_ == &::google::protobuf::internal::kEmptyString) {
+    currency_code_ = new ::std::string;
+  }
+  currency_code_->assign(value);
+}
+inline void NumberCellValueArchive::set_currency_code(const char* value, size_t size) {
+  set_has_currency_code();
+  if (currency_code_ == &::google::protobuf::internal::kEmptyString) {
+    currency_code_ = new ::std::string;
+  }
+  currency_code_->assign(reinterpret_cast<const char*>(value), size);
+}
+inline ::std::string* NumberCellValueArchive::mutable_currency_code() {
+  set_has_currency_code();
+  if (currency_code_ == &::google::protobuf::internal::kEmptyString) {
+    currency_code_ = new ::std::string;
+  }
+  return currency_code_;
+}
+inline ::std::string* NumberCellValueArchive::release_currency_code() {
+  clear_has_currency_code();
+  if (currency_code_ == &::google::protobuf::internal::kEmptyString) {
+    return NULL;
+  } else {
+    ::std::string* temp = currency_code_;
+    currency_code_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+    return temp;
+  }
+}
+inline void NumberCellValueArchive::set_allocated_currency_code(::std::string* currency_code) {
+  if (currency_code_ != &::google::protobuf::internal::kEmptyString) {
+    delete currency_code_;
+  }
+  if (currency_code) {
+    set_has_currency_code();
+    currency_code_ = currency_code;
+  } else {
+    clear_has_currency_code();
+    currency_code_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+  }
 }
 
 // required .TSK.FormatStructArchive format = 3;
 inline bool NumberCellValueArchive::has_format() const {
-  return (_has_bits_[0] & 0x00000004u) != 0;
+  return (_has_bits_[0] & 0x00000008u) != 0;
 }
 inline void NumberCellValueArchive::set_has_format() {
-  _has_bits_[0] |= 0x00000004u;
+  _has_bits_[0] |= 0x00000008u;
 }
 inline void NumberCellValueArchive::clear_has_format() {
-  _has_bits_[0] &= ~0x00000004u;
+  _has_bits_[0] &= ~0x00000008u;
 }
 inline void NumberCellValueArchive::clear_format() {
   if (format_ != NULL) format_->::TSK::FormatStructArchive::Clear();
@@ -16411,13 +16572,13 @@ inline void NumberCellValueArchive::set_allocated_format(::TSK::FormatStructArch
 
 // optional bool format_is_implicit = 4 [default = true];
 inline bool NumberCellValueArchive::has_format_is_implicit() const {
-  return (_has_bits_[0] & 0x00000008u) != 0;
+  return (_has_bits_[0] & 0x00000010u) != 0;
 }
 inline void NumberCellValueArchive::set_has_format_is_implicit() {
-  _has_bits_[0] |= 0x00000008u;
+  _has_bits_[0] |= 0x00000010u;
 }
 inline void NumberCellValueArchive::clear_has_format_is_implicit() {
-  _has_bits_[0] &= ~0x00000008u;
+  _has_bits_[0] &= ~0x00000010u;
 }
 inline void NumberCellValueArchive::clear_format_is_implicit() {
   format_is_implicit_ = true;

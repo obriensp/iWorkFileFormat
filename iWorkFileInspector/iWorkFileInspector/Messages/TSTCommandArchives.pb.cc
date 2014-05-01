@@ -23,6 +23,9 @@ namespace {
 const ::google::protobuf::Descriptor* TableCommandArchive_descriptor_ = NULL;
 const ::google::protobuf::internal::GeneratedMessageReflection*
   TableCommandArchive_reflection_ = NULL;
+const ::google::protobuf::Descriptor* CommandApplyCellDiffArchive_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  CommandApplyCellDiffArchive_reflection_ = NULL;
 const ::google::protobuf::Descriptor* CommandChangeFreezeHeaderStateArchive_descriptor_ = NULL;
 const ::google::protobuf::internal::GeneratedMessageReflection*
   CommandChangeFreezeHeaderStateArchive_reflection_ = NULL;
@@ -53,6 +56,9 @@ const ::google::protobuf::internal::GeneratedMessageReflection*
 const ::google::protobuf::Descriptor* CommandSetAutomaticDurationUnitsArchive_descriptor_ = NULL;
 const ::google::protobuf::internal::GeneratedMessageReflection*
   CommandSetAutomaticDurationUnitsArchive_reflection_ = NULL;
+const ::google::protobuf::Descriptor* CommandReplaceCustomFormatArchive_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  CommandReplaceCustomFormatArchive_reflection_ = NULL;
 const ::google::protobuf::Descriptor* CommandInsertColumnsOrRowsArchive_descriptor_ = NULL;
 const ::google::protobuf::internal::GeneratedMessageReflection*
   CommandInsertColumnsOrRowsArchive_reflection_ = NULL;
@@ -104,6 +110,9 @@ const ::google::protobuf::internal::GeneratedMessageReflection*
 const ::google::protobuf::Descriptor* CommandStyleCellsArchive_descriptor_ = NULL;
 const ::google::protobuf::internal::GeneratedMessageReflection*
   CommandStyleCellsArchive_reflection_ = NULL;
+const ::google::protobuf::Descriptor* CommandSetFillPropertyArchive_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  CommandSetFillPropertyArchive_reflection_ = NULL;
 const ::google::protobuf::Descriptor* CommandStyleTableArchive_descriptor_ = NULL;
 const ::google::protobuf::internal::GeneratedMessageReflection*
   CommandStyleTableArchive_reflection_ = NULL;
@@ -134,6 +143,15 @@ const ::google::protobuf::internal::GeneratedMessageReflection*
 const ::google::protobuf::Descriptor* CommandApplyStrokePresetArchive_descriptor_ = NULL;
 const ::google::protobuf::internal::GeneratedMessageReflection*
   CommandApplyStrokePresetArchive_reflection_ = NULL;
+const ::google::protobuf::Descriptor* CommandAddTableStylePresetArchive_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  CommandAddTableStylePresetArchive_reflection_ = NULL;
+const ::google::protobuf::Descriptor* CommandRemoveTableStylePresetArchive_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  CommandRemoveTableStylePresetArchive_reflection_ = NULL;
+const ::google::protobuf::Descriptor* CommandReplaceTableStylePresetArchive_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  CommandReplaceTableStylePresetArchive_reflection_ = NULL;
 const ::google::protobuf::Descriptor* CommandApplyTableStylePresetArchive_descriptor_ = NULL;
 const ::google::protobuf::internal::GeneratedMessageReflection*
   CommandApplyTableStylePresetArchive_reflection_ = NULL;
@@ -314,6 +332,18 @@ const ::google::protobuf::internal::GeneratedMessageReflection*
 const ::google::protobuf::Descriptor* CommandSetStorageLanguageArchive_descriptor_ = NULL;
 const ::google::protobuf::internal::GeneratedMessageReflection*
   CommandSetStorageLanguageArchive_reflection_ = NULL;
+const ::google::protobuf::Descriptor* CommandSetSortOrderArchive_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  CommandSetSortOrderArchive_reflection_ = NULL;
+const ::google::protobuf::Descriptor* CommandRewriteSortOrderForTectonicShiftArchive_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  CommandRewriteSortOrderForTectonicShiftArchive_reflection_ = NULL;
+const ::google::protobuf::Descriptor* CommandRewriteSortOrderForSortArchive_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  CommandRewriteSortOrderForSortArchive_reflection_ = NULL;
+const ::google::protobuf::Descriptor* CommandRewriteSortOrderForTableResizeArchive_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  CommandRewriteSortOrderForTableResizeArchive_reflection_ = NULL;
 const ::google::protobuf::EnumDescriptor* CommandDirectionArchive_descriptor_ = NULL;
 const ::google::protobuf::EnumDescriptor* CommandRegionArchive_descriptor_ = NULL;
 
@@ -344,7 +374,25 @@ void protobuf_AssignDesc_TSTCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(TableCommandArchive));
-  CommandChangeFreezeHeaderStateArchive_descriptor_ = file->message_type(1);
+  CommandApplyCellDiffArchive_descriptor_ = file->message_type(1);
+  static const int CommandApplyCellDiffArchive_offsets_[4] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandApplyCellDiffArchive, super_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandApplyCellDiffArchive, cell_region_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandApplyCellDiffArchive, cell_diff_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandApplyCellDiffArchive, inverse_cell_diff_map_),
+  };
+  CommandApplyCellDiffArchive_reflection_ =
+    new ::google::protobuf::internal::GeneratedMessageReflection(
+      CommandApplyCellDiffArchive_descriptor_,
+      CommandApplyCellDiffArchive::default_instance_,
+      CommandApplyCellDiffArchive_offsets_,
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandApplyCellDiffArchive, _has_bits_[0]),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandApplyCellDiffArchive, _unknown_fields_),
+      -1,
+      ::google::protobuf::DescriptorPool::generated_pool(),
+      ::google::protobuf::MessageFactory::generated_factory(),
+      sizeof(CommandApplyCellDiffArchive));
+  CommandChangeFreezeHeaderStateArchive_descriptor_ = file->message_type(2);
   static const int CommandChangeFreezeHeaderStateArchive_offsets_[3] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandChangeFreezeHeaderStateArchive, direction_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandChangeFreezeHeaderStateArchive, new_freeze_state_),
@@ -361,7 +409,7 @@ void protobuf_AssignDesc_TSTCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandChangeFreezeHeaderStateArchive));
-  CommandDeleteCellsArchive_descriptor_ = file->message_type(2);
+  CommandDeleteCellsArchive_descriptor_ = file->message_type(3);
   static const int CommandDeleteCellsArchive_offsets_[5] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandDeleteCellsArchive, selection_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandDeleteCellsArchive, undo_map_),
@@ -380,7 +428,7 @@ void protobuf_AssignDesc_TSTCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandDeleteCellsArchive));
-  CommandDeleteCellContentsArchive_descriptor_ = file->message_type(3);
+  CommandDeleteCellContentsArchive_descriptor_ = file->message_type(4);
   static const int CommandDeleteCellContentsArchive_offsets_[5] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandDeleteCellContentsArchive, selection_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandDeleteCellContentsArchive, undo_map_),
@@ -399,7 +447,7 @@ void protobuf_AssignDesc_TSTCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandDeleteCellContentsArchive));
-  CommandSetMultipleCellsArchive_descriptor_ = file->message_type(4);
+  CommandSetMultipleCellsArchive_descriptor_ = file->message_type(5);
   static const int CommandSetMultipleCellsArchive_offsets_[6] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetMultipleCellsArchive, selection_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetMultipleCellsArchive, undo_map_),
@@ -419,7 +467,7 @@ void protobuf_AssignDesc_TSTCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandSetMultipleCellsArchive));
-  CommandSetMultipleCellsCustomArchive_descriptor_ = file->message_type(5);
+  CommandSetMultipleCellsCustomArchive_descriptor_ = file->message_type(6);
   static const int CommandSetMultipleCellsCustomArchive_offsets_[5] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetMultipleCellsCustomArchive, selection_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetMultipleCellsCustomArchive, undo_map_),
@@ -438,7 +486,7 @@ void protobuf_AssignDesc_TSTCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandSetMultipleCellsCustomArchive));
-  CommandSetMultipleCellsMultipleChoiceListArchive_descriptor_ = file->message_type(6);
+  CommandSetMultipleCellsMultipleChoiceListArchive_descriptor_ = file->message_type(7);
   static const int CommandSetMultipleCellsMultipleChoiceListArchive_offsets_[4] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetMultipleCellsMultipleChoiceListArchive, selection_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetMultipleCellsMultipleChoiceListArchive, undo_map_),
@@ -456,7 +504,7 @@ void protobuf_AssignDesc_TSTCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandSetMultipleCellsMultipleChoiceListArchive));
-  CommandCoerceMultipleCellsArchive_descriptor_ = file->message_type(7);
+  CommandCoerceMultipleCellsArchive_descriptor_ = file->message_type(8);
   static const int CommandCoerceMultipleCellsArchive_offsets_[5] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandCoerceMultipleCellsArchive, selection_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandCoerceMultipleCellsArchive, undo_map_),
@@ -475,7 +523,7 @@ void protobuf_AssignDesc_TSTCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandCoerceMultipleCellsArchive));
-  CommandSetControlCellsDisplayNumberFormatArchive_descriptor_ = file->message_type(8);
+  CommandSetControlCellsDisplayNumberFormatArchive_descriptor_ = file->message_type(9);
   static const int CommandSetControlCellsDisplayNumberFormatArchive_offsets_[4] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetControlCellsDisplayNumberFormatArchive, selection_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetControlCellsDisplayNumberFormatArchive, undo_map_),
@@ -493,7 +541,7 @@ void protobuf_AssignDesc_TSTCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandSetControlCellsDisplayNumberFormatArchive));
-  CommandSetAutomaticFormatArchive_descriptor_ = file->message_type(9);
+  CommandSetAutomaticFormatArchive_descriptor_ = file->message_type(10);
   static const int CommandSetAutomaticFormatArchive_offsets_[4] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetAutomaticFormatArchive, selection_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetAutomaticFormatArchive, undo_map_),
@@ -511,7 +559,7 @@ void protobuf_AssignDesc_TSTCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandSetAutomaticFormatArchive));
-  CommandSetAutomaticDurationUnitsArchive_descriptor_ = file->message_type(10);
+  CommandSetAutomaticDurationUnitsArchive_descriptor_ = file->message_type(11);
   static const int CommandSetAutomaticDurationUnitsArchive_offsets_[5] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetAutomaticDurationUnitsArchive, selection_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetAutomaticDurationUnitsArchive, undo_map_),
@@ -530,7 +578,24 @@ void protobuf_AssignDesc_TSTCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandSetAutomaticDurationUnitsArchive));
-  CommandInsertColumnsOrRowsArchive_descriptor_ = file->message_type(11);
+  CommandReplaceCustomFormatArchive_descriptor_ = file->message_type(12);
+  static const int CommandReplaceCustomFormatArchive_offsets_[3] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandReplaceCustomFormatArchive, undo_map_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandReplaceCustomFormatArchive, redo_map_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandReplaceCustomFormatArchive, super_),
+  };
+  CommandReplaceCustomFormatArchive_reflection_ =
+    new ::google::protobuf::internal::GeneratedMessageReflection(
+      CommandReplaceCustomFormatArchive_descriptor_,
+      CommandReplaceCustomFormatArchive::default_instance_,
+      CommandReplaceCustomFormatArchive_offsets_,
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandReplaceCustomFormatArchive, _has_bits_[0]),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandReplaceCustomFormatArchive, _unknown_fields_),
+      -1,
+      ::google::protobuf::DescriptorPool::generated_pool(),
+      ::google::protobuf::MessageFactory::generated_factory(),
+      sizeof(CommandReplaceCustomFormatArchive));
+  CommandInsertColumnsOrRowsArchive_descriptor_ = file->message_type(13);
   static const int CommandInsertColumnsOrRowsArchive_offsets_[22] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandInsertColumnsOrRowsArchive, direction_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandInsertColumnsOrRowsArchive, index_),
@@ -582,7 +647,7 @@ void protobuf_AssignDesc_TSTCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandInsertColumnsOrRowsArchive_StyleIndexPair));
-  CommandPasteArchive_descriptor_ = file->message_type(12);
+  CommandPasteArchive_descriptor_ = file->message_type(14);
   static const int CommandPasteArchive_offsets_[8] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandPasteArchive, user_selection_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandPasteArchive, final_selection_),
@@ -604,7 +669,7 @@ void protobuf_AssignDesc_TSTCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandPasteArchive));
-  CommandRemoveColumnsOrRowsArchive_descriptor_ = file->message_type(13);
+  CommandRemoveColumnsOrRowsArchive_descriptor_ = file->message_type(15);
   static const int CommandRemoveColumnsOrRowsArchive_offsets_[16] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandRemoveColumnsOrRowsArchive, super_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandRemoveColumnsOrRowsArchive, direction_),
@@ -634,7 +699,7 @@ void protobuf_AssignDesc_TSTCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandRemoveColumnsOrRowsArchive));
-  CommandResizeColumnOrRowArchive_descriptor_ = file->message_type(14);
+  CommandResizeColumnOrRowArchive_descriptor_ = file->message_type(16);
   static const int CommandResizeColumnOrRowArchive_offsets_[11] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandResizeColumnOrRowArchive, direction_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandResizeColumnOrRowArchive, index_),
@@ -659,7 +724,7 @@ void protobuf_AssignDesc_TSTCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandResizeColumnOrRowArchive));
-  CommandSetCellArchive_descriptor_ = file->message_type(15);
+  CommandSetCellArchive_descriptor_ = file->message_type(17);
   static const int CommandSetCellArchive_offsets_[5] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetCellArchive, cellid_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetCellArchive, newcell_),
@@ -678,7 +743,7 @@ void protobuf_AssignDesc_TSTCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandSetCellArchive));
-  CommandTextPreflightInsertCellArchive_descriptor_ = file->message_type(16);
+  CommandTextPreflightInsertCellArchive_descriptor_ = file->message_type(18);
   static const int CommandTextPreflightInsertCellArchive_offsets_[8] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandTextPreflightInsertCellArchive, editing_cellid_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandTextPreflightInsertCellArchive, super_),
@@ -700,7 +765,7 @@ void protobuf_AssignDesc_TSTCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandTextPreflightInsertCellArchive));
-  CommandPostflightSetCellArchive_descriptor_ = file->message_type(17);
+  CommandPostflightSetCellArchive_descriptor_ = file->message_type(19);
   static const int CommandPostflightSetCellArchive_offsets_[7] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandPostflightSetCellArchive, cellid_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandPostflightSetCellArchive, super_),
@@ -721,7 +786,7 @@ void protobuf_AssignDesc_TSTCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandPostflightSetCellArchive));
-  CommandSetNumberOfHeadersOrFootersArchive_descriptor_ = file->message_type(18);
+  CommandSetNumberOfHeadersOrFootersArchive_descriptor_ = file->message_type(20);
   static const int CommandSetNumberOfHeadersOrFootersArchive_offsets_[4] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetNumberOfHeadersOrFootersArchive, region_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetNumberOfHeadersOrFootersArchive, count_),
@@ -739,7 +804,7 @@ void protobuf_AssignDesc_TSTCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandSetNumberOfHeadersOrFootersArchive));
-  CommandFixWPStylesInRowsOrColumnsArchive_descriptor_ = file->message_type(19);
+  CommandFixWPStylesInRowsOrColumnsArchive_descriptor_ = file->message_type(21);
   static const int CommandFixWPStylesInRowsOrColumnsArchive_offsets_[8] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandFixWPStylesInRowsOrColumnsArchive, direction_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandFixWPStylesInRowsOrColumnsArchive, index_),
@@ -761,7 +826,7 @@ void protobuf_AssignDesc_TSTCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandFixWPStylesInRowsOrColumnsArchive));
-  CommandFixStylesInHeadersOrFootersArchive_descriptor_ = file->message_type(20);
+  CommandFixStylesInHeadersOrFootersArchive_descriptor_ = file->message_type(22);
   static const int CommandFixStylesInHeadersOrFootersArchive_offsets_[7] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandFixStylesInHeadersOrFootersArchive, region_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandFixStylesInHeadersOrFootersArchive, old_number_),
@@ -782,7 +847,7 @@ void protobuf_AssignDesc_TSTCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandFixStylesInHeadersOrFootersArchive));
-  CommandSetTableNameArchive_descriptor_ = file->message_type(21);
+  CommandSetTableNameArchive_descriptor_ = file->message_type(23);
   static const int CommandSetTableNameArchive_offsets_[9] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetTableNameArchive, newtablename_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetTableNameArchive, oldtablename_),
@@ -805,7 +870,7 @@ void protobuf_AssignDesc_TSTCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandSetTableNameArchive));
-  CommandSetTableNameEnabledArchive_descriptor_ = file->message_type(22);
+  CommandSetTableNameEnabledArchive_descriptor_ = file->message_type(24);
   static const int CommandSetTableNameEnabledArchive_offsets_[2] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetTableNameEnabledArchive, table_name_enabled_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetTableNameEnabledArchive, super_),
@@ -821,7 +886,7 @@ void protobuf_AssignDesc_TSTCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandSetTableNameEnabledArchive));
-  CommandSetTableFontSizeArchive_descriptor_ = file->message_type(23);
+  CommandSetTableFontSizeArchive_descriptor_ = file->message_type(25);
   static const int CommandSetTableFontSizeArchive_offsets_[6] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetTableFontSizeArchive, super_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetTableFontSizeArchive, scale_factor_),
@@ -841,7 +906,7 @@ void protobuf_AssignDesc_TSTCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandSetTableFontSizeArchive));
-  CommandSetTableFontNameArchive_descriptor_ = file->message_type(24);
+  CommandSetTableFontNameArchive_descriptor_ = file->message_type(26);
   static const int CommandSetTableFontNameArchive_offsets_[7] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetTableFontNameArchive, super_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetTableFontNameArchive, font_name_),
@@ -862,7 +927,7 @@ void protobuf_AssignDesc_TSTCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandSetTableFontNameArchive));
-  CommandSetTableNameHeightArchive_descriptor_ = file->message_type(25);
+  CommandSetTableNameHeightArchive_descriptor_ = file->message_type(27);
   static const int CommandSetTableNameHeightArchive_offsets_[3] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetTableNameHeightArchive, super_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetTableNameHeightArchive, old_table_name_height_),
@@ -879,7 +944,7 @@ void protobuf_AssignDesc_TSTCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandSetTableNameHeightArchive));
-  CommandStyleCellsArchive_descriptor_ = file->message_type(26);
+  CommandStyleCellsArchive_descriptor_ = file->message_type(28);
   static const int CommandStyleCellsArchive_offsets_[6] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandStyleCellsArchive, super_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandStyleCellsArchive, format_properties_),
@@ -899,7 +964,27 @@ void protobuf_AssignDesc_TSTCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandStyleCellsArchive));
-  CommandStyleTableArchive_descriptor_ = file->message_type(27);
+  CommandSetFillPropertyArchive_descriptor_ = file->message_type(29);
+  static const int CommandSetFillPropertyArchive_offsets_[6] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetFillPropertyArchive, super_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetFillPropertyArchive, fill_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetFillPropertyArchive, cell_fill_stand_in_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetFillPropertyArchive, selection_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetFillPropertyArchive, undo_cell_map_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetFillPropertyArchive, redo_cell_map_),
+  };
+  CommandSetFillPropertyArchive_reflection_ =
+    new ::google::protobuf::internal::GeneratedMessageReflection(
+      CommandSetFillPropertyArchive_descriptor_,
+      CommandSetFillPropertyArchive::default_instance_,
+      CommandSetFillPropertyArchive_offsets_,
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetFillPropertyArchive, _has_bits_[0]),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetFillPropertyArchive, _unknown_fields_),
+      -1,
+      ::google::protobuf::DescriptorPool::generated_pool(),
+      ::google::protobuf::MessageFactory::generated_factory(),
+      sizeof(CommandSetFillPropertyArchive));
+  CommandStyleTableArchive_descriptor_ = file->message_type(30);
   static const int CommandStyleTableArchive_offsets_[4] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandStyleTableArchive, super_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandStyleTableArchive, format_properties_),
@@ -917,7 +1002,7 @@ void protobuf_AssignDesc_TSTCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandStyleTableArchive));
-  CommandFillCellsArchive_descriptor_ = file->message_type(28);
+  CommandFillCellsArchive_descriptor_ = file->message_type(31);
   static const int CommandFillCellsArchive_offsets_[8] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandFillCellsArchive, super_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandFillCellsArchive, sourceselection_),
@@ -939,7 +1024,7 @@ void protobuf_AssignDesc_TSTCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandFillCellsArchive));
-  CommandReplaceTextArchive_descriptor_ = file->message_type(29);
+  CommandReplaceTextArchive_descriptor_ = file->message_type(32);
   static const int CommandReplaceTextArchive_offsets_[5] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandReplaceTextArchive, cellid_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandReplaceTextArchive, newcell_),
@@ -958,7 +1043,7 @@ void protobuf_AssignDesc_TSTCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandReplaceTextArchive));
-  CommandReplaceAllTextArchive_descriptor_ = file->message_type(30);
+  CommandReplaceAllTextArchive_descriptor_ = file->message_type(33);
   static const int CommandReplaceAllTextArchive_offsets_[3] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandReplaceAllTextArchive, tableinfo_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandReplaceAllTextArchive, undo_cell_map_),
@@ -975,7 +1060,7 @@ void protobuf_AssignDesc_TSTCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandReplaceAllTextArchive));
-  CommandSetRepeatingHeaderEnabledArchive_descriptor_ = file->message_type(31);
+  CommandSetRepeatingHeaderEnabledArchive_descriptor_ = file->message_type(34);
   static const int CommandSetRepeatingHeaderEnabledArchive_offsets_[3] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetRepeatingHeaderEnabledArchive, repeating_header_enabled_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetRepeatingHeaderEnabledArchive, direction_),
@@ -992,7 +1077,7 @@ void protobuf_AssignDesc_TSTCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandSetRepeatingHeaderEnabledArchive));
-  CommandSetFiltersEnabledArchive_descriptor_ = file->message_type(32);
+  CommandSetFiltersEnabledArchive_descriptor_ = file->message_type(35);
   static const int CommandSetFiltersEnabledArchive_offsets_[2] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetFiltersEnabledArchive, enable_filters_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetFiltersEnabledArchive, super_),
@@ -1008,7 +1093,7 @@ void protobuf_AssignDesc_TSTCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandSetFiltersEnabledArchive));
-  CommandAddQuickFilterRulesArchive_descriptor_ = file->message_type(33);
+  CommandAddQuickFilterRulesArchive_descriptor_ = file->message_type(36);
   static const int CommandAddQuickFilterRulesArchive_offsets_[5] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandAddQuickFilterRulesArchive, super_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandAddQuickFilterRulesArchive, rules_),
@@ -1027,7 +1112,7 @@ void protobuf_AssignDesc_TSTCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandAddQuickFilterRulesArchive));
-  CommandDeleteFilterRulesArchive_descriptor_ = file->message_type(34);
+  CommandDeleteFilterRulesArchive_descriptor_ = file->message_type(37);
   static const int CommandDeleteFilterRulesArchive_offsets_[6] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandDeleteFilterRulesArchive, super_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandDeleteFilterRulesArchive, undo_rules_),
@@ -1047,7 +1132,7 @@ void protobuf_AssignDesc_TSTCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandDeleteFilterRulesArchive));
-  CommandModifyFilterRuleArchive_descriptor_ = file->message_type(35);
+  CommandModifyFilterRuleArchive_descriptor_ = file->message_type(38);
   static const int CommandModifyFilterRuleArchive_offsets_[5] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandModifyFilterRuleArchive, super_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandModifyFilterRuleArchive, undo_rule_),
@@ -1066,7 +1151,7 @@ void protobuf_AssignDesc_TSTCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandModifyFilterRuleArchive));
-  CommandApplyStrokePresetArchive_descriptor_ = file->message_type(36);
+  CommandApplyStrokePresetArchive_descriptor_ = file->message_type(39);
   static const int CommandApplyStrokePresetArchive_offsets_[6] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandApplyStrokePresetArchive, super_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandApplyStrokePresetArchive, undo_cell_map_),
@@ -1086,7 +1171,62 @@ void protobuf_AssignDesc_TSTCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandApplyStrokePresetArchive));
-  CommandApplyTableStylePresetArchive_descriptor_ = file->message_type(37);
+  CommandAddTableStylePresetArchive_descriptor_ = file->message_type(40);
+  static const int CommandAddTableStylePresetArchive_offsets_[4] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandAddTableStylePresetArchive, super_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandAddTableStylePresetArchive, preset_index_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandAddTableStylePresetArchive, table_styles_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandAddTableStylePresetArchive, send_notification_),
+  };
+  CommandAddTableStylePresetArchive_reflection_ =
+    new ::google::protobuf::internal::GeneratedMessageReflection(
+      CommandAddTableStylePresetArchive_descriptor_,
+      CommandAddTableStylePresetArchive::default_instance_,
+      CommandAddTableStylePresetArchive_offsets_,
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandAddTableStylePresetArchive, _has_bits_[0]),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandAddTableStylePresetArchive, _unknown_fields_),
+      -1,
+      ::google::protobuf::DescriptorPool::generated_pool(),
+      ::google::protobuf::MessageFactory::generated_factory(),
+      sizeof(CommandAddTableStylePresetArchive));
+  CommandRemoveTableStylePresetArchive_descriptor_ = file->message_type(41);
+  static const int CommandRemoveTableStylePresetArchive_offsets_[5] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandRemoveTableStylePresetArchive, super_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandRemoveTableStylePresetArchive, theme_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandRemoveTableStylePresetArchive, removed_table_styles_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandRemoveTableStylePresetArchive, preset_id_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandRemoveTableStylePresetArchive, preset_index_in_theme_),
+  };
+  CommandRemoveTableStylePresetArchive_reflection_ =
+    new ::google::protobuf::internal::GeneratedMessageReflection(
+      CommandRemoveTableStylePresetArchive_descriptor_,
+      CommandRemoveTableStylePresetArchive::default_instance_,
+      CommandRemoveTableStylePresetArchive_offsets_,
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandRemoveTableStylePresetArchive, _has_bits_[0]),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandRemoveTableStylePresetArchive, _unknown_fields_),
+      -1,
+      ::google::protobuf::DescriptorPool::generated_pool(),
+      ::google::protobuf::MessageFactory::generated_factory(),
+      sizeof(CommandRemoveTableStylePresetArchive));
+  CommandReplaceTableStylePresetArchive_descriptor_ = file->message_type(42);
+  static const int CommandReplaceTableStylePresetArchive_offsets_[4] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandReplaceTableStylePresetArchive, super_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandReplaceTableStylePresetArchive, theme_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandReplaceTableStylePresetArchive, old_table_styles_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandReplaceTableStylePresetArchive, new_table_styles_),
+  };
+  CommandReplaceTableStylePresetArchive_reflection_ =
+    new ::google::protobuf::internal::GeneratedMessageReflection(
+      CommandReplaceTableStylePresetArchive_descriptor_,
+      CommandReplaceTableStylePresetArchive::default_instance_,
+      CommandReplaceTableStylePresetArchive_offsets_,
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandReplaceTableStylePresetArchive, _has_bits_[0]),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandReplaceTableStylePresetArchive, _unknown_fields_),
+      -1,
+      ::google::protobuf::DescriptorPool::generated_pool(),
+      ::google::protobuf::MessageFactory::generated_factory(),
+      sizeof(CommandReplaceTableStylePresetArchive));
+  CommandApplyTableStylePresetArchive_descriptor_ = file->message_type(43);
   static const int CommandApplyTableStylePresetArchive_offsets_[11] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandApplyTableStylePresetArchive, super_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandApplyTableStylePresetArchive, undo_cell_map_),
@@ -1128,7 +1268,7 @@ void protobuf_AssignDesc_TSTCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandApplyTableStylePresetArchive_StyleIndexTuple));
-  CommandSetStyleApplyClearsAllFlagArchive_descriptor_ = file->message_type(38);
+  CommandSetStyleApplyClearsAllFlagArchive_descriptor_ = file->message_type(44);
   static const int CommandSetStyleApplyClearsAllFlagArchive_offsets_[2] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetStyleApplyClearsAllFlagArchive, super_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetStyleApplyClearsAllFlagArchive, apply_clears_all_),
@@ -1144,7 +1284,7 @@ void protobuf_AssignDesc_TSTCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandSetStyleApplyClearsAllFlagArchive));
-  CommandApplyThemeToTableArchive_descriptor_ = file->message_type(39);
+  CommandApplyThemeToTableArchive_descriptor_ = file->message_type(45);
   static const int CommandApplyThemeToTableArchive_offsets_[5] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandApplyThemeToTableArchive, super_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandApplyThemeToTableArchive, undo_cell_map_),
@@ -1163,7 +1303,7 @@ void protobuf_AssignDesc_TSTCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandApplyThemeToTableArchive));
-  CommandApplyThemeChildForTableArchive_descriptor_ = file->message_type(40);
+  CommandApplyThemeChildForTableArchive_descriptor_ = file->message_type(46);
   static const int CommandApplyThemeChildForTableArchive_offsets_[2] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandApplyThemeChildForTableArchive, super_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandApplyThemeChildForTableArchive, apply_command_),
@@ -1179,7 +1319,7 @@ void protobuf_AssignDesc_TSTCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandApplyThemeChildForTableArchive));
-  CommandToggleTextPropertyArchive_descriptor_ = file->message_type(41);
+  CommandToggleTextPropertyArchive_descriptor_ = file->message_type(47);
   static const int CommandToggleTextPropertyArchive_offsets_[10] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandToggleTextPropertyArchive, super_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandToggleTextPropertyArchive, selection_),
@@ -1203,7 +1343,7 @@ void protobuf_AssignDesc_TSTCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandToggleTextPropertyArchive));
-  CommandResetFillPropertyToDefault_descriptor_ = file->message_type(42);
+  CommandResetFillPropertyToDefault_descriptor_ = file->message_type(48);
   static const int CommandResetFillPropertyToDefault_offsets_[4] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandResetFillPropertyToDefault, super_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandResetFillPropertyToDefault, selection_),
@@ -1221,7 +1361,7 @@ void protobuf_AssignDesc_TSTCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandResetFillPropertyToDefault));
-  CommandSetSingleNumberFormatParameterArchive_descriptor_ = file->message_type(43);
+  CommandSetSingleNumberFormatParameterArchive_descriptor_ = file->message_type(49);
   static const int CommandSetSingleNumberFormatParameterArchive_offsets_[4] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetSingleNumberFormatParameterArchive, super_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetSingleNumberFormatParameterArchive, selection_),
@@ -1239,7 +1379,7 @@ void protobuf_AssignDesc_TSTCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandSetSingleNumberFormatParameterArchive));
-  CommandSetBaseArchive_descriptor_ = file->message_type(44);
+  CommandSetBaseArchive_descriptor_ = file->message_type(50);
   static const int CommandSetBaseArchive_offsets_[2] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetBaseArchive, super_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetBaseArchive, base_),
@@ -1255,7 +1395,7 @@ void protobuf_AssignDesc_TSTCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandSetBaseArchive));
-  CommandSetBasePlacesArchive_descriptor_ = file->message_type(45);
+  CommandSetBasePlacesArchive_descriptor_ = file->message_type(51);
   static const int CommandSetBasePlacesArchive_offsets_[2] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetBasePlacesArchive, super_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetBasePlacesArchive, base_places_),
@@ -1271,7 +1411,7 @@ void protobuf_AssignDesc_TSTCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandSetBasePlacesArchive));
-  CommandSetBaseUseMinusSignArchive_descriptor_ = file->message_type(46);
+  CommandSetBaseUseMinusSignArchive_descriptor_ = file->message_type(52);
   static const int CommandSetBaseUseMinusSignArchive_offsets_[2] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetBaseUseMinusSignArchive, super_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetBaseUseMinusSignArchive, base_use_minus_sign_),
@@ -1287,7 +1427,7 @@ void protobuf_AssignDesc_TSTCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandSetBaseUseMinusSignArchive));
-  CommandSetControlMinimumArchive_descriptor_ = file->message_type(47);
+  CommandSetControlMinimumArchive_descriptor_ = file->message_type(53);
   static const int CommandSetControlMinimumArchive_offsets_[3] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetControlMinimumArchive, super_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetControlMinimumArchive, minimum_),
@@ -1304,7 +1444,7 @@ void protobuf_AssignDesc_TSTCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandSetControlMinimumArchive));
-  CommandSetControlMaximumArchive_descriptor_ = file->message_type(48);
+  CommandSetControlMaximumArchive_descriptor_ = file->message_type(54);
   static const int CommandSetControlMaximumArchive_offsets_[3] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetControlMaximumArchive, super_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetControlMaximumArchive, maximum_),
@@ -1321,7 +1461,7 @@ void protobuf_AssignDesc_TSTCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandSetControlMaximumArchive));
-  CommandSetControlIncrementArchive_descriptor_ = file->message_type(49);
+  CommandSetControlIncrementArchive_descriptor_ = file->message_type(55);
   static const int CommandSetControlIncrementArchive_offsets_[3] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetControlIncrementArchive, super_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetControlIncrementArchive, increment_),
@@ -1338,7 +1478,7 @@ void protobuf_AssignDesc_TSTCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandSetControlIncrementArchive));
-  CommandSetCurrencyCodeArchive_descriptor_ = file->message_type(50);
+  CommandSetCurrencyCodeArchive_descriptor_ = file->message_type(56);
   static const int CommandSetCurrencyCodeArchive_offsets_[2] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetCurrencyCodeArchive, super_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetCurrencyCodeArchive, currency_code_),
@@ -1354,7 +1494,7 @@ void protobuf_AssignDesc_TSTCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandSetCurrencyCodeArchive));
-  CommandSetFractionAccuracyArchive_descriptor_ = file->message_type(51);
+  CommandSetFractionAccuracyArchive_descriptor_ = file->message_type(57);
   static const int CommandSetFractionAccuracyArchive_offsets_[2] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetFractionAccuracyArchive, super_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetFractionAccuracyArchive, fraction_accuracy_),
@@ -1370,7 +1510,7 @@ void protobuf_AssignDesc_TSTCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandSetFractionAccuracyArchive));
-  CommandSetMultipleChoiceListFormatForEditedItemArchive_descriptor_ = file->message_type(52);
+  CommandSetMultipleChoiceListFormatForEditedItemArchive_descriptor_ = file->message_type(58);
   static const int CommandSetMultipleChoiceListFormatForEditedItemArchive_offsets_[1] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetMultipleChoiceListFormatForEditedItemArchive, super_),
   };
@@ -1385,7 +1525,7 @@ void protobuf_AssignDesc_TSTCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandSetMultipleChoiceListFormatForEditedItemArchive));
-  CommandSetMultipleChoiceListFormatForDeleteItemArchive_descriptor_ = file->message_type(53);
+  CommandSetMultipleChoiceListFormatForDeleteItemArchive_descriptor_ = file->message_type(59);
   static const int CommandSetMultipleChoiceListFormatForDeleteItemArchive_offsets_[1] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetMultipleChoiceListFormatForDeleteItemArchive, super_),
   };
@@ -1400,7 +1540,7 @@ void protobuf_AssignDesc_TSTCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandSetMultipleChoiceListFormatForDeleteItemArchive));
-  CommandSetMultipleChoiceListFormatForReorderItemArchive_descriptor_ = file->message_type(54);
+  CommandSetMultipleChoiceListFormatForReorderItemArchive_descriptor_ = file->message_type(60);
   static const int CommandSetMultipleChoiceListFormatForReorderItemArchive_offsets_[1] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetMultipleChoiceListFormatForReorderItemArchive, super_),
   };
@@ -1415,7 +1555,7 @@ void protobuf_AssignDesc_TSTCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandSetMultipleChoiceListFormatForReorderItemArchive));
-  CommandSetMultipleChoiceListFormatForInitialValueArchive_descriptor_ = file->message_type(55);
+  CommandSetMultipleChoiceListFormatForInitialValueArchive_descriptor_ = file->message_type(61);
   static const int CommandSetMultipleChoiceListFormatForInitialValueArchive_offsets_[1] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetMultipleChoiceListFormatForInitialValueArchive, super_),
   };
@@ -1430,7 +1570,7 @@ void protobuf_AssignDesc_TSTCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandSetMultipleChoiceListFormatForInitialValueArchive));
-  CommandSetNegativeNumberStyleArchive_descriptor_ = file->message_type(56);
+  CommandSetNegativeNumberStyleArchive_descriptor_ = file->message_type(62);
   static const int CommandSetNegativeNumberStyleArchive_offsets_[2] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetNegativeNumberStyleArchive, super_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetNegativeNumberStyleArchive, negative_number_style_),
@@ -1446,7 +1586,7 @@ void protobuf_AssignDesc_TSTCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandSetNegativeNumberStyleArchive));
-  CommandSetExplicitFormatArchive_descriptor_ = file->message_type(57);
+  CommandSetExplicitFormatArchive_descriptor_ = file->message_type(63);
   static const int CommandSetExplicitFormatArchive_offsets_[5] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetExplicitFormatArchive, super_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetExplicitFormatArchive, selection_),
@@ -1465,7 +1605,7 @@ void protobuf_AssignDesc_TSTCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandSetExplicitFormatArchive));
-  CommandSetNumberOfDecimalPlacesArchive_descriptor_ = file->message_type(58);
+  CommandSetNumberOfDecimalPlacesArchive_descriptor_ = file->message_type(64);
   static const int CommandSetNumberOfDecimalPlacesArchive_offsets_[2] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetNumberOfDecimalPlacesArchive, super_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetNumberOfDecimalPlacesArchive, decimal_places_),
@@ -1481,7 +1621,7 @@ void protobuf_AssignDesc_TSTCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandSetNumberOfDecimalPlacesArchive));
-  CommandSetDateTimeFormatArchive_descriptor_ = file->message_type(59);
+  CommandSetDateTimeFormatArchive_descriptor_ = file->message_type(65);
   static const int CommandSetDateTimeFormatArchive_offsets_[1] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetDateTimeFormatArchive, super_),
   };
@@ -1496,7 +1636,7 @@ void protobuf_AssignDesc_TSTCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandSetDateTimeFormatArchive));
-  CommandSetShowThousandsSeparatorArchive_descriptor_ = file->message_type(60);
+  CommandSetShowThousandsSeparatorArchive_descriptor_ = file->message_type(66);
   static const int CommandSetShowThousandsSeparatorArchive_offsets_[2] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetShowThousandsSeparatorArchive, super_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetShowThousandsSeparatorArchive, show_thousands_separator_),
@@ -1512,7 +1652,7 @@ void protobuf_AssignDesc_TSTCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandSetShowThousandsSeparatorArchive));
-  CommandSetUseAccountingStyleArchive_descriptor_ = file->message_type(61);
+  CommandSetUseAccountingStyleArchive_descriptor_ = file->message_type(67);
   static const int CommandSetUseAccountingStyleArchive_offsets_[2] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetUseAccountingStyleArchive, super_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetUseAccountingStyleArchive, use_accounting_style_),
@@ -1528,7 +1668,7 @@ void protobuf_AssignDesc_TSTCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandSetUseAccountingStyleArchive));
-  CommandMoveRowsArchive_descriptor_ = file->message_type(62);
+  CommandMoveRowsArchive_descriptor_ = file->message_type(68);
   static const int CommandMoveRowsArchive_offsets_[8] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandMoveRowsArchive, super_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandMoveRowsArchive, selection_),
@@ -1550,7 +1690,7 @@ void protobuf_AssignDesc_TSTCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandMoveRowsArchive));
-  CommandMoveColumnsArchive_descriptor_ = file->message_type(63);
+  CommandMoveColumnsArchive_descriptor_ = file->message_type(69);
   static const int CommandMoveColumnsArchive_offsets_[7] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandMoveColumnsArchive, super_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandMoveColumnsArchive, selection_),
@@ -1571,7 +1711,7 @@ void protobuf_AssignDesc_TSTCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandMoveColumnsArchive));
-  CommandSortArchive_descriptor_ = file->message_type(64);
+  CommandSortArchive_descriptor_ = file->message_type(70);
   static const int CommandSortArchive_offsets_[3] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSortArchive, super_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSortArchive, mapping_),
@@ -1588,7 +1728,7 @@ void protobuf_AssignDesc_TSTCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandSortArchive));
-  CommandRewriteFormulasForSortArchive_descriptor_ = file->message_type(65);
+  CommandRewriteFormulasForSortArchive_descriptor_ = file->message_type(71);
   static const int CommandRewriteFormulasForSortArchive_offsets_[5] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandRewriteFormulasForSortArchive, super_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandRewriteFormulasForSortArchive, formula_map_),
@@ -1607,7 +1747,7 @@ void protobuf_AssignDesc_TSTCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandRewriteFormulasForSortArchive));
-  CommandRewriteFormulasForTectonicShiftArchive_descriptor_ = file->message_type(66);
+  CommandRewriteFormulasForTectonicShiftArchive_descriptor_ = file->message_type(72);
   static const int CommandRewriteFormulasForTectonicShiftArchive_offsets_[3] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandRewriteFormulasForTectonicShiftArchive, super_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandRewriteFormulasForTectonicShiftArchive, formula_map_),
@@ -1624,7 +1764,7 @@ void protobuf_AssignDesc_TSTCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandRewriteFormulasForTectonicShiftArchive));
-  CommandRewriteFormulasForMoveArchive_descriptor_ = file->message_type(67);
+  CommandRewriteFormulasForMoveArchive_descriptor_ = file->message_type(73);
   static const int CommandRewriteFormulasForMoveArchive_offsets_[4] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandRewriteFormulasForMoveArchive, super_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandRewriteFormulasForMoveArchive, formula_map_),
@@ -1642,7 +1782,7 @@ void protobuf_AssignDesc_TSTCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandRewriteFormulasForMoveArchive));
-  CommandRewriteFormulasForCellMergeArchive_descriptor_ = file->message_type(68);
+  CommandRewriteFormulasForCellMergeArchive_descriptor_ = file->message_type(74);
   static const int CommandRewriteFormulasForCellMergeArchive_offsets_[4] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandRewriteFormulasForCellMergeArchive, super_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandRewriteFormulasForCellMergeArchive, formula_map_),
@@ -1660,7 +1800,7 @@ void protobuf_AssignDesc_TSTCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandRewriteFormulasForCellMergeArchive));
-  CommandRewriteFilterFormulasForTableResizeArchive_descriptor_ = file->message_type(69);
+  CommandRewriteFilterFormulasForTableResizeArchive_descriptor_ = file->message_type(75);
   static const int CommandRewriteFilterFormulasForTableResizeArchive_offsets_[1] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandRewriteFilterFormulasForTableResizeArchive, super_),
   };
@@ -1675,7 +1815,7 @@ void protobuf_AssignDesc_TSTCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandRewriteFilterFormulasForTableResizeArchive));
-  CommandRewriteFilterFormulasForTectonicShiftArchive_descriptor_ = file->message_type(70);
+  CommandRewriteFilterFormulasForTectonicShiftArchive_descriptor_ = file->message_type(76);
   static const int CommandRewriteFilterFormulasForTectonicShiftArchive_offsets_[3] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandRewriteFilterFormulasForTectonicShiftArchive, super_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandRewriteFilterFormulasForTectonicShiftArchive, filter_set_),
@@ -1692,7 +1832,7 @@ void protobuf_AssignDesc_TSTCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandRewriteFilterFormulasForTectonicShiftArchive));
-  CommandRewriteFilterFormulasForSortArchive_descriptor_ = file->message_type(71);
+  CommandRewriteFilterFormulasForSortArchive_descriptor_ = file->message_type(77);
   static const int CommandRewriteFilterFormulasForSortArchive_offsets_[4] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandRewriteFilterFormulasForSortArchive, super_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandRewriteFilterFormulasForSortArchive, filter_set_),
@@ -1710,7 +1850,7 @@ void protobuf_AssignDesc_TSTCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandRewriteFilterFormulasForSortArchive));
-  CommandRewriteConditionalStylesForTectonicShiftArchive_descriptor_ = file->message_type(72);
+  CommandRewriteConditionalStylesForTectonicShiftArchive_descriptor_ = file->message_type(78);
   static const int CommandRewriteConditionalStylesForTectonicShiftArchive_offsets_[4] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandRewriteConditionalStylesForTectonicShiftArchive, super_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandRewriteConditionalStylesForTectonicShiftArchive, tectonic_shift_),
@@ -1728,7 +1868,7 @@ void protobuf_AssignDesc_TSTCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandRewriteConditionalStylesForTectonicShiftArchive));
-  CommandRewriteConditionalStylesForSortArchive_descriptor_ = file->message_type(73);
+  CommandRewriteConditionalStylesForSortArchive_descriptor_ = file->message_type(79);
   static const int CommandRewriteConditionalStylesForSortArchive_offsets_[5] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandRewriteConditionalStylesForSortArchive, super_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandRewriteConditionalStylesForSortArchive, sort_mapping_),
@@ -1747,7 +1887,7 @@ void protobuf_AssignDesc_TSTCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandRewriteConditionalStylesForSortArchive));
-  CommandRewriteConditionalStylesForRangeMoveArchive_descriptor_ = file->message_type(74);
+  CommandRewriteConditionalStylesForRangeMoveArchive_descriptor_ = file->message_type(80);
   static const int CommandRewriteConditionalStylesForRangeMoveArchive_offsets_[5] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandRewriteConditionalStylesForRangeMoveArchive, super_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandRewriteConditionalStylesForRangeMoveArchive, from_range_reference_),
@@ -1766,7 +1906,7 @@ void protobuf_AssignDesc_TSTCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandRewriteConditionalStylesForRangeMoveArchive));
-  CommandRewriteConditionalStylesForCellMergeArchive_descriptor_ = file->message_type(75);
+  CommandRewriteConditionalStylesForCellMergeArchive_descriptor_ = file->message_type(81);
   static const int CommandRewriteConditionalStylesForCellMergeArchive_offsets_[5] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandRewriteConditionalStylesForCellMergeArchive, super_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandRewriteConditionalStylesForCellMergeArchive, merged_table_id_),
@@ -1785,7 +1925,7 @@ void protobuf_AssignDesc_TSTCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandRewriteConditionalStylesForCellMergeArchive));
-  CommandMergeUnmergeArchive_descriptor_ = file->message_type(76);
+  CommandMergeUnmergeArchive_descriptor_ = file->message_type(82);
   static const int CommandMergeUnmergeArchive_offsets_[7] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandMergeUnmergeArchive, super_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandMergeUnmergeArchive, merge_action_),
@@ -1806,7 +1946,7 @@ void protobuf_AssignDesc_TSTCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandMergeUnmergeArchive));
-  CommandHideShowArchive_descriptor_ = file->message_type(77);
+  CommandHideShowArchive_descriptor_ = file->message_type(83);
   static const int CommandHideShowArchive_offsets_[6] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandHideShowArchive, super_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandHideShowArchive, direction_),
@@ -1826,7 +1966,7 @@ void protobuf_AssignDesc_TSTCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandHideShowArchive));
-  TableInfoGeometryCommandArchive_descriptor_ = file->message_type(78);
+  TableInfoGeometryCommandArchive_descriptor_ = file->message_type(84);
   static const int TableInfoGeometryCommandArchive_offsets_[8] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(TableInfoGeometryCommandArchive, super_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(TableInfoGeometryCommandArchive, scale_factor_),
@@ -1848,7 +1988,7 @@ void protobuf_AssignDesc_TSTCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(TableInfoGeometryCommandArchive));
-  FormulaEditingCommandGroupArchive_descriptor_ = file->message_type(79);
+  FormulaEditingCommandGroupArchive_descriptor_ = file->message_type(85);
   static const int FormulaEditingCommandGroupArchive_offsets_[9] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(FormulaEditingCommandGroupArchive, super_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(FormulaEditingCommandGroupArchive, undoselectionvalid_),
@@ -1871,7 +2011,7 @@ void protobuf_AssignDesc_TSTCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(FormulaEditingCommandGroupArchive));
-  FormulaEditingCommandSelectionBehaviorArchive_descriptor_ = file->message_type(80);
+  FormulaEditingCommandSelectionBehaviorArchive_descriptor_ = file->message_type(86);
   static const int FormulaEditingCommandSelectionBehaviorArchive_offsets_[9] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(FormulaEditingCommandSelectionBehaviorArchive, undoselectionvalid_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(FormulaEditingCommandSelectionBehaviorArchive, undoselectionstart_),
@@ -1894,7 +2034,7 @@ void protobuf_AssignDesc_TSTCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(FormulaEditingCommandSelectionBehaviorArchive));
-  UndoRedoStateCommandSelectionBehaviorArchive_descriptor_ = file->message_type(81);
+  UndoRedoStateCommandSelectionBehaviorArchive_descriptor_ = file->message_type(87);
   static const int UndoRedoStateCommandSelectionBehaviorArchive_offsets_[5] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(UndoRedoStateCommandSelectionBehaviorArchive, before_undo_redo_state_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(UndoRedoStateCommandSelectionBehaviorArchive, after_undo_redo_state_),
@@ -1913,7 +2053,7 @@ void protobuf_AssignDesc_TSTCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(UndoRedoStateCommandSelectionBehaviorArchive));
-  TableCommandSelectionBehaviorArchive_descriptor_ = file->message_type(82);
+  TableCommandSelectionBehaviorArchive_descriptor_ = file->message_type(88);
   static const int TableCommandSelectionBehaviorArchive_offsets_[4] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(TableCommandSelectionBehaviorArchive, before_table_selection_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(TableCommandSelectionBehaviorArchive, after_table_selection_),
@@ -1931,7 +2071,7 @@ void protobuf_AssignDesc_TSTCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(TableCommandSelectionBehaviorArchive));
-  DisableTableNameSelectionBehaviorArchive_descriptor_ = file->message_type(83);
+  DisableTableNameSelectionBehaviorArchive_descriptor_ = file->message_type(89);
   static const int DisableTableNameSelectionBehaviorArchive_offsets_[1] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(DisableTableNameSelectionBehaviorArchive, super_),
   };
@@ -1946,7 +2086,7 @@ void protobuf_AssignDesc_TSTCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(DisableTableNameSelectionBehaviorArchive));
-  CommandApplyCellCommentArchive_descriptor_ = file->message_type(84);
+  CommandApplyCellCommentArchive_descriptor_ = file->message_type(90);
   static const int CommandApplyCellCommentArchive_offsets_[4] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandApplyCellCommentArchive, super_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandApplyCellCommentArchive, cell_id_),
@@ -1964,7 +2104,7 @@ void protobuf_AssignDesc_TSTCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandApplyCellCommentArchive));
-  CommandApplyConditionalStyleSetArchive_descriptor_ = file->message_type(85);
+  CommandApplyConditionalStyleSetArchive_descriptor_ = file->message_type(91);
   static const int CommandApplyConditionalStyleSetArchive_offsets_[4] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandApplyConditionalStyleSetArchive, super_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandApplyConditionalStyleSetArchive, selection_),
@@ -1982,7 +2122,7 @@ void protobuf_AssignDesc_TSTCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandApplyConditionalStyleSetArchive));
-  CommandSetFormulaTokenizationArchive_descriptor_ = file->message_type(86);
+  CommandSetFormulaTokenizationArchive_descriptor_ = file->message_type(92);
   static const int CommandSetFormulaTokenizationArchive_offsets_[2] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetFormulaTokenizationArchive, super_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetFormulaTokenizationArchive, tokenization_),
@@ -1998,7 +2138,7 @@ void protobuf_AssignDesc_TSTCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandSetFormulaTokenizationArchive));
-  CommandSetFilterEnabledArchive_descriptor_ = file->message_type(87);
+  CommandSetFilterEnabledArchive_descriptor_ = file->message_type(93);
   static const int CommandSetFilterEnabledArchive_offsets_[3] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetFilterEnabledArchive, super_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetFilterEnabledArchive, filter_index_),
@@ -2015,7 +2155,7 @@ void protobuf_AssignDesc_TSTCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandSetFilterEnabledArchive));
-  CommandSetFilterRuleEnabledArchive_descriptor_ = file->message_type(88);
+  CommandSetFilterRuleEnabledArchive_descriptor_ = file->message_type(94);
   static const int CommandSetFilterRuleEnabledArchive_offsets_[4] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetFilterRuleEnabledArchive, super_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetFilterRuleEnabledArchive, filter_index_),
@@ -2033,7 +2173,7 @@ void protobuf_AssignDesc_TSTCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandSetFilterRuleEnabledArchive));
-  CommandSetFilterSetTypeArchive_descriptor_ = file->message_type(89);
+  CommandSetFilterSetTypeArchive_descriptor_ = file->message_type(95);
   static const int CommandSetFilterSetTypeArchive_offsets_[3] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetFilterSetTypeArchive, super_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetFilterSetTypeArchive, old_filter_set_type_),
@@ -2050,7 +2190,7 @@ void protobuf_AssignDesc_TSTCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandSetFilterSetTypeArchive));
-  CommandSetStyleNetworkArchive_descriptor_ = file->message_type(90);
+  CommandSetStyleNetworkArchive_descriptor_ = file->message_type(96);
   static const int CommandSetStyleNetworkArchive_offsets_[3] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetStyleNetworkArchive, super_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetStyleNetworkArchive, old_style_network_),
@@ -2067,7 +2207,7 @@ void protobuf_AssignDesc_TSTCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandSetStyleNetworkArchive));
-  CommandMutateCellsArchive_descriptor_ = file->message_type(91);
+  CommandMutateCellsArchive_descriptor_ = file->message_type(97);
   static const int CommandMutateCellsArchive_offsets_[4] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandMutateCellsArchive, super_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandMutateCellsArchive, undo_cell_map_),
@@ -2085,7 +2225,7 @@ void protobuf_AssignDesc_TSTCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandMutateCellsArchive));
-  CommandDisableFilterRulesForColumnArchive_descriptor_ = file->message_type(92);
+  CommandDisableFilterRulesForColumnArchive_descriptor_ = file->message_type(98);
   static const int CommandDisableFilterRulesForColumnArchive_offsets_[3] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandDisableFilterRulesForColumnArchive, super_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandDisableFilterRulesForColumnArchive, column_index_),
@@ -2102,7 +2242,7 @@ void protobuf_AssignDesc_TSTCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandDisableFilterRulesForColumnArchive));
-  CommandSetTextStyleArchive_descriptor_ = file->message_type(93);
+  CommandSetTextStyleArchive_descriptor_ = file->message_type(99);
   static const int CommandSetTextStyleArchive_offsets_[5] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetTextStyleArchive, super_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetTextStyleArchive, region_),
@@ -2121,7 +2261,7 @@ void protobuf_AssignDesc_TSTCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandSetTextStyleArchive));
-  CommandNotifyForTransformingArchive_descriptor_ = file->message_type(94);
+  CommandNotifyForTransformingArchive_descriptor_ = file->message_type(100);
   static const int CommandNotifyForTransformingArchive_offsets_[1] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandNotifyForTransformingArchive, super_),
   };
@@ -2136,7 +2276,7 @@ void protobuf_AssignDesc_TSTCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandNotifyForTransformingArchive));
-  CommandSetStorageLanguageArchive_descriptor_ = file->message_type(95);
+  CommandSetStorageLanguageArchive_descriptor_ = file->message_type(101);
   static const int CommandSetStorageLanguageArchive_offsets_[6] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetStorageLanguageArchive, super_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetStorageLanguageArchive, storage_),
@@ -2156,6 +2296,76 @@ void protobuf_AssignDesc_TSTCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandSetStorageLanguageArchive));
+  CommandSetSortOrderArchive_descriptor_ = file->message_type(102);
+  static const int CommandSetSortOrderArchive_offsets_[3] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetSortOrderArchive, super_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetSortOrderArchive, old_sort_order_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetSortOrderArchive, new_sort_order_),
+  };
+  CommandSetSortOrderArchive_reflection_ =
+    new ::google::protobuf::internal::GeneratedMessageReflection(
+      CommandSetSortOrderArchive_descriptor_,
+      CommandSetSortOrderArchive::default_instance_,
+      CommandSetSortOrderArchive_offsets_,
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetSortOrderArchive, _has_bits_[0]),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetSortOrderArchive, _unknown_fields_),
+      -1,
+      ::google::protobuf::DescriptorPool::generated_pool(),
+      ::google::protobuf::MessageFactory::generated_factory(),
+      sizeof(CommandSetSortOrderArchive));
+  CommandRewriteSortOrderForTectonicShiftArchive_descriptor_ = file->message_type(103);
+  static const int CommandRewriteSortOrderForTectonicShiftArchive_offsets_[4] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandRewriteSortOrderForTectonicShiftArchive, super_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandRewriteSortOrderForTectonicShiftArchive, tectonic_shift_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandRewriteSortOrderForTectonicShiftArchive, old_sort_order_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandRewriteSortOrderForTectonicShiftArchive, new_sort_order_),
+  };
+  CommandRewriteSortOrderForTectonicShiftArchive_reflection_ =
+    new ::google::protobuf::internal::GeneratedMessageReflection(
+      CommandRewriteSortOrderForTectonicShiftArchive_descriptor_,
+      CommandRewriteSortOrderForTectonicShiftArchive::default_instance_,
+      CommandRewriteSortOrderForTectonicShiftArchive_offsets_,
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandRewriteSortOrderForTectonicShiftArchive, _has_bits_[0]),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandRewriteSortOrderForTectonicShiftArchive, _unknown_fields_),
+      -1,
+      ::google::protobuf::DescriptorPool::generated_pool(),
+      ::google::protobuf::MessageFactory::generated_factory(),
+      sizeof(CommandRewriteSortOrderForTectonicShiftArchive));
+  CommandRewriteSortOrderForSortArchive_descriptor_ = file->message_type(104);
+  static const int CommandRewriteSortOrderForSortArchive_offsets_[4] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandRewriteSortOrderForSortArchive, super_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandRewriteSortOrderForSortArchive, sort_mapping_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandRewriteSortOrderForSortArchive, old_sort_order_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandRewriteSortOrderForSortArchive, new_sort_order_),
+  };
+  CommandRewriteSortOrderForSortArchive_reflection_ =
+    new ::google::protobuf::internal::GeneratedMessageReflection(
+      CommandRewriteSortOrderForSortArchive_descriptor_,
+      CommandRewriteSortOrderForSortArchive::default_instance_,
+      CommandRewriteSortOrderForSortArchive_offsets_,
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandRewriteSortOrderForSortArchive, _has_bits_[0]),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandRewriteSortOrderForSortArchive, _unknown_fields_),
+      -1,
+      ::google::protobuf::DescriptorPool::generated_pool(),
+      ::google::protobuf::MessageFactory::generated_factory(),
+      sizeof(CommandRewriteSortOrderForSortArchive));
+  CommandRewriteSortOrderForTableResizeArchive_descriptor_ = file->message_type(105);
+  static const int CommandRewriteSortOrderForTableResizeArchive_offsets_[3] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandRewriteSortOrderForTableResizeArchive, super_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandRewriteSortOrderForTableResizeArchive, old_sort_order_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandRewriteSortOrderForTableResizeArchive, new_sort_order_),
+  };
+  CommandRewriteSortOrderForTableResizeArchive_reflection_ =
+    new ::google::protobuf::internal::GeneratedMessageReflection(
+      CommandRewriteSortOrderForTableResizeArchive_descriptor_,
+      CommandRewriteSortOrderForTableResizeArchive::default_instance_,
+      CommandRewriteSortOrderForTableResizeArchive_offsets_,
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandRewriteSortOrderForTableResizeArchive, _has_bits_[0]),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandRewriteSortOrderForTableResizeArchive, _unknown_fields_),
+      -1,
+      ::google::protobuf::DescriptorPool::generated_pool(),
+      ::google::protobuf::MessageFactory::generated_factory(),
+      sizeof(CommandRewriteSortOrderForTableResizeArchive));
   CommandDirectionArchive_descriptor_ = file->enum_type(0);
   CommandRegionArchive_descriptor_ = file->enum_type(1);
 }
@@ -2172,6 +2382,8 @@ void protobuf_RegisterTypes(const ::std::string&) {
   protobuf_AssignDescriptorsOnce();
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
     TableCommandArchive_descriptor_, &TableCommandArchive::default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+    CommandApplyCellDiffArchive_descriptor_, &CommandApplyCellDiffArchive::default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
     CommandChangeFreezeHeaderStateArchive_descriptor_, &CommandChangeFreezeHeaderStateArchive::default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
@@ -2192,6 +2404,8 @@ void protobuf_RegisterTypes(const ::std::string&) {
     CommandSetAutomaticFormatArchive_descriptor_, &CommandSetAutomaticFormatArchive::default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
     CommandSetAutomaticDurationUnitsArchive_descriptor_, &CommandSetAutomaticDurationUnitsArchive::default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+    CommandReplaceCustomFormatArchive_descriptor_, &CommandReplaceCustomFormatArchive::default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
     CommandInsertColumnsOrRowsArchive_descriptor_, &CommandInsertColumnsOrRowsArchive::default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
@@ -2227,6 +2441,8 @@ void protobuf_RegisterTypes(const ::std::string&) {
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
     CommandStyleCellsArchive_descriptor_, &CommandStyleCellsArchive::default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+    CommandSetFillPropertyArchive_descriptor_, &CommandSetFillPropertyArchive::default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
     CommandStyleTableArchive_descriptor_, &CommandStyleTableArchive::default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
     CommandFillCellsArchive_descriptor_, &CommandFillCellsArchive::default_instance());
@@ -2246,6 +2462,12 @@ void protobuf_RegisterTypes(const ::std::string&) {
     CommandModifyFilterRuleArchive_descriptor_, &CommandModifyFilterRuleArchive::default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
     CommandApplyStrokePresetArchive_descriptor_, &CommandApplyStrokePresetArchive::default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+    CommandAddTableStylePresetArchive_descriptor_, &CommandAddTableStylePresetArchive::default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+    CommandRemoveTableStylePresetArchive_descriptor_, &CommandRemoveTableStylePresetArchive::default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+    CommandReplaceTableStylePresetArchive_descriptor_, &CommandReplaceTableStylePresetArchive::default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
     CommandApplyTableStylePresetArchive_descriptor_, &CommandApplyTableStylePresetArchive::default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
@@ -2366,6 +2588,14 @@ void protobuf_RegisterTypes(const ::std::string&) {
     CommandNotifyForTransformingArchive_descriptor_, &CommandNotifyForTransformingArchive::default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
     CommandSetStorageLanguageArchive_descriptor_, &CommandSetStorageLanguageArchive::default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+    CommandSetSortOrderArchive_descriptor_, &CommandSetSortOrderArchive::default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+    CommandRewriteSortOrderForTectonicShiftArchive_descriptor_, &CommandRewriteSortOrderForTectonicShiftArchive::default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+    CommandRewriteSortOrderForSortArchive_descriptor_, &CommandRewriteSortOrderForSortArchive::default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+    CommandRewriteSortOrderForTableResizeArchive_descriptor_, &CommandRewriteSortOrderForTableResizeArchive::default_instance());
 }
 
 }  // namespace
@@ -2373,6 +2603,8 @@ void protobuf_RegisterTypes(const ::std::string&) {
 void protobuf_ShutdownFile_TSTCommandArchives_2eproto() {
   delete TableCommandArchive::default_instance_;
   delete TableCommandArchive_reflection_;
+  delete CommandApplyCellDiffArchive::default_instance_;
+  delete CommandApplyCellDiffArchive_reflection_;
   delete CommandChangeFreezeHeaderStateArchive::default_instance_;
   delete CommandChangeFreezeHeaderStateArchive_reflection_;
   delete CommandDeleteCellsArchive::default_instance_;
@@ -2393,6 +2625,8 @@ void protobuf_ShutdownFile_TSTCommandArchives_2eproto() {
   delete CommandSetAutomaticFormatArchive_reflection_;
   delete CommandSetAutomaticDurationUnitsArchive::default_instance_;
   delete CommandSetAutomaticDurationUnitsArchive_reflection_;
+  delete CommandReplaceCustomFormatArchive::default_instance_;
+  delete CommandReplaceCustomFormatArchive_reflection_;
   delete CommandInsertColumnsOrRowsArchive::default_instance_;
   delete CommandInsertColumnsOrRowsArchive_reflection_;
   delete CommandInsertColumnsOrRowsArchive_StyleIndexPair::default_instance_;
@@ -2427,6 +2661,8 @@ void protobuf_ShutdownFile_TSTCommandArchives_2eproto() {
   delete CommandSetTableNameHeightArchive_reflection_;
   delete CommandStyleCellsArchive::default_instance_;
   delete CommandStyleCellsArchive_reflection_;
+  delete CommandSetFillPropertyArchive::default_instance_;
+  delete CommandSetFillPropertyArchive_reflection_;
   delete CommandStyleTableArchive::default_instance_;
   delete CommandStyleTableArchive_reflection_;
   delete CommandFillCellsArchive::default_instance_;
@@ -2447,6 +2683,12 @@ void protobuf_ShutdownFile_TSTCommandArchives_2eproto() {
   delete CommandModifyFilterRuleArchive_reflection_;
   delete CommandApplyStrokePresetArchive::default_instance_;
   delete CommandApplyStrokePresetArchive_reflection_;
+  delete CommandAddTableStylePresetArchive::default_instance_;
+  delete CommandAddTableStylePresetArchive_reflection_;
+  delete CommandRemoveTableStylePresetArchive::default_instance_;
+  delete CommandRemoveTableStylePresetArchive_reflection_;
+  delete CommandReplaceTableStylePresetArchive::default_instance_;
+  delete CommandReplaceTableStylePresetArchive_reflection_;
   delete CommandApplyTableStylePresetArchive::default_instance_;
   delete CommandApplyTableStylePresetArchive_reflection_;
   delete CommandApplyTableStylePresetArchive_StyleIndexTuple::default_instance_;
@@ -2567,6 +2809,14 @@ void protobuf_ShutdownFile_TSTCommandArchives_2eproto() {
   delete CommandNotifyForTransformingArchive_reflection_;
   delete CommandSetStorageLanguageArchive::default_instance_;
   delete CommandSetStorageLanguageArchive_reflection_;
+  delete CommandSetSortOrderArchive::default_instance_;
+  delete CommandSetSortOrderArchive_reflection_;
+  delete CommandRewriteSortOrderForTectonicShiftArchive::default_instance_;
+  delete CommandRewriteSortOrderForTectonicShiftArchive_reflection_;
+  delete CommandRewriteSortOrderForSortArchive::default_instance_;
+  delete CommandRewriteSortOrderForSortArchive_reflection_;
+  delete CommandRewriteSortOrderForTableResizeArchive::default_instance_;
+  delete CommandRewriteSortOrderForTableResizeArchive_reflection_;
 }
 
 void protobuf_AddDesc_TSTCommandArchives_2eproto() {
@@ -2590,88 +2840,97 @@ void protobuf_AddDesc_TSTCommandArchives_2eproto() {
     ".proto\"\220\001\n\023TableCommandArchive\022!\n\ttableI"
     "nfo\030\001 \002(\0132\016.TSP.Reference\022\023\n\013commandname"
     "\030\002 \001(\t\022\"\n\005super\030\003 \002(\0132\023.TSK.CommandArchi"
-    "ve\022\035\n\025editing_mode_at_start\030\004 \001(\r\"\233\001\n%Co"
-    "mmandChangeFreezeHeaderStateArchive\022/\n\td"
-    "irection\030\001 \002(\0162\034.TST.CommandDirectionArc"
-    "hive\022\030\n\020new_freeze_state\030\002 \002(\010\022\'\n\005super\030"
-    "\003 \002(\0132\030.TST.TableCommandArchive\"\331\001\n\031Comm"
-    "andDeleteCellsArchive\022(\n\tselection\030\001 \002(\013"
-    "2\025.TST.SelectionArchive\022%\n\010undo_map\030\002 \002("
-    "\0132\023.TST.CellMapArchive\022\'\n\005super\030\003 \002(\0132\030."
-    "TST.TableCommandArchive\022%\n\010redo_map\030\004 \002("
-    "\0132\023.TST.CellMapArchive\022\033\n\023invalidate_com"
-    "ments\030\005 \002(\010\"\340\001\n CommandDeleteCellContent"
-    "sArchive\022(\n\tselection\030\001 \002(\0132\025.TST.Select"
-    "ionArchive\022%\n\010undo_map\030\002 \002(\0132\023.TST.CellM"
-    "apArchive\022\'\n\005super\030\003 \002(\0132\030.TST.TableComm"
-    "andArchive\022%\n\010redo_map\030\004 \002(\0132\023.TST.CellM"
-    "apArchive\022\033\n\023invalidate_comments\030\005 \002(\010\"\201"
-    "\002\n\036CommandSetMultipleCellsArchive\022(\n\tsel"
+    "ve\022\035\n\025editing_mode_at_start\030\004 \001(\r\"\276\001\n\033Co"
+    "mmandApplyCellDiffArchive\022\'\n\005super\030\001 \002(\013"
+    "2\030.TST.TableCommandArchive\022$\n\013cell_regio"
+    "n\030\002 \002(\0132\017.TST.CellRegion\022!\n\tcell_diff\030\003 "
+    "\002(\0132\016.TSP.Reference\022-\n\025inverse_cell_diff"
+    "_map\030\004 \002(\0132\016.TSP.Reference\"\233\001\n%CommandCh"
+    "angeFreezeHeaderStateArchive\022/\n\tdirectio"
+    "n\030\001 \002(\0162\034.TST.CommandDirectionArchive\022\030\n"
+    "\020new_freeze_state\030\002 \002(\010\022\'\n\005super\030\003 \002(\0132\030"
+    ".TST.TableCommandArchive\"\331\001\n\031CommandDele"
+    "teCellsArchive\022(\n\tselection\030\001 \002(\0132\025.TST."
+    "SelectionArchive\022%\n\010undo_map\030\002 \002(\0132\023.TST"
+    ".CellMapArchive\022\'\n\005super\030\003 \002(\0132\030.TST.Tab"
+    "leCommandArchive\022%\n\010redo_map\030\004 \002(\0132\023.TST"
+    ".CellMapArchive\022\033\n\023invalidate_comments\030\005"
+    " \002(\010\"\340\001\n CommandDeleteCellContentsArchiv"
+    "e\022(\n\tselection\030\001 \002(\0132\025.TST.SelectionArch"
+    "ive\022%\n\010undo_map\030\002 \002(\0132\023.TST.CellMapArchi"
+    "ve\022\'\n\005super\030\003 \002(\0132\030.TST.TableCommandArch"
+    "ive\022%\n\010redo_map\030\004 \002(\0132\023.TST.CellMapArchi"
+    "ve\022\033\n\023invalidate_comments\030\005 \002(\010\"\201\002\n\036Comm"
+    "andSetMultipleCellsArchive\022(\n\tselection\030"
+    "\001 \002(\0132\025.TST.SelectionArchive\022%\n\010undo_map"
+    "\030\002 \002(\0132\023.TST.CellMapArchive\022%\n\010redo_map\030"
+    "\003 \002(\0132\023.TST.CellMapArchive\022\036\n\013source_cel"
+    "l\030\004 \001(\0132\t.TST.Cell\022\036\n\026only_if_format_dif"
+    "fers\030\006 \001(\010\022\'\n\005super\030\007 \002(\0132\030.TST.TableCom"
+    "mandArchive\"\366\001\n$CommandSetMultipleCellsC"
+    "ustomArchive\022(\n\tselection\030\001 \002(\0132\025.TST.Se"
+    "lectionArchive\022%\n\010undo_map\030\002 \002(\0132\023.TST.C"
+    "ellMapArchive\022%\n\010redo_map\030\003 \002(\0132\023.TST.Ce"
+    "llMapArchive\022-\n\013cell_format\030\004 \002(\0132\030.TSK."
+    "FormatStructArchive\022\'\n\005super\030\007 \002(\0132\030.TST"
+    ".TableCommandArchive\"\323\001\n0CommandSetMulti"
+    "pleCellsMultipleChoiceListArchive\022(\n\tsel"
     "ection\030\001 \002(\0132\025.TST.SelectionArchive\022%\n\010u"
     "ndo_map\030\002 \002(\0132\023.TST.CellMapArchive\022%\n\010re"
-    "do_map\030\003 \002(\0132\023.TST.CellMapArchive\022\036\n\013sou"
-    "rce_cell\030\004 \001(\0132\t.TST.Cell\022\036\n\026only_if_for"
-    "mat_differs\030\006 \001(\010\022\'\n\005super\030\007 \002(\0132\030.TST.T"
-    "ableCommandArchive\"\366\001\n$CommandSetMultipl"
-    "eCellsCustomArchive\022(\n\tselection\030\001 \002(\0132\025"
-    ".TST.SelectionArchive\022%\n\010undo_map\030\002 \002(\0132"
-    "\023.TST.CellMapArchive\022%\n\010redo_map\030\003 \002(\0132\023"
-    ".TST.CellMapArchive\022-\n\013cell_format\030\004 \002(\013"
-    "2\030.TSK.FormatStructArchive\022\'\n\005super\030\007 \002("
-    "\0132\030.TST.TableCommandArchive\"\323\001\n0CommandS"
-    "etMultipleCellsMultipleChoiceListArchive"
-    "\022(\n\tselection\030\001 \002(\0132\025.TST.SelectionArchi"
-    "ve\022%\n\010undo_map\030\002 \002(\0132\023.TST.CellMapArchiv"
-    "e\022%\n\010redo_map\030\003 \002(\0132\023.TST.CellMapArchive"
-    "\022\'\n\005super\030\005 \002(\0132\030.TST.TableCommandArchiv"
-    "e\"\334\001\n!CommandCoerceMultipleCellsArchive\022"
-    "(\n\tselection\030\001 \002(\0132\025.TST.SelectionArchiv"
-    "e\022%\n\010undo_map\030\002 \002(\0132\023.TST.CellMapArchive"
-    "\022%\n\010redo_map\030\003 \002(\0132\023.TST.CellMapArchive\022"
-    "\026\n\016desired_format\030\004 \002(\005\022\'\n\005super\030\006 \002(\0132\030"
-    ".TST.TableCommandArchive\"\323\001\n0CommandSetC"
-    "ontrolCellsDisplayNumberFormatArchive\022(\n"
-    "\tselection\030\001 \002(\0132\025.TST.SelectionArchive\022"
-    "%\n\010undo_map\030\002 \002(\0132\023.TST.CellMapArchive\022%"
-    "\n\010redo_map\030\003 \002(\0132\023.TST.CellMapArchive\022\'\n"
-    "\005super\030\006 \002(\0132\030.TST.TableCommandArchive\"\303"
-    "\001\n CommandSetAutomaticFormatArchive\022(\n\ts"
-    "election\030\001 \002(\0132\025.TST.SelectionArchive\022%\n"
-    "\010undo_map\030\002 \002(\0132\023.TST.CellMapArchive\022%\n\010"
-    "redo_map\030\003 \002(\0132\023.TST.CellMapArchive\022\'\n\005s"
-    "uper\030\006 \002(\0132\030.TST.TableCommandArchive\"\343\001\n"
-    "\'CommandSetAutomaticDurationUnitsArchive"
-    "\022(\n\tselection\030\001 \002(\0132\025.TST.SelectionArchi"
-    "ve\022%\n\010undo_map\030\002 \002(\0132\023.TST.CellMapArchiv"
-    "e\022%\n\010redo_map\030\003 \002(\0132\023.TST.CellMapArchive"
-    "\022\027\n\017automatic_units\030\004 \001(\010\022\'\n\005super\030\006 \002(\013"
-    "2\030.TST.TableCommandArchive\"\264\006\n!CommandIn"
-    "sertColumnsOrRowsArchive\022/\n\tdirection\030\001 "
-    "\002(\0162\034.TST.CommandDirectionArchive\022\r\n\005ind"
-    "ex\030\002 \002(\r\022\r\n\005count\030\003 \002(\r\022\014\n\004size\030\004 \002(\002\022\016\n"
-    "\006before\030\005 \002(\010\022\024\n\014header_count\030\013 \002(\r\022\025\n\rh"
-    "eaders_added\030\014 \002(\r\022\024\n\014footer_count\030\r \002(\r"
-    "\022\025\n\rfooters_added\030\016 \002(\r\022(\n\020row_column_st"
-    "yle\030\010 \001(\0132\016.TSP.Reference\022,\n\017cell_style_"
-    "redo\030\t \001(\0132\023.TST.CellMapArchive\022\'\n\005super"
-    "\030\n \002(\0132\030.TST.TableCommandArchive\022/\n\027form"
-    "ula_rewrite_command\030\017 \001(\0132\016.TSP.Referenc"
-    "e\022\024\n\014width_factor\030\020 \002(\002\022\025\n\rheight_factor"
-    "\030\021 \002(\002\022!\n\031allow_horizontal_autosize\030\022 \001("
-    "\010\022\026\n\016inherit_styles\030\023 \001(\010\022\027\n\017inherit_for"
-    "mats\030\024 \001(\010\022\030\n\020inherit_formulas\030\030 \001(\010\022U\n\026"
-    "cell_style_index_pairs\030\025 \003(\01325.TST.Comma"
-    "ndInsertColumnsOrRowsArchive.StyleIndexP"
-    "air\022U\n\026text_style_index_pairs\030\026 \003(\01325.TS"
-    "T.CommandInsertColumnsOrRowsArchive.Styl"
-    "eIndexPair\022\r\n\005sizes\030\027 \003(\001\032>\n\016StyleIndexP"
-    "air\022\035\n\005style\030\001 \002(\0132\016.TSP.Reference\022\r\n\005in"
-    "dex\030\002 \002(\r\"\352\002\n\023CommandPasteArchive\022-\n\016use"
-    "r_selection\030\001 \002(\0132\025.TST.SelectionArchive"
-    "\022.\n\017final_selection\030\002 \002(\0132\025.TST.Selectio"
-    "nArchive\022*\n\rundo_cell_map\030\003 \002(\0132\023.TST.Ce"
-    "llMapArchive\022*\n\rredo_cell_map\030\004 \002(\0132\023.TS"
-    "T.CellMapArchive\022$\n\014command_undo\030\006 \001(\0132\016"
+    "do_map\030\003 \002(\0132\023.TST.CellMapArchive\022\'\n\005sup"
+    "er\030\005 \002(\0132\030.TST.TableCommandArchive\"\334\001\n!C"
+    "ommandCoerceMultipleCellsArchive\022(\n\tsele"
+    "ction\030\001 \002(\0132\025.TST.SelectionArchive\022%\n\010un"
+    "do_map\030\002 \002(\0132\023.TST.CellMapArchive\022%\n\010red"
+    "o_map\030\003 \002(\0132\023.TST.CellMapArchive\022\026\n\016desi"
+    "red_format\030\004 \002(\005\022\'\n\005super\030\006 \002(\0132\030.TST.Ta"
+    "bleCommandArchive\"\323\001\n0CommandSetControlC"
+    "ellsDisplayNumberFormatArchive\022(\n\tselect"
+    "ion\030\001 \002(\0132\025.TST.SelectionArchive\022%\n\010undo"
+    "_map\030\002 \002(\0132\023.TST.CellMapArchive\022%\n\010redo_"
+    "map\030\003 \002(\0132\023.TST.CellMapArchive\022\'\n\005super\030"
+    "\006 \002(\0132\030.TST.TableCommandArchive\"\303\001\n Comm"
+    "andSetAutomaticFormatArchive\022(\n\tselectio"
+    "n\030\001 \002(\0132\025.TST.SelectionArchive\022%\n\010undo_m"
+    "ap\030\002 \002(\0132\023.TST.CellMapArchive\022%\n\010redo_ma"
+    "p\030\003 \002(\0132\023.TST.CellMapArchive\022\'\n\005super\030\006 "
+    "\002(\0132\030.TST.TableCommandArchive\"\343\001\n\'Comman"
+    "dSetAutomaticDurationUnitsArchive\022(\n\tsel"
+    "ection\030\001 \002(\0132\025.TST.SelectionArchive\022%\n\010u"
+    "ndo_map\030\002 \002(\0132\023.TST.CellMapArchive\022%\n\010re"
+    "do_map\030\003 \002(\0132\023.TST.CellMapArchive\022\027\n\017aut"
+    "omatic_units\030\004 \001(\010\022\'\n\005super\030\006 \002(\0132\030.TST."
+    "TableCommandArchive\"\232\001\n!CommandReplaceCu"
+    "stomFormatArchive\022%\n\010undo_map\030\001 \002(\0132\023.TS"
+    "T.CellMapArchive\022%\n\010redo_map\030\002 \002(\0132\023.TST"
+    ".CellMapArchive\022\'\n\005super\030\006 \002(\0132\030.TST.Tab"
+    "leCommandArchive\"\264\006\n!CommandInsertColumn"
+    "sOrRowsArchive\022/\n\tdirection\030\001 \002(\0162\034.TST."
+    "CommandDirectionArchive\022\r\n\005index\030\002 \002(\r\022\r"
+    "\n\005count\030\003 \002(\r\022\014\n\004size\030\004 \002(\002\022\016\n\006before\030\005 "
+    "\002(\010\022\024\n\014header_count\030\013 \002(\r\022\025\n\rheaders_add"
+    "ed\030\014 \002(\r\022\024\n\014footer_count\030\r \002(\r\022\025\n\rfooter"
+    "s_added\030\016 \002(\r\022(\n\020row_column_style\030\010 \001(\0132"
+    "\016.TSP.Reference\022,\n\017cell_style_redo\030\t \001(\013"
+    "2\023.TST.CellMapArchive\022\'\n\005super\030\n \002(\0132\030.T"
+    "ST.TableCommandArchive\022/\n\027formula_rewrit"
+    "e_command\030\017 \001(\0132\016.TSP.Reference\022\024\n\014width"
+    "_factor\030\020 \002(\002\022\025\n\rheight_factor\030\021 \002(\002\022!\n\031"
+    "allow_horizontal_autosize\030\022 \001(\010\022\026\n\016inher"
+    "it_styles\030\023 \001(\010\022\027\n\017inherit_formats\030\024 \001(\010"
+    "\022\030\n\020inherit_formulas\030\030 \001(\010\022U\n\026cell_style"
+    "_index_pairs\030\025 \003(\01325.TST.CommandInsertCo"
+    "lumnsOrRowsArchive.StyleIndexPair\022U\n\026tex"
+    "t_style_index_pairs\030\026 \003(\01325.TST.CommandI"
+    "nsertColumnsOrRowsArchive.StyleIndexPair"
+    "\022\r\n\005sizes\030\027 \003(\001\032>\n\016StyleIndexPair\022\035\n\005sty"
+    "le\030\001 \002(\0132\016.TSP.Reference\022\r\n\005index\030\002 \002(\r\""
+    "\364\002\n\023CommandPasteArchive\022-\n\016user_selectio"
+    "n\030\001 \002(\0132\025.TST.SelectionArchive\022.\n\017final_"
+    "selection\030\002 \002(\0132\025.TST.SelectionArchive\022/"
+    "\n\rundo_cell_map\030\003 \002(\0132\030.TST.TiledCellMap"
+    "Archive\022/\n\rredo_cell_map\030\004 \002(\0132\030.TST.Til"
+    "edCellMapArchive\022$\n\014command_undo\030\006 \001(\0132\016"
     ".TSP.Reference\022\033\n\023invalidate_comments\030\007 "
     "\002(\010\022\'\n\005super\030\013 \002(\0132\030.TST.TableCommandArc"
     "hive\0220\n\030formula_rewrite_commands\030\017 \003(\0132\016"
@@ -2773,371 +3032,416 @@ void protobuf_AddDesc_TSTCommandArchives_2eproto() {
     ".SelectionArchive\022*\n\rundo_cell_map\030\004 \002(\013"
     "2\023.TST.CellMapArchive\022*\n\rredo_cell_map\030\005"
     " \002(\0132\023.TST.CellMapArchive\022!\n\ttext_undo\030\006"
-    " \001(\0132\016.TSP.Reference\"\276\001\n\030CommandStyleTab"
-    "leArchive\022\'\n\005super\030\001 \002(\0132\030.TST.TableComm"
-    "andArchive\0223\n\021format_properties\030\002 \001(\0132\030."
-    "TSP.ReferenceDictionary\022!\n\told_style\030\003 \001"
-    "(\0132\016.TSP.Reference\022!\n\tnew_style\030\004 \001(\0132\016."
-    "TSP.Reference\"\376\002\n\027CommandFillCellsArchiv"
-    "e\022\'\n\005super\030\001 \002(\0132\030.TST.TableCommandArchi"
-    "ve\022.\n\017sourceselection\030\002 \002(\0132\025.TST.Select"
-    "ionArchive\022\'\n\017sourcecellrange\030\003 \002(\0132\016.TS"
-    "T.CellRange\022\'\n\017targetcellrange\030\004 \002(\0132\016.T"
-    "ST.CellRange\022*\n\rundo_cell_map\030\005 \002(\0132\023.TS"
-    "T.CellMapArchive\0220\n\rfillDirection\030\006 \002(\0162"
-    "\031.TST.FillDirectionArchive\022.\n\017targetsele"
-    "ction\030\007 \002(\0132\025.TST.SelectionArchive\022*\n\rre"
-    "do_cell_map\030\010 \002(\0132\023.TST.CellMapArchive\"\305"
-    "\001\n\031CommandReplaceTextArchive\022\033\n\006cellID\030\001"
-    " \002(\0132\013.TST.CellID\022\032\n\007newcell\030\002 \002(\0132\t.TST"
-    ".Cell\022\032\n\007oldcell\030\003 \002(\0132\t.TST.Cell\022\'\n\005sup"
-    "er\030\004 \002(\0132\030.TST.TableCommandArchive\022*\n\022ch"
-    "ild_command_undo\030\005 \001(\0132\016.TSP.Reference\"\231"
-    "\001\n\034CommandReplaceAllTextArchive\022!\n\ttable"
-    "Info\030\001 \002(\0132\016.TSP.Reference\022*\n\rundo_cell_"
-    "map\030\002 \002(\0132\023.TST.CellMapArchive\022*\n\rredo_c"
-    "ell_map\030\003 \002(\0132\023.TST.CellMapArchive\"\245\001\n\'C"
-    "ommandSetRepeatingHeaderEnabledArchive\022 "
-    "\n\030repeating_header_enabled\030\001 \002(\010\022/\n\tdire"
-    "ction\030\002 \002(\0162\034.TST.CommandDirectionArchiv"
-    "e\022\'\n\005super\030\003 \002(\0132\030.TST.TableCommandArchi"
-    "ve\"b\n\037CommandSetFiltersEnabledArchive\022\026\n"
-    "\016enable_filters\030\001 \002(\010\022\'\n\005super\030\002 \002(\0132\030.T"
-    "ST.TableCommandArchive\"\273\001\n!CommandAddQui"
-    "ckFilterRulesArchive\022\'\n\005super\030\001 \002(\0132\030.TS"
-    "T.TableCommandArchive\022%\n\005rules\030\002 \003(\0132\026.T"
-    "ST.FilterRuleArchive\022\024\n\014filter_index\030\003 \002"
-    "(\r\022\024\n\014rule_indices\030\004 \003(\r\022\032\n\022filter_set_e"
-    "nabled\030\005 \002(\010\"\326\001\n\037CommandDeleteFilterRule"
+    " \001(\0132\016.TSP.Reference\"\234\002\n\035CommandSetFillP"
+    "ropertyArchive\022\'\n\005super\030\001 \002(\0132\030.TST.Tabl"
+    "eCommandArchive\022\036\n\004fill\030\002 \001(\0132\020.TSD.Fill"
+    "Archive\0220\n\022cell_fill_stand_in\030\003 \001(\0132\024.TS"
+    "T.CellFillStandIn\022(\n\tselection\030\004 \002(\0132\025.T"
+    "ST.SelectionArchive\022*\n\rundo_cell_map\030\005 \002"
+    "(\0132\023.TST.CellMapArchive\022*\n\rredo_cell_map"
+    "\030\006 \002(\0132\023.TST.CellMapArchive\"\276\001\n\030CommandS"
+    "tyleTableArchive\022\'\n\005super\030\001 \002(\0132\030.TST.Ta"
+    "bleCommandArchive\0223\n\021format_properties\030\002"
+    " \001(\0132\030.TSP.ReferenceDictionary\022!\n\told_st"
+    "yle\030\003 \001(\0132\016.TSP.Reference\022!\n\tnew_style\030\004"
+    " \001(\0132\016.TSP.Reference\"\376\002\n\027CommandFillCell"
     "sArchive\022\'\n\005super\030\001 \002(\0132\030.TST.TableComma"
-    "ndArchive\022*\n\nundo_rules\030\002 \003(\0132\026.TST.Filt"
-    "erRuleArchive\022\024\n\014rule_indices\030\003 \003(\r\022\026\n\016f"
-    "ilter_removed\030\004 \002(\010\022\024\n\014filter_index\030\005 \002("
-    "\r\022\032\n\022filter_set_enabled\030\006 \002(\010\"\311\001\n\036Comman"
-    "dModifyFilterRuleArchive\022\'\n\005super\030\001 \002(\0132"
-    "\030.TST.TableCommandArchive\022)\n\tundo_rule\030\002"
-    " \002(\0132\026.TST.FilterRuleArchive\022)\n\tredo_rul"
-    "e\030\003 \002(\0132\026.TST.FilterRuleArchive\022\022\n\nrule_"
-    "index\030\004 \002(\r\022\024\n\014filter_index\030\005 \002(\r\"\225\002\n\037Co"
-    "mmandApplyStrokePresetArchive\022\'\n\005super\030\001"
-    " \002(\0132\030.TST.TableCommandArchive\022*\n\rundo_c"
-    "ell_map\030\002 \002(\0132\023.TST.CellMapArchive\022*\n\rre"
-    "do_cell_map\030\004 \002(\0132\023.TST.CellMapArchive\022("
-    "\n\tselection\030\003 \002(\0132\025.TST.SelectionArchive"
-    "\0221\n\022expanded_selection\030\006 \001(\0132\025.TST.Selec"
-    "tionArchive\022\024\n\014preset_index\030\005 \002(\005\"\322\005\n#Co"
-    "mmandApplyTableStylePresetArchive\022\'\n\005sup"
-    "er\030\001 \002(\0132\030.TST.TableCommandArchive\022*\n\run"
-    "do_cell_map\030\002 \002(\0132\023.TST.CellMapArchive\022*"
-    "\n\rredo_cell_map\030\004 \002(\0132\023.TST.CellMapArchi"
-    "ve\022\024\n\014preset_index\030\005 \002(\005\0227\n\020old_table_st"
-    "yles\030\007 \002(\0132\035.TST.TableStyleNetworkArchiv"
-    "e\0227\n\020new_table_styles\030\010 \002(\0132\035.TST.TableS"
-    "tyleNetworkArchive\022\030\n\020apply_clears_all\030\n"
-    " \001(\010\022)\n\021font_size_command\030\013 \001(\0132\016.TSP.Re"
-    "ference\022\?\n\'set_style_apply_clears_all_fl"
-    "ag_command\030\014 \001(\0132\016.TSP.Reference\022X\n\026row_"
-    "style_index_tuples\030\r \003(\01328.TST.CommandAp"
-    "plyTableStylePresetArchive.StyleIndexTup"
-    "le\022X\n\026col_style_index_tuples\030\016 \003(\01328.TST"
-    ".CommandApplyTableStylePresetArchive.Sty"
-    "leIndexTuple\032h\n\017StyleIndexTuple\022\r\n\005index"
-    "\030\001 \002(\r\022\"\n\ncell_style\030\005 \001(\0132\016.TSP.Referen"
-    "ce\022\"\n\ntext_style\030\006 \001(\0132\016.TSP.Reference\"m"
-    "\n(CommandSetStyleApplyClearsAllFlagArchi"
-    "ve\022\'\n\005super\030\001 \002(\0132\030.TST.TableCommandArch"
-    "ive\022\030\n\020apply_clears_all\030\002 \002(\010\"\224\002\n\037Comman"
-    "dApplyThemeToTableArchive\022\'\n\005super\030\001 \002(\013"
-    "2\030.TST.TableCommandArchive\022*\n\rundo_cell_"
-    "map\030\002 \002(\0132\023.TST.CellMapArchive\022*\n\rredo_c"
-    "ell_map\030\004 \002(\0132\023.TST.CellMapArchive\0227\n\020ol"
-    "d_table_styles\030\007 \002(\0132\035.TST.TableStyleNet"
-    "workArchive\0227\n\020new_table_styles\030\010 \002(\0132\035."
-    "TST.TableStyleNetworkArchive\"\201\001\n%Command"
-    "ApplyThemeChildForTableArchive\0221\n\005super\030"
-    "\001 \002(\0132\".TSS.ApplyThemeChildCommandArchiv"
-    "e\022%\n\rapply_command\030\002 \002(\0132\016.TSP.Reference"
-    "\"\224\003\n CommandToggleTextPropertyArchive\022\'\n"
-    "\005super\030\001 \002(\0132\030.TST.TableCommandArchive\022("
-    "\n\tselection\030\002 \002(\0132\025.TST.SelectionArchive"
-    "\022\020\n\010property\030\003 \002(\r\022*\n\rundo_cell_map\030\004 \002("
-    "\0132\023.TST.CellMapArchive\022*\n\rredo_cell_map\030"
-    "\005 \002(\0132\023.TST.CellMapArchive\022$\n\021default_bo"
-    "dy_cell\030\006 \002(\0132\t.TST.Cell\022\"\n\017default_hr_c"
-    "ell\030\007 \002(\0132\t.TST.Cell\022\"\n\017default_hc_cell\030"
-    "\010 \002(\0132\t.TST.Cell\022\"\n\017default_fr_cell\030\t \002("
-    "\0132\t.TST.Cell\022!\n\ttext_undo\030\n \001(\0132\016.TSP.Re"
-    "ference\"\316\001\n!CommandResetFillPropertyToDe"
-    "fault\022\'\n\005super\030\001 \002(\0132\030.TST.TableCommandA"
-    "rchive\022(\n\tselection\030\002 \002(\0132\025.TST.Selectio"
-    "nArchive\022*\n\rundo_cell_map\030\004 \002(\0132\023.TST.Ce"
-    "llMapArchive\022*\n\rredo_cell_map\030\005 \002(\0132\023.TS"
-    "T.CellMapArchive\"\331\001\n,CommandSetSingleNum"
-    "berFormatParameterArchive\022\'\n\005super\030\001 \002(\013"
-    "2\030.TST.TableCommandArchive\022(\n\tselection\030"
-    "\002 \002(\0132\025.TST.SelectionArchive\022*\n\rundo_cel"
-    "l_map\030\003 \002(\0132\023.TST.CellMapArchive\022*\n\rredo"
-    "_cell_map\030\004 \002(\0132\023.TST.CellMapArchive\"g\n\025"
-    "CommandSetBaseArchive\022@\n\005super\030\001 \002(\01321.T"
-    "ST.CommandSetSingleNumberFormatParameter"
-    "Archive\022\014\n\004base\030\002 \002(\r\"t\n\033CommandSetBaseP"
-    "lacesArchive\022@\n\005super\030\001 \002(\01321.TST.Comman"
-    "dSetSingleNumberFormatParameterArchive\022\023"
-    "\n\013base_places\030\002 \002(\r\"\202\001\n!CommandSetBaseUs"
-    "eMinusSignArchive\022@\n\005super\030\001 \002(\01321.TST.C"
-    "ommandSetSingleNumberFormatParameterArch"
-    "ive\022\033\n\023base_use_minus_sign\030\002 \002(\010\"\211\001\n\037Com"
-    "mandSetControlMinimumArchive\022@\n\005super\030\001 "
-    "\002(\01321.TST.CommandSetSingleNumberFormatPa"
-    "rameterArchive\022\017\n\007minimum\030\002 \002(\001\022\023\n\013forma"
-    "t_type\030\003 \002(\r\"\211\001\n\037CommandSetControlMaximu"
-    "mArchive\022@\n\005super\030\001 \002(\01321.TST.CommandSet"
-    "SingleNumberFormatParameterArchive\022\017\n\007ma"
-    "ximum\030\002 \002(\001\022\023\n\013format_type\030\003 \002(\r\"\215\001\n!Com"
-    "mandSetControlIncrementArchive\022@\n\005super\030"
-    "\001 \002(\01321.TST.CommandSetSingleNumberFormat"
-    "ParameterArchive\022\021\n\tincrement\030\002 \002(\001\022\023\n\013f"
-    "ormat_type\030\003 \002(\r\"x\n\035CommandSetCurrencyCo"
-    "deArchive\022@\n\005super\030\001 \002(\01321.TST.CommandSe"
-    "tSingleNumberFormatParameterArchive\022\025\n\rc"
-    "urrency_code\030\002 \002(\t\"\200\001\n!CommandSetFractio"
-    "nAccuracyArchive\022@\n\005super\030\001 \002(\01321.TST.Co"
-    "mmandSetSingleNumberFormatParameterArchi"
-    "ve\022\031\n\021fraction_accuracy\030\002 \002(\r\"z\n6Command"
-    "SetMultipleChoiceListFormatForEditedItem"
-    "Archive\022@\n\005super\030\001 \002(\01321.TST.CommandSetS"
-    "ingleNumberFormatParameterArchive\"z\n6Com"
-    "mandSetMultipleChoiceListFormatForDelete"
-    "ItemArchive\022@\n\005super\030\001 \002(\01321.TST.Command"
-    "SetSingleNumberFormatParameterArchive\"{\n"
-    "7CommandSetMultipleChoiceListFormatForRe"
-    "orderItemArchive\022@\n\005super\030\001 \002(\01321.TST.Co"
-    "mmandSetSingleNumberFormatParameterArchi"
-    "ve\"|\n8CommandSetMultipleChoiceListFormat"
-    "ForInitialValueArchive\022@\n\005super\030\001 \002(\01321."
-    "TST.CommandSetSingleNumberFormatParamete"
-    "rArchive\"\207\001\n$CommandSetNegativeNumberSty"
-    "leArchive\022@\n\005super\030\001 \002(\01321.TST.CommandSe"
-    "tSingleNumberFormatParameterArchive\022\035\n\025n"
-    "egative_number_style\030\002 \002(\r\"\373\001\n\037CommandSe"
-    "tExplicitFormatArchive\022\'\n\005super\030\001 \002(\0132\030."
-    "TST.TableCommandArchive\022(\n\tselection\030\002 \002"
-    "(\0132\025.TST.SelectionArchive\022-\n\013cell_format"
-    "\030\003 \002(\0132\030.TSK.FormatStructArchive\022*\n\rundo"
-    "_cell_map\030\004 \002(\0132\023.TST.CellMapArchive\022*\n\r"
-    "redo_cell_map\030\005 \002(\0132\023.TST.CellMapArchive"
-    "\"\202\001\n&CommandSetNumberOfDecimalPlacesArch"
-    "ive\022@\n\005super\030\001 \002(\01321.TST.CommandSetSingl"
-    "eNumberFormatParameterArchive\022\026\n\016decimal"
-    "_places\030\002 \002(\r\"c\n\037CommandSetDateTimeForma"
-    "tArchive\022@\n\005super\030\001 \002(\01321.TST.CommandSet"
-    "SingleNumberFormatParameterArchive\"\215\001\n\'C"
-    "ommandSetShowThousandsSeparatorArchive\022@"
-    "\n\005super\030\001 \002(\01321.TST.CommandSetSingleNumb"
-    "erFormatParameterArchive\022 \n\030show_thousan"
-    "ds_separator\030\002 \002(\010\"\205\001\n#CommandSetUseAcco"
-    "untingStyleArchive\022@\n\005super\030\001 \002(\01321.TST."
-    "CommandSetSingleNumberFormatParameterArc"
-    "hive\022\034\n\024use_accounting_style\030\002 \002(\010\"\303\002\n\026C"
-    "ommandMoveRowsArchive\022\'\n\005super\030\001 \002(\0132\030.T"
-    "ST.TableCommandArchive\022(\n\tselection\030\002 \001("
-    "\0132\025.TST.SelectionArchive\022\027\n\017start_row_in"
-    "dex\030\003 \002(\r\022\026\n\016dest_row_index\030\004 \002(\r\022\026\n\016num"
-    "ber_of_rows\030\005 \002(\r\022/\n\027formula_rewrite_com"
-    "mand\030\007 \001(\0132\016.TSP.Reference\022$\n\014show_comma"
-    "nd\030\010 \001(\0132\016.TSP.Reference\0226\n\036unmerge_inva"
-    "lid_ranges_command\030\t \001(\0132\016.TSP.Reference"
-    "\"\227\002\n\031CommandMoveColumnsArchive\022\'\n\005super\030"
-    "\001 \002(\0132\030.TST.TableCommandArchive\022(\n\tselec"
-    "tion\030\002 \001(\0132\025.TST.SelectionArchive\022\032\n\022sta"
-    "rt_column_index\030\003 \002(\r\022\031\n\021dest_column_ind"
-    "ex\030\004 \002(\r\022\031\n\021number_of_columns\030\005 \002(\r\022/\n\027f"
-    "ormula_rewrite_command\030\007 \001(\0132\016.TSP.Refer"
-    "ence\022$\n\014show_command\030\010 \001(\0132\016.TSP.Referen"
-    "ce\"\233\001\n\022CommandSortArchive\022\'\n\005super\030\001 \002(\013"
-    "2\030.TST.TableCommandArchive\022+\n\007mapping\030\005 "
-    "\002(\0132\032.TSK.ShuffleMappingArchive\022/\n\027formu"
-    "la_rewrite_command\030\007 \001(\0132\016.TSP.Reference"
-    "\"\372\001\n$CommandRewriteFormulasForSortArchiv"
-    "e\022\'\n\005super\030\001 \002(\0132\030.TST.TableCommandArchi"
-    "ve\0221\n\013formula_map\030\002 \002(\0132\034.TSCE.OwnerForm"
-    "ulaMapArchive\0220\n\014sort_mapping\030\003 \002(\0132\032.TS"
-    "K.ShuffleMappingArchive\022,\n\017sorted_table_"
-    "id\030\004 \002(\0132\023.TSCE.CFUUIDArchive\022\026\n\016explode"
-    "_ranges\030\005 \002(\010\"\277\001\n-CommandRewriteFormulas"
-    "ForTectonicShiftArchive\022\'\n\005super\030\001 \002(\0132\030"
-    ".TST.TableCommandArchive\0221\n\013formula_map\030"
-    "\002 \002(\0132\034.TSCE.OwnerFormulaMapArchive\0222\n\016t"
-    "ectonic_shift\030\003 \002(\0132\032.TSCE.TectonicShift"
-    "Archive\"\352\001\n$CommandRewriteFormulasForMov"
-    "eArchive\022\'\n\005super\030\001 \002(\0132\030.TST.TableComma"
-    "ndArchive\0221\n\013formula_map\030\002 \002(\0132\034.TSCE.Ow"
-    "nerFormulaMapArchive\0223\n\016from_reference\030\006"
-    " \002(\0132\033.TSCE.RangeReferenceArchive\0221\n\014to_"
-    "reference\030\007 \002(\0132\033.TSCE.RangeReferenceArc"
-    "hive\"\342\001\n)CommandRewriteFormulasForCellMe"
-    "rgeArchive\022\'\n\005super\030\001 \002(\0132\030.TST.TableCom"
-    "mandArchive\0221\n\013formula_map\030\002 \002(\0132\034.TSCE."
-    "OwnerFormulaMapArchive\0222\n\014merged_range\030\003"
-    " \002(\0132\034.TSCE.RangeCoordinateArchive\022%\n\010ta"
-    "ble_id\030\004 \002(\0132\023.TSCE.CFUUIDArchive\"\\\n1Com"
-    "mandRewriteFilterFormulasForTableResizeA"
-    "rchive\022\'\n\005super\030\001 \002(\0132\030.TST.TableCommand"
-    "Archive\"\266\001\n3CommandRewriteFilterFormulas"
-    "ForTectonicShiftArchive\022\'\n\005super\030\001 \002(\0132\030"
-    ".TST.TableCommandArchive\022\"\n\nfilter_set\030\002"
-    " \002(\0132\016.TSP.Reference\0222\n\016tectonic_shift\030\003"
-    " \002(\0132\032.TSCE.TectonicShiftArchive\"\331\001\n*Com"
-    "mandRewriteFilterFormulasForSortArchive\022"
+    "ndArchive\022.\n\017sourceselection\030\002 \002(\0132\025.TST"
+    ".SelectionArchive\022\'\n\017sourcecellrange\030\003 \002"
+    "(\0132\016.TST.CellRange\022\'\n\017targetcellrange\030\004 "
+    "\002(\0132\016.TST.CellRange\022*\n\rundo_cell_map\030\005 \002"
+    "(\0132\023.TST.CellMapArchive\0220\n\rfillDirection"
+    "\030\006 \002(\0162\031.TST.FillDirectionArchive\022.\n\017tar"
+    "getselection\030\007 \002(\0132\025.TST.SelectionArchiv"
+    "e\022*\n\rredo_cell_map\030\010 \002(\0132\023.TST.CellMapAr"
+    "chive\"\305\001\n\031CommandReplaceTextArchive\022\033\n\006c"
+    "ellID\030\001 \002(\0132\013.TST.CellID\022\032\n\007newcell\030\002 \002("
+    "\0132\t.TST.Cell\022\032\n\007oldcell\030\003 \002(\0132\t.TST.Cell"
+    "\022\'\n\005super\030\004 \002(\0132\030.TST.TableCommandArchiv"
+    "e\022*\n\022child_command_undo\030\005 \001(\0132\016.TSP.Refe"
+    "rence\"\231\001\n\034CommandReplaceAllTextArchive\022!"
+    "\n\ttableInfo\030\001 \002(\0132\016.TSP.Reference\022*\n\rund"
+    "o_cell_map\030\002 \002(\0132\023.TST.CellMapArchive\022*\n"
+    "\rredo_cell_map\030\003 \002(\0132\023.TST.CellMapArchiv"
+    "e\"\245\001\n\'CommandSetRepeatingHeaderEnabledAr"
+    "chive\022 \n\030repeating_header_enabled\030\001 \002(\010\022"
+    "/\n\tdirection\030\002 \002(\0162\034.TST.CommandDirectio"
+    "nArchive\022\'\n\005super\030\003 \002(\0132\030.TST.TableComma"
+    "ndArchive\"b\n\037CommandSetFiltersEnabledArc"
+    "hive\022\026\n\016enable_filters\030\001 \002(\010\022\'\n\005super\030\002 "
+    "\002(\0132\030.TST.TableCommandArchive\"\273\001\n!Comman"
+    "dAddQuickFilterRulesArchive\022\'\n\005super\030\001 \002"
+    "(\0132\030.TST.TableCommandArchive\022%\n\005rules\030\002 "
+    "\003(\0132\026.TST.FilterRuleArchive\022\024\n\014filter_in"
+    "dex\030\003 \002(\r\022\024\n\014rule_indices\030\004 \003(\r\022\032\n\022filte"
+    "r_set_enabled\030\005 \002(\010\"\326\001\n\037CommandDeleteFil"
+    "terRulesArchive\022\'\n\005super\030\001 \002(\0132\030.TST.Tab"
+    "leCommandArchive\022*\n\nundo_rules\030\002 \003(\0132\026.T"
+    "ST.FilterRuleArchive\022\024\n\014rule_indices\030\003 \003"
+    "(\r\022\026\n\016filter_removed\030\004 \002(\010\022\024\n\014filter_ind"
+    "ex\030\005 \002(\r\022\032\n\022filter_set_enabled\030\006 \002(\010\"\311\001\n"
+    "\036CommandModifyFilterRuleArchive\022\'\n\005super"
+    "\030\001 \002(\0132\030.TST.TableCommandArchive\022)\n\tundo"
+    "_rule\030\002 \002(\0132\026.TST.FilterRuleArchive\022)\n\tr"
+    "edo_rule\030\003 \002(\0132\026.TST.FilterRuleArchive\022\022"
+    "\n\nrule_index\030\004 \002(\r\022\024\n\014filter_index\030\005 \002(\r"
+    "\"\225\002\n\037CommandApplyStrokePresetArchive\022\'\n\005"
+    "super\030\001 \002(\0132\030.TST.TableCommandArchive\022*\n"
+    "\rundo_cell_map\030\002 \002(\0132\023.TST.CellMapArchiv"
+    "e\022*\n\rredo_cell_map\030\004 \002(\0132\023.TST.CellMapAr"
+    "chive\022(\n\tselection\030\003 \002(\0132\025.TST.Selection"
+    "Archive\0221\n\022expanded_selection\030\006 \001(\0132\025.TS"
+    "T.SelectionArchive\022\024\n\014preset_index\030\005 \002(\005"
+    "\"\262\001\n!CommandAddTableStylePresetArchive\022\'"
+    "\n\005super\030\001 \002(\0132\030.TST.TableCommandArchive\022"
+    "\024\n\014preset_index\030\002 \002(\005\0223\n\014table_styles\030\003 "
+    "\002(\0132\035.TST.TableStyleNetworkArchive\022\031\n\021se"
+    "nd_notification\030\004 \002(\010\"\330\001\n$CommandRemoveT"
+    "ableStylePresetArchive\022\"\n\005super\030\001 \002(\0132\023."
+    "TSK.CommandArchive\022\035\n\005theme\030\002 \002(\0132\016.TSP."
+    "Reference\022;\n\024removed_table_styles\030\003 \002(\0132"
+    "\035.TST.TableStyleNetworkArchive\022\021\n\tpreset"
+    "_id\030\004 \002(\005\022\035\n\025preset_index_in_theme\030\005 \002(\005"
+    "\"\334\001\n%CommandReplaceTableStylePresetArchi"
+    "ve\022\"\n\005super\030\001 \002(\0132\023.TSK.CommandArchive\022\035"
+    "\n\005theme\030\002 \002(\0132\016.TSP.Reference\0227\n\020old_tab"
+    "le_styles\030\003 \002(\0132\035.TST.TableStyleNetworkA"
+    "rchive\0227\n\020new_table_styles\030\004 \002(\0132\035.TST.T"
+    "ableStyleNetworkArchive\"\326\005\n#CommandApply"
+    "TableStylePresetArchive\022\'\n\005super\030\001 \002(\0132\030"
+    ".TST.TableCommandArchive\022*\n\rundo_cell_ma"
+    "p\030\002 \002(\0132\023.TST.CellMapArchive\022*\n\rredo_cel"
+    "l_map\030\004 \002(\0132\023.TST.CellMapArchive\022\024\n\014pres"
+    "et_index\030\005 \002(\005\0227\n\020old_table_styles\030\007 \002(\013"
+    "2\035.TST.TableStyleNetworkArchive\022;\n\020new_t"
+    "able_styles\030\010 \001(\0132\035.TST.TableStyleNetwor"
+    "kArchiveB\002\030\001\022\030\n\020apply_clears_all\030\n \001(\010\022)"
+    "\n\021font_size_command\030\013 \001(\0132\016.TSP.Referenc"
+    "e\022\?\n\'set_style_apply_clears_all_flag_com"
+    "mand\030\014 \001(\0132\016.TSP.Reference\022X\n\026row_style_"
+    "index_tuples\030\r \003(\01328.TST.CommandApplyTab"
+    "leStylePresetArchive.StyleIndexTuple\022X\n\026"
+    "col_style_index_tuples\030\016 \003(\01328.TST.Comma"
+    "ndApplyTableStylePresetArchive.StyleInde"
+    "xTuple\032h\n\017StyleIndexTuple\022\r\n\005index\030\001 \002(\r"
+    "\022\"\n\ncell_style\030\005 \001(\0132\016.TSP.Reference\022\"\n\n"
+    "text_style\030\006 \001(\0132\016.TSP.Reference\"m\n(Comm"
+    "andSetStyleApplyClearsAllFlagArchive\022\'\n\005"
+    "super\030\001 \002(\0132\030.TST.TableCommandArchive\022\030\n"
+    "\020apply_clears_all\030\002 \002(\010\"\224\002\n\037CommandApply"
+    "ThemeToTableArchive\022\'\n\005super\030\001 \002(\0132\030.TST"
+    ".TableCommandArchive\022*\n\rundo_cell_map\030\002 "
+    "\002(\0132\023.TST.CellMapArchive\022*\n\rredo_cell_ma"
+    "p\030\004 \002(\0132\023.TST.CellMapArchive\0227\n\020old_tabl"
+    "e_styles\030\007 \002(\0132\035.TST.TableStyleNetworkAr"
+    "chive\0227\n\020new_table_styles\030\010 \002(\0132\035.TST.Ta"
+    "bleStyleNetworkArchive\"\201\001\n%CommandApplyT"
+    "hemeChildForTableArchive\0221\n\005super\030\001 \002(\0132"
+    "\".TSS.ApplyThemeChildCommandArchive\022%\n\ra"
+    "pply_command\030\002 \002(\0132\016.TSP.Reference\"\224\003\n C"
+    "ommandToggleTextPropertyArchive\022\'\n\005super"
+    "\030\001 \002(\0132\030.TST.TableCommandArchive\022(\n\tsele"
+    "ction\030\002 \002(\0132\025.TST.SelectionArchive\022\020\n\010pr"
+    "operty\030\003 \002(\r\022*\n\rundo_cell_map\030\004 \002(\0132\023.TS"
+    "T.CellMapArchive\022*\n\rredo_cell_map\030\005 \002(\0132"
+    "\023.TST.CellMapArchive\022$\n\021default_body_cel"
+    "l\030\006 \002(\0132\t.TST.Cell\022\"\n\017default_hr_cell\030\007 "
+    "\002(\0132\t.TST.Cell\022\"\n\017default_hc_cell\030\010 \002(\0132"
+    "\t.TST.Cell\022\"\n\017default_fr_cell\030\t \002(\0132\t.TS"
+    "T.Cell\022!\n\ttext_undo\030\n \001(\0132\016.TSP.Referenc"
+    "e\"\316\001\n!CommandResetFillPropertyToDefault\022"
     "\'\n\005super\030\001 \002(\0132\030.TST.TableCommandArchive"
-    "\022\"\n\nfilter_set\030\002 \002(\0132\016.TSP.Reference\0220\n\014"
-    "sort_mapping\030\003 \002(\0132\032.TSK.ShuffleMappingA"
-    "rchive\022,\n\017sorted_table_id\030\004 \002(\0132\023.TSCE.C"
-    "FUUIDArchive\"\230\002\n6CommandRewriteCondition"
-    "alStylesForTectonicShiftArchive\022\'\n\005super"
-    "\030\001 \002(\0132\030.TST.TableCommandArchive\0222\n\016tect"
-    "onic_shift\030\002 \002(\0132\032.TSCE.TectonicShiftArc"
-    "hive\022;\n\020cells_to_rewrite\030\003 \001(\0132!.TSCE.Ce"
-    "llCoordinateVectorArchive\022D\n\026conditional"
-    "_style_sets\030\004 \001(\0132$.TSCE.CellCoordinateO"
-    "bjectMapArchive\"\273\002\n-CommandRewriteCondit"
-    "ionalStylesForSortArchive\022\'\n\005super\030\001 \002(\013"
-    "2\030.TST.TableCommandArchive\0220\n\014sort_mappi"
-    "ng\030\002 \002(\0132\032.TSK.ShuffleMappingArchive\022,\n\017"
-    "sorted_table_id\030\003 \002(\0132\023.TSCE.CFUUIDArchi"
-    "ve\022;\n\020cells_to_rewrite\030\004 \001(\0132!.TSCE.Cell"
-    "CoordinateVectorArchive\022D\n\026conditional_s"
-    "tyle_sets\030\005 \001(\0132$.TSCE.CellCoordinateObj"
-    "ectMapArchive\"\324\002\n2CommandRewriteConditio"
-    "nalStylesForRangeMoveArchive\022\'\n\005super\030\001 "
-    "\002(\0132\030.TST.TableCommandArchive\0229\n\024from_ra"
-    "nge_reference\030\007 \001(\0132\033.TSCE.RangeReferenc"
-    "eArchive\0227\n\022to_range_reference\030\010 \001(\0132\033.T"
-    "SCE.RangeReferenceArchive\022;\n\020cells_to_re"
-    "write\030\005 \001(\0132!.TSCE.CellCoordinateVectorA"
-    "rchive\022D\n\026conditional_style_sets\030\006 \001(\0132$"
-    ".TSCE.CellCoordinateObjectMapArchive\"\302\002\n"
-    "2CommandRewriteConditionalStylesForCellM"
-    "ergeArchive\022\'\n\005super\030\001 \002(\0132\030.TST.TableCo"
-    "mmandArchive\022,\n\017merged_table_id\030\002 \002(\0132\023."
-    "TSCE.CFUUIDArchive\0222\n\014merged_range\030\003 \002(\013"
-    "2\034.TSCE.RangeCoordinateArchive\022;\n\020cells_"
-    "to_rewrite\030\004 \001(\0132!.TSCE.CellCoordinateVe"
-    "ctorArchive\022D\n\026conditional_style_sets\030\005 "
-    "\001(\0132$.TSCE.CellCoordinateObjectMapArchiv"
-    "e\"\326\002\n\032CommandMergeUnmergeArchive\022\'\n\005supe"
-    "r\030\001 \002(\0132\030.TST.TableCommandArchive\022-\n\014mer"
-    "ge_action\030\002 \002(\0162\027.TST.MergeActionArchive"
-    "\022(\n\tselection\030\003 \002(\0132\025.TST.SelectionArchi"
+    "\022(\n\tselection\030\002 \002(\0132\025.TST.SelectionArchi"
     "ve\022*\n\rundo_cell_map\030\004 \002(\0132\023.TST.CellMapA"
     "rchive\022*\n\rredo_cell_map\030\005 \002(\0132\023.TST.Cell"
-    "MapArchive\022(\n\020old_merge_ranges\030\010 \001(\0132\016.T"
-    "SP.Reference\0224\n\034undo_formula_rewrite_com"
-    "mand\030\t \001(\0132\016.TSP.Reference\"\204\002\n\026CommandHi"
-    "deShowArchive\022\'\n\005super\030\001 \002(\0132\030.TST.Table"
-    "CommandArchive\022/\n\tdirection\030\002 \002(\0162\034.TST."
-    "CommandDirectionArchive\0224\n\020hide_show_act"
-    "ion\030\003 \002(\0162\032.TST.HideShowActionArchive\022\025\n"
-    "\rhiding_action\030\004 \002(\r\022(\n\021elements_affecte"
-    "d\030\005 \002(\0132\r.TSP.IndexSet\022\031\n\021old_hiding_sta"
-    "tes\030\007 \003(\r\"\335\002\n\037TableInfoGeometryCommandAr"
-    "chive\022\"\n\005super\030\001 \002(\0132\023.TSK.CommandArchiv"
-    "e\022\037\n\014scale_factor\030\002 \002(\0132\t.TSP.Size\022\"\n\nta"
-    "ble_info\030\003 \001(\0132\016.TSP.Reference\022*\n\014new_ge"
-    "ometry\030\004 \001(\0132\024.TSD.GeometryArchive\022*\n\014ol"
-    "d_geometry\030\005 \001(\0132\024.TSD.GeometryArchive\022\034"
-    "\n\024turn_off_auto_resize\030\006 \001(\010\022,\n$should_c"
-    "lear_object_placeholder_flag\030\007 \001(\010\022-\n%di"
-    "d_match_object_placeholder_geometry\030\010 \001("
-    "\010\"\263\002\n!FormulaEditingCommandGroupArchive\022"
-    "2\n\005super\030\001 \002(\0132#.TSK.ProgressiveCommandG"
-    "roupArchive\022\032\n\022undoSelectionValid\030\002 \002(\010\022"
-    "\032\n\022undoSelectionStart\030\003 \002(\r\022\033\n\023undoSelec"
-    "tionLength\030\004 \002(\r\022\027\n\017undoActiveToken\030\005 \002("
-    "\r\022\032\n\022redoSelectionValid\030\006 \002(\010\022\032\n\022redoSel"
-    "ectionStart\030\007 \002(\r\022\033\n\023redoSelectionLength"
-    "\030\010 \002(\r\022\027\n\017redoActiveToken\030\t \002(\r\"\254\002\n-Form"
-    "ulaEditingCommandSelectionBehaviorArchiv"
-    "e\022\032\n\022undoSelectionValid\030\002 \001(\010\022\032\n\022undoSel"
-    "ectionStart\030\003 \001(\r\022\033\n\023undoSelectionLength"
-    "\030\004 \001(\r\022\027\n\017undoActiveToken\030\005 \001(\r\022\032\n\022redoS"
-    "electionValid\030\006 \001(\010\022\032\n\022redoSelectionStar"
-    "t\030\007 \001(\r\022\033\n\023redoSelectionLength\030\010 \001(\r\022\027\n\017"
-    "redoActiveToken\030\t \001(\r\022\037\n\007storage\030\n \001(\0132\016"
-    ".TSP.Reference\"\246\002\n,UndoRedoStateCommandS"
-    "electionBehaviorArchive\0222\n\026before_undo_r"
-    "edo_state\030\001 \001(\0132\016.TSP.ReferenceB\002\030\001\0221\n\025a"
-    "fter_undo_redo_state\030\002 \001(\0132\016.TSP.Referen"
-    "ceB\002\030\001\022\"\n\ntable_info\030\003 \001(\0132\016.TSP.Referen"
-    "ce\0225\n\026before_table_selection\030\004 \001(\0132\025.TST"
-    ".SelectionArchive\0224\n\025after_table_selecti"
-    "on\030\006 \001(\0132\025.TST.SelectionArchive\"\327\001\n$Tabl"
-    "eCommandSelectionBehaviorArchive\0225\n\026befo"
-    "re_table_selection\030\001 \001(\0132\025.TST.Selection"
-    "Archive\0224\n\025after_table_selection\030\002 \001(\0132\025"
-    ".TST.SelectionArchive\022\"\n\ntable_info\030\003 \001("
-    "\0132\016.TSP.Reference\022\036\n\026last_column_hit_by_"
-    "tap\030\004 \001(\r\"d\n(DisableTableNameSelectionBe"
-    "haviorArchive\0228\n\005super\030\001 \002(\0132).TST.Table"
-    "CommandSelectionBehaviorArchive\"\301\001\n\036Comm"
-    "andApplyCellCommentArchive\022\'\n\005super\030\001 \002("
-    "\0132\030.TST.TableCommandArchive\022\034\n\007cell_id\030\002"
-    " \002(\0132\013.TST.CellID\022+\n\023old_comment_storage"
-    "\030\003 \001(\0132\016.TSP.Reference\022+\n\023new_comment_st"
-    "orage\030\004 \001(\0132\016.TSP.Reference\"\323\001\n&CommandA"
-    "pplyConditionalStyleSetArchive\022\'\n\005super\030"
-    "\001 \002(\0132\030.TST.TableCommandArchive\022(\n\tselec"
-    "tion\030\002 \002(\0132\025.TST.SelectionArchive\022*\n\rund"
-    "o_cell_map\030\003 \002(\0132\023.TST.CellMapArchive\022*\n"
-    "\rredo_cell_map\030\004 \002(\0132\023.TST.CellMapArchiv"
-    "e\"`\n$CommandSetFormulaTokenizationArchiv"
-    "e\022\"\n\005super\030\001 \002(\0132\023.TSK.CommandArchive\022\024\n"
-    "\014tokenization\030\002 \002(\010\"p\n\036CommandSetFilterE"
-    "nabledArchive\022\'\n\005super\030\001 \002(\0132\030.TST.Table"
-    "CommandArchive\022\024\n\014filter_index\030\002 \002(\r\022\017\n\007"
-    "enabled\030\004 \002(\010\"\210\001\n\"CommandSetFilterRuleEn"
-    "abledArchive\022\'\n\005super\030\001 \002(\0132\030.TST.TableC"
-    "ommandArchive\022\024\n\014filter_index\030\002 \002(\r\022\022\n\nr"
-    "ule_index\030\003 \002(\r\022\017\n\007enabled\030\004 \002(\010\"\315\001\n\036Com"
-    "mandSetFilterSetTypeArchive\022\'\n\005super\030\001 \002"
-    "(\0132\030.TST.TableCommandArchive\022@\n\023old_filt"
-    "er_set_type\030\002 \002(\0162#.TST.FilterSetArchive"
-    ".FilterSetType\022@\n\023new_filter_set_type\030\003 "
-    "\002(\0162#.TST.FilterSetArchive.FilterSetType"
-    "\"\274\001\n\035CommandSetStyleNetworkArchive\022\'\n\005su"
-    "per\030\001 \002(\0132\030.TST.TableCommandArchive\0228\n\021o"
-    "ld_style_network\030\002 \002(\0132\035.TST.TableStyleN"
-    "etworkArchive\0228\n\021new_style_network\030\003 \002(\013"
-    "2\035.TST.TableStyleNetworkArchive\"\306\001\n\031Comm"
-    "andMutateCellsArchive\022\'\n\005super\030\001 \002(\0132\030.T"
-    "ST.TableCommandArchive\022*\n\rundo_cell_map\030"
-    "\002 \002(\0132\023.TST.CellMapArchive\022*\n\rredo_cell_"
-    "map\030\003 \002(\0132\023.TST.CellMapArchive\022(\n\tselect"
-    "ion\030\004 \001(\0132\025.TST.SelectionArchive\"\200\001\n)Com"
-    "mandDisableFilterRulesForColumnArchive\022\'"
-    "\n\005super\030\001 \002(\0132\030.TST.TableCommandArchive\022"
-    "\024\n\014column_index\030\002 \002(\r\022\024\n\014rule_indices\030\003 "
-    "\003(\r\"\343\001\n\032CommandSetTextStyleArchive\022\'\n\005su"
-    "per\030\001 \002(\0132\030.TST.TableCommandArchive\022\037\n\006r"
-    "egion\030\002 \002(\0132\017.TST.CellRegion\022*\n\rundo_cel"
-    "l_map\030\003 \001(\0132\023.TST.CellMapArchive\022*\n\rredo"
-    "_cell_map\030\004 \001(\0132\023.TST.CellMapArchive\022#\n\013"
-    "subcommands\030\005 \001(\0132\016.TSP.Reference\"N\n#Com"
-    "mandNotifyForTransformingArchive\022\'\n\005supe"
-    "r\030\001 \002(\0132\030.TST.TableCommandArchive\"\330\001\n Co"
-    "mmandSetStorageLanguageArchive\022\"\n\005super\030"
-    "\001 \002(\0132\023.TSK.CommandArchive\022\037\n\007storage\030\002 "
-    "\002(\0132\016.TSP.Reference\022\020\n\010language\030\003 \002(\t\022\026\n"
-    "\016range_location\030\004 \002(\r\022\024\n\014range_length\030\005 "
-    "\002(\r\022/\n\020undo_transaction\030\006 \001(\0132\025.TSWP.Und"
-    "oTransaction*@\n\027CommandDirectionArchive\022"
-    "\020\n\014directionRow\020\000\022\023\n\017directionColumn\020\001*h"
-    "\n\024CommandRegionArchive\022\016\n\nbodyRegion\020\000\022\023"
-    "\n\017headerRowRegion\020\001\022\026\n\022headerColumnRegio"
-    "n\020\002\022\023\n\017footerRowRegion\020\003", 22064);
+    "MapArchive\"\331\001\n,CommandSetSingleNumberFor"
+    "matParameterArchive\022\'\n\005super\030\001 \002(\0132\030.TST"
+    ".TableCommandArchive\022(\n\tselection\030\002 \002(\0132"
+    "\025.TST.SelectionArchive\022*\n\rundo_cell_map\030"
+    "\003 \002(\0132\023.TST.CellMapArchive\022*\n\rredo_cell_"
+    "map\030\004 \002(\0132\023.TST.CellMapArchive\"g\n\025Comman"
+    "dSetBaseArchive\022@\n\005super\030\001 \002(\01321.TST.Com"
+    "mandSetSingleNumberFormatParameterArchiv"
+    "e\022\014\n\004base\030\002 \002(\r\"t\n\033CommandSetBasePlacesA"
+    "rchive\022@\n\005super\030\001 \002(\01321.TST.CommandSetSi"
+    "ngleNumberFormatParameterArchive\022\023\n\013base"
+    "_places\030\002 \002(\r\"\202\001\n!CommandSetBaseUseMinus"
+    "SignArchive\022@\n\005super\030\001 \002(\01321.TST.Command"
+    "SetSingleNumberFormatParameterArchive\022\033\n"
+    "\023base_use_minus_sign\030\002 \002(\010\"\211\001\n\037CommandSe"
+    "tControlMinimumArchive\022@\n\005super\030\001 \002(\01321."
+    "TST.CommandSetSingleNumberFormatParamete"
+    "rArchive\022\017\n\007minimum\030\002 \002(\001\022\023\n\013format_type"
+    "\030\003 \002(\r\"\211\001\n\037CommandSetControlMaximumArchi"
+    "ve\022@\n\005super\030\001 \002(\01321.TST.CommandSetSingle"
+    "NumberFormatParameterArchive\022\017\n\007maximum\030"
+    "\002 \002(\001\022\023\n\013format_type\030\003 \002(\r\"\215\001\n!CommandSe"
+    "tControlIncrementArchive\022@\n\005super\030\001 \002(\0132"
+    "1.TST.CommandSetSingleNumberFormatParame"
+    "terArchive\022\021\n\tincrement\030\002 \002(\001\022\023\n\013format_"
+    "type\030\003 \002(\r\"x\n\035CommandSetCurrencyCodeArch"
+    "ive\022@\n\005super\030\001 \002(\01321.TST.CommandSetSingl"
+    "eNumberFormatParameterArchive\022\025\n\rcurrenc"
+    "y_code\030\002 \002(\t\"\200\001\n!CommandSetFractionAccur"
+    "acyArchive\022@\n\005super\030\001 \002(\01321.TST.CommandS"
+    "etSingleNumberFormatParameterArchive\022\031\n\021"
+    "fraction_accuracy\030\002 \002(\r\"z\n6CommandSetMul"
+    "tipleChoiceListFormatForEditedItemArchiv"
+    "e\022@\n\005super\030\001 \002(\01321.TST.CommandSetSingleN"
+    "umberFormatParameterArchive\"z\n6CommandSe"
+    "tMultipleChoiceListFormatForDeleteItemAr"
+    "chive\022@\n\005super\030\001 \002(\01321.TST.CommandSetSin"
+    "gleNumberFormatParameterArchive\"{\n7Comma"
+    "ndSetMultipleChoiceListFormatForReorderI"
+    "temArchive\022@\n\005super\030\001 \002(\01321.TST.CommandS"
+    "etSingleNumberFormatParameterArchive\"|\n8"
+    "CommandSetMultipleChoiceListFormatForIni"
+    "tialValueArchive\022@\n\005super\030\001 \002(\01321.TST.Co"
+    "mmandSetSingleNumberFormatParameterArchi"
+    "ve\"\207\001\n$CommandSetNegativeNumberStyleArch"
+    "ive\022@\n\005super\030\001 \002(\01321.TST.CommandSetSingl"
+    "eNumberFormatParameterArchive\022\035\n\025negativ"
+    "e_number_style\030\002 \002(\r\"\373\001\n\037CommandSetExpli"
+    "citFormatArchive\022\'\n\005super\030\001 \002(\0132\030.TST.Ta"
+    "bleCommandArchive\022(\n\tselection\030\002 \002(\0132\025.T"
+    "ST.SelectionArchive\022-\n\013cell_format\030\003 \002(\013"
+    "2\030.TSK.FormatStructArchive\022*\n\rundo_cell_"
+    "map\030\004 \002(\0132\023.TST.CellMapArchive\022*\n\rredo_c"
+    "ell_map\030\005 \002(\0132\023.TST.CellMapArchive\"\202\001\n&C"
+    "ommandSetNumberOfDecimalPlacesArchive\022@\n"
+    "\005super\030\001 \002(\01321.TST.CommandSetSingleNumbe"
+    "rFormatParameterArchive\022\026\n\016decimal_place"
+    "s\030\002 \002(\r\"c\n\037CommandSetDateTimeFormatArchi"
+    "ve\022@\n\005super\030\001 \002(\01321.TST.CommandSetSingle"
+    "NumberFormatParameterArchive\"\215\001\n\'Command"
+    "SetShowThousandsSeparatorArchive\022@\n\005supe"
+    "r\030\001 \002(\01321.TST.CommandSetSingleNumberForm"
+    "atParameterArchive\022 \n\030show_thousands_sep"
+    "arator\030\002 \002(\010\"\205\001\n#CommandSetUseAccounting"
+    "StyleArchive\022@\n\005super\030\001 \002(\01321.TST.Comman"
+    "dSetSingleNumberFormatParameterArchive\022\034"
+    "\n\024use_accounting_style\030\002 \002(\010\"\303\002\n\026Command"
+    "MoveRowsArchive\022\'\n\005super\030\001 \002(\0132\030.TST.Tab"
+    "leCommandArchive\022(\n\tselection\030\002 \001(\0132\025.TS"
+    "T.SelectionArchive\022\027\n\017start_row_index\030\003 "
+    "\002(\r\022\026\n\016dest_row_index\030\004 \002(\r\022\026\n\016number_of"
+    "_rows\030\005 \002(\r\022/\n\027formula_rewrite_command\030\007"
+    " \001(\0132\016.TSP.Reference\022$\n\014show_command\030\010 \001"
+    "(\0132\016.TSP.Reference\0226\n\036unmerge_invalid_ra"
+    "nges_command\030\t \001(\0132\016.TSP.Reference\"\227\002\n\031C"
+    "ommandMoveColumnsArchive\022\'\n\005super\030\001 \002(\0132"
+    "\030.TST.TableCommandArchive\022(\n\tselection\030\002"
+    " \001(\0132\025.TST.SelectionArchive\022\032\n\022start_col"
+    "umn_index\030\003 \002(\r\022\031\n\021dest_column_index\030\004 \002"
+    "(\r\022\031\n\021number_of_columns\030\005 \002(\r\022/\n\027formula"
+    "_rewrite_command\030\007 \001(\0132\016.TSP.Reference\022$"
+    "\n\014show_command\030\010 \001(\0132\016.TSP.Reference\"\233\001\n"
+    "\022CommandSortArchive\022\'\n\005super\030\001 \002(\0132\030.TST"
+    ".TableCommandArchive\022+\n\007mapping\030\005 \002(\0132\032."
+    "TSK.ShuffleMappingArchive\022/\n\027formula_rew"
+    "rite_command\030\007 \001(\0132\016.TSP.Reference\"\372\001\n$C"
+    "ommandRewriteFormulasForSortArchive\022\'\n\005s"
+    "uper\030\001 \002(\0132\030.TST.TableCommandArchive\0221\n\013"
+    "formula_map\030\002 \002(\0132\034.TSCE.OwnerFormulaMap"
+    "Archive\0220\n\014sort_mapping\030\003 \002(\0132\032.TSK.Shuf"
+    "fleMappingArchive\022,\n\017sorted_table_id\030\004 \002"
+    "(\0132\023.TSCE.CFUUIDArchive\022\026\n\016explode_range"
+    "s\030\005 \002(\010\"\277\001\n-CommandRewriteFormulasForTec"
+    "tonicShiftArchive\022\'\n\005super\030\001 \002(\0132\030.TST.T"
+    "ableCommandArchive\0221\n\013formula_map\030\002 \002(\0132"
+    "\034.TSCE.OwnerFormulaMapArchive\0222\n\016tectoni"
+    "c_shift\030\003 \002(\0132\032.TSCE.TectonicShiftArchiv"
+    "e\"\352\001\n$CommandRewriteFormulasForMoveArchi"
+    "ve\022\'\n\005super\030\001 \002(\0132\030.TST.TableCommandArch"
+    "ive\0221\n\013formula_map\030\002 \002(\0132\034.TSCE.OwnerFor"
+    "mulaMapArchive\0223\n\016from_reference\030\006 \002(\0132\033"
+    ".TSCE.RangeReferenceArchive\0221\n\014to_refere"
+    "nce\030\007 \002(\0132\033.TSCE.RangeReferenceArchive\"\342"
+    "\001\n)CommandRewriteFormulasForCellMergeArc"
+    "hive\022\'\n\005super\030\001 \002(\0132\030.TST.TableCommandAr"
+    "chive\0221\n\013formula_map\030\002 \002(\0132\034.TSCE.OwnerF"
+    "ormulaMapArchive\0222\n\014merged_range\030\003 \002(\0132\034"
+    ".TSCE.RangeCoordinateArchive\022%\n\010table_id"
+    "\030\004 \002(\0132\023.TSCE.CFUUIDArchive\"\\\n1CommandRe"
+    "writeFilterFormulasForTableResizeArchive"
+    "\022\'\n\005super\030\001 \002(\0132\030.TST.TableCommandArchiv"
+    "e\"\266\001\n3CommandRewriteFilterFormulasForTec"
+    "tonicShiftArchive\022\'\n\005super\030\001 \002(\0132\030.TST.T"
+    "ableCommandArchive\022\"\n\nfilter_set\030\002 \002(\0132\016"
+    ".TSP.Reference\0222\n\016tectonic_shift\030\003 \002(\0132\032"
+    ".TSCE.TectonicShiftArchive\"\331\001\n*CommandRe"
+    "writeFilterFormulasForSortArchive\022\'\n\005sup"
+    "er\030\001 \002(\0132\030.TST.TableCommandArchive\022\"\n\nfi"
+    "lter_set\030\002 \002(\0132\016.TSP.Reference\0220\n\014sort_m"
+    "apping\030\003 \002(\0132\032.TSK.ShuffleMappingArchive"
+    "\022,\n\017sorted_table_id\030\004 \002(\0132\023.TSCE.CFUUIDA"
+    "rchive\"\230\002\n6CommandRewriteConditionalStyl"
+    "esForTectonicShiftArchive\022\'\n\005super\030\001 \002(\013"
+    "2\030.TST.TableCommandArchive\0222\n\016tectonic_s"
+    "hift\030\002 \002(\0132\032.TSCE.TectonicShiftArchive\022;"
+    "\n\020cells_to_rewrite\030\003 \001(\0132!.TSCE.CellCoor"
+    "dinateVectorArchive\022D\n\026conditional_style"
+    "_sets\030\004 \001(\0132$.TSCE.CellCoordinateObjectM"
+    "apArchive\"\273\002\n-CommandRewriteConditionalS"
+    "tylesForSortArchive\022\'\n\005super\030\001 \002(\0132\030.TST"
+    ".TableCommandArchive\0220\n\014sort_mapping\030\002 \002"
+    "(\0132\032.TSK.ShuffleMappingArchive\022,\n\017sorted"
+    "_table_id\030\003 \002(\0132\023.TSCE.CFUUIDArchive\022;\n\020"
+    "cells_to_rewrite\030\004 \001(\0132!.TSCE.CellCoordi"
+    "nateVectorArchive\022D\n\026conditional_style_s"
+    "ets\030\005 \001(\0132$.TSCE.CellCoordinateObjectMap"
+    "Archive\"\324\002\n2CommandRewriteConditionalSty"
+    "lesForRangeMoveArchive\022\'\n\005super\030\001 \002(\0132\030."
+    "TST.TableCommandArchive\0229\n\024from_range_re"
+    "ference\030\007 \001(\0132\033.TSCE.RangeReferenceArchi"
+    "ve\0227\n\022to_range_reference\030\010 \001(\0132\033.TSCE.Ra"
+    "ngeReferenceArchive\022;\n\020cells_to_rewrite\030"
+    "\005 \001(\0132!.TSCE.CellCoordinateVectorArchive"
+    "\022D\n\026conditional_style_sets\030\006 \001(\0132$.TSCE."
+    "CellCoordinateObjectMapArchive\"\302\002\n2Comma"
+    "ndRewriteConditionalStylesForCellMergeAr"
+    "chive\022\'\n\005super\030\001 \002(\0132\030.TST.TableCommandA"
+    "rchive\022,\n\017merged_table_id\030\002 \002(\0132\023.TSCE.C"
+    "FUUIDArchive\0222\n\014merged_range\030\003 \002(\0132\034.TSC"
+    "E.RangeCoordinateArchive\022;\n\020cells_to_rew"
+    "rite\030\004 \001(\0132!.TSCE.CellCoordinateVectorAr"
+    "chive\022D\n\026conditional_style_sets\030\005 \001(\0132$."
+    "TSCE.CellCoordinateObjectMapArchive\"\326\002\n\032"
+    "CommandMergeUnmergeArchive\022\'\n\005super\030\001 \002("
+    "\0132\030.TST.TableCommandArchive\022-\n\014merge_act"
+    "ion\030\002 \002(\0162\027.TST.MergeActionArchive\022(\n\tse"
+    "lection\030\003 \002(\0132\025.TST.SelectionArchive\022*\n\r"
+    "undo_cell_map\030\004 \002(\0132\023.TST.CellMapArchive"
+    "\022*\n\rredo_cell_map\030\005 \002(\0132\023.TST.CellMapArc"
+    "hive\022(\n\020old_merge_ranges\030\010 \001(\0132\016.TSP.Ref"
+    "erence\0224\n\034undo_formula_rewrite_command\030\t"
+    " \001(\0132\016.TSP.Reference\"\204\002\n\026CommandHideShow"
+    "Archive\022\'\n\005super\030\001 \002(\0132\030.TST.TableComman"
+    "dArchive\022/\n\tdirection\030\002 \002(\0162\034.TST.Comman"
+    "dDirectionArchive\0224\n\020hide_show_action\030\003 "
+    "\002(\0162\032.TST.HideShowActionArchive\022\025\n\rhidin"
+    "g_action\030\004 \002(\r\022(\n\021elements_affected\030\005 \002("
+    "\0132\r.TSP.IndexSet\022\031\n\021old_hiding_states\030\007 "
+    "\003(\r\"\335\002\n\037TableInfoGeometryCommandArchive\022"
+    "\"\n\005super\030\001 \002(\0132\023.TSK.CommandArchive\022\037\n\014s"
+    "cale_factor\030\002 \002(\0132\t.TSP.Size\022\"\n\ntable_in"
+    "fo\030\003 \001(\0132\016.TSP.Reference\022*\n\014new_geometry"
+    "\030\004 \001(\0132\024.TSD.GeometryArchive\022*\n\014old_geom"
+    "etry\030\005 \001(\0132\024.TSD.GeometryArchive\022\034\n\024turn"
+    "_off_auto_resize\030\006 \001(\010\022,\n$should_clear_o"
+    "bject_placeholder_flag\030\007 \001(\010\022-\n%did_matc"
+    "h_object_placeholder_geometry\030\010 \001(\010\"\263\002\n!"
+    "FormulaEditingCommandGroupArchive\0222\n\005sup"
+    "er\030\001 \002(\0132#.TSK.ProgressiveCommandGroupAr"
+    "chive\022\032\n\022undoSelectionValid\030\002 \002(\010\022\032\n\022und"
+    "oSelectionStart\030\003 \002(\r\022\033\n\023undoSelectionLe"
+    "ngth\030\004 \002(\r\022\027\n\017undoActiveToken\030\005 \002(\r\022\032\n\022r"
+    "edoSelectionValid\030\006 \002(\010\022\032\n\022redoSelection"
+    "Start\030\007 \002(\r\022\033\n\023redoSelectionLength\030\010 \002(\r"
+    "\022\027\n\017redoActiveToken\030\t \002(\r\"\254\002\n-FormulaEdi"
+    "tingCommandSelectionBehaviorArchive\022\032\n\022u"
+    "ndoSelectionValid\030\002 \001(\010\022\032\n\022undoSelection"
+    "Start\030\003 \001(\r\022\033\n\023undoSelectionLength\030\004 \001(\r"
+    "\022\027\n\017undoActiveToken\030\005 \001(\r\022\032\n\022redoSelecti"
+    "onValid\030\006 \001(\010\022\032\n\022redoSelectionStart\030\007 \001("
+    "\r\022\033\n\023redoSelectionLength\030\010 \001(\r\022\027\n\017redoAc"
+    "tiveToken\030\t \001(\r\022\037\n\007storage\030\n \001(\0132\016.TSP.R"
+    "eference\"\246\002\n,UndoRedoStateCommandSelecti"
+    "onBehaviorArchive\0222\n\026before_undo_redo_st"
+    "ate\030\001 \001(\0132\016.TSP.ReferenceB\002\030\001\0221\n\025after_u"
+    "ndo_redo_state\030\002 \001(\0132\016.TSP.ReferenceB\002\030\001"
+    "\022\"\n\ntable_info\030\003 \001(\0132\016.TSP.Reference\0225\n\026"
+    "before_table_selection\030\004 \001(\0132\025.TST.Selec"
+    "tionArchive\0224\n\025after_table_selection\030\006 \001"
+    "(\0132\025.TST.SelectionArchive\"\327\001\n$TableComma"
+    "ndSelectionBehaviorArchive\0225\n\026before_tab"
+    "le_selection\030\001 \001(\0132\025.TST.SelectionArchiv"
+    "e\0224\n\025after_table_selection\030\002 \001(\0132\025.TST.S"
+    "electionArchive\022\"\n\ntable_info\030\003 \001(\0132\016.TS"
+    "P.Reference\022\036\n\026last_column_hit_by_tap\030\004 "
+    "\001(\r\"d\n(DisableTableNameSelectionBehavior"
+    "Archive\0228\n\005super\030\001 \002(\0132).TST.TableComman"
+    "dSelectionBehaviorArchive\"\301\001\n\036CommandApp"
+    "lyCellCommentArchive\022\'\n\005super\030\001 \002(\0132\030.TS"
+    "T.TableCommandArchive\022\034\n\007cell_id\030\002 \002(\0132\013"
+    ".TST.CellID\022+\n\023old_comment_storage\030\003 \001(\013"
+    "2\016.TSP.Reference\022+\n\023new_comment_storage\030"
+    "\004 \001(\0132\016.TSP.Reference\"\323\001\n&CommandApplyCo"
+    "nditionalStyleSetArchive\022\'\n\005super\030\001 \002(\0132"
+    "\030.TST.TableCommandArchive\022(\n\tselection\030\002"
+    " \002(\0132\025.TST.SelectionArchive\022*\n\rundo_cell"
+    "_map\030\003 \002(\0132\023.TST.CellMapArchive\022*\n\rredo_"
+    "cell_map\030\004 \002(\0132\023.TST.CellMapArchive\"`\n$C"
+    "ommandSetFormulaTokenizationArchive\022\"\n\005s"
+    "uper\030\001 \002(\0132\023.TSK.CommandArchive\022\024\n\014token"
+    "ization\030\002 \002(\010\"p\n\036CommandSetFilterEnabled"
+    "Archive\022\'\n\005super\030\001 \002(\0132\030.TST.TableComman"
+    "dArchive\022\024\n\014filter_index\030\002 \002(\r\022\017\n\007enable"
+    "d\030\004 \002(\010\"\210\001\n\"CommandSetFilterRuleEnabledA"
+    "rchive\022\'\n\005super\030\001 \002(\0132\030.TST.TableCommand"
+    "Archive\022\024\n\014filter_index\030\002 \002(\r\022\022\n\nrule_in"
+    "dex\030\003 \002(\r\022\017\n\007enabled\030\004 \002(\010\"\315\001\n\036CommandSe"
+    "tFilterSetTypeArchive\022\'\n\005super\030\001 \002(\0132\030.T"
+    "ST.TableCommandArchive\022@\n\023old_filter_set"
+    "_type\030\002 \002(\0162#.TST.FilterSetArchive.Filte"
+    "rSetType\022@\n\023new_filter_set_type\030\003 \002(\0162#."
+    "TST.FilterSetArchive.FilterSetType\"\274\001\n\035C"
+    "ommandSetStyleNetworkArchive\022\'\n\005super\030\001 "
+    "\002(\0132\030.TST.TableCommandArchive\0228\n\021old_sty"
+    "le_network\030\002 \002(\0132\035.TST.TableStyleNetwork"
+    "Archive\0228\n\021new_style_network\030\003 \002(\0132\035.TST"
+    ".TableStyleNetworkArchive\"\306\001\n\031CommandMut"
+    "ateCellsArchive\022\'\n\005super\030\001 \002(\0132\030.TST.Tab"
+    "leCommandArchive\022*\n\rundo_cell_map\030\002 \002(\0132"
+    "\023.TST.CellMapArchive\022*\n\rredo_cell_map\030\003 "
+    "\002(\0132\023.TST.CellMapArchive\022(\n\tselection\030\004 "
+    "\001(\0132\025.TST.SelectionArchive\"\200\001\n)CommandDi"
+    "sableFilterRulesForColumnArchive\022\'\n\005supe"
+    "r\030\001 \002(\0132\030.TST.TableCommandArchive\022\024\n\014col"
+    "umn_index\030\002 \002(\r\022\024\n\014rule_indices\030\003 \003(\r\"\343\001"
+    "\n\032CommandSetTextStyleArchive\022\'\n\005super\030\001 "
+    "\002(\0132\030.TST.TableCommandArchive\022\037\n\006region\030"
+    "\002 \002(\0132\017.TST.CellRegion\022*\n\rundo_cell_map\030"
+    "\003 \001(\0132\023.TST.CellMapArchive\022*\n\rredo_cell_"
+    "map\030\004 \001(\0132\023.TST.CellMapArchive\022#\n\013subcom"
+    "mands\030\005 \001(\0132\016.TSP.Reference\"N\n#CommandNo"
+    "tifyForTransformingArchive\022\'\n\005super\030\001 \002("
+    "\0132\030.TST.TableCommandArchive\"\330\001\n CommandS"
+    "etStorageLanguageArchive\022\"\n\005super\030\001 \002(\0132"
+    "\023.TSK.CommandArchive\022\037\n\007storage\030\002 \002(\0132\016."
+    "TSP.Reference\022\020\n\010language\030\003 \002(\t\022\026\n\016range"
+    "_location\030\004 \002(\r\022\024\n\014range_length\030\005 \002(\r\022/\n"
+    "\020undo_transaction\030\006 \001(\0132\025.TSWP.UndoTrans"
+    "action\"\255\001\n\032CommandSetSortOrderArchive\022\'\n"
+    "\005super\030\001 \002(\0132\030.TST.TableCommandArchive\0222"
+    "\n\016old_sort_order\030\002 \001(\0132\032.TST.TableSortOr"
+    "derArchive\0222\n\016new_sort_order\030\003 \001(\0132\032.TST"
+    ".TableSortOrderArchive\"\365\001\n.CommandRewrit"
+    "eSortOrderForTectonicShiftArchive\022\'\n\005sup"
+    "er\030\001 \002(\0132\030.TST.TableCommandArchive\0222\n\016te"
+    "ctonic_shift\030\002 \002(\0132\032.TSCE.TectonicShiftA"
+    "rchive\0222\n\016old_sort_order\030\003 \001(\0132\032.TST.Tab"
+    "leSortOrderArchive\0222\n\016new_sort_order\030\004 \001"
+    "(\0132\032.TST.TableSortOrderArchive\"\352\001\n%Comma"
+    "ndRewriteSortOrderForSortArchive\022\'\n\005supe"
+    "r\030\001 \002(\0132\030.TST.TableCommandArchive\0220\n\014sor"
+    "t_mapping\030\002 \002(\0132\032.TSK.ShuffleMappingArch"
+    "ive\0222\n\016old_sort_order\030\003 \001(\0132\032.TST.TableS"
+    "ortOrderArchive\0222\n\016new_sort_order\030\004 \001(\0132"
+    "\032.TST.TableSortOrderArchive\"\277\001\n,CommandR"
+    "ewriteSortOrderForTableResizeArchive\022\'\n\005"
+    "super\030\001 \002(\0132\030.TST.TableCommandArchive\0222\n"
+    "\016old_sort_order\030\002 \001(\0132\032.TST.TableSortOrd"
+    "erArchive\0222\n\016new_sort_order\030\003 \001(\0132\032.TST."
+    "TableSortOrderArchive*@\n\027CommandDirectio"
+    "nArchive\022\020\n\014directionRow\020\000\022\023\n\017directionC"
+    "olumn\020\001*h\n\024CommandRegionArchive\022\016\n\nbodyR"
+    "egion\020\000\022\023\n\017headerRowRegion\020\001\022\026\n\022headerCo"
+    "lumnRegion\020\002\022\023\n\017footerRowRegion\020\003", 24193);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "TSTCommandArchives.proto", &protobuf_RegisterTypes);
   TableCommandArchive::default_instance_ = new TableCommandArchive();
+  CommandApplyCellDiffArchive::default_instance_ = new CommandApplyCellDiffArchive();
   CommandChangeFreezeHeaderStateArchive::default_instance_ = new CommandChangeFreezeHeaderStateArchive();
   CommandDeleteCellsArchive::default_instance_ = new CommandDeleteCellsArchive();
   CommandDeleteCellContentsArchive::default_instance_ = new CommandDeleteCellContentsArchive();
@@ -3148,6 +3452,7 @@ void protobuf_AddDesc_TSTCommandArchives_2eproto() {
   CommandSetControlCellsDisplayNumberFormatArchive::default_instance_ = new CommandSetControlCellsDisplayNumberFormatArchive();
   CommandSetAutomaticFormatArchive::default_instance_ = new CommandSetAutomaticFormatArchive();
   CommandSetAutomaticDurationUnitsArchive::default_instance_ = new CommandSetAutomaticDurationUnitsArchive();
+  CommandReplaceCustomFormatArchive::default_instance_ = new CommandReplaceCustomFormatArchive();
   CommandInsertColumnsOrRowsArchive::default_instance_ = new CommandInsertColumnsOrRowsArchive();
   CommandInsertColumnsOrRowsArchive_StyleIndexPair::default_instance_ = new CommandInsertColumnsOrRowsArchive_StyleIndexPair();
   CommandPasteArchive::default_instance_ = new CommandPasteArchive();
@@ -3165,6 +3470,7 @@ void protobuf_AddDesc_TSTCommandArchives_2eproto() {
   CommandSetTableFontNameArchive::default_instance_ = new CommandSetTableFontNameArchive();
   CommandSetTableNameHeightArchive::default_instance_ = new CommandSetTableNameHeightArchive();
   CommandStyleCellsArchive::default_instance_ = new CommandStyleCellsArchive();
+  CommandSetFillPropertyArchive::default_instance_ = new CommandSetFillPropertyArchive();
   CommandStyleTableArchive::default_instance_ = new CommandStyleTableArchive();
   CommandFillCellsArchive::default_instance_ = new CommandFillCellsArchive();
   CommandReplaceTextArchive::default_instance_ = new CommandReplaceTextArchive();
@@ -3175,6 +3481,9 @@ void protobuf_AddDesc_TSTCommandArchives_2eproto() {
   CommandDeleteFilterRulesArchive::default_instance_ = new CommandDeleteFilterRulesArchive();
   CommandModifyFilterRuleArchive::default_instance_ = new CommandModifyFilterRuleArchive();
   CommandApplyStrokePresetArchive::default_instance_ = new CommandApplyStrokePresetArchive();
+  CommandAddTableStylePresetArchive::default_instance_ = new CommandAddTableStylePresetArchive();
+  CommandRemoveTableStylePresetArchive::default_instance_ = new CommandRemoveTableStylePresetArchive();
+  CommandReplaceTableStylePresetArchive::default_instance_ = new CommandReplaceTableStylePresetArchive();
   CommandApplyTableStylePresetArchive::default_instance_ = new CommandApplyTableStylePresetArchive();
   CommandApplyTableStylePresetArchive_StyleIndexTuple::default_instance_ = new CommandApplyTableStylePresetArchive_StyleIndexTuple();
   CommandSetStyleApplyClearsAllFlagArchive::default_instance_ = new CommandSetStyleApplyClearsAllFlagArchive();
@@ -3235,7 +3544,12 @@ void protobuf_AddDesc_TSTCommandArchives_2eproto() {
   CommandSetTextStyleArchive::default_instance_ = new CommandSetTextStyleArchive();
   CommandNotifyForTransformingArchive::default_instance_ = new CommandNotifyForTransformingArchive();
   CommandSetStorageLanguageArchive::default_instance_ = new CommandSetStorageLanguageArchive();
+  CommandSetSortOrderArchive::default_instance_ = new CommandSetSortOrderArchive();
+  CommandRewriteSortOrderForTectonicShiftArchive::default_instance_ = new CommandRewriteSortOrderForTectonicShiftArchive();
+  CommandRewriteSortOrderForSortArchive::default_instance_ = new CommandRewriteSortOrderForSortArchive();
+  CommandRewriteSortOrderForTableResizeArchive::default_instance_ = new CommandRewriteSortOrderForTableResizeArchive();
   TableCommandArchive::default_instance_->InitAsDefaultInstance();
+  CommandApplyCellDiffArchive::default_instance_->InitAsDefaultInstance();
   CommandChangeFreezeHeaderStateArchive::default_instance_->InitAsDefaultInstance();
   CommandDeleteCellsArchive::default_instance_->InitAsDefaultInstance();
   CommandDeleteCellContentsArchive::default_instance_->InitAsDefaultInstance();
@@ -3246,6 +3560,7 @@ void protobuf_AddDesc_TSTCommandArchives_2eproto() {
   CommandSetControlCellsDisplayNumberFormatArchive::default_instance_->InitAsDefaultInstance();
   CommandSetAutomaticFormatArchive::default_instance_->InitAsDefaultInstance();
   CommandSetAutomaticDurationUnitsArchive::default_instance_->InitAsDefaultInstance();
+  CommandReplaceCustomFormatArchive::default_instance_->InitAsDefaultInstance();
   CommandInsertColumnsOrRowsArchive::default_instance_->InitAsDefaultInstance();
   CommandInsertColumnsOrRowsArchive_StyleIndexPair::default_instance_->InitAsDefaultInstance();
   CommandPasteArchive::default_instance_->InitAsDefaultInstance();
@@ -3263,6 +3578,7 @@ void protobuf_AddDesc_TSTCommandArchives_2eproto() {
   CommandSetTableFontNameArchive::default_instance_->InitAsDefaultInstance();
   CommandSetTableNameHeightArchive::default_instance_->InitAsDefaultInstance();
   CommandStyleCellsArchive::default_instance_->InitAsDefaultInstance();
+  CommandSetFillPropertyArchive::default_instance_->InitAsDefaultInstance();
   CommandStyleTableArchive::default_instance_->InitAsDefaultInstance();
   CommandFillCellsArchive::default_instance_->InitAsDefaultInstance();
   CommandReplaceTextArchive::default_instance_->InitAsDefaultInstance();
@@ -3273,6 +3589,9 @@ void protobuf_AddDesc_TSTCommandArchives_2eproto() {
   CommandDeleteFilterRulesArchive::default_instance_->InitAsDefaultInstance();
   CommandModifyFilterRuleArchive::default_instance_->InitAsDefaultInstance();
   CommandApplyStrokePresetArchive::default_instance_->InitAsDefaultInstance();
+  CommandAddTableStylePresetArchive::default_instance_->InitAsDefaultInstance();
+  CommandRemoveTableStylePresetArchive::default_instance_->InitAsDefaultInstance();
+  CommandReplaceTableStylePresetArchive::default_instance_->InitAsDefaultInstance();
   CommandApplyTableStylePresetArchive::default_instance_->InitAsDefaultInstance();
   CommandApplyTableStylePresetArchive_StyleIndexTuple::default_instance_->InitAsDefaultInstance();
   CommandSetStyleApplyClearsAllFlagArchive::default_instance_->InitAsDefaultInstance();
@@ -3333,6 +3652,10 @@ void protobuf_AddDesc_TSTCommandArchives_2eproto() {
   CommandSetTextStyleArchive::default_instance_->InitAsDefaultInstance();
   CommandNotifyForTransformingArchive::default_instance_->InitAsDefaultInstance();
   CommandSetStorageLanguageArchive::default_instance_->InitAsDefaultInstance();
+  CommandSetSortOrderArchive::default_instance_->InitAsDefaultInstance();
+  CommandRewriteSortOrderForTectonicShiftArchive::default_instance_->InitAsDefaultInstance();
+  CommandRewriteSortOrderForSortArchive::default_instance_->InitAsDefaultInstance();
+  CommandRewriteSortOrderForTableResizeArchive::default_instance_->InitAsDefaultInstance();
   ::google::protobuf::internal::OnShutdown(&protobuf_ShutdownFile_TSTCommandArchives_2eproto);
 }
 
@@ -3731,6 +4054,367 @@ void TableCommandArchive::Swap(TableCommandArchive* other) {
   ::google::protobuf::Metadata metadata;
   metadata.descriptor = TableCommandArchive_descriptor_;
   metadata.reflection = TableCommandArchive_reflection_;
+  return metadata;
+}
+
+
+// ===================================================================
+
+#ifndef _MSC_VER
+const int CommandApplyCellDiffArchive::kSuperFieldNumber;
+const int CommandApplyCellDiffArchive::kCellRegionFieldNumber;
+const int CommandApplyCellDiffArchive::kCellDiffFieldNumber;
+const int CommandApplyCellDiffArchive::kInverseCellDiffMapFieldNumber;
+#endif  // !_MSC_VER
+
+CommandApplyCellDiffArchive::CommandApplyCellDiffArchive()
+  : ::google::protobuf::Message() {
+  SharedCtor();
+}
+
+void CommandApplyCellDiffArchive::InitAsDefaultInstance() {
+  super_ = const_cast< ::TST::TableCommandArchive*>(&::TST::TableCommandArchive::default_instance());
+  cell_region_ = const_cast< ::TST::CellRegion*>(&::TST::CellRegion::default_instance());
+  cell_diff_ = const_cast< ::TSP::Reference*>(&::TSP::Reference::default_instance());
+  inverse_cell_diff_map_ = const_cast< ::TSP::Reference*>(&::TSP::Reference::default_instance());
+}
+
+CommandApplyCellDiffArchive::CommandApplyCellDiffArchive(const CommandApplyCellDiffArchive& from)
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  MergeFrom(from);
+}
+
+void CommandApplyCellDiffArchive::SharedCtor() {
+  _cached_size_ = 0;
+  super_ = NULL;
+  cell_region_ = NULL;
+  cell_diff_ = NULL;
+  inverse_cell_diff_map_ = NULL;
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+}
+
+CommandApplyCellDiffArchive::~CommandApplyCellDiffArchive() {
+  SharedDtor();
+}
+
+void CommandApplyCellDiffArchive::SharedDtor() {
+  if (this != default_instance_) {
+    delete super_;
+    delete cell_region_;
+    delete cell_diff_;
+    delete inverse_cell_diff_map_;
+  }
+}
+
+void CommandApplyCellDiffArchive::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* CommandApplyCellDiffArchive::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return CommandApplyCellDiffArchive_descriptor_;
+}
+
+const CommandApplyCellDiffArchive& CommandApplyCellDiffArchive::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_TSTCommandArchives_2eproto();
+  return *default_instance_;
+}
+
+CommandApplyCellDiffArchive* CommandApplyCellDiffArchive::default_instance_ = NULL;
+
+CommandApplyCellDiffArchive* CommandApplyCellDiffArchive::New() const {
+  return new CommandApplyCellDiffArchive;
+}
+
+void CommandApplyCellDiffArchive::Clear() {
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (has_super()) {
+      if (super_ != NULL) super_->::TST::TableCommandArchive::Clear();
+    }
+    if (has_cell_region()) {
+      if (cell_region_ != NULL) cell_region_->::TST::CellRegion::Clear();
+    }
+    if (has_cell_diff()) {
+      if (cell_diff_ != NULL) cell_diff_->::TSP::Reference::Clear();
+    }
+    if (has_inverse_cell_diff_map()) {
+      if (inverse_cell_diff_map_ != NULL) inverse_cell_diff_map_->::TSP::Reference::Clear();
+    }
+  }
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+  mutable_unknown_fields()->Clear();
+}
+
+bool CommandApplyCellDiffArchive::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!(EXPRESSION)) return false
+  ::google::protobuf::uint32 tag;
+  while ((tag = input->ReadTag()) != 0) {
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // required .TST.TableCommandArchive super = 1;
+      case 1: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_super()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(18)) goto parse_cell_region;
+        break;
+      }
+
+      // required .TST.CellRegion cell_region = 2;
+      case 2: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_cell_region:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_cell_region()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(26)) goto parse_cell_diff;
+        break;
+      }
+
+      // required .TSP.Reference cell_diff = 3;
+      case 3: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_cell_diff:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_cell_diff()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(34)) goto parse_inverse_cell_diff_map;
+        break;
+      }
+
+      // required .TSP.Reference inverse_cell_diff_map = 4;
+      case 4: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_inverse_cell_diff_map:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_inverse_cell_diff_map()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectAtEnd()) return true;
+        break;
+      }
+
+      default: {
+      handle_uninterpreted:
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          return true;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+  return true;
+#undef DO_
+}
+
+void CommandApplyCellDiffArchive::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // required .TST.TableCommandArchive super = 1;
+  if (has_super()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, this->super(), output);
+  }
+
+  // required .TST.CellRegion cell_region = 2;
+  if (has_cell_region()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      2, this->cell_region(), output);
+  }
+
+  // required .TSP.Reference cell_diff = 3;
+  if (has_cell_diff()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      3, this->cell_diff(), output);
+  }
+
+  // required .TSP.Reference inverse_cell_diff_map = 4;
+  if (has_inverse_cell_diff_map()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      4, this->inverse_cell_diff_map(), output);
+  }
+
+  if (!unknown_fields().empty()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+}
+
+::google::protobuf::uint8* CommandApplyCellDiffArchive::SerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // required .TST.TableCommandArchive super = 1;
+  if (has_super()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        1, this->super(), target);
+  }
+
+  // required .TST.CellRegion cell_region = 2;
+  if (has_cell_region()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        2, this->cell_region(), target);
+  }
+
+  // required .TSP.Reference cell_diff = 3;
+  if (has_cell_diff()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        3, this->cell_diff(), target);
+  }
+
+  // required .TSP.Reference inverse_cell_diff_map = 4;
+  if (has_inverse_cell_diff_map()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        4, this->inverse_cell_diff_map(), target);
+  }
+
+  if (!unknown_fields().empty()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  return target;
+}
+
+int CommandApplyCellDiffArchive::ByteSize() const {
+  int total_size = 0;
+
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    // required .TST.TableCommandArchive super = 1;
+    if (has_super()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->super());
+    }
+
+    // required .TST.CellRegion cell_region = 2;
+    if (has_cell_region()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->cell_region());
+    }
+
+    // required .TSP.Reference cell_diff = 3;
+    if (has_cell_diff()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->cell_diff());
+    }
+
+    // required .TSP.Reference inverse_cell_diff_map = 4;
+    if (has_inverse_cell_diff_map()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->inverse_cell_diff_map());
+    }
+
+  }
+  if (!unknown_fields().empty()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = total_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void CommandApplyCellDiffArchive::MergeFrom(const ::google::protobuf::Message& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  const CommandApplyCellDiffArchive* source =
+    ::google::protobuf::internal::dynamic_cast_if_available<const CommandApplyCellDiffArchive*>(
+      &from);
+  if (source == NULL) {
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+    MergeFrom(*source);
+  }
+}
+
+void CommandApplyCellDiffArchive::MergeFrom(const CommandApplyCellDiffArchive& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (from.has_super()) {
+      mutable_super()->::TST::TableCommandArchive::MergeFrom(from.super());
+    }
+    if (from.has_cell_region()) {
+      mutable_cell_region()->::TST::CellRegion::MergeFrom(from.cell_region());
+    }
+    if (from.has_cell_diff()) {
+      mutable_cell_diff()->::TSP::Reference::MergeFrom(from.cell_diff());
+    }
+    if (from.has_inverse_cell_diff_map()) {
+      mutable_inverse_cell_diff_map()->::TSP::Reference::MergeFrom(from.inverse_cell_diff_map());
+    }
+  }
+  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
+}
+
+void CommandApplyCellDiffArchive::CopyFrom(const ::google::protobuf::Message& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void CommandApplyCellDiffArchive::CopyFrom(const CommandApplyCellDiffArchive& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool CommandApplyCellDiffArchive::IsInitialized() const {
+  if ((_has_bits_[0] & 0x0000000f) != 0x0000000f) return false;
+
+  if (has_super()) {
+    if (!this->super().IsInitialized()) return false;
+  }
+  if (has_cell_region()) {
+    if (!this->cell_region().IsInitialized()) return false;
+  }
+  if (has_cell_diff()) {
+    if (!this->cell_diff().IsInitialized()) return false;
+  }
+  if (has_inverse_cell_diff_map()) {
+    if (!this->inverse_cell_diff_map().IsInitialized()) return false;
+  }
+  return true;
+}
+
+void CommandApplyCellDiffArchive::Swap(CommandApplyCellDiffArchive* other) {
+  if (other != this) {
+    std::swap(super_, other->super_);
+    std::swap(cell_region_, other->cell_region_);
+    std::swap(cell_diff_, other->cell_diff_);
+    std::swap(inverse_cell_diff_map_, other->inverse_cell_diff_map_);
+    std::swap(_has_bits_[0], other->_has_bits_[0]);
+    _unknown_fields_.Swap(&other->_unknown_fields_);
+    std::swap(_cached_size_, other->_cached_size_);
+  }
+}
+
+::google::protobuf::Metadata CommandApplyCellDiffArchive::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = CommandApplyCellDiffArchive_descriptor_;
+  metadata.reflection = CommandApplyCellDiffArchive_reflection_;
   return metadata;
 }
 
@@ -7576,6 +8260,319 @@ void CommandSetAutomaticDurationUnitsArchive::Swap(CommandSetAutomaticDurationUn
 // ===================================================================
 
 #ifndef _MSC_VER
+const int CommandReplaceCustomFormatArchive::kUndoMapFieldNumber;
+const int CommandReplaceCustomFormatArchive::kRedoMapFieldNumber;
+const int CommandReplaceCustomFormatArchive::kSuperFieldNumber;
+#endif  // !_MSC_VER
+
+CommandReplaceCustomFormatArchive::CommandReplaceCustomFormatArchive()
+  : ::google::protobuf::Message() {
+  SharedCtor();
+}
+
+void CommandReplaceCustomFormatArchive::InitAsDefaultInstance() {
+  undo_map_ = const_cast< ::TST::CellMapArchive*>(&::TST::CellMapArchive::default_instance());
+  redo_map_ = const_cast< ::TST::CellMapArchive*>(&::TST::CellMapArchive::default_instance());
+  super_ = const_cast< ::TST::TableCommandArchive*>(&::TST::TableCommandArchive::default_instance());
+}
+
+CommandReplaceCustomFormatArchive::CommandReplaceCustomFormatArchive(const CommandReplaceCustomFormatArchive& from)
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  MergeFrom(from);
+}
+
+void CommandReplaceCustomFormatArchive::SharedCtor() {
+  _cached_size_ = 0;
+  undo_map_ = NULL;
+  redo_map_ = NULL;
+  super_ = NULL;
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+}
+
+CommandReplaceCustomFormatArchive::~CommandReplaceCustomFormatArchive() {
+  SharedDtor();
+}
+
+void CommandReplaceCustomFormatArchive::SharedDtor() {
+  if (this != default_instance_) {
+    delete undo_map_;
+    delete redo_map_;
+    delete super_;
+  }
+}
+
+void CommandReplaceCustomFormatArchive::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* CommandReplaceCustomFormatArchive::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return CommandReplaceCustomFormatArchive_descriptor_;
+}
+
+const CommandReplaceCustomFormatArchive& CommandReplaceCustomFormatArchive::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_TSTCommandArchives_2eproto();
+  return *default_instance_;
+}
+
+CommandReplaceCustomFormatArchive* CommandReplaceCustomFormatArchive::default_instance_ = NULL;
+
+CommandReplaceCustomFormatArchive* CommandReplaceCustomFormatArchive::New() const {
+  return new CommandReplaceCustomFormatArchive;
+}
+
+void CommandReplaceCustomFormatArchive::Clear() {
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (has_undo_map()) {
+      if (undo_map_ != NULL) undo_map_->::TST::CellMapArchive::Clear();
+    }
+    if (has_redo_map()) {
+      if (redo_map_ != NULL) redo_map_->::TST::CellMapArchive::Clear();
+    }
+    if (has_super()) {
+      if (super_ != NULL) super_->::TST::TableCommandArchive::Clear();
+    }
+  }
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+  mutable_unknown_fields()->Clear();
+}
+
+bool CommandReplaceCustomFormatArchive::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!(EXPRESSION)) return false
+  ::google::protobuf::uint32 tag;
+  while ((tag = input->ReadTag()) != 0) {
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // required .TST.CellMapArchive undo_map = 1;
+      case 1: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_undo_map()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(18)) goto parse_redo_map;
+        break;
+      }
+
+      // required .TST.CellMapArchive redo_map = 2;
+      case 2: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_redo_map:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_redo_map()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(50)) goto parse_super;
+        break;
+      }
+
+      // required .TST.TableCommandArchive super = 6;
+      case 6: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_super:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_super()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectAtEnd()) return true;
+        break;
+      }
+
+      default: {
+      handle_uninterpreted:
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          return true;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+  return true;
+#undef DO_
+}
+
+void CommandReplaceCustomFormatArchive::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // required .TST.CellMapArchive undo_map = 1;
+  if (has_undo_map()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, this->undo_map(), output);
+  }
+
+  // required .TST.CellMapArchive redo_map = 2;
+  if (has_redo_map()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      2, this->redo_map(), output);
+  }
+
+  // required .TST.TableCommandArchive super = 6;
+  if (has_super()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      6, this->super(), output);
+  }
+
+  if (!unknown_fields().empty()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+}
+
+::google::protobuf::uint8* CommandReplaceCustomFormatArchive::SerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // required .TST.CellMapArchive undo_map = 1;
+  if (has_undo_map()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        1, this->undo_map(), target);
+  }
+
+  // required .TST.CellMapArchive redo_map = 2;
+  if (has_redo_map()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        2, this->redo_map(), target);
+  }
+
+  // required .TST.TableCommandArchive super = 6;
+  if (has_super()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        6, this->super(), target);
+  }
+
+  if (!unknown_fields().empty()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  return target;
+}
+
+int CommandReplaceCustomFormatArchive::ByteSize() const {
+  int total_size = 0;
+
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    // required .TST.CellMapArchive undo_map = 1;
+    if (has_undo_map()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->undo_map());
+    }
+
+    // required .TST.CellMapArchive redo_map = 2;
+    if (has_redo_map()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->redo_map());
+    }
+
+    // required .TST.TableCommandArchive super = 6;
+    if (has_super()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->super());
+    }
+
+  }
+  if (!unknown_fields().empty()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = total_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void CommandReplaceCustomFormatArchive::MergeFrom(const ::google::protobuf::Message& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  const CommandReplaceCustomFormatArchive* source =
+    ::google::protobuf::internal::dynamic_cast_if_available<const CommandReplaceCustomFormatArchive*>(
+      &from);
+  if (source == NULL) {
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+    MergeFrom(*source);
+  }
+}
+
+void CommandReplaceCustomFormatArchive::MergeFrom(const CommandReplaceCustomFormatArchive& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (from.has_undo_map()) {
+      mutable_undo_map()->::TST::CellMapArchive::MergeFrom(from.undo_map());
+    }
+    if (from.has_redo_map()) {
+      mutable_redo_map()->::TST::CellMapArchive::MergeFrom(from.redo_map());
+    }
+    if (from.has_super()) {
+      mutable_super()->::TST::TableCommandArchive::MergeFrom(from.super());
+    }
+  }
+  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
+}
+
+void CommandReplaceCustomFormatArchive::CopyFrom(const ::google::protobuf::Message& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void CommandReplaceCustomFormatArchive::CopyFrom(const CommandReplaceCustomFormatArchive& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool CommandReplaceCustomFormatArchive::IsInitialized() const {
+  if ((_has_bits_[0] & 0x00000007) != 0x00000007) return false;
+
+  if (has_undo_map()) {
+    if (!this->undo_map().IsInitialized()) return false;
+  }
+  if (has_redo_map()) {
+    if (!this->redo_map().IsInitialized()) return false;
+  }
+  if (has_super()) {
+    if (!this->super().IsInitialized()) return false;
+  }
+  return true;
+}
+
+void CommandReplaceCustomFormatArchive::Swap(CommandReplaceCustomFormatArchive* other) {
+  if (other != this) {
+    std::swap(undo_map_, other->undo_map_);
+    std::swap(redo_map_, other->redo_map_);
+    std::swap(super_, other->super_);
+    std::swap(_has_bits_[0], other->_has_bits_[0]);
+    _unknown_fields_.Swap(&other->_unknown_fields_);
+    std::swap(_cached_size_, other->_cached_size_);
+  }
+}
+
+::google::protobuf::Metadata CommandReplaceCustomFormatArchive::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = CommandReplaceCustomFormatArchive_descriptor_;
+  metadata.reflection = CommandReplaceCustomFormatArchive_reflection_;
+  return metadata;
+}
+
+
+// ===================================================================
+
+#ifndef _MSC_VER
 const int CommandInsertColumnsOrRowsArchive_StyleIndexPair::kStyleFieldNumber;
 const int CommandInsertColumnsOrRowsArchive_StyleIndexPair::kIndexFieldNumber;
 #endif  // !_MSC_VER
@@ -8945,8 +9942,8 @@ CommandPasteArchive::CommandPasteArchive()
 void CommandPasteArchive::InitAsDefaultInstance() {
   user_selection_ = const_cast< ::TST::SelectionArchive*>(&::TST::SelectionArchive::default_instance());
   final_selection_ = const_cast< ::TST::SelectionArchive*>(&::TST::SelectionArchive::default_instance());
-  undo_cell_map_ = const_cast< ::TST::CellMapArchive*>(&::TST::CellMapArchive::default_instance());
-  redo_cell_map_ = const_cast< ::TST::CellMapArchive*>(&::TST::CellMapArchive::default_instance());
+  undo_cell_map_ = const_cast< ::TST::TiledCellMapArchive*>(&::TST::TiledCellMapArchive::default_instance());
+  redo_cell_map_ = const_cast< ::TST::TiledCellMapArchive*>(&::TST::TiledCellMapArchive::default_instance());
   command_undo_ = const_cast< ::TSP::Reference*>(&::TSP::Reference::default_instance());
   super_ = const_cast< ::TST::TableCommandArchive*>(&::TST::TableCommandArchive::default_instance());
 }
@@ -9014,10 +10011,10 @@ void CommandPasteArchive::Clear() {
       if (final_selection_ != NULL) final_selection_->::TST::SelectionArchive::Clear();
     }
     if (has_undo_cell_map()) {
-      if (undo_cell_map_ != NULL) undo_cell_map_->::TST::CellMapArchive::Clear();
+      if (undo_cell_map_ != NULL) undo_cell_map_->::TST::TiledCellMapArchive::Clear();
     }
     if (has_redo_cell_map()) {
-      if (redo_cell_map_ != NULL) redo_cell_map_->::TST::CellMapArchive::Clear();
+      if (redo_cell_map_ != NULL) redo_cell_map_->::TST::TiledCellMapArchive::Clear();
     }
     if (has_command_undo()) {
       if (command_undo_ != NULL) command_undo_->::TSP::Reference::Clear();
@@ -9065,7 +10062,7 @@ bool CommandPasteArchive::MergePartialFromCodedStream(
         break;
       }
 
-      // required .TST.CellMapArchive undo_cell_map = 3;
+      // required .TST.TiledCellMapArchive undo_cell_map = 3;
       case 3: {
         if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
             ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
@@ -9079,7 +10076,7 @@ bool CommandPasteArchive::MergePartialFromCodedStream(
         break;
       }
 
-      // required .TST.CellMapArchive redo_cell_map = 4;
+      // required .TST.TiledCellMapArchive redo_cell_map = 4;
       case 4: {
         if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
             ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
@@ -9182,13 +10179,13 @@ void CommandPasteArchive::SerializeWithCachedSizes(
       2, this->final_selection(), output);
   }
 
-  // required .TST.CellMapArchive undo_cell_map = 3;
+  // required .TST.TiledCellMapArchive undo_cell_map = 3;
   if (has_undo_cell_map()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
       3, this->undo_cell_map(), output);
   }
 
-  // required .TST.CellMapArchive redo_cell_map = 4;
+  // required .TST.TiledCellMapArchive redo_cell_map = 4;
   if (has_redo_cell_map()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
       4, this->redo_cell_map(), output);
@@ -9239,14 +10236,14 @@ void CommandPasteArchive::SerializeWithCachedSizes(
         2, this->final_selection(), target);
   }
 
-  // required .TST.CellMapArchive undo_cell_map = 3;
+  // required .TST.TiledCellMapArchive undo_cell_map = 3;
   if (has_undo_cell_map()) {
     target = ::google::protobuf::internal::WireFormatLite::
       WriteMessageNoVirtualToArray(
         3, this->undo_cell_map(), target);
   }
 
-  // required .TST.CellMapArchive redo_cell_map = 4;
+  // required .TST.TiledCellMapArchive redo_cell_map = 4;
   if (has_redo_cell_map()) {
     target = ::google::protobuf::internal::WireFormatLite::
       WriteMessageNoVirtualToArray(
@@ -9304,14 +10301,14 @@ int CommandPasteArchive::ByteSize() const {
           this->final_selection());
     }
 
-    // required .TST.CellMapArchive undo_cell_map = 3;
+    // required .TST.TiledCellMapArchive undo_cell_map = 3;
     if (has_undo_cell_map()) {
       total_size += 1 +
         ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
           this->undo_cell_map());
     }
 
-    // required .TST.CellMapArchive redo_cell_map = 4;
+    // required .TST.TiledCellMapArchive redo_cell_map = 4;
     if (has_redo_cell_map()) {
       total_size += 1 +
         ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
@@ -9380,10 +10377,10 @@ void CommandPasteArchive::MergeFrom(const CommandPasteArchive& from) {
       mutable_final_selection()->::TST::SelectionArchive::MergeFrom(from.final_selection());
     }
     if (from.has_undo_cell_map()) {
-      mutable_undo_cell_map()->::TST::CellMapArchive::MergeFrom(from.undo_cell_map());
+      mutable_undo_cell_map()->::TST::TiledCellMapArchive::MergeFrom(from.undo_cell_map());
     }
     if (from.has_redo_cell_map()) {
-      mutable_redo_cell_map()->::TST::CellMapArchive::MergeFrom(from.redo_cell_map());
+      mutable_redo_cell_map()->::TST::TiledCellMapArchive::MergeFrom(from.redo_cell_map());
     }
     if (from.has_command_undo()) {
       mutable_command_undo()->::TSP::Reference::MergeFrom(from.command_undo());
@@ -16350,6 +17347,463 @@ void CommandStyleCellsArchive::Swap(CommandStyleCellsArchive* other) {
 // ===================================================================
 
 #ifndef _MSC_VER
+const int CommandSetFillPropertyArchive::kSuperFieldNumber;
+const int CommandSetFillPropertyArchive::kFillFieldNumber;
+const int CommandSetFillPropertyArchive::kCellFillStandInFieldNumber;
+const int CommandSetFillPropertyArchive::kSelectionFieldNumber;
+const int CommandSetFillPropertyArchive::kUndoCellMapFieldNumber;
+const int CommandSetFillPropertyArchive::kRedoCellMapFieldNumber;
+#endif  // !_MSC_VER
+
+CommandSetFillPropertyArchive::CommandSetFillPropertyArchive()
+  : ::google::protobuf::Message() {
+  SharedCtor();
+}
+
+void CommandSetFillPropertyArchive::InitAsDefaultInstance() {
+  super_ = const_cast< ::TST::TableCommandArchive*>(&::TST::TableCommandArchive::default_instance());
+  fill_ = const_cast< ::TSD::FillArchive*>(&::TSD::FillArchive::default_instance());
+  cell_fill_stand_in_ = const_cast< ::TST::CellFillStandIn*>(&::TST::CellFillStandIn::default_instance());
+  selection_ = const_cast< ::TST::SelectionArchive*>(&::TST::SelectionArchive::default_instance());
+  undo_cell_map_ = const_cast< ::TST::CellMapArchive*>(&::TST::CellMapArchive::default_instance());
+  redo_cell_map_ = const_cast< ::TST::CellMapArchive*>(&::TST::CellMapArchive::default_instance());
+}
+
+CommandSetFillPropertyArchive::CommandSetFillPropertyArchive(const CommandSetFillPropertyArchive& from)
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  MergeFrom(from);
+}
+
+void CommandSetFillPropertyArchive::SharedCtor() {
+  _cached_size_ = 0;
+  super_ = NULL;
+  fill_ = NULL;
+  cell_fill_stand_in_ = NULL;
+  selection_ = NULL;
+  undo_cell_map_ = NULL;
+  redo_cell_map_ = NULL;
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+}
+
+CommandSetFillPropertyArchive::~CommandSetFillPropertyArchive() {
+  SharedDtor();
+}
+
+void CommandSetFillPropertyArchive::SharedDtor() {
+  if (this != default_instance_) {
+    delete super_;
+    delete fill_;
+    delete cell_fill_stand_in_;
+    delete selection_;
+    delete undo_cell_map_;
+    delete redo_cell_map_;
+  }
+}
+
+void CommandSetFillPropertyArchive::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* CommandSetFillPropertyArchive::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return CommandSetFillPropertyArchive_descriptor_;
+}
+
+const CommandSetFillPropertyArchive& CommandSetFillPropertyArchive::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_TSTCommandArchives_2eproto();
+  return *default_instance_;
+}
+
+CommandSetFillPropertyArchive* CommandSetFillPropertyArchive::default_instance_ = NULL;
+
+CommandSetFillPropertyArchive* CommandSetFillPropertyArchive::New() const {
+  return new CommandSetFillPropertyArchive;
+}
+
+void CommandSetFillPropertyArchive::Clear() {
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (has_super()) {
+      if (super_ != NULL) super_->::TST::TableCommandArchive::Clear();
+    }
+    if (has_fill()) {
+      if (fill_ != NULL) fill_->::TSD::FillArchive::Clear();
+    }
+    if (has_cell_fill_stand_in()) {
+      if (cell_fill_stand_in_ != NULL) cell_fill_stand_in_->::TST::CellFillStandIn::Clear();
+    }
+    if (has_selection()) {
+      if (selection_ != NULL) selection_->::TST::SelectionArchive::Clear();
+    }
+    if (has_undo_cell_map()) {
+      if (undo_cell_map_ != NULL) undo_cell_map_->::TST::CellMapArchive::Clear();
+    }
+    if (has_redo_cell_map()) {
+      if (redo_cell_map_ != NULL) redo_cell_map_->::TST::CellMapArchive::Clear();
+    }
+  }
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+  mutable_unknown_fields()->Clear();
+}
+
+bool CommandSetFillPropertyArchive::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!(EXPRESSION)) return false
+  ::google::protobuf::uint32 tag;
+  while ((tag = input->ReadTag()) != 0) {
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // required .TST.TableCommandArchive super = 1;
+      case 1: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_super()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(18)) goto parse_fill;
+        break;
+      }
+
+      // optional .TSD.FillArchive fill = 2;
+      case 2: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_fill:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_fill()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(26)) goto parse_cell_fill_stand_in;
+        break;
+      }
+
+      // optional .TST.CellFillStandIn cell_fill_stand_in = 3;
+      case 3: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_cell_fill_stand_in:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_cell_fill_stand_in()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(34)) goto parse_selection;
+        break;
+      }
+
+      // required .TST.SelectionArchive selection = 4;
+      case 4: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_selection:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_selection()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(42)) goto parse_undo_cell_map;
+        break;
+      }
+
+      // required .TST.CellMapArchive undo_cell_map = 5;
+      case 5: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_undo_cell_map:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_undo_cell_map()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(50)) goto parse_redo_cell_map;
+        break;
+      }
+
+      // required .TST.CellMapArchive redo_cell_map = 6;
+      case 6: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_redo_cell_map:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_redo_cell_map()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectAtEnd()) return true;
+        break;
+      }
+
+      default: {
+      handle_uninterpreted:
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          return true;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+  return true;
+#undef DO_
+}
+
+void CommandSetFillPropertyArchive::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // required .TST.TableCommandArchive super = 1;
+  if (has_super()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, this->super(), output);
+  }
+
+  // optional .TSD.FillArchive fill = 2;
+  if (has_fill()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      2, this->fill(), output);
+  }
+
+  // optional .TST.CellFillStandIn cell_fill_stand_in = 3;
+  if (has_cell_fill_stand_in()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      3, this->cell_fill_stand_in(), output);
+  }
+
+  // required .TST.SelectionArchive selection = 4;
+  if (has_selection()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      4, this->selection(), output);
+  }
+
+  // required .TST.CellMapArchive undo_cell_map = 5;
+  if (has_undo_cell_map()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      5, this->undo_cell_map(), output);
+  }
+
+  // required .TST.CellMapArchive redo_cell_map = 6;
+  if (has_redo_cell_map()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      6, this->redo_cell_map(), output);
+  }
+
+  if (!unknown_fields().empty()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+}
+
+::google::protobuf::uint8* CommandSetFillPropertyArchive::SerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // required .TST.TableCommandArchive super = 1;
+  if (has_super()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        1, this->super(), target);
+  }
+
+  // optional .TSD.FillArchive fill = 2;
+  if (has_fill()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        2, this->fill(), target);
+  }
+
+  // optional .TST.CellFillStandIn cell_fill_stand_in = 3;
+  if (has_cell_fill_stand_in()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        3, this->cell_fill_stand_in(), target);
+  }
+
+  // required .TST.SelectionArchive selection = 4;
+  if (has_selection()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        4, this->selection(), target);
+  }
+
+  // required .TST.CellMapArchive undo_cell_map = 5;
+  if (has_undo_cell_map()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        5, this->undo_cell_map(), target);
+  }
+
+  // required .TST.CellMapArchive redo_cell_map = 6;
+  if (has_redo_cell_map()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        6, this->redo_cell_map(), target);
+  }
+
+  if (!unknown_fields().empty()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  return target;
+}
+
+int CommandSetFillPropertyArchive::ByteSize() const {
+  int total_size = 0;
+
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    // required .TST.TableCommandArchive super = 1;
+    if (has_super()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->super());
+    }
+
+    // optional .TSD.FillArchive fill = 2;
+    if (has_fill()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->fill());
+    }
+
+    // optional .TST.CellFillStandIn cell_fill_stand_in = 3;
+    if (has_cell_fill_stand_in()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->cell_fill_stand_in());
+    }
+
+    // required .TST.SelectionArchive selection = 4;
+    if (has_selection()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->selection());
+    }
+
+    // required .TST.CellMapArchive undo_cell_map = 5;
+    if (has_undo_cell_map()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->undo_cell_map());
+    }
+
+    // required .TST.CellMapArchive redo_cell_map = 6;
+    if (has_redo_cell_map()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->redo_cell_map());
+    }
+
+  }
+  if (!unknown_fields().empty()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = total_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void CommandSetFillPropertyArchive::MergeFrom(const ::google::protobuf::Message& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  const CommandSetFillPropertyArchive* source =
+    ::google::protobuf::internal::dynamic_cast_if_available<const CommandSetFillPropertyArchive*>(
+      &from);
+  if (source == NULL) {
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+    MergeFrom(*source);
+  }
+}
+
+void CommandSetFillPropertyArchive::MergeFrom(const CommandSetFillPropertyArchive& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (from.has_super()) {
+      mutable_super()->::TST::TableCommandArchive::MergeFrom(from.super());
+    }
+    if (from.has_fill()) {
+      mutable_fill()->::TSD::FillArchive::MergeFrom(from.fill());
+    }
+    if (from.has_cell_fill_stand_in()) {
+      mutable_cell_fill_stand_in()->::TST::CellFillStandIn::MergeFrom(from.cell_fill_stand_in());
+    }
+    if (from.has_selection()) {
+      mutable_selection()->::TST::SelectionArchive::MergeFrom(from.selection());
+    }
+    if (from.has_undo_cell_map()) {
+      mutable_undo_cell_map()->::TST::CellMapArchive::MergeFrom(from.undo_cell_map());
+    }
+    if (from.has_redo_cell_map()) {
+      mutable_redo_cell_map()->::TST::CellMapArchive::MergeFrom(from.redo_cell_map());
+    }
+  }
+  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
+}
+
+void CommandSetFillPropertyArchive::CopyFrom(const ::google::protobuf::Message& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void CommandSetFillPropertyArchive::CopyFrom(const CommandSetFillPropertyArchive& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool CommandSetFillPropertyArchive::IsInitialized() const {
+  if ((_has_bits_[0] & 0x00000039) != 0x00000039) return false;
+
+  if (has_super()) {
+    if (!this->super().IsInitialized()) return false;
+  }
+  if (has_fill()) {
+    if (!this->fill().IsInitialized()) return false;
+  }
+  if (has_cell_fill_stand_in()) {
+    if (!this->cell_fill_stand_in().IsInitialized()) return false;
+  }
+  if (has_selection()) {
+    if (!this->selection().IsInitialized()) return false;
+  }
+  if (has_undo_cell_map()) {
+    if (!this->undo_cell_map().IsInitialized()) return false;
+  }
+  if (has_redo_cell_map()) {
+    if (!this->redo_cell_map().IsInitialized()) return false;
+  }
+  return true;
+}
+
+void CommandSetFillPropertyArchive::Swap(CommandSetFillPropertyArchive* other) {
+  if (other != this) {
+    std::swap(super_, other->super_);
+    std::swap(fill_, other->fill_);
+    std::swap(cell_fill_stand_in_, other->cell_fill_stand_in_);
+    std::swap(selection_, other->selection_);
+    std::swap(undo_cell_map_, other->undo_cell_map_);
+    std::swap(redo_cell_map_, other->redo_cell_map_);
+    std::swap(_has_bits_[0], other->_has_bits_[0]);
+    _unknown_fields_.Swap(&other->_unknown_fields_);
+    std::swap(_cached_size_, other->_cached_size_);
+  }
+}
+
+::google::protobuf::Metadata CommandSetFillPropertyArchive::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = CommandSetFillPropertyArchive_descriptor_;
+  metadata.reflection = CommandSetFillPropertyArchive_reflection_;
+  return metadata;
+}
+
+
+// ===================================================================
+
+#ifndef _MSC_VER
 const int CommandStyleTableArchive::kSuperFieldNumber;
 const int CommandStyleTableArchive::kFormatPropertiesFieldNumber;
 const int CommandStyleTableArchive::kOldStyleFieldNumber;
@@ -20192,6 +21646,1103 @@ void CommandApplyStrokePresetArchive::Swap(CommandApplyStrokePresetArchive* othe
 // ===================================================================
 
 #ifndef _MSC_VER
+const int CommandAddTableStylePresetArchive::kSuperFieldNumber;
+const int CommandAddTableStylePresetArchive::kPresetIndexFieldNumber;
+const int CommandAddTableStylePresetArchive::kTableStylesFieldNumber;
+const int CommandAddTableStylePresetArchive::kSendNotificationFieldNumber;
+#endif  // !_MSC_VER
+
+CommandAddTableStylePresetArchive::CommandAddTableStylePresetArchive()
+  : ::google::protobuf::Message() {
+  SharedCtor();
+}
+
+void CommandAddTableStylePresetArchive::InitAsDefaultInstance() {
+  super_ = const_cast< ::TST::TableCommandArchive*>(&::TST::TableCommandArchive::default_instance());
+  table_styles_ = const_cast< ::TST::TableStyleNetworkArchive*>(&::TST::TableStyleNetworkArchive::default_instance());
+}
+
+CommandAddTableStylePresetArchive::CommandAddTableStylePresetArchive(const CommandAddTableStylePresetArchive& from)
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  MergeFrom(from);
+}
+
+void CommandAddTableStylePresetArchive::SharedCtor() {
+  _cached_size_ = 0;
+  super_ = NULL;
+  preset_index_ = 0;
+  table_styles_ = NULL;
+  send_notification_ = false;
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+}
+
+CommandAddTableStylePresetArchive::~CommandAddTableStylePresetArchive() {
+  SharedDtor();
+}
+
+void CommandAddTableStylePresetArchive::SharedDtor() {
+  if (this != default_instance_) {
+    delete super_;
+    delete table_styles_;
+  }
+}
+
+void CommandAddTableStylePresetArchive::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* CommandAddTableStylePresetArchive::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return CommandAddTableStylePresetArchive_descriptor_;
+}
+
+const CommandAddTableStylePresetArchive& CommandAddTableStylePresetArchive::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_TSTCommandArchives_2eproto();
+  return *default_instance_;
+}
+
+CommandAddTableStylePresetArchive* CommandAddTableStylePresetArchive::default_instance_ = NULL;
+
+CommandAddTableStylePresetArchive* CommandAddTableStylePresetArchive::New() const {
+  return new CommandAddTableStylePresetArchive;
+}
+
+void CommandAddTableStylePresetArchive::Clear() {
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (has_super()) {
+      if (super_ != NULL) super_->::TST::TableCommandArchive::Clear();
+    }
+    preset_index_ = 0;
+    if (has_table_styles()) {
+      if (table_styles_ != NULL) table_styles_->::TST::TableStyleNetworkArchive::Clear();
+    }
+    send_notification_ = false;
+  }
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+  mutable_unknown_fields()->Clear();
+}
+
+bool CommandAddTableStylePresetArchive::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!(EXPRESSION)) return false
+  ::google::protobuf::uint32 tag;
+  while ((tag = input->ReadTag()) != 0) {
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // required .TST.TableCommandArchive super = 1;
+      case 1: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_super()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(16)) goto parse_preset_index;
+        break;
+      }
+
+      // required int32 preset_index = 2;
+      case 2: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_preset_index:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &preset_index_)));
+          set_has_preset_index();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(26)) goto parse_table_styles;
+        break;
+      }
+
+      // required .TST.TableStyleNetworkArchive table_styles = 3;
+      case 3: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_table_styles:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_table_styles()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(32)) goto parse_send_notification;
+        break;
+      }
+
+      // required bool send_notification = 4;
+      case 4: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_send_notification:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &send_notification_)));
+          set_has_send_notification();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectAtEnd()) return true;
+        break;
+      }
+
+      default: {
+      handle_uninterpreted:
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          return true;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+  return true;
+#undef DO_
+}
+
+void CommandAddTableStylePresetArchive::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // required .TST.TableCommandArchive super = 1;
+  if (has_super()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, this->super(), output);
+  }
+
+  // required int32 preset_index = 2;
+  if (has_preset_index()) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(2, this->preset_index(), output);
+  }
+
+  // required .TST.TableStyleNetworkArchive table_styles = 3;
+  if (has_table_styles()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      3, this->table_styles(), output);
+  }
+
+  // required bool send_notification = 4;
+  if (has_send_notification()) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(4, this->send_notification(), output);
+  }
+
+  if (!unknown_fields().empty()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+}
+
+::google::protobuf::uint8* CommandAddTableStylePresetArchive::SerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // required .TST.TableCommandArchive super = 1;
+  if (has_super()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        1, this->super(), target);
+  }
+
+  // required int32 preset_index = 2;
+  if (has_preset_index()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(2, this->preset_index(), target);
+  }
+
+  // required .TST.TableStyleNetworkArchive table_styles = 3;
+  if (has_table_styles()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        3, this->table_styles(), target);
+  }
+
+  // required bool send_notification = 4;
+  if (has_send_notification()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(4, this->send_notification(), target);
+  }
+
+  if (!unknown_fields().empty()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  return target;
+}
+
+int CommandAddTableStylePresetArchive::ByteSize() const {
+  int total_size = 0;
+
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    // required .TST.TableCommandArchive super = 1;
+    if (has_super()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->super());
+    }
+
+    // required int32 preset_index = 2;
+    if (has_preset_index()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::Int32Size(
+          this->preset_index());
+    }
+
+    // required .TST.TableStyleNetworkArchive table_styles = 3;
+    if (has_table_styles()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->table_styles());
+    }
+
+    // required bool send_notification = 4;
+    if (has_send_notification()) {
+      total_size += 1 + 1;
+    }
+
+  }
+  if (!unknown_fields().empty()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = total_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void CommandAddTableStylePresetArchive::MergeFrom(const ::google::protobuf::Message& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  const CommandAddTableStylePresetArchive* source =
+    ::google::protobuf::internal::dynamic_cast_if_available<const CommandAddTableStylePresetArchive*>(
+      &from);
+  if (source == NULL) {
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+    MergeFrom(*source);
+  }
+}
+
+void CommandAddTableStylePresetArchive::MergeFrom(const CommandAddTableStylePresetArchive& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (from.has_super()) {
+      mutable_super()->::TST::TableCommandArchive::MergeFrom(from.super());
+    }
+    if (from.has_preset_index()) {
+      set_preset_index(from.preset_index());
+    }
+    if (from.has_table_styles()) {
+      mutable_table_styles()->::TST::TableStyleNetworkArchive::MergeFrom(from.table_styles());
+    }
+    if (from.has_send_notification()) {
+      set_send_notification(from.send_notification());
+    }
+  }
+  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
+}
+
+void CommandAddTableStylePresetArchive::CopyFrom(const ::google::protobuf::Message& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void CommandAddTableStylePresetArchive::CopyFrom(const CommandAddTableStylePresetArchive& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool CommandAddTableStylePresetArchive::IsInitialized() const {
+  if ((_has_bits_[0] & 0x0000000f) != 0x0000000f) return false;
+
+  if (has_super()) {
+    if (!this->super().IsInitialized()) return false;
+  }
+  if (has_table_styles()) {
+    if (!this->table_styles().IsInitialized()) return false;
+  }
+  return true;
+}
+
+void CommandAddTableStylePresetArchive::Swap(CommandAddTableStylePresetArchive* other) {
+  if (other != this) {
+    std::swap(super_, other->super_);
+    std::swap(preset_index_, other->preset_index_);
+    std::swap(table_styles_, other->table_styles_);
+    std::swap(send_notification_, other->send_notification_);
+    std::swap(_has_bits_[0], other->_has_bits_[0]);
+    _unknown_fields_.Swap(&other->_unknown_fields_);
+    std::swap(_cached_size_, other->_cached_size_);
+  }
+}
+
+::google::protobuf::Metadata CommandAddTableStylePresetArchive::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = CommandAddTableStylePresetArchive_descriptor_;
+  metadata.reflection = CommandAddTableStylePresetArchive_reflection_;
+  return metadata;
+}
+
+
+// ===================================================================
+
+#ifndef _MSC_VER
+const int CommandRemoveTableStylePresetArchive::kSuperFieldNumber;
+const int CommandRemoveTableStylePresetArchive::kThemeFieldNumber;
+const int CommandRemoveTableStylePresetArchive::kRemovedTableStylesFieldNumber;
+const int CommandRemoveTableStylePresetArchive::kPresetIdFieldNumber;
+const int CommandRemoveTableStylePresetArchive::kPresetIndexInThemeFieldNumber;
+#endif  // !_MSC_VER
+
+CommandRemoveTableStylePresetArchive::CommandRemoveTableStylePresetArchive()
+  : ::google::protobuf::Message() {
+  SharedCtor();
+}
+
+void CommandRemoveTableStylePresetArchive::InitAsDefaultInstance() {
+  super_ = const_cast< ::TSK::CommandArchive*>(&::TSK::CommandArchive::default_instance());
+  theme_ = const_cast< ::TSP::Reference*>(&::TSP::Reference::default_instance());
+  removed_table_styles_ = const_cast< ::TST::TableStyleNetworkArchive*>(&::TST::TableStyleNetworkArchive::default_instance());
+}
+
+CommandRemoveTableStylePresetArchive::CommandRemoveTableStylePresetArchive(const CommandRemoveTableStylePresetArchive& from)
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  MergeFrom(from);
+}
+
+void CommandRemoveTableStylePresetArchive::SharedCtor() {
+  _cached_size_ = 0;
+  super_ = NULL;
+  theme_ = NULL;
+  removed_table_styles_ = NULL;
+  preset_id_ = 0;
+  preset_index_in_theme_ = 0;
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+}
+
+CommandRemoveTableStylePresetArchive::~CommandRemoveTableStylePresetArchive() {
+  SharedDtor();
+}
+
+void CommandRemoveTableStylePresetArchive::SharedDtor() {
+  if (this != default_instance_) {
+    delete super_;
+    delete theme_;
+    delete removed_table_styles_;
+  }
+}
+
+void CommandRemoveTableStylePresetArchive::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* CommandRemoveTableStylePresetArchive::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return CommandRemoveTableStylePresetArchive_descriptor_;
+}
+
+const CommandRemoveTableStylePresetArchive& CommandRemoveTableStylePresetArchive::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_TSTCommandArchives_2eproto();
+  return *default_instance_;
+}
+
+CommandRemoveTableStylePresetArchive* CommandRemoveTableStylePresetArchive::default_instance_ = NULL;
+
+CommandRemoveTableStylePresetArchive* CommandRemoveTableStylePresetArchive::New() const {
+  return new CommandRemoveTableStylePresetArchive;
+}
+
+void CommandRemoveTableStylePresetArchive::Clear() {
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (has_super()) {
+      if (super_ != NULL) super_->::TSK::CommandArchive::Clear();
+    }
+    if (has_theme()) {
+      if (theme_ != NULL) theme_->::TSP::Reference::Clear();
+    }
+    if (has_removed_table_styles()) {
+      if (removed_table_styles_ != NULL) removed_table_styles_->::TST::TableStyleNetworkArchive::Clear();
+    }
+    preset_id_ = 0;
+    preset_index_in_theme_ = 0;
+  }
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+  mutable_unknown_fields()->Clear();
+}
+
+bool CommandRemoveTableStylePresetArchive::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!(EXPRESSION)) return false
+  ::google::protobuf::uint32 tag;
+  while ((tag = input->ReadTag()) != 0) {
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // required .TSK.CommandArchive super = 1;
+      case 1: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_super()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(18)) goto parse_theme;
+        break;
+      }
+
+      // required .TSP.Reference theme = 2;
+      case 2: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_theme:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_theme()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(26)) goto parse_removed_table_styles;
+        break;
+      }
+
+      // required .TST.TableStyleNetworkArchive removed_table_styles = 3;
+      case 3: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_removed_table_styles:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_removed_table_styles()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(32)) goto parse_preset_id;
+        break;
+      }
+
+      // required int32 preset_id = 4;
+      case 4: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_preset_id:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &preset_id_)));
+          set_has_preset_id();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(40)) goto parse_preset_index_in_theme;
+        break;
+      }
+
+      // required int32 preset_index_in_theme = 5;
+      case 5: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_preset_index_in_theme:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &preset_index_in_theme_)));
+          set_has_preset_index_in_theme();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectAtEnd()) return true;
+        break;
+      }
+
+      default: {
+      handle_uninterpreted:
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          return true;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+  return true;
+#undef DO_
+}
+
+void CommandRemoveTableStylePresetArchive::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // required .TSK.CommandArchive super = 1;
+  if (has_super()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, this->super(), output);
+  }
+
+  // required .TSP.Reference theme = 2;
+  if (has_theme()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      2, this->theme(), output);
+  }
+
+  // required .TST.TableStyleNetworkArchive removed_table_styles = 3;
+  if (has_removed_table_styles()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      3, this->removed_table_styles(), output);
+  }
+
+  // required int32 preset_id = 4;
+  if (has_preset_id()) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(4, this->preset_id(), output);
+  }
+
+  // required int32 preset_index_in_theme = 5;
+  if (has_preset_index_in_theme()) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(5, this->preset_index_in_theme(), output);
+  }
+
+  if (!unknown_fields().empty()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+}
+
+::google::protobuf::uint8* CommandRemoveTableStylePresetArchive::SerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // required .TSK.CommandArchive super = 1;
+  if (has_super()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        1, this->super(), target);
+  }
+
+  // required .TSP.Reference theme = 2;
+  if (has_theme()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        2, this->theme(), target);
+  }
+
+  // required .TST.TableStyleNetworkArchive removed_table_styles = 3;
+  if (has_removed_table_styles()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        3, this->removed_table_styles(), target);
+  }
+
+  // required int32 preset_id = 4;
+  if (has_preset_id()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(4, this->preset_id(), target);
+  }
+
+  // required int32 preset_index_in_theme = 5;
+  if (has_preset_index_in_theme()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(5, this->preset_index_in_theme(), target);
+  }
+
+  if (!unknown_fields().empty()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  return target;
+}
+
+int CommandRemoveTableStylePresetArchive::ByteSize() const {
+  int total_size = 0;
+
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    // required .TSK.CommandArchive super = 1;
+    if (has_super()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->super());
+    }
+
+    // required .TSP.Reference theme = 2;
+    if (has_theme()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->theme());
+    }
+
+    // required .TST.TableStyleNetworkArchive removed_table_styles = 3;
+    if (has_removed_table_styles()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->removed_table_styles());
+    }
+
+    // required int32 preset_id = 4;
+    if (has_preset_id()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::Int32Size(
+          this->preset_id());
+    }
+
+    // required int32 preset_index_in_theme = 5;
+    if (has_preset_index_in_theme()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::Int32Size(
+          this->preset_index_in_theme());
+    }
+
+  }
+  if (!unknown_fields().empty()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = total_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void CommandRemoveTableStylePresetArchive::MergeFrom(const ::google::protobuf::Message& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  const CommandRemoveTableStylePresetArchive* source =
+    ::google::protobuf::internal::dynamic_cast_if_available<const CommandRemoveTableStylePresetArchive*>(
+      &from);
+  if (source == NULL) {
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+    MergeFrom(*source);
+  }
+}
+
+void CommandRemoveTableStylePresetArchive::MergeFrom(const CommandRemoveTableStylePresetArchive& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (from.has_super()) {
+      mutable_super()->::TSK::CommandArchive::MergeFrom(from.super());
+    }
+    if (from.has_theme()) {
+      mutable_theme()->::TSP::Reference::MergeFrom(from.theme());
+    }
+    if (from.has_removed_table_styles()) {
+      mutable_removed_table_styles()->::TST::TableStyleNetworkArchive::MergeFrom(from.removed_table_styles());
+    }
+    if (from.has_preset_id()) {
+      set_preset_id(from.preset_id());
+    }
+    if (from.has_preset_index_in_theme()) {
+      set_preset_index_in_theme(from.preset_index_in_theme());
+    }
+  }
+  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
+}
+
+void CommandRemoveTableStylePresetArchive::CopyFrom(const ::google::protobuf::Message& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void CommandRemoveTableStylePresetArchive::CopyFrom(const CommandRemoveTableStylePresetArchive& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool CommandRemoveTableStylePresetArchive::IsInitialized() const {
+  if ((_has_bits_[0] & 0x0000001f) != 0x0000001f) return false;
+
+  if (has_super()) {
+    if (!this->super().IsInitialized()) return false;
+  }
+  if (has_theme()) {
+    if (!this->theme().IsInitialized()) return false;
+  }
+  if (has_removed_table_styles()) {
+    if (!this->removed_table_styles().IsInitialized()) return false;
+  }
+  return true;
+}
+
+void CommandRemoveTableStylePresetArchive::Swap(CommandRemoveTableStylePresetArchive* other) {
+  if (other != this) {
+    std::swap(super_, other->super_);
+    std::swap(theme_, other->theme_);
+    std::swap(removed_table_styles_, other->removed_table_styles_);
+    std::swap(preset_id_, other->preset_id_);
+    std::swap(preset_index_in_theme_, other->preset_index_in_theme_);
+    std::swap(_has_bits_[0], other->_has_bits_[0]);
+    _unknown_fields_.Swap(&other->_unknown_fields_);
+    std::swap(_cached_size_, other->_cached_size_);
+  }
+}
+
+::google::protobuf::Metadata CommandRemoveTableStylePresetArchive::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = CommandRemoveTableStylePresetArchive_descriptor_;
+  metadata.reflection = CommandRemoveTableStylePresetArchive_reflection_;
+  return metadata;
+}
+
+
+// ===================================================================
+
+#ifndef _MSC_VER
+const int CommandReplaceTableStylePresetArchive::kSuperFieldNumber;
+const int CommandReplaceTableStylePresetArchive::kThemeFieldNumber;
+const int CommandReplaceTableStylePresetArchive::kOldTableStylesFieldNumber;
+const int CommandReplaceTableStylePresetArchive::kNewTableStylesFieldNumber;
+#endif  // !_MSC_VER
+
+CommandReplaceTableStylePresetArchive::CommandReplaceTableStylePresetArchive()
+  : ::google::protobuf::Message() {
+  SharedCtor();
+}
+
+void CommandReplaceTableStylePresetArchive::InitAsDefaultInstance() {
+  super_ = const_cast< ::TSK::CommandArchive*>(&::TSK::CommandArchive::default_instance());
+  theme_ = const_cast< ::TSP::Reference*>(&::TSP::Reference::default_instance());
+  old_table_styles_ = const_cast< ::TST::TableStyleNetworkArchive*>(&::TST::TableStyleNetworkArchive::default_instance());
+  new_table_styles_ = const_cast< ::TST::TableStyleNetworkArchive*>(&::TST::TableStyleNetworkArchive::default_instance());
+}
+
+CommandReplaceTableStylePresetArchive::CommandReplaceTableStylePresetArchive(const CommandReplaceTableStylePresetArchive& from)
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  MergeFrom(from);
+}
+
+void CommandReplaceTableStylePresetArchive::SharedCtor() {
+  _cached_size_ = 0;
+  super_ = NULL;
+  theme_ = NULL;
+  old_table_styles_ = NULL;
+  new_table_styles_ = NULL;
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+}
+
+CommandReplaceTableStylePresetArchive::~CommandReplaceTableStylePresetArchive() {
+  SharedDtor();
+}
+
+void CommandReplaceTableStylePresetArchive::SharedDtor() {
+  if (this != default_instance_) {
+    delete super_;
+    delete theme_;
+    delete old_table_styles_;
+    delete new_table_styles_;
+  }
+}
+
+void CommandReplaceTableStylePresetArchive::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* CommandReplaceTableStylePresetArchive::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return CommandReplaceTableStylePresetArchive_descriptor_;
+}
+
+const CommandReplaceTableStylePresetArchive& CommandReplaceTableStylePresetArchive::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_TSTCommandArchives_2eproto();
+  return *default_instance_;
+}
+
+CommandReplaceTableStylePresetArchive* CommandReplaceTableStylePresetArchive::default_instance_ = NULL;
+
+CommandReplaceTableStylePresetArchive* CommandReplaceTableStylePresetArchive::New() const {
+  return new CommandReplaceTableStylePresetArchive;
+}
+
+void CommandReplaceTableStylePresetArchive::Clear() {
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (has_super()) {
+      if (super_ != NULL) super_->::TSK::CommandArchive::Clear();
+    }
+    if (has_theme()) {
+      if (theme_ != NULL) theme_->::TSP::Reference::Clear();
+    }
+    if (has_old_table_styles()) {
+      if (old_table_styles_ != NULL) old_table_styles_->::TST::TableStyleNetworkArchive::Clear();
+    }
+    if (has_new_table_styles()) {
+      if (new_table_styles_ != NULL) new_table_styles_->::TST::TableStyleNetworkArchive::Clear();
+    }
+  }
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+  mutable_unknown_fields()->Clear();
+}
+
+bool CommandReplaceTableStylePresetArchive::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!(EXPRESSION)) return false
+  ::google::protobuf::uint32 tag;
+  while ((tag = input->ReadTag()) != 0) {
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // required .TSK.CommandArchive super = 1;
+      case 1: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_super()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(18)) goto parse_theme;
+        break;
+      }
+
+      // required .TSP.Reference theme = 2;
+      case 2: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_theme:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_theme()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(26)) goto parse_old_table_styles;
+        break;
+      }
+
+      // required .TST.TableStyleNetworkArchive old_table_styles = 3;
+      case 3: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_old_table_styles:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_old_table_styles()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(34)) goto parse_new_table_styles;
+        break;
+      }
+
+      // required .TST.TableStyleNetworkArchive new_table_styles = 4;
+      case 4: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_new_table_styles:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_new_table_styles()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectAtEnd()) return true;
+        break;
+      }
+
+      default: {
+      handle_uninterpreted:
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          return true;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+  return true;
+#undef DO_
+}
+
+void CommandReplaceTableStylePresetArchive::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // required .TSK.CommandArchive super = 1;
+  if (has_super()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, this->super(), output);
+  }
+
+  // required .TSP.Reference theme = 2;
+  if (has_theme()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      2, this->theme(), output);
+  }
+
+  // required .TST.TableStyleNetworkArchive old_table_styles = 3;
+  if (has_old_table_styles()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      3, this->old_table_styles(), output);
+  }
+
+  // required .TST.TableStyleNetworkArchive new_table_styles = 4;
+  if (has_new_table_styles()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      4, this->new_table_styles(), output);
+  }
+
+  if (!unknown_fields().empty()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+}
+
+::google::protobuf::uint8* CommandReplaceTableStylePresetArchive::SerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // required .TSK.CommandArchive super = 1;
+  if (has_super()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        1, this->super(), target);
+  }
+
+  // required .TSP.Reference theme = 2;
+  if (has_theme()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        2, this->theme(), target);
+  }
+
+  // required .TST.TableStyleNetworkArchive old_table_styles = 3;
+  if (has_old_table_styles()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        3, this->old_table_styles(), target);
+  }
+
+  // required .TST.TableStyleNetworkArchive new_table_styles = 4;
+  if (has_new_table_styles()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        4, this->new_table_styles(), target);
+  }
+
+  if (!unknown_fields().empty()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  return target;
+}
+
+int CommandReplaceTableStylePresetArchive::ByteSize() const {
+  int total_size = 0;
+
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    // required .TSK.CommandArchive super = 1;
+    if (has_super()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->super());
+    }
+
+    // required .TSP.Reference theme = 2;
+    if (has_theme()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->theme());
+    }
+
+    // required .TST.TableStyleNetworkArchive old_table_styles = 3;
+    if (has_old_table_styles()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->old_table_styles());
+    }
+
+    // required .TST.TableStyleNetworkArchive new_table_styles = 4;
+    if (has_new_table_styles()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->new_table_styles());
+    }
+
+  }
+  if (!unknown_fields().empty()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = total_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void CommandReplaceTableStylePresetArchive::MergeFrom(const ::google::protobuf::Message& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  const CommandReplaceTableStylePresetArchive* source =
+    ::google::protobuf::internal::dynamic_cast_if_available<const CommandReplaceTableStylePresetArchive*>(
+      &from);
+  if (source == NULL) {
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+    MergeFrom(*source);
+  }
+}
+
+void CommandReplaceTableStylePresetArchive::MergeFrom(const CommandReplaceTableStylePresetArchive& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (from.has_super()) {
+      mutable_super()->::TSK::CommandArchive::MergeFrom(from.super());
+    }
+    if (from.has_theme()) {
+      mutable_theme()->::TSP::Reference::MergeFrom(from.theme());
+    }
+    if (from.has_old_table_styles()) {
+      mutable_old_table_styles()->::TST::TableStyleNetworkArchive::MergeFrom(from.old_table_styles());
+    }
+    if (from.has_new_table_styles()) {
+      mutable_new_table_styles()->::TST::TableStyleNetworkArchive::MergeFrom(from.new_table_styles());
+    }
+  }
+  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
+}
+
+void CommandReplaceTableStylePresetArchive::CopyFrom(const ::google::protobuf::Message& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void CommandReplaceTableStylePresetArchive::CopyFrom(const CommandReplaceTableStylePresetArchive& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool CommandReplaceTableStylePresetArchive::IsInitialized() const {
+  if ((_has_bits_[0] & 0x0000000f) != 0x0000000f) return false;
+
+  if (has_super()) {
+    if (!this->super().IsInitialized()) return false;
+  }
+  if (has_theme()) {
+    if (!this->theme().IsInitialized()) return false;
+  }
+  if (has_old_table_styles()) {
+    if (!this->old_table_styles().IsInitialized()) return false;
+  }
+  if (has_new_table_styles()) {
+    if (!this->new_table_styles().IsInitialized()) return false;
+  }
+  return true;
+}
+
+void CommandReplaceTableStylePresetArchive::Swap(CommandReplaceTableStylePresetArchive* other) {
+  if (other != this) {
+    std::swap(super_, other->super_);
+    std::swap(theme_, other->theme_);
+    std::swap(old_table_styles_, other->old_table_styles_);
+    std::swap(new_table_styles_, other->new_table_styles_);
+    std::swap(_has_bits_[0], other->_has_bits_[0]);
+    _unknown_fields_.Swap(&other->_unknown_fields_);
+    std::swap(_cached_size_, other->_cached_size_);
+  }
+}
+
+::google::protobuf::Metadata CommandReplaceTableStylePresetArchive::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = CommandReplaceTableStylePresetArchive_descriptor_;
+  metadata.reflection = CommandReplaceTableStylePresetArchive_reflection_;
+  return metadata;
+}
+
+
+// ===================================================================
+
+#ifndef _MSC_VER
 const int CommandApplyTableStylePresetArchive_StyleIndexTuple::kIndexFieldNumber;
 const int CommandApplyTableStylePresetArchive_StyleIndexTuple::kCellStyleFieldNumber;
 const int CommandApplyTableStylePresetArchive_StyleIndexTuple::kTextStyleFieldNumber;
@@ -20693,7 +23244,7 @@ bool CommandApplyTableStylePresetArchive::MergePartialFromCodedStream(
         break;
       }
 
-      // required .TST.TableStyleNetworkArchive new_table_styles = 8;
+      // optional .TST.TableStyleNetworkArchive new_table_styles = 8 [deprecated = true];
       case 8: {
         if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
             ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
@@ -20828,7 +23379,7 @@ void CommandApplyTableStylePresetArchive::SerializeWithCachedSizes(
       7, this->old_table_styles(), output);
   }
 
-  // required .TST.TableStyleNetworkArchive new_table_styles = 8;
+  // optional .TST.TableStyleNetworkArchive new_table_styles = 8 [deprecated = true];
   if (has_new_table_styles()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
       8, this->new_table_styles(), output);
@@ -20904,7 +23455,7 @@ void CommandApplyTableStylePresetArchive::SerializeWithCachedSizes(
         7, this->old_table_styles(), target);
   }
 
-  // required .TST.TableStyleNetworkArchive new_table_styles = 8;
+  // optional .TST.TableStyleNetworkArchive new_table_styles = 8 [deprecated = true];
   if (has_new_table_styles()) {
     target = ::google::protobuf::internal::WireFormatLite::
       WriteMessageNoVirtualToArray(
@@ -20990,7 +23541,7 @@ int CommandApplyTableStylePresetArchive::ByteSize() const {
           this->old_table_styles());
     }
 
-    // required .TST.TableStyleNetworkArchive new_table_styles = 8;
+    // optional .TST.TableStyleNetworkArchive new_table_styles = 8 [deprecated = true];
     if (has_new_table_styles()) {
       total_size += 1 +
         ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
@@ -21109,7 +23660,7 @@ void CommandApplyTableStylePresetArchive::CopyFrom(const CommandApplyTableStyleP
 }
 
 bool CommandApplyTableStylePresetArchive::IsInitialized() const {
-  if ((_has_bits_[0] & 0x0000003f) != 0x0000003f) return false;
+  if ((_has_bits_[0] & 0x0000001f) != 0x0000001f) return false;
 
   if (has_super()) {
     if (!this->super().IsInitialized()) return false;
@@ -40871,6 +43422,1354 @@ void CommandSetStorageLanguageArchive::Swap(CommandSetStorageLanguageArchive* ot
   ::google::protobuf::Metadata metadata;
   metadata.descriptor = CommandSetStorageLanguageArchive_descriptor_;
   metadata.reflection = CommandSetStorageLanguageArchive_reflection_;
+  return metadata;
+}
+
+
+// ===================================================================
+
+#ifndef _MSC_VER
+const int CommandSetSortOrderArchive::kSuperFieldNumber;
+const int CommandSetSortOrderArchive::kOldSortOrderFieldNumber;
+const int CommandSetSortOrderArchive::kNewSortOrderFieldNumber;
+#endif  // !_MSC_VER
+
+CommandSetSortOrderArchive::CommandSetSortOrderArchive()
+  : ::google::protobuf::Message() {
+  SharedCtor();
+}
+
+void CommandSetSortOrderArchive::InitAsDefaultInstance() {
+  super_ = const_cast< ::TST::TableCommandArchive*>(&::TST::TableCommandArchive::default_instance());
+  old_sort_order_ = const_cast< ::TST::TableSortOrderArchive*>(&::TST::TableSortOrderArchive::default_instance());
+  new_sort_order_ = const_cast< ::TST::TableSortOrderArchive*>(&::TST::TableSortOrderArchive::default_instance());
+}
+
+CommandSetSortOrderArchive::CommandSetSortOrderArchive(const CommandSetSortOrderArchive& from)
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  MergeFrom(from);
+}
+
+void CommandSetSortOrderArchive::SharedCtor() {
+  _cached_size_ = 0;
+  super_ = NULL;
+  old_sort_order_ = NULL;
+  new_sort_order_ = NULL;
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+}
+
+CommandSetSortOrderArchive::~CommandSetSortOrderArchive() {
+  SharedDtor();
+}
+
+void CommandSetSortOrderArchive::SharedDtor() {
+  if (this != default_instance_) {
+    delete super_;
+    delete old_sort_order_;
+    delete new_sort_order_;
+  }
+}
+
+void CommandSetSortOrderArchive::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* CommandSetSortOrderArchive::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return CommandSetSortOrderArchive_descriptor_;
+}
+
+const CommandSetSortOrderArchive& CommandSetSortOrderArchive::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_TSTCommandArchives_2eproto();
+  return *default_instance_;
+}
+
+CommandSetSortOrderArchive* CommandSetSortOrderArchive::default_instance_ = NULL;
+
+CommandSetSortOrderArchive* CommandSetSortOrderArchive::New() const {
+  return new CommandSetSortOrderArchive;
+}
+
+void CommandSetSortOrderArchive::Clear() {
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (has_super()) {
+      if (super_ != NULL) super_->::TST::TableCommandArchive::Clear();
+    }
+    if (has_old_sort_order()) {
+      if (old_sort_order_ != NULL) old_sort_order_->::TST::TableSortOrderArchive::Clear();
+    }
+    if (has_new_sort_order()) {
+      if (new_sort_order_ != NULL) new_sort_order_->::TST::TableSortOrderArchive::Clear();
+    }
+  }
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+  mutable_unknown_fields()->Clear();
+}
+
+bool CommandSetSortOrderArchive::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!(EXPRESSION)) return false
+  ::google::protobuf::uint32 tag;
+  while ((tag = input->ReadTag()) != 0) {
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // required .TST.TableCommandArchive super = 1;
+      case 1: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_super()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(18)) goto parse_old_sort_order;
+        break;
+      }
+
+      // optional .TST.TableSortOrderArchive old_sort_order = 2;
+      case 2: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_old_sort_order:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_old_sort_order()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(26)) goto parse_new_sort_order;
+        break;
+      }
+
+      // optional .TST.TableSortOrderArchive new_sort_order = 3;
+      case 3: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_new_sort_order:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_new_sort_order()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectAtEnd()) return true;
+        break;
+      }
+
+      default: {
+      handle_uninterpreted:
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          return true;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+  return true;
+#undef DO_
+}
+
+void CommandSetSortOrderArchive::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // required .TST.TableCommandArchive super = 1;
+  if (has_super()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, this->super(), output);
+  }
+
+  // optional .TST.TableSortOrderArchive old_sort_order = 2;
+  if (has_old_sort_order()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      2, this->old_sort_order(), output);
+  }
+
+  // optional .TST.TableSortOrderArchive new_sort_order = 3;
+  if (has_new_sort_order()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      3, this->new_sort_order(), output);
+  }
+
+  if (!unknown_fields().empty()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+}
+
+::google::protobuf::uint8* CommandSetSortOrderArchive::SerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // required .TST.TableCommandArchive super = 1;
+  if (has_super()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        1, this->super(), target);
+  }
+
+  // optional .TST.TableSortOrderArchive old_sort_order = 2;
+  if (has_old_sort_order()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        2, this->old_sort_order(), target);
+  }
+
+  // optional .TST.TableSortOrderArchive new_sort_order = 3;
+  if (has_new_sort_order()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        3, this->new_sort_order(), target);
+  }
+
+  if (!unknown_fields().empty()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  return target;
+}
+
+int CommandSetSortOrderArchive::ByteSize() const {
+  int total_size = 0;
+
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    // required .TST.TableCommandArchive super = 1;
+    if (has_super()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->super());
+    }
+
+    // optional .TST.TableSortOrderArchive old_sort_order = 2;
+    if (has_old_sort_order()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->old_sort_order());
+    }
+
+    // optional .TST.TableSortOrderArchive new_sort_order = 3;
+    if (has_new_sort_order()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->new_sort_order());
+    }
+
+  }
+  if (!unknown_fields().empty()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = total_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void CommandSetSortOrderArchive::MergeFrom(const ::google::protobuf::Message& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  const CommandSetSortOrderArchive* source =
+    ::google::protobuf::internal::dynamic_cast_if_available<const CommandSetSortOrderArchive*>(
+      &from);
+  if (source == NULL) {
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+    MergeFrom(*source);
+  }
+}
+
+void CommandSetSortOrderArchive::MergeFrom(const CommandSetSortOrderArchive& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (from.has_super()) {
+      mutable_super()->::TST::TableCommandArchive::MergeFrom(from.super());
+    }
+    if (from.has_old_sort_order()) {
+      mutable_old_sort_order()->::TST::TableSortOrderArchive::MergeFrom(from.old_sort_order());
+    }
+    if (from.has_new_sort_order()) {
+      mutable_new_sort_order()->::TST::TableSortOrderArchive::MergeFrom(from.new_sort_order());
+    }
+  }
+  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
+}
+
+void CommandSetSortOrderArchive::CopyFrom(const ::google::protobuf::Message& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void CommandSetSortOrderArchive::CopyFrom(const CommandSetSortOrderArchive& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool CommandSetSortOrderArchive::IsInitialized() const {
+  if ((_has_bits_[0] & 0x00000001) != 0x00000001) return false;
+
+  if (has_super()) {
+    if (!this->super().IsInitialized()) return false;
+  }
+  if (has_old_sort_order()) {
+    if (!this->old_sort_order().IsInitialized()) return false;
+  }
+  if (has_new_sort_order()) {
+    if (!this->new_sort_order().IsInitialized()) return false;
+  }
+  return true;
+}
+
+void CommandSetSortOrderArchive::Swap(CommandSetSortOrderArchive* other) {
+  if (other != this) {
+    std::swap(super_, other->super_);
+    std::swap(old_sort_order_, other->old_sort_order_);
+    std::swap(new_sort_order_, other->new_sort_order_);
+    std::swap(_has_bits_[0], other->_has_bits_[0]);
+    _unknown_fields_.Swap(&other->_unknown_fields_);
+    std::swap(_cached_size_, other->_cached_size_);
+  }
+}
+
+::google::protobuf::Metadata CommandSetSortOrderArchive::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = CommandSetSortOrderArchive_descriptor_;
+  metadata.reflection = CommandSetSortOrderArchive_reflection_;
+  return metadata;
+}
+
+
+// ===================================================================
+
+#ifndef _MSC_VER
+const int CommandRewriteSortOrderForTectonicShiftArchive::kSuperFieldNumber;
+const int CommandRewriteSortOrderForTectonicShiftArchive::kTectonicShiftFieldNumber;
+const int CommandRewriteSortOrderForTectonicShiftArchive::kOldSortOrderFieldNumber;
+const int CommandRewriteSortOrderForTectonicShiftArchive::kNewSortOrderFieldNumber;
+#endif  // !_MSC_VER
+
+CommandRewriteSortOrderForTectonicShiftArchive::CommandRewriteSortOrderForTectonicShiftArchive()
+  : ::google::protobuf::Message() {
+  SharedCtor();
+}
+
+void CommandRewriteSortOrderForTectonicShiftArchive::InitAsDefaultInstance() {
+  super_ = const_cast< ::TST::TableCommandArchive*>(&::TST::TableCommandArchive::default_instance());
+  tectonic_shift_ = const_cast< ::TSCE::TectonicShiftArchive*>(&::TSCE::TectonicShiftArchive::default_instance());
+  old_sort_order_ = const_cast< ::TST::TableSortOrderArchive*>(&::TST::TableSortOrderArchive::default_instance());
+  new_sort_order_ = const_cast< ::TST::TableSortOrderArchive*>(&::TST::TableSortOrderArchive::default_instance());
+}
+
+CommandRewriteSortOrderForTectonicShiftArchive::CommandRewriteSortOrderForTectonicShiftArchive(const CommandRewriteSortOrderForTectonicShiftArchive& from)
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  MergeFrom(from);
+}
+
+void CommandRewriteSortOrderForTectonicShiftArchive::SharedCtor() {
+  _cached_size_ = 0;
+  super_ = NULL;
+  tectonic_shift_ = NULL;
+  old_sort_order_ = NULL;
+  new_sort_order_ = NULL;
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+}
+
+CommandRewriteSortOrderForTectonicShiftArchive::~CommandRewriteSortOrderForTectonicShiftArchive() {
+  SharedDtor();
+}
+
+void CommandRewriteSortOrderForTectonicShiftArchive::SharedDtor() {
+  if (this != default_instance_) {
+    delete super_;
+    delete tectonic_shift_;
+    delete old_sort_order_;
+    delete new_sort_order_;
+  }
+}
+
+void CommandRewriteSortOrderForTectonicShiftArchive::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* CommandRewriteSortOrderForTectonicShiftArchive::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return CommandRewriteSortOrderForTectonicShiftArchive_descriptor_;
+}
+
+const CommandRewriteSortOrderForTectonicShiftArchive& CommandRewriteSortOrderForTectonicShiftArchive::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_TSTCommandArchives_2eproto();
+  return *default_instance_;
+}
+
+CommandRewriteSortOrderForTectonicShiftArchive* CommandRewriteSortOrderForTectonicShiftArchive::default_instance_ = NULL;
+
+CommandRewriteSortOrderForTectonicShiftArchive* CommandRewriteSortOrderForTectonicShiftArchive::New() const {
+  return new CommandRewriteSortOrderForTectonicShiftArchive;
+}
+
+void CommandRewriteSortOrderForTectonicShiftArchive::Clear() {
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (has_super()) {
+      if (super_ != NULL) super_->::TST::TableCommandArchive::Clear();
+    }
+    if (has_tectonic_shift()) {
+      if (tectonic_shift_ != NULL) tectonic_shift_->::TSCE::TectonicShiftArchive::Clear();
+    }
+    if (has_old_sort_order()) {
+      if (old_sort_order_ != NULL) old_sort_order_->::TST::TableSortOrderArchive::Clear();
+    }
+    if (has_new_sort_order()) {
+      if (new_sort_order_ != NULL) new_sort_order_->::TST::TableSortOrderArchive::Clear();
+    }
+  }
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+  mutable_unknown_fields()->Clear();
+}
+
+bool CommandRewriteSortOrderForTectonicShiftArchive::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!(EXPRESSION)) return false
+  ::google::protobuf::uint32 tag;
+  while ((tag = input->ReadTag()) != 0) {
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // required .TST.TableCommandArchive super = 1;
+      case 1: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_super()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(18)) goto parse_tectonic_shift;
+        break;
+      }
+
+      // required .TSCE.TectonicShiftArchive tectonic_shift = 2;
+      case 2: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_tectonic_shift:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_tectonic_shift()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(26)) goto parse_old_sort_order;
+        break;
+      }
+
+      // optional .TST.TableSortOrderArchive old_sort_order = 3;
+      case 3: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_old_sort_order:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_old_sort_order()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(34)) goto parse_new_sort_order;
+        break;
+      }
+
+      // optional .TST.TableSortOrderArchive new_sort_order = 4;
+      case 4: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_new_sort_order:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_new_sort_order()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectAtEnd()) return true;
+        break;
+      }
+
+      default: {
+      handle_uninterpreted:
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          return true;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+  return true;
+#undef DO_
+}
+
+void CommandRewriteSortOrderForTectonicShiftArchive::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // required .TST.TableCommandArchive super = 1;
+  if (has_super()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, this->super(), output);
+  }
+
+  // required .TSCE.TectonicShiftArchive tectonic_shift = 2;
+  if (has_tectonic_shift()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      2, this->tectonic_shift(), output);
+  }
+
+  // optional .TST.TableSortOrderArchive old_sort_order = 3;
+  if (has_old_sort_order()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      3, this->old_sort_order(), output);
+  }
+
+  // optional .TST.TableSortOrderArchive new_sort_order = 4;
+  if (has_new_sort_order()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      4, this->new_sort_order(), output);
+  }
+
+  if (!unknown_fields().empty()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+}
+
+::google::protobuf::uint8* CommandRewriteSortOrderForTectonicShiftArchive::SerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // required .TST.TableCommandArchive super = 1;
+  if (has_super()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        1, this->super(), target);
+  }
+
+  // required .TSCE.TectonicShiftArchive tectonic_shift = 2;
+  if (has_tectonic_shift()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        2, this->tectonic_shift(), target);
+  }
+
+  // optional .TST.TableSortOrderArchive old_sort_order = 3;
+  if (has_old_sort_order()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        3, this->old_sort_order(), target);
+  }
+
+  // optional .TST.TableSortOrderArchive new_sort_order = 4;
+  if (has_new_sort_order()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        4, this->new_sort_order(), target);
+  }
+
+  if (!unknown_fields().empty()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  return target;
+}
+
+int CommandRewriteSortOrderForTectonicShiftArchive::ByteSize() const {
+  int total_size = 0;
+
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    // required .TST.TableCommandArchive super = 1;
+    if (has_super()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->super());
+    }
+
+    // required .TSCE.TectonicShiftArchive tectonic_shift = 2;
+    if (has_tectonic_shift()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->tectonic_shift());
+    }
+
+    // optional .TST.TableSortOrderArchive old_sort_order = 3;
+    if (has_old_sort_order()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->old_sort_order());
+    }
+
+    // optional .TST.TableSortOrderArchive new_sort_order = 4;
+    if (has_new_sort_order()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->new_sort_order());
+    }
+
+  }
+  if (!unknown_fields().empty()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = total_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void CommandRewriteSortOrderForTectonicShiftArchive::MergeFrom(const ::google::protobuf::Message& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  const CommandRewriteSortOrderForTectonicShiftArchive* source =
+    ::google::protobuf::internal::dynamic_cast_if_available<const CommandRewriteSortOrderForTectonicShiftArchive*>(
+      &from);
+  if (source == NULL) {
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+    MergeFrom(*source);
+  }
+}
+
+void CommandRewriteSortOrderForTectonicShiftArchive::MergeFrom(const CommandRewriteSortOrderForTectonicShiftArchive& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (from.has_super()) {
+      mutable_super()->::TST::TableCommandArchive::MergeFrom(from.super());
+    }
+    if (from.has_tectonic_shift()) {
+      mutable_tectonic_shift()->::TSCE::TectonicShiftArchive::MergeFrom(from.tectonic_shift());
+    }
+    if (from.has_old_sort_order()) {
+      mutable_old_sort_order()->::TST::TableSortOrderArchive::MergeFrom(from.old_sort_order());
+    }
+    if (from.has_new_sort_order()) {
+      mutable_new_sort_order()->::TST::TableSortOrderArchive::MergeFrom(from.new_sort_order());
+    }
+  }
+  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
+}
+
+void CommandRewriteSortOrderForTectonicShiftArchive::CopyFrom(const ::google::protobuf::Message& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void CommandRewriteSortOrderForTectonicShiftArchive::CopyFrom(const CommandRewriteSortOrderForTectonicShiftArchive& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool CommandRewriteSortOrderForTectonicShiftArchive::IsInitialized() const {
+  if ((_has_bits_[0] & 0x00000003) != 0x00000003) return false;
+
+  if (has_super()) {
+    if (!this->super().IsInitialized()) return false;
+  }
+  if (has_tectonic_shift()) {
+    if (!this->tectonic_shift().IsInitialized()) return false;
+  }
+  if (has_old_sort_order()) {
+    if (!this->old_sort_order().IsInitialized()) return false;
+  }
+  if (has_new_sort_order()) {
+    if (!this->new_sort_order().IsInitialized()) return false;
+  }
+  return true;
+}
+
+void CommandRewriteSortOrderForTectonicShiftArchive::Swap(CommandRewriteSortOrderForTectonicShiftArchive* other) {
+  if (other != this) {
+    std::swap(super_, other->super_);
+    std::swap(tectonic_shift_, other->tectonic_shift_);
+    std::swap(old_sort_order_, other->old_sort_order_);
+    std::swap(new_sort_order_, other->new_sort_order_);
+    std::swap(_has_bits_[0], other->_has_bits_[0]);
+    _unknown_fields_.Swap(&other->_unknown_fields_);
+    std::swap(_cached_size_, other->_cached_size_);
+  }
+}
+
+::google::protobuf::Metadata CommandRewriteSortOrderForTectonicShiftArchive::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = CommandRewriteSortOrderForTectonicShiftArchive_descriptor_;
+  metadata.reflection = CommandRewriteSortOrderForTectonicShiftArchive_reflection_;
+  return metadata;
+}
+
+
+// ===================================================================
+
+#ifndef _MSC_VER
+const int CommandRewriteSortOrderForSortArchive::kSuperFieldNumber;
+const int CommandRewriteSortOrderForSortArchive::kSortMappingFieldNumber;
+const int CommandRewriteSortOrderForSortArchive::kOldSortOrderFieldNumber;
+const int CommandRewriteSortOrderForSortArchive::kNewSortOrderFieldNumber;
+#endif  // !_MSC_VER
+
+CommandRewriteSortOrderForSortArchive::CommandRewriteSortOrderForSortArchive()
+  : ::google::protobuf::Message() {
+  SharedCtor();
+}
+
+void CommandRewriteSortOrderForSortArchive::InitAsDefaultInstance() {
+  super_ = const_cast< ::TST::TableCommandArchive*>(&::TST::TableCommandArchive::default_instance());
+  sort_mapping_ = const_cast< ::TSK::ShuffleMappingArchive*>(&::TSK::ShuffleMappingArchive::default_instance());
+  old_sort_order_ = const_cast< ::TST::TableSortOrderArchive*>(&::TST::TableSortOrderArchive::default_instance());
+  new_sort_order_ = const_cast< ::TST::TableSortOrderArchive*>(&::TST::TableSortOrderArchive::default_instance());
+}
+
+CommandRewriteSortOrderForSortArchive::CommandRewriteSortOrderForSortArchive(const CommandRewriteSortOrderForSortArchive& from)
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  MergeFrom(from);
+}
+
+void CommandRewriteSortOrderForSortArchive::SharedCtor() {
+  _cached_size_ = 0;
+  super_ = NULL;
+  sort_mapping_ = NULL;
+  old_sort_order_ = NULL;
+  new_sort_order_ = NULL;
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+}
+
+CommandRewriteSortOrderForSortArchive::~CommandRewriteSortOrderForSortArchive() {
+  SharedDtor();
+}
+
+void CommandRewriteSortOrderForSortArchive::SharedDtor() {
+  if (this != default_instance_) {
+    delete super_;
+    delete sort_mapping_;
+    delete old_sort_order_;
+    delete new_sort_order_;
+  }
+}
+
+void CommandRewriteSortOrderForSortArchive::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* CommandRewriteSortOrderForSortArchive::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return CommandRewriteSortOrderForSortArchive_descriptor_;
+}
+
+const CommandRewriteSortOrderForSortArchive& CommandRewriteSortOrderForSortArchive::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_TSTCommandArchives_2eproto();
+  return *default_instance_;
+}
+
+CommandRewriteSortOrderForSortArchive* CommandRewriteSortOrderForSortArchive::default_instance_ = NULL;
+
+CommandRewriteSortOrderForSortArchive* CommandRewriteSortOrderForSortArchive::New() const {
+  return new CommandRewriteSortOrderForSortArchive;
+}
+
+void CommandRewriteSortOrderForSortArchive::Clear() {
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (has_super()) {
+      if (super_ != NULL) super_->::TST::TableCommandArchive::Clear();
+    }
+    if (has_sort_mapping()) {
+      if (sort_mapping_ != NULL) sort_mapping_->::TSK::ShuffleMappingArchive::Clear();
+    }
+    if (has_old_sort_order()) {
+      if (old_sort_order_ != NULL) old_sort_order_->::TST::TableSortOrderArchive::Clear();
+    }
+    if (has_new_sort_order()) {
+      if (new_sort_order_ != NULL) new_sort_order_->::TST::TableSortOrderArchive::Clear();
+    }
+  }
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+  mutable_unknown_fields()->Clear();
+}
+
+bool CommandRewriteSortOrderForSortArchive::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!(EXPRESSION)) return false
+  ::google::protobuf::uint32 tag;
+  while ((tag = input->ReadTag()) != 0) {
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // required .TST.TableCommandArchive super = 1;
+      case 1: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_super()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(18)) goto parse_sort_mapping;
+        break;
+      }
+
+      // required .TSK.ShuffleMappingArchive sort_mapping = 2;
+      case 2: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_sort_mapping:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_sort_mapping()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(26)) goto parse_old_sort_order;
+        break;
+      }
+
+      // optional .TST.TableSortOrderArchive old_sort_order = 3;
+      case 3: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_old_sort_order:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_old_sort_order()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(34)) goto parse_new_sort_order;
+        break;
+      }
+
+      // optional .TST.TableSortOrderArchive new_sort_order = 4;
+      case 4: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_new_sort_order:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_new_sort_order()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectAtEnd()) return true;
+        break;
+      }
+
+      default: {
+      handle_uninterpreted:
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          return true;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+  return true;
+#undef DO_
+}
+
+void CommandRewriteSortOrderForSortArchive::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // required .TST.TableCommandArchive super = 1;
+  if (has_super()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, this->super(), output);
+  }
+
+  // required .TSK.ShuffleMappingArchive sort_mapping = 2;
+  if (has_sort_mapping()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      2, this->sort_mapping(), output);
+  }
+
+  // optional .TST.TableSortOrderArchive old_sort_order = 3;
+  if (has_old_sort_order()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      3, this->old_sort_order(), output);
+  }
+
+  // optional .TST.TableSortOrderArchive new_sort_order = 4;
+  if (has_new_sort_order()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      4, this->new_sort_order(), output);
+  }
+
+  if (!unknown_fields().empty()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+}
+
+::google::protobuf::uint8* CommandRewriteSortOrderForSortArchive::SerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // required .TST.TableCommandArchive super = 1;
+  if (has_super()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        1, this->super(), target);
+  }
+
+  // required .TSK.ShuffleMappingArchive sort_mapping = 2;
+  if (has_sort_mapping()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        2, this->sort_mapping(), target);
+  }
+
+  // optional .TST.TableSortOrderArchive old_sort_order = 3;
+  if (has_old_sort_order()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        3, this->old_sort_order(), target);
+  }
+
+  // optional .TST.TableSortOrderArchive new_sort_order = 4;
+  if (has_new_sort_order()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        4, this->new_sort_order(), target);
+  }
+
+  if (!unknown_fields().empty()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  return target;
+}
+
+int CommandRewriteSortOrderForSortArchive::ByteSize() const {
+  int total_size = 0;
+
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    // required .TST.TableCommandArchive super = 1;
+    if (has_super()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->super());
+    }
+
+    // required .TSK.ShuffleMappingArchive sort_mapping = 2;
+    if (has_sort_mapping()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->sort_mapping());
+    }
+
+    // optional .TST.TableSortOrderArchive old_sort_order = 3;
+    if (has_old_sort_order()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->old_sort_order());
+    }
+
+    // optional .TST.TableSortOrderArchive new_sort_order = 4;
+    if (has_new_sort_order()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->new_sort_order());
+    }
+
+  }
+  if (!unknown_fields().empty()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = total_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void CommandRewriteSortOrderForSortArchive::MergeFrom(const ::google::protobuf::Message& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  const CommandRewriteSortOrderForSortArchive* source =
+    ::google::protobuf::internal::dynamic_cast_if_available<const CommandRewriteSortOrderForSortArchive*>(
+      &from);
+  if (source == NULL) {
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+    MergeFrom(*source);
+  }
+}
+
+void CommandRewriteSortOrderForSortArchive::MergeFrom(const CommandRewriteSortOrderForSortArchive& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (from.has_super()) {
+      mutable_super()->::TST::TableCommandArchive::MergeFrom(from.super());
+    }
+    if (from.has_sort_mapping()) {
+      mutable_sort_mapping()->::TSK::ShuffleMappingArchive::MergeFrom(from.sort_mapping());
+    }
+    if (from.has_old_sort_order()) {
+      mutable_old_sort_order()->::TST::TableSortOrderArchive::MergeFrom(from.old_sort_order());
+    }
+    if (from.has_new_sort_order()) {
+      mutable_new_sort_order()->::TST::TableSortOrderArchive::MergeFrom(from.new_sort_order());
+    }
+  }
+  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
+}
+
+void CommandRewriteSortOrderForSortArchive::CopyFrom(const ::google::protobuf::Message& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void CommandRewriteSortOrderForSortArchive::CopyFrom(const CommandRewriteSortOrderForSortArchive& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool CommandRewriteSortOrderForSortArchive::IsInitialized() const {
+  if ((_has_bits_[0] & 0x00000003) != 0x00000003) return false;
+
+  if (has_super()) {
+    if (!this->super().IsInitialized()) return false;
+  }
+  if (has_sort_mapping()) {
+    if (!this->sort_mapping().IsInitialized()) return false;
+  }
+  if (has_old_sort_order()) {
+    if (!this->old_sort_order().IsInitialized()) return false;
+  }
+  if (has_new_sort_order()) {
+    if (!this->new_sort_order().IsInitialized()) return false;
+  }
+  return true;
+}
+
+void CommandRewriteSortOrderForSortArchive::Swap(CommandRewriteSortOrderForSortArchive* other) {
+  if (other != this) {
+    std::swap(super_, other->super_);
+    std::swap(sort_mapping_, other->sort_mapping_);
+    std::swap(old_sort_order_, other->old_sort_order_);
+    std::swap(new_sort_order_, other->new_sort_order_);
+    std::swap(_has_bits_[0], other->_has_bits_[0]);
+    _unknown_fields_.Swap(&other->_unknown_fields_);
+    std::swap(_cached_size_, other->_cached_size_);
+  }
+}
+
+::google::protobuf::Metadata CommandRewriteSortOrderForSortArchive::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = CommandRewriteSortOrderForSortArchive_descriptor_;
+  metadata.reflection = CommandRewriteSortOrderForSortArchive_reflection_;
+  return metadata;
+}
+
+
+// ===================================================================
+
+#ifndef _MSC_VER
+const int CommandRewriteSortOrderForTableResizeArchive::kSuperFieldNumber;
+const int CommandRewriteSortOrderForTableResizeArchive::kOldSortOrderFieldNumber;
+const int CommandRewriteSortOrderForTableResizeArchive::kNewSortOrderFieldNumber;
+#endif  // !_MSC_VER
+
+CommandRewriteSortOrderForTableResizeArchive::CommandRewriteSortOrderForTableResizeArchive()
+  : ::google::protobuf::Message() {
+  SharedCtor();
+}
+
+void CommandRewriteSortOrderForTableResizeArchive::InitAsDefaultInstance() {
+  super_ = const_cast< ::TST::TableCommandArchive*>(&::TST::TableCommandArchive::default_instance());
+  old_sort_order_ = const_cast< ::TST::TableSortOrderArchive*>(&::TST::TableSortOrderArchive::default_instance());
+  new_sort_order_ = const_cast< ::TST::TableSortOrderArchive*>(&::TST::TableSortOrderArchive::default_instance());
+}
+
+CommandRewriteSortOrderForTableResizeArchive::CommandRewriteSortOrderForTableResizeArchive(const CommandRewriteSortOrderForTableResizeArchive& from)
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  MergeFrom(from);
+}
+
+void CommandRewriteSortOrderForTableResizeArchive::SharedCtor() {
+  _cached_size_ = 0;
+  super_ = NULL;
+  old_sort_order_ = NULL;
+  new_sort_order_ = NULL;
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+}
+
+CommandRewriteSortOrderForTableResizeArchive::~CommandRewriteSortOrderForTableResizeArchive() {
+  SharedDtor();
+}
+
+void CommandRewriteSortOrderForTableResizeArchive::SharedDtor() {
+  if (this != default_instance_) {
+    delete super_;
+    delete old_sort_order_;
+    delete new_sort_order_;
+  }
+}
+
+void CommandRewriteSortOrderForTableResizeArchive::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* CommandRewriteSortOrderForTableResizeArchive::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return CommandRewriteSortOrderForTableResizeArchive_descriptor_;
+}
+
+const CommandRewriteSortOrderForTableResizeArchive& CommandRewriteSortOrderForTableResizeArchive::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_TSTCommandArchives_2eproto();
+  return *default_instance_;
+}
+
+CommandRewriteSortOrderForTableResizeArchive* CommandRewriteSortOrderForTableResizeArchive::default_instance_ = NULL;
+
+CommandRewriteSortOrderForTableResizeArchive* CommandRewriteSortOrderForTableResizeArchive::New() const {
+  return new CommandRewriteSortOrderForTableResizeArchive;
+}
+
+void CommandRewriteSortOrderForTableResizeArchive::Clear() {
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (has_super()) {
+      if (super_ != NULL) super_->::TST::TableCommandArchive::Clear();
+    }
+    if (has_old_sort_order()) {
+      if (old_sort_order_ != NULL) old_sort_order_->::TST::TableSortOrderArchive::Clear();
+    }
+    if (has_new_sort_order()) {
+      if (new_sort_order_ != NULL) new_sort_order_->::TST::TableSortOrderArchive::Clear();
+    }
+  }
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+  mutable_unknown_fields()->Clear();
+}
+
+bool CommandRewriteSortOrderForTableResizeArchive::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!(EXPRESSION)) return false
+  ::google::protobuf::uint32 tag;
+  while ((tag = input->ReadTag()) != 0) {
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // required .TST.TableCommandArchive super = 1;
+      case 1: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_super()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(18)) goto parse_old_sort_order;
+        break;
+      }
+
+      // optional .TST.TableSortOrderArchive old_sort_order = 2;
+      case 2: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_old_sort_order:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_old_sort_order()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(26)) goto parse_new_sort_order;
+        break;
+      }
+
+      // optional .TST.TableSortOrderArchive new_sort_order = 3;
+      case 3: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_new_sort_order:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_new_sort_order()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectAtEnd()) return true;
+        break;
+      }
+
+      default: {
+      handle_uninterpreted:
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          return true;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+  return true;
+#undef DO_
+}
+
+void CommandRewriteSortOrderForTableResizeArchive::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // required .TST.TableCommandArchive super = 1;
+  if (has_super()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, this->super(), output);
+  }
+
+  // optional .TST.TableSortOrderArchive old_sort_order = 2;
+  if (has_old_sort_order()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      2, this->old_sort_order(), output);
+  }
+
+  // optional .TST.TableSortOrderArchive new_sort_order = 3;
+  if (has_new_sort_order()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      3, this->new_sort_order(), output);
+  }
+
+  if (!unknown_fields().empty()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+}
+
+::google::protobuf::uint8* CommandRewriteSortOrderForTableResizeArchive::SerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // required .TST.TableCommandArchive super = 1;
+  if (has_super()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        1, this->super(), target);
+  }
+
+  // optional .TST.TableSortOrderArchive old_sort_order = 2;
+  if (has_old_sort_order()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        2, this->old_sort_order(), target);
+  }
+
+  // optional .TST.TableSortOrderArchive new_sort_order = 3;
+  if (has_new_sort_order()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        3, this->new_sort_order(), target);
+  }
+
+  if (!unknown_fields().empty()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  return target;
+}
+
+int CommandRewriteSortOrderForTableResizeArchive::ByteSize() const {
+  int total_size = 0;
+
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    // required .TST.TableCommandArchive super = 1;
+    if (has_super()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->super());
+    }
+
+    // optional .TST.TableSortOrderArchive old_sort_order = 2;
+    if (has_old_sort_order()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->old_sort_order());
+    }
+
+    // optional .TST.TableSortOrderArchive new_sort_order = 3;
+    if (has_new_sort_order()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->new_sort_order());
+    }
+
+  }
+  if (!unknown_fields().empty()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = total_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void CommandRewriteSortOrderForTableResizeArchive::MergeFrom(const ::google::protobuf::Message& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  const CommandRewriteSortOrderForTableResizeArchive* source =
+    ::google::protobuf::internal::dynamic_cast_if_available<const CommandRewriteSortOrderForTableResizeArchive*>(
+      &from);
+  if (source == NULL) {
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+    MergeFrom(*source);
+  }
+}
+
+void CommandRewriteSortOrderForTableResizeArchive::MergeFrom(const CommandRewriteSortOrderForTableResizeArchive& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (from.has_super()) {
+      mutable_super()->::TST::TableCommandArchive::MergeFrom(from.super());
+    }
+    if (from.has_old_sort_order()) {
+      mutable_old_sort_order()->::TST::TableSortOrderArchive::MergeFrom(from.old_sort_order());
+    }
+    if (from.has_new_sort_order()) {
+      mutable_new_sort_order()->::TST::TableSortOrderArchive::MergeFrom(from.new_sort_order());
+    }
+  }
+  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
+}
+
+void CommandRewriteSortOrderForTableResizeArchive::CopyFrom(const ::google::protobuf::Message& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void CommandRewriteSortOrderForTableResizeArchive::CopyFrom(const CommandRewriteSortOrderForTableResizeArchive& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool CommandRewriteSortOrderForTableResizeArchive::IsInitialized() const {
+  if ((_has_bits_[0] & 0x00000001) != 0x00000001) return false;
+
+  if (has_super()) {
+    if (!this->super().IsInitialized()) return false;
+  }
+  if (has_old_sort_order()) {
+    if (!this->old_sort_order().IsInitialized()) return false;
+  }
+  if (has_new_sort_order()) {
+    if (!this->new_sort_order().IsInitialized()) return false;
+  }
+  return true;
+}
+
+void CommandRewriteSortOrderForTableResizeArchive::Swap(CommandRewriteSortOrderForTableResizeArchive* other) {
+  if (other != this) {
+    std::swap(super_, other->super_);
+    std::swap(old_sort_order_, other->old_sort_order_);
+    std::swap(new_sort_order_, other->new_sort_order_);
+    std::swap(_has_bits_[0], other->_has_bits_[0]);
+    _unknown_fields_.Swap(&other->_unknown_fields_);
+    std::swap(_cached_size_, other->_cached_size_);
+  }
+}
+
+::google::protobuf::Metadata CommandRewriteSortOrderForTableResizeArchive::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = CommandRewriteSortOrderForTableResizeArchive_descriptor_;
+  metadata.reflection = CommandRewriteSortOrderForTableResizeArchive_reflection_;
   return metadata;
 }
 

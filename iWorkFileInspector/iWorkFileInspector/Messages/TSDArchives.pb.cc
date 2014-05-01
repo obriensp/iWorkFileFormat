@@ -158,6 +158,7 @@ const ::google::protobuf::internal::GeneratedMessageReflection*
 const ::google::protobuf::Descriptor* MovieArchive_descriptor_ = NULL;
 const ::google::protobuf::internal::GeneratedMessageReflection*
   MovieArchive_reflection_ = NULL;
+const ::google::protobuf::EnumDescriptor* MovieArchive_MovieLoopOption_descriptor_ = NULL;
 const ::google::protobuf::Descriptor* ExteriorTextWrapArchive_descriptor_ = NULL;
 const ::google::protobuf::internal::GeneratedMessageReflection*
   ExteriorTextWrapArchive_reflection_ = NULL;
@@ -974,7 +975,7 @@ void protobuf_AssignDesc_TSDArchives_2eproto() {
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(MaskArchive));
   MovieArchive_descriptor_ = file->message_type(39);
-  static const int MovieArchive_offsets_[22] = {
+  static const int MovieArchive_offsets_[24] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MovieArchive, super_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MovieArchive, moviedata_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MovieArchive, importedauxiliarymoviedata_),
@@ -982,13 +983,15 @@ void protobuf_AssignDesc_TSDArchives_2eproto() {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MovieArchive, starttime_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MovieArchive, endtime_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MovieArchive, postertime_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MovieArchive, loopoption_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MovieArchive, loopoptionasinteger_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MovieArchive, loop_option_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MovieArchive, volume_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MovieArchive, autoplay_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MovieArchive, audioonly_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MovieArchive, streaming_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MovieArchive, posterimagedata_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MovieArchive, audioonlyimagedata_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MovieArchive, poster_image_generated_with_alpha_support_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MovieArchive, playablestate_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MovieArchive, flags_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MovieArchive, database_moviedata_),
@@ -1009,6 +1012,7 @@ void protobuf_AssignDesc_TSDArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(MovieArchive));
+  MovieArchive_MovieLoopOption_descriptor_ = MovieArchive_descriptor_->enum_type(0);
   ExteriorTextWrapArchive_descriptor_ = file->message_type(40);
   static const int ExteriorTextWrapArchive_offsets_[6] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ExteriorTextWrapArchive, type_),
@@ -1547,44 +1551,49 @@ void protobuf_AddDesc_TSDArchives_2eproto() {
     "abase_originalData\030\010 \001(\0132\016.TSP.Reference"
     "\"^\n\013MaskArchive\022#\n\005super\030\001 \002(\0132\024.TSD.Dra"
     "wableArchive\022*\n\npathsource\030\002 \001(\0132\026.TSD.P"
-    "athSourceArchive\"\270\005\n\014MovieArchive\022#\n\005sup"
+    "athSourceArchive\"\361\006\n\014MovieArchive\022#\n\005sup"
     "er\030\001 \002(\0132\024.TSD.DrawableArchive\022%\n\tmovieD"
     "ata\030\016 \001(\0132\022.TSP.DataReference\0226\n\032importe"
     "dAuxiliaryMovieData\030\026 \001(\0132\022.TSP.DataRefe"
     "rence\022\026\n\016movieRemoteURL\030\021 \001(\t\022\021\n\tstartTi"
     "me\030\003 \001(\002\022\017\n\007endTime\030\004 \001(\002\022\022\n\nposterTime\030"
-    "\005 \001(\002\022\022\n\nloopOption\030\006 \001(\r\022\016\n\006volume\030\007 \001("
-    "\002\022\024\n\010autoPlay\030\010 \001(\010B\002\030\001\022\021\n\taudioOnly\030\t \001"
-    "(\010\022\021\n\tstreaming\030\022 \001(\010\022+\n\017posterImageData"
-    "\030\017 \001(\0132\022.TSP.DataReference\022.\n\022audioOnlyI"
-    "mageData\030\020 \001(\0132\022.TSP.DataReference\022\025\n\rpl"
-    "ayableState\030\014 \001(\r\022\r\n\005flags\030\r \001(\r\022*\n\022data"
-    "base_movieData\030\002 \001(\0132\016.TSP.Reference\0220\n\030"
-    "database_posterImageData\030\n \001(\0132\016.TSP.Ref"
-    "erence\0223\n\033database_audioOnlyImageData\030\013 "
-    "\001(\0132\016.TSP.Reference\022\035\n\005style\030\023 \001(\0132\016.TSP"
-    ".Reference\022\037\n\014originalSize\030\024 \001(\0132\t.TSP.S"
-    "ize\022\036\n\013naturalSize\030\025 \001(\0132\t.TSP.Size\"\213\001\n\027"
-    "ExteriorTextWrapArchive\022\014\n\004type\030\001 \001(\r\022\021\n"
-    "\tdirection\030\002 \001(\r\022\020\n\010fit_type\030\003 \001(\r\022\016\n\006ma"
-    "rgin\030\004 \001(\002\022\027\n\017alpha_threshold\030\005 \001(\002\022\024\n\014i"
-    "s_html_wrap\030\006 \001(\010\"\263\001\n\014GuideArchive\022)\n\004ty"
-    "pe\030\001 \001(\0162\033.TSD.GuideArchive.GuideType\022\016\n"
-    "\006offset\030\002 \001(\002\022\r\n\005start\030\003 \001(\002\022\013\n\003end\030\004 \001("
-    "\002\022\017\n\007dynamic\030\005 \001(\010\022\020\n\010infinite\030\006 \001(\010\")\n\t"
-    "GuideType\022\016\n\nHorizontal\020\000\022\014\n\010Vertical\020\001\""
-    "\214\001\n\027UserDefinedGuideArchive\0224\n\004type\030\001 \001("
-    "\0162&.TSD.UserDefinedGuideArchive.GuideTyp"
-    "e\022\020\n\010position\030\002 \001(\002\")\n\tGuideType\022\016\n\nHori"
-    "zontal\020\000\022\014\n\010Vertical\020\001\"N\n\023GuideStorageAr"
-    "chive\0227\n\021userDefinedGuides\030\001 \003(\0132\034.TSD.U"
-    "serDefinedGuideArchive\"Z\n\026CanvasSelectio"
-    "nArchive\022\035\n\005infos\030\001 \003(\0132\016.TSP.Reference\022"
-    "!\n\tcontainer\030\002 \001(\0132\016.TSP.Reference\"g\n\025Co"
-    "mmentStorageArchive\022\014\n\004text\030\001 \001(\t\022 \n\rcre"
-    "ation_date\030\002 \001(\0132\t.TSP.Date\022\036\n\006author\030\003 "
-    "\001(\0132\016.TSP.Reference*7\n\010LineJoin\022\r\n\tMiter"
-    "Join\020\000\022\r\n\tRoundJoin\020\001\022\r\n\tBevelJoin\020\002", 9756);
+    "\005 \001(\002\022\037\n\023loopOptionAsInteger\030\006 \001(\rB\002\030\001\022<"
+    "\n\013loop_option\030\030 \001(\0162!.TSD.MovieArchive.M"
+    "ovieLoopOption:\004None\022\016\n\006volume\030\007 \001(\002\022\024\n\010"
+    "autoPlay\030\010 \001(\010B\002\030\001\022\021\n\taudioOnly\030\t \001(\010\022\021\n"
+    "\tstreaming\030\022 \001(\010\022+\n\017posterImageData\030\017 \001("
+    "\0132\022.TSP.DataReference\022.\n\022audioOnlyImageD"
+    "ata\030\020 \001(\0132\022.TSP.DataReference\0221\n)poster_"
+    "image_generated_with_alpha_support\030\027 \001(\010"
+    "\022\025\n\rplayableState\030\014 \001(\r\022\r\n\005flags\030\r \001(\r\022*"
+    "\n\022database_movieData\030\002 \001(\0132\016.TSP.Referen"
+    "ce\0220\n\030database_posterImageData\030\n \001(\0132\016.T"
+    "SP.Reference\0223\n\033database_audioOnlyImageD"
+    "ata\030\013 \001(\0132\016.TSP.Reference\022\035\n\005style\030\023 \001(\013"
+    "2\016.TSP.Reference\022\037\n\014originalSize\030\024 \001(\0132\t"
+    ".TSP.Size\022\036\n\013naturalSize\030\025 \001(\0132\t.TSP.Siz"
+    "e\"9\n\017MovieLoopOption\022\010\n\004None\020\000\022\n\n\006Repeat"
+    "\020\001\022\020\n\014BackAndForth\020\002\"\213\001\n\027ExteriorTextWra"
+    "pArchive\022\014\n\004type\030\001 \001(\r\022\021\n\tdirection\030\002 \001("
+    "\r\022\020\n\010fit_type\030\003 \001(\r\022\016\n\006margin\030\004 \001(\002\022\027\n\017a"
+    "lpha_threshold\030\005 \001(\002\022\024\n\014is_html_wrap\030\006 \001"
+    "(\010\"\263\001\n\014GuideArchive\022)\n\004type\030\001 \001(\0162\033.TSD."
+    "GuideArchive.GuideType\022\016\n\006offset\030\002 \001(\002\022\r"
+    "\n\005start\030\003 \001(\002\022\013\n\003end\030\004 \001(\002\022\017\n\007dynamic\030\005 "
+    "\001(\010\022\020\n\010infinite\030\006 \001(\010\")\n\tGuideType\022\016\n\nHo"
+    "rizontal\020\000\022\014\n\010Vertical\020\001\"\214\001\n\027UserDefined"
+    "GuideArchive\0224\n\004type\030\001 \001(\0162&.TSD.UserDef"
+    "inedGuideArchive.GuideType\022\020\n\010position\030\002"
+    " \001(\002\")\n\tGuideType\022\016\n\nHorizontal\020\000\022\014\n\010Ver"
+    "tical\020\001\"N\n\023GuideStorageArchive\0227\n\021userDe"
+    "finedGuides\030\001 \003(\0132\034.TSD.UserDefinedGuide"
+    "Archive\"Z\n\026CanvasSelectionArchive\022\035\n\005inf"
+    "os\030\001 \003(\0132\016.TSP.Reference\022!\n\tcontainer\030\002 "
+    "\001(\0132\016.TSP.Reference\"g\n\025CommentStorageArc"
+    "hive\022\014\n\004text\030\001 \001(\t\022 \n\rcreation_date\030\002 \001("
+    "\0132\t.TSP.Date\022\036\n\006author\030\003 \001(\0132\016.TSP.Refer"
+    "ence*7\n\010LineJoin\022\r\n\tMiterJoin\020\000\022\r\n\tRound"
+    "Join\020\001\022\r\n\tBevelJoin\020\002", 9941);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "TSDArchives.proto", &protobuf_RegisterTypes);
   EdgeInsetsArchive::default_instance_ = new EdgeInsetsArchive();
@@ -17367,6 +17376,29 @@ void MaskArchive::Swap(MaskArchive* other) {
 
 // ===================================================================
 
+const ::google::protobuf::EnumDescriptor* MovieArchive_MovieLoopOption_descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return MovieArchive_MovieLoopOption_descriptor_;
+}
+bool MovieArchive_MovieLoopOption_IsValid(int value) {
+  switch(value) {
+    case 0:
+    case 1:
+    case 2:
+      return true;
+    default:
+      return false;
+  }
+}
+
+#ifndef _MSC_VER
+const MovieArchive_MovieLoopOption MovieArchive::None;
+const MovieArchive_MovieLoopOption MovieArchive::Repeat;
+const MovieArchive_MovieLoopOption MovieArchive::BackAndForth;
+const MovieArchive_MovieLoopOption MovieArchive::MovieLoopOption_MIN;
+const MovieArchive_MovieLoopOption MovieArchive::MovieLoopOption_MAX;
+const int MovieArchive::MovieLoopOption_ARRAYSIZE;
+#endif  // _MSC_VER
 #ifndef _MSC_VER
 const int MovieArchive::kSuperFieldNumber;
 const int MovieArchive::kMovieDataFieldNumber;
@@ -17375,6 +17407,7 @@ const int MovieArchive::kMovieRemoteURLFieldNumber;
 const int MovieArchive::kStartTimeFieldNumber;
 const int MovieArchive::kEndTimeFieldNumber;
 const int MovieArchive::kPosterTimeFieldNumber;
+const int MovieArchive::kLoopOptionAsIntegerFieldNumber;
 const int MovieArchive::kLoopOptionFieldNumber;
 const int MovieArchive::kVolumeFieldNumber;
 const int MovieArchive::kAutoPlayFieldNumber;
@@ -17382,6 +17415,7 @@ const int MovieArchive::kAudioOnlyFieldNumber;
 const int MovieArchive::kStreamingFieldNumber;
 const int MovieArchive::kPosterImageDataFieldNumber;
 const int MovieArchive::kAudioOnlyImageDataFieldNumber;
+const int MovieArchive::kPosterImageGeneratedWithAlphaSupportFieldNumber;
 const int MovieArchive::kPlayableStateFieldNumber;
 const int MovieArchive::kFlagsFieldNumber;
 const int MovieArchive::kDatabaseMovieDataFieldNumber;
@@ -17426,13 +17460,15 @@ void MovieArchive::SharedCtor() {
   starttime_ = 0;
   endtime_ = 0;
   postertime_ = 0;
-  loopoption_ = 0u;
+  loopoptionasinteger_ = 0u;
+  loop_option_ = 0;
   volume_ = 0;
   autoplay_ = false;
   audioonly_ = false;
   streaming_ = false;
   posterimagedata_ = NULL;
   audioonlyimagedata_ = NULL;
+  poster_image_generated_with_alpha_support_ = false;
   playablestate_ = 0u;
   flags_ = 0u;
   database_moviedata_ = NULL;
@@ -17507,9 +17543,10 @@ void MovieArchive::Clear() {
     starttime_ = 0;
     endtime_ = 0;
     postertime_ = 0;
-    loopoption_ = 0u;
+    loopoptionasinteger_ = 0u;
   }
   if (_has_bits_[8 / 32] & (0xffu << (8 % 32))) {
+    loop_option_ = 0;
     volume_ = 0;
     autoplay_ = false;
     audioonly_ = false;
@@ -17520,10 +17557,11 @@ void MovieArchive::Clear() {
     if (has_audioonlyimagedata()) {
       if (audioonlyimagedata_ != NULL) audioonlyimagedata_->::TSP::DataReference::Clear();
     }
-    playablestate_ = 0u;
-    flags_ = 0u;
+    poster_image_generated_with_alpha_support_ = false;
   }
   if (_has_bits_[16 / 32] & (0xffu << (16 % 32))) {
+    playablestate_ = 0u;
+    flags_ = 0u;
     if (has_database_moviedata()) {
       if (database_moviedata_ != NULL) database_moviedata_->::TSP::Reference::Clear();
     }
@@ -17624,19 +17662,19 @@ bool MovieArchive::MergePartialFromCodedStream(
         } else {
           goto handle_uninterpreted;
         }
-        if (input->ExpectTag(48)) goto parse_loopOption;
+        if (input->ExpectTag(48)) goto parse_loopOptionAsInteger;
         break;
       }
 
-      // optional uint32 loopOption = 6;
+      // optional uint32 loopOptionAsInteger = 6 [deprecated = true];
       case 6: {
         if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
             ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
-         parse_loopOption:
+         parse_loopOptionAsInteger:
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
-                 input, &loopoption_)));
-          set_has_loopoption();
+                 input, &loopoptionasinteger_)));
+          set_has_loopoptionasinteger();
         } else {
           goto handle_uninterpreted;
         }
@@ -17879,6 +17917,43 @@ bool MovieArchive::MergePartialFromCodedStream(
         } else {
           goto handle_uninterpreted;
         }
+        if (input->ExpectTag(184)) goto parse_poster_image_generated_with_alpha_support;
+        break;
+      }
+
+      // optional bool poster_image_generated_with_alpha_support = 23;
+      case 23: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_poster_image_generated_with_alpha_support:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &poster_image_generated_with_alpha_support_)));
+          set_has_poster_image_generated_with_alpha_support();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(192)) goto parse_loop_option;
+        break;
+      }
+
+      // optional .TSD.MovieArchive.MovieLoopOption loop_option = 24 [default = None];
+      case 24: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_loop_option:
+          int value;
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
+                 input, &value)));
+          if (::TSD::MovieArchive_MovieLoopOption_IsValid(value)) {
+            set_loop_option(static_cast< ::TSD::MovieArchive_MovieLoopOption >(value));
+          } else {
+            mutable_unknown_fields()->AddVarint(24, value);
+          }
+        } else {
+          goto handle_uninterpreted;
+        }
         if (input->ExpectAtEnd()) return true;
         break;
       }
@@ -17928,9 +18003,9 @@ void MovieArchive::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteFloat(5, this->postertime(), output);
   }
 
-  // optional uint32 loopOption = 6;
-  if (has_loopoption()) {
-    ::google::protobuf::internal::WireFormatLite::WriteUInt32(6, this->loopoption(), output);
+  // optional uint32 loopOptionAsInteger = 6 [deprecated = true];
+  if (has_loopoptionasinteger()) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(6, this->loopoptionasinteger(), output);
   }
 
   // optional float volume = 7;
@@ -18026,6 +18101,17 @@ void MovieArchive::SerializeWithCachedSizes(
       22, this->importedauxiliarymoviedata(), output);
   }
 
+  // optional bool poster_image_generated_with_alpha_support = 23;
+  if (has_poster_image_generated_with_alpha_support()) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(23, this->poster_image_generated_with_alpha_support(), output);
+  }
+
+  // optional .TSD.MovieArchive.MovieLoopOption loop_option = 24 [default = None];
+  if (has_loop_option()) {
+    ::google::protobuf::internal::WireFormatLite::WriteEnum(
+      24, this->loop_option(), output);
+  }
+
   if (!unknown_fields().empty()) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         unknown_fields(), output);
@@ -18063,9 +18149,9 @@ void MovieArchive::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(5, this->postertime(), target);
   }
 
-  // optional uint32 loopOption = 6;
-  if (has_loopoption()) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(6, this->loopoption(), target);
+  // optional uint32 loopOptionAsInteger = 6 [deprecated = true];
+  if (has_loopoptionasinteger()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(6, this->loopoptionasinteger(), target);
   }
 
   // optional float volume = 7;
@@ -18171,6 +18257,17 @@ void MovieArchive::SerializeWithCachedSizes(
         22, this->importedauxiliarymoviedata(), target);
   }
 
+  // optional bool poster_image_generated_with_alpha_support = 23;
+  if (has_poster_image_generated_with_alpha_support()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(23, this->poster_image_generated_with_alpha_support(), target);
+  }
+
+  // optional .TSD.MovieArchive.MovieLoopOption loop_option = 24 [default = None];
+  if (has_loop_option()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
+      24, this->loop_option(), target);
+  }
+
   if (!unknown_fields().empty()) {
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
         unknown_fields(), target);
@@ -18225,15 +18322,21 @@ int MovieArchive::ByteSize() const {
       total_size += 1 + 4;
     }
 
-    // optional uint32 loopOption = 6;
-    if (has_loopoption()) {
+    // optional uint32 loopOptionAsInteger = 6 [deprecated = true];
+    if (has_loopoptionasinteger()) {
       total_size += 1 +
         ::google::protobuf::internal::WireFormatLite::UInt32Size(
-          this->loopoption());
+          this->loopoptionasinteger());
     }
 
   }
   if (_has_bits_[8 / 32] & (0xffu << (8 % 32))) {
+    // optional .TSD.MovieArchive.MovieLoopOption loop_option = 24 [default = None];
+    if (has_loop_option()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::EnumSize(this->loop_option());
+    }
+
     // optional float volume = 7;
     if (has_volume()) {
       total_size += 1 + 4;
@@ -18268,6 +18371,13 @@ int MovieArchive::ByteSize() const {
           this->audioonlyimagedata());
     }
 
+    // optional bool poster_image_generated_with_alpha_support = 23;
+    if (has_poster_image_generated_with_alpha_support()) {
+      total_size += 2 + 1;
+    }
+
+  }
+  if (_has_bits_[16 / 32] & (0xffu << (16 % 32))) {
     // optional uint32 playableState = 12;
     if (has_playablestate()) {
       total_size += 1 +
@@ -18282,8 +18392,6 @@ int MovieArchive::ByteSize() const {
           this->flags());
     }
 
-  }
-  if (_has_bits_[16 / 32] & (0xffu << (16 % 32))) {
     // optional .TSP.Reference database_movieData = 2;
     if (has_database_moviedata()) {
       total_size += 1 +
@@ -18374,11 +18482,14 @@ void MovieArchive::MergeFrom(const MovieArchive& from) {
     if (from.has_postertime()) {
       set_postertime(from.postertime());
     }
-    if (from.has_loopoption()) {
-      set_loopoption(from.loopoption());
+    if (from.has_loopoptionasinteger()) {
+      set_loopoptionasinteger(from.loopoptionasinteger());
     }
   }
   if (from._has_bits_[8 / 32] & (0xffu << (8 % 32))) {
+    if (from.has_loop_option()) {
+      set_loop_option(from.loop_option());
+    }
     if (from.has_volume()) {
       set_volume(from.volume());
     }
@@ -18397,14 +18508,17 @@ void MovieArchive::MergeFrom(const MovieArchive& from) {
     if (from.has_audioonlyimagedata()) {
       mutable_audioonlyimagedata()->::TSP::DataReference::MergeFrom(from.audioonlyimagedata());
     }
+    if (from.has_poster_image_generated_with_alpha_support()) {
+      set_poster_image_generated_with_alpha_support(from.poster_image_generated_with_alpha_support());
+    }
+  }
+  if (from._has_bits_[16 / 32] & (0xffu << (16 % 32))) {
     if (from.has_playablestate()) {
       set_playablestate(from.playablestate());
     }
     if (from.has_flags()) {
       set_flags(from.flags());
     }
-  }
-  if (from._has_bits_[16 / 32] & (0xffu << (16 % 32))) {
     if (from.has_database_moviedata()) {
       mutable_database_moviedata()->::TSP::Reference::MergeFrom(from.database_moviedata());
     }
@@ -18487,13 +18601,15 @@ void MovieArchive::Swap(MovieArchive* other) {
     std::swap(starttime_, other->starttime_);
     std::swap(endtime_, other->endtime_);
     std::swap(postertime_, other->postertime_);
-    std::swap(loopoption_, other->loopoption_);
+    std::swap(loopoptionasinteger_, other->loopoptionasinteger_);
+    std::swap(loop_option_, other->loop_option_);
     std::swap(volume_, other->volume_);
     std::swap(autoplay_, other->autoplay_);
     std::swap(audioonly_, other->audioonly_);
     std::swap(streaming_, other->streaming_);
     std::swap(posterimagedata_, other->posterimagedata_);
     std::swap(audioonlyimagedata_, other->audioonlyimagedata_);
+    std::swap(poster_image_generated_with_alpha_support_, other->poster_image_generated_with_alpha_support_);
     std::swap(playablestate_, other->playablestate_);
     std::swap(flags_, other->flags_);
     std::swap(database_moviedata_, other->database_moviedata_);

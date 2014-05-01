@@ -138,6 +138,9 @@ const ::google::protobuf::internal::GeneratedMessageReflection*
 const ::google::protobuf::Descriptor* CommandMasterSetBodyStylesArchive_descriptor_ = NULL;
 const ::google::protobuf::internal::GeneratedMessageReflection*
   CommandMasterSetBodyStylesArchive_reflection_ = NULL;
+const ::google::protobuf::Descriptor* CommandMasterSetSlideObjectsLayerWithMasterArchive_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  CommandMasterSetSlideObjectsLayerWithMasterArchive_reflection_ = NULL;
 const ::google::protobuf::Descriptor* CommandSlideApplyThemeArchive_descriptor_ = NULL;
 const ::google::protobuf::internal::GeneratedMessageReflection*
   CommandSlideApplyThemeArchive_reflection_ = NULL;
@@ -159,6 +162,9 @@ const ::google::protobuf::internal::GeneratedMessageReflection*
 const ::google::protobuf::Descriptor* CommandSoundtrackSetValue_PropertyValue_descriptor_ = NULL;
 const ::google::protobuf::internal::GeneratedMessageReflection*
   CommandSoundtrackSetValue_PropertyValue_reflection_ = NULL;
+const ::google::protobuf::Descriptor* CommandSlideUpdateMasterDrawables_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  CommandSlideUpdateMasterDrawables_reflection_ = NULL;
 const ::google::protobuf::Descriptor* SlideCollectionCommandSelectionBehaviorArchive_descriptor_ = NULL;
 const ::google::protobuf::internal::GeneratedMessageReflection*
   SlideCollectionCommandSelectionBehaviorArchive_reflection_ = NULL;
@@ -597,12 +603,13 @@ void protobuf_AssignDesc_KNCommandArchives_2eproto() {
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandInsertMasterArchive));
   CommandRemoveMasterArchive_descriptor_ = file->message_type(19);
-  static const int CommandRemoveMasterArchive_offsets_[5] = {
+  static const int CommandRemoveMasterArchive_offsets_[6] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandRemoveMasterArchive, super_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandRemoveMasterArchive, theme_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandRemoveMasterArchive, master_slide_node_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandRemoveMasterArchive, previous_index_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandRemoveMasterArchive, master_change_commands_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandRemoveMasterArchive, default_master_slide_node_was_replaced_),
   };
   CommandRemoveMasterArchive_reflection_ =
     new ::google::protobuf::internal::GeneratedMessageReflection(
@@ -777,7 +784,7 @@ void protobuf_AssignDesc_KNCommandArchives_2eproto() {
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandSlideMoveBuildChunksArchive));
   CommandBuildSetValueArchive_descriptor_ = file->message_type(29);
-  static const int CommandBuildSetValueArchive_offsets_[12] = {
+  static const int CommandBuildSetValueArchive_offsets_[14] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandBuildSetValueArchive, super_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandBuildSetValueArchive, build_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandBuildSetValueArchive, property_),
@@ -790,6 +797,8 @@ void protobuf_AssignDesc_KNCommandArchives_2eproto() {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandBuildSetValueArchive, delayautomaticafters_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandBuildSetValueArchive, delayautomaticwiths_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandBuildSetValueArchive, eventtriggers_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandBuildSetValueArchive, oldattributes_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandBuildSetValueArchive, currentattributes_),
   };
   CommandBuildSetValueArchive_reflection_ =
     new ::google::protobuf::internal::GeneratedMessageReflection(
@@ -825,7 +834,7 @@ void protobuf_AssignDesc_KNCommandArchives_2eproto() {
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandBuildChunkSetValueArchive));
   CommandTransitionSetValueArchive_descriptor_ = file->message_type(31);
-  static const int CommandTransitionSetValueArchive_offsets_[11] = {
+  static const int CommandTransitionSetValueArchive_offsets_[13] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandTransitionSetValueArchive, super_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandTransitionSetValueArchive, slidenode_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandTransitionSetValueArchive, property_),
@@ -837,6 +846,8 @@ void protobuf_AssignDesc_KNCommandArchives_2eproto() {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandTransitionSetValueArchive, directions_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandTransitionSetValueArchive, isautomatics_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandTransitionSetValueArchive, delays_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandTransitionSetValueArchive, oldattributes_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandTransitionSetValueArchive, currentattributes_),
   };
   CommandTransitionSetValueArchive_reflection_ =
     new ::google::protobuf::internal::GeneratedMessageReflection(
@@ -922,7 +933,25 @@ void protobuf_AssignDesc_KNCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandMasterSetBodyStylesArchive));
-  CommandSlideApplyThemeArchive_descriptor_ = file->message_type(36);
+  CommandMasterSetSlideObjectsLayerWithMasterArchive_descriptor_ = file->message_type(36);
+  static const int CommandMasterSetSlideObjectsLayerWithMasterArchive_offsets_[4] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandMasterSetSlideObjectsLayerWithMasterArchive, super_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandMasterSetSlideObjectsLayerWithMasterArchive, master_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandMasterSetSlideObjectsLayerWithMasterArchive, new_value_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandMasterSetSlideObjectsLayerWithMasterArchive, old_value_),
+  };
+  CommandMasterSetSlideObjectsLayerWithMasterArchive_reflection_ =
+    new ::google::protobuf::internal::GeneratedMessageReflection(
+      CommandMasterSetSlideObjectsLayerWithMasterArchive_descriptor_,
+      CommandMasterSetSlideObjectsLayerWithMasterArchive::default_instance_,
+      CommandMasterSetSlideObjectsLayerWithMasterArchive_offsets_,
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandMasterSetSlideObjectsLayerWithMasterArchive, _has_bits_[0]),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandMasterSetSlideObjectsLayerWithMasterArchive, _unknown_fields_),
+      -1,
+      ::google::protobuf::DescriptorPool::generated_pool(),
+      ::google::protobuf::MessageFactory::generated_factory(),
+      sizeof(CommandMasterSetSlideObjectsLayerWithMasterArchive));
+  CommandSlideApplyThemeArchive_descriptor_ = file->message_type(37);
   static const int CommandSlideApplyThemeArchive_offsets_[2] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSlideApplyThemeArchive, super_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSlideApplyThemeArchive, blob_),
@@ -938,7 +967,7 @@ void protobuf_AssignDesc_KNCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandSlideApplyThemeArchive));
-  CommandChangeMasterSlideArchive_descriptor_ = file->message_type(37);
+  CommandChangeMasterSlideArchive_descriptor_ = file->message_type(38);
   static const int CommandChangeMasterSlideArchive_offsets_[4] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandChangeMasterSlideArchive, super_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandChangeMasterSlideArchive, slide_),
@@ -956,7 +985,7 @@ void protobuf_AssignDesc_KNCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandChangeMasterSlideArchive));
-  CommandSlidePrimitiveSetMasterArchive_descriptor_ = file->message_type(38);
+  CommandSlidePrimitiveSetMasterArchive_descriptor_ = file->message_type(39);
   static const int CommandSlidePrimitiveSetMasterArchive_offsets_[4] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSlidePrimitiveSetMasterArchive, super_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSlidePrimitiveSetMasterArchive, slide_),
@@ -974,7 +1003,7 @@ void protobuf_AssignDesc_KNCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandSlidePrimitiveSetMasterArchive));
-  CommandSlideReapplyMasterArchive_descriptor_ = file->message_type(39);
+  CommandSlideReapplyMasterArchive_descriptor_ = file->message_type(40);
   static const int CommandSlideReapplyMasterArchive_offsets_[2] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSlideReapplyMasterArchive, super_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSlideReapplyMasterArchive, reapply_accumulated_command_),
@@ -990,7 +1019,7 @@ void protobuf_AssignDesc_KNCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandSlideReapplyMasterArchive));
-  CommandShowSetSoundtrack_descriptor_ = file->message_type(40);
+  CommandShowSetSoundtrack_descriptor_ = file->message_type(41);
   static const int CommandShowSetSoundtrack_offsets_[4] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandShowSetSoundtrack, super_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandShowSetSoundtrack, show_),
@@ -1008,7 +1037,7 @@ void protobuf_AssignDesc_KNCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandShowSetSoundtrack));
-  CommandSoundtrackSetValue_descriptor_ = file->message_type(41);
+  CommandSoundtrackSetValue_descriptor_ = file->message_type(42);
   static const int CommandSoundtrackSetValue_offsets_[5] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSoundtrackSetValue, super_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSoundtrackSetValue, soundtrack_),
@@ -1044,7 +1073,26 @@ void protobuf_AssignDesc_KNCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandSoundtrackSetValue_PropertyValue));
-  SlideCollectionCommandSelectionBehaviorArchive_descriptor_ = file->message_type(42);
+  CommandSlideUpdateMasterDrawables_descriptor_ = file->message_type(43);
+  static const int CommandSlideUpdateMasterDrawables_offsets_[5] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSlideUpdateMasterDrawables, super_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSlideUpdateMasterDrawables, slide_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSlideUpdateMasterDrawables, drawables_to_insert_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSlideUpdateMasterDrawables, sorted_drawables_to_remove_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSlideUpdateMasterDrawables, indexes_of_removed_drawables_),
+  };
+  CommandSlideUpdateMasterDrawables_reflection_ =
+    new ::google::protobuf::internal::GeneratedMessageReflection(
+      CommandSlideUpdateMasterDrawables_descriptor_,
+      CommandSlideUpdateMasterDrawables::default_instance_,
+      CommandSlideUpdateMasterDrawables_offsets_,
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSlideUpdateMasterDrawables, _has_bits_[0]),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSlideUpdateMasterDrawables, _unknown_fields_),
+      -1,
+      ::google::protobuf::DescriptorPool::generated_pool(),
+      ::google::protobuf::MessageFactory::generated_factory(),
+      sizeof(CommandSlideUpdateMasterDrawables));
+  SlideCollectionCommandSelectionBehaviorArchive_descriptor_ = file->message_type(44);
   static const int SlideCollectionCommandSelectionBehaviorArchive_offsets_[3] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SlideCollectionCommandSelectionBehaviorArchive, archived_new_selection_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SlideCollectionCommandSelectionBehaviorArchive, archived_old_selection_),
@@ -1062,7 +1110,7 @@ void protobuf_AssignDesc_KNCommandArchives_2eproto() {
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(SlideCollectionCommandSelectionBehaviorArchive));
   SlideCollectionCommandSelectionBehaviorArchive_Type_descriptor_ = SlideCollectionCommandSelectionBehaviorArchive_descriptor_->enum_type(0);
-  ChartInfoGeometryCommandArchive_descriptor_ = file->message_type(43);
+  ChartInfoGeometryCommandArchive_descriptor_ = file->message_type(45);
   static const int ChartInfoGeometryCommandArchive_offsets_[1] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartInfoGeometryCommandArchive, super_),
   };
@@ -1168,6 +1216,8 @@ void protobuf_RegisterTypes(const ::std::string&) {
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
     CommandMasterSetBodyStylesArchive_descriptor_, &CommandMasterSetBodyStylesArchive::default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+    CommandMasterSetSlideObjectsLayerWithMasterArchive_descriptor_, &CommandMasterSetSlideObjectsLayerWithMasterArchive::default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
     CommandSlideApplyThemeArchive_descriptor_, &CommandSlideApplyThemeArchive::default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
     CommandChangeMasterSlideArchive_descriptor_, &CommandChangeMasterSlideArchive::default_instance());
@@ -1181,6 +1231,8 @@ void protobuf_RegisterTypes(const ::std::string&) {
     CommandSoundtrackSetValue_descriptor_, &CommandSoundtrackSetValue::default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
     CommandSoundtrackSetValue_PropertyValue_descriptor_, &CommandSoundtrackSetValue_PropertyValue::default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+    CommandSlideUpdateMasterDrawables_descriptor_, &CommandSlideUpdateMasterDrawables::default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
     SlideCollectionCommandSelectionBehaviorArchive_descriptor_, &SlideCollectionCommandSelectionBehaviorArchive::default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
@@ -1268,6 +1320,8 @@ void protobuf_ShutdownFile_KNCommandArchives_2eproto() {
   delete CommandMasterSetThumbnailTextArchive_reflection_;
   delete CommandMasterSetBodyStylesArchive::default_instance_;
   delete CommandMasterSetBodyStylesArchive_reflection_;
+  delete CommandMasterSetSlideObjectsLayerWithMasterArchive::default_instance_;
+  delete CommandMasterSetSlideObjectsLayerWithMasterArchive_reflection_;
   delete CommandSlideApplyThemeArchive::default_instance_;
   delete CommandSlideApplyThemeArchive_reflection_;
   delete CommandChangeMasterSlideArchive::default_instance_;
@@ -1282,6 +1336,8 @@ void protobuf_ShutdownFile_KNCommandArchives_2eproto() {
   delete CommandSoundtrackSetValue_reflection_;
   delete CommandSoundtrackSetValue_PropertyValue::default_instance_;
   delete CommandSoundtrackSetValue_PropertyValue_reflection_;
+  delete CommandSlideUpdateMasterDrawables::default_instance_;
+  delete CommandSlideUpdateMasterDrawables_reflection_;
   delete SlideCollectionCommandSelectionBehaviorArchive::default_instance_;
   delete SlideCollectionCommandSelectionBehaviorArchive_reflection_;
   delete ChartInfoGeometryCommandArchive::default_instance_;
@@ -1426,127 +1482,146 @@ void protobuf_AddDesc_KNCommandArchives_2eproto() {
     ".CommandArchive\022\035\n\005theme\030\002 \002(\0132\016.TSP.Ref"
     "erence\022)\n\021master_slide_node\030\003 \002(\0132\016.TSP."
     "Reference\022\027\n\017insertion_index\030\004 \002(\r\022\036\n\026wa"
-    "s_inserted_with_drop\030\005 \002(\010\"\322\001\n\032CommandRe"
+    "s_inserted_with_drop\030\005 \002(\010\"\202\002\n\032CommandRe"
     "moveMasterArchive\022\"\n\005super\030\001 \002(\0132\023.TSK.C"
     "ommandArchive\022\035\n\005theme\030\002 \002(\0132\016.TSP.Refer"
     "ence\022)\n\021master_slide_node\030\003 \002(\0132\016.TSP.Re"
     "ference\022\026\n\016previous_index\030\004 \002(\r\022.\n\026maste"
-    "r_change_commands\030\005 \001(\0132\016.TSP.Reference\""
-    "\224\001\n\032CommandRenameMasterArchive\022\"\n\005super\030"
-    "\001 \002(\0132\023.TSK.CommandArchive\022$\n\014master_sli"
-    "de\030\002 \002(\0132\016.TSP.Reference\022\023\n\013master_name\030"
-    "\003 \002(\t\022\027\n\017old_master_name\030\004 \002(\t\"\261\001\n\036Comma"
-    "ndSlideInsertBuildArchive\022\"\n\005super\030\001 \002(\013"
-    "2\023.TSK.CommandArchive\022!\n\tslideNode\030\002 \002(\013"
-    "2\016.TSP.Reference\022\035\n\005build\030\003 \002(\0132\016.TSP.Re"
-    "ference\022\r\n\005index\030\004 \002(\r\022\032\n\022shouldCreateCh"
-    "unks\030\005 \001(\010\"\225\001\n\036CommandSlideRemoveBuildAr"
-    "chive\022\"\n\005super\030\001 \002(\0132\023.TSK.CommandArchiv"
-    "e\022!\n\tslideNode\030\002 \002(\0132\016.TSP.Reference\022\035\n\005"
-    "build\030\003 \002(\0132\016.TSP.Reference\022\r\n\005index\030\004 \002"
-    "(\r\"\231\001\n/CommandSlideMoveBuildWithoutMovin"
-    "gChunksArchive\022\"\n\005super\030\001 \002(\0132\023.TSK.Comm"
-    "andArchive\022!\n\tslideNode\030\002 \002(\0132\016.TSP.Refe"
-    "rence\022\r\n\005index\030\003 \002(\r\022\020\n\010oldIndex\030\004 \002(\r\"t"
-    "\n\035CommandSlideMoveBuildsArchive\022\"\n\005super"
-    "\030\001 \002(\0132\023.TSK.CommandArchive\022\036\n\006builds\030\002 "
-    "\003(\0132\016.TSP.Reference\022\017\n\007toIndex\030\003 \001(\r\"\242\001\n"
-    "#CommandSlideInsertBuildChunkArchive\022\"\n\005"
-    "super\030\001 \002(\0132\023.TSK.CommandArchive\022\035\n\005slid"
-    "e\030\002 \002(\0132\016.TSP.Reference\022)\n\nbuildChunk\030\003 "
-    "\002(\0132\025.KN.BuildChunkArchive\022\r\n\005index\030\004 \002("
-    "\r\"\242\001\n#CommandSlideRemoveBuildChunkArchiv"
-    "e\022\"\n\005super\030\001 \002(\0132\023.TSK.CommandArchive\022\035\n"
-    "\005slide\030\002 \002(\0132\016.TSP.Reference\022)\n\nbuildChu"
-    "nk\030\003 \002(\0132\025.KN.BuildChunkArchive\022\r\n\005index"
-    "\030\004 \002(\r\"\207\001\n!CommandSlideMoveBuildChunkArc"
-    "hive\022\"\n\005super\030\001 \002(\0132\023.TSK.CommandArchive"
-    "\022\035\n\005slide\030\002 \002(\0132\016.TSP.Reference\022\r\n\005index"
-    "\030\003 \002(\r\022\020\n\010oldIndex\030\004 \002(\r\"\205\001\n\"CommandSlid"
-    "eMoveBuildChunksArchive\022\"\n\005super\030\001 \002(\0132\023"
-    ".TSK.CommandArchive\022*\n\013buildChunks\030\002 \003(\013"
-    "2\025.KN.BuildChunkArchive\022\017\n\007toIndex\030\003 \001(\r"
-    "\"\257\002\n\033CommandBuildSetValueArchive\022\"\n\005supe"
-    "r\030\001 \002(\0132\023.TSK.CommandArchive\022\035\n\005build\030\002 "
-    "\002(\0132\016.TSP.Reference\022\020\n\010property\030\003 \002(\t\022\017\n"
-    "\007effects\030\004 \003(\t\022\r\n\005types\030\005 \003(\t\022\022\n\ndeliver"
-    "ies\030\006 \003(\t\022\022\n\ndirections\030\007 \003(\r\022\021\n\tduratio"
-    "ns\030\010 \003(\001\022\016\n\006delays\030\t \003(\001\022\034\n\024delayAutomat"
-    "icAfters\030\n \003(\001\022\033\n\023delayAutomaticWiths\030\013 "
-    "\003(\001\022\025\n\reventTriggers\030\014 \003(\010\"\343\001\n CommandBu"
-    "ildChunkSetValueArchive\022\"\n\005super\030\001 \002(\0132\023"
-    ".TSK.CommandArchive\022)\n\nbuildChunk\030\002 \002(\0132"
-    "\025.KN.BuildChunkArchive\022\020\n\010property\030\003 \002(\t"
-    "\022\021\n\treferents\030\004 \003(\r\022\022\n\nautomatics\030\005 \003(\010\022"
-    "\021\n\tdurations\030\006 \003(\001\022\016\n\006delays\030\007 \003(\001\022\024\n\014ol"
-    "dOwnsValue\030\010 \001(\010\"\213\002\n CommandTransitionSe"
-    "tValueArchive\022\"\n\005super\030\001 \002(\0132\023.TSK.Comma"
+    "r_change_commands\030\005 \001(\0132\016.TSP.Reference\022"
+    ".\n&default_master_slide_node_was_replace"
+    "d\030\006 \001(\010\"\224\001\n\032CommandRenameMasterArchive\022\""
+    "\n\005super\030\001 \002(\0132\023.TSK.CommandArchive\022$\n\014ma"
+    "ster_slide\030\002 \002(\0132\016.TSP.Reference\022\023\n\013mast"
+    "er_name\030\003 \002(\t\022\027\n\017old_master_name\030\004 \002(\t\"\261"
+    "\001\n\036CommandSlideInsertBuildArchive\022\"\n\005sup"
+    "er\030\001 \002(\0132\023.TSK.CommandArchive\022!\n\tslideNo"
+    "de\030\002 \002(\0132\016.TSP.Reference\022\035\n\005build\030\003 \002(\0132"
+    "\016.TSP.Reference\022\r\n\005index\030\004 \002(\r\022\032\n\022should"
+    "CreateChunks\030\005 \001(\010\"\225\001\n\036CommandSlideRemov"
+    "eBuildArchive\022\"\n\005super\030\001 \002(\0132\023.TSK.Comma"
     "ndArchive\022!\n\tslideNode\030\002 \002(\0132\016.TSP.Refer"
-    "ence\022\020\n\010property\030\003 \002(\t\022\017\n\007effects\030\004 \003(\t\022"
-    "\016\n\006unused\030\005 \003(\t\022\017\n\007unused2\030\006 \003(\t\022\017\n\007unus"
-    "ed3\030\007 \003(\t\022\021\n\tdurations\030\010 \003(\001\022\022\n\ndirectio"
-    "ns\030\t \003(\r\022\024\n\014isAutomatics\030\n \003(\010\022\016\n\006delays"
-    "\030\013 \003(\001\"\261\001\n*CommandShowSetSlideNumberVisi"
-    "bilityArchive\022\"\n\005super\030\001 \002(\0132\023.TSK.Comma"
-    "ndArchive\022\034\n\004show\030\002 \002(\0132\016.TSP.Reference\022"
-    "\033\n\023slideNumbersVisible\030\003 \002(\010\022$\n\014provider"
-    "Undo\030\004 \001(\0132\016.TSP.Reference\"a\n\033CommandMas"
-    "terRescaleArchive\022\"\n\005super\030\001 \002(\0132\023.TSK.C"
-    "ommandArchive\022\036\n\006master\030\002 \002(\0132\016.TSP.Refe"
-    "rence\"\237\001\n$CommandMasterSetThumbnailTextA"
-    "rchive\022\"\n\005super\030\001 \002(\0132\023.TSK.CommandArchi"
-    "ve\022\036\n\006master\030\002 \002(\0132\016.TSP.Reference\022\017\n\007is"
-    "_body\030\003 \002(\010\022\020\n\010new_text\030\004 \001(\t\022\020\n\010old_tex"
-    "t\030\005 \001(\t\"\225\002\n!CommandMasterSetBodyStylesAr"
-    "chive\022\"\n\005super\030\001 \002(\0132\023.TSK.CommandArchiv"
-    "e\022\036\n\006master\030\002 \002(\0132\016.TSP.Reference\022,\n\024new"
-    "_paragraph_styles\030\003 \003(\0132\016.TSP.Reference\022"
-    "\'\n\017new_list_styles\030\004 \003(\0132\016.TSP.Reference"
-    "\022,\n\024old_paragraph_styles\030\005 \003(\0132\016.TSP.Ref"
-    "erence\022\'\n\017old_list_styles\030\006 \003(\0132\016.TSP.Re"
-    "ference\"}\n\035CommandSlideApplyThemeArchive"
-    "\0221\n\005super\030\001 \002(\0132\".TSS.ApplyThemeChildCom"
-    "mandArchive\022)\n\004blob\030\002 \002(\0132\033.KN.MasterCha"
-    "ngeBlobArchive\"\262\001\n\037CommandChangeMasterSl"
-    "ideArchive\022\"\n\005super\030\001 \002(\0132\023.TSK.CommandA"
-    "rchive\022\035\n\005slide\030\002 \002(\0132\016.TSP.Reference\022\036\n"
-    "\006master\030\003 \002(\0132\016.TSP.Reference\022,\n\024placeho"
-    "lder_commands\030\004 \002(\0132\016.TSP.Reference\"\256\001\n%"
-    "CommandSlidePrimitiveSetMasterArchive\022\"\n"
-    "\005super\030\001 \002(\0132\023.TSK.CommandArchive\022\035\n\005sli"
-    "de\030\002 \002(\0132\016.TSP.Reference\022\036\n\006master\030\003 \002(\013"
-    "2\016.TSP.Reference\022\"\n\nold_master\030\004 \002(\0132\016.T"
-    "SP.Reference\"{\n CommandSlideReapplyMaste"
-    "rArchive\022\"\n\005super\030\001 \002(\0132\023.TSK.CommandArc"
-    "hive\0223\n\033reapply_accumulated_command\030\002 \002("
-    "\0132\016.TSP.Reference\"\250\001\n\030CommandShowSetSoun"
-    "dtrack\022\"\n\005super\030\001 \002(\0132\023.TSK.CommandArchi"
-    "ve\022\034\n\004show\030\002 \001(\0132\016.TSP.Reference\022\"\n\nsoun"
-    "dtrack\030\003 \001(\0132\016.TSP.Reference\022&\n\016old_soun"
-    "dtrack\030\004 \001(\0132\016.TSP.Reference\"\204\003\n\031Command"
-    "SoundtrackSetValue\022\"\n\005super\030\001 \002(\0132\023.TSK."
-    "CommandArchive\022\"\n\nsoundtrack\030\002 \001(\0132\016.TSP"
-    ".Reference\022\020\n\010property\030\003 \001(\t\022>\n\told_valu"
-    "e\030\004 \001(\0132+.KN.CommandSoundtrackSetValue.P"
-    "ropertyValue\022>\n\tnew_value\030\005 \001(\0132+.KN.Com"
-    "mandSoundtrackSetValue.PropertyValue\032\214\001\n"
-    "\rPropertyValue\022\024\n\014double_value\030\001 \001(\001\0221\n\n"
-    "mode_value\030\002 \001(\0162\035.KN.Soundtrack.Soundtr"
-    "ackMode\0222\n\026media_reference_values\030\003 \003(\0132"
-    "\022.TSP.DataReference\"\270\003\n.SlideCollectionC"
-    "ommandSelectionBehaviorArchive\022.\n\026archiv"
-    "ed_new_selection\030\001 \001(\0132\016.TSP.Reference\022."
-    "\n\026archived_old_selection\030\002 \001(\0132\016.TSP.Ref"
-    "erence\022m\n\004type\030\003 \001(\01627.KN.SlideCollectio"
-    "nCommandSelectionBehaviorArchive.Type:&k"
-    "KindSlideSelectionBehaviorTypeGeneral\"\266\001"
-    "\n\004Type\022*\n&kKindSlideSelectionBehaviorTyp"
-    "eGeneral\020\000\022,\n(kKindSlideSelectionBehavio"
-    "rTypeInsertion\020\001\022+\n\'kKindSlideSelectionB"
-    "ehaviorTypeDeletion\020\002\022\'\n#kKindSlideSelec"
-    "tionBehaviorTypeMove\020\003\"E\n\037ChartInfoGeome"
-    "tryCommandArchive\022\"\n\005super\030\001 \002(\0132\023.TSK.C"
-    "ommandArchive", 9773);
+    "ence\022\035\n\005build\030\003 \002(\0132\016.TSP.Reference\022\r\n\005i"
+    "ndex\030\004 \002(\r\"\231\001\n/CommandSlideMoveBuildWith"
+    "outMovingChunksArchive\022\"\n\005super\030\001 \002(\0132\023."
+    "TSK.CommandArchive\022!\n\tslideNode\030\002 \002(\0132\016."
+    "TSP.Reference\022\r\n\005index\030\003 \002(\r\022\020\n\010oldIndex"
+    "\030\004 \002(\r\"t\n\035CommandSlideMoveBuildsArchive\022"
+    "\"\n\005super\030\001 \002(\0132\023.TSK.CommandArchive\022\036\n\006b"
+    "uilds\030\002 \003(\0132\016.TSP.Reference\022\017\n\007toIndex\030\003"
+    " \001(\r\"\242\001\n#CommandSlideInsertBuildChunkArc"
+    "hive\022\"\n\005super\030\001 \002(\0132\023.TSK.CommandArchive"
+    "\022\035\n\005slide\030\002 \002(\0132\016.TSP.Reference\022)\n\nbuild"
+    "Chunk\030\003 \002(\0132\025.KN.BuildChunkArchive\022\r\n\005in"
+    "dex\030\004 \002(\r\"\242\001\n#CommandSlideRemoveBuildChu"
+    "nkArchive\022\"\n\005super\030\001 \002(\0132\023.TSK.CommandAr"
+    "chive\022\035\n\005slide\030\002 \002(\0132\016.TSP.Reference\022)\n\n"
+    "buildChunk\030\003 \002(\0132\025.KN.BuildChunkArchive\022"
+    "\r\n\005index\030\004 \002(\r\"\207\001\n!CommandSlideMoveBuild"
+    "ChunkArchive\022\"\n\005super\030\001 \002(\0132\023.TSK.Comman"
+    "dArchive\022\035\n\005slide\030\002 \002(\0132\016.TSP.Reference\022"
+    "\r\n\005index\030\003 \002(\r\022\020\n\010oldIndex\030\004 \002(\r\"\205\001\n\"Com"
+    "mandSlideMoveBuildChunksArchive\022\"\n\005super"
+    "\030\001 \002(\0132\023.TSK.CommandArchive\022*\n\013buildChun"
+    "ks\030\002 \003(\0132\025.KN.BuildChunkArchive\022\017\n\007toInd"
+    "ex\030\003 \001(\r\"\271\003\n\033CommandBuildSetValueArchive"
+    "\022\"\n\005super\030\001 \002(\0132\023.TSK.CommandArchive\022\035\n\005"
+    "build\030\002 \002(\0132\016.TSP.Reference\022\020\n\010property\030"
+    "\003 \002(\t\022\023\n\007effects\030\004 \003(\tB\002\030\001\022\021\n\005types\030\005 \003("
+    "\tB\002\030\001\022\022\n\ndeliveries\030\006 \003(\t\022\026\n\ndirections\030"
+    "\007 \003(\rB\002\030\001\022\025\n\tdurations\030\010 \003(\001B\002\030\001\022\022\n\006dela"
+    "ys\030\t \003(\001B\002\030\001\022 \n\024delayAutomaticAfters\030\n \003"
+    "(\001B\002\030\001\022\037\n\023delayAutomaticWiths\030\013 \003(\001B\002\030\001\022"
+    "\031\n\reventTriggers\030\014 \003(\010B\002\030\001\0221\n\roldAttribu"
+    "tes\030\r \001(\0132\032.KN.BuildAttributesArchive\0225\n"
+    "\021currentAttributes\030\016 \001(\0132\032.KN.BuildAttri"
+    "butesArchive\"\347\001\n CommandBuildChunkSetVal"
+    "ueArchive\022\"\n\005super\030\001 \002(\0132\023.TSK.CommandAr"
+    "chive\022)\n\nbuildChunk\030\002 \002(\0132\025.KN.BuildChun"
+    "kArchive\022\020\n\010property\030\003 \002(\t\022\021\n\treferents\030"
+    "\004 \003(\r\022\022\n\nautomatics\030\005 \003(\010\022\021\n\tdurations\030\006"
+    " \003(\001\022\016\n\006delays\030\007 \003(\001\022\030\n\014oldOwnsValue\030\010 \001"
+    "(\010B\002\030\001\"\237\003\n CommandTransitionSetValueArch"
+    "ive\022\"\n\005super\030\001 \002(\0132\023.TSK.CommandArchive\022"
+    "!\n\tslideNode\030\002 \002(\0132\016.TSP.Reference\022\020\n\010pr"
+    "operty\030\003 \002(\t\022\023\n\007effects\030\004 \003(\tB\002\030\001\022\022\n\006unu"
+    "sed\030\005 \003(\tB\002\030\001\022\023\n\007unused2\030\006 \003(\tB\002\030\001\022\023\n\007un"
+    "used3\030\007 \003(\tB\002\030\001\022\025\n\tdurations\030\010 \003(\001B\002\030\001\022\026"
+    "\n\ndirections\030\t \003(\rB\002\030\001\022\030\n\014isAutomatics\030\n"
+    " \003(\010B\002\030\001\022\022\n\006delays\030\013 \003(\001B\002\030\001\0226\n\roldAttri"
+    "butes\030\014 \001(\0132\037.KN.TransitionAttributesArc"
+    "hive\022:\n\021currentAttributes\030\r \001(\0132\037.KN.Tra"
+    "nsitionAttributesArchive\"\261\001\n*CommandShow"
+    "SetSlideNumberVisibilityArchive\022\"\n\005super"
+    "\030\001 \002(\0132\023.TSK.CommandArchive\022\034\n\004show\030\002 \002("
+    "\0132\016.TSP.Reference\022\033\n\023slideNumbersVisible"
+    "\030\003 \002(\010\022$\n\014providerUndo\030\004 \001(\0132\016.TSP.Refer"
+    "ence\"a\n\033CommandMasterRescaleArchive\022\"\n\005s"
+    "uper\030\001 \002(\0132\023.TSK.CommandArchive\022\036\n\006maste"
+    "r\030\002 \002(\0132\016.TSP.Reference\"\237\001\n$CommandMaste"
+    "rSetThumbnailTextArchive\022\"\n\005super\030\001 \002(\0132"
+    "\023.TSK.CommandArchive\022\036\n\006master\030\002 \002(\0132\016.T"
+    "SP.Reference\022\017\n\007is_body\030\003 \002(\010\022\020\n\010new_tex"
+    "t\030\004 \001(\t\022\020\n\010old_text\030\005 \001(\t\"\225\002\n!CommandMas"
+    "terSetBodyStylesArchive\022\"\n\005super\030\001 \002(\0132\023"
+    ".TSK.CommandArchive\022\036\n\006master\030\002 \002(\0132\016.TS"
+    "P.Reference\022,\n\024new_paragraph_styles\030\003 \003("
+    "\0132\016.TSP.Reference\022\'\n\017new_list_styles\030\004 \003"
+    "(\0132\016.TSP.Reference\022,\n\024old_paragraph_styl"
+    "es\030\005 \003(\0132\016.TSP.Reference\022\'\n\017old_list_sty"
+    "les\030\006 \003(\0132\016.TSP.Reference\"\236\001\n2CommandMas"
+    "terSetSlideObjectsLayerWithMasterArchive"
+    "\022\"\n\005super\030\001 \002(\0132\023.TSK.CommandArchive\022\036\n\006"
+    "master\030\002 \002(\0132\016.TSP.Reference\022\021\n\tnew_valu"
+    "e\030\003 \002(\010\022\021\n\told_value\030\004 \002(\010\"}\n\035CommandSli"
+    "deApplyThemeArchive\0221\n\005super\030\001 \002(\0132\".TSS"
+    ".ApplyThemeChildCommandArchive\022)\n\004blob\030\002"
+    " \002(\0132\033.KN.MasterChangeBlobArchive\"\262\001\n\037Co"
+    "mmandChangeMasterSlideArchive\022\"\n\005super\030\001"
+    " \002(\0132\023.TSK.CommandArchive\022\035\n\005slide\030\002 \002(\013"
+    "2\016.TSP.Reference\022\036\n\006master\030\003 \002(\0132\016.TSP.R"
+    "eference\022,\n\024placeholder_commands\030\004 \002(\0132\016"
+    ".TSP.Reference\"\256\001\n%CommandSlidePrimitive"
+    "SetMasterArchive\022\"\n\005super\030\001 \002(\0132\023.TSK.Co"
+    "mmandArchive\022\035\n\005slide\030\002 \002(\0132\016.TSP.Refere"
+    "nce\022\036\n\006master\030\003 \002(\0132\016.TSP.Reference\022\"\n\no"
+    "ld_master\030\004 \002(\0132\016.TSP.Reference\"{\n Comma"
+    "ndSlideReapplyMasterArchive\022\"\n\005super\030\001 \002"
+    "(\0132\023.TSK.CommandArchive\0223\n\033reapply_accum"
+    "ulated_command\030\002 \002(\0132\016.TSP.Reference\"\250\001\n"
+    "\030CommandShowSetSoundtrack\022\"\n\005super\030\001 \002(\013"
+    "2\023.TSK.CommandArchive\022\034\n\004show\030\002 \001(\0132\016.TS"
+    "P.Reference\022\"\n\nsoundtrack\030\003 \001(\0132\016.TSP.Re"
+    "ference\022&\n\016old_soundtrack\030\004 \001(\0132\016.TSP.Re"
+    "ference\"\204\003\n\031CommandSoundtrackSetValue\022\"\n"
+    "\005super\030\001 \002(\0132\023.TSK.CommandArchive\022\"\n\nsou"
+    "ndtrack\030\002 \001(\0132\016.TSP.Reference\022\020\n\010propert"
+    "y\030\003 \001(\t\022>\n\told_value\030\004 \001(\0132+.KN.CommandS"
+    "oundtrackSetValue.PropertyValue\022>\n\tnew_v"
+    "alue\030\005 \001(\0132+.KN.CommandSoundtrackSetValu"
+    "e.PropertyValue\032\214\001\n\rPropertyValue\022\024\n\014dou"
+    "ble_value\030\001 \001(\001\0221\n\nmode_value\030\002 \001(\0162\035.KN"
+    ".Soundtrack.SoundtrackMode\0222\n\026media_refe"
+    "rence_values\030\003 \003(\0132\022.TSP.DataReference\"\374"
+    "\001\n!CommandSlideUpdateMasterDrawables\022\"\n\005"
+    "super\030\001 \002(\0132\023.TSK.CommandArchive\022\035\n\005slid"
+    "e\030\002 \002(\0132\016.TSP.Reference\022+\n\023drawables_to_"
+    "insert\030\003 \003(\0132\016.TSP.Reference\0222\n\032sorted_d"
+    "rawables_to_remove\030\004 \003(\0132\016.TSP.Reference"
+    "\0223\n\034indexes_of_removed_drawables\030\005 \002(\0132\r"
+    ".TSP.IndexSet\"\270\003\n.SlideCollectionCommand"
+    "SelectionBehaviorArchive\022.\n\026archived_new"
+    "_selection\030\001 \001(\0132\016.TSP.Reference\022.\n\026arch"
+    "ived_old_selection\030\002 \001(\0132\016.TSP.Reference"
+    "\022m\n\004type\030\003 \001(\01627.KN.SlideCollectionComma"
+    "ndSelectionBehaviorArchive.Type:&kKindSl"
+    "ideSelectionBehaviorTypeGeneral\"\266\001\n\004Type"
+    "\022*\n&kKindSlideSelectionBehaviorTypeGener"
+    "al\020\000\022,\n(kKindSlideSelectionBehaviorTypeI"
+    "nsertion\020\001\022+\n\'kKindSlideSelectionBehavio"
+    "rTypeDeletion\020\002\022\'\n#kKindSlideSelectionBe"
+    "haviorTypeMove\020\003\"E\n\037ChartInfoGeometryCom"
+    "mandArchive\022\"\n\005super\030\001 \002(\0132\023.TSK.Command"
+    "Archive", 10527);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "KNCommandArchives.proto", &protobuf_RegisterTypes);
   UIStateCommandGroupArchive::default_instance_ = new UIStateCommandGroupArchive();
@@ -1588,6 +1663,7 @@ void protobuf_AddDesc_KNCommandArchives_2eproto() {
   CommandMasterRescaleArchive::default_instance_ = new CommandMasterRescaleArchive();
   CommandMasterSetThumbnailTextArchive::default_instance_ = new CommandMasterSetThumbnailTextArchive();
   CommandMasterSetBodyStylesArchive::default_instance_ = new CommandMasterSetBodyStylesArchive();
+  CommandMasterSetSlideObjectsLayerWithMasterArchive::default_instance_ = new CommandMasterSetSlideObjectsLayerWithMasterArchive();
   CommandSlideApplyThemeArchive::default_instance_ = new CommandSlideApplyThemeArchive();
   CommandChangeMasterSlideArchive::default_instance_ = new CommandChangeMasterSlideArchive();
   CommandSlidePrimitiveSetMasterArchive::default_instance_ = new CommandSlidePrimitiveSetMasterArchive();
@@ -1595,6 +1671,7 @@ void protobuf_AddDesc_KNCommandArchives_2eproto() {
   CommandShowSetSoundtrack::default_instance_ = new CommandShowSetSoundtrack();
   CommandSoundtrackSetValue::default_instance_ = new CommandSoundtrackSetValue();
   CommandSoundtrackSetValue_PropertyValue::default_instance_ = new CommandSoundtrackSetValue_PropertyValue();
+  CommandSlideUpdateMasterDrawables::default_instance_ = new CommandSlideUpdateMasterDrawables();
   SlideCollectionCommandSelectionBehaviorArchive::default_instance_ = new SlideCollectionCommandSelectionBehaviorArchive();
   ChartInfoGeometryCommandArchive::default_instance_ = new ChartInfoGeometryCommandArchive();
   UIStateCommandGroupArchive::default_instance_->InitAsDefaultInstance();
@@ -1636,6 +1713,7 @@ void protobuf_AddDesc_KNCommandArchives_2eproto() {
   CommandMasterRescaleArchive::default_instance_->InitAsDefaultInstance();
   CommandMasterSetThumbnailTextArchive::default_instance_->InitAsDefaultInstance();
   CommandMasterSetBodyStylesArchive::default_instance_->InitAsDefaultInstance();
+  CommandMasterSetSlideObjectsLayerWithMasterArchive::default_instance_->InitAsDefaultInstance();
   CommandSlideApplyThemeArchive::default_instance_->InitAsDefaultInstance();
   CommandChangeMasterSlideArchive::default_instance_->InitAsDefaultInstance();
   CommandSlidePrimitiveSetMasterArchive::default_instance_->InitAsDefaultInstance();
@@ -1643,6 +1721,7 @@ void protobuf_AddDesc_KNCommandArchives_2eproto() {
   CommandShowSetSoundtrack::default_instance_->InitAsDefaultInstance();
   CommandSoundtrackSetValue::default_instance_->InitAsDefaultInstance();
   CommandSoundtrackSetValue_PropertyValue::default_instance_->InitAsDefaultInstance();
+  CommandSlideUpdateMasterDrawables::default_instance_->InitAsDefaultInstance();
   SlideCollectionCommandSelectionBehaviorArchive::default_instance_->InitAsDefaultInstance();
   ChartInfoGeometryCommandArchive::default_instance_->InitAsDefaultInstance();
   ::google::protobuf::internal::OnShutdown(&protobuf_ShutdownFile_KNCommandArchives_2eproto);
@@ -10562,6 +10641,7 @@ const int CommandRemoveMasterArchive::kThemeFieldNumber;
 const int CommandRemoveMasterArchive::kMasterSlideNodeFieldNumber;
 const int CommandRemoveMasterArchive::kPreviousIndexFieldNumber;
 const int CommandRemoveMasterArchive::kMasterChangeCommandsFieldNumber;
+const int CommandRemoveMasterArchive::kDefaultMasterSlideNodeWasReplacedFieldNumber;
 #endif  // !_MSC_VER
 
 CommandRemoveMasterArchive::CommandRemoveMasterArchive()
@@ -10589,6 +10669,7 @@ void CommandRemoveMasterArchive::SharedCtor() {
   master_slide_node_ = NULL;
   previous_index_ = 0u;
   master_change_commands_ = NULL;
+  default_master_slide_node_was_replaced_ = false;
   ::memset(_has_bits_, 0, sizeof(_has_bits_));
 }
 
@@ -10641,6 +10722,7 @@ void CommandRemoveMasterArchive::Clear() {
     if (has_master_change_commands()) {
       if (master_change_commands_ != NULL) master_change_commands_->::TSP::Reference::Clear();
     }
+    default_master_slide_node_was_replaced_ = false;
   }
   ::memset(_has_bits_, 0, sizeof(_has_bits_));
   mutable_unknown_fields()->Clear();
@@ -10719,6 +10801,22 @@ bool CommandRemoveMasterArchive::MergePartialFromCodedStream(
         } else {
           goto handle_uninterpreted;
         }
+        if (input->ExpectTag(48)) goto parse_default_master_slide_node_was_replaced;
+        break;
+      }
+
+      // optional bool default_master_slide_node_was_replaced = 6;
+      case 6: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_default_master_slide_node_was_replaced:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &default_master_slide_node_was_replaced_)));
+          set_has_default_master_slide_node_was_replaced();
+        } else {
+          goto handle_uninterpreted;
+        }
         if (input->ExpectAtEnd()) return true;
         break;
       }
@@ -10770,6 +10868,11 @@ void CommandRemoveMasterArchive::SerializeWithCachedSizes(
       5, this->master_change_commands(), output);
   }
 
+  // optional bool default_master_slide_node_was_replaced = 6;
+  if (has_default_master_slide_node_was_replaced()) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(6, this->default_master_slide_node_was_replaced(), output);
+  }
+
   if (!unknown_fields().empty()) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         unknown_fields(), output);
@@ -10809,6 +10912,11 @@ void CommandRemoveMasterArchive::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormatLite::
       WriteMessageNoVirtualToArray(
         5, this->master_change_commands(), target);
+  }
+
+  // optional bool default_master_slide_node_was_replaced = 6;
+  if (has_default_master_slide_node_was_replaced()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(6, this->default_master_slide_node_was_replaced(), target);
   }
 
   if (!unknown_fields().empty()) {
@@ -10857,6 +10965,11 @@ int CommandRemoveMasterArchive::ByteSize() const {
           this->master_change_commands());
     }
 
+    // optional bool default_master_slide_node_was_replaced = 6;
+    if (has_default_master_slide_node_was_replaced()) {
+      total_size += 1 + 1;
+    }
+
   }
   if (!unknown_fields().empty()) {
     total_size +=
@@ -10899,6 +11012,9 @@ void CommandRemoveMasterArchive::MergeFrom(const CommandRemoveMasterArchive& fro
     if (from.has_master_change_commands()) {
       mutable_master_change_commands()->::TSP::Reference::MergeFrom(from.master_change_commands());
     }
+    if (from.has_default_master_slide_node_was_replaced()) {
+      set_default_master_slide_node_was_replaced(from.default_master_slide_node_was_replaced());
+    }
   }
   mutable_unknown_fields()->MergeFrom(from.unknown_fields());
 }
@@ -10940,6 +11056,7 @@ void CommandRemoveMasterArchive::Swap(CommandRemoveMasterArchive* other) {
     std::swap(master_slide_node_, other->master_slide_node_);
     std::swap(previous_index_, other->previous_index_);
     std::swap(master_change_commands_, other->master_change_commands_);
+    std::swap(default_master_slide_node_was_replaced_, other->default_master_slide_node_was_replaced_);
     std::swap(_has_bits_[0], other->_has_bits_[0]);
     _unknown_fields_.Swap(&other->_unknown_fields_);
     std::swap(_cached_size_, other->_cached_size_);
@@ -14089,6 +14206,8 @@ const int CommandBuildSetValueArchive::kDelaysFieldNumber;
 const int CommandBuildSetValueArchive::kDelayAutomaticAftersFieldNumber;
 const int CommandBuildSetValueArchive::kDelayAutomaticWithsFieldNumber;
 const int CommandBuildSetValueArchive::kEventTriggersFieldNumber;
+const int CommandBuildSetValueArchive::kOldAttributesFieldNumber;
+const int CommandBuildSetValueArchive::kCurrentAttributesFieldNumber;
 #endif  // !_MSC_VER
 
 CommandBuildSetValueArchive::CommandBuildSetValueArchive()
@@ -14099,6 +14218,8 @@ CommandBuildSetValueArchive::CommandBuildSetValueArchive()
 void CommandBuildSetValueArchive::InitAsDefaultInstance() {
   super_ = const_cast< ::TSK::CommandArchive*>(&::TSK::CommandArchive::default_instance());
   build_ = const_cast< ::TSP::Reference*>(&::TSP::Reference::default_instance());
+  oldattributes_ = const_cast< ::KN::BuildAttributesArchive*>(&::KN::BuildAttributesArchive::default_instance());
+  currentattributes_ = const_cast< ::KN::BuildAttributesArchive*>(&::KN::BuildAttributesArchive::default_instance());
 }
 
 CommandBuildSetValueArchive::CommandBuildSetValueArchive(const CommandBuildSetValueArchive& from)
@@ -14112,6 +14233,8 @@ void CommandBuildSetValueArchive::SharedCtor() {
   super_ = NULL;
   build_ = NULL;
   property_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+  oldattributes_ = NULL;
+  currentattributes_ = NULL;
   ::memset(_has_bits_, 0, sizeof(_has_bits_));
 }
 
@@ -14126,6 +14249,8 @@ void CommandBuildSetValueArchive::SharedDtor() {
   if (this != default_instance_) {
     delete super_;
     delete build_;
+    delete oldattributes_;
+    delete currentattributes_;
   }
 }
 
@@ -14162,6 +14287,14 @@ void CommandBuildSetValueArchive::Clear() {
       if (property_ != &::google::protobuf::internal::kEmptyString) {
         property_->clear();
       }
+    }
+  }
+  if (_has_bits_[12 / 32] & (0xffu << (12 % 32))) {
+    if (has_oldattributes()) {
+      if (oldattributes_ != NULL) oldattributes_->::KN::BuildAttributesArchive::Clear();
+    }
+    if (has_currentattributes()) {
+      if (currentattributes_ != NULL) currentattributes_->::KN::BuildAttributesArchive::Clear();
     }
   }
   effects_.Clear();
@@ -14227,7 +14360,7 @@ bool CommandBuildSetValueArchive::MergePartialFromCodedStream(
         break;
       }
 
-      // repeated string effects = 4;
+      // repeated string effects = 4 [deprecated = true];
       case 4: {
         if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
             ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
@@ -14246,7 +14379,7 @@ bool CommandBuildSetValueArchive::MergePartialFromCodedStream(
         break;
       }
 
-      // repeated string types = 5;
+      // repeated string types = 5 [deprecated = true];
       case 5: {
         if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
             ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
@@ -14284,7 +14417,7 @@ bool CommandBuildSetValueArchive::MergePartialFromCodedStream(
         break;
       }
 
-      // repeated uint32 directions = 7;
+      // repeated uint32 directions = 7 [deprecated = true];
       case 7: {
         if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
             ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
@@ -14306,7 +14439,7 @@ bool CommandBuildSetValueArchive::MergePartialFromCodedStream(
         break;
       }
 
-      // repeated double durations = 8;
+      // repeated double durations = 8 [deprecated = true];
       case 8: {
         if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
             ::google::protobuf::internal::WireFormatLite::WIRETYPE_FIXED64) {
@@ -14328,7 +14461,7 @@ bool CommandBuildSetValueArchive::MergePartialFromCodedStream(
         break;
       }
 
-      // repeated double delays = 9;
+      // repeated double delays = 9 [deprecated = true];
       case 9: {
         if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
             ::google::protobuf::internal::WireFormatLite::WIRETYPE_FIXED64) {
@@ -14350,7 +14483,7 @@ bool CommandBuildSetValueArchive::MergePartialFromCodedStream(
         break;
       }
 
-      // repeated double delayAutomaticAfters = 10;
+      // repeated double delayAutomaticAfters = 10 [deprecated = true];
       case 10: {
         if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
             ::google::protobuf::internal::WireFormatLite::WIRETYPE_FIXED64) {
@@ -14372,7 +14505,7 @@ bool CommandBuildSetValueArchive::MergePartialFromCodedStream(
         break;
       }
 
-      // repeated double delayAutomaticWiths = 11;
+      // repeated double delayAutomaticWiths = 11 [deprecated = true];
       case 11: {
         if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
             ::google::protobuf::internal::WireFormatLite::WIRETYPE_FIXED64) {
@@ -14394,7 +14527,7 @@ bool CommandBuildSetValueArchive::MergePartialFromCodedStream(
         break;
       }
 
-      // repeated bool eventTriggers = 12;
+      // repeated bool eventTriggers = 12 [deprecated = true];
       case 12: {
         if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
             ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
@@ -14412,6 +14545,34 @@ bool CommandBuildSetValueArchive::MergePartialFromCodedStream(
           goto handle_uninterpreted;
         }
         if (input->ExpectTag(96)) goto parse_eventTriggers;
+        if (input->ExpectTag(106)) goto parse_oldAttributes;
+        break;
+      }
+
+      // optional .KN.BuildAttributesArchive oldAttributes = 13;
+      case 13: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_oldAttributes:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_oldattributes()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(114)) goto parse_currentAttributes;
+        break;
+      }
+
+      // optional .KN.BuildAttributesArchive currentAttributes = 14;
+      case 14: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_currentAttributes:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_currentattributes()));
+        } else {
+          goto handle_uninterpreted;
+        }
         if (input->ExpectAtEnd()) return true;
         break;
       }
@@ -14455,7 +14616,7 @@ void CommandBuildSetValueArchive::SerializeWithCachedSizes(
       3, this->property(), output);
   }
 
-  // repeated string effects = 4;
+  // repeated string effects = 4 [deprecated = true];
   for (int i = 0; i < this->effects_size(); i++) {
   ::google::protobuf::internal::WireFormat::VerifyUTF8String(
     this->effects(i).data(), this->effects(i).length(),
@@ -14464,7 +14625,7 @@ void CommandBuildSetValueArchive::SerializeWithCachedSizes(
       4, this->effects(i), output);
   }
 
-  // repeated string types = 5;
+  // repeated string types = 5 [deprecated = true];
   for (int i = 0; i < this->types_size(); i++) {
   ::google::protobuf::internal::WireFormat::VerifyUTF8String(
     this->types(i).data(), this->types(i).length(),
@@ -14482,40 +14643,52 @@ void CommandBuildSetValueArchive::SerializeWithCachedSizes(
       6, this->deliveries(i), output);
   }
 
-  // repeated uint32 directions = 7;
+  // repeated uint32 directions = 7 [deprecated = true];
   for (int i = 0; i < this->directions_size(); i++) {
     ::google::protobuf::internal::WireFormatLite::WriteUInt32(
       7, this->directions(i), output);
   }
 
-  // repeated double durations = 8;
+  // repeated double durations = 8 [deprecated = true];
   for (int i = 0; i < this->durations_size(); i++) {
     ::google::protobuf::internal::WireFormatLite::WriteDouble(
       8, this->durations(i), output);
   }
 
-  // repeated double delays = 9;
+  // repeated double delays = 9 [deprecated = true];
   for (int i = 0; i < this->delays_size(); i++) {
     ::google::protobuf::internal::WireFormatLite::WriteDouble(
       9, this->delays(i), output);
   }
 
-  // repeated double delayAutomaticAfters = 10;
+  // repeated double delayAutomaticAfters = 10 [deprecated = true];
   for (int i = 0; i < this->delayautomaticafters_size(); i++) {
     ::google::protobuf::internal::WireFormatLite::WriteDouble(
       10, this->delayautomaticafters(i), output);
   }
 
-  // repeated double delayAutomaticWiths = 11;
+  // repeated double delayAutomaticWiths = 11 [deprecated = true];
   for (int i = 0; i < this->delayautomaticwiths_size(); i++) {
     ::google::protobuf::internal::WireFormatLite::WriteDouble(
       11, this->delayautomaticwiths(i), output);
   }
 
-  // repeated bool eventTriggers = 12;
+  // repeated bool eventTriggers = 12 [deprecated = true];
   for (int i = 0; i < this->eventtriggers_size(); i++) {
     ::google::protobuf::internal::WireFormatLite::WriteBool(
       12, this->eventtriggers(i), output);
+  }
+
+  // optional .KN.BuildAttributesArchive oldAttributes = 13;
+  if (has_oldattributes()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      13, this->oldattributes(), output);
+  }
+
+  // optional .KN.BuildAttributesArchive currentAttributes = 14;
+  if (has_currentattributes()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      14, this->currentattributes(), output);
   }
 
   if (!unknown_fields().empty()) {
@@ -14550,7 +14723,7 @@ void CommandBuildSetValueArchive::SerializeWithCachedSizes(
         3, this->property(), target);
   }
 
-  // repeated string effects = 4;
+  // repeated string effects = 4 [deprecated = true];
   for (int i = 0; i < this->effects_size(); i++) {
     ::google::protobuf::internal::WireFormat::VerifyUTF8String(
       this->effects(i).data(), this->effects(i).length(),
@@ -14559,7 +14732,7 @@ void CommandBuildSetValueArchive::SerializeWithCachedSizes(
       WriteStringToArray(4, this->effects(i), target);
   }
 
-  // repeated string types = 5;
+  // repeated string types = 5 [deprecated = true];
   for (int i = 0; i < this->types_size(); i++) {
     ::google::protobuf::internal::WireFormat::VerifyUTF8String(
       this->types(i).data(), this->types(i).length(),
@@ -14577,40 +14750,54 @@ void CommandBuildSetValueArchive::SerializeWithCachedSizes(
       WriteStringToArray(6, this->deliveries(i), target);
   }
 
-  // repeated uint32 directions = 7;
+  // repeated uint32 directions = 7 [deprecated = true];
   for (int i = 0; i < this->directions_size(); i++) {
     target = ::google::protobuf::internal::WireFormatLite::
       WriteUInt32ToArray(7, this->directions(i), target);
   }
 
-  // repeated double durations = 8;
+  // repeated double durations = 8 [deprecated = true];
   for (int i = 0; i < this->durations_size(); i++) {
     target = ::google::protobuf::internal::WireFormatLite::
       WriteDoubleToArray(8, this->durations(i), target);
   }
 
-  // repeated double delays = 9;
+  // repeated double delays = 9 [deprecated = true];
   for (int i = 0; i < this->delays_size(); i++) {
     target = ::google::protobuf::internal::WireFormatLite::
       WriteDoubleToArray(9, this->delays(i), target);
   }
 
-  // repeated double delayAutomaticAfters = 10;
+  // repeated double delayAutomaticAfters = 10 [deprecated = true];
   for (int i = 0; i < this->delayautomaticafters_size(); i++) {
     target = ::google::protobuf::internal::WireFormatLite::
       WriteDoubleToArray(10, this->delayautomaticafters(i), target);
   }
 
-  // repeated double delayAutomaticWiths = 11;
+  // repeated double delayAutomaticWiths = 11 [deprecated = true];
   for (int i = 0; i < this->delayautomaticwiths_size(); i++) {
     target = ::google::protobuf::internal::WireFormatLite::
       WriteDoubleToArray(11, this->delayautomaticwiths(i), target);
   }
 
-  // repeated bool eventTriggers = 12;
+  // repeated bool eventTriggers = 12 [deprecated = true];
   for (int i = 0; i < this->eventtriggers_size(); i++) {
     target = ::google::protobuf::internal::WireFormatLite::
       WriteBoolToArray(12, this->eventtriggers(i), target);
+  }
+
+  // optional .KN.BuildAttributesArchive oldAttributes = 13;
+  if (has_oldattributes()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        13, this->oldattributes(), target);
+  }
+
+  // optional .KN.BuildAttributesArchive currentAttributes = 14;
+  if (has_currentattributes()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        14, this->currentattributes(), target);
   }
 
   if (!unknown_fields().empty()) {
@@ -14646,14 +14833,30 @@ int CommandBuildSetValueArchive::ByteSize() const {
     }
 
   }
-  // repeated string effects = 4;
+  if (_has_bits_[12 / 32] & (0xffu << (12 % 32))) {
+    // optional .KN.BuildAttributesArchive oldAttributes = 13;
+    if (has_oldattributes()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->oldattributes());
+    }
+
+    // optional .KN.BuildAttributesArchive currentAttributes = 14;
+    if (has_currentattributes()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->currentattributes());
+    }
+
+  }
+  // repeated string effects = 4 [deprecated = true];
   total_size += 1 * this->effects_size();
   for (int i = 0; i < this->effects_size(); i++) {
     total_size += ::google::protobuf::internal::WireFormatLite::StringSize(
       this->effects(i));
   }
 
-  // repeated string types = 5;
+  // repeated string types = 5 [deprecated = true];
   total_size += 1 * this->types_size();
   for (int i = 0; i < this->types_size(); i++) {
     total_size += ::google::protobuf::internal::WireFormatLite::StringSize(
@@ -14667,7 +14870,7 @@ int CommandBuildSetValueArchive::ByteSize() const {
       this->deliveries(i));
   }
 
-  // repeated uint32 directions = 7;
+  // repeated uint32 directions = 7 [deprecated = true];
   {
     int data_size = 0;
     for (int i = 0; i < this->directions_size(); i++) {
@@ -14677,35 +14880,35 @@ int CommandBuildSetValueArchive::ByteSize() const {
     total_size += 1 * this->directions_size() + data_size;
   }
 
-  // repeated double durations = 8;
+  // repeated double durations = 8 [deprecated = true];
   {
     int data_size = 0;
     data_size = 8 * this->durations_size();
     total_size += 1 * this->durations_size() + data_size;
   }
 
-  // repeated double delays = 9;
+  // repeated double delays = 9 [deprecated = true];
   {
     int data_size = 0;
     data_size = 8 * this->delays_size();
     total_size += 1 * this->delays_size() + data_size;
   }
 
-  // repeated double delayAutomaticAfters = 10;
+  // repeated double delayAutomaticAfters = 10 [deprecated = true];
   {
     int data_size = 0;
     data_size = 8 * this->delayautomaticafters_size();
     total_size += 1 * this->delayautomaticafters_size() + data_size;
   }
 
-  // repeated double delayAutomaticWiths = 11;
+  // repeated double delayAutomaticWiths = 11 [deprecated = true];
   {
     int data_size = 0;
     data_size = 8 * this->delayautomaticwiths_size();
     total_size += 1 * this->delayautomaticwiths_size() + data_size;
   }
 
-  // repeated bool eventTriggers = 12;
+  // repeated bool eventTriggers = 12 [deprecated = true];
   {
     int data_size = 0;
     data_size = 1 * this->eventtriggers_size();
@@ -14757,6 +14960,14 @@ void CommandBuildSetValueArchive::MergeFrom(const CommandBuildSetValueArchive& f
       set_property(from.property());
     }
   }
+  if (from._has_bits_[12 / 32] & (0xffu << (12 % 32))) {
+    if (from.has_oldattributes()) {
+      mutable_oldattributes()->::KN::BuildAttributesArchive::MergeFrom(from.oldattributes());
+    }
+    if (from.has_currentattributes()) {
+      mutable_currentattributes()->::KN::BuildAttributesArchive::MergeFrom(from.currentattributes());
+    }
+  }
   mutable_unknown_fields()->MergeFrom(from.unknown_fields());
 }
 
@@ -14781,6 +14992,12 @@ bool CommandBuildSetValueArchive::IsInitialized() const {
   if (has_build()) {
     if (!this->build().IsInitialized()) return false;
   }
+  if (has_oldattributes()) {
+    if (!this->oldattributes().IsInitialized()) return false;
+  }
+  if (has_currentattributes()) {
+    if (!this->currentattributes().IsInitialized()) return false;
+  }
   return true;
 }
 
@@ -14798,6 +15015,8 @@ void CommandBuildSetValueArchive::Swap(CommandBuildSetValueArchive* other) {
     delayautomaticafters_.Swap(&other->delayautomaticafters_);
     delayautomaticwiths_.Swap(&other->delayautomaticwiths_);
     eventtriggers_.Swap(&other->eventtriggers_);
+    std::swap(oldattributes_, other->oldattributes_);
+    std::swap(currentattributes_, other->currentattributes_);
     std::swap(_has_bits_[0], other->_has_bits_[0]);
     _unknown_fields_.Swap(&other->_unknown_fields_);
     std::swap(_cached_size_, other->_cached_size_);
@@ -15047,7 +15266,7 @@ bool CommandBuildChunkSetValueArchive::MergePartialFromCodedStream(
         break;
       }
 
-      // optional bool oldOwnsValue = 8;
+      // optional bool oldOwnsValue = 8 [deprecated = true];
       case 8: {
         if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
             ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
@@ -15126,7 +15345,7 @@ void CommandBuildChunkSetValueArchive::SerializeWithCachedSizes(
       7, this->delays(i), output);
   }
 
-  // optional bool oldOwnsValue = 8;
+  // optional bool oldOwnsValue = 8 [deprecated = true];
   if (has_oldownsvalue()) {
     ::google::protobuf::internal::WireFormatLite::WriteBool(8, this->oldownsvalue(), output);
   }
@@ -15187,7 +15406,7 @@ void CommandBuildChunkSetValueArchive::SerializeWithCachedSizes(
       WriteDoubleToArray(7, this->delays(i), target);
   }
 
-  // optional bool oldOwnsValue = 8;
+  // optional bool oldOwnsValue = 8 [deprecated = true];
   if (has_oldownsvalue()) {
     target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(8, this->oldownsvalue(), target);
   }
@@ -15224,7 +15443,7 @@ int CommandBuildChunkSetValueArchive::ByteSize() const {
           this->property());
     }
 
-    // optional bool oldOwnsValue = 8;
+    // optional bool oldOwnsValue = 8 [deprecated = true];
     if (has_oldownsvalue()) {
       total_size += 1 + 1;
     }
@@ -15370,6 +15589,8 @@ const int CommandTransitionSetValueArchive::kDurationsFieldNumber;
 const int CommandTransitionSetValueArchive::kDirectionsFieldNumber;
 const int CommandTransitionSetValueArchive::kIsAutomaticsFieldNumber;
 const int CommandTransitionSetValueArchive::kDelaysFieldNumber;
+const int CommandTransitionSetValueArchive::kOldAttributesFieldNumber;
+const int CommandTransitionSetValueArchive::kCurrentAttributesFieldNumber;
 #endif  // !_MSC_VER
 
 CommandTransitionSetValueArchive::CommandTransitionSetValueArchive()
@@ -15380,6 +15601,8 @@ CommandTransitionSetValueArchive::CommandTransitionSetValueArchive()
 void CommandTransitionSetValueArchive::InitAsDefaultInstance() {
   super_ = const_cast< ::TSK::CommandArchive*>(&::TSK::CommandArchive::default_instance());
   slidenode_ = const_cast< ::TSP::Reference*>(&::TSP::Reference::default_instance());
+  oldattributes_ = const_cast< ::KN::TransitionAttributesArchive*>(&::KN::TransitionAttributesArchive::default_instance());
+  currentattributes_ = const_cast< ::KN::TransitionAttributesArchive*>(&::KN::TransitionAttributesArchive::default_instance());
 }
 
 CommandTransitionSetValueArchive::CommandTransitionSetValueArchive(const CommandTransitionSetValueArchive& from)
@@ -15393,6 +15616,8 @@ void CommandTransitionSetValueArchive::SharedCtor() {
   super_ = NULL;
   slidenode_ = NULL;
   property_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+  oldattributes_ = NULL;
+  currentattributes_ = NULL;
   ::memset(_has_bits_, 0, sizeof(_has_bits_));
 }
 
@@ -15407,6 +15632,8 @@ void CommandTransitionSetValueArchive::SharedDtor() {
   if (this != default_instance_) {
     delete super_;
     delete slidenode_;
+    delete oldattributes_;
+    delete currentattributes_;
   }
 }
 
@@ -15443,6 +15670,14 @@ void CommandTransitionSetValueArchive::Clear() {
       if (property_ != &::google::protobuf::internal::kEmptyString) {
         property_->clear();
       }
+    }
+  }
+  if (_has_bits_[11 / 32] & (0xffu << (11 % 32))) {
+    if (has_oldattributes()) {
+      if (oldattributes_ != NULL) oldattributes_->::KN::TransitionAttributesArchive::Clear();
+    }
+    if (has_currentattributes()) {
+      if (currentattributes_ != NULL) currentattributes_->::KN::TransitionAttributesArchive::Clear();
     }
   }
   effects_.Clear();
@@ -15507,7 +15742,7 @@ bool CommandTransitionSetValueArchive::MergePartialFromCodedStream(
         break;
       }
 
-      // repeated string effects = 4;
+      // repeated string effects = 4 [deprecated = true];
       case 4: {
         if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
             ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
@@ -15526,7 +15761,7 @@ bool CommandTransitionSetValueArchive::MergePartialFromCodedStream(
         break;
       }
 
-      // repeated string unused = 5;
+      // repeated string unused = 5 [deprecated = true];
       case 5: {
         if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
             ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
@@ -15545,7 +15780,7 @@ bool CommandTransitionSetValueArchive::MergePartialFromCodedStream(
         break;
       }
 
-      // repeated string unused2 = 6;
+      // repeated string unused2 = 6 [deprecated = true];
       case 6: {
         if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
             ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
@@ -15564,7 +15799,7 @@ bool CommandTransitionSetValueArchive::MergePartialFromCodedStream(
         break;
       }
 
-      // repeated string unused3 = 7;
+      // repeated string unused3 = 7 [deprecated = true];
       case 7: {
         if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
             ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
@@ -15583,7 +15818,7 @@ bool CommandTransitionSetValueArchive::MergePartialFromCodedStream(
         break;
       }
 
-      // repeated double durations = 8;
+      // repeated double durations = 8 [deprecated = true];
       case 8: {
         if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
             ::google::protobuf::internal::WireFormatLite::WIRETYPE_FIXED64) {
@@ -15605,7 +15840,7 @@ bool CommandTransitionSetValueArchive::MergePartialFromCodedStream(
         break;
       }
 
-      // repeated uint32 directions = 9;
+      // repeated uint32 directions = 9 [deprecated = true];
       case 9: {
         if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
             ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
@@ -15627,7 +15862,7 @@ bool CommandTransitionSetValueArchive::MergePartialFromCodedStream(
         break;
       }
 
-      // repeated bool isAutomatics = 10;
+      // repeated bool isAutomatics = 10 [deprecated = true];
       case 10: {
         if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
             ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
@@ -15649,7 +15884,7 @@ bool CommandTransitionSetValueArchive::MergePartialFromCodedStream(
         break;
       }
 
-      // repeated double delays = 11;
+      // repeated double delays = 11 [deprecated = true];
       case 11: {
         if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
             ::google::protobuf::internal::WireFormatLite::WIRETYPE_FIXED64) {
@@ -15667,6 +15902,34 @@ bool CommandTransitionSetValueArchive::MergePartialFromCodedStream(
           goto handle_uninterpreted;
         }
         if (input->ExpectTag(89)) goto parse_delays;
+        if (input->ExpectTag(98)) goto parse_oldAttributes;
+        break;
+      }
+
+      // optional .KN.TransitionAttributesArchive oldAttributes = 12;
+      case 12: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_oldAttributes:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_oldattributes()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(106)) goto parse_currentAttributes;
+        break;
+      }
+
+      // optional .KN.TransitionAttributesArchive currentAttributes = 13;
+      case 13: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_currentAttributes:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_currentattributes()));
+        } else {
+          goto handle_uninterpreted;
+        }
         if (input->ExpectAtEnd()) return true;
         break;
       }
@@ -15710,7 +15973,7 @@ void CommandTransitionSetValueArchive::SerializeWithCachedSizes(
       3, this->property(), output);
   }
 
-  // repeated string effects = 4;
+  // repeated string effects = 4 [deprecated = true];
   for (int i = 0; i < this->effects_size(); i++) {
   ::google::protobuf::internal::WireFormat::VerifyUTF8String(
     this->effects(i).data(), this->effects(i).length(),
@@ -15719,7 +15982,7 @@ void CommandTransitionSetValueArchive::SerializeWithCachedSizes(
       4, this->effects(i), output);
   }
 
-  // repeated string unused = 5;
+  // repeated string unused = 5 [deprecated = true];
   for (int i = 0; i < this->unused_size(); i++) {
   ::google::protobuf::internal::WireFormat::VerifyUTF8String(
     this->unused(i).data(), this->unused(i).length(),
@@ -15728,7 +15991,7 @@ void CommandTransitionSetValueArchive::SerializeWithCachedSizes(
       5, this->unused(i), output);
   }
 
-  // repeated string unused2 = 6;
+  // repeated string unused2 = 6 [deprecated = true];
   for (int i = 0; i < this->unused2_size(); i++) {
   ::google::protobuf::internal::WireFormat::VerifyUTF8String(
     this->unused2(i).data(), this->unused2(i).length(),
@@ -15737,7 +16000,7 @@ void CommandTransitionSetValueArchive::SerializeWithCachedSizes(
       6, this->unused2(i), output);
   }
 
-  // repeated string unused3 = 7;
+  // repeated string unused3 = 7 [deprecated = true];
   for (int i = 0; i < this->unused3_size(); i++) {
   ::google::protobuf::internal::WireFormat::VerifyUTF8String(
     this->unused3(i).data(), this->unused3(i).length(),
@@ -15746,28 +16009,40 @@ void CommandTransitionSetValueArchive::SerializeWithCachedSizes(
       7, this->unused3(i), output);
   }
 
-  // repeated double durations = 8;
+  // repeated double durations = 8 [deprecated = true];
   for (int i = 0; i < this->durations_size(); i++) {
     ::google::protobuf::internal::WireFormatLite::WriteDouble(
       8, this->durations(i), output);
   }
 
-  // repeated uint32 directions = 9;
+  // repeated uint32 directions = 9 [deprecated = true];
   for (int i = 0; i < this->directions_size(); i++) {
     ::google::protobuf::internal::WireFormatLite::WriteUInt32(
       9, this->directions(i), output);
   }
 
-  // repeated bool isAutomatics = 10;
+  // repeated bool isAutomatics = 10 [deprecated = true];
   for (int i = 0; i < this->isautomatics_size(); i++) {
     ::google::protobuf::internal::WireFormatLite::WriteBool(
       10, this->isautomatics(i), output);
   }
 
-  // repeated double delays = 11;
+  // repeated double delays = 11 [deprecated = true];
   for (int i = 0; i < this->delays_size(); i++) {
     ::google::protobuf::internal::WireFormatLite::WriteDouble(
       11, this->delays(i), output);
+  }
+
+  // optional .KN.TransitionAttributesArchive oldAttributes = 12;
+  if (has_oldattributes()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      12, this->oldattributes(), output);
+  }
+
+  // optional .KN.TransitionAttributesArchive currentAttributes = 13;
+  if (has_currentattributes()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      13, this->currentattributes(), output);
   }
 
   if (!unknown_fields().empty()) {
@@ -15802,7 +16077,7 @@ void CommandTransitionSetValueArchive::SerializeWithCachedSizes(
         3, this->property(), target);
   }
 
-  // repeated string effects = 4;
+  // repeated string effects = 4 [deprecated = true];
   for (int i = 0; i < this->effects_size(); i++) {
     ::google::protobuf::internal::WireFormat::VerifyUTF8String(
       this->effects(i).data(), this->effects(i).length(),
@@ -15811,7 +16086,7 @@ void CommandTransitionSetValueArchive::SerializeWithCachedSizes(
       WriteStringToArray(4, this->effects(i), target);
   }
 
-  // repeated string unused = 5;
+  // repeated string unused = 5 [deprecated = true];
   for (int i = 0; i < this->unused_size(); i++) {
     ::google::protobuf::internal::WireFormat::VerifyUTF8String(
       this->unused(i).data(), this->unused(i).length(),
@@ -15820,7 +16095,7 @@ void CommandTransitionSetValueArchive::SerializeWithCachedSizes(
       WriteStringToArray(5, this->unused(i), target);
   }
 
-  // repeated string unused2 = 6;
+  // repeated string unused2 = 6 [deprecated = true];
   for (int i = 0; i < this->unused2_size(); i++) {
     ::google::protobuf::internal::WireFormat::VerifyUTF8String(
       this->unused2(i).data(), this->unused2(i).length(),
@@ -15829,7 +16104,7 @@ void CommandTransitionSetValueArchive::SerializeWithCachedSizes(
       WriteStringToArray(6, this->unused2(i), target);
   }
 
-  // repeated string unused3 = 7;
+  // repeated string unused3 = 7 [deprecated = true];
   for (int i = 0; i < this->unused3_size(); i++) {
     ::google::protobuf::internal::WireFormat::VerifyUTF8String(
       this->unused3(i).data(), this->unused3(i).length(),
@@ -15838,28 +16113,42 @@ void CommandTransitionSetValueArchive::SerializeWithCachedSizes(
       WriteStringToArray(7, this->unused3(i), target);
   }
 
-  // repeated double durations = 8;
+  // repeated double durations = 8 [deprecated = true];
   for (int i = 0; i < this->durations_size(); i++) {
     target = ::google::protobuf::internal::WireFormatLite::
       WriteDoubleToArray(8, this->durations(i), target);
   }
 
-  // repeated uint32 directions = 9;
+  // repeated uint32 directions = 9 [deprecated = true];
   for (int i = 0; i < this->directions_size(); i++) {
     target = ::google::protobuf::internal::WireFormatLite::
       WriteUInt32ToArray(9, this->directions(i), target);
   }
 
-  // repeated bool isAutomatics = 10;
+  // repeated bool isAutomatics = 10 [deprecated = true];
   for (int i = 0; i < this->isautomatics_size(); i++) {
     target = ::google::protobuf::internal::WireFormatLite::
       WriteBoolToArray(10, this->isautomatics(i), target);
   }
 
-  // repeated double delays = 11;
+  // repeated double delays = 11 [deprecated = true];
   for (int i = 0; i < this->delays_size(); i++) {
     target = ::google::protobuf::internal::WireFormatLite::
       WriteDoubleToArray(11, this->delays(i), target);
+  }
+
+  // optional .KN.TransitionAttributesArchive oldAttributes = 12;
+  if (has_oldattributes()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        12, this->oldattributes(), target);
+  }
+
+  // optional .KN.TransitionAttributesArchive currentAttributes = 13;
+  if (has_currentattributes()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        13, this->currentattributes(), target);
   }
 
   if (!unknown_fields().empty()) {
@@ -15895,42 +16184,58 @@ int CommandTransitionSetValueArchive::ByteSize() const {
     }
 
   }
-  // repeated string effects = 4;
+  if (_has_bits_[11 / 32] & (0xffu << (11 % 32))) {
+    // optional .KN.TransitionAttributesArchive oldAttributes = 12;
+    if (has_oldattributes()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->oldattributes());
+    }
+
+    // optional .KN.TransitionAttributesArchive currentAttributes = 13;
+    if (has_currentattributes()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->currentattributes());
+    }
+
+  }
+  // repeated string effects = 4 [deprecated = true];
   total_size += 1 * this->effects_size();
   for (int i = 0; i < this->effects_size(); i++) {
     total_size += ::google::protobuf::internal::WireFormatLite::StringSize(
       this->effects(i));
   }
 
-  // repeated string unused = 5;
+  // repeated string unused = 5 [deprecated = true];
   total_size += 1 * this->unused_size();
   for (int i = 0; i < this->unused_size(); i++) {
     total_size += ::google::protobuf::internal::WireFormatLite::StringSize(
       this->unused(i));
   }
 
-  // repeated string unused2 = 6;
+  // repeated string unused2 = 6 [deprecated = true];
   total_size += 1 * this->unused2_size();
   for (int i = 0; i < this->unused2_size(); i++) {
     total_size += ::google::protobuf::internal::WireFormatLite::StringSize(
       this->unused2(i));
   }
 
-  // repeated string unused3 = 7;
+  // repeated string unused3 = 7 [deprecated = true];
   total_size += 1 * this->unused3_size();
   for (int i = 0; i < this->unused3_size(); i++) {
     total_size += ::google::protobuf::internal::WireFormatLite::StringSize(
       this->unused3(i));
   }
 
-  // repeated double durations = 8;
+  // repeated double durations = 8 [deprecated = true];
   {
     int data_size = 0;
     data_size = 8 * this->durations_size();
     total_size += 1 * this->durations_size() + data_size;
   }
 
-  // repeated uint32 directions = 9;
+  // repeated uint32 directions = 9 [deprecated = true];
   {
     int data_size = 0;
     for (int i = 0; i < this->directions_size(); i++) {
@@ -15940,14 +16245,14 @@ int CommandTransitionSetValueArchive::ByteSize() const {
     total_size += 1 * this->directions_size() + data_size;
   }
 
-  // repeated bool isAutomatics = 10;
+  // repeated bool isAutomatics = 10 [deprecated = true];
   {
     int data_size = 0;
     data_size = 1 * this->isautomatics_size();
     total_size += 1 * this->isautomatics_size() + data_size;
   }
 
-  // repeated double delays = 11;
+  // repeated double delays = 11 [deprecated = true];
   {
     int data_size = 0;
     data_size = 8 * this->delays_size();
@@ -15998,6 +16303,14 @@ void CommandTransitionSetValueArchive::MergeFrom(const CommandTransitionSetValue
       set_property(from.property());
     }
   }
+  if (from._has_bits_[11 / 32] & (0xffu << (11 % 32))) {
+    if (from.has_oldattributes()) {
+      mutable_oldattributes()->::KN::TransitionAttributesArchive::MergeFrom(from.oldattributes());
+    }
+    if (from.has_currentattributes()) {
+      mutable_currentattributes()->::KN::TransitionAttributesArchive::MergeFrom(from.currentattributes());
+    }
+  }
   mutable_unknown_fields()->MergeFrom(from.unknown_fields());
 }
 
@@ -16022,6 +16335,12 @@ bool CommandTransitionSetValueArchive::IsInitialized() const {
   if (has_slidenode()) {
     if (!this->slidenode().IsInitialized()) return false;
   }
+  if (has_oldattributes()) {
+    if (!this->oldattributes().IsInitialized()) return false;
+  }
+  if (has_currentattributes()) {
+    if (!this->currentattributes().IsInitialized()) return false;
+  }
   return true;
 }
 
@@ -16038,6 +16357,8 @@ void CommandTransitionSetValueArchive::Swap(CommandTransitionSetValueArchive* ot
     directions_.Swap(&other->directions_);
     isautomatics_.Swap(&other->isautomatics_);
     delays_.Swap(&other->delays_);
+    std::swap(oldattributes_, other->oldattributes_);
+    std::swap(currentattributes_, other->currentattributes_);
     std::swap(_has_bits_[0], other->_has_bits_[0]);
     _unknown_fields_.Swap(&other->_unknown_fields_);
     std::swap(_cached_size_, other->_cached_size_);
@@ -17519,6 +17840,347 @@ void CommandMasterSetBodyStylesArchive::Swap(CommandMasterSetBodyStylesArchive* 
   ::google::protobuf::Metadata metadata;
   metadata.descriptor = CommandMasterSetBodyStylesArchive_descriptor_;
   metadata.reflection = CommandMasterSetBodyStylesArchive_reflection_;
+  return metadata;
+}
+
+
+// ===================================================================
+
+#ifndef _MSC_VER
+const int CommandMasterSetSlideObjectsLayerWithMasterArchive::kSuperFieldNumber;
+const int CommandMasterSetSlideObjectsLayerWithMasterArchive::kMasterFieldNumber;
+const int CommandMasterSetSlideObjectsLayerWithMasterArchive::kNewValueFieldNumber;
+const int CommandMasterSetSlideObjectsLayerWithMasterArchive::kOldValueFieldNumber;
+#endif  // !_MSC_VER
+
+CommandMasterSetSlideObjectsLayerWithMasterArchive::CommandMasterSetSlideObjectsLayerWithMasterArchive()
+  : ::google::protobuf::Message() {
+  SharedCtor();
+}
+
+void CommandMasterSetSlideObjectsLayerWithMasterArchive::InitAsDefaultInstance() {
+  super_ = const_cast< ::TSK::CommandArchive*>(&::TSK::CommandArchive::default_instance());
+  master_ = const_cast< ::TSP::Reference*>(&::TSP::Reference::default_instance());
+}
+
+CommandMasterSetSlideObjectsLayerWithMasterArchive::CommandMasterSetSlideObjectsLayerWithMasterArchive(const CommandMasterSetSlideObjectsLayerWithMasterArchive& from)
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  MergeFrom(from);
+}
+
+void CommandMasterSetSlideObjectsLayerWithMasterArchive::SharedCtor() {
+  _cached_size_ = 0;
+  super_ = NULL;
+  master_ = NULL;
+  new_value_ = false;
+  old_value_ = false;
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+}
+
+CommandMasterSetSlideObjectsLayerWithMasterArchive::~CommandMasterSetSlideObjectsLayerWithMasterArchive() {
+  SharedDtor();
+}
+
+void CommandMasterSetSlideObjectsLayerWithMasterArchive::SharedDtor() {
+  if (this != default_instance_) {
+    delete super_;
+    delete master_;
+  }
+}
+
+void CommandMasterSetSlideObjectsLayerWithMasterArchive::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* CommandMasterSetSlideObjectsLayerWithMasterArchive::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return CommandMasterSetSlideObjectsLayerWithMasterArchive_descriptor_;
+}
+
+const CommandMasterSetSlideObjectsLayerWithMasterArchive& CommandMasterSetSlideObjectsLayerWithMasterArchive::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_KNCommandArchives_2eproto();
+  return *default_instance_;
+}
+
+CommandMasterSetSlideObjectsLayerWithMasterArchive* CommandMasterSetSlideObjectsLayerWithMasterArchive::default_instance_ = NULL;
+
+CommandMasterSetSlideObjectsLayerWithMasterArchive* CommandMasterSetSlideObjectsLayerWithMasterArchive::New() const {
+  return new CommandMasterSetSlideObjectsLayerWithMasterArchive;
+}
+
+void CommandMasterSetSlideObjectsLayerWithMasterArchive::Clear() {
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (has_super()) {
+      if (super_ != NULL) super_->::TSK::CommandArchive::Clear();
+    }
+    if (has_master()) {
+      if (master_ != NULL) master_->::TSP::Reference::Clear();
+    }
+    new_value_ = false;
+    old_value_ = false;
+  }
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+  mutable_unknown_fields()->Clear();
+}
+
+bool CommandMasterSetSlideObjectsLayerWithMasterArchive::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!(EXPRESSION)) return false
+  ::google::protobuf::uint32 tag;
+  while ((tag = input->ReadTag()) != 0) {
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // required .TSK.CommandArchive super = 1;
+      case 1: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_super()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(18)) goto parse_master;
+        break;
+      }
+
+      // required .TSP.Reference master = 2;
+      case 2: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_master:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_master()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(24)) goto parse_new_value;
+        break;
+      }
+
+      // required bool new_value = 3;
+      case 3: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_new_value:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &new_value_)));
+          set_has_new_value();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(32)) goto parse_old_value;
+        break;
+      }
+
+      // required bool old_value = 4;
+      case 4: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_old_value:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &old_value_)));
+          set_has_old_value();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectAtEnd()) return true;
+        break;
+      }
+
+      default: {
+      handle_uninterpreted:
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          return true;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+  return true;
+#undef DO_
+}
+
+void CommandMasterSetSlideObjectsLayerWithMasterArchive::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // required .TSK.CommandArchive super = 1;
+  if (has_super()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, this->super(), output);
+  }
+
+  // required .TSP.Reference master = 2;
+  if (has_master()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      2, this->master(), output);
+  }
+
+  // required bool new_value = 3;
+  if (has_new_value()) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(3, this->new_value(), output);
+  }
+
+  // required bool old_value = 4;
+  if (has_old_value()) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(4, this->old_value(), output);
+  }
+
+  if (!unknown_fields().empty()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+}
+
+::google::protobuf::uint8* CommandMasterSetSlideObjectsLayerWithMasterArchive::SerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // required .TSK.CommandArchive super = 1;
+  if (has_super()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        1, this->super(), target);
+  }
+
+  // required .TSP.Reference master = 2;
+  if (has_master()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        2, this->master(), target);
+  }
+
+  // required bool new_value = 3;
+  if (has_new_value()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(3, this->new_value(), target);
+  }
+
+  // required bool old_value = 4;
+  if (has_old_value()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(4, this->old_value(), target);
+  }
+
+  if (!unknown_fields().empty()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  return target;
+}
+
+int CommandMasterSetSlideObjectsLayerWithMasterArchive::ByteSize() const {
+  int total_size = 0;
+
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    // required .TSK.CommandArchive super = 1;
+    if (has_super()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->super());
+    }
+
+    // required .TSP.Reference master = 2;
+    if (has_master()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->master());
+    }
+
+    // required bool new_value = 3;
+    if (has_new_value()) {
+      total_size += 1 + 1;
+    }
+
+    // required bool old_value = 4;
+    if (has_old_value()) {
+      total_size += 1 + 1;
+    }
+
+  }
+  if (!unknown_fields().empty()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = total_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void CommandMasterSetSlideObjectsLayerWithMasterArchive::MergeFrom(const ::google::protobuf::Message& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  const CommandMasterSetSlideObjectsLayerWithMasterArchive* source =
+    ::google::protobuf::internal::dynamic_cast_if_available<const CommandMasterSetSlideObjectsLayerWithMasterArchive*>(
+      &from);
+  if (source == NULL) {
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+    MergeFrom(*source);
+  }
+}
+
+void CommandMasterSetSlideObjectsLayerWithMasterArchive::MergeFrom(const CommandMasterSetSlideObjectsLayerWithMasterArchive& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (from.has_super()) {
+      mutable_super()->::TSK::CommandArchive::MergeFrom(from.super());
+    }
+    if (from.has_master()) {
+      mutable_master()->::TSP::Reference::MergeFrom(from.master());
+    }
+    if (from.has_new_value()) {
+      set_new_value(from.new_value());
+    }
+    if (from.has_old_value()) {
+      set_old_value(from.old_value());
+    }
+  }
+  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
+}
+
+void CommandMasterSetSlideObjectsLayerWithMasterArchive::CopyFrom(const ::google::protobuf::Message& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void CommandMasterSetSlideObjectsLayerWithMasterArchive::CopyFrom(const CommandMasterSetSlideObjectsLayerWithMasterArchive& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool CommandMasterSetSlideObjectsLayerWithMasterArchive::IsInitialized() const {
+  if ((_has_bits_[0] & 0x0000000f) != 0x0000000f) return false;
+
+  if (has_super()) {
+    if (!this->super().IsInitialized()) return false;
+  }
+  if (has_master()) {
+    if (!this->master().IsInitialized()) return false;
+  }
+  return true;
+}
+
+void CommandMasterSetSlideObjectsLayerWithMasterArchive::Swap(CommandMasterSetSlideObjectsLayerWithMasterArchive* other) {
+  if (other != this) {
+    std::swap(super_, other->super_);
+    std::swap(master_, other->master_);
+    std::swap(new_value_, other->new_value_);
+    std::swap(old_value_, other->old_value_);
+    std::swap(_has_bits_[0], other->_has_bits_[0]);
+    _unknown_fields_.Swap(&other->_unknown_fields_);
+    std::swap(_cached_size_, other->_cached_size_);
+  }
+}
+
+::google::protobuf::Metadata CommandMasterSetSlideObjectsLayerWithMasterArchive::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = CommandMasterSetSlideObjectsLayerWithMasterArchive_descriptor_;
+  metadata.reflection = CommandMasterSetSlideObjectsLayerWithMasterArchive_reflection_;
   return metadata;
 }
 
@@ -19845,6 +20507,405 @@ void CommandSoundtrackSetValue::Swap(CommandSoundtrackSetValue* other) {
   ::google::protobuf::Metadata metadata;
   metadata.descriptor = CommandSoundtrackSetValue_descriptor_;
   metadata.reflection = CommandSoundtrackSetValue_reflection_;
+  return metadata;
+}
+
+
+// ===================================================================
+
+#ifndef _MSC_VER
+const int CommandSlideUpdateMasterDrawables::kSuperFieldNumber;
+const int CommandSlideUpdateMasterDrawables::kSlideFieldNumber;
+const int CommandSlideUpdateMasterDrawables::kDrawablesToInsertFieldNumber;
+const int CommandSlideUpdateMasterDrawables::kSortedDrawablesToRemoveFieldNumber;
+const int CommandSlideUpdateMasterDrawables::kIndexesOfRemovedDrawablesFieldNumber;
+#endif  // !_MSC_VER
+
+CommandSlideUpdateMasterDrawables::CommandSlideUpdateMasterDrawables()
+  : ::google::protobuf::Message() {
+  SharedCtor();
+}
+
+void CommandSlideUpdateMasterDrawables::InitAsDefaultInstance() {
+  super_ = const_cast< ::TSK::CommandArchive*>(&::TSK::CommandArchive::default_instance());
+  slide_ = const_cast< ::TSP::Reference*>(&::TSP::Reference::default_instance());
+  indexes_of_removed_drawables_ = const_cast< ::TSP::IndexSet*>(&::TSP::IndexSet::default_instance());
+}
+
+CommandSlideUpdateMasterDrawables::CommandSlideUpdateMasterDrawables(const CommandSlideUpdateMasterDrawables& from)
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  MergeFrom(from);
+}
+
+void CommandSlideUpdateMasterDrawables::SharedCtor() {
+  _cached_size_ = 0;
+  super_ = NULL;
+  slide_ = NULL;
+  indexes_of_removed_drawables_ = NULL;
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+}
+
+CommandSlideUpdateMasterDrawables::~CommandSlideUpdateMasterDrawables() {
+  SharedDtor();
+}
+
+void CommandSlideUpdateMasterDrawables::SharedDtor() {
+  if (this != default_instance_) {
+    delete super_;
+    delete slide_;
+    delete indexes_of_removed_drawables_;
+  }
+}
+
+void CommandSlideUpdateMasterDrawables::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* CommandSlideUpdateMasterDrawables::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return CommandSlideUpdateMasterDrawables_descriptor_;
+}
+
+const CommandSlideUpdateMasterDrawables& CommandSlideUpdateMasterDrawables::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_KNCommandArchives_2eproto();
+  return *default_instance_;
+}
+
+CommandSlideUpdateMasterDrawables* CommandSlideUpdateMasterDrawables::default_instance_ = NULL;
+
+CommandSlideUpdateMasterDrawables* CommandSlideUpdateMasterDrawables::New() const {
+  return new CommandSlideUpdateMasterDrawables;
+}
+
+void CommandSlideUpdateMasterDrawables::Clear() {
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (has_super()) {
+      if (super_ != NULL) super_->::TSK::CommandArchive::Clear();
+    }
+    if (has_slide()) {
+      if (slide_ != NULL) slide_->::TSP::Reference::Clear();
+    }
+    if (has_indexes_of_removed_drawables()) {
+      if (indexes_of_removed_drawables_ != NULL) indexes_of_removed_drawables_->::TSP::IndexSet::Clear();
+    }
+  }
+  drawables_to_insert_.Clear();
+  sorted_drawables_to_remove_.Clear();
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+  mutable_unknown_fields()->Clear();
+}
+
+bool CommandSlideUpdateMasterDrawables::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!(EXPRESSION)) return false
+  ::google::protobuf::uint32 tag;
+  while ((tag = input->ReadTag()) != 0) {
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // required .TSK.CommandArchive super = 1;
+      case 1: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_super()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(18)) goto parse_slide;
+        break;
+      }
+
+      // required .TSP.Reference slide = 2;
+      case 2: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_slide:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_slide()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(26)) goto parse_drawables_to_insert;
+        break;
+      }
+
+      // repeated .TSP.Reference drawables_to_insert = 3;
+      case 3: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_drawables_to_insert:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+                input, add_drawables_to_insert()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(26)) goto parse_drawables_to_insert;
+        if (input->ExpectTag(34)) goto parse_sorted_drawables_to_remove;
+        break;
+      }
+
+      // repeated .TSP.Reference sorted_drawables_to_remove = 4;
+      case 4: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_sorted_drawables_to_remove:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+                input, add_sorted_drawables_to_remove()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(34)) goto parse_sorted_drawables_to_remove;
+        if (input->ExpectTag(42)) goto parse_indexes_of_removed_drawables;
+        break;
+      }
+
+      // required .TSP.IndexSet indexes_of_removed_drawables = 5;
+      case 5: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_indexes_of_removed_drawables:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_indexes_of_removed_drawables()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectAtEnd()) return true;
+        break;
+      }
+
+      default: {
+      handle_uninterpreted:
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          return true;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+  return true;
+#undef DO_
+}
+
+void CommandSlideUpdateMasterDrawables::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // required .TSK.CommandArchive super = 1;
+  if (has_super()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, this->super(), output);
+  }
+
+  // required .TSP.Reference slide = 2;
+  if (has_slide()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      2, this->slide(), output);
+  }
+
+  // repeated .TSP.Reference drawables_to_insert = 3;
+  for (int i = 0; i < this->drawables_to_insert_size(); i++) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      3, this->drawables_to_insert(i), output);
+  }
+
+  // repeated .TSP.Reference sorted_drawables_to_remove = 4;
+  for (int i = 0; i < this->sorted_drawables_to_remove_size(); i++) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      4, this->sorted_drawables_to_remove(i), output);
+  }
+
+  // required .TSP.IndexSet indexes_of_removed_drawables = 5;
+  if (has_indexes_of_removed_drawables()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      5, this->indexes_of_removed_drawables(), output);
+  }
+
+  if (!unknown_fields().empty()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+}
+
+::google::protobuf::uint8* CommandSlideUpdateMasterDrawables::SerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // required .TSK.CommandArchive super = 1;
+  if (has_super()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        1, this->super(), target);
+  }
+
+  // required .TSP.Reference slide = 2;
+  if (has_slide()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        2, this->slide(), target);
+  }
+
+  // repeated .TSP.Reference drawables_to_insert = 3;
+  for (int i = 0; i < this->drawables_to_insert_size(); i++) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        3, this->drawables_to_insert(i), target);
+  }
+
+  // repeated .TSP.Reference sorted_drawables_to_remove = 4;
+  for (int i = 0; i < this->sorted_drawables_to_remove_size(); i++) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        4, this->sorted_drawables_to_remove(i), target);
+  }
+
+  // required .TSP.IndexSet indexes_of_removed_drawables = 5;
+  if (has_indexes_of_removed_drawables()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        5, this->indexes_of_removed_drawables(), target);
+  }
+
+  if (!unknown_fields().empty()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  return target;
+}
+
+int CommandSlideUpdateMasterDrawables::ByteSize() const {
+  int total_size = 0;
+
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    // required .TSK.CommandArchive super = 1;
+    if (has_super()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->super());
+    }
+
+    // required .TSP.Reference slide = 2;
+    if (has_slide()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->slide());
+    }
+
+    // required .TSP.IndexSet indexes_of_removed_drawables = 5;
+    if (has_indexes_of_removed_drawables()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->indexes_of_removed_drawables());
+    }
+
+  }
+  // repeated .TSP.Reference drawables_to_insert = 3;
+  total_size += 1 * this->drawables_to_insert_size();
+  for (int i = 0; i < this->drawables_to_insert_size(); i++) {
+    total_size +=
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+        this->drawables_to_insert(i));
+  }
+
+  // repeated .TSP.Reference sorted_drawables_to_remove = 4;
+  total_size += 1 * this->sorted_drawables_to_remove_size();
+  for (int i = 0; i < this->sorted_drawables_to_remove_size(); i++) {
+    total_size +=
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+        this->sorted_drawables_to_remove(i));
+  }
+
+  if (!unknown_fields().empty()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = total_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void CommandSlideUpdateMasterDrawables::MergeFrom(const ::google::protobuf::Message& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  const CommandSlideUpdateMasterDrawables* source =
+    ::google::protobuf::internal::dynamic_cast_if_available<const CommandSlideUpdateMasterDrawables*>(
+      &from);
+  if (source == NULL) {
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+    MergeFrom(*source);
+  }
+}
+
+void CommandSlideUpdateMasterDrawables::MergeFrom(const CommandSlideUpdateMasterDrawables& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  drawables_to_insert_.MergeFrom(from.drawables_to_insert_);
+  sorted_drawables_to_remove_.MergeFrom(from.sorted_drawables_to_remove_);
+  if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (from.has_super()) {
+      mutable_super()->::TSK::CommandArchive::MergeFrom(from.super());
+    }
+    if (from.has_slide()) {
+      mutable_slide()->::TSP::Reference::MergeFrom(from.slide());
+    }
+    if (from.has_indexes_of_removed_drawables()) {
+      mutable_indexes_of_removed_drawables()->::TSP::IndexSet::MergeFrom(from.indexes_of_removed_drawables());
+    }
+  }
+  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
+}
+
+void CommandSlideUpdateMasterDrawables::CopyFrom(const ::google::protobuf::Message& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void CommandSlideUpdateMasterDrawables::CopyFrom(const CommandSlideUpdateMasterDrawables& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool CommandSlideUpdateMasterDrawables::IsInitialized() const {
+  if ((_has_bits_[0] & 0x00000013) != 0x00000013) return false;
+
+  if (has_super()) {
+    if (!this->super().IsInitialized()) return false;
+  }
+  if (has_slide()) {
+    if (!this->slide().IsInitialized()) return false;
+  }
+  for (int i = 0; i < drawables_to_insert_size(); i++) {
+    if (!this->drawables_to_insert(i).IsInitialized()) return false;
+  }
+  for (int i = 0; i < sorted_drawables_to_remove_size(); i++) {
+    if (!this->sorted_drawables_to_remove(i).IsInitialized()) return false;
+  }
+  if (has_indexes_of_removed_drawables()) {
+    if (!this->indexes_of_removed_drawables().IsInitialized()) return false;
+  }
+  return true;
+}
+
+void CommandSlideUpdateMasterDrawables::Swap(CommandSlideUpdateMasterDrawables* other) {
+  if (other != this) {
+    std::swap(super_, other->super_);
+    std::swap(slide_, other->slide_);
+    drawables_to_insert_.Swap(&other->drawables_to_insert_);
+    sorted_drawables_to_remove_.Swap(&other->sorted_drawables_to_remove_);
+    std::swap(indexes_of_removed_drawables_, other->indexes_of_removed_drawables_);
+    std::swap(_has_bits_[0], other->_has_bits_[0]);
+    _unknown_fields_.Swap(&other->_unknown_fields_);
+    std::swap(_cached_size_, other->_cached_size_);
+  }
+}
+
+::google::protobuf::Metadata CommandSlideUpdateMasterDrawables::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = CommandSlideUpdateMasterDrawables_descriptor_;
+  metadata.reflection = CommandSlideUpdateMasterDrawables_reflection_;
   return metadata;
 }
 

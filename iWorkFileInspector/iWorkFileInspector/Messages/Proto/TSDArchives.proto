@@ -373,6 +373,11 @@ message MaskArchive {
 }
 
 message MovieArchive {
+  enum MovieLoopOption {
+    None = 0;
+    Repeat = 1;
+    BackAndForth = 2;
+  }
   required .TSD.DrawableArchive super = 1;
   optional .TSP.DataReference movieData = 14;
   optional .TSP.DataReference importedAuxiliaryMovieData = 22;
@@ -380,13 +385,15 @@ message MovieArchive {
   optional float startTime = 3;
   optional float endTime = 4;
   optional float posterTime = 5;
-  optional uint32 loopOption = 6;
+  optional uint32 loopOptionAsInteger = 6 [deprecated = true];
+  optional .TSD.MovieArchive.MovieLoopOption loop_option = 24 [default = None];
   optional float volume = 7;
   optional bool autoPlay = 8 [deprecated = true];
   optional bool audioOnly = 9;
   optional bool streaming = 18;
   optional .TSP.DataReference posterImageData = 15;
   optional .TSP.DataReference audioOnlyImageData = 16;
+  optional bool poster_image_generated_with_alpha_support = 23;
   optional uint32 playableState = 12;
   optional uint32 flags = 13;
   optional .TSP.Reference database_movieData = 2;

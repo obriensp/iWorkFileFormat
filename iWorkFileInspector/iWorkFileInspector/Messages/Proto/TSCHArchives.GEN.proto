@@ -125,7 +125,11 @@ message ChartAxisStyleArchive {
 
 message ChartAxisNonStyleArchive {
   optional int32 tschchartaxisdefault3dlabelposition = 1;
-  optional .TSK.FormatStructArchive tschchartaxisdefaultnumberformat = 2;
+  optional .TSK.FormatStructArchive tschchartaxisdefault1_0numberformat = 2;
+  optional .TSK.FormatStructArchive tschchartaxisdefaultnumberformat = 42;
+  optional .TSK.FormatStructArchive tschchartaxisdefault1_0dateformat = 20;
+  optional .TSK.FormatStructArchive tschchartaxisdefaultdurationformat = 21;
+  optional .TSK.FormatStructArchive tschchartaxisdefaultdateformat = 22;
   optional int32 tschchartaxisdefaultnumberformattype = 3;
   optional int32 tschchartaxisvaluenumberofdecades = 4;
   optional int32 tschchartaxisvaluenumberofmajorgridlines = 5;
@@ -272,8 +276,13 @@ message ChartSeriesNonStyleArchive {
   optional int32 tschchartserieslinelinetype = 18;
   optional int32 tschchartseriesmixedlinelinetype = 19;
   optional int32 tschchartseriesscatterlinetype = 20;
-  optional .TSK.FormatStructArchive tschchartseriesdefaultnumberformat = 21;
-  optional .TSK.FormatStructArchive tschchartseriespienumberformat = 22;
+  optional .TSK.FormatStructArchive tschchartseriesdefault1_0numberformat = 21;
+  optional .TSK.FormatStructArchive tschchartseriesdefaultnumberformat = 98;
+  optional .TSK.FormatStructArchive tschchartseriesdefault1_0dateformat = 69;
+  optional .TSK.FormatStructArchive tschchartseriesdefaultdurationformat = 70;
+  optional .TSK.FormatStructArchive tschchartseriesdefaultdateformat = 71;
+  optional .TSK.FormatStructArchive tschchartseriespie1_0numberformat = 22;
+  optional .TSK.FormatStructArchive tschchartseriespienumberformat = 99;
   optional int32 tschchartseriesdefaultnumberformattype = 23;
   optional int32 tschchartseriespienumberformattype = 24;
   optional .TSK.FormatStructArchive tschchartseriesstackedpercentnumberformat = 25;
@@ -320,8 +329,168 @@ message ChartSeriesNonStyleArchive {
   optional int32 tschchartseriesbubblevaluelabelsaxis = 66;
   optional bool tschchartseriesscattershowserieslabels = 67;
   optional int32 tschchartseriesscattervaluelabelsaxis = 68;
+  optional bool tschchartseriesdefaultshowlabelsinfront = 100;
+  optional bool tschchartseriesbubbleshowlabelsinfront = 101;
   extend .TSCH.ChartSeriesNonStyleArchive {
     optional .TSCH.Generated.ChartSeriesNonStyleArchive current = 10000;
   }
+}
+
+message ChartGenericPropertyMapArchive {
+  optional int32 tschchartinfo3dbarshape = 1;
+  optional bool tschchartinfo3dbeveledges = 2;
+  optional float tschchartinfo3dintersetdepthgap = 3;
+  optional .TSCH.Chart3DVectorArchive tschchartinfo3drotation = 4;
+  optional .TSCH.Chart3DVectorArchive tschchartinfo3dscale = 5;
+  optional .TSCH.Chart3DVectorArchive tschchartinfo3dviewport = 6;
+  optional float tschchartinfopiestartangle = 7;
+  optional bool tschchartinfoshowlegend = 8;
+  optional bool tschchartinfoshowtitle = 9;
+  optional bool tschchartinfoskiphiddendata = 10;
+  optional string tschchartinfotitle = 11;
+  optional int32 tschchartinfodatasetnamelocation = 12;
+  optional int32 tschchartinfomultidatacontroltype = 13;
+  optional float tschchartinfo3dchartopacity = 14;
+  optional .TSCH.Chart3DLightingPackageArchive tschchartinfo3dlightingpackage = 15;
+  optional .TSD.FillArchive tschchartinfobackgroundfill = 16;
+  optional .TSD.StrokeArchive tschchartinfobackgroundstroke = 17;
+  optional float tschchartinfoborderopacity = 18;
+  optional .TSD.ShadowArchive tschchartinfobordershadow = 19;
+  optional .TSD.StrokeArchive tschchartinfoborderstroke = 20;
+  optional bool tschchartinfocombinelayers = 21;
+  optional .TSD.FillArchive tschchartinfogridbackgroundfill = 22;
+  optional float tschchartinfogridbackgroundopacity = 23;
+  optional float tschchartinfointerbargap = 24;
+  optional float tschchartinfointersetgap = 25;
+  optional bool tschchartinfoshowborder = 26;
+  optional .TSP.Color tschchartinfotitlecolor = 27;
+  optional int32 tschchartinfotitleparagraphstyleindex = 28;
+  optional int32 tschchartinfodatasetnameparagraphstyleindex = 29;
+}
+
+message LegendGenericPropertyMapArchive {
+  optional .TSD.FillArchive tschlegendmodelfill = 1;
+  optional int32 tschlegendmodellabelparagraphstyleindex = 2;
+  optional float tschlegendmodelopacity = 3;
+  optional .TSD.ShadowArchive tschlegendmodelshadow = 4;
+  optional .TSD.StrokeArchive tschlegendmodelstroke = 5;
+}
+
+message ChartAxisGenericPropertyMapArchive {
+  optional int32 tschchartaxis3dlabelposition = 1;
+  optional .TSK.FormatStructArchive tschchartaxis1_0numberformat = 2;
+  optional .TSK.FormatStructArchive tschchartaxisnumberformat = 3;
+  optional .TSK.FormatStructArchive tschchartaxis1_0dateformat = 4;
+  optional .TSK.FormatStructArchive tschchartaxisdurationformat = 5;
+  optional .TSK.FormatStructArchive tschchartaxisdateformat = 6;
+  optional int32 tschchartaxisnumberformattype = 7;
+  optional int32 tschchartaxisnumberofdecades = 8;
+  optional int32 tschchartaxisnumberofmajorgridlines = 9;
+  optional int32 tschchartaxisnumberofminorgridlines = 10;
+  optional bool tschchartaxisplottoedges = 11;
+  optional int32 tschchartaxisscale = 12;
+  optional bool tschchartaxisshowlabels = 13;
+  optional bool tschchartaxisshowserieslabels = 14;
+  optional bool tschchartaxisshowtitle = 15;
+  optional string tschchartaxistitle = 16;
+  optional .TSCH.ChartsNSNumberDoubleArchive tschchartaxisusermax = 17;
+  optional .TSCH.ChartsNSNumberDoubleArchive tschchartaxisusermin = 18;
+  optional float tschchartaxis3dgridlineopacity = 19;
+  optional .TSD.StrokeArchive tschchartaxis3dgridlinestroke = 20;
+  optional int32 tschchartaxishorizontalspacing = 21;
+  optional int32 tschchartaxislabelparagraphstyleindex = 22;
+  optional float tschchartaxislabelsorientation = 23;
+  optional float tschchartaxismajorgridlineopacity = 24;
+  optional .TSD.ShadowArchive tschchartaxismajorgridlineshadow = 25;
+  optional .TSD.StrokeArchive tschchartaxismajorgridlinestroke = 26;
+  optional float tschchartaxisminorgridlineopacity = 27;
+  optional .TSD.ShadowArchive tschchartaxisminorgridlineshadow = 28;
+  optional .TSD.StrokeArchive tschchartaxisminorgridlinestroke = 29;
+  optional bool tschchartaxisshowaxis = 30;
+  optional bool tschchartaxisshowlastlabel = 31;
+  optional bool tschchartaxisshowmajorgridlines = 32;
+  optional bool tschchartaxisshowmajortickmarks = 33;
+  optional bool tschchartaxisshowminimumlabel = 34;
+  optional bool tschchartaxisshowminorgridlines = 35;
+  optional bool tschchartaxisshowminortickmarks = 36;
+  optional int32 tschchartaxistickmarklocation = 37;
+  optional int32 tschchartaxistitleparagraphstyleindex = 38;
+  optional int32 tschchartaxisverticalspacing = 39;
+}
+
+message ChartSeriesGenericPropertyMapArchive {
+  optional float tschchartseriesadjustmentscale = 1;
+  optional .TSCH.ChartsNSArrayOfNSNumberDoubleArchive tschchartserieserrorbarcustomnegativedata = 2;
+  optional .TSCH.ChartsNSArrayOfNSNumberDoubleArchive tschchartserieserrorbarcustomnegativedatascatterx = 3;
+  optional .TSCH.ChartsNSArrayOfNSNumberDoubleArchive tschchartserieserrorbarcustompositivedata = 4;
+  optional .TSCH.ChartsNSArrayOfNSNumberDoubleArchive tschchartserieserrorbarcustompositivedatascatterx = 5;
+  optional float tschchartserieserrorbarfixedvalue = 6;
+  optional float tschchartserieserrorbarfixedvaluescatterx = 7;
+  optional float tschchartserieserrorbarpercentvalue = 8;
+  optional float tschchartserieserrorbarpercentvaluescatterx = 9;
+  optional int32 tschchartserieserrorbarsetting = 10;
+  optional int32 tschchartserieserrorbarsettingscatterx = 11;
+  optional float tschchartserieserrorbarstddevvalue = 12;
+  optional float tschchartserieserrorbarstddevvaluescatterx = 13;
+  optional int32 tschchartserieserrorbartype = 14;
+  optional int32 tschchartserieserrorbartypescatterx = 15;
+  optional float tschchartserieslabelexplosion = 16;
+  optional int32 tschchartserieslinetype = 17;
+  optional .TSK.FormatStructArchive tschchartseries1_0numberformat = 18;
+  optional .TSK.FormatStructArchive tschchartseriesnumberformat = 19;
+  optional .TSK.FormatStructArchive tschchartseries1_0dateformat = 20;
+  optional .TSK.FormatStructArchive tschchartseriesdurationformat = 21;
+  optional .TSK.FormatStructArchive tschchartseriesdateformat = 22;
+  optional int32 tschchartseriesnumberformattype = 23;
+  optional .TSK.FormatStructArchive tschchartseriespercentnumberformat = 24;
+  optional int32 tschchartseriesseriestype = 25;
+  optional bool tschchartseriesshowerrorbar = 26;
+  optional bool tschchartseriesshowerrorbarscatterx = 27;
+  optional bool tschchartseriesshowline = 28;
+  optional bool tschchartseriesshownegativedata = 29;
+  optional bool tschchartseriesshowserieslabels = 30;
+  optional bool tschchartseriesshowsymbol = 31;
+  optional bool tschchartseriesshowtrendline = 32;
+  optional bool tschchartseriesshowvaluelabels = 33;
+  optional int32 tschchartseriessizedimension = 34;
+  optional int32 tschchartseriessymboltype = 35;
+  optional float tschchartseriestrendlineequationoffsetx = 36;
+  optional float tschchartseriestrendlineequationoffsety = 37;
+  optional string tschchartseriestrendlinelabelstring = 38;
+  optional int32 tschchartseriestrendlineorder = 39;
+  optional int32 tschchartseriestrendlineperiod = 40;
+  optional float tschchartseriestrendlinersquaredoffsetx = 41;
+  optional float tschchartseriestrendlinersquaredoffsety = 42;
+  optional bool tschchartseriestrendlineshowequation = 43;
+  optional bool tschchartseriestrendlineshowlabel = 44;
+  optional bool tschchartseriestrendlineshowr2value = 45;
+  optional int32 tschchartseriestrendlinetype = 46;
+  optional float tschchartserieswedgeexplosion = 47;
+  optional int32 tschchartseriesyaxisordinal = 48;
+  optional int32 tschchartseriesvaluelabelsaxis = 49;
+  optional .TSD.LineEndArchive tschchartserieserrorbarlineend = 50;
+  optional .TSD.LineEndArchive tschchartserieserrorbarlineendscatterx = 51;
+  optional .TSD.ShadowArchive tschchartserieserrorbarshadow = 52;
+  optional .TSD.StrokeArchive tschchartserieserrorbarstroke = 53;
+  optional .TSD.StrokeArchive tschchartserieserrorbarstrokescatterx = 54;
+  optional .TSD.FillArchive tschchartseriesfill = 55;
+  optional int32 tschchartserieslabelparagraphstyleindex = 56;
+  optional float tschchartseriesopacity = 57;
+  optional int32 tschchartseriesoutsidelabelparagraphstyleindex = 58;
+  optional .TSD.ShadowArchive tschchartseriesshadow = 59;
+  optional .TSD.StrokeArchive tschchartseriesstroke = 60;
+  optional .TSD.FillArchive tschchartseriessymbolfill = 61;
+  optional bool tschchartseriessymbolfilluseseriesfill = 62;
+  optional bool tschchartseriessymbolfilluseseriesstroke = 63;
+  optional float tschchartseriessymbolsize = 64;
+  optional .TSD.StrokeArchive tschchartseriessymbolstroke = 65;
+  optional float tschchartseriestrendlineequationopacity = 66;
+  optional int32 tschchartseriestrendlineequationparagraphstyleindex = 67;
+  optional float tschchartseriestrendlinersquaredopacity = 68;
+  optional int32 tschchartseriestrendlinersquaredparagraphstyleindex = 69;
+  optional .TSD.ShadowArchive tschchartseriestrendlineshadow = 70;
+  optional .TSD.StrokeArchive tschchartseriestrendlinestroke = 71;
+  optional int32 tschchartseriesvaluelabelposition = 72;
+  optional bool tschchartseriesshowlabelsinfront = 73;
 }
 

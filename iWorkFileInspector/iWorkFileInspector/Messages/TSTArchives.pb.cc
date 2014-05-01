@@ -51,6 +51,13 @@ const ::google::protobuf::Descriptor* PopUpMenuModel_CellValue_descriptor_ = NUL
 const ::google::protobuf::internal::GeneratedMessageReflection*
   PopUpMenuModel_CellValue_reflection_ = NULL;
 const ::google::protobuf::EnumDescriptor* PopUpMenuModel_CellValueType_descriptor_ = NULL;
+const ::google::protobuf::Descriptor* ImportWarningSetArchive_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  ImportWarningSetArchive_reflection_ = NULL;
+const ::google::protobuf::Descriptor* ImportWarningSetArchive_FormulaImportWarning_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  ImportWarningSetArchive_FormulaImportWarning_reflection_ = NULL;
+const ::google::protobuf::EnumDescriptor* ImportWarningSetArchive_FormulaWarningType_descriptor_ = NULL;
 const ::google::protobuf::Descriptor* TableDataList_descriptor_ = NULL;
 const ::google::protobuf::internal::GeneratedMessageReflection*
   TableDataList_reflection_ = NULL;
@@ -88,6 +95,17 @@ const ::google::protobuf::internal::GeneratedMessageReflection*
 const ::google::protobuf::Descriptor* TableStyleNetworkArchive_descriptor_ = NULL;
 const ::google::protobuf::internal::GeneratedMessageReflection*
   TableStyleNetworkArchive_reflection_ = NULL;
+const ::google::protobuf::Descriptor* TableSortOrderArchive_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  TableSortOrderArchive_reflection_ = NULL;
+const ::google::protobuf::Descriptor* TableSortOrderArchive_SortRuleArchive_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  TableSortOrderArchive_SortRuleArchive_reflection_ = NULL;
+const ::google::protobuf::EnumDescriptor* TableSortOrderArchive_SortRuleArchive_Direction_descriptor_ = NULL;
+const ::google::protobuf::EnumDescriptor* TableSortOrderArchive_SortType_descriptor_ = NULL;
+const ::google::protobuf::Descriptor* SortRuleReferenceTrackerArchive_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  SortRuleReferenceTrackerArchive_reflection_ = NULL;
 const ::google::protobuf::Descriptor* TableModelArchive_descriptor_ = NULL;
 const ::google::protobuf::internal::GeneratedMessageReflection*
   TableModelArchive_reflection_ = NULL;
@@ -106,6 +124,24 @@ const ::google::protobuf::internal::GeneratedMessageReflection*
 const ::google::protobuf::Descriptor* CellMapArchive_CellMapEntry_descriptor_ = NULL;
 const ::google::protobuf::internal::GeneratedMessageReflection*
   CellMapArchive_CellMapEntry_reflection_ = NULL;
+const ::google::protobuf::Descriptor* CellMapTileArchive_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  CellMapTileArchive_reflection_ = NULL;
+const ::google::protobuf::Descriptor* CellMapTileArchive_CellMapEntry_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  CellMapTileArchive_CellMapEntry_reflection_ = NULL;
+const ::google::protobuf::Descriptor* TiledCellMapArchive_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  TiledCellMapArchive_reflection_ = NULL;
+const ::google::protobuf::Descriptor* PropertyMapEntryArchive_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  PropertyMapEntryArchive_reflection_ = NULL;
+const ::google::protobuf::Descriptor* CellDiffArchive_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  CellDiffArchive_reflection_ = NULL;
+const ::google::protobuf::Descriptor* CellDiffMapArchive_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  CellDiffMapArchive_reflection_ = NULL;
 const ::google::protobuf::Descriptor* DoubleStyleMapArchive_descriptor_ = NULL;
 const ::google::protobuf::internal::GeneratedMessageReflection*
   DoubleStyleMapArchive_reflection_ = NULL;
@@ -220,6 +256,9 @@ const ::google::protobuf::internal::GeneratedMessageReflection*
 const ::google::protobuf::Descriptor* CellRegion_descriptor_ = NULL;
 const ::google::protobuf::internal::GeneratedMessageReflection*
   CellRegion_reflection_ = NULL;
+const ::google::protobuf::Descriptor* CellFillStandIn_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  CellFillStandIn_reflection_ = NULL;
 const ::google::protobuf::EnumDescriptor* CellType_descriptor_ = NULL;
 const ::google::protobuf::EnumDescriptor* CellValueType_descriptor_ = NULL;
 const ::google::protobuf::EnumDescriptor* SelectionTypeArchive_descriptor_ = NULL;
@@ -406,7 +445,54 @@ void protobuf_AssignDesc_TSTArchives_2eproto() {
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(PopUpMenuModel_CellValue));
   PopUpMenuModel_CellValueType_descriptor_ = PopUpMenuModel_descriptor_->enum_type(0);
-  TableDataList_descriptor_ = file->message_type(8);
+  ImportWarningSetArchive_descriptor_ = file->message_type(8);
+  static const int ImportWarningSetArchive_offsets_[15] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ImportWarningSetArchive, formula_import_warning_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ImportWarningSetArchive, cond_format_above_avg_equal_avg_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ImportWarningSetArchive, cond_format_above_avg_std_dev_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ImportWarningSetArchive, cond_format_complex_formula_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ImportWarningSetArchive, cond_format_contains_errors_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ImportWarningSetArchive, cond_format_expr_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ImportWarningSetArchive, cond_format_not_contains_errors_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ImportWarningSetArchive, cond_format_parameters_not_all_same_type_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ImportWarningSetArchive, cond_format_stop_if_true_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ImportWarningSetArchive, cond_format_unsupported_operator_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ImportWarningSetArchive, cond_format_unsupported_styling_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ImportWarningSetArchive, cond_format_unsupported_time_period_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ImportWarningSetArchive, error_cell_with_no_formula_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ImportWarningSetArchive, unsupported_cond_format_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ImportWarningSetArchive, original_data_format_),
+  };
+  ImportWarningSetArchive_reflection_ =
+    new ::google::protobuf::internal::GeneratedMessageReflection(
+      ImportWarningSetArchive_descriptor_,
+      ImportWarningSetArchive::default_instance_,
+      ImportWarningSetArchive_offsets_,
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ImportWarningSetArchive, _has_bits_[0]),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ImportWarningSetArchive, _unknown_fields_),
+      -1,
+      ::google::protobuf::DescriptorPool::generated_pool(),
+      ::google::protobuf::MessageFactory::generated_factory(),
+      sizeof(ImportWarningSetArchive));
+  ImportWarningSetArchive_FormulaImportWarning_descriptor_ = ImportWarningSetArchive_descriptor_->nested_type(0);
+  static const int ImportWarningSetArchive_FormulaImportWarning_offsets_[3] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ImportWarningSetArchive_FormulaImportWarning, formula_warning_type_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ImportWarningSetArchive_FormulaImportWarning, original_formula_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ImportWarningSetArchive_FormulaImportWarning, supplementary_text_),
+  };
+  ImportWarningSetArchive_FormulaImportWarning_reflection_ =
+    new ::google::protobuf::internal::GeneratedMessageReflection(
+      ImportWarningSetArchive_FormulaImportWarning_descriptor_,
+      ImportWarningSetArchive_FormulaImportWarning::default_instance_,
+      ImportWarningSetArchive_FormulaImportWarning_offsets_,
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ImportWarningSetArchive_FormulaImportWarning, _has_bits_[0]),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ImportWarningSetArchive_FormulaImportWarning, _unknown_fields_),
+      -1,
+      ::google::protobuf::DescriptorPool::generated_pool(),
+      ::google::protobuf::MessageFactory::generated_factory(),
+      sizeof(ImportWarningSetArchive_FormulaImportWarning));
+  ImportWarningSetArchive_FormulaWarningType_descriptor_ = ImportWarningSetArchive_descriptor_->enum_type(0);
+  TableDataList_descriptor_ = file->message_type(9);
   static const int TableDataList_offsets_[3] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(TableDataList, listtype_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(TableDataList, nextlistid_),
@@ -424,7 +510,7 @@ void protobuf_AssignDesc_TSTArchives_2eproto() {
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(TableDataList));
   TableDataList_ListEntry_descriptor_ = TableDataList_descriptor_->nested_type(0);
-  static const int TableDataList_ListEntry_offsets_[10] = {
+  static const int TableDataList_ListEntry_offsets_[11] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(TableDataList_ListEntry, key_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(TableDataList_ListEntry, refcount_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(TableDataList_ListEntry, string_),
@@ -435,6 +521,7 @@ void protobuf_AssignDesc_TSTArchives_2eproto() {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(TableDataList_ListEntry, custom_format_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(TableDataList_ListEntry, richtextpayload_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(TableDataList_ListEntry, comment_storage_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(TableDataList_ListEntry, import_warning_set_),
   };
   TableDataList_ListEntry_reflection_ =
     new ::google::protobuf::internal::GeneratedMessageReflection(
@@ -448,7 +535,7 @@ void protobuf_AssignDesc_TSTArchives_2eproto() {
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(TableDataList_ListEntry));
   TableDataList_ListType_descriptor_ = TableDataList_descriptor_->enum_type(0);
-  TableRBTree_descriptor_ = file->message_type(9);
+  TableRBTree_descriptor_ = file->message_type(10);
   static const int TableRBTree_offsets_[1] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(TableRBTree, nodes_),
   };
@@ -479,7 +566,7 @@ void protobuf_AssignDesc_TSTArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(TableRBTree_Node));
-  HeaderStorageBucket_descriptor_ = file->message_type(10);
+  HeaderStorageBucket_descriptor_ = file->message_type(11);
   static const int HeaderStorageBucket_offsets_[2] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(HeaderStorageBucket, buckethashfunction_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(HeaderStorageBucket, headers_),
@@ -515,7 +602,7 @@ void protobuf_AssignDesc_TSTArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(HeaderStorageBucket_Header));
-  HeaderStorage_descriptor_ = file->message_type(11);
+  HeaderStorage_descriptor_ = file->message_type(12);
   static const int HeaderStorage_offsets_[2] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(HeaderStorage, buckethashfunction_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(HeaderStorage, buckets_),
@@ -531,8 +618,8 @@ void protobuf_AssignDesc_TSTArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(HeaderStorage));
-  DataStore_descriptor_ = file->message_type(12);
-  static const int DataStore_offsets_[19] = {
+  DataStore_descriptor_ = file->message_type(13);
+  static const int DataStore_offsets_[20] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(DataStore, rowheaders_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(DataStore, columnheaders_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(DataStore, tiles_),
@@ -552,6 +639,7 @@ void protobuf_AssignDesc_TSTArchives_2eproto() {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(DataStore, richtextpayloadtable_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(DataStore, conditionalstyletable_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(DataStore, commentstoragetable_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(DataStore, importwarningsettable_),
   };
   DataStore_reflection_ =
     new ::google::protobuf::internal::GeneratedMessageReflection(
@@ -564,7 +652,7 @@ void protobuf_AssignDesc_TSTArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(DataStore));
-  TableInfoArchive_descriptor_ = file->message_type(13);
+  TableInfoArchive_descriptor_ = file->message_type(14);
   static const int TableInfoArchive_offsets_[3] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(TableInfoArchive, super_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(TableInfoArchive, tablemodel_),
@@ -581,7 +669,7 @@ void protobuf_AssignDesc_TSTArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(TableInfoArchive));
-  EditingStateArchive_descriptor_ = file->message_type(14);
+  EditingStateArchive_descriptor_ = file->message_type(15);
   static const int EditingStateArchive_offsets_[7] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(EditingStateArchive, editingstorage_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(EditingStateArchive, editingcell_),
@@ -602,7 +690,7 @@ void protobuf_AssignDesc_TSTArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(EditingStateArchive));
-  WPTableInfoArchive_descriptor_ = file->message_type(15);
+  WPTableInfoArchive_descriptor_ = file->message_type(16);
   static const int WPTableInfoArchive_offsets_[2] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(WPTableInfoArchive, super_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(WPTableInfoArchive, storage_),
@@ -618,7 +706,7 @@ void protobuf_AssignDesc_TSTArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(WPTableInfoArchive));
-  TableStyleNetworkArchive_descriptor_ = file->message_type(16);
+  TableStyleNetworkArchive_descriptor_ = file->message_type(17);
   static const int TableStyleNetworkArchive_offsets_[12] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(TableStyleNetworkArchive, table_style_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(TableStyleNetworkArchive, body_text_style_),
@@ -644,8 +732,57 @@ void protobuf_AssignDesc_TSTArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(TableStyleNetworkArchive));
-  TableModelArchive_descriptor_ = file->message_type(17);
-  static const int TableModelArchive_offsets_[42] = {
+  TableSortOrderArchive_descriptor_ = file->message_type(18);
+  static const int TableSortOrderArchive_offsets_[2] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(TableSortOrderArchive, type_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(TableSortOrderArchive, rules_),
+  };
+  TableSortOrderArchive_reflection_ =
+    new ::google::protobuf::internal::GeneratedMessageReflection(
+      TableSortOrderArchive_descriptor_,
+      TableSortOrderArchive::default_instance_,
+      TableSortOrderArchive_offsets_,
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(TableSortOrderArchive, _has_bits_[0]),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(TableSortOrderArchive, _unknown_fields_),
+      -1,
+      ::google::protobuf::DescriptorPool::generated_pool(),
+      ::google::protobuf::MessageFactory::generated_factory(),
+      sizeof(TableSortOrderArchive));
+  TableSortOrderArchive_SortRuleArchive_descriptor_ = TableSortOrderArchive_descriptor_->nested_type(0);
+  static const int TableSortOrderArchive_SortRuleArchive_offsets_[2] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(TableSortOrderArchive_SortRuleArchive, column_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(TableSortOrderArchive_SortRuleArchive, direction_),
+  };
+  TableSortOrderArchive_SortRuleArchive_reflection_ =
+    new ::google::protobuf::internal::GeneratedMessageReflection(
+      TableSortOrderArchive_SortRuleArchive_descriptor_,
+      TableSortOrderArchive_SortRuleArchive::default_instance_,
+      TableSortOrderArchive_SortRuleArchive_offsets_,
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(TableSortOrderArchive_SortRuleArchive, _has_bits_[0]),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(TableSortOrderArchive_SortRuleArchive, _unknown_fields_),
+      -1,
+      ::google::protobuf::DescriptorPool::generated_pool(),
+      ::google::protobuf::MessageFactory::generated_factory(),
+      sizeof(TableSortOrderArchive_SortRuleArchive));
+  TableSortOrderArchive_SortRuleArchive_Direction_descriptor_ = TableSortOrderArchive_SortRuleArchive_descriptor_->enum_type(0);
+  TableSortOrderArchive_SortType_descriptor_ = TableSortOrderArchive_descriptor_->enum_type(0);
+  SortRuleReferenceTrackerArchive_descriptor_ = file->message_type(19);
+  static const int SortRuleReferenceTrackerArchive_offsets_[1] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SortRuleReferenceTrackerArchive, reference_tracker_),
+  };
+  SortRuleReferenceTrackerArchive_reflection_ =
+    new ::google::protobuf::internal::GeneratedMessageReflection(
+      SortRuleReferenceTrackerArchive_descriptor_,
+      SortRuleReferenceTrackerArchive::default_instance_,
+      SortRuleReferenceTrackerArchive_offsets_,
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SortRuleReferenceTrackerArchive, _has_bits_[0]),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SortRuleReferenceTrackerArchive, _unknown_fields_),
+      -1,
+      ::google::protobuf::DescriptorPool::generated_pool(),
+      ::google::protobuf::MessageFactory::generated_factory(),
+      sizeof(SortRuleReferenceTrackerArchive));
+  TableModelArchive_descriptor_ = file->message_type(20);
+  static const int TableModelArchive_offsets_[44] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(TableModelArchive, table_id_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(TableModelArchive, from_table_id_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(TableModelArchive, table_style_),
@@ -687,7 +824,9 @@ void protobuf_AssignDesc_TSTArchives_2eproto() {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(TableModelArchive, hidden_state_formula_owner_for_columns_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(TableModelArchive, hidden_state_formula_owner_for_rows_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(TableModelArchive, filter_set_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(TableModelArchive, sort_order_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(TableModelArchive, conditional_style_formula_owner_id_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(TableModelArchive, sort_rule_reference_tracker_),
   };
   TableModelArchive_reflection_ =
     new ::google::protobuf::internal::GeneratedMessageReflection(
@@ -700,7 +839,7 @@ void protobuf_AssignDesc_TSTArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(TableModelArchive));
-  DurationWrapperArchive_descriptor_ = file->message_type(18);
+  DurationWrapperArchive_descriptor_ = file->message_type(21);
   static const int DurationWrapperArchive_offsets_[1] = {
   };
   DurationWrapperArchive_reflection_ =
@@ -714,8 +853,8 @@ void protobuf_AssignDesc_TSTArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(DurationWrapperArchive));
-  Cell_descriptor_ = file->message_type(19);
-  static const int Cell_offsets_[23] = {
+  Cell_descriptor_ = file->message_type(22);
+  static const int Cell_offsets_[24] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Cell, valuetype_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Cell, numbervalue_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Cell, stringvalue_),
@@ -739,6 +878,7 @@ void protobuf_AssignDesc_TSTArchives_2eproto() {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Cell, multiple_choice_list_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Cell, comment_storage_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Cell, conditional_style_applied_rule_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Cell, import_warning_set_),
   };
   Cell_reflection_ =
     new ::google::protobuf::internal::GeneratedMessageReflection(
@@ -751,7 +891,7 @@ void protobuf_AssignDesc_TSTArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(Cell));
-  MergeRegionMapArchive_descriptor_ = file->message_type(20);
+  MergeRegionMapArchive_descriptor_ = file->message_type(23);
   static const int MergeRegionMapArchive_offsets_[1] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MergeRegionMapArchive, cell_range_),
   };
@@ -766,7 +906,7 @@ void protobuf_AssignDesc_TSTArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(MergeRegionMapArchive));
-  CellMapArchive_descriptor_ = file->message_type(21);
+  CellMapArchive_descriptor_ = file->message_type(24);
   static const int CellMapArchive_offsets_[6] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CellMapArchive, capacity_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CellMapArchive, count_),
@@ -802,7 +942,111 @@ void protobuf_AssignDesc_TSTArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CellMapArchive_CellMapEntry));
-  DoubleStyleMapArchive_descriptor_ = file->message_type(22);
+  CellMapTileArchive_descriptor_ = file->message_type(25);
+  static const int CellMapTileArchive_offsets_[1] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CellMapTileArchive, cellmap_entry_),
+  };
+  CellMapTileArchive_reflection_ =
+    new ::google::protobuf::internal::GeneratedMessageReflection(
+      CellMapTileArchive_descriptor_,
+      CellMapTileArchive::default_instance_,
+      CellMapTileArchive_offsets_,
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CellMapTileArchive, _has_bits_[0]),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CellMapTileArchive, _unknown_fields_),
+      -1,
+      ::google::protobuf::DescriptorPool::generated_pool(),
+      ::google::protobuf::MessageFactory::generated_factory(),
+      sizeof(CellMapTileArchive));
+  CellMapTileArchive_CellMapEntry_descriptor_ = CellMapTileArchive_descriptor_->nested_type(0);
+  static const int CellMapTileArchive_CellMapEntry_offsets_[2] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CellMapTileArchive_CellMapEntry, cellid_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CellMapTileArchive_CellMapEntry, cell_),
+  };
+  CellMapTileArchive_CellMapEntry_reflection_ =
+    new ::google::protobuf::internal::GeneratedMessageReflection(
+      CellMapTileArchive_CellMapEntry_descriptor_,
+      CellMapTileArchive_CellMapEntry::default_instance_,
+      CellMapTileArchive_CellMapEntry_offsets_,
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CellMapTileArchive_CellMapEntry, _has_bits_[0]),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CellMapTileArchive_CellMapEntry, _unknown_fields_),
+      -1,
+      ::google::protobuf::DescriptorPool::generated_pool(),
+      ::google::protobuf::MessageFactory::generated_factory(),
+      sizeof(CellMapTileArchive_CellMapEntry));
+  TiledCellMapArchive_descriptor_ = file->message_type(26);
+  static const int TiledCellMapArchive_offsets_[4] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(TiledCellMapArchive, cellmap_tile_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(TiledCellMapArchive, may_modify_formulas_in_cells_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(TiledCellMapArchive, may_modify_values_referenced_by_formulas_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(TiledCellMapArchive, applies_to_hidden_),
+  };
+  TiledCellMapArchive_reflection_ =
+    new ::google::protobuf::internal::GeneratedMessageReflection(
+      TiledCellMapArchive_descriptor_,
+      TiledCellMapArchive::default_instance_,
+      TiledCellMapArchive_offsets_,
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(TiledCellMapArchive, _has_bits_[0]),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(TiledCellMapArchive, _unknown_fields_),
+      -1,
+      ::google::protobuf::DescriptorPool::generated_pool(),
+      ::google::protobuf::MessageFactory::generated_factory(),
+      sizeof(TiledCellMapArchive));
+  PropertyMapEntryArchive_descriptor_ = file->message_type(27);
+  static const int PropertyMapEntryArchive_offsets_[9] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PropertyMapEntryArchive, property_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PropertyMapEntryArchive, valuetype_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PropertyMapEntryArchive, int_value_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PropertyMapEntryArchive, float_value_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PropertyMapEntryArchive, double_value_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PropertyMapEntryArchive, is_nsnull_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PropertyMapEntryArchive, tsp_reference_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PropertyMapEntryArchive, fill_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PropertyMapEntryArchive, import_warning_set_),
+  };
+  PropertyMapEntryArchive_reflection_ =
+    new ::google::protobuf::internal::GeneratedMessageReflection(
+      PropertyMapEntryArchive_descriptor_,
+      PropertyMapEntryArchive::default_instance_,
+      PropertyMapEntryArchive_offsets_,
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PropertyMapEntryArchive, _has_bits_[0]),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PropertyMapEntryArchive, _unknown_fields_),
+      -1,
+      ::google::protobuf::DescriptorPool::generated_pool(),
+      ::google::protobuf::MessageFactory::generated_factory(),
+      sizeof(PropertyMapEntryArchive));
+  CellDiffArchive_descriptor_ = file->message_type(28);
+  static const int CellDiffArchive_offsets_[2] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CellDiffArchive, property_map_to_set_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CellDiffArchive, property_map_to_reset_),
+  };
+  CellDiffArchive_reflection_ =
+    new ::google::protobuf::internal::GeneratedMessageReflection(
+      CellDiffArchive_descriptor_,
+      CellDiffArchive::default_instance_,
+      CellDiffArchive_offsets_,
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CellDiffArchive, _has_bits_[0]),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CellDiffArchive, _unknown_fields_),
+      -1,
+      ::google::protobuf::DescriptorPool::generated_pool(),
+      ::google::protobuf::MessageFactory::generated_factory(),
+      sizeof(CellDiffArchive));
+  CellDiffMapArchive_descriptor_ = file->message_type(29);
+  static const int CellDiffMapArchive_offsets_[2] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CellDiffMapArchive, cell_ids_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CellDiffMapArchive, cell_diffs_),
+  };
+  CellDiffMapArchive_reflection_ =
+    new ::google::protobuf::internal::GeneratedMessageReflection(
+      CellDiffMapArchive_descriptor_,
+      CellDiffMapArchive::default_instance_,
+      CellDiffMapArchive_offsets_,
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CellDiffMapArchive, _has_bits_[0]),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CellDiffMapArchive, _unknown_fields_),
+      -1,
+      ::google::protobuf::DescriptorPool::generated_pool(),
+      ::google::protobuf::MessageFactory::generated_factory(),
+      sizeof(CellDiffMapArchive));
+  DoubleStyleMapArchive_descriptor_ = file->message_type(30);
   static const int DoubleStyleMapArchive_offsets_[3] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(DoubleStyleMapArchive, capacity_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(DoubleStyleMapArchive, count_),
@@ -836,7 +1080,7 @@ void protobuf_AssignDesc_TSTArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(DoubleStyleMapArchive_DoubleStyleMapEntryArchive));
-  StyleTableMapArchive_descriptor_ = file->message_type(23);
+  StyleTableMapArchive_descriptor_ = file->message_type(31);
   static const int StyleTableMapArchive_offsets_[3] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(StyleTableMapArchive, capacity_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(StyleTableMapArchive, count_),
@@ -870,7 +1114,7 @@ void protobuf_AssignDesc_TSTArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(StyleTableMapArchive_StyleTableMapEntryArchive));
-  SelectionArchive_descriptor_ = file->message_type(24);
+  SelectionArchive_descriptor_ = file->message_type(32);
   static const int SelectionArchive_offsets_[6] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SelectionArchive, tablemodel_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SelectionArchive, selection_type_),
@@ -890,7 +1134,7 @@ void protobuf_AssignDesc_TSTArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(SelectionArchive));
-  FilterRuleArchive_descriptor_ = file->message_type(25);
+  FilterRuleArchive_descriptor_ = file->message_type(33);
   static const int FilterRuleArchive_offsets_[2] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(FilterRuleArchive, predicate_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(FilterRuleArchive, disabled_),
@@ -906,7 +1150,7 @@ void protobuf_AssignDesc_TSTArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(FilterRuleArchive));
-  TableStyleArchive_descriptor_ = file->message_type(26);
+  TableStyleArchive_descriptor_ = file->message_type(34);
   static const int TableStyleArchive_offsets_[3] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(TableStyleArchive, super_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(TableStyleArchive, override_count_),
@@ -923,7 +1167,7 @@ void protobuf_AssignDesc_TSTArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(TableStyleArchive));
-  CellStyleArchive_descriptor_ = file->message_type(27);
+  CellStyleArchive_descriptor_ = file->message_type(35);
   static const int CellStyleArchive_offsets_[3] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CellStyleArchive, super_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CellStyleArchive, override_count_),
@@ -940,7 +1184,7 @@ void protobuf_AssignDesc_TSTArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CellStyleArchive));
-  FormulaPredicateArchive_descriptor_ = file->message_type(28);
+  FormulaPredicateArchive_descriptor_ = file->message_type(36);
   static const int FormulaPredicateArchive_offsets_[7] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(FormulaPredicateArchive, formula_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(FormulaPredicateArchive, predicate_type_),
@@ -963,7 +1207,7 @@ void protobuf_AssignDesc_TSTArchives_2eproto() {
       sizeof(FormulaPredicateArchive));
   FormulaPredicateArchive_FormulaPredicateType_descriptor_ = FormulaPredicateArchive_descriptor_->enum_type(0);
   FormulaPredicateArchive_QualifierType_descriptor_ = FormulaPredicateArchive_descriptor_->enum_type(1);
-  ConditionalStyleSetArchive_descriptor_ = file->message_type(29);
+  ConditionalStyleSetArchive_descriptor_ = file->message_type(37);
   static const int ConditionalStyleSetArchive_offsets_[3] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ConditionalStyleSetArchive, rulecount_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ConditionalStyleSetArchive, rules_),
@@ -997,7 +1241,7 @@ void protobuf_AssignDesc_TSTArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(ConditionalStyleSetArchive_ConditionalStyleRule));
-  FilterSetArchive_descriptor_ = file->message_type(30);
+  FilterSetArchive_descriptor_ = file->message_type(38);
   static const int FilterSetArchive_offsets_[6] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(FilterSetArchive, type_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(FilterSetArchive, is_enabled_),
@@ -1018,7 +1262,7 @@ void protobuf_AssignDesc_TSTArchives_2eproto() {
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(FilterSetArchive));
   FilterSetArchive_FilterSetType_descriptor_ = FilterSetArchive_descriptor_->enum_type(0);
-  TokenAttachmentArchive_descriptor_ = file->message_type(31);
+  TokenAttachmentArchive_descriptor_ = file->message_type(39);
   static const int TokenAttachmentArchive_offsets_[2] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(TokenAttachmentArchive, super_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(TokenAttachmentArchive, expressionnode_),
@@ -1034,7 +1278,7 @@ void protobuf_AssignDesc_TSTArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(TokenAttachmentArchive));
-  FormulaArchive_descriptor_ = file->message_type(32);
+  FormulaArchive_descriptor_ = file->message_type(40);
   static const int FormulaArchive_offsets_[1] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(FormulaArchive, expressiontree_),
   };
@@ -1049,7 +1293,7 @@ void protobuf_AssignDesc_TSTArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(FormulaArchive));
-  ExpressionNodeArchive_descriptor_ = file->message_type(33);
+  ExpressionNodeArchive_descriptor_ = file->message_type(41);
   static const int ExpressionNodeArchive_offsets_[3] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ExpressionNodeArchive, children_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ExpressionNodeArchive, first_index_),
@@ -1066,7 +1310,7 @@ void protobuf_AssignDesc_TSTArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(ExpressionNodeArchive));
-  BooleanNodeArchive_descriptor_ = file->message_type(34);
+  BooleanNodeArchive_descriptor_ = file->message_type(42);
   static const int BooleanNodeArchive_offsets_[2] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(BooleanNodeArchive, super_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(BooleanNodeArchive, value_),
@@ -1082,7 +1326,7 @@ void protobuf_AssignDesc_TSTArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(BooleanNodeArchive));
-  NumberNodeArchive_descriptor_ = file->message_type(35);
+  NumberNodeArchive_descriptor_ = file->message_type(43);
   static const int NumberNodeArchive_offsets_[2] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(NumberNodeArchive, super_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(NumberNodeArchive, number_),
@@ -1098,7 +1342,7 @@ void protobuf_AssignDesc_TSTArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(NumberNodeArchive));
-  StringNodeArchive_descriptor_ = file->message_type(36);
+  StringNodeArchive_descriptor_ = file->message_type(44);
   static const int StringNodeArchive_offsets_[2] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(StringNodeArchive, super_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(StringNodeArchive, value_),
@@ -1114,7 +1358,7 @@ void protobuf_AssignDesc_TSTArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(StringNodeArchive));
-  IdentifierNodeArchive_descriptor_ = file->message_type(37);
+  IdentifierNodeArchive_descriptor_ = file->message_type(45);
   static const int IdentifierNodeArchive_offsets_[2] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(IdentifierNodeArchive, super_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(IdentifierNodeArchive, identifier_),
@@ -1130,7 +1374,7 @@ void protobuf_AssignDesc_TSTArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(IdentifierNodeArchive));
-  ArrayNodeArchive_descriptor_ = file->message_type(38);
+  ArrayNodeArchive_descriptor_ = file->message_type(46);
   static const int ArrayNodeArchive_offsets_[3] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ArrayNodeArchive, super_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ArrayNodeArchive, columns_),
@@ -1147,7 +1391,7 @@ void protobuf_AssignDesc_TSTArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(ArrayNodeArchive));
-  ListNodeArchive_descriptor_ = file->message_type(39);
+  ListNodeArchive_descriptor_ = file->message_type(47);
   static const int ListNodeArchive_offsets_[1] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ListNodeArchive, super_),
   };
@@ -1162,7 +1406,7 @@ void protobuf_AssignDesc_TSTArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(ListNodeArchive));
-  OperatorNodeArchive_descriptor_ = file->message_type(40);
+  OperatorNodeArchive_descriptor_ = file->message_type(48);
   static const int OperatorNodeArchive_offsets_[2] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(OperatorNodeArchive, super_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(OperatorNodeArchive, operatorchar_),
@@ -1178,7 +1422,7 @@ void protobuf_AssignDesc_TSTArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(OperatorNodeArchive));
-  PostfixOperatorNodeArchive_descriptor_ = file->message_type(41);
+  PostfixOperatorNodeArchive_descriptor_ = file->message_type(49);
   static const int PostfixOperatorNodeArchive_offsets_[1] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PostfixOperatorNodeArchive, super_),
   };
@@ -1193,7 +1437,7 @@ void protobuf_AssignDesc_TSTArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(PostfixOperatorNodeArchive));
-  PrefixOperatorNodeArchive_descriptor_ = file->message_type(42);
+  PrefixOperatorNodeArchive_descriptor_ = file->message_type(50);
   static const int PrefixOperatorNodeArchive_offsets_[1] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PrefixOperatorNodeArchive, super_),
   };
@@ -1208,7 +1452,7 @@ void protobuf_AssignDesc_TSTArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(PrefixOperatorNodeArchive));
-  FunctionNodeArchive_descriptor_ = file->message_type(43);
+  FunctionNodeArchive_descriptor_ = file->message_type(51);
   static const int FunctionNodeArchive_offsets_[3] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(FunctionNodeArchive, super_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(FunctionNodeArchive, functionindex_),
@@ -1225,7 +1469,7 @@ void protobuf_AssignDesc_TSTArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(FunctionNodeArchive));
-  FunctionEndNodeArchive_descriptor_ = file->message_type(44);
+  FunctionEndNodeArchive_descriptor_ = file->message_type(52);
   static const int FunctionEndNodeArchive_offsets_[1] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(FunctionEndNodeArchive, super_),
   };
@@ -1240,7 +1484,7 @@ void protobuf_AssignDesc_TSTArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(FunctionEndNodeArchive));
-  DateNodeArchive_descriptor_ = file->message_type(45);
+  DateNodeArchive_descriptor_ = file->message_type(53);
   static const int DateNodeArchive_offsets_[3] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(DateNodeArchive, super_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(DateNodeArchive, value_),
@@ -1257,7 +1501,7 @@ void protobuf_AssignDesc_TSTArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(DateNodeArchive));
-  ReferenceNodeArchive_descriptor_ = file->message_type(46);
+  ReferenceNodeArchive_descriptor_ = file->message_type(54);
   static const int ReferenceNodeArchive_offsets_[4] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ReferenceNodeArchive, super_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ReferenceNodeArchive, rangereference_),
@@ -1275,7 +1519,7 @@ void protobuf_AssignDesc_TSTArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(ReferenceNodeArchive));
-  DurationNodeArchive_descriptor_ = file->message_type(47);
+  DurationNodeArchive_descriptor_ = file->message_type(55);
   static const int DurationNodeArchive_offsets_[5] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(DurationNodeArchive, super_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(DurationNodeArchive, timeinterval_),
@@ -1294,7 +1538,7 @@ void protobuf_AssignDesc_TSTArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(DurationNodeArchive));
-  ArgumentPlaceholderNodeArchive_descriptor_ = file->message_type(48);
+  ArgumentPlaceholderNodeArchive_descriptor_ = file->message_type(56);
   static const int ArgumentPlaceholderNodeArchive_offsets_[4] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ArgumentPlaceholderNodeArchive, super_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ArgumentPlaceholderNodeArchive, functionindex_),
@@ -1312,7 +1556,7 @@ void protobuf_AssignDesc_TSTArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(ArgumentPlaceholderNodeArchive));
-  EmptyExpressionNodeArchive_descriptor_ = file->message_type(49);
+  EmptyExpressionNodeArchive_descriptor_ = file->message_type(57);
   static const int EmptyExpressionNodeArchive_offsets_[1] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(EmptyExpressionNodeArchive, super_),
   };
@@ -1327,7 +1571,7 @@ void protobuf_AssignDesc_TSTArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(EmptyExpressionNodeArchive));
-  LayoutHintArchive_descriptor_ = file->message_type(50);
+  LayoutHintArchive_descriptor_ = file->message_type(58);
   static const int LayoutHintArchive_offsets_[8] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LayoutHintArchive, isvalid_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LayoutHintArchive, cellrange_),
@@ -1349,7 +1593,7 @@ void protobuf_AssignDesc_TSTArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(LayoutHintArchive));
-  CompletionTokenAttachmentArchive_descriptor_ = file->message_type(51);
+  CompletionTokenAttachmentArchive_descriptor_ = file->message_type(59);
   static const int CompletionTokenAttachmentArchive_offsets_[4] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CompletionTokenAttachmentArchive, super_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CompletionTokenAttachmentArchive, completiontext_),
@@ -1367,7 +1611,7 @@ void protobuf_AssignDesc_TSTArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CompletionTokenAttachmentArchive));
-  HiddenStateFormulaOwnerArchive_descriptor_ = file->message_type(52);
+  HiddenStateFormulaOwnerArchive_descriptor_ = file->message_type(60);
   static const int HiddenStateFormulaOwnerArchive_offsets_[3] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(HiddenStateFormulaOwnerArchive, owner_id_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(HiddenStateFormulaOwnerArchive, threshold_value_),
@@ -1384,7 +1628,7 @@ void protobuf_AssignDesc_TSTArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(HiddenStateFormulaOwnerArchive));
-  RichTextPayloadArchive_descriptor_ = file->message_type(53);
+  RichTextPayloadArchive_descriptor_ = file->message_type(61);
   static const int RichTextPayloadArchive_offsets_[3] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(RichTextPayloadArchive, storage_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(RichTextPayloadArchive, range_),
@@ -1401,7 +1645,7 @@ void protobuf_AssignDesc_TSTArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(RichTextPayloadArchive));
-  FormulaEqualsTokenAttachmentArchive_descriptor_ = file->message_type(54);
+  FormulaEqualsTokenAttachmentArchive_descriptor_ = file->message_type(62);
   static const int FormulaEqualsTokenAttachmentArchive_offsets_[1] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(FormulaEqualsTokenAttachmentArchive, super_),
   };
@@ -1416,7 +1660,7 @@ void protobuf_AssignDesc_TSTArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(FormulaEqualsTokenAttachmentArchive));
-  CellRegion_descriptor_ = file->message_type(55);
+  CellRegion_descriptor_ = file->message_type(63);
   static const int CellRegion_offsets_[1] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CellRegion, cell_ranges_),
   };
@@ -1431,6 +1675,40 @@ void protobuf_AssignDesc_TSTArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CellRegion));
+  CellFillStandIn_descriptor_ = file->message_type(64);
+  static const int CellFillStandIn_offsets_[20] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CellFillStandIn, fill_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CellFillStandIn, type_is_mixed_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CellFillStandIn, color_has_been_modified_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CellFillStandIn, color_is_mixed_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CellFillStandIn, first_color_has_been_modified_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CellFillStandIn, first_color_is_mixed_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CellFillStandIn, last_color_has_been_modified_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CellFillStandIn, last_color_is_mixed_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CellFillStandIn, gradient_type_has_been_modified_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CellFillStandIn, gradient_type_is_mixed_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CellFillStandIn, gradient_angle_has_been_modified_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CellFillStandIn, gradient_angle_is_mixed_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CellFillStandIn, image_data_has_been_modified_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CellFillStandIn, image_data_is_mixed_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CellFillStandIn, tint_color_has_been_modified_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CellFillStandIn, tint_color_is_mixed_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CellFillStandIn, scale_has_been_modified_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CellFillStandIn, scale_is_mixed_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CellFillStandIn, technique_has_been_modified_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CellFillStandIn, technique_is_mixed_),
+  };
+  CellFillStandIn_reflection_ =
+    new ::google::protobuf::internal::GeneratedMessageReflection(
+      CellFillStandIn_descriptor_,
+      CellFillStandIn::default_instance_,
+      CellFillStandIn_offsets_,
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CellFillStandIn, _has_bits_[0]),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CellFillStandIn, _unknown_fields_),
+      -1,
+      ::google::protobuf::DescriptorPool::generated_pool(),
+      ::google::protobuf::MessageFactory::generated_factory(),
+      sizeof(CellFillStandIn));
   CellType_descriptor_ = file->enum_type(0);
   CellValueType_descriptor_ = file->enum_type(1);
   SelectionTypeArchive_descriptor_ = file->enum_type(2);
@@ -1470,6 +1748,10 @@ void protobuf_RegisterTypes(const ::std::string&) {
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
     PopUpMenuModel_CellValue_descriptor_, &PopUpMenuModel_CellValue::default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+    ImportWarningSetArchive_descriptor_, &ImportWarningSetArchive::default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+    ImportWarningSetArchive_FormulaImportWarning_descriptor_, &ImportWarningSetArchive_FormulaImportWarning::default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
     TableDataList_descriptor_, &TableDataList::default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
     TableDataList_ListEntry_descriptor_, &TableDataList_ListEntry::default_instance());
@@ -1494,6 +1776,12 @@ void protobuf_RegisterTypes(const ::std::string&) {
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
     TableStyleNetworkArchive_descriptor_, &TableStyleNetworkArchive::default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+    TableSortOrderArchive_descriptor_, &TableSortOrderArchive::default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+    TableSortOrderArchive_SortRuleArchive_descriptor_, &TableSortOrderArchive_SortRuleArchive::default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+    SortRuleReferenceTrackerArchive_descriptor_, &SortRuleReferenceTrackerArchive::default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
     TableModelArchive_descriptor_, &TableModelArchive::default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
     DurationWrapperArchive_descriptor_, &DurationWrapperArchive::default_instance());
@@ -1505,6 +1793,18 @@ void protobuf_RegisterTypes(const ::std::string&) {
     CellMapArchive_descriptor_, &CellMapArchive::default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
     CellMapArchive_CellMapEntry_descriptor_, &CellMapArchive_CellMapEntry::default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+    CellMapTileArchive_descriptor_, &CellMapTileArchive::default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+    CellMapTileArchive_CellMapEntry_descriptor_, &CellMapTileArchive_CellMapEntry::default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+    TiledCellMapArchive_descriptor_, &TiledCellMapArchive::default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+    PropertyMapEntryArchive_descriptor_, &PropertyMapEntryArchive::default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+    CellDiffArchive_descriptor_, &CellDiffArchive::default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+    CellDiffMapArchive_descriptor_, &CellDiffMapArchive::default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
     DoubleStyleMapArchive_descriptor_, &DoubleStyleMapArchive::default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
@@ -1579,6 +1879,8 @@ void protobuf_RegisterTypes(const ::std::string&) {
     FormulaEqualsTokenAttachmentArchive_descriptor_, &FormulaEqualsTokenAttachmentArchive::default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
     CellRegion_descriptor_, &CellRegion::default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+    CellFillStandIn_descriptor_, &CellFillStandIn::default_instance());
 }
 
 }  // namespace
@@ -1604,6 +1906,10 @@ void protobuf_ShutdownFile_TSTArchives_2eproto() {
   delete PopUpMenuModel_reflection_;
   delete PopUpMenuModel_CellValue::default_instance_;
   delete PopUpMenuModel_CellValue_reflection_;
+  delete ImportWarningSetArchive::default_instance_;
+  delete ImportWarningSetArchive_reflection_;
+  delete ImportWarningSetArchive_FormulaImportWarning::default_instance_;
+  delete ImportWarningSetArchive_FormulaImportWarning_reflection_;
   delete TableDataList::default_instance_;
   delete TableDataList_reflection_;
   delete TableDataList_ListEntry::default_instance_;
@@ -1628,6 +1934,12 @@ void protobuf_ShutdownFile_TSTArchives_2eproto() {
   delete WPTableInfoArchive_reflection_;
   delete TableStyleNetworkArchive::default_instance_;
   delete TableStyleNetworkArchive_reflection_;
+  delete TableSortOrderArchive::default_instance_;
+  delete TableSortOrderArchive_reflection_;
+  delete TableSortOrderArchive_SortRuleArchive::default_instance_;
+  delete TableSortOrderArchive_SortRuleArchive_reflection_;
+  delete SortRuleReferenceTrackerArchive::default_instance_;
+  delete SortRuleReferenceTrackerArchive_reflection_;
   delete TableModelArchive::default_instance_;
   delete TableModelArchive_reflection_;
   delete DurationWrapperArchive::default_instance_;
@@ -1640,6 +1952,18 @@ void protobuf_ShutdownFile_TSTArchives_2eproto() {
   delete CellMapArchive_reflection_;
   delete CellMapArchive_CellMapEntry::default_instance_;
   delete CellMapArchive_CellMapEntry_reflection_;
+  delete CellMapTileArchive::default_instance_;
+  delete CellMapTileArchive_reflection_;
+  delete CellMapTileArchive_CellMapEntry::default_instance_;
+  delete CellMapTileArchive_CellMapEntry_reflection_;
+  delete TiledCellMapArchive::default_instance_;
+  delete TiledCellMapArchive_reflection_;
+  delete PropertyMapEntryArchive::default_instance_;
+  delete PropertyMapEntryArchive_reflection_;
+  delete CellDiffArchive::default_instance_;
+  delete CellDiffArchive_reflection_;
+  delete CellDiffMapArchive::default_instance_;
+  delete CellDiffMapArchive_reflection_;
   delete DoubleStyleMapArchive::default_instance_;
   delete DoubleStyleMapArchive_reflection_;
   delete DoubleStyleMapArchive_DoubleStyleMapEntryArchive::default_instance_;
@@ -1714,6 +2038,8 @@ void protobuf_ShutdownFile_TSTArchives_2eproto() {
   delete FormulaEqualsTokenAttachmentArchive_reflection_;
   delete CellRegion::default_instance_;
   delete CellRegion_reflection_;
+  delete CellFillStandIn::default_instance_;
+  delete CellFillStandIn_reflection_;
 }
 
 void protobuf_AddDesc_TSTArchives_2eproto() {
@@ -1763,323 +2089,410 @@ void protobuf_AddDesc_TSTArchives_2eproto() {
     "ive\0222\n\014string_value\030\005 \001(\0132\034.TSCE.StringC"
     "ellValueArchive\"`\n\rCellValueType\022\014\n\010NIL_"
     "TYPE\020\001\022\020\n\014BOOLEAN_TYPE\020\002\022\r\n\tDATE_TYPE\020\003\022"
-    "\017\n\013NUMBER_TYPE\020\004\022\017\n\013STRING_TYPE\020\005\"\234\005\n\rTa"
-    "bleDataList\022-\n\010listType\030\001 \002(\0162\033.TST.Tabl"
-    "eDataList.ListType\022\022\n\nnextListID\030\002 \002(\r\022-"
-    "\n\007entries\030\003 \003(\0132\034.TST.TableDataList.List"
-    "Entry\032\321\002\n\tListEntry\022\013\n\003key\030\001 \002(\r\022\020\n\010refc"
-    "ount\030\002 \002(\r\022\016\n\006string\030\003 \001(\t\022!\n\treference\030"
-    "\004 \001(\0132\016.TSP.Reference\022%\n\007formula\030\005 \001(\0132\024"
-    ".TSCE.FormulaArchive\022(\n\006format\030\006 \001(\0132\030.T"
-    "SK.FormatStructArchive\022\036\n\006region\030\007 \001(\0132\016"
-    ".TST.CellRange\022/\n\rcustom_format\030\010 \001(\0132\030."
-    "TSK.CustomFormatArchive\022\'\n\017richTextPaylo"
-    "ad\030\t \001(\0132\016.TSP.Reference\022\'\n\017comment_stor"
-    "age\030\n \001(\0132\016.TSP.Reference\"\304\001\n\010ListType\022\n"
+    "\017\n\013NUMBER_TYPE\020\004\022\017\n\013STRING_TYPE\020\005\"\303\t\n\027Im"
+    "portWarningSetArchive\022Q\n\026formula_import_"
+    "warning\030\001 \001(\01321.TST.ImportWarningSetArch"
+    "ive.FormulaImportWarning\022.\n\037cond_format_"
+    "above_avg_equal_avg\030\002 \001(\010:\005false\022,\n\035cond"
+    "_format_above_avg_std_dev\030\003 \001(\010:\005false\022*"
+    "\n\033cond_format_complex_formula\030\004 \001(\010:\005fal"
+    "se\022*\n\033cond_format_contains_errors\030\005 \001(\010:"
+    "\005false\022\037\n\020cond_format_expr\030\006 \001(\010:\005false\022"
+    ".\n\037cond_format_not_contains_errors\030\007 \001(\010"
+    ":\005false\0227\n(cond_format_parameters_not_al"
+    "l_same_type\030\010 \001(\010:\005false\022\'\n\030cond_format_"
+    "stop_if_true\030\t \001(\010:\005false\022/\n cond_format"
+    "_unsupported_operator\030\n \001(\010:\005false\022.\n\037co"
+    "nd_format_unsupported_styling\030\013 \001(\010:\005fal"
+    "se\0222\n#cond_format_unsupported_time_perio"
+    "d\030\014 \001(\010:\005false\022)\n\032error_cell_with_no_for"
+    "mula\030\r \001(\010:\005false\022&\n\027unsupported_cond_fo"
+    "rmat\030\016 \001(\010:\005false\022\034\n\024original_data_forma"
+    "t\030\017 \001(\t\032\233\001\n\024FormulaImportWarning\022M\n\024form"
+    "ula_warning_type\030\001 \002(\0162/.TST.ImportWarni"
+    "ngSetArchive.FormulaWarningType\022\030\n\020origi"
+    "nal_formula\030\002 \001(\t\022\032\n\022supplementary_text\030"
+    "\003 \001(\t\"\307\002\n\022FormulaWarningType\022\025\n\021THREE_D_"
+    "REFERENCE\020\001\022\023\n\017ARRAYED_FORMULA\020\002\022#\n\037DIFF"
+    "ERENT_BEHAVIOR_FOR_FUNCTION\020\003\022\017\n\013ERROR_T"
+    "OKEN\020\004\022\026\n\022EXTERNAL_REFERENCE\020\005\022\034\n\030NATURA"
+    "L_LANGUAGE_FORMULA\020\006\022\033\n\027REFERENCE_OUT_OF"
+    "_BOUNDS\020\007\022!\n\035SHARED_FORMULA_BASE_NOT_FOU"
+    "ND\020\010\022\020\n\014UNKNOWN_NAME\020\t\022\027\n\023UNSUPPORTED_FO"
+    "RMULA\020\n\022\030\n\024UNSUPPORTED_FUNCTION\020\013\022\024\n\020UNS"
+    "UPPORTED_NAME\020\014\"\352\005\n\rTableDataList\022-\n\010lis"
+    "tType\030\001 \002(\0162\033.TST.TableDataList.ListType"
+    "\022\022\n\nnextListID\030\002 \002(\r\022-\n\007entries\030\003 \003(\0132\034."
+    "TST.TableDataList.ListEntry\032\213\003\n\tListEntr"
+    "y\022\013\n\003key\030\001 \002(\r\022\020\n\010refcount\030\002 \002(\r\022\016\n\006stri"
+    "ng\030\003 \001(\t\022!\n\treference\030\004 \001(\0132\016.TSP.Refere"
+    "nce\022%\n\007formula\030\005 \001(\0132\024.TSCE.FormulaArchi"
+    "ve\022(\n\006format\030\006 \001(\0132\030.TSK.FormatStructArc"
+    "hive\022\036\n\006region\030\007 \001(\0132\016.TST.CellRange\022/\n\r"
+    "custom_format\030\010 \001(\0132\030.TSK.CustomFormatAr"
+    "chive\022\'\n\017richTextPayload\030\t \001(\0132\016.TSP.Ref"
+    "erence\022\'\n\017comment_storage\030\n \001(\0132\016.TSP.Re"
+    "ference\0228\n\022import_warning_set\030\013 \001(\0132\034.TS"
+    "T.ImportWarningSetArchive\"\330\001\n\010ListType\022\n"
     "\n\006STRING\020\001\022\n\n\006FORMAT\020\002\022\013\n\007FORMULA\020\003\022\t\n\005S"
     "TYLE\020\004\022\021\n\rFORMULA_ERROR\020\005\022\021\n\rCUSTOM_FORM"
     "AT\020\006\022\037\n\033MULTIPLE_CHOICE_LIST_FORMAT\020\007\022\025\n"
     "\021RICH_TEXT_PAYLOAD\020\010\022\025\n\021CONDITIONAL_STYL"
-    "E\020\t\022\023\n\017COMMENT_STORAGE\020\n\"W\n\013TableRBTree\022"
-    "$\n\005nodes\030\001 \003(\0132\025.TST.TableRBTree.Node\032\"\n"
-    "\004Node\022\013\n\003key\030\001 \002(\r\022\r\n\005value\030\002 \002(\r\"\377\001\n\023He"
-    "aderStorageBucket\022\032\n\022bucketHashFunction\030"
-    "\001 \002(\r\0220\n\007headers\030\002 \003(\0132\037.TST.HeaderStora"
-    "geBucket.Header\032\231\001\n\006Header\022\r\n\005index\030\001 \002("
-    "\r\022\014\n\004size\030\002 \002(\002\022\023\n\013hidingState\030\003 \002(\r\022\025\n\r"
-    "numberOfCells\030\004 \002(\r\022\"\n\ncell_style\030\005 \001(\0132"
-    "\016.TSP.Reference\022\"\n\ntext_style\030\006 \001(\0132\016.TS"
-    "P.Reference\"L\n\rHeaderStorage\022\032\n\022bucketHa"
-    "shFunction\030\001 \002(\r\022\037\n\007buckets\030\002 \003(\0132\016.TSP."
-    "Reference\"\355\005\n\tDataStore\022&\n\nrowHeaders\030\001 "
-    "\002(\0132\022.TST.HeaderStorage\022%\n\rcolumnHeaders"
-    "\030\002 \002(\0132\016.TSP.Reference\022\037\n\005tiles\030\003 \002(\0132\020."
-    "TST.TileStorage\022#\n\013stringTable\030\004 \002(\0132\016.T"
-    "SP.Reference\022\"\n\nstyleTable\030\005 \002(\0132\016.TSP.R"
-    "eference\022$\n\014formulaTable\030\006 \002(\0132\016.TSP.Ref"
-    "erence\022)\n\021formulaErrorTable\030\014 \001(\0132\016.TSP."
-    "Reference\022#\n\013formatTable\030\013 \002(\0132\016.TSP.Ref"
-    "erence\0225\n\035multipleChoiceListFormatTable\030"
-    "\020 \001(\0132\016.TSP.Reference\022(\n\020merge_region_ma"
-    "p\030\r \001(\0132\016.TSP.Reference\022)\n\021customFormatT"
-    "able\030\017 \001(\0132\016.TSP.Reference\022\026\n\016nextRowStr"
-    "ipID\030\007 \002(\r\022\031\n\021nextColumnStripID\030\010 \002(\r\022%\n"
-    "\013rowTileTree\030\t \002(\0132\020.TST.TableRBTree\022(\n\016"
-    "columnTileTree\030\n \002(\0132\020.TST.TableRBTree\022\027"
-    "\n\017storage_version\030\016 \001(\r\022,\n\024richTextPaylo"
-    "adTable\030\021 \001(\0132\016.TSP.Reference\022-\n\025conditi"
-    "onalstyletable\030\022 \001(\0132\016.TSP.Reference\022+\n\023"
-    "commentStorageTable\030\023 \001(\0132\016.TSP.Referenc"
-    "e\"\201\001\n\020TableInfoArchive\022#\n\005super\030\001 \002(\0132\024."
-    "TSD.DrawableArchive\022\"\n\ntableModel\030\002 \002(\0132"
-    "\016.TSP.Reference\022$\n\014editingState\030\003 \001(\0132\016."
-    "TSP.Reference\"\310\002\n\023EditingStateArchive\022&\n"
-    "\016editingStorage\030\001 \001(\0132\016.TSP.Reference\022\036\n"
-    "\013editingCell\030\002 \002(\0132\t.TST.Cell\022(\n\tselecti"
-    "on\030\003 \001(\0132\025.TST.SelectionArchive\022&\n\021laste"
-    "ditingcellid\030\004 \001(\0132\013.TST.CellID\022\"\n\rediti"
-    "ngcellid\030\005 \001(\0132\013.TST.CellID\022G\n(deprecate"
-    "d_setup_textUndoRedoTransaction\030\006 \001(\0132\025."
-    "TSWP.UndoTransaction\022*\n\"cell_was_edited_"
-    "in_current_session\030\007 \001(\010\"[\n\022WPTableInfoA"
-    "rchive\022$\n\005super\030\001 \002(\0132\025.TST.TableInfoArc"
-    "hive\022\037\n\007storage\030\002 \001(\0132\016.TSP.Reference\"\222\004"
-    "\n\030TableStyleNetworkArchive\022#\n\013table_styl"
-    "e\030\t \002(\0132\016.TSP.Reference\022\'\n\017body_text_sty"
-    "le\030\001 \002(\0132\016.TSP.Reference\022-\n\025header_row_t"
-    "ext_style\030\002 \002(\0132\016.TSP.Reference\0220\n\030heade"
-    "r_column_text_style\030\003 \002(\0132\016.TSP.Referenc"
-    "e\022-\n\025footer_row_text_style\030\004 \002(\0132\016.TSP.R"
-    "eference\022\'\n\017body_cell_style\030\005 \002(\0132\016.TSP."
-    "Reference\022(\n\020header_row_style\030\006 \002(\0132\016.TS"
-    "P.Reference\022+\n\023header_column_style\030\007 \002(\013"
-    "2\016.TSP.Reference\022(\n\020footer_row_style\030\010 \002"
-    "(\0132\016.TSP.Reference\022(\n\020table_name_style\030\n"
-    " \001(\0132\016.TSP.Reference\022.\n\026table_name_shape"
-    "_style\030\013 \001(\0132\016.TSP.Reference\022\024\n\014preset_i"
-    "ndex\030\014 \001(\r\"\230\014\n\021TableModelArchive\022\020\n\010tabl"
-    "e_id\030\001 \002(\t\022\025\n\rfrom_table_id\030+ \001(\t\022#\n\013tab"
-    "le_style\030\003 \002(\0132\016.TSP.Reference\022\'\n\017body_t"
-    "ext_style\030\030 \002(\0132\016.TSP.Reference\022-\n\025heade"
-    "r_row_text_style\030\031 \002(\0132\016.TSP.Reference\0220"
-    "\n\030header_column_text_style\030\032 \002(\0132\016.TSP.R"
-    "eference\022-\n\025footer_row_text_style\030\033 \002(\0132"
-    "\016.TSP.Reference\022\'\n\017body_cell_style\030\022 \002(\013"
-    "2\016.TSP.Reference\022(\n\020header_row_style\030\023 \002"
-    "(\0132\016.TSP.Reference\022+\n\023header_column_styl"
-    "e\030\024 \002(\0132\016.TSP.Reference\022(\n\020footer_row_st"
-    "yle\030\025 \002(\0132\016.TSP.Reference\022(\n\020table_name_"
-    "style\030\036 \001(\0132\016.TSP.Reference\022.\n\026table_nam"
-    "e_shape_style\030$ \001(\0132\016.TSP.Reference\022\"\n\nd"
-    "ata_store\030\004 \002(\0132\016.TST.DataStore\022 \n\010provi"
-    "der\030\005 \001(\0132\016.TSP.Reference\022\026\n\016number_of_r"
-    "ows\030\006 \002(\r\022\031\n\021number_of_columns\030\007 \002(\r\022\022\n\n"
-    "table_name\030\010 \002(\t\022\032\n\022table_name_enabled\030\026"
-    " \001(\010\022\031\n\021table_name_height\030! \001(\001\022!\n\031table"
-    "_name_border_enabled\030% \001(\010\022\035\n\025number_of_"
-    "header_rows\030\t \001(\r\022 \n\030number_of_header_co"
-    "lumns\030\n \001(\r\022\035\n\025number_of_footer_rows\030\013 \001"
-    "(\r\022\032\n\022header_rows_frozen\030\014 \001(\010\022\035\n\025header"
-    "_columns_frozen\030\r \001(\010\022\035\n\025number_of_hidde"
-    "n_rows\030\016 \001(\r\022 \n\030number_of_hidden_columns"
-    "\030\017 \001(\r\022\"\n\032number_of_user_hidden_rows\030) \001"
-    "(\r\022%\n\035number_of_user_hidden_columns\030* \001("
-    "\r\022\037\n\027number_of_filtered_rows\030( \001(\r\022\032\n\022de"
-    "fault_row_height\030\020 \002(\001\022\034\n\024default_column"
-    "_width\030\021 \002(\001\022&\n\rorigin_offset\030\027 \001(\0132\013.TS"
-    "T.CellIDB\002\030\001\022\024\n\014preset_index\030\034 \002(\r\022%\n\035re"
-    "peating_header_rows_enabled\030\035 \001(\010\022(\n rep"
-    "eating_header_columns_enabled\030  \001(\010\022\036\n\026s"
-    "tyle_apply_clears_all\030\037 \001(\010\022>\n&hidden_st"
-    "ate_formula_owner_for_columns\030\" \001(\0132\016.TS"
-    "P.Reference\022;\n#hidden_state_formula_owne"
-    "r_for_rows\030# \001(\0132\016.TSP.Reference\022\"\n\nfilt"
-    "er_set\030& \001(\0132\016.TSP.Reference\022\?\n\"conditio"
-    "nal_style_formula_owner_id\030\' \001(\0132\023.TSCE."
-    "CFUUIDArchive\"\030\n\026DurationWrapperArchive\""
-    "\272\007\n\004Cell\022%\n\tvalueType\030\002 \002(\0162\022.TST.CellVa"
-    "lueType\022\023\n\013numberValue\030\005 \001(\001\022\023\n\013stringVa"
-    "lue\030\006 \001(\t\022\021\n\tboolValue\030\007 \001(\010\022\"\n\ncell_sty"
-    "le\030\003 \001(\0132\016.TSP.Reference\022\"\n\ntext_style\030\004"
-    " \001(\0132\016.TSP.Reference\022%\n\007formula\030\010 \001(\0132\024."
-    "TSCE.FormulaArchive\022$\n\014formulaError\030\n \001("
-    "\0132\016.TSP.Reference\0220\n\016current_format\030\t \001("
-    "\0132\030.TSK.FormatStructArchive\022/\n\rnumber_fo"
-    "rmat\030\013 \001(\0132\030.TSK.FormatStructArchive\0221\n\017"
-    "currency_format\030\014 \001(\0132\030.TSK.FormatStruct"
-    "Archive\0221\n\017duration_format\030\r \001(\0132\030.TSK.F"
-    "ormatStructArchive\022-\n\013date_format\030\016 \001(\0132"
-    "\030.TSK.FormatStructArchive\0220\n\016control_for"
-    "mat\030\017 \001(\0132\030.TSK.FormatStructArchive\022/\n\rc"
-    "ustom_format\030\020 \001(\0132\030.TSK.FormatStructArc"
-    "hive\022-\n\013base_format\030\021 \001(\0132\030.TSK.FormatSt"
-    "ructArchive\022=\n\033multiple_choice_list_form"
-    "at\030\022 \001(\0132\030.TSK.FormatStructArchive\022\035\n\025ex"
-    "plicit_format_flags\030\023 \001(\r\022\'\n\017richTextPay"
-    "load\030\024 \001(\0132\016.TSP.Reference\022)\n\021conditiona"
-    "l_style\030\025 \001(\0132\016.TSP.Reference\022,\n\024multipl"
-    "e_choice_list\030\026 \001(\0132\016.TSP.Reference\022\'\n\017c"
-    "omment_storage\030\027 \001(\0132\016.TSP.Reference\022&\n\036"
-    "conditional_style_applied_rule\030\030 \001(\r\";\n\025"
-    "MergeRegionMapArchive\022\"\n\ncell_range\030\001 \003("
-    "\0132\016.TST.CellRange\"\265\002\n\016CellMapArchive\022\020\n\010"
-    "capacity\030\001 \002(\r\022\r\n\005count\030\002 \002(\r\0226\n\014cellMap"
-    "Entry\030\003 \003(\0132 .TST.CellMapArchive.CellMap"
-    "Entry\022*\n\034may_modify_formulas_in_cells\030\004 "
+    "E\020\t\022\023\n\017COMMENT_STORAGE\020\n\022\022\n\016IMPORT_WARNI"
+    "NG\020\013\"W\n\013TableRBTree\022$\n\005nodes\030\001 \003(\0132\025.TST"
+    ".TableRBTree.Node\032\"\n\004Node\022\013\n\003key\030\001 \002(\r\022\r"
+    "\n\005value\030\002 \002(\r\"\377\001\n\023HeaderStorageBucket\022\032\n"
+    "\022bucketHashFunction\030\001 \002(\r\0220\n\007headers\030\002 \003"
+    "(\0132\037.TST.HeaderStorageBucket.Header\032\231\001\n\006"
+    "Header\022\r\n\005index\030\001 \002(\r\022\014\n\004size\030\002 \002(\002\022\023\n\013h"
+    "idingState\030\003 \002(\r\022\025\n\rnumberOfCells\030\004 \002(\r\022"
+    "\"\n\ncell_style\030\005 \001(\0132\016.TSP.Reference\022\"\n\nt"
+    "ext_style\030\006 \001(\0132\016.TSP.Reference\"L\n\rHeade"
+    "rStorage\022\032\n\022bucketHashFunction\030\001 \002(\r\022\037\n\007"
+    "buckets\030\002 \003(\0132\016.TSP.Reference\"\234\006\n\tDataSt"
+    "ore\022&\n\nrowHeaders\030\001 \002(\0132\022.TST.HeaderStor"
+    "age\022%\n\rcolumnHeaders\030\002 \002(\0132\016.TSP.Referen"
+    "ce\022\037\n\005tiles\030\003 \002(\0132\020.TST.TileStorage\022#\n\013s"
+    "tringTable\030\004 \002(\0132\016.TSP.Reference\022\"\n\nstyl"
+    "eTable\030\005 \002(\0132\016.TSP.Reference\022$\n\014formulaT"
+    "able\030\006 \002(\0132\016.TSP.Reference\022)\n\021formulaErr"
+    "orTable\030\014 \001(\0132\016.TSP.Reference\022#\n\013formatT"
+    "able\030\013 \002(\0132\016.TSP.Reference\0225\n\035multipleCh"
+    "oiceListFormatTable\030\020 \001(\0132\016.TSP.Referenc"
+    "e\022(\n\020merge_region_map\030\r \001(\0132\016.TSP.Refere"
+    "nce\022)\n\021customFormatTable\030\017 \001(\0132\016.TSP.Ref"
+    "erence\022\026\n\016nextRowStripID\030\007 \002(\r\022\031\n\021nextCo"
+    "lumnStripID\030\010 \002(\r\022%\n\013rowTileTree\030\t \002(\0132\020"
+    ".TST.TableRBTree\022(\n\016columnTileTree\030\n \002(\013"
+    "2\020.TST.TableRBTree\022\027\n\017storage_version\030\016 "
+    "\001(\r\022,\n\024richTextPayloadTable\030\021 \001(\0132\016.TSP."
+    "Reference\022-\n\025conditionalstyletable\030\022 \001(\013"
+    "2\016.TSP.Reference\022+\n\023commentStorageTable\030"
+    "\023 \001(\0132\016.TSP.Reference\022-\n\025importWarningSe"
+    "tTable\030\024 \001(\0132\016.TSP.Reference\"\201\001\n\020TableIn"
+    "foArchive\022#\n\005super\030\001 \002(\0132\024.TSD.DrawableA"
+    "rchive\022\"\n\ntableModel\030\002 \002(\0132\016.TSP.Referen"
+    "ce\022$\n\014editingState\030\003 \001(\0132\016.TSP.Reference"
+    "\"\310\002\n\023EditingStateArchive\022&\n\016editingStora"
+    "ge\030\001 \001(\0132\016.TSP.Reference\022\036\n\013editingCell\030"
+    "\002 \002(\0132\t.TST.Cell\022(\n\tselection\030\003 \001(\0132\025.TS"
+    "T.SelectionArchive\022&\n\021lasteditingcellid\030"
+    "\004 \001(\0132\013.TST.CellID\022\"\n\reditingcellid\030\005 \001("
+    "\0132\013.TST.CellID\022G\n(deprecated_setup_textU"
+    "ndoRedoTransaction\030\006 \001(\0132\025.TSWP.UndoTran"
+    "saction\022*\n\"cell_was_edited_in_current_se"
+    "ssion\030\007 \001(\010\"[\n\022WPTableInfoArchive\022$\n\005sup"
+    "er\030\001 \002(\0132\025.TST.TableInfoArchive\022\037\n\007stora"
+    "ge\030\002 \001(\0132\016.TSP.Reference\"\222\004\n\030TableStyleN"
+    "etworkArchive\022#\n\013table_style\030\t \002(\0132\016.TSP"
+    ".Reference\022\'\n\017body_text_style\030\001 \002(\0132\016.TS"
+    "P.Reference\022-\n\025header_row_text_style\030\002 \002"
+    "(\0132\016.TSP.Reference\0220\n\030header_column_text"
+    "_style\030\003 \002(\0132\016.TSP.Reference\022-\n\025footer_r"
+    "ow_text_style\030\004 \002(\0132\016.TSP.Reference\022\'\n\017b"
+    "ody_cell_style\030\005 \002(\0132\016.TSP.Reference\022(\n\020"
+    "header_row_style\030\006 \002(\0132\016.TSP.Reference\022+"
+    "\n\023header_column_style\030\007 \002(\0132\016.TSP.Refere"
+    "nce\022(\n\020footer_row_style\030\010 \002(\0132\016.TSP.Refe"
+    "rence\022(\n\020table_name_style\030\n \001(\0132\016.TSP.Re"
+    "ference\022.\n\026table_name_shape_style\030\013 \001(\0132"
+    "\016.TSP.Reference\022\024\n\014preset_index\030\014 \001(\r\"\313\002"
+    "\n\025TableSortOrderArchive\0221\n\004type\030\001 \002(\0162#."
+    "TST.TableSortOrderArchive.SortType\0229\n\005ru"
+    "les\030\002 \003(\0132*.TST.TableSortOrderArchive.So"
+    "rtRuleArchive\032\226\001\n\017SortRuleArchive\022\016\n\006col"
+    "umn\030\001 \002(\r\022G\n\tdirection\030\002 \002(\01624.TST.Table"
+    "SortOrderArchive.SortRuleArchive.Directi"
+    "on\"*\n\tDirection\022\r\n\tascending\020\000\022\016\n\ndescen"
+    "ding\020\001\"+\n\010SortType\022\020\n\014entire_table\020\000\022\r\n\t"
+    "row_range\020\001\"L\n\037SortRuleReferenceTrackerA"
+    "rchive\022)\n\021reference_tracker\030\001 \002(\0132\016.TSP."
+    "Reference\"\223\r\n\021TableModelArchive\022\020\n\010table"
+    "_id\030\001 \002(\t\022\025\n\rfrom_table_id\030+ \001(\t\022#\n\013tabl"
+    "e_style\030\003 \002(\0132\016.TSP.Reference\022\'\n\017body_te"
+    "xt_style\030\030 \002(\0132\016.TSP.Reference\022-\n\025header"
+    "_row_text_style\030\031 \002(\0132\016.TSP.Reference\0220\n"
+    "\030header_column_text_style\030\032 \002(\0132\016.TSP.Re"
+    "ference\022-\n\025footer_row_text_style\030\033 \002(\0132\016"
+    ".TSP.Reference\022\'\n\017body_cell_style\030\022 \002(\0132"
+    "\016.TSP.Reference\022(\n\020header_row_style\030\023 \002("
+    "\0132\016.TSP.Reference\022+\n\023header_column_style"
+    "\030\024 \002(\0132\016.TSP.Reference\022(\n\020footer_row_sty"
+    "le\030\025 \002(\0132\016.TSP.Reference\022(\n\020table_name_s"
+    "tyle\030\036 \001(\0132\016.TSP.Reference\022.\n\026table_name"
+    "_shape_style\030$ \001(\0132\016.TSP.Reference\022\"\n\nda"
+    "ta_store\030\004 \002(\0132\016.TST.DataStore\022 \n\010provid"
+    "er\030\005 \001(\0132\016.TSP.Reference\022\026\n\016number_of_ro"
+    "ws\030\006 \002(\r\022\031\n\021number_of_columns\030\007 \002(\r\022\022\n\nt"
+    "able_name\030\010 \002(\t\022\032\n\022table_name_enabled\030\026 "
+    "\001(\010\022\031\n\021table_name_height\030! \001(\001\022!\n\031table_"
+    "name_border_enabled\030% \001(\010\022\035\n\025number_of_h"
+    "eader_rows\030\t \001(\r\022 \n\030number_of_header_col"
+    "umns\030\n \001(\r\022\035\n\025number_of_footer_rows\030\013 \001("
+    "\r\022\032\n\022header_rows_frozen\030\014 \001(\010\022\035\n\025header_"
+    "columns_frozen\030\r \001(\010\022\035\n\025number_of_hidden"
+    "_rows\030\016 \001(\r\022 \n\030number_of_hidden_columns\030"
+    "\017 \001(\r\022\"\n\032number_of_user_hidden_rows\030) \001("
+    "\r\022%\n\035number_of_user_hidden_columns\030* \001(\r"
+    "\022\037\n\027number_of_filtered_rows\030( \001(\r\022\032\n\022def"
+    "ault_row_height\030\020 \002(\001\022\034\n\024default_column_"
+    "width\030\021 \002(\001\022&\n\rorigin_offset\030\027 \001(\0132\013.TST"
+    ".CellIDB\002\030\001\022\024\n\014preset_index\030\034 \002(\r\022%\n\035rep"
+    "eating_header_rows_enabled\030\035 \001(\010\022(\n repe"
+    "ating_header_columns_enabled\030  \001(\010\022\036\n\026st"
+    "yle_apply_clears_all\030\037 \001(\010\022>\n&hidden_sta"
+    "te_formula_owner_for_columns\030\" \001(\0132\016.TSP"
+    ".Reference\022;\n#hidden_state_formula_owner"
+    "_for_rows\030# \001(\0132\016.TSP.Reference\022\"\n\nfilte"
+    "r_set\030& \001(\0132\016.TSP.Reference\022.\n\nsort_orde"
+    "r\030, \001(\0132\032.TST.TableSortOrderArchive\022\?\n\"c"
+    "onditional_style_formula_owner_id\030\' \001(\0132"
+    "\023.TSCE.CFUUIDArchive\022I\n\033sort_rule_refere"
+    "nce_tracker\030- \001(\0132$.TST.SortRuleReferenc"
+    "eTrackerArchive\"\030\n\026DurationWrapperArchiv"
+    "e\"\364\007\n\004Cell\022%\n\tvalueType\030\002 \002(\0162\022.TST.Cell"
+    "ValueType\022\023\n\013numberValue\030\005 \001(\001\022\023\n\013string"
+    "Value\030\006 \001(\t\022\021\n\tboolValue\030\007 \001(\010\022\"\n\ncell_s"
+    "tyle\030\003 \001(\0132\016.TSP.Reference\022\"\n\ntext_style"
+    "\030\004 \001(\0132\016.TSP.Reference\022%\n\007formula\030\010 \001(\0132"
+    "\024.TSCE.FormulaArchive\022$\n\014formulaError\030\n "
+    "\001(\0132\016.TSP.Reference\0220\n\016current_format\030\t "
+    "\001(\0132\030.TSK.FormatStructArchive\022/\n\rnumber_"
+    "format\030\013 \001(\0132\030.TSK.FormatStructArchive\0221"
+    "\n\017currency_format\030\014 \001(\0132\030.TSK.FormatStru"
+    "ctArchive\0221\n\017duration_format\030\r \001(\0132\030.TSK"
+    ".FormatStructArchive\022-\n\013date_format\030\016 \001("
+    "\0132\030.TSK.FormatStructArchive\0220\n\016control_f"
+    "ormat\030\017 \001(\0132\030.TSK.FormatStructArchive\022/\n"
+    "\rcustom_format\030\020 \001(\0132\030.TSK.FormatStructA"
+    "rchive\022-\n\013base_format\030\021 \001(\0132\030.TSK.Format"
+    "StructArchive\022=\n\033multiple_choice_list_fo"
+    "rmat\030\022 \001(\0132\030.TSK.FormatStructArchive\022\035\n\025"
+    "explicit_format_flags\030\023 \001(\r\022\'\n\017richTextP"
+    "ayload\030\024 \001(\0132\016.TSP.Reference\022)\n\021conditio"
+    "nal_style\030\025 \001(\0132\016.TSP.Reference\022,\n\024multi"
+    "ple_choice_list\030\026 \001(\0132\016.TSP.Reference\022\'\n"
+    "\017comment_storage\030\027 \001(\0132\016.TSP.Reference\022&"
+    "\n\036conditional_style_applied_rule\030\030 \001(\r\0228"
+    "\n\022import_warning_set\030\031 \001(\0132\034.TST.ImportW"
+    "arningSetArchive\";\n\025MergeRegionMapArchiv"
+    "e\022\"\n\ncell_range\030\001 \003(\0132\016.TST.CellRange\"\265\002"
+    "\n\016CellMapArchive\022\020\n\010capacity\030\001 \002(\r\022\r\n\005co"
+    "unt\030\002 \002(\r\0226\n\014cellMapEntry\030\003 \003(\0132 .TST.Ce"
+    "llMapArchive.CellMapEntry\022*\n\034may_modify_"
+    "formulas_in_cells\030\004 \001(\010:\004true\0226\n(may_mod"
+    "ify_values_referenced_by_formulas\030\005 \001(\010:"
+    "\004true\022 \n\021applies_to_hidden\030\006 \001(\010:\005false\032"
+    "D\n\014CellMapEntry\022\033\n\006cellID\030\001 \002(\0132\013.TST.Ce"
+    "llID\022\027\n\004cell\030\002 \001(\0132\t.TST.Cell\"\227\001\n\022CellMa"
+    "pTileArchive\022;\n\rcellmap_entry\030\002 \003(\0132$.TS"
+    "T.CellMapTileArchive.CellMapEntry\032D\n\014Cel"
+    "lMapEntry\022\033\n\006cellID\030\001 \002(\0132\013.TST.CellID\022\027"
+    "\n\004cell\030\002 \001(\0132\t.TST.Cell\"\301\001\n\023TiledCellMap"
+    "Archive\022$\n\014cellmap_tile\030\001 \003(\0132\016.TSP.Refe"
+    "rence\022*\n\034may_modify_formulas_in_cells\030\002 "
     "\001(\010:\004true\0226\n(may_modify_values_reference"
-    "d_by_formulas\030\005 \001(\010:\004true\022 \n\021applies_to_"
-    "hidden\030\006 \001(\010:\005false\032D\n\014CellMapEntry\022\033\n\006c"
-    "ellID\030\001 \002(\0132\013.TST.CellID\022\027\n\004cell\030\002 \001(\0132\t"
-    ".TST.Cell\"\212\002\n\025DoubleStyleMapArchive\022\020\n\010c"
-    "apacity\030\001 \002(\r\022\r\n\005count\030\002 \002(\r\022M\n\016cell_map"
-    "_entry\030\003 \003(\01325.TST.DoubleStyleMapArchive"
-    ".DoubleStyleMapEntryArchive\032\200\001\n\032DoubleSt"
-    "yleMapEntryArchive\022\034\n\007cell_id\030\001 \002(\0132\013.TS"
-    "T.CellID\022!\n\told_style\030\002 \002(\0132\016.TSP.Refere"
-    "nce\022!\n\tnew_style\030\003 \002(\0132\016.TSP.Reference\"\357"
-    "\001\n\024StyleTableMapArchive\022\020\n\010capacity\030\001 \002("
-    "\r\022\r\n\005count\030\002 \002(\r\022F\n\tmap_entry\030\003 \003(\01323.TS"
-    "T.StyleTableMapArchive.StyleTableMapEntr"
-    "yArchive\032n\n\031StyleTableMapEntryArchive\022\013\n"
-    "\003key\030\001 \002(\r\022!\n\told_style\030\002 \002(\0132\016.TSP.Refe"
-    "rence\022!\n\tnew_style\030\003 \002(\0132\016.TSP.Reference"
-    "\"\373\001\n\020SelectionArchive\022&\n\ntableModel\030\001 \001("
-    "\0132\016.TSP.ReferenceB\002\030\001\0221\n\016selection_type\030"
-    "\004 \002(\0162\031.TST.SelectionTypeArchive\022 \n\013anch"
-    "or_cell\030\005 \001(\0132\013.TST.CellID\022#\n\013cell_range"
-    "s\030\006 \003(\0132\016.TST.CellRange\022#\n\013base_ranges\030\007"
-    " \003(\0132\016.TST.CellRange\022 \n\013cursor_cell\030\010 \001("
-    "\0132\013.TST.CellID\"V\n\021FilterRuleArchive\022/\n\tp"
-    "redicate\030\001 \002(\0132\034.TST.FormulaPredicateArc"
-    "hive\022\020\n\010disabled\030\002 \001(\010\"\214\001\n\021TableStyleArc"
-    "hive\022 \n\005super\030\001 \002(\0132\021.TSS.StyleArchive\022\031"
-    "\n\016override_count\030\n \001(\r:\0010\022:\n\020table_prope"
-    "rties\030\013 \001(\0132 .TST.TableStylePropertiesAr"
-    "chive\"\211\001\n\020CellStyleArchive\022 \n\005super\030\001 \002("
-    "\0132\021.TSS.StyleArchive\022\031\n\016override_count\030\n"
-    " \001(\r:\0010\0228\n\017cell_properties\030\013 \001(\0132\037.TST.C"
-    "ellStylePropertiesArchive\"\342\013\n\027FormulaPre"
-    "dicateArchive\022%\n\007formula\030\001 \002(\0132\024.TSCE.Fo"
-    "rmulaArchive\022I\n\016predicate_type\030\002 \002(\01621.T"
-    "ST.FormulaPredicateArchive.FormulaPredic"
-    "ateType\022>\n\nqualifier1\030\003 \002(\0162*.TST.Formul"
-    "aPredicateArchive.QualifierType\022>\n\nquali"
-    "fier2\030\004 \002(\0162*.TST.FormulaPredicateArchiv"
-    "e.QualifierType\022\024\n\014param_index1\030\005 \002(\005\022\024\n"
-    "\014param_index2\030\006 \002(\005\022\024\n\014param_index0\030\007 \002("
-    "\005\"\211\010\n\024FormulaPredicateType\022\014\n\010PredNone\020\000"
-    "\022\022\n\016TextStartsWith\020\001\022\020\n\014TextEndsWith\020\002\022\020"
-    "\n\014TextContains\020\003\022\026\n\022TextDoesNotContain\020\004"
-    "\022\016\n\nValueEqual\020\005\022\021\n\rValueNotEqual\020\006\022\024\n\020V"
-    "alueGreaterThan\020\007\022\033\n\027ValueGreaterThanOrE"
-    "qual\020\010\022\021\n\rValueLessThan\020\t\022\030\n\024ValueLessTh"
-    "anOrEqual\020\n\022\025\n\021ValueAboveAverage\020\013\022\025\n\021Va"
-    "lueBelowAverage\020\014\022\020\n\014ValueBetween\020\r\022\013\n\007F"
-    "ormula\020\016\022\016\n\nDuplicates\020\017\022\013\n\007Uniques\020\020\022\017\n"
-    "\013DateIsToday\020\021\022\023\n\017DateIsYesterday\020\022\022\022\n\016D"
-    "ateIsTomorrow\020\023\022\021\n\rDateIsTheDate\020\024\022\025\n\021Da"
-    "teBeforeTheDate\020\025\022\024\n\020DateAfterTheDate\020\026\022"
-    "\024\n\020DateIsInTheRange\020\027\022\021\n\rDateInTheNext\020\030"
-    "\022\021\n\rDateInTheLast\020\031\022\021\n\rDateIsExactly\020\032\022\026"
-    "\n\022DateBeforeRelative\020\033\022\025\n\021DateAfterRelat"
-    "ive\020\034\022\027\n\023DateBetweenRelative\020\035\022\014\n\010ValueT"
-    "op\020\036\022\017\n\013ValueBottom\020\037\022\023\n\017ValueNotBetween"
-    "\020 \022\016\n\nDateInThis\020!\022\013\n\007IsBlank\020\"\022\016\n\nIsNot"
-    "Blank\020#\022\n\n\006TextIs\020$\022\r\n\tTextIsNot\020%\022\021\n\rDu"
-    "rationEqual\020&\022\024\n\020DurationNotEqual\020\'\022\027\n\023D"
-    "urationGreaterThan\020(\022\036\n\032DurationGreaterT"
-    "hanOrEqual\020)\022\024\n\020DurationLessThan\020*\022\033\n\027Du"
-    "rationLessThanOrEqual\020+\022\023\n\017DurationBetwe"
-    "en\020,\022\026\n\022DurationNotBetween\020-\022\030\n\024Duration"
-    "AboveAverage\020.\022\030\n\024DurationBelowAverage\020/"
-    "\022\017\n\013DurationTop\0200\022\022\n\016DurationBottom\0201\"\206\001"
-    "\n\rQualifierType\022\014\n\010QualNone\020\000\022\010\n\004Days\020\002\022"
-    "\t\n\005Weeks\020\003\022\n\n\006Months\020\004\022\t\n\005Years\020\005\022\007\n\003Ago"
-    "\020\006\022\013\n\007FromNow\020\007\022\014\n\010Quarters\020\010\022\013\n\007Percent"
-    "\020\t\022\n\n\006Values\020\n\"\243\002\n\032ConditionalStyleSetAr"
-    "chive\022\021\n\truleCount\030\001 \002(\r\022C\n\005rules\030\002 \003(\0132"
-    "4.TST.ConditionalStyleSetArchive.Conditi"
-    "onalStyleRule\022\033\n\006cellID\030\003 \001(\0132\013.TST.Cell"
-    "ID\032\217\001\n\024ConditionalStyleRule\022/\n\tpredicate"
-    "\030\001 \002(\0132\034.TST.FormulaPredicateArchive\022\"\n\n"
-    "cell_style\030\002 \002(\0132\016.TSP.Reference\022\"\n\ntext"
-    "_style\030\003 \002(\0132\016.TSP.Reference\"\322\002\n\020FilterS"
-    "etArchive\022J\n\004type\030\001 \001(\0162#.TST.FilterSetA"
-    "rchive.FilterSetType:\027FilterSetArchiveTy"
-    "peAll\022\030\n\nis_enabled\030\002 \001(\010:\004true\022,\n\014filte"
-    "r_rules\030\003 \003(\0132\026.TST.FilterRuleArchive\022/\n"
-    " needs_formula_rewrite_for_import\030\004 \001(\010:"
-    "\005false\022\026\n\016filter_offsets\030\005 \003(\r\022\026\n\016filter"
-    "_enabled\030\006 \003(\010\"I\n\rFilterSetType\022\033\n\027Filte"
-    "rSetArchiveTypeAll\020\000\022\033\n\027FilterSetArchive"
-    "TypeAny\020\001\"l\n\026TokenAttachmentArchive\022*\n\005s"
-    "uper\030\001 \002(\0132\033.TSWP.UIGraphicalAttachment\022"
-    "&\n\016expressionNode\030\002 \001(\0132\016.TSP.Reference\""
-    "8\n\016FormulaArchive\022&\n\016expressionTree\030\001 \001("
-    "\0132\016.TSP.Reference\"h\n\025ExpressionNodeArchi"
-    "ve\022 \n\010children\030\001 \003(\0132\016.TSP.Reference\022\026\n\013"
-    "first_index\030\002 \001(\004:\0010\022\025\n\nlast_index\030\003 \001(\004"
-    ":\0010\"N\n\022BooleanNodeArchive\022)\n\005super\030\001 \002(\013"
-    "2\032.TST.ExpressionNodeArchive\022\r\n\005value\030\002 "
-    "\002(\010\"N\n\021NumberNodeArchive\022)\n\005super\030\001 \002(\0132"
-    "\032.TST.ExpressionNodeArchive\022\016\n\006number\030\002 "
-    "\002(\001\"M\n\021StringNodeArchive\022)\n\005super\030\001 \002(\0132"
-    "\032.TST.ExpressionNodeArchive\022\r\n\005value\030\002 \002"
-    "(\t\"V\n\025IdentifierNodeArchive\022)\n\005super\030\001 \002"
-    "(\0132\032.TST.ExpressionNodeArchive\022\022\n\nidenti"
-    "fier\030\002 \001(\t\"\\\n\020ArrayNodeArchive\022)\n\005super\030"
-    "\001 \002(\0132\032.TST.ExpressionNodeArchive\022\017\n\007col"
-    "umns\030\002 \001(\r\022\014\n\004rows\030\003 \001(\r\"<\n\017ListNodeArch"
-    "ive\022)\n\005super\030\001 \002(\0132\032.TST.ExpressionNodeA"
-    "rchive\"V\n\023OperatorNodeArchive\022)\n\005super\030\001"
-    " \002(\0132\032.TST.ExpressionNodeArchive\022\024\n\014oper"
-    "atorChar\030\002 \002(\r\"E\n\032PostfixOperatorNodeArc"
-    "hive\022\'\n\005super\030\001 \002(\0132\030.TST.OperatorNodeAr"
-    "chive\"D\n\031PrefixOperatorNodeArchive\022\'\n\005su"
-    "per\030\001 \002(\0132\030.TST.OperatorNodeArchive\"t\n\023F"
-    "unctionNodeArchive\022)\n\005super\030\001 \002(\0132\032.TST."
-    "ExpressionNodeArchive\022\025\n\rfunctionIndex\030\002"
-    " \002(\r\022\033\n\023invalidFunctionName\030\003 \001(\t\"C\n\026Fun"
-    "ctionEndNodeArchive\022)\n\005super\030\001 \002(\0132\032.TST"
-    ".ExpressionNodeArchive\"[\n\017DateNodeArchiv"
+    "d_by_formulas\030\003 \001(\010:\004true\022 \n\021applies_to_"
+    "hidden\030\004 \001(\010:\005false\"\247\002\n\027PropertyMapEntry"
+    "Archive\022\020\n\010property\030\001 \002(\r\022!\n\tvalueType\030\002"
+    " \002(\0162\016.TSS.ValueType\022\021\n\tint_value\030\003 \001(\005\022"
+    "\023\n\013float_value\030\004 \001(\002\022\024\n\014double_value\030\005 \001"
+    "(\001\022\030\n\tis_nsnull\030\006 \001(\010:\005false\022%\n\rtsp_refe"
+    "rence\030\007 \001(\0132\016.TSP.Reference\022\036\n\004fill\030\010 \001("
+    "\0132\020.TSD.FillArchive\0228\n\022import_warning_se"
+    "t\030\t \001(\0132\034.TST.ImportWarningSetArchive\"\211\001"
+    "\n\017CellDiffArchive\0229\n\023property_map_to_set"
+    "\030\001 \003(\0132\034.TST.PropertyMapEntryArchive\022;\n\025"
+    "property_map_to_reset\030\002 \003(\0132\034.TST.Proper"
+    "tyMapEntryArchive\"W\n\022CellDiffMapArchive\022"
+    "\035\n\010cell_ids\030\001 \003(\0132\013.TST.CellID\022\"\n\ncell_d"
+    "iffs\030\002 \003(\0132\016.TSP.Reference\"\212\002\n\025DoubleSty"
+    "leMapArchive\022\020\n\010capacity\030\001 \002(\r\022\r\n\005count\030"
+    "\002 \002(\r\022M\n\016cell_map_entry\030\003 \003(\01325.TST.Doub"
+    "leStyleMapArchive.DoubleStyleMapEntryArc"
+    "hive\032\200\001\n\032DoubleStyleMapEntryArchive\022\034\n\007c"
+    "ell_id\030\001 \002(\0132\013.TST.CellID\022!\n\told_style\030\002"
+    " \002(\0132\016.TSP.Reference\022!\n\tnew_style\030\003 \002(\0132"
+    "\016.TSP.Reference\"\357\001\n\024StyleTableMapArchive"
+    "\022\020\n\010capacity\030\001 \002(\r\022\r\n\005count\030\002 \002(\r\022F\n\tmap"
+    "_entry\030\003 \003(\01323.TST.StyleTableMapArchive."
+    "StyleTableMapEntryArchive\032n\n\031StyleTableM"
+    "apEntryArchive\022\013\n\003key\030\001 \002(\r\022!\n\told_style"
+    "\030\002 \002(\0132\016.TSP.Reference\022!\n\tnew_style\030\003 \002("
+    "\0132\016.TSP.Reference\"\373\001\n\020SelectionArchive\022&"
+    "\n\ntableModel\030\001 \001(\0132\016.TSP.ReferenceB\002\030\001\0221"
+    "\n\016selection_type\030\004 \002(\0162\031.TST.SelectionTy"
+    "peArchive\022 \n\013anchor_cell\030\005 \001(\0132\013.TST.Cel"
+    "lID\022#\n\013cell_ranges\030\006 \003(\0132\016.TST.CellRange"
+    "\022#\n\013base_ranges\030\007 \003(\0132\016.TST.CellRange\022 \n"
+    "\013cursor_cell\030\010 \001(\0132\013.TST.CellID\"V\n\021Filte"
+    "rRuleArchive\022/\n\tpredicate\030\001 \002(\0132\034.TST.Fo"
+    "rmulaPredicateArchive\022\020\n\010disabled\030\002 \001(\010\""
+    "\214\001\n\021TableStyleArchive\022 \n\005super\030\001 \002(\0132\021.T"
+    "SS.StyleArchive\022\031\n\016override_count\030\n \001(\r:"
+    "\0010\022:\n\020table_properties\030\013 \001(\0132 .TST.Table"
+    "StylePropertiesArchive\"\211\001\n\020CellStyleArch"
+    "ive\022 \n\005super\030\001 \002(\0132\021.TSS.StyleArchive\022\031\n"
+    "\016override_count\030\n \001(\r:\0010\0228\n\017cell_propert"
+    "ies\030\013 \001(\0132\037.TST.CellStylePropertiesArchi"
+    "ve\"\342\013\n\027FormulaPredicateArchive\022%\n\007formul"
+    "a\030\001 \002(\0132\024.TSCE.FormulaArchive\022I\n\016predica"
+    "te_type\030\002 \002(\01621.TST.FormulaPredicateArch"
+    "ive.FormulaPredicateType\022>\n\nqualifier1\030\003"
+    " \002(\0162*.TST.FormulaPredicateArchive.Quali"
+    "fierType\022>\n\nqualifier2\030\004 \002(\0162*.TST.Formu"
+    "laPredicateArchive.QualifierType\022\024\n\014para"
+    "m_index1\030\005 \002(\005\022\024\n\014param_index2\030\006 \002(\005\022\024\n\014"
+    "param_index0\030\007 \002(\005\"\211\010\n\024FormulaPredicateT"
+    "ype\022\014\n\010PredNone\020\000\022\022\n\016TextStartsWith\020\001\022\020\n"
+    "\014TextEndsWith\020\002\022\020\n\014TextContains\020\003\022\026\n\022Tex"
+    "tDoesNotContain\020\004\022\016\n\nValueEqual\020\005\022\021\n\rVal"
+    "ueNotEqual\020\006\022\024\n\020ValueGreaterThan\020\007\022\033\n\027Va"
+    "lueGreaterThanOrEqual\020\010\022\021\n\rValueLessThan"
+    "\020\t\022\030\n\024ValueLessThanOrEqual\020\n\022\025\n\021ValueAbo"
+    "veAverage\020\013\022\025\n\021ValueBelowAverage\020\014\022\020\n\014Va"
+    "lueBetween\020\r\022\013\n\007Formula\020\016\022\016\n\nDuplicates\020"
+    "\017\022\013\n\007Uniques\020\020\022\017\n\013DateIsToday\020\021\022\023\n\017DateI"
+    "sYesterday\020\022\022\022\n\016DateIsTomorrow\020\023\022\021\n\rDate"
+    "IsTheDate\020\024\022\025\n\021DateBeforeTheDate\020\025\022\024\n\020Da"
+    "teAfterTheDate\020\026\022\024\n\020DateIsInTheRange\020\027\022\021"
+    "\n\rDateInTheNext\020\030\022\021\n\rDateInTheLast\020\031\022\021\n\r"
+    "DateIsExactly\020\032\022\026\n\022DateBeforeRelative\020\033\022"
+    "\025\n\021DateAfterRelative\020\034\022\027\n\023DateBetweenRel"
+    "ative\020\035\022\014\n\010ValueTop\020\036\022\017\n\013ValueBottom\020\037\022\023"
+    "\n\017ValueNotBetween\020 \022\016\n\nDateInThis\020!\022\013\n\007I"
+    "sBlank\020\"\022\016\n\nIsNotBlank\020#\022\n\n\006TextIs\020$\022\r\n\t"
+    "TextIsNot\020%\022\021\n\rDurationEqual\020&\022\024\n\020Durati"
+    "onNotEqual\020\'\022\027\n\023DurationGreaterThan\020(\022\036\n"
+    "\032DurationGreaterThanOrEqual\020)\022\024\n\020Duratio"
+    "nLessThan\020*\022\033\n\027DurationLessThanOrEqual\020+"
+    "\022\023\n\017DurationBetween\020,\022\026\n\022DurationNotBetw"
+    "een\020-\022\030\n\024DurationAboveAverage\020.\022\030\n\024Durat"
+    "ionBelowAverage\020/\022\017\n\013DurationTop\0200\022\022\n\016Du"
+    "rationBottom\0201\"\206\001\n\rQualifierType\022\014\n\010Qual"
+    "None\020\000\022\010\n\004Days\020\002\022\t\n\005Weeks\020\003\022\n\n\006Months\020\004\022"
+    "\t\n\005Years\020\005\022\007\n\003Ago\020\006\022\013\n\007FromNow\020\007\022\014\n\010Quar"
+    "ters\020\010\022\013\n\007Percent\020\t\022\n\n\006Values\020\n\"\243\002\n\032Cond"
+    "itionalStyleSetArchive\022\021\n\truleCount\030\001 \002("
+    "\r\022C\n\005rules\030\002 \003(\01324.TST.ConditionalStyleS"
+    "etArchive.ConditionalStyleRule\022\033\n\006cellID"
+    "\030\003 \001(\0132\013.TST.CellID\032\217\001\n\024ConditionalStyle"
+    "Rule\022/\n\tpredicate\030\001 \002(\0132\034.TST.FormulaPre"
+    "dicateArchive\022\"\n\ncell_style\030\002 \002(\0132\016.TSP."
+    "Reference\022\"\n\ntext_style\030\003 \002(\0132\016.TSP.Refe"
+    "rence\"\322\002\n\020FilterSetArchive\022J\n\004type\030\001 \001(\016"
+    "2#.TST.FilterSetArchive.FilterSetType:\027F"
+    "ilterSetArchiveTypeAll\022\030\n\nis_enabled\030\002 \001"
+    "(\010:\004true\022,\n\014filter_rules\030\003 \003(\0132\026.TST.Fil"
+    "terRuleArchive\022/\n needs_formula_rewrite_"
+    "for_import\030\004 \001(\010:\005false\022\026\n\016filter_offset"
+    "s\030\005 \003(\r\022\026\n\016filter_enabled\030\006 \003(\010\"I\n\rFilte"
+    "rSetType\022\033\n\027FilterSetArchiveTypeAll\020\000\022\033\n"
+    "\027FilterSetArchiveTypeAny\020\001\"l\n\026TokenAttac"
+    "hmentArchive\022*\n\005super\030\001 \002(\0132\033.TSWP.UIGra"
+    "phicalAttachment\022&\n\016expressionNode\030\002 \001(\013"
+    "2\016.TSP.Reference\"8\n\016FormulaArchive\022&\n\016ex"
+    "pressionTree\030\001 \001(\0132\016.TSP.Reference\"h\n\025Ex"
+    "pressionNodeArchive\022 \n\010children\030\001 \003(\0132\016."
+    "TSP.Reference\022\026\n\013first_index\030\002 \001(\004:\0010\022\025\n"
+    "\nlast_index\030\003 \001(\004:\0010\"N\n\022BooleanNodeArchi"
+    "ve\022)\n\005super\030\001 \002(\0132\032.TST.ExpressionNodeAr"
+    "chive\022\r\n\005value\030\002 \002(\010\"N\n\021NumberNodeArchiv"
     "e\022)\n\005super\030\001 \002(\0132\032.TST.ExpressionNodeArc"
-    "hive\022\r\n\005value\030\002 \002(\t\022\016\n\006format\030\003 \001(\t\"\237\001\n\024"
-    "ReferenceNodeArchive\022)\n\005super\030\001 \002(\0132\032.TS"
-    "T.ExpressionNodeArchive\0223\n\016rangeReferenc"
-    "e\030\002 \002(\0132\033.TSCE.RangeReferenceArchive\022\022\n\n"
-    "stickyBits\030\003 \002(\r\022\023\n\013hostTableID\030\004 \001(\t\"\210\001"
-    "\n\023DurationNodeArchive\022)\n\005super\030\001 \002(\0132\032.T"
-    "ST.ExpressionNodeArchive\022\024\n\014timeinterval"
-    "\030\002 \002(\001\022\020\n\010smallest\030\003 \002(\r\022\017\n\007largest\030\004 \002("
-    "\r\022\r\n\005style\030\005 \002(\r\"\207\001\n\036ArgumentPlaceholder"
-    "NodeArchive\022)\n\005super\030\001 \002(\0132\032.TST.Express"
-    "ionNodeArchive\022\025\n\rfunctionIndex\030\002 \002(\r\022\025\n"
-    "\rargumentIndex\030\003 \002(\r\022\014\n\004mode\030\004 \001(\r\"G\n\032Em"
-    "ptyExpressionNodeArchive\022)\n\005super\030\001 \002(\0132"
-    "\032.TST.ExpressionNodeArchive\"\357\001\n\021LayoutHi"
-    "ntArchive\022\017\n\007isValid\030\001 \002(\010\022!\n\tcellRange\030"
-    "\002 \002(\0132\016.TST.CellRange\022\033\n\006hintID\030\003 \002(\0132\013."
-    "TST.CellID\022\036\n\013maximumSize\030\004 \002(\0132\t.TSP.Si"
-    "ze\022\031\n\021partitionPosition\030\005 \002(\r\022\022\n\nhorizon"
-    "tal\030\006 \002(\010\022 \n\reffectiveSize\030\007 \001(\0132\t.TSP.S"
-    "ize\022\030\n\020partitioningPass\030\010 \001(\r\"\222\001\n Comple"
-    "tionTokenAttachmentArchive\022*\n\005super\030\001 \002("
-    "\0132\033.TST.TokenAttachmentArchive\022\026\n\016comple"
-    "tionText\030\002 \001(\t\022\025\n\rcaretPosition\030\003 \001(\r\022\023\n"
-    "\013prefixStart\030\004 \001(\r\"\256\001\n\036HiddenStateFormul"
-    "aOwnerArchive\022%\n\010owner_id\030\001 \001(\0132\023.TSCE.C"
-    "FUUIDArchive\022/\n\017threshold_value\030\002 \003(\0132\026."
-    "TSCE.CellValueArchive\0224\n%needs_to_update"
-    "_filter_set_for_import\030\003 \001(\010:\005false\"q\n\026R"
-    "ichTextPayloadArchive\022\037\n\007storage\030\001 \002(\0132\016"
-    ".TSP.Reference\022\031\n\005range\030\002 \001(\0132\n.TSP.Rang"
-    "e\022\033\n\006cellid\030\003 \002(\0132\013.TST.CellID\"Q\n#Formul"
-    "aEqualsTokenAttachmentArchive\022*\n\005super\030\001"
-    " \002(\0132\033.TSWP.UIGraphicalAttachment\"1\n\nCel"
-    "lRegion\022#\n\013cell_ranges\030\001 \003(\0132\016.TST.CellR"
-    "ange*\327\001\n\010CellType\022\023\n\017genericCellType\020\000\022\020"
-    "\n\014spanCellType\020\001\022\022\n\016numberCellType\020\002\022\020\n\014"
-    "textCellType\020\003\022\023\n\017formulaCellType\020\004\022\020\n\014d"
-    "ateCellType\020\005\022\020\n\014boolCellType\020\006\022\024\n\020durat"
-    "ionCellType\020\007\022\030\n\024formulaErrorCellType\020\010\022"
-    "\025\n\021automaticCellType\020\t*\353\001\n\rCellValueType"
-    "\022\026\n\022emptyCellValueType\020\000\022\027\n\023numberCellVa"
-    "lueType\020\001\022\027\n\023stringCellValueType\020\002\022\031\n\025pr"
-    "ovidedCellValueType\020\003\022\025\n\021dateCellValueTy"
-    "pe\020\004\022\025\n\021boolCellValueType\020\005\022\031\n\025durationC"
-    "ellValueType\020\006\022\026\n\022errorCellValueType\020\007\022\024"
-    "\n\020richTextCellType\020\010*\256\001\n\024SelectionTypeAr"
-    "chive\022\025\n\021cellSelectionType\020\000\022\024\n\020rowSelec"
-    "tionType\020\001\022\027\n\023columnSelectionType\020\002\022\034\n\030c"
-    "ellEditingSelectionType\020\003\022\032\n\026tableNameSe"
-    "lectionType\020\004\022\026\n\022tableSelectionType\020\005*y\n"
-    "\024FillDirectionArchive\022\027\n\023kTSTFillDownArc"
-    "hive\020\001\022\025\n\021kTSTFillUpArchive\020\002\022\030\n\024kTSTFil"
-    "lRightArchive\020\003\022\027\n\023kTSTFillLeftArchive\020\004"
-    "*B\n\022MergeActionArchive\022\024\n\020mergeActionMer"
-    "ge\020\000\022\026\n\022mergeActionUnmerge\020\001*G\n\025HideShow"
-    "ActionArchive\022\026\n\022hideShowActionHide\020\000\022\026\n"
-    "\022hideShowActionShow\020\001", 13981);
+    "hive\022\016\n\006number\030\002 \002(\001\"M\n\021StringNodeArchiv"
+    "e\022)\n\005super\030\001 \002(\0132\032.TST.ExpressionNodeArc"
+    "hive\022\r\n\005value\030\002 \002(\t\"V\n\025IdentifierNodeArc"
+    "hive\022)\n\005super\030\001 \002(\0132\032.TST.ExpressionNode"
+    "Archive\022\022\n\nidentifier\030\002 \001(\t\"\\\n\020ArrayNode"
+    "Archive\022)\n\005super\030\001 \002(\0132\032.TST.ExpressionN"
+    "odeArchive\022\017\n\007columns\030\002 \001(\r\022\014\n\004rows\030\003 \001("
+    "\r\"<\n\017ListNodeArchive\022)\n\005super\030\001 \002(\0132\032.TS"
+    "T.ExpressionNodeArchive\"V\n\023OperatorNodeA"
+    "rchive\022)\n\005super\030\001 \002(\0132\032.TST.ExpressionNo"
+    "deArchive\022\024\n\014operatorChar\030\002 \002(\r\"E\n\032Postf"
+    "ixOperatorNodeArchive\022\'\n\005super\030\001 \002(\0132\030.T"
+    "ST.OperatorNodeArchive\"D\n\031PrefixOperator"
+    "NodeArchive\022\'\n\005super\030\001 \002(\0132\030.TST.Operato"
+    "rNodeArchive\"t\n\023FunctionNodeArchive\022)\n\005s"
+    "uper\030\001 \002(\0132\032.TST.ExpressionNodeArchive\022\025"
+    "\n\rfunctionIndex\030\002 \002(\r\022\033\n\023invalidFunction"
+    "Name\030\003 \001(\t\"C\n\026FunctionEndNodeArchive\022)\n\005"
+    "super\030\001 \002(\0132\032.TST.ExpressionNodeArchive\""
+    "[\n\017DateNodeArchive\022)\n\005super\030\001 \002(\0132\032.TST."
+    "ExpressionNodeArchive\022\r\n\005value\030\002 \002(\t\022\016\n\006"
+    "format\030\003 \001(\t\"\237\001\n\024ReferenceNodeArchive\022)\n"
+    "\005super\030\001 \002(\0132\032.TST.ExpressionNodeArchive"
+    "\0223\n\016rangeReference\030\002 \002(\0132\033.TSCE.RangeRef"
+    "erenceArchive\022\022\n\nstickyBits\030\003 \002(\r\022\023\n\013hos"
+    "tTableID\030\004 \001(\t\"\210\001\n\023DurationNodeArchive\022)"
+    "\n\005super\030\001 \002(\0132\032.TST.ExpressionNodeArchiv"
+    "e\022\024\n\014timeinterval\030\002 \002(\001\022\020\n\010smallest\030\003 \002("
+    "\r\022\017\n\007largest\030\004 \002(\r\022\r\n\005style\030\005 \002(\r\"\207\001\n\036Ar"
+    "gumentPlaceholderNodeArchive\022)\n\005super\030\001 "
+    "\002(\0132\032.TST.ExpressionNodeArchive\022\025\n\rfunct"
+    "ionIndex\030\002 \002(\r\022\025\n\rargumentIndex\030\003 \002(\r\022\014\n"
+    "\004mode\030\004 \001(\r\"G\n\032EmptyExpressionNodeArchiv"
+    "e\022)\n\005super\030\001 \002(\0132\032.TST.ExpressionNodeArc"
+    "hive\"\357\001\n\021LayoutHintArchive\022\017\n\007isValid\030\001 "
+    "\002(\010\022!\n\tcellRange\030\002 \002(\0132\016.TST.CellRange\022\033"
+    "\n\006hintID\030\003 \002(\0132\013.TST.CellID\022\036\n\013maximumSi"
+    "ze\030\004 \002(\0132\t.TSP.Size\022\031\n\021partitionPosition"
+    "\030\005 \002(\r\022\022\n\nhorizontal\030\006 \002(\010\022 \n\reffectiveS"
+    "ize\030\007 \001(\0132\t.TSP.Size\022\030\n\020partitioningPass"
+    "\030\010 \001(\r\"\222\001\n CompletionTokenAttachmentArch"
+    "ive\022*\n\005super\030\001 \002(\0132\033.TST.TokenAttachment"
+    "Archive\022\026\n\016completionText\030\002 \001(\t\022\025\n\rcaret"
+    "Position\030\003 \001(\r\022\023\n\013prefixStart\030\004 \001(\r\"\256\001\n\036"
+    "HiddenStateFormulaOwnerArchive\022%\n\010owner_"
+    "id\030\001 \001(\0132\023.TSCE.CFUUIDArchive\022/\n\017thresho"
+    "ld_value\030\002 \003(\0132\026.TSCE.CellValueArchive\0224"
+    "\n%needs_to_update_filter_set_for_import\030"
+    "\003 \001(\010:\005false\"q\n\026RichTextPayloadArchive\022\037"
+    "\n\007storage\030\001 \002(\0132\016.TSP.Reference\022\031\n\005range"
+    "\030\002 \001(\0132\n.TSP.Range\022\033\n\006cellid\030\003 \002(\0132\013.TST"
+    ".CellID\"Q\n#FormulaEqualsTokenAttachmentA"
+    "rchive\022*\n\005super\030\001 \002(\0132\033.TSWP.UIGraphical"
+    "Attachment\"1\n\nCellRegion\022#\n\013cell_ranges\030"
+    "\001 \003(\0132\016.TST.CellRange\"\235\005\n\017CellFillStandI"
+    "n\022\036\n\004fill\030\001 \002(\0132\020.TSD.FillArchive\022\025\n\rtyp"
+    "e_is_mixed\030\002 \001(\010\022\037\n\027color_has_been_modif"
+    "ied\030\003 \001(\010\022\026\n\016color_is_mixed\030\004 \001(\010\022%\n\035fir"
+    "st_color_has_been_modified\030\005 \001(\010\022\034\n\024firs"
+    "t_color_is_mixed\030\006 \001(\010\022$\n\034last_color_has"
+    "_been_modified\030\007 \001(\010\022\033\n\023last_color_is_mi"
+    "xed\030\010 \001(\010\022\'\n\037gradient_type_has_been_modi"
+    "fied\030\t \001(\010\022\036\n\026gradient_type_is_mixed\030\n \001"
+    "(\010\022(\n gradient_angle_has_been_modified\030\013"
+    " \001(\010\022\037\n\027gradient_angle_is_mixed\030\014 \001(\010\022$\n"
+    "\034image_data_has_been_modified\030\r \001(\010\022\033\n\023i"
+    "mage_data_is_mixed\030\016 \001(\010\022$\n\034tint_color_h"
+    "as_been_modified\030\017 \001(\010\022\033\n\023tint_color_is_"
+    "mixed\030\020 \001(\010\022\037\n\027scale_has_been_modified\030\021"
+    " \001(\010\022\026\n\016scale_is_mixed\030\022 \001(\010\022#\n\033techniqu"
+    "e_has_been_modified\030\023 \001(\010\022\032\n\022technique_i"
+    "s_mixed\030\024 \001(\010*\327\001\n\010CellType\022\023\n\017genericCel"
+    "lType\020\000\022\020\n\014spanCellType\020\001\022\022\n\016numberCellT"
+    "ype\020\002\022\020\n\014textCellType\020\003\022\023\n\017formulaCellTy"
+    "pe\020\004\022\020\n\014dateCellType\020\005\022\020\n\014boolCellType\020\006"
+    "\022\024\n\020durationCellType\020\007\022\030\n\024formulaErrorCe"
+    "llType\020\010\022\025\n\021automaticCellType\020\t*\353\001\n\rCell"
+    "ValueType\022\026\n\022emptyCellValueType\020\000\022\027\n\023num"
+    "berCellValueType\020\001\022\027\n\023stringCellValueTyp"
+    "e\020\002\022\031\n\025providedCellValueType\020\003\022\025\n\021dateCe"
+    "llValueType\020\004\022\025\n\021boolCellValueType\020\005\022\031\n\025"
+    "durationCellValueType\020\006\022\026\n\022errorCellValu"
+    "eType\020\007\022\024\n\020richTextCellType\020\010*\256\001\n\024Select"
+    "ionTypeArchive\022\025\n\021cellSelectionType\020\000\022\024\n"
+    "\020rowSelectionType\020\001\022\027\n\023columnSelectionTy"
+    "pe\020\002\022\034\n\030cellEditingSelectionType\020\003\022\032\n\026ta"
+    "bleNameSelectionType\020\004\022\026\n\022tableSelection"
+    "Type\020\005*y\n\024FillDirectionArchive\022\027\n\023kTSTFi"
+    "llDownArchive\020\001\022\025\n\021kTSTFillUpArchive\020\002\022\030"
+    "\n\024kTSTFillRightArchive\020\003\022\027\n\023kTSTFillLeft"
+    "Archive\020\004*B\n\022MergeActionArchive\022\024\n\020merge"
+    "ActionMerge\020\000\022\026\n\022mergeActionUnmerge\020\001*G\n"
+    "\025HideShowActionArchive\022\026\n\022hideShowAction"
+    "Hide\020\000\022\026\n\022hideShowActionShow\020\001", 17470);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "TSTArchives.proto", &protobuf_RegisterTypes);
   CellID::default_instance_ = new CellID();
@@ -2092,6 +2505,8 @@ void protobuf_AddDesc_TSTArchives_2eproto() {
   TileStorage_Tile::default_instance_ = new TileStorage_Tile();
   PopUpMenuModel::default_instance_ = new PopUpMenuModel();
   PopUpMenuModel_CellValue::default_instance_ = new PopUpMenuModel_CellValue();
+  ImportWarningSetArchive::default_instance_ = new ImportWarningSetArchive();
+  ImportWarningSetArchive_FormulaImportWarning::default_instance_ = new ImportWarningSetArchive_FormulaImportWarning();
   TableDataList::default_instance_ = new TableDataList();
   TableDataList_ListEntry::default_instance_ = new TableDataList_ListEntry();
   TableRBTree::default_instance_ = new TableRBTree();
@@ -2104,12 +2519,21 @@ void protobuf_AddDesc_TSTArchives_2eproto() {
   EditingStateArchive::default_instance_ = new EditingStateArchive();
   WPTableInfoArchive::default_instance_ = new WPTableInfoArchive();
   TableStyleNetworkArchive::default_instance_ = new TableStyleNetworkArchive();
+  TableSortOrderArchive::default_instance_ = new TableSortOrderArchive();
+  TableSortOrderArchive_SortRuleArchive::default_instance_ = new TableSortOrderArchive_SortRuleArchive();
+  SortRuleReferenceTrackerArchive::default_instance_ = new SortRuleReferenceTrackerArchive();
   TableModelArchive::default_instance_ = new TableModelArchive();
   DurationWrapperArchive::default_instance_ = new DurationWrapperArchive();
   Cell::default_instance_ = new Cell();
   MergeRegionMapArchive::default_instance_ = new MergeRegionMapArchive();
   CellMapArchive::default_instance_ = new CellMapArchive();
   CellMapArchive_CellMapEntry::default_instance_ = new CellMapArchive_CellMapEntry();
+  CellMapTileArchive::default_instance_ = new CellMapTileArchive();
+  CellMapTileArchive_CellMapEntry::default_instance_ = new CellMapTileArchive_CellMapEntry();
+  TiledCellMapArchive::default_instance_ = new TiledCellMapArchive();
+  PropertyMapEntryArchive::default_instance_ = new PropertyMapEntryArchive();
+  CellDiffArchive::default_instance_ = new CellDiffArchive();
+  CellDiffMapArchive::default_instance_ = new CellDiffMapArchive();
   DoubleStyleMapArchive::default_instance_ = new DoubleStyleMapArchive();
   DoubleStyleMapArchive_DoubleStyleMapEntryArchive::default_instance_ = new DoubleStyleMapArchive_DoubleStyleMapEntryArchive();
   StyleTableMapArchive::default_instance_ = new StyleTableMapArchive();
@@ -2147,6 +2571,7 @@ void protobuf_AddDesc_TSTArchives_2eproto() {
   RichTextPayloadArchive::default_instance_ = new RichTextPayloadArchive();
   FormulaEqualsTokenAttachmentArchive::default_instance_ = new FormulaEqualsTokenAttachmentArchive();
   CellRegion::default_instance_ = new CellRegion();
+  CellFillStandIn::default_instance_ = new CellFillStandIn();
   CellID::default_instance_->InitAsDefaultInstance();
   TableSize::default_instance_->InitAsDefaultInstance();
   CellRange::default_instance_->InitAsDefaultInstance();
@@ -2157,6 +2582,8 @@ void protobuf_AddDesc_TSTArchives_2eproto() {
   TileStorage_Tile::default_instance_->InitAsDefaultInstance();
   PopUpMenuModel::default_instance_->InitAsDefaultInstance();
   PopUpMenuModel_CellValue::default_instance_->InitAsDefaultInstance();
+  ImportWarningSetArchive::default_instance_->InitAsDefaultInstance();
+  ImportWarningSetArchive_FormulaImportWarning::default_instance_->InitAsDefaultInstance();
   TableDataList::default_instance_->InitAsDefaultInstance();
   TableDataList_ListEntry::default_instance_->InitAsDefaultInstance();
   TableRBTree::default_instance_->InitAsDefaultInstance();
@@ -2169,12 +2596,21 @@ void protobuf_AddDesc_TSTArchives_2eproto() {
   EditingStateArchive::default_instance_->InitAsDefaultInstance();
   WPTableInfoArchive::default_instance_->InitAsDefaultInstance();
   TableStyleNetworkArchive::default_instance_->InitAsDefaultInstance();
+  TableSortOrderArchive::default_instance_->InitAsDefaultInstance();
+  TableSortOrderArchive_SortRuleArchive::default_instance_->InitAsDefaultInstance();
+  SortRuleReferenceTrackerArchive::default_instance_->InitAsDefaultInstance();
   TableModelArchive::default_instance_->InitAsDefaultInstance();
   DurationWrapperArchive::default_instance_->InitAsDefaultInstance();
   Cell::default_instance_->InitAsDefaultInstance();
   MergeRegionMapArchive::default_instance_->InitAsDefaultInstance();
   CellMapArchive::default_instance_->InitAsDefaultInstance();
   CellMapArchive_CellMapEntry::default_instance_->InitAsDefaultInstance();
+  CellMapTileArchive::default_instance_->InitAsDefaultInstance();
+  CellMapTileArchive_CellMapEntry::default_instance_->InitAsDefaultInstance();
+  TiledCellMapArchive::default_instance_->InitAsDefaultInstance();
+  PropertyMapEntryArchive::default_instance_->InitAsDefaultInstance();
+  CellDiffArchive::default_instance_->InitAsDefaultInstance();
+  CellDiffMapArchive::default_instance_->InitAsDefaultInstance();
   DoubleStyleMapArchive::default_instance_->InitAsDefaultInstance();
   DoubleStyleMapArchive_DoubleStyleMapEntryArchive::default_instance_->InitAsDefaultInstance();
   StyleTableMapArchive::default_instance_->InitAsDefaultInstance();
@@ -2212,6 +2648,7 @@ void protobuf_AddDesc_TSTArchives_2eproto() {
   RichTextPayloadArchive::default_instance_->InitAsDefaultInstance();
   FormulaEqualsTokenAttachmentArchive::default_instance_->InitAsDefaultInstance();
   CellRegion::default_instance_->InitAsDefaultInstance();
+  CellFillStandIn::default_instance_->InitAsDefaultInstance();
   ::google::protobuf::internal::OnShutdown(&protobuf_ShutdownFile_TSTArchives_2eproto);
 }
 
@@ -5300,6 +5737,1149 @@ void PopUpMenuModel::Swap(PopUpMenuModel* other) {
 
 // ===================================================================
 
+const ::google::protobuf::EnumDescriptor* ImportWarningSetArchive_FormulaWarningType_descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return ImportWarningSetArchive_FormulaWarningType_descriptor_;
+}
+bool ImportWarningSetArchive_FormulaWarningType_IsValid(int value) {
+  switch(value) {
+    case 1:
+    case 2:
+    case 3:
+    case 4:
+    case 5:
+    case 6:
+    case 7:
+    case 8:
+    case 9:
+    case 10:
+    case 11:
+    case 12:
+      return true;
+    default:
+      return false;
+  }
+}
+
+#ifndef _MSC_VER
+const ImportWarningSetArchive_FormulaWarningType ImportWarningSetArchive::THREE_D_REFERENCE;
+const ImportWarningSetArchive_FormulaWarningType ImportWarningSetArchive::ARRAYED_FORMULA;
+const ImportWarningSetArchive_FormulaWarningType ImportWarningSetArchive::DIFFERENT_BEHAVIOR_FOR_FUNCTION;
+const ImportWarningSetArchive_FormulaWarningType ImportWarningSetArchive::ERROR_TOKEN;
+const ImportWarningSetArchive_FormulaWarningType ImportWarningSetArchive::EXTERNAL_REFERENCE;
+const ImportWarningSetArchive_FormulaWarningType ImportWarningSetArchive::NATURAL_LANGUAGE_FORMULA;
+const ImportWarningSetArchive_FormulaWarningType ImportWarningSetArchive::REFERENCE_OUT_OF_BOUNDS;
+const ImportWarningSetArchive_FormulaWarningType ImportWarningSetArchive::SHARED_FORMULA_BASE_NOT_FOUND;
+const ImportWarningSetArchive_FormulaWarningType ImportWarningSetArchive::UNKNOWN_NAME;
+const ImportWarningSetArchive_FormulaWarningType ImportWarningSetArchive::UNSUPPORTED_FORMULA;
+const ImportWarningSetArchive_FormulaWarningType ImportWarningSetArchive::UNSUPPORTED_FUNCTION;
+const ImportWarningSetArchive_FormulaWarningType ImportWarningSetArchive::UNSUPPORTED_NAME;
+const ImportWarningSetArchive_FormulaWarningType ImportWarningSetArchive::FormulaWarningType_MIN;
+const ImportWarningSetArchive_FormulaWarningType ImportWarningSetArchive::FormulaWarningType_MAX;
+const int ImportWarningSetArchive::FormulaWarningType_ARRAYSIZE;
+#endif  // _MSC_VER
+#ifndef _MSC_VER
+const int ImportWarningSetArchive_FormulaImportWarning::kFormulaWarningTypeFieldNumber;
+const int ImportWarningSetArchive_FormulaImportWarning::kOriginalFormulaFieldNumber;
+const int ImportWarningSetArchive_FormulaImportWarning::kSupplementaryTextFieldNumber;
+#endif  // !_MSC_VER
+
+ImportWarningSetArchive_FormulaImportWarning::ImportWarningSetArchive_FormulaImportWarning()
+  : ::google::protobuf::Message() {
+  SharedCtor();
+}
+
+void ImportWarningSetArchive_FormulaImportWarning::InitAsDefaultInstance() {
+}
+
+ImportWarningSetArchive_FormulaImportWarning::ImportWarningSetArchive_FormulaImportWarning(const ImportWarningSetArchive_FormulaImportWarning& from)
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  MergeFrom(from);
+}
+
+void ImportWarningSetArchive_FormulaImportWarning::SharedCtor() {
+  _cached_size_ = 0;
+  formula_warning_type_ = 1;
+  original_formula_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+  supplementary_text_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+}
+
+ImportWarningSetArchive_FormulaImportWarning::~ImportWarningSetArchive_FormulaImportWarning() {
+  SharedDtor();
+}
+
+void ImportWarningSetArchive_FormulaImportWarning::SharedDtor() {
+  if (original_formula_ != &::google::protobuf::internal::kEmptyString) {
+    delete original_formula_;
+  }
+  if (supplementary_text_ != &::google::protobuf::internal::kEmptyString) {
+    delete supplementary_text_;
+  }
+  if (this != default_instance_) {
+  }
+}
+
+void ImportWarningSetArchive_FormulaImportWarning::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* ImportWarningSetArchive_FormulaImportWarning::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return ImportWarningSetArchive_FormulaImportWarning_descriptor_;
+}
+
+const ImportWarningSetArchive_FormulaImportWarning& ImportWarningSetArchive_FormulaImportWarning::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_TSTArchives_2eproto();
+  return *default_instance_;
+}
+
+ImportWarningSetArchive_FormulaImportWarning* ImportWarningSetArchive_FormulaImportWarning::default_instance_ = NULL;
+
+ImportWarningSetArchive_FormulaImportWarning* ImportWarningSetArchive_FormulaImportWarning::New() const {
+  return new ImportWarningSetArchive_FormulaImportWarning;
+}
+
+void ImportWarningSetArchive_FormulaImportWarning::Clear() {
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    formula_warning_type_ = 1;
+    if (has_original_formula()) {
+      if (original_formula_ != &::google::protobuf::internal::kEmptyString) {
+        original_formula_->clear();
+      }
+    }
+    if (has_supplementary_text()) {
+      if (supplementary_text_ != &::google::protobuf::internal::kEmptyString) {
+        supplementary_text_->clear();
+      }
+    }
+  }
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+  mutable_unknown_fields()->Clear();
+}
+
+bool ImportWarningSetArchive_FormulaImportWarning::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!(EXPRESSION)) return false
+  ::google::protobuf::uint32 tag;
+  while ((tag = input->ReadTag()) != 0) {
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // required .TST.ImportWarningSetArchive.FormulaWarningType formula_warning_type = 1;
+      case 1: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+          int value;
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
+                 input, &value)));
+          if (::TST::ImportWarningSetArchive_FormulaWarningType_IsValid(value)) {
+            set_formula_warning_type(static_cast< ::TST::ImportWarningSetArchive_FormulaWarningType >(value));
+          } else {
+            mutable_unknown_fields()->AddVarint(1, value);
+          }
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(18)) goto parse_original_formula;
+        break;
+      }
+
+      // optional string original_formula = 2;
+      case 2: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_original_formula:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_original_formula()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+            this->original_formula().data(), this->original_formula().length(),
+            ::google::protobuf::internal::WireFormat::PARSE);
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(26)) goto parse_supplementary_text;
+        break;
+      }
+
+      // optional string supplementary_text = 3;
+      case 3: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_supplementary_text:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_supplementary_text()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+            this->supplementary_text().data(), this->supplementary_text().length(),
+            ::google::protobuf::internal::WireFormat::PARSE);
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectAtEnd()) return true;
+        break;
+      }
+
+      default: {
+      handle_uninterpreted:
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          return true;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+  return true;
+#undef DO_
+}
+
+void ImportWarningSetArchive_FormulaImportWarning::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // required .TST.ImportWarningSetArchive.FormulaWarningType formula_warning_type = 1;
+  if (has_formula_warning_type()) {
+    ::google::protobuf::internal::WireFormatLite::WriteEnum(
+      1, this->formula_warning_type(), output);
+  }
+
+  // optional string original_formula = 2;
+  if (has_original_formula()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+      this->original_formula().data(), this->original_formula().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE);
+    ::google::protobuf::internal::WireFormatLite::WriteString(
+      2, this->original_formula(), output);
+  }
+
+  // optional string supplementary_text = 3;
+  if (has_supplementary_text()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+      this->supplementary_text().data(), this->supplementary_text().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE);
+    ::google::protobuf::internal::WireFormatLite::WriteString(
+      3, this->supplementary_text(), output);
+  }
+
+  if (!unknown_fields().empty()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+}
+
+::google::protobuf::uint8* ImportWarningSetArchive_FormulaImportWarning::SerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // required .TST.ImportWarningSetArchive.FormulaWarningType formula_warning_type = 1;
+  if (has_formula_warning_type()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
+      1, this->formula_warning_type(), target);
+  }
+
+  // optional string original_formula = 2;
+  if (has_original_formula()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+      this->original_formula().data(), this->original_formula().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE);
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        2, this->original_formula(), target);
+  }
+
+  // optional string supplementary_text = 3;
+  if (has_supplementary_text()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+      this->supplementary_text().data(), this->supplementary_text().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE);
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        3, this->supplementary_text(), target);
+  }
+
+  if (!unknown_fields().empty()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  return target;
+}
+
+int ImportWarningSetArchive_FormulaImportWarning::ByteSize() const {
+  int total_size = 0;
+
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    // required .TST.ImportWarningSetArchive.FormulaWarningType formula_warning_type = 1;
+    if (has_formula_warning_type()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::EnumSize(this->formula_warning_type());
+    }
+
+    // optional string original_formula = 2;
+    if (has_original_formula()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->original_formula());
+    }
+
+    // optional string supplementary_text = 3;
+    if (has_supplementary_text()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->supplementary_text());
+    }
+
+  }
+  if (!unknown_fields().empty()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = total_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void ImportWarningSetArchive_FormulaImportWarning::MergeFrom(const ::google::protobuf::Message& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  const ImportWarningSetArchive_FormulaImportWarning* source =
+    ::google::protobuf::internal::dynamic_cast_if_available<const ImportWarningSetArchive_FormulaImportWarning*>(
+      &from);
+  if (source == NULL) {
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+    MergeFrom(*source);
+  }
+}
+
+void ImportWarningSetArchive_FormulaImportWarning::MergeFrom(const ImportWarningSetArchive_FormulaImportWarning& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (from.has_formula_warning_type()) {
+      set_formula_warning_type(from.formula_warning_type());
+    }
+    if (from.has_original_formula()) {
+      set_original_formula(from.original_formula());
+    }
+    if (from.has_supplementary_text()) {
+      set_supplementary_text(from.supplementary_text());
+    }
+  }
+  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
+}
+
+void ImportWarningSetArchive_FormulaImportWarning::CopyFrom(const ::google::protobuf::Message& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void ImportWarningSetArchive_FormulaImportWarning::CopyFrom(const ImportWarningSetArchive_FormulaImportWarning& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool ImportWarningSetArchive_FormulaImportWarning::IsInitialized() const {
+  if ((_has_bits_[0] & 0x00000001) != 0x00000001) return false;
+
+  return true;
+}
+
+void ImportWarningSetArchive_FormulaImportWarning::Swap(ImportWarningSetArchive_FormulaImportWarning* other) {
+  if (other != this) {
+    std::swap(formula_warning_type_, other->formula_warning_type_);
+    std::swap(original_formula_, other->original_formula_);
+    std::swap(supplementary_text_, other->supplementary_text_);
+    std::swap(_has_bits_[0], other->_has_bits_[0]);
+    _unknown_fields_.Swap(&other->_unknown_fields_);
+    std::swap(_cached_size_, other->_cached_size_);
+  }
+}
+
+::google::protobuf::Metadata ImportWarningSetArchive_FormulaImportWarning::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = ImportWarningSetArchive_FormulaImportWarning_descriptor_;
+  metadata.reflection = ImportWarningSetArchive_FormulaImportWarning_reflection_;
+  return metadata;
+}
+
+
+// -------------------------------------------------------------------
+
+#ifndef _MSC_VER
+const int ImportWarningSetArchive::kFormulaImportWarningFieldNumber;
+const int ImportWarningSetArchive::kCondFormatAboveAvgEqualAvgFieldNumber;
+const int ImportWarningSetArchive::kCondFormatAboveAvgStdDevFieldNumber;
+const int ImportWarningSetArchive::kCondFormatComplexFormulaFieldNumber;
+const int ImportWarningSetArchive::kCondFormatContainsErrorsFieldNumber;
+const int ImportWarningSetArchive::kCondFormatExprFieldNumber;
+const int ImportWarningSetArchive::kCondFormatNotContainsErrorsFieldNumber;
+const int ImportWarningSetArchive::kCondFormatParametersNotAllSameTypeFieldNumber;
+const int ImportWarningSetArchive::kCondFormatStopIfTrueFieldNumber;
+const int ImportWarningSetArchive::kCondFormatUnsupportedOperatorFieldNumber;
+const int ImportWarningSetArchive::kCondFormatUnsupportedStylingFieldNumber;
+const int ImportWarningSetArchive::kCondFormatUnsupportedTimePeriodFieldNumber;
+const int ImportWarningSetArchive::kErrorCellWithNoFormulaFieldNumber;
+const int ImportWarningSetArchive::kUnsupportedCondFormatFieldNumber;
+const int ImportWarningSetArchive::kOriginalDataFormatFieldNumber;
+#endif  // !_MSC_VER
+
+ImportWarningSetArchive::ImportWarningSetArchive()
+  : ::google::protobuf::Message() {
+  SharedCtor();
+}
+
+void ImportWarningSetArchive::InitAsDefaultInstance() {
+  formula_import_warning_ = const_cast< ::TST::ImportWarningSetArchive_FormulaImportWarning*>(&::TST::ImportWarningSetArchive_FormulaImportWarning::default_instance());
+}
+
+ImportWarningSetArchive::ImportWarningSetArchive(const ImportWarningSetArchive& from)
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  MergeFrom(from);
+}
+
+void ImportWarningSetArchive::SharedCtor() {
+  _cached_size_ = 0;
+  formula_import_warning_ = NULL;
+  cond_format_above_avg_equal_avg_ = false;
+  cond_format_above_avg_std_dev_ = false;
+  cond_format_complex_formula_ = false;
+  cond_format_contains_errors_ = false;
+  cond_format_expr_ = false;
+  cond_format_not_contains_errors_ = false;
+  cond_format_parameters_not_all_same_type_ = false;
+  cond_format_stop_if_true_ = false;
+  cond_format_unsupported_operator_ = false;
+  cond_format_unsupported_styling_ = false;
+  cond_format_unsupported_time_period_ = false;
+  error_cell_with_no_formula_ = false;
+  unsupported_cond_format_ = false;
+  original_data_format_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+}
+
+ImportWarningSetArchive::~ImportWarningSetArchive() {
+  SharedDtor();
+}
+
+void ImportWarningSetArchive::SharedDtor() {
+  if (original_data_format_ != &::google::protobuf::internal::kEmptyString) {
+    delete original_data_format_;
+  }
+  if (this != default_instance_) {
+    delete formula_import_warning_;
+  }
+}
+
+void ImportWarningSetArchive::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* ImportWarningSetArchive::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return ImportWarningSetArchive_descriptor_;
+}
+
+const ImportWarningSetArchive& ImportWarningSetArchive::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_TSTArchives_2eproto();
+  return *default_instance_;
+}
+
+ImportWarningSetArchive* ImportWarningSetArchive::default_instance_ = NULL;
+
+ImportWarningSetArchive* ImportWarningSetArchive::New() const {
+  return new ImportWarningSetArchive;
+}
+
+void ImportWarningSetArchive::Clear() {
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (has_formula_import_warning()) {
+      if (formula_import_warning_ != NULL) formula_import_warning_->::TST::ImportWarningSetArchive_FormulaImportWarning::Clear();
+    }
+    cond_format_above_avg_equal_avg_ = false;
+    cond_format_above_avg_std_dev_ = false;
+    cond_format_complex_formula_ = false;
+    cond_format_contains_errors_ = false;
+    cond_format_expr_ = false;
+    cond_format_not_contains_errors_ = false;
+    cond_format_parameters_not_all_same_type_ = false;
+  }
+  if (_has_bits_[8 / 32] & (0xffu << (8 % 32))) {
+    cond_format_stop_if_true_ = false;
+    cond_format_unsupported_operator_ = false;
+    cond_format_unsupported_styling_ = false;
+    cond_format_unsupported_time_period_ = false;
+    error_cell_with_no_formula_ = false;
+    unsupported_cond_format_ = false;
+    if (has_original_data_format()) {
+      if (original_data_format_ != &::google::protobuf::internal::kEmptyString) {
+        original_data_format_->clear();
+      }
+    }
+  }
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+  mutable_unknown_fields()->Clear();
+}
+
+bool ImportWarningSetArchive::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!(EXPRESSION)) return false
+  ::google::protobuf::uint32 tag;
+  while ((tag = input->ReadTag()) != 0) {
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // optional .TST.ImportWarningSetArchive.FormulaImportWarning formula_import_warning = 1;
+      case 1: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_formula_import_warning()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(16)) goto parse_cond_format_above_avg_equal_avg;
+        break;
+      }
+
+      // optional bool cond_format_above_avg_equal_avg = 2 [default = false];
+      case 2: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_cond_format_above_avg_equal_avg:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &cond_format_above_avg_equal_avg_)));
+          set_has_cond_format_above_avg_equal_avg();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(24)) goto parse_cond_format_above_avg_std_dev;
+        break;
+      }
+
+      // optional bool cond_format_above_avg_std_dev = 3 [default = false];
+      case 3: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_cond_format_above_avg_std_dev:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &cond_format_above_avg_std_dev_)));
+          set_has_cond_format_above_avg_std_dev();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(32)) goto parse_cond_format_complex_formula;
+        break;
+      }
+
+      // optional bool cond_format_complex_formula = 4 [default = false];
+      case 4: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_cond_format_complex_formula:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &cond_format_complex_formula_)));
+          set_has_cond_format_complex_formula();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(40)) goto parse_cond_format_contains_errors;
+        break;
+      }
+
+      // optional bool cond_format_contains_errors = 5 [default = false];
+      case 5: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_cond_format_contains_errors:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &cond_format_contains_errors_)));
+          set_has_cond_format_contains_errors();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(48)) goto parse_cond_format_expr;
+        break;
+      }
+
+      // optional bool cond_format_expr = 6 [default = false];
+      case 6: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_cond_format_expr:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &cond_format_expr_)));
+          set_has_cond_format_expr();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(56)) goto parse_cond_format_not_contains_errors;
+        break;
+      }
+
+      // optional bool cond_format_not_contains_errors = 7 [default = false];
+      case 7: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_cond_format_not_contains_errors:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &cond_format_not_contains_errors_)));
+          set_has_cond_format_not_contains_errors();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(64)) goto parse_cond_format_parameters_not_all_same_type;
+        break;
+      }
+
+      // optional bool cond_format_parameters_not_all_same_type = 8 [default = false];
+      case 8: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_cond_format_parameters_not_all_same_type:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &cond_format_parameters_not_all_same_type_)));
+          set_has_cond_format_parameters_not_all_same_type();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(72)) goto parse_cond_format_stop_if_true;
+        break;
+      }
+
+      // optional bool cond_format_stop_if_true = 9 [default = false];
+      case 9: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_cond_format_stop_if_true:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &cond_format_stop_if_true_)));
+          set_has_cond_format_stop_if_true();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(80)) goto parse_cond_format_unsupported_operator;
+        break;
+      }
+
+      // optional bool cond_format_unsupported_operator = 10 [default = false];
+      case 10: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_cond_format_unsupported_operator:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &cond_format_unsupported_operator_)));
+          set_has_cond_format_unsupported_operator();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(88)) goto parse_cond_format_unsupported_styling;
+        break;
+      }
+
+      // optional bool cond_format_unsupported_styling = 11 [default = false];
+      case 11: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_cond_format_unsupported_styling:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &cond_format_unsupported_styling_)));
+          set_has_cond_format_unsupported_styling();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(96)) goto parse_cond_format_unsupported_time_period;
+        break;
+      }
+
+      // optional bool cond_format_unsupported_time_period = 12 [default = false];
+      case 12: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_cond_format_unsupported_time_period:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &cond_format_unsupported_time_period_)));
+          set_has_cond_format_unsupported_time_period();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(104)) goto parse_error_cell_with_no_formula;
+        break;
+      }
+
+      // optional bool error_cell_with_no_formula = 13 [default = false];
+      case 13: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_error_cell_with_no_formula:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &error_cell_with_no_formula_)));
+          set_has_error_cell_with_no_formula();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(112)) goto parse_unsupported_cond_format;
+        break;
+      }
+
+      // optional bool unsupported_cond_format = 14 [default = false];
+      case 14: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_unsupported_cond_format:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &unsupported_cond_format_)));
+          set_has_unsupported_cond_format();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(122)) goto parse_original_data_format;
+        break;
+      }
+
+      // optional string original_data_format = 15;
+      case 15: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_original_data_format:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_original_data_format()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+            this->original_data_format().data(), this->original_data_format().length(),
+            ::google::protobuf::internal::WireFormat::PARSE);
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectAtEnd()) return true;
+        break;
+      }
+
+      default: {
+      handle_uninterpreted:
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          return true;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+  return true;
+#undef DO_
+}
+
+void ImportWarningSetArchive::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // optional .TST.ImportWarningSetArchive.FormulaImportWarning formula_import_warning = 1;
+  if (has_formula_import_warning()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, this->formula_import_warning(), output);
+  }
+
+  // optional bool cond_format_above_avg_equal_avg = 2 [default = false];
+  if (has_cond_format_above_avg_equal_avg()) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(2, this->cond_format_above_avg_equal_avg(), output);
+  }
+
+  // optional bool cond_format_above_avg_std_dev = 3 [default = false];
+  if (has_cond_format_above_avg_std_dev()) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(3, this->cond_format_above_avg_std_dev(), output);
+  }
+
+  // optional bool cond_format_complex_formula = 4 [default = false];
+  if (has_cond_format_complex_formula()) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(4, this->cond_format_complex_formula(), output);
+  }
+
+  // optional bool cond_format_contains_errors = 5 [default = false];
+  if (has_cond_format_contains_errors()) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(5, this->cond_format_contains_errors(), output);
+  }
+
+  // optional bool cond_format_expr = 6 [default = false];
+  if (has_cond_format_expr()) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(6, this->cond_format_expr(), output);
+  }
+
+  // optional bool cond_format_not_contains_errors = 7 [default = false];
+  if (has_cond_format_not_contains_errors()) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(7, this->cond_format_not_contains_errors(), output);
+  }
+
+  // optional bool cond_format_parameters_not_all_same_type = 8 [default = false];
+  if (has_cond_format_parameters_not_all_same_type()) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(8, this->cond_format_parameters_not_all_same_type(), output);
+  }
+
+  // optional bool cond_format_stop_if_true = 9 [default = false];
+  if (has_cond_format_stop_if_true()) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(9, this->cond_format_stop_if_true(), output);
+  }
+
+  // optional bool cond_format_unsupported_operator = 10 [default = false];
+  if (has_cond_format_unsupported_operator()) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(10, this->cond_format_unsupported_operator(), output);
+  }
+
+  // optional bool cond_format_unsupported_styling = 11 [default = false];
+  if (has_cond_format_unsupported_styling()) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(11, this->cond_format_unsupported_styling(), output);
+  }
+
+  // optional bool cond_format_unsupported_time_period = 12 [default = false];
+  if (has_cond_format_unsupported_time_period()) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(12, this->cond_format_unsupported_time_period(), output);
+  }
+
+  // optional bool error_cell_with_no_formula = 13 [default = false];
+  if (has_error_cell_with_no_formula()) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(13, this->error_cell_with_no_formula(), output);
+  }
+
+  // optional bool unsupported_cond_format = 14 [default = false];
+  if (has_unsupported_cond_format()) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(14, this->unsupported_cond_format(), output);
+  }
+
+  // optional string original_data_format = 15;
+  if (has_original_data_format()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+      this->original_data_format().data(), this->original_data_format().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE);
+    ::google::protobuf::internal::WireFormatLite::WriteString(
+      15, this->original_data_format(), output);
+  }
+
+  if (!unknown_fields().empty()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+}
+
+::google::protobuf::uint8* ImportWarningSetArchive::SerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // optional .TST.ImportWarningSetArchive.FormulaImportWarning formula_import_warning = 1;
+  if (has_formula_import_warning()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        1, this->formula_import_warning(), target);
+  }
+
+  // optional bool cond_format_above_avg_equal_avg = 2 [default = false];
+  if (has_cond_format_above_avg_equal_avg()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(2, this->cond_format_above_avg_equal_avg(), target);
+  }
+
+  // optional bool cond_format_above_avg_std_dev = 3 [default = false];
+  if (has_cond_format_above_avg_std_dev()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(3, this->cond_format_above_avg_std_dev(), target);
+  }
+
+  // optional bool cond_format_complex_formula = 4 [default = false];
+  if (has_cond_format_complex_formula()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(4, this->cond_format_complex_formula(), target);
+  }
+
+  // optional bool cond_format_contains_errors = 5 [default = false];
+  if (has_cond_format_contains_errors()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(5, this->cond_format_contains_errors(), target);
+  }
+
+  // optional bool cond_format_expr = 6 [default = false];
+  if (has_cond_format_expr()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(6, this->cond_format_expr(), target);
+  }
+
+  // optional bool cond_format_not_contains_errors = 7 [default = false];
+  if (has_cond_format_not_contains_errors()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(7, this->cond_format_not_contains_errors(), target);
+  }
+
+  // optional bool cond_format_parameters_not_all_same_type = 8 [default = false];
+  if (has_cond_format_parameters_not_all_same_type()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(8, this->cond_format_parameters_not_all_same_type(), target);
+  }
+
+  // optional bool cond_format_stop_if_true = 9 [default = false];
+  if (has_cond_format_stop_if_true()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(9, this->cond_format_stop_if_true(), target);
+  }
+
+  // optional bool cond_format_unsupported_operator = 10 [default = false];
+  if (has_cond_format_unsupported_operator()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(10, this->cond_format_unsupported_operator(), target);
+  }
+
+  // optional bool cond_format_unsupported_styling = 11 [default = false];
+  if (has_cond_format_unsupported_styling()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(11, this->cond_format_unsupported_styling(), target);
+  }
+
+  // optional bool cond_format_unsupported_time_period = 12 [default = false];
+  if (has_cond_format_unsupported_time_period()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(12, this->cond_format_unsupported_time_period(), target);
+  }
+
+  // optional bool error_cell_with_no_formula = 13 [default = false];
+  if (has_error_cell_with_no_formula()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(13, this->error_cell_with_no_formula(), target);
+  }
+
+  // optional bool unsupported_cond_format = 14 [default = false];
+  if (has_unsupported_cond_format()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(14, this->unsupported_cond_format(), target);
+  }
+
+  // optional string original_data_format = 15;
+  if (has_original_data_format()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+      this->original_data_format().data(), this->original_data_format().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE);
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        15, this->original_data_format(), target);
+  }
+
+  if (!unknown_fields().empty()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  return target;
+}
+
+int ImportWarningSetArchive::ByteSize() const {
+  int total_size = 0;
+
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    // optional .TST.ImportWarningSetArchive.FormulaImportWarning formula_import_warning = 1;
+    if (has_formula_import_warning()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->formula_import_warning());
+    }
+
+    // optional bool cond_format_above_avg_equal_avg = 2 [default = false];
+    if (has_cond_format_above_avg_equal_avg()) {
+      total_size += 1 + 1;
+    }
+
+    // optional bool cond_format_above_avg_std_dev = 3 [default = false];
+    if (has_cond_format_above_avg_std_dev()) {
+      total_size += 1 + 1;
+    }
+
+    // optional bool cond_format_complex_formula = 4 [default = false];
+    if (has_cond_format_complex_formula()) {
+      total_size += 1 + 1;
+    }
+
+    // optional bool cond_format_contains_errors = 5 [default = false];
+    if (has_cond_format_contains_errors()) {
+      total_size += 1 + 1;
+    }
+
+    // optional bool cond_format_expr = 6 [default = false];
+    if (has_cond_format_expr()) {
+      total_size += 1 + 1;
+    }
+
+    // optional bool cond_format_not_contains_errors = 7 [default = false];
+    if (has_cond_format_not_contains_errors()) {
+      total_size += 1 + 1;
+    }
+
+    // optional bool cond_format_parameters_not_all_same_type = 8 [default = false];
+    if (has_cond_format_parameters_not_all_same_type()) {
+      total_size += 1 + 1;
+    }
+
+  }
+  if (_has_bits_[8 / 32] & (0xffu << (8 % 32))) {
+    // optional bool cond_format_stop_if_true = 9 [default = false];
+    if (has_cond_format_stop_if_true()) {
+      total_size += 1 + 1;
+    }
+
+    // optional bool cond_format_unsupported_operator = 10 [default = false];
+    if (has_cond_format_unsupported_operator()) {
+      total_size += 1 + 1;
+    }
+
+    // optional bool cond_format_unsupported_styling = 11 [default = false];
+    if (has_cond_format_unsupported_styling()) {
+      total_size += 1 + 1;
+    }
+
+    // optional bool cond_format_unsupported_time_period = 12 [default = false];
+    if (has_cond_format_unsupported_time_period()) {
+      total_size += 1 + 1;
+    }
+
+    // optional bool error_cell_with_no_formula = 13 [default = false];
+    if (has_error_cell_with_no_formula()) {
+      total_size += 1 + 1;
+    }
+
+    // optional bool unsupported_cond_format = 14 [default = false];
+    if (has_unsupported_cond_format()) {
+      total_size += 1 + 1;
+    }
+
+    // optional string original_data_format = 15;
+    if (has_original_data_format()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->original_data_format());
+    }
+
+  }
+  if (!unknown_fields().empty()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = total_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void ImportWarningSetArchive::MergeFrom(const ::google::protobuf::Message& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  const ImportWarningSetArchive* source =
+    ::google::protobuf::internal::dynamic_cast_if_available<const ImportWarningSetArchive*>(
+      &from);
+  if (source == NULL) {
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+    MergeFrom(*source);
+  }
+}
+
+void ImportWarningSetArchive::MergeFrom(const ImportWarningSetArchive& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (from.has_formula_import_warning()) {
+      mutable_formula_import_warning()->::TST::ImportWarningSetArchive_FormulaImportWarning::MergeFrom(from.formula_import_warning());
+    }
+    if (from.has_cond_format_above_avg_equal_avg()) {
+      set_cond_format_above_avg_equal_avg(from.cond_format_above_avg_equal_avg());
+    }
+    if (from.has_cond_format_above_avg_std_dev()) {
+      set_cond_format_above_avg_std_dev(from.cond_format_above_avg_std_dev());
+    }
+    if (from.has_cond_format_complex_formula()) {
+      set_cond_format_complex_formula(from.cond_format_complex_formula());
+    }
+    if (from.has_cond_format_contains_errors()) {
+      set_cond_format_contains_errors(from.cond_format_contains_errors());
+    }
+    if (from.has_cond_format_expr()) {
+      set_cond_format_expr(from.cond_format_expr());
+    }
+    if (from.has_cond_format_not_contains_errors()) {
+      set_cond_format_not_contains_errors(from.cond_format_not_contains_errors());
+    }
+    if (from.has_cond_format_parameters_not_all_same_type()) {
+      set_cond_format_parameters_not_all_same_type(from.cond_format_parameters_not_all_same_type());
+    }
+  }
+  if (from._has_bits_[8 / 32] & (0xffu << (8 % 32))) {
+    if (from.has_cond_format_stop_if_true()) {
+      set_cond_format_stop_if_true(from.cond_format_stop_if_true());
+    }
+    if (from.has_cond_format_unsupported_operator()) {
+      set_cond_format_unsupported_operator(from.cond_format_unsupported_operator());
+    }
+    if (from.has_cond_format_unsupported_styling()) {
+      set_cond_format_unsupported_styling(from.cond_format_unsupported_styling());
+    }
+    if (from.has_cond_format_unsupported_time_period()) {
+      set_cond_format_unsupported_time_period(from.cond_format_unsupported_time_period());
+    }
+    if (from.has_error_cell_with_no_formula()) {
+      set_error_cell_with_no_formula(from.error_cell_with_no_formula());
+    }
+    if (from.has_unsupported_cond_format()) {
+      set_unsupported_cond_format(from.unsupported_cond_format());
+    }
+    if (from.has_original_data_format()) {
+      set_original_data_format(from.original_data_format());
+    }
+  }
+  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
+}
+
+void ImportWarningSetArchive::CopyFrom(const ::google::protobuf::Message& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void ImportWarningSetArchive::CopyFrom(const ImportWarningSetArchive& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool ImportWarningSetArchive::IsInitialized() const {
+
+  if (has_formula_import_warning()) {
+    if (!this->formula_import_warning().IsInitialized()) return false;
+  }
+  return true;
+}
+
+void ImportWarningSetArchive::Swap(ImportWarningSetArchive* other) {
+  if (other != this) {
+    std::swap(formula_import_warning_, other->formula_import_warning_);
+    std::swap(cond_format_above_avg_equal_avg_, other->cond_format_above_avg_equal_avg_);
+    std::swap(cond_format_above_avg_std_dev_, other->cond_format_above_avg_std_dev_);
+    std::swap(cond_format_complex_formula_, other->cond_format_complex_formula_);
+    std::swap(cond_format_contains_errors_, other->cond_format_contains_errors_);
+    std::swap(cond_format_expr_, other->cond_format_expr_);
+    std::swap(cond_format_not_contains_errors_, other->cond_format_not_contains_errors_);
+    std::swap(cond_format_parameters_not_all_same_type_, other->cond_format_parameters_not_all_same_type_);
+    std::swap(cond_format_stop_if_true_, other->cond_format_stop_if_true_);
+    std::swap(cond_format_unsupported_operator_, other->cond_format_unsupported_operator_);
+    std::swap(cond_format_unsupported_styling_, other->cond_format_unsupported_styling_);
+    std::swap(cond_format_unsupported_time_period_, other->cond_format_unsupported_time_period_);
+    std::swap(error_cell_with_no_formula_, other->error_cell_with_no_formula_);
+    std::swap(unsupported_cond_format_, other->unsupported_cond_format_);
+    std::swap(original_data_format_, other->original_data_format_);
+    std::swap(_has_bits_[0], other->_has_bits_[0]);
+    _unknown_fields_.Swap(&other->_unknown_fields_);
+    std::swap(_cached_size_, other->_cached_size_);
+  }
+}
+
+::google::protobuf::Metadata ImportWarningSetArchive::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = ImportWarningSetArchive_descriptor_;
+  metadata.reflection = ImportWarningSetArchive_reflection_;
+  return metadata;
+}
+
+
+// ===================================================================
+
 const ::google::protobuf::EnumDescriptor* TableDataList_ListType_descriptor() {
   protobuf_AssignDescriptorsOnce();
   return TableDataList_ListType_descriptor_;
@@ -5316,6 +6896,7 @@ bool TableDataList_ListType_IsValid(int value) {
     case 8:
     case 9:
     case 10:
+    case 11:
       return true;
     default:
       return false;
@@ -5333,6 +6914,7 @@ const TableDataList_ListType TableDataList::MULTIPLE_CHOICE_LIST_FORMAT;
 const TableDataList_ListType TableDataList::RICH_TEXT_PAYLOAD;
 const TableDataList_ListType TableDataList::CONDITIONAL_STYLE;
 const TableDataList_ListType TableDataList::COMMENT_STORAGE;
+const TableDataList_ListType TableDataList::IMPORT_WARNING;
 const TableDataList_ListType TableDataList::ListType_MIN;
 const TableDataList_ListType TableDataList::ListType_MAX;
 const int TableDataList::ListType_ARRAYSIZE;
@@ -5348,6 +6930,7 @@ const int TableDataList_ListEntry::kRegionFieldNumber;
 const int TableDataList_ListEntry::kCustomFormatFieldNumber;
 const int TableDataList_ListEntry::kRichTextPayloadFieldNumber;
 const int TableDataList_ListEntry::kCommentStorageFieldNumber;
+const int TableDataList_ListEntry::kImportWarningSetFieldNumber;
 #endif  // !_MSC_VER
 
 TableDataList_ListEntry::TableDataList_ListEntry()
@@ -5363,6 +6946,7 @@ void TableDataList_ListEntry::InitAsDefaultInstance() {
   custom_format_ = const_cast< ::TSK::CustomFormatArchive*>(&::TSK::CustomFormatArchive::default_instance());
   richtextpayload_ = const_cast< ::TSP::Reference*>(&::TSP::Reference::default_instance());
   comment_storage_ = const_cast< ::TSP::Reference*>(&::TSP::Reference::default_instance());
+  import_warning_set_ = const_cast< ::TST::ImportWarningSetArchive*>(&::TST::ImportWarningSetArchive::default_instance());
 }
 
 TableDataList_ListEntry::TableDataList_ListEntry(const TableDataList_ListEntry& from)
@@ -5383,6 +6967,7 @@ void TableDataList_ListEntry::SharedCtor() {
   custom_format_ = NULL;
   richtextpayload_ = NULL;
   comment_storage_ = NULL;
+  import_warning_set_ = NULL;
   ::memset(_has_bits_, 0, sizeof(_has_bits_));
 }
 
@@ -5402,6 +6987,7 @@ void TableDataList_ListEntry::SharedDtor() {
     delete custom_format_;
     delete richtextpayload_;
     delete comment_storage_;
+    delete import_warning_set_;
   }
 }
 
@@ -5457,6 +7043,9 @@ void TableDataList_ListEntry::Clear() {
     }
     if (has_comment_storage()) {
       if (comment_storage_ != NULL) comment_storage_->::TSP::Reference::Clear();
+    }
+    if (has_import_warning_set()) {
+      if (import_warning_set_ != NULL) import_warning_set_->::TST::ImportWarningSetArchive::Clear();
     }
   }
   ::memset(_has_bits_, 0, sizeof(_has_bits_));
@@ -5611,6 +7200,20 @@ bool TableDataList_ListEntry::MergePartialFromCodedStream(
         } else {
           goto handle_uninterpreted;
         }
+        if (input->ExpectTag(90)) goto parse_import_warning_set;
+        break;
+      }
+
+      // optional .TST.ImportWarningSetArchive import_warning_set = 11;
+      case 11: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_import_warning_set:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_import_warning_set()));
+        } else {
+          goto handle_uninterpreted;
+        }
         if (input->ExpectAtEnd()) return true;
         break;
       }
@@ -5694,6 +7297,12 @@ void TableDataList_ListEntry::SerializeWithCachedSizes(
       10, this->comment_storage(), output);
   }
 
+  // optional .TST.ImportWarningSetArchive import_warning_set = 11;
+  if (has_import_warning_set()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      11, this->import_warning_set(), output);
+  }
+
   if (!unknown_fields().empty()) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         unknown_fields(), output);
@@ -5769,6 +7378,13 @@ void TableDataList_ListEntry::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormatLite::
       WriteMessageNoVirtualToArray(
         10, this->comment_storage(), target);
+  }
+
+  // optional .TST.ImportWarningSetArchive import_warning_set = 11;
+  if (has_import_warning_set()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        11, this->import_warning_set(), target);
   }
 
   if (!unknown_fields().empty()) {
@@ -5854,6 +7470,13 @@ int TableDataList_ListEntry::ByteSize() const {
           this->comment_storage());
     }
 
+    // optional .TST.ImportWarningSetArchive import_warning_set = 11;
+    if (has_import_warning_set()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->import_warning_set());
+    }
+
   }
   if (!unknown_fields().empty()) {
     total_size +=
@@ -5913,6 +7536,9 @@ void TableDataList_ListEntry::MergeFrom(const TableDataList_ListEntry& from) {
     if (from.has_comment_storage()) {
       mutable_comment_storage()->::TSP::Reference::MergeFrom(from.comment_storage());
     }
+    if (from.has_import_warning_set()) {
+      mutable_import_warning_set()->::TST::ImportWarningSetArchive::MergeFrom(from.import_warning_set());
+    }
   }
   mutable_unknown_fields()->MergeFrom(from.unknown_fields());
 }
@@ -5953,6 +7579,9 @@ bool TableDataList_ListEntry::IsInitialized() const {
   if (has_comment_storage()) {
     if (!this->comment_storage().IsInitialized()) return false;
   }
+  if (has_import_warning_set()) {
+    if (!this->import_warning_set().IsInitialized()) return false;
+  }
   return true;
 }
 
@@ -5968,6 +7597,7 @@ void TableDataList_ListEntry::Swap(TableDataList_ListEntry* other) {
     std::swap(custom_format_, other->custom_format_);
     std::swap(richtextpayload_, other->richtextpayload_);
     std::swap(comment_storage_, other->comment_storage_);
+    std::swap(import_warning_set_, other->import_warning_set_);
     std::swap(_has_bits_[0], other->_has_bits_[0]);
     _unknown_fields_.Swap(&other->_unknown_fields_);
     std::swap(_cached_size_, other->_cached_size_);
@@ -7685,6 +9315,7 @@ const int DataStore::kStorageVersionFieldNumber;
 const int DataStore::kRichTextPayloadTableFieldNumber;
 const int DataStore::kConditionalstyletableFieldNumber;
 const int DataStore::kCommentStorageTableFieldNumber;
+const int DataStore::kImportWarningSetTableFieldNumber;
 #endif  // !_MSC_VER
 
 DataStore::DataStore()
@@ -7709,6 +9340,7 @@ void DataStore::InitAsDefaultInstance() {
   richtextpayloadtable_ = const_cast< ::TSP::Reference*>(&::TSP::Reference::default_instance());
   conditionalstyletable_ = const_cast< ::TSP::Reference*>(&::TSP::Reference::default_instance());
   commentstoragetable_ = const_cast< ::TSP::Reference*>(&::TSP::Reference::default_instance());
+  importwarningsettable_ = const_cast< ::TSP::Reference*>(&::TSP::Reference::default_instance());
 }
 
 DataStore::DataStore(const DataStore& from)
@@ -7738,6 +9370,7 @@ void DataStore::SharedCtor() {
   richtextpayloadtable_ = NULL;
   conditionalstyletable_ = NULL;
   commentstoragetable_ = NULL;
+  importwarningsettable_ = NULL;
   ::memset(_has_bits_, 0, sizeof(_has_bits_));
 }
 
@@ -7763,6 +9396,7 @@ void DataStore::SharedDtor() {
     delete richtextpayloadtable_;
     delete conditionalstyletable_;
     delete commentstoragetable_;
+    delete importwarningsettable_;
   }
 }
 
@@ -7843,6 +9477,9 @@ void DataStore::Clear() {
     }
     if (has_commentstoragetable()) {
       if (commentstoragetable_ != NULL) commentstoragetable_->::TSP::Reference::Clear();
+    }
+    if (has_importwarningsettable()) {
+      if (importwarningsettable_ != NULL) importwarningsettable_->::TSP::Reference::Clear();
     }
   }
   ::memset(_has_bits_, 0, sizeof(_has_bits_));
@@ -8122,6 +9759,20 @@ bool DataStore::MergePartialFromCodedStream(
         } else {
           goto handle_uninterpreted;
         }
+        if (input->ExpectTag(162)) goto parse_importWarningSetTable;
+        break;
+      }
+
+      // optional .TSP.Reference importWarningSetTable = 20;
+      case 20: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_importWarningSetTable:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_importwarningsettable()));
+        } else {
+          goto handle_uninterpreted;
+        }
         if (input->ExpectAtEnd()) return true;
         break;
       }
@@ -8253,6 +9904,12 @@ void DataStore::SerializeWithCachedSizes(
   if (has_commentstoragetable()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
       19, this->commentstoragetable(), output);
+  }
+
+  // optional .TSP.Reference importWarningSetTable = 20;
+  if (has_importwarningsettable()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      20, this->importwarningsettable(), output);
   }
 
   if (!unknown_fields().empty()) {
@@ -8388,6 +10045,13 @@ void DataStore::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormatLite::
       WriteMessageNoVirtualToArray(
         19, this->commentstoragetable(), target);
+  }
+
+  // optional .TSP.Reference importWarningSetTable = 20;
+  if (has_importwarningsettable()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        20, this->importwarningsettable(), target);
   }
 
   if (!unknown_fields().empty()) {
@@ -8538,6 +10202,13 @@ int DataStore::ByteSize() const {
           this->commentstoragetable());
     }
 
+    // optional .TSP.Reference importWarningSetTable = 20;
+    if (has_importwarningsettable()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->importwarningsettable());
+    }
+
   }
   if (!unknown_fields().empty()) {
     total_size +=
@@ -8626,6 +10297,9 @@ void DataStore::MergeFrom(const DataStore& from) {
     if (from.has_commentstoragetable()) {
       mutable_commentstoragetable()->::TSP::Reference::MergeFrom(from.commentstoragetable());
     }
+    if (from.has_importwarningsettable()) {
+      mutable_importwarningsettable()->::TSP::Reference::MergeFrom(from.importwarningsettable());
+    }
   }
   mutable_unknown_fields()->MergeFrom(from.unknown_fields());
 }
@@ -8693,6 +10367,9 @@ bool DataStore::IsInitialized() const {
   if (has_commentstoragetable()) {
     if (!this->commentstoragetable().IsInitialized()) return false;
   }
+  if (has_importwarningsettable()) {
+    if (!this->importwarningsettable().IsInitialized()) return false;
+  }
   return true;
 }
 
@@ -8717,6 +10394,7 @@ void DataStore::Swap(DataStore* other) {
     std::swap(richtextpayloadtable_, other->richtextpayloadtable_);
     std::swap(conditionalstyletable_, other->conditionalstyletable_);
     std::swap(commentstoragetable_, other->commentstoragetable_);
+    std::swap(importwarningsettable_, other->importwarningsettable_);
     std::swap(_has_bits_[0], other->_has_bits_[0]);
     _unknown_fields_.Swap(&other->_unknown_fields_);
     std::swap(_cached_size_, other->_cached_size_);
@@ -10550,6 +12228,778 @@ void TableStyleNetworkArchive::Swap(TableStyleNetworkArchive* other) {
 
 // ===================================================================
 
+const ::google::protobuf::EnumDescriptor* TableSortOrderArchive_SortType_descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return TableSortOrderArchive_SortType_descriptor_;
+}
+bool TableSortOrderArchive_SortType_IsValid(int value) {
+  switch(value) {
+    case 0:
+    case 1:
+      return true;
+    default:
+      return false;
+  }
+}
+
+#ifndef _MSC_VER
+const TableSortOrderArchive_SortType TableSortOrderArchive::entire_table;
+const TableSortOrderArchive_SortType TableSortOrderArchive::row_range;
+const TableSortOrderArchive_SortType TableSortOrderArchive::SortType_MIN;
+const TableSortOrderArchive_SortType TableSortOrderArchive::SortType_MAX;
+const int TableSortOrderArchive::SortType_ARRAYSIZE;
+#endif  // _MSC_VER
+const ::google::protobuf::EnumDescriptor* TableSortOrderArchive_SortRuleArchive_Direction_descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return TableSortOrderArchive_SortRuleArchive_Direction_descriptor_;
+}
+bool TableSortOrderArchive_SortRuleArchive_Direction_IsValid(int value) {
+  switch(value) {
+    case 0:
+    case 1:
+      return true;
+    default:
+      return false;
+  }
+}
+
+#ifndef _MSC_VER
+const TableSortOrderArchive_SortRuleArchive_Direction TableSortOrderArchive_SortRuleArchive::ascending;
+const TableSortOrderArchive_SortRuleArchive_Direction TableSortOrderArchive_SortRuleArchive::descending;
+const TableSortOrderArchive_SortRuleArchive_Direction TableSortOrderArchive_SortRuleArchive::Direction_MIN;
+const TableSortOrderArchive_SortRuleArchive_Direction TableSortOrderArchive_SortRuleArchive::Direction_MAX;
+const int TableSortOrderArchive_SortRuleArchive::Direction_ARRAYSIZE;
+#endif  // _MSC_VER
+#ifndef _MSC_VER
+const int TableSortOrderArchive_SortRuleArchive::kColumnFieldNumber;
+const int TableSortOrderArchive_SortRuleArchive::kDirectionFieldNumber;
+#endif  // !_MSC_VER
+
+TableSortOrderArchive_SortRuleArchive::TableSortOrderArchive_SortRuleArchive()
+  : ::google::protobuf::Message() {
+  SharedCtor();
+}
+
+void TableSortOrderArchive_SortRuleArchive::InitAsDefaultInstance() {
+}
+
+TableSortOrderArchive_SortRuleArchive::TableSortOrderArchive_SortRuleArchive(const TableSortOrderArchive_SortRuleArchive& from)
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  MergeFrom(from);
+}
+
+void TableSortOrderArchive_SortRuleArchive::SharedCtor() {
+  _cached_size_ = 0;
+  column_ = 0u;
+  direction_ = 0;
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+}
+
+TableSortOrderArchive_SortRuleArchive::~TableSortOrderArchive_SortRuleArchive() {
+  SharedDtor();
+}
+
+void TableSortOrderArchive_SortRuleArchive::SharedDtor() {
+  if (this != default_instance_) {
+  }
+}
+
+void TableSortOrderArchive_SortRuleArchive::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* TableSortOrderArchive_SortRuleArchive::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return TableSortOrderArchive_SortRuleArchive_descriptor_;
+}
+
+const TableSortOrderArchive_SortRuleArchive& TableSortOrderArchive_SortRuleArchive::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_TSTArchives_2eproto();
+  return *default_instance_;
+}
+
+TableSortOrderArchive_SortRuleArchive* TableSortOrderArchive_SortRuleArchive::default_instance_ = NULL;
+
+TableSortOrderArchive_SortRuleArchive* TableSortOrderArchive_SortRuleArchive::New() const {
+  return new TableSortOrderArchive_SortRuleArchive;
+}
+
+void TableSortOrderArchive_SortRuleArchive::Clear() {
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    column_ = 0u;
+    direction_ = 0;
+  }
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+  mutable_unknown_fields()->Clear();
+}
+
+bool TableSortOrderArchive_SortRuleArchive::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!(EXPRESSION)) return false
+  ::google::protobuf::uint32 tag;
+  while ((tag = input->ReadTag()) != 0) {
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // required uint32 column = 1;
+      case 1: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                 input, &column_)));
+          set_has_column();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(16)) goto parse_direction;
+        break;
+      }
+
+      // required .TST.TableSortOrderArchive.SortRuleArchive.Direction direction = 2;
+      case 2: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_direction:
+          int value;
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
+                 input, &value)));
+          if (::TST::TableSortOrderArchive_SortRuleArchive_Direction_IsValid(value)) {
+            set_direction(static_cast< ::TST::TableSortOrderArchive_SortRuleArchive_Direction >(value));
+          } else {
+            mutable_unknown_fields()->AddVarint(2, value);
+          }
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectAtEnd()) return true;
+        break;
+      }
+
+      default: {
+      handle_uninterpreted:
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          return true;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+  return true;
+#undef DO_
+}
+
+void TableSortOrderArchive_SortRuleArchive::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // required uint32 column = 1;
+  if (has_column()) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(1, this->column(), output);
+  }
+
+  // required .TST.TableSortOrderArchive.SortRuleArchive.Direction direction = 2;
+  if (has_direction()) {
+    ::google::protobuf::internal::WireFormatLite::WriteEnum(
+      2, this->direction(), output);
+  }
+
+  if (!unknown_fields().empty()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+}
+
+::google::protobuf::uint8* TableSortOrderArchive_SortRuleArchive::SerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // required uint32 column = 1;
+  if (has_column()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(1, this->column(), target);
+  }
+
+  // required .TST.TableSortOrderArchive.SortRuleArchive.Direction direction = 2;
+  if (has_direction()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
+      2, this->direction(), target);
+  }
+
+  if (!unknown_fields().empty()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  return target;
+}
+
+int TableSortOrderArchive_SortRuleArchive::ByteSize() const {
+  int total_size = 0;
+
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    // required uint32 column = 1;
+    if (has_column()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::UInt32Size(
+          this->column());
+    }
+
+    // required .TST.TableSortOrderArchive.SortRuleArchive.Direction direction = 2;
+    if (has_direction()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::EnumSize(this->direction());
+    }
+
+  }
+  if (!unknown_fields().empty()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = total_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void TableSortOrderArchive_SortRuleArchive::MergeFrom(const ::google::protobuf::Message& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  const TableSortOrderArchive_SortRuleArchive* source =
+    ::google::protobuf::internal::dynamic_cast_if_available<const TableSortOrderArchive_SortRuleArchive*>(
+      &from);
+  if (source == NULL) {
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+    MergeFrom(*source);
+  }
+}
+
+void TableSortOrderArchive_SortRuleArchive::MergeFrom(const TableSortOrderArchive_SortRuleArchive& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (from.has_column()) {
+      set_column(from.column());
+    }
+    if (from.has_direction()) {
+      set_direction(from.direction());
+    }
+  }
+  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
+}
+
+void TableSortOrderArchive_SortRuleArchive::CopyFrom(const ::google::protobuf::Message& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void TableSortOrderArchive_SortRuleArchive::CopyFrom(const TableSortOrderArchive_SortRuleArchive& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool TableSortOrderArchive_SortRuleArchive::IsInitialized() const {
+  if ((_has_bits_[0] & 0x00000003) != 0x00000003) return false;
+
+  return true;
+}
+
+void TableSortOrderArchive_SortRuleArchive::Swap(TableSortOrderArchive_SortRuleArchive* other) {
+  if (other != this) {
+    std::swap(column_, other->column_);
+    std::swap(direction_, other->direction_);
+    std::swap(_has_bits_[0], other->_has_bits_[0]);
+    _unknown_fields_.Swap(&other->_unknown_fields_);
+    std::swap(_cached_size_, other->_cached_size_);
+  }
+}
+
+::google::protobuf::Metadata TableSortOrderArchive_SortRuleArchive::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = TableSortOrderArchive_SortRuleArchive_descriptor_;
+  metadata.reflection = TableSortOrderArchive_SortRuleArchive_reflection_;
+  return metadata;
+}
+
+
+// -------------------------------------------------------------------
+
+#ifndef _MSC_VER
+const int TableSortOrderArchive::kTypeFieldNumber;
+const int TableSortOrderArchive::kRulesFieldNumber;
+#endif  // !_MSC_VER
+
+TableSortOrderArchive::TableSortOrderArchive()
+  : ::google::protobuf::Message() {
+  SharedCtor();
+}
+
+void TableSortOrderArchive::InitAsDefaultInstance() {
+}
+
+TableSortOrderArchive::TableSortOrderArchive(const TableSortOrderArchive& from)
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  MergeFrom(from);
+}
+
+void TableSortOrderArchive::SharedCtor() {
+  _cached_size_ = 0;
+  type_ = 0;
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+}
+
+TableSortOrderArchive::~TableSortOrderArchive() {
+  SharedDtor();
+}
+
+void TableSortOrderArchive::SharedDtor() {
+  if (this != default_instance_) {
+  }
+}
+
+void TableSortOrderArchive::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* TableSortOrderArchive::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return TableSortOrderArchive_descriptor_;
+}
+
+const TableSortOrderArchive& TableSortOrderArchive::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_TSTArchives_2eproto();
+  return *default_instance_;
+}
+
+TableSortOrderArchive* TableSortOrderArchive::default_instance_ = NULL;
+
+TableSortOrderArchive* TableSortOrderArchive::New() const {
+  return new TableSortOrderArchive;
+}
+
+void TableSortOrderArchive::Clear() {
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    type_ = 0;
+  }
+  rules_.Clear();
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+  mutable_unknown_fields()->Clear();
+}
+
+bool TableSortOrderArchive::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!(EXPRESSION)) return false
+  ::google::protobuf::uint32 tag;
+  while ((tag = input->ReadTag()) != 0) {
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // required .TST.TableSortOrderArchive.SortType type = 1;
+      case 1: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+          int value;
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
+                 input, &value)));
+          if (::TST::TableSortOrderArchive_SortType_IsValid(value)) {
+            set_type(static_cast< ::TST::TableSortOrderArchive_SortType >(value));
+          } else {
+            mutable_unknown_fields()->AddVarint(1, value);
+          }
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(18)) goto parse_rules;
+        break;
+      }
+
+      // repeated .TST.TableSortOrderArchive.SortRuleArchive rules = 2;
+      case 2: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_rules:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+                input, add_rules()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(18)) goto parse_rules;
+        if (input->ExpectAtEnd()) return true;
+        break;
+      }
+
+      default: {
+      handle_uninterpreted:
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          return true;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+  return true;
+#undef DO_
+}
+
+void TableSortOrderArchive::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // required .TST.TableSortOrderArchive.SortType type = 1;
+  if (has_type()) {
+    ::google::protobuf::internal::WireFormatLite::WriteEnum(
+      1, this->type(), output);
+  }
+
+  // repeated .TST.TableSortOrderArchive.SortRuleArchive rules = 2;
+  for (int i = 0; i < this->rules_size(); i++) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      2, this->rules(i), output);
+  }
+
+  if (!unknown_fields().empty()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+}
+
+::google::protobuf::uint8* TableSortOrderArchive::SerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // required .TST.TableSortOrderArchive.SortType type = 1;
+  if (has_type()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
+      1, this->type(), target);
+  }
+
+  // repeated .TST.TableSortOrderArchive.SortRuleArchive rules = 2;
+  for (int i = 0; i < this->rules_size(); i++) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        2, this->rules(i), target);
+  }
+
+  if (!unknown_fields().empty()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  return target;
+}
+
+int TableSortOrderArchive::ByteSize() const {
+  int total_size = 0;
+
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    // required .TST.TableSortOrderArchive.SortType type = 1;
+    if (has_type()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::EnumSize(this->type());
+    }
+
+  }
+  // repeated .TST.TableSortOrderArchive.SortRuleArchive rules = 2;
+  total_size += 1 * this->rules_size();
+  for (int i = 0; i < this->rules_size(); i++) {
+    total_size +=
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+        this->rules(i));
+  }
+
+  if (!unknown_fields().empty()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = total_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void TableSortOrderArchive::MergeFrom(const ::google::protobuf::Message& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  const TableSortOrderArchive* source =
+    ::google::protobuf::internal::dynamic_cast_if_available<const TableSortOrderArchive*>(
+      &from);
+  if (source == NULL) {
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+    MergeFrom(*source);
+  }
+}
+
+void TableSortOrderArchive::MergeFrom(const TableSortOrderArchive& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  rules_.MergeFrom(from.rules_);
+  if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (from.has_type()) {
+      set_type(from.type());
+    }
+  }
+  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
+}
+
+void TableSortOrderArchive::CopyFrom(const ::google::protobuf::Message& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void TableSortOrderArchive::CopyFrom(const TableSortOrderArchive& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool TableSortOrderArchive::IsInitialized() const {
+  if ((_has_bits_[0] & 0x00000001) != 0x00000001) return false;
+
+  for (int i = 0; i < rules_size(); i++) {
+    if (!this->rules(i).IsInitialized()) return false;
+  }
+  return true;
+}
+
+void TableSortOrderArchive::Swap(TableSortOrderArchive* other) {
+  if (other != this) {
+    std::swap(type_, other->type_);
+    rules_.Swap(&other->rules_);
+    std::swap(_has_bits_[0], other->_has_bits_[0]);
+    _unknown_fields_.Swap(&other->_unknown_fields_);
+    std::swap(_cached_size_, other->_cached_size_);
+  }
+}
+
+::google::protobuf::Metadata TableSortOrderArchive::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = TableSortOrderArchive_descriptor_;
+  metadata.reflection = TableSortOrderArchive_reflection_;
+  return metadata;
+}
+
+
+// ===================================================================
+
+#ifndef _MSC_VER
+const int SortRuleReferenceTrackerArchive::kReferenceTrackerFieldNumber;
+#endif  // !_MSC_VER
+
+SortRuleReferenceTrackerArchive::SortRuleReferenceTrackerArchive()
+  : ::google::protobuf::Message() {
+  SharedCtor();
+}
+
+void SortRuleReferenceTrackerArchive::InitAsDefaultInstance() {
+  reference_tracker_ = const_cast< ::TSP::Reference*>(&::TSP::Reference::default_instance());
+}
+
+SortRuleReferenceTrackerArchive::SortRuleReferenceTrackerArchive(const SortRuleReferenceTrackerArchive& from)
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  MergeFrom(from);
+}
+
+void SortRuleReferenceTrackerArchive::SharedCtor() {
+  _cached_size_ = 0;
+  reference_tracker_ = NULL;
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+}
+
+SortRuleReferenceTrackerArchive::~SortRuleReferenceTrackerArchive() {
+  SharedDtor();
+}
+
+void SortRuleReferenceTrackerArchive::SharedDtor() {
+  if (this != default_instance_) {
+    delete reference_tracker_;
+  }
+}
+
+void SortRuleReferenceTrackerArchive::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* SortRuleReferenceTrackerArchive::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return SortRuleReferenceTrackerArchive_descriptor_;
+}
+
+const SortRuleReferenceTrackerArchive& SortRuleReferenceTrackerArchive::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_TSTArchives_2eproto();
+  return *default_instance_;
+}
+
+SortRuleReferenceTrackerArchive* SortRuleReferenceTrackerArchive::default_instance_ = NULL;
+
+SortRuleReferenceTrackerArchive* SortRuleReferenceTrackerArchive::New() const {
+  return new SortRuleReferenceTrackerArchive;
+}
+
+void SortRuleReferenceTrackerArchive::Clear() {
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (has_reference_tracker()) {
+      if (reference_tracker_ != NULL) reference_tracker_->::TSP::Reference::Clear();
+    }
+  }
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+  mutable_unknown_fields()->Clear();
+}
+
+bool SortRuleReferenceTrackerArchive::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!(EXPRESSION)) return false
+  ::google::protobuf::uint32 tag;
+  while ((tag = input->ReadTag()) != 0) {
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // required .TSP.Reference reference_tracker = 1;
+      case 1: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_reference_tracker()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectAtEnd()) return true;
+        break;
+      }
+
+      default: {
+      handle_uninterpreted:
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          return true;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+  return true;
+#undef DO_
+}
+
+void SortRuleReferenceTrackerArchive::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // required .TSP.Reference reference_tracker = 1;
+  if (has_reference_tracker()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, this->reference_tracker(), output);
+  }
+
+  if (!unknown_fields().empty()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+}
+
+::google::protobuf::uint8* SortRuleReferenceTrackerArchive::SerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // required .TSP.Reference reference_tracker = 1;
+  if (has_reference_tracker()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        1, this->reference_tracker(), target);
+  }
+
+  if (!unknown_fields().empty()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  return target;
+}
+
+int SortRuleReferenceTrackerArchive::ByteSize() const {
+  int total_size = 0;
+
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    // required .TSP.Reference reference_tracker = 1;
+    if (has_reference_tracker()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->reference_tracker());
+    }
+
+  }
+  if (!unknown_fields().empty()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = total_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void SortRuleReferenceTrackerArchive::MergeFrom(const ::google::protobuf::Message& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  const SortRuleReferenceTrackerArchive* source =
+    ::google::protobuf::internal::dynamic_cast_if_available<const SortRuleReferenceTrackerArchive*>(
+      &from);
+  if (source == NULL) {
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+    MergeFrom(*source);
+  }
+}
+
+void SortRuleReferenceTrackerArchive::MergeFrom(const SortRuleReferenceTrackerArchive& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (from.has_reference_tracker()) {
+      mutable_reference_tracker()->::TSP::Reference::MergeFrom(from.reference_tracker());
+    }
+  }
+  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
+}
+
+void SortRuleReferenceTrackerArchive::CopyFrom(const ::google::protobuf::Message& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void SortRuleReferenceTrackerArchive::CopyFrom(const SortRuleReferenceTrackerArchive& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool SortRuleReferenceTrackerArchive::IsInitialized() const {
+  if ((_has_bits_[0] & 0x00000001) != 0x00000001) return false;
+
+  if (has_reference_tracker()) {
+    if (!this->reference_tracker().IsInitialized()) return false;
+  }
+  return true;
+}
+
+void SortRuleReferenceTrackerArchive::Swap(SortRuleReferenceTrackerArchive* other) {
+  if (other != this) {
+    std::swap(reference_tracker_, other->reference_tracker_);
+    std::swap(_has_bits_[0], other->_has_bits_[0]);
+    _unknown_fields_.Swap(&other->_unknown_fields_);
+    std::swap(_cached_size_, other->_cached_size_);
+  }
+}
+
+::google::protobuf::Metadata SortRuleReferenceTrackerArchive::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = SortRuleReferenceTrackerArchive_descriptor_;
+  metadata.reflection = SortRuleReferenceTrackerArchive_reflection_;
+  return metadata;
+}
+
+
+// ===================================================================
+
 #ifndef _MSC_VER
 const int TableModelArchive::kTableIdFieldNumber;
 const int TableModelArchive::kFromTableIdFieldNumber;
@@ -10592,7 +13042,9 @@ const int TableModelArchive::kStyleApplyClearsAllFieldNumber;
 const int TableModelArchive::kHiddenStateFormulaOwnerForColumnsFieldNumber;
 const int TableModelArchive::kHiddenStateFormulaOwnerForRowsFieldNumber;
 const int TableModelArchive::kFilterSetFieldNumber;
+const int TableModelArchive::kSortOrderFieldNumber;
 const int TableModelArchive::kConditionalStyleFormulaOwnerIdFieldNumber;
+const int TableModelArchive::kSortRuleReferenceTrackerFieldNumber;
 #endif  // !_MSC_VER
 
 TableModelArchive::TableModelArchive()
@@ -10618,7 +13070,9 @@ void TableModelArchive::InitAsDefaultInstance() {
   hidden_state_formula_owner_for_columns_ = const_cast< ::TSP::Reference*>(&::TSP::Reference::default_instance());
   hidden_state_formula_owner_for_rows_ = const_cast< ::TSP::Reference*>(&::TSP::Reference::default_instance());
   filter_set_ = const_cast< ::TSP::Reference*>(&::TSP::Reference::default_instance());
+  sort_order_ = const_cast< ::TST::TableSortOrderArchive*>(&::TST::TableSortOrderArchive::default_instance());
   conditional_style_formula_owner_id_ = const_cast< ::TSCE::CFUUIDArchive*>(&::TSCE::CFUUIDArchive::default_instance());
+  sort_rule_reference_tracker_ = const_cast< ::TST::SortRuleReferenceTrackerArchive*>(&::TST::SortRuleReferenceTrackerArchive::default_instance());
 }
 
 TableModelArchive::TableModelArchive(const TableModelArchive& from)
@@ -10670,7 +13124,9 @@ void TableModelArchive::SharedCtor() {
   hidden_state_formula_owner_for_columns_ = NULL;
   hidden_state_formula_owner_for_rows_ = NULL;
   filter_set_ = NULL;
+  sort_order_ = NULL;
   conditional_style_formula_owner_id_ = NULL;
+  sort_rule_reference_tracker_ = NULL;
   ::memset(_has_bits_, 0, sizeof(_has_bits_));
 }
 
@@ -10706,7 +13162,9 @@ void TableModelArchive::SharedDtor() {
     delete hidden_state_formula_owner_for_columns_;
     delete hidden_state_formula_owner_for_rows_;
     delete filter_set_;
+    delete sort_order_;
     delete conditional_style_formula_owner_id_;
+    delete sort_rule_reference_tracker_;
   }
 }
 
@@ -10830,8 +13288,14 @@ void TableModelArchive::Clear() {
     if (has_filter_set()) {
       if (filter_set_ != NULL) filter_set_->::TSP::Reference::Clear();
     }
+    if (has_sort_order()) {
+      if (sort_order_ != NULL) sort_order_->::TST::TableSortOrderArchive::Clear();
+    }
     if (has_conditional_style_formula_owner_id()) {
       if (conditional_style_formula_owner_id_ != NULL) conditional_style_formula_owner_id_->::TSCE::CFUUIDArchive::Clear();
+    }
+    if (has_sort_rule_reference_tracker()) {
+      if (sort_rule_reference_tracker_ != NULL) sort_rule_reference_tracker_->::TST::SortRuleReferenceTrackerArchive::Clear();
     }
   }
   ::memset(_has_bits_, 0, sizeof(_has_bits_));
@@ -11478,6 +13942,34 @@ bool TableModelArchive::MergePartialFromCodedStream(
         } else {
           goto handle_uninterpreted;
         }
+        if (input->ExpectTag(354)) goto parse_sort_order;
+        break;
+      }
+
+      // optional .TST.TableSortOrderArchive sort_order = 44;
+      case 44: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_sort_order:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_sort_order()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(362)) goto parse_sort_rule_reference_tracker;
+        break;
+      }
+
+      // optional .TST.SortRuleReferenceTrackerArchive sort_rule_reference_tracker = 45;
+      case 45: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_sort_rule_reference_tracker:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_sort_rule_reference_tracker()));
+        } else {
+          goto handle_uninterpreted;
+        }
         if (input->ExpectAtEnd()) return true;
         break;
       }
@@ -11738,6 +14230,18 @@ void TableModelArchive::SerializeWithCachedSizes(
       ::google::protobuf::internal::WireFormat::SERIALIZE);
     ::google::protobuf::internal::WireFormatLite::WriteString(
       43, this->from_table_id(), output);
+  }
+
+  // optional .TST.TableSortOrderArchive sort_order = 44;
+  if (has_sort_order()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      44, this->sort_order(), output);
+  }
+
+  // optional .TST.SortRuleReferenceTrackerArchive sort_rule_reference_tracker = 45;
+  if (has_sort_rule_reference_tracker()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      45, this->sort_rule_reference_tracker(), output);
   }
 
   if (!unknown_fields().empty()) {
@@ -12007,6 +14511,20 @@ void TableModelArchive::SerializeWithCachedSizes(
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
         43, this->from_table_id(), target);
+  }
+
+  // optional .TST.TableSortOrderArchive sort_order = 44;
+  if (has_sort_order()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        44, this->sort_order(), target);
+  }
+
+  // optional .TST.SortRuleReferenceTrackerArchive sort_rule_reference_tracker = 45;
+  if (has_sort_rule_reference_tracker()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        45, this->sort_rule_reference_tracker(), target);
   }
 
   if (!unknown_fields().empty()) {
@@ -12297,11 +14815,25 @@ int TableModelArchive::ByteSize() const {
           this->filter_set());
     }
 
+    // optional .TST.TableSortOrderArchive sort_order = 44;
+    if (has_sort_order()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->sort_order());
+    }
+
     // optional .TSCE.CFUUIDArchive conditional_style_formula_owner_id = 39;
     if (has_conditional_style_formula_owner_id()) {
       total_size += 2 +
         ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
           this->conditional_style_formula_owner_id());
+    }
+
+    // optional .TST.SortRuleReferenceTrackerArchive sort_rule_reference_tracker = 45;
+    if (has_sort_rule_reference_tracker()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->sort_rule_reference_tracker());
     }
 
   }
@@ -12464,8 +14996,14 @@ void TableModelArchive::MergeFrom(const TableModelArchive& from) {
     if (from.has_filter_set()) {
       mutable_filter_set()->::TSP::Reference::MergeFrom(from.filter_set());
     }
+    if (from.has_sort_order()) {
+      mutable_sort_order()->::TST::TableSortOrderArchive::MergeFrom(from.sort_order());
+    }
     if (from.has_conditional_style_formula_owner_id()) {
       mutable_conditional_style_formula_owner_id()->::TSCE::CFUUIDArchive::MergeFrom(from.conditional_style_formula_owner_id());
+    }
+    if (from.has_sort_rule_reference_tracker()) {
+      mutable_sort_rule_reference_tracker()->::TST::SortRuleReferenceTrackerArchive::MergeFrom(from.sort_rule_reference_tracker());
     }
   }
   mutable_unknown_fields()->MergeFrom(from.unknown_fields());
@@ -12538,6 +15076,12 @@ bool TableModelArchive::IsInitialized() const {
   if (has_filter_set()) {
     if (!this->filter_set().IsInitialized()) return false;
   }
+  if (has_sort_order()) {
+    if (!this->sort_order().IsInitialized()) return false;
+  }
+  if (has_sort_rule_reference_tracker()) {
+    if (!this->sort_rule_reference_tracker().IsInitialized()) return false;
+  }
   return true;
 }
 
@@ -12584,7 +15128,9 @@ void TableModelArchive::Swap(TableModelArchive* other) {
     std::swap(hidden_state_formula_owner_for_columns_, other->hidden_state_formula_owner_for_columns_);
     std::swap(hidden_state_formula_owner_for_rows_, other->hidden_state_formula_owner_for_rows_);
     std::swap(filter_set_, other->filter_set_);
+    std::swap(sort_order_, other->sort_order_);
     std::swap(conditional_style_formula_owner_id_, other->conditional_style_formula_owner_id_);
+    std::swap(sort_rule_reference_tracker_, other->sort_rule_reference_tracker_);
     std::swap(_has_bits_[0], other->_has_bits_[0]);
     std::swap(_has_bits_[1], other->_has_bits_[1]);
     _unknown_fields_.Swap(&other->_unknown_fields_);
@@ -12783,6 +15329,7 @@ const int Cell::kConditionalStyleFieldNumber;
 const int Cell::kMultipleChoiceListFieldNumber;
 const int Cell::kCommentStorageFieldNumber;
 const int Cell::kConditionalStyleAppliedRuleFieldNumber;
+const int Cell::kImportWarningSetFieldNumber;
 #endif  // !_MSC_VER
 
 Cell::Cell()
@@ -12808,6 +15355,7 @@ void Cell::InitAsDefaultInstance() {
   conditional_style_ = const_cast< ::TSP::Reference*>(&::TSP::Reference::default_instance());
   multiple_choice_list_ = const_cast< ::TSP::Reference*>(&::TSP::Reference::default_instance());
   comment_storage_ = const_cast< ::TSP::Reference*>(&::TSP::Reference::default_instance());
+  import_warning_set_ = const_cast< ::TST::ImportWarningSetArchive*>(&::TST::ImportWarningSetArchive::default_instance());
 }
 
 Cell::Cell(const Cell& from)
@@ -12841,6 +15389,7 @@ void Cell::SharedCtor() {
   multiple_choice_list_ = NULL;
   comment_storage_ = NULL;
   conditional_style_applied_rule_ = 0u;
+  import_warning_set_ = NULL;
   ::memset(_has_bits_, 0, sizeof(_has_bits_));
 }
 
@@ -12870,6 +15419,7 @@ void Cell::SharedDtor() {
     delete conditional_style_;
     delete multiple_choice_list_;
     delete comment_storage_;
+    delete import_warning_set_;
   }
 }
 
@@ -12961,6 +15511,9 @@ void Cell::Clear() {
       if (comment_storage_ != NULL) comment_storage_->::TSP::Reference::Clear();
     }
     conditional_style_applied_rule_ = 0u;
+    if (has_import_warning_set()) {
+      if (import_warning_set_ != NULL) import_warning_set_->::TST::ImportWarningSetArchive::Clear();
+    }
   }
   ::memset(_has_bits_, 0, sizeof(_has_bits_));
   mutable_unknown_fields()->Clear();
@@ -13307,6 +15860,20 @@ bool Cell::MergePartialFromCodedStream(
         } else {
           goto handle_uninterpreted;
         }
+        if (input->ExpectTag(202)) goto parse_import_warning_set;
+        break;
+      }
+
+      // optional .TST.ImportWarningSetArchive import_warning_set = 25;
+      case 25: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_import_warning_set:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_import_warning_set()));
+        } else {
+          goto handle_uninterpreted;
+        }
         if (input->ExpectAtEnd()) return true;
         break;
       }
@@ -13464,6 +16031,12 @@ void Cell::SerializeWithCachedSizes(
   // optional uint32 conditional_style_applied_rule = 24;
   if (has_conditional_style_applied_rule()) {
     ::google::protobuf::internal::WireFormatLite::WriteUInt32(24, this->conditional_style_applied_rule(), output);
+  }
+
+  // optional .TST.ImportWarningSetArchive import_warning_set = 25;
+  if (has_import_warning_set()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      25, this->import_warning_set(), output);
   }
 
   if (!unknown_fields().empty()) {
@@ -13627,6 +16200,13 @@ void Cell::SerializeWithCachedSizes(
   // optional uint32 conditional_style_applied_rule = 24;
   if (has_conditional_style_applied_rule()) {
     target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(24, this->conditional_style_applied_rule(), target);
+  }
+
+  // optional .TST.ImportWarningSetArchive import_warning_set = 25;
+  if (has_import_warning_set()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        25, this->import_warning_set(), target);
   }
 
   if (!unknown_fields().empty()) {
@@ -13800,6 +16380,13 @@ int Cell::ByteSize() const {
           this->conditional_style_applied_rule());
     }
 
+    // optional .TST.ImportWarningSetArchive import_warning_set = 25;
+    if (has_import_warning_set()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->import_warning_set());
+    }
+
   }
   if (!unknown_fields().empty()) {
     total_size +=
@@ -13900,6 +16487,9 @@ void Cell::MergeFrom(const Cell& from) {
     if (from.has_conditional_style_applied_rule()) {
       set_conditional_style_applied_rule(from.conditional_style_applied_rule());
     }
+    if (from.has_import_warning_set()) {
+      mutable_import_warning_set()->::TST::ImportWarningSetArchive::MergeFrom(from.import_warning_set());
+    }
   }
   mutable_unknown_fields()->MergeFrom(from.unknown_fields());
 }
@@ -13970,6 +16560,9 @@ bool Cell::IsInitialized() const {
   if (has_comment_storage()) {
     if (!this->comment_storage().IsInitialized()) return false;
   }
+  if (has_import_warning_set()) {
+    if (!this->import_warning_set().IsInitialized()) return false;
+  }
   return true;
 }
 
@@ -13998,6 +16591,7 @@ void Cell::Swap(Cell* other) {
     std::swap(multiple_choice_list_, other->multiple_choice_list_);
     std::swap(comment_storage_, other->comment_storage_);
     std::swap(conditional_style_applied_rule_, other->conditional_style_applied_rule_);
+    std::swap(import_warning_set_, other->import_warning_set_);
     std::swap(_has_bits_[0], other->_has_bits_[0]);
     _unknown_fields_.Swap(&other->_unknown_fields_);
     std::swap(_cached_size_, other->_cached_size_);
@@ -14886,6 +17480,1860 @@ void CellMapArchive::Swap(CellMapArchive* other) {
   ::google::protobuf::Metadata metadata;
   metadata.descriptor = CellMapArchive_descriptor_;
   metadata.reflection = CellMapArchive_reflection_;
+  return metadata;
+}
+
+
+// ===================================================================
+
+#ifndef _MSC_VER
+const int CellMapTileArchive_CellMapEntry::kCellIDFieldNumber;
+const int CellMapTileArchive_CellMapEntry::kCellFieldNumber;
+#endif  // !_MSC_VER
+
+CellMapTileArchive_CellMapEntry::CellMapTileArchive_CellMapEntry()
+  : ::google::protobuf::Message() {
+  SharedCtor();
+}
+
+void CellMapTileArchive_CellMapEntry::InitAsDefaultInstance() {
+  cellid_ = const_cast< ::TST::CellID*>(&::TST::CellID::default_instance());
+  cell_ = const_cast< ::TST::Cell*>(&::TST::Cell::default_instance());
+}
+
+CellMapTileArchive_CellMapEntry::CellMapTileArchive_CellMapEntry(const CellMapTileArchive_CellMapEntry& from)
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  MergeFrom(from);
+}
+
+void CellMapTileArchive_CellMapEntry::SharedCtor() {
+  _cached_size_ = 0;
+  cellid_ = NULL;
+  cell_ = NULL;
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+}
+
+CellMapTileArchive_CellMapEntry::~CellMapTileArchive_CellMapEntry() {
+  SharedDtor();
+}
+
+void CellMapTileArchive_CellMapEntry::SharedDtor() {
+  if (this != default_instance_) {
+    delete cellid_;
+    delete cell_;
+  }
+}
+
+void CellMapTileArchive_CellMapEntry::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* CellMapTileArchive_CellMapEntry::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return CellMapTileArchive_CellMapEntry_descriptor_;
+}
+
+const CellMapTileArchive_CellMapEntry& CellMapTileArchive_CellMapEntry::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_TSTArchives_2eproto();
+  return *default_instance_;
+}
+
+CellMapTileArchive_CellMapEntry* CellMapTileArchive_CellMapEntry::default_instance_ = NULL;
+
+CellMapTileArchive_CellMapEntry* CellMapTileArchive_CellMapEntry::New() const {
+  return new CellMapTileArchive_CellMapEntry;
+}
+
+void CellMapTileArchive_CellMapEntry::Clear() {
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (has_cellid()) {
+      if (cellid_ != NULL) cellid_->::TST::CellID::Clear();
+    }
+    if (has_cell()) {
+      if (cell_ != NULL) cell_->::TST::Cell::Clear();
+    }
+  }
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+  mutable_unknown_fields()->Clear();
+}
+
+bool CellMapTileArchive_CellMapEntry::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!(EXPRESSION)) return false
+  ::google::protobuf::uint32 tag;
+  while ((tag = input->ReadTag()) != 0) {
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // required .TST.CellID cellID = 1;
+      case 1: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_cellid()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(18)) goto parse_cell;
+        break;
+      }
+
+      // optional .TST.Cell cell = 2;
+      case 2: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_cell:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_cell()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectAtEnd()) return true;
+        break;
+      }
+
+      default: {
+      handle_uninterpreted:
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          return true;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+  return true;
+#undef DO_
+}
+
+void CellMapTileArchive_CellMapEntry::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // required .TST.CellID cellID = 1;
+  if (has_cellid()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, this->cellid(), output);
+  }
+
+  // optional .TST.Cell cell = 2;
+  if (has_cell()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      2, this->cell(), output);
+  }
+
+  if (!unknown_fields().empty()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+}
+
+::google::protobuf::uint8* CellMapTileArchive_CellMapEntry::SerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // required .TST.CellID cellID = 1;
+  if (has_cellid()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        1, this->cellid(), target);
+  }
+
+  // optional .TST.Cell cell = 2;
+  if (has_cell()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        2, this->cell(), target);
+  }
+
+  if (!unknown_fields().empty()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  return target;
+}
+
+int CellMapTileArchive_CellMapEntry::ByteSize() const {
+  int total_size = 0;
+
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    // required .TST.CellID cellID = 1;
+    if (has_cellid()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->cellid());
+    }
+
+    // optional .TST.Cell cell = 2;
+    if (has_cell()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->cell());
+    }
+
+  }
+  if (!unknown_fields().empty()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = total_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void CellMapTileArchive_CellMapEntry::MergeFrom(const ::google::protobuf::Message& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  const CellMapTileArchive_CellMapEntry* source =
+    ::google::protobuf::internal::dynamic_cast_if_available<const CellMapTileArchive_CellMapEntry*>(
+      &from);
+  if (source == NULL) {
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+    MergeFrom(*source);
+  }
+}
+
+void CellMapTileArchive_CellMapEntry::MergeFrom(const CellMapTileArchive_CellMapEntry& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (from.has_cellid()) {
+      mutable_cellid()->::TST::CellID::MergeFrom(from.cellid());
+    }
+    if (from.has_cell()) {
+      mutable_cell()->::TST::Cell::MergeFrom(from.cell());
+    }
+  }
+  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
+}
+
+void CellMapTileArchive_CellMapEntry::CopyFrom(const ::google::protobuf::Message& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void CellMapTileArchive_CellMapEntry::CopyFrom(const CellMapTileArchive_CellMapEntry& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool CellMapTileArchive_CellMapEntry::IsInitialized() const {
+  if ((_has_bits_[0] & 0x00000001) != 0x00000001) return false;
+
+  if (has_cellid()) {
+    if (!this->cellid().IsInitialized()) return false;
+  }
+  if (has_cell()) {
+    if (!this->cell().IsInitialized()) return false;
+  }
+  return true;
+}
+
+void CellMapTileArchive_CellMapEntry::Swap(CellMapTileArchive_CellMapEntry* other) {
+  if (other != this) {
+    std::swap(cellid_, other->cellid_);
+    std::swap(cell_, other->cell_);
+    std::swap(_has_bits_[0], other->_has_bits_[0]);
+    _unknown_fields_.Swap(&other->_unknown_fields_);
+    std::swap(_cached_size_, other->_cached_size_);
+  }
+}
+
+::google::protobuf::Metadata CellMapTileArchive_CellMapEntry::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = CellMapTileArchive_CellMapEntry_descriptor_;
+  metadata.reflection = CellMapTileArchive_CellMapEntry_reflection_;
+  return metadata;
+}
+
+
+// -------------------------------------------------------------------
+
+#ifndef _MSC_VER
+const int CellMapTileArchive::kCellmapEntryFieldNumber;
+#endif  // !_MSC_VER
+
+CellMapTileArchive::CellMapTileArchive()
+  : ::google::protobuf::Message() {
+  SharedCtor();
+}
+
+void CellMapTileArchive::InitAsDefaultInstance() {
+}
+
+CellMapTileArchive::CellMapTileArchive(const CellMapTileArchive& from)
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  MergeFrom(from);
+}
+
+void CellMapTileArchive::SharedCtor() {
+  _cached_size_ = 0;
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+}
+
+CellMapTileArchive::~CellMapTileArchive() {
+  SharedDtor();
+}
+
+void CellMapTileArchive::SharedDtor() {
+  if (this != default_instance_) {
+  }
+}
+
+void CellMapTileArchive::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* CellMapTileArchive::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return CellMapTileArchive_descriptor_;
+}
+
+const CellMapTileArchive& CellMapTileArchive::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_TSTArchives_2eproto();
+  return *default_instance_;
+}
+
+CellMapTileArchive* CellMapTileArchive::default_instance_ = NULL;
+
+CellMapTileArchive* CellMapTileArchive::New() const {
+  return new CellMapTileArchive;
+}
+
+void CellMapTileArchive::Clear() {
+  cellmap_entry_.Clear();
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+  mutable_unknown_fields()->Clear();
+}
+
+bool CellMapTileArchive::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!(EXPRESSION)) return false
+  ::google::protobuf::uint32 tag;
+  while ((tag = input->ReadTag()) != 0) {
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // repeated .TST.CellMapTileArchive.CellMapEntry cellmap_entry = 2;
+      case 2: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_cellmap_entry:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+                input, add_cellmap_entry()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(18)) goto parse_cellmap_entry;
+        if (input->ExpectAtEnd()) return true;
+        break;
+      }
+
+      default: {
+      handle_uninterpreted:
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          return true;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+  return true;
+#undef DO_
+}
+
+void CellMapTileArchive::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // repeated .TST.CellMapTileArchive.CellMapEntry cellmap_entry = 2;
+  for (int i = 0; i < this->cellmap_entry_size(); i++) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      2, this->cellmap_entry(i), output);
+  }
+
+  if (!unknown_fields().empty()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+}
+
+::google::protobuf::uint8* CellMapTileArchive::SerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // repeated .TST.CellMapTileArchive.CellMapEntry cellmap_entry = 2;
+  for (int i = 0; i < this->cellmap_entry_size(); i++) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        2, this->cellmap_entry(i), target);
+  }
+
+  if (!unknown_fields().empty()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  return target;
+}
+
+int CellMapTileArchive::ByteSize() const {
+  int total_size = 0;
+
+  // repeated .TST.CellMapTileArchive.CellMapEntry cellmap_entry = 2;
+  total_size += 1 * this->cellmap_entry_size();
+  for (int i = 0; i < this->cellmap_entry_size(); i++) {
+    total_size +=
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+        this->cellmap_entry(i));
+  }
+
+  if (!unknown_fields().empty()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = total_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void CellMapTileArchive::MergeFrom(const ::google::protobuf::Message& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  const CellMapTileArchive* source =
+    ::google::protobuf::internal::dynamic_cast_if_available<const CellMapTileArchive*>(
+      &from);
+  if (source == NULL) {
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+    MergeFrom(*source);
+  }
+}
+
+void CellMapTileArchive::MergeFrom(const CellMapTileArchive& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  cellmap_entry_.MergeFrom(from.cellmap_entry_);
+  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
+}
+
+void CellMapTileArchive::CopyFrom(const ::google::protobuf::Message& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void CellMapTileArchive::CopyFrom(const CellMapTileArchive& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool CellMapTileArchive::IsInitialized() const {
+
+  for (int i = 0; i < cellmap_entry_size(); i++) {
+    if (!this->cellmap_entry(i).IsInitialized()) return false;
+  }
+  return true;
+}
+
+void CellMapTileArchive::Swap(CellMapTileArchive* other) {
+  if (other != this) {
+    cellmap_entry_.Swap(&other->cellmap_entry_);
+    std::swap(_has_bits_[0], other->_has_bits_[0]);
+    _unknown_fields_.Swap(&other->_unknown_fields_);
+    std::swap(_cached_size_, other->_cached_size_);
+  }
+}
+
+::google::protobuf::Metadata CellMapTileArchive::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = CellMapTileArchive_descriptor_;
+  metadata.reflection = CellMapTileArchive_reflection_;
+  return metadata;
+}
+
+
+// ===================================================================
+
+#ifndef _MSC_VER
+const int TiledCellMapArchive::kCellmapTileFieldNumber;
+const int TiledCellMapArchive::kMayModifyFormulasInCellsFieldNumber;
+const int TiledCellMapArchive::kMayModifyValuesReferencedByFormulasFieldNumber;
+const int TiledCellMapArchive::kAppliesToHiddenFieldNumber;
+#endif  // !_MSC_VER
+
+TiledCellMapArchive::TiledCellMapArchive()
+  : ::google::protobuf::Message() {
+  SharedCtor();
+}
+
+void TiledCellMapArchive::InitAsDefaultInstance() {
+}
+
+TiledCellMapArchive::TiledCellMapArchive(const TiledCellMapArchive& from)
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  MergeFrom(from);
+}
+
+void TiledCellMapArchive::SharedCtor() {
+  _cached_size_ = 0;
+  may_modify_formulas_in_cells_ = true;
+  may_modify_values_referenced_by_formulas_ = true;
+  applies_to_hidden_ = false;
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+}
+
+TiledCellMapArchive::~TiledCellMapArchive() {
+  SharedDtor();
+}
+
+void TiledCellMapArchive::SharedDtor() {
+  if (this != default_instance_) {
+  }
+}
+
+void TiledCellMapArchive::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* TiledCellMapArchive::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return TiledCellMapArchive_descriptor_;
+}
+
+const TiledCellMapArchive& TiledCellMapArchive::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_TSTArchives_2eproto();
+  return *default_instance_;
+}
+
+TiledCellMapArchive* TiledCellMapArchive::default_instance_ = NULL;
+
+TiledCellMapArchive* TiledCellMapArchive::New() const {
+  return new TiledCellMapArchive;
+}
+
+void TiledCellMapArchive::Clear() {
+  if (_has_bits_[1 / 32] & (0xffu << (1 % 32))) {
+    may_modify_formulas_in_cells_ = true;
+    may_modify_values_referenced_by_formulas_ = true;
+    applies_to_hidden_ = false;
+  }
+  cellmap_tile_.Clear();
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+  mutable_unknown_fields()->Clear();
+}
+
+bool TiledCellMapArchive::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!(EXPRESSION)) return false
+  ::google::protobuf::uint32 tag;
+  while ((tag = input->ReadTag()) != 0) {
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // repeated .TSP.Reference cellmap_tile = 1;
+      case 1: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_cellmap_tile:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+                input, add_cellmap_tile()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(10)) goto parse_cellmap_tile;
+        if (input->ExpectTag(16)) goto parse_may_modify_formulas_in_cells;
+        break;
+      }
+
+      // optional bool may_modify_formulas_in_cells = 2 [default = true];
+      case 2: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_may_modify_formulas_in_cells:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &may_modify_formulas_in_cells_)));
+          set_has_may_modify_formulas_in_cells();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(24)) goto parse_may_modify_values_referenced_by_formulas;
+        break;
+      }
+
+      // optional bool may_modify_values_referenced_by_formulas = 3 [default = true];
+      case 3: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_may_modify_values_referenced_by_formulas:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &may_modify_values_referenced_by_formulas_)));
+          set_has_may_modify_values_referenced_by_formulas();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(32)) goto parse_applies_to_hidden;
+        break;
+      }
+
+      // optional bool applies_to_hidden = 4 [default = false];
+      case 4: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_applies_to_hidden:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &applies_to_hidden_)));
+          set_has_applies_to_hidden();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectAtEnd()) return true;
+        break;
+      }
+
+      default: {
+      handle_uninterpreted:
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          return true;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+  return true;
+#undef DO_
+}
+
+void TiledCellMapArchive::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // repeated .TSP.Reference cellmap_tile = 1;
+  for (int i = 0; i < this->cellmap_tile_size(); i++) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, this->cellmap_tile(i), output);
+  }
+
+  // optional bool may_modify_formulas_in_cells = 2 [default = true];
+  if (has_may_modify_formulas_in_cells()) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(2, this->may_modify_formulas_in_cells(), output);
+  }
+
+  // optional bool may_modify_values_referenced_by_formulas = 3 [default = true];
+  if (has_may_modify_values_referenced_by_formulas()) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(3, this->may_modify_values_referenced_by_formulas(), output);
+  }
+
+  // optional bool applies_to_hidden = 4 [default = false];
+  if (has_applies_to_hidden()) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(4, this->applies_to_hidden(), output);
+  }
+
+  if (!unknown_fields().empty()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+}
+
+::google::protobuf::uint8* TiledCellMapArchive::SerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // repeated .TSP.Reference cellmap_tile = 1;
+  for (int i = 0; i < this->cellmap_tile_size(); i++) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        1, this->cellmap_tile(i), target);
+  }
+
+  // optional bool may_modify_formulas_in_cells = 2 [default = true];
+  if (has_may_modify_formulas_in_cells()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(2, this->may_modify_formulas_in_cells(), target);
+  }
+
+  // optional bool may_modify_values_referenced_by_formulas = 3 [default = true];
+  if (has_may_modify_values_referenced_by_formulas()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(3, this->may_modify_values_referenced_by_formulas(), target);
+  }
+
+  // optional bool applies_to_hidden = 4 [default = false];
+  if (has_applies_to_hidden()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(4, this->applies_to_hidden(), target);
+  }
+
+  if (!unknown_fields().empty()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  return target;
+}
+
+int TiledCellMapArchive::ByteSize() const {
+  int total_size = 0;
+
+  if (_has_bits_[1 / 32] & (0xffu << (1 % 32))) {
+    // optional bool may_modify_formulas_in_cells = 2 [default = true];
+    if (has_may_modify_formulas_in_cells()) {
+      total_size += 1 + 1;
+    }
+
+    // optional bool may_modify_values_referenced_by_formulas = 3 [default = true];
+    if (has_may_modify_values_referenced_by_formulas()) {
+      total_size += 1 + 1;
+    }
+
+    // optional bool applies_to_hidden = 4 [default = false];
+    if (has_applies_to_hidden()) {
+      total_size += 1 + 1;
+    }
+
+  }
+  // repeated .TSP.Reference cellmap_tile = 1;
+  total_size += 1 * this->cellmap_tile_size();
+  for (int i = 0; i < this->cellmap_tile_size(); i++) {
+    total_size +=
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+        this->cellmap_tile(i));
+  }
+
+  if (!unknown_fields().empty()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = total_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void TiledCellMapArchive::MergeFrom(const ::google::protobuf::Message& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  const TiledCellMapArchive* source =
+    ::google::protobuf::internal::dynamic_cast_if_available<const TiledCellMapArchive*>(
+      &from);
+  if (source == NULL) {
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+    MergeFrom(*source);
+  }
+}
+
+void TiledCellMapArchive::MergeFrom(const TiledCellMapArchive& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  cellmap_tile_.MergeFrom(from.cellmap_tile_);
+  if (from._has_bits_[1 / 32] & (0xffu << (1 % 32))) {
+    if (from.has_may_modify_formulas_in_cells()) {
+      set_may_modify_formulas_in_cells(from.may_modify_formulas_in_cells());
+    }
+    if (from.has_may_modify_values_referenced_by_formulas()) {
+      set_may_modify_values_referenced_by_formulas(from.may_modify_values_referenced_by_formulas());
+    }
+    if (from.has_applies_to_hidden()) {
+      set_applies_to_hidden(from.applies_to_hidden());
+    }
+  }
+  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
+}
+
+void TiledCellMapArchive::CopyFrom(const ::google::protobuf::Message& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void TiledCellMapArchive::CopyFrom(const TiledCellMapArchive& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool TiledCellMapArchive::IsInitialized() const {
+
+  for (int i = 0; i < cellmap_tile_size(); i++) {
+    if (!this->cellmap_tile(i).IsInitialized()) return false;
+  }
+  return true;
+}
+
+void TiledCellMapArchive::Swap(TiledCellMapArchive* other) {
+  if (other != this) {
+    cellmap_tile_.Swap(&other->cellmap_tile_);
+    std::swap(may_modify_formulas_in_cells_, other->may_modify_formulas_in_cells_);
+    std::swap(may_modify_values_referenced_by_formulas_, other->may_modify_values_referenced_by_formulas_);
+    std::swap(applies_to_hidden_, other->applies_to_hidden_);
+    std::swap(_has_bits_[0], other->_has_bits_[0]);
+    _unknown_fields_.Swap(&other->_unknown_fields_);
+    std::swap(_cached_size_, other->_cached_size_);
+  }
+}
+
+::google::protobuf::Metadata TiledCellMapArchive::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = TiledCellMapArchive_descriptor_;
+  metadata.reflection = TiledCellMapArchive_reflection_;
+  return metadata;
+}
+
+
+// ===================================================================
+
+#ifndef _MSC_VER
+const int PropertyMapEntryArchive::kPropertyFieldNumber;
+const int PropertyMapEntryArchive::kValueTypeFieldNumber;
+const int PropertyMapEntryArchive::kIntValueFieldNumber;
+const int PropertyMapEntryArchive::kFloatValueFieldNumber;
+const int PropertyMapEntryArchive::kDoubleValueFieldNumber;
+const int PropertyMapEntryArchive::kIsNsnullFieldNumber;
+const int PropertyMapEntryArchive::kTspReferenceFieldNumber;
+const int PropertyMapEntryArchive::kFillFieldNumber;
+const int PropertyMapEntryArchive::kImportWarningSetFieldNumber;
+#endif  // !_MSC_VER
+
+PropertyMapEntryArchive::PropertyMapEntryArchive()
+  : ::google::protobuf::Message() {
+  SharedCtor();
+}
+
+void PropertyMapEntryArchive::InitAsDefaultInstance() {
+  tsp_reference_ = const_cast< ::TSP::Reference*>(&::TSP::Reference::default_instance());
+  fill_ = const_cast< ::TSD::FillArchive*>(&::TSD::FillArchive::default_instance());
+  import_warning_set_ = const_cast< ::TST::ImportWarningSetArchive*>(&::TST::ImportWarningSetArchive::default_instance());
+}
+
+PropertyMapEntryArchive::PropertyMapEntryArchive(const PropertyMapEntryArchive& from)
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  MergeFrom(from);
+}
+
+void PropertyMapEntryArchive::SharedCtor() {
+  _cached_size_ = 0;
+  property_ = 0u;
+  valuetype_ = 0;
+  int_value_ = 0;
+  float_value_ = 0;
+  double_value_ = 0;
+  is_nsnull_ = false;
+  tsp_reference_ = NULL;
+  fill_ = NULL;
+  import_warning_set_ = NULL;
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+}
+
+PropertyMapEntryArchive::~PropertyMapEntryArchive() {
+  SharedDtor();
+}
+
+void PropertyMapEntryArchive::SharedDtor() {
+  if (this != default_instance_) {
+    delete tsp_reference_;
+    delete fill_;
+    delete import_warning_set_;
+  }
+}
+
+void PropertyMapEntryArchive::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* PropertyMapEntryArchive::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return PropertyMapEntryArchive_descriptor_;
+}
+
+const PropertyMapEntryArchive& PropertyMapEntryArchive::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_TSTArchives_2eproto();
+  return *default_instance_;
+}
+
+PropertyMapEntryArchive* PropertyMapEntryArchive::default_instance_ = NULL;
+
+PropertyMapEntryArchive* PropertyMapEntryArchive::New() const {
+  return new PropertyMapEntryArchive;
+}
+
+void PropertyMapEntryArchive::Clear() {
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    property_ = 0u;
+    valuetype_ = 0;
+    int_value_ = 0;
+    float_value_ = 0;
+    double_value_ = 0;
+    is_nsnull_ = false;
+    if (has_tsp_reference()) {
+      if (tsp_reference_ != NULL) tsp_reference_->::TSP::Reference::Clear();
+    }
+    if (has_fill()) {
+      if (fill_ != NULL) fill_->::TSD::FillArchive::Clear();
+    }
+  }
+  if (_has_bits_[8 / 32] & (0xffu << (8 % 32))) {
+    if (has_import_warning_set()) {
+      if (import_warning_set_ != NULL) import_warning_set_->::TST::ImportWarningSetArchive::Clear();
+    }
+  }
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+  mutable_unknown_fields()->Clear();
+}
+
+bool PropertyMapEntryArchive::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!(EXPRESSION)) return false
+  ::google::protobuf::uint32 tag;
+  while ((tag = input->ReadTag()) != 0) {
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // required uint32 property = 1;
+      case 1: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                 input, &property_)));
+          set_has_property();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(16)) goto parse_valueType;
+        break;
+      }
+
+      // required .TSS.ValueType valueType = 2;
+      case 2: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_valueType:
+          int value;
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
+                 input, &value)));
+          if (::TSS::ValueType_IsValid(value)) {
+            set_valuetype(static_cast< ::TSS::ValueType >(value));
+          } else {
+            mutable_unknown_fields()->AddVarint(2, value);
+          }
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(24)) goto parse_int_value;
+        break;
+      }
+
+      // optional int32 int_value = 3;
+      case 3: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_int_value:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &int_value_)));
+          set_has_int_value();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(37)) goto parse_float_value;
+        break;
+      }
+
+      // optional float float_value = 4;
+      case 4: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_FIXED32) {
+         parse_float_value:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
+                 input, &float_value_)));
+          set_has_float_value();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(41)) goto parse_double_value;
+        break;
+      }
+
+      // optional double double_value = 5;
+      case 5: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_FIXED64) {
+         parse_double_value:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
+                 input, &double_value_)));
+          set_has_double_value();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(48)) goto parse_is_nsnull;
+        break;
+      }
+
+      // optional bool is_nsnull = 6 [default = false];
+      case 6: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_is_nsnull:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &is_nsnull_)));
+          set_has_is_nsnull();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(58)) goto parse_tsp_reference;
+        break;
+      }
+
+      // optional .TSP.Reference tsp_reference = 7;
+      case 7: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_tsp_reference:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_tsp_reference()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(66)) goto parse_fill;
+        break;
+      }
+
+      // optional .TSD.FillArchive fill = 8;
+      case 8: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_fill:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_fill()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(74)) goto parse_import_warning_set;
+        break;
+      }
+
+      // optional .TST.ImportWarningSetArchive import_warning_set = 9;
+      case 9: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_import_warning_set:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_import_warning_set()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectAtEnd()) return true;
+        break;
+      }
+
+      default: {
+      handle_uninterpreted:
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          return true;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+  return true;
+#undef DO_
+}
+
+void PropertyMapEntryArchive::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // required uint32 property = 1;
+  if (has_property()) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(1, this->property(), output);
+  }
+
+  // required .TSS.ValueType valueType = 2;
+  if (has_valuetype()) {
+    ::google::protobuf::internal::WireFormatLite::WriteEnum(
+      2, this->valuetype(), output);
+  }
+
+  // optional int32 int_value = 3;
+  if (has_int_value()) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(3, this->int_value(), output);
+  }
+
+  // optional float float_value = 4;
+  if (has_float_value()) {
+    ::google::protobuf::internal::WireFormatLite::WriteFloat(4, this->float_value(), output);
+  }
+
+  // optional double double_value = 5;
+  if (has_double_value()) {
+    ::google::protobuf::internal::WireFormatLite::WriteDouble(5, this->double_value(), output);
+  }
+
+  // optional bool is_nsnull = 6 [default = false];
+  if (has_is_nsnull()) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(6, this->is_nsnull(), output);
+  }
+
+  // optional .TSP.Reference tsp_reference = 7;
+  if (has_tsp_reference()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      7, this->tsp_reference(), output);
+  }
+
+  // optional .TSD.FillArchive fill = 8;
+  if (has_fill()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      8, this->fill(), output);
+  }
+
+  // optional .TST.ImportWarningSetArchive import_warning_set = 9;
+  if (has_import_warning_set()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      9, this->import_warning_set(), output);
+  }
+
+  if (!unknown_fields().empty()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+}
+
+::google::protobuf::uint8* PropertyMapEntryArchive::SerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // required uint32 property = 1;
+  if (has_property()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(1, this->property(), target);
+  }
+
+  // required .TSS.ValueType valueType = 2;
+  if (has_valuetype()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
+      2, this->valuetype(), target);
+  }
+
+  // optional int32 int_value = 3;
+  if (has_int_value()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(3, this->int_value(), target);
+  }
+
+  // optional float float_value = 4;
+  if (has_float_value()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(4, this->float_value(), target);
+  }
+
+  // optional double double_value = 5;
+  if (has_double_value()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(5, this->double_value(), target);
+  }
+
+  // optional bool is_nsnull = 6 [default = false];
+  if (has_is_nsnull()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(6, this->is_nsnull(), target);
+  }
+
+  // optional .TSP.Reference tsp_reference = 7;
+  if (has_tsp_reference()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        7, this->tsp_reference(), target);
+  }
+
+  // optional .TSD.FillArchive fill = 8;
+  if (has_fill()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        8, this->fill(), target);
+  }
+
+  // optional .TST.ImportWarningSetArchive import_warning_set = 9;
+  if (has_import_warning_set()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        9, this->import_warning_set(), target);
+  }
+
+  if (!unknown_fields().empty()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  return target;
+}
+
+int PropertyMapEntryArchive::ByteSize() const {
+  int total_size = 0;
+
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    // required uint32 property = 1;
+    if (has_property()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::UInt32Size(
+          this->property());
+    }
+
+    // required .TSS.ValueType valueType = 2;
+    if (has_valuetype()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::EnumSize(this->valuetype());
+    }
+
+    // optional int32 int_value = 3;
+    if (has_int_value()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::Int32Size(
+          this->int_value());
+    }
+
+    // optional float float_value = 4;
+    if (has_float_value()) {
+      total_size += 1 + 4;
+    }
+
+    // optional double double_value = 5;
+    if (has_double_value()) {
+      total_size += 1 + 8;
+    }
+
+    // optional bool is_nsnull = 6 [default = false];
+    if (has_is_nsnull()) {
+      total_size += 1 + 1;
+    }
+
+    // optional .TSP.Reference tsp_reference = 7;
+    if (has_tsp_reference()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->tsp_reference());
+    }
+
+    // optional .TSD.FillArchive fill = 8;
+    if (has_fill()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->fill());
+    }
+
+  }
+  if (_has_bits_[8 / 32] & (0xffu << (8 % 32))) {
+    // optional .TST.ImportWarningSetArchive import_warning_set = 9;
+    if (has_import_warning_set()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->import_warning_set());
+    }
+
+  }
+  if (!unknown_fields().empty()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = total_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void PropertyMapEntryArchive::MergeFrom(const ::google::protobuf::Message& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  const PropertyMapEntryArchive* source =
+    ::google::protobuf::internal::dynamic_cast_if_available<const PropertyMapEntryArchive*>(
+      &from);
+  if (source == NULL) {
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+    MergeFrom(*source);
+  }
+}
+
+void PropertyMapEntryArchive::MergeFrom(const PropertyMapEntryArchive& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (from.has_property()) {
+      set_property(from.property());
+    }
+    if (from.has_valuetype()) {
+      set_valuetype(from.valuetype());
+    }
+    if (from.has_int_value()) {
+      set_int_value(from.int_value());
+    }
+    if (from.has_float_value()) {
+      set_float_value(from.float_value());
+    }
+    if (from.has_double_value()) {
+      set_double_value(from.double_value());
+    }
+    if (from.has_is_nsnull()) {
+      set_is_nsnull(from.is_nsnull());
+    }
+    if (from.has_tsp_reference()) {
+      mutable_tsp_reference()->::TSP::Reference::MergeFrom(from.tsp_reference());
+    }
+    if (from.has_fill()) {
+      mutable_fill()->::TSD::FillArchive::MergeFrom(from.fill());
+    }
+  }
+  if (from._has_bits_[8 / 32] & (0xffu << (8 % 32))) {
+    if (from.has_import_warning_set()) {
+      mutable_import_warning_set()->::TST::ImportWarningSetArchive::MergeFrom(from.import_warning_set());
+    }
+  }
+  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
+}
+
+void PropertyMapEntryArchive::CopyFrom(const ::google::protobuf::Message& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void PropertyMapEntryArchive::CopyFrom(const PropertyMapEntryArchive& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool PropertyMapEntryArchive::IsInitialized() const {
+  if ((_has_bits_[0] & 0x00000003) != 0x00000003) return false;
+
+  if (has_tsp_reference()) {
+    if (!this->tsp_reference().IsInitialized()) return false;
+  }
+  if (has_fill()) {
+    if (!this->fill().IsInitialized()) return false;
+  }
+  if (has_import_warning_set()) {
+    if (!this->import_warning_set().IsInitialized()) return false;
+  }
+  return true;
+}
+
+void PropertyMapEntryArchive::Swap(PropertyMapEntryArchive* other) {
+  if (other != this) {
+    std::swap(property_, other->property_);
+    std::swap(valuetype_, other->valuetype_);
+    std::swap(int_value_, other->int_value_);
+    std::swap(float_value_, other->float_value_);
+    std::swap(double_value_, other->double_value_);
+    std::swap(is_nsnull_, other->is_nsnull_);
+    std::swap(tsp_reference_, other->tsp_reference_);
+    std::swap(fill_, other->fill_);
+    std::swap(import_warning_set_, other->import_warning_set_);
+    std::swap(_has_bits_[0], other->_has_bits_[0]);
+    _unknown_fields_.Swap(&other->_unknown_fields_);
+    std::swap(_cached_size_, other->_cached_size_);
+  }
+}
+
+::google::protobuf::Metadata PropertyMapEntryArchive::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = PropertyMapEntryArchive_descriptor_;
+  metadata.reflection = PropertyMapEntryArchive_reflection_;
+  return metadata;
+}
+
+
+// ===================================================================
+
+#ifndef _MSC_VER
+const int CellDiffArchive::kPropertyMapToSetFieldNumber;
+const int CellDiffArchive::kPropertyMapToResetFieldNumber;
+#endif  // !_MSC_VER
+
+CellDiffArchive::CellDiffArchive()
+  : ::google::protobuf::Message() {
+  SharedCtor();
+}
+
+void CellDiffArchive::InitAsDefaultInstance() {
+}
+
+CellDiffArchive::CellDiffArchive(const CellDiffArchive& from)
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  MergeFrom(from);
+}
+
+void CellDiffArchive::SharedCtor() {
+  _cached_size_ = 0;
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+}
+
+CellDiffArchive::~CellDiffArchive() {
+  SharedDtor();
+}
+
+void CellDiffArchive::SharedDtor() {
+  if (this != default_instance_) {
+  }
+}
+
+void CellDiffArchive::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* CellDiffArchive::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return CellDiffArchive_descriptor_;
+}
+
+const CellDiffArchive& CellDiffArchive::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_TSTArchives_2eproto();
+  return *default_instance_;
+}
+
+CellDiffArchive* CellDiffArchive::default_instance_ = NULL;
+
+CellDiffArchive* CellDiffArchive::New() const {
+  return new CellDiffArchive;
+}
+
+void CellDiffArchive::Clear() {
+  property_map_to_set_.Clear();
+  property_map_to_reset_.Clear();
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+  mutable_unknown_fields()->Clear();
+}
+
+bool CellDiffArchive::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!(EXPRESSION)) return false
+  ::google::protobuf::uint32 tag;
+  while ((tag = input->ReadTag()) != 0) {
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // repeated .TST.PropertyMapEntryArchive property_map_to_set = 1;
+      case 1: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_property_map_to_set:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+                input, add_property_map_to_set()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(10)) goto parse_property_map_to_set;
+        if (input->ExpectTag(18)) goto parse_property_map_to_reset;
+        break;
+      }
+
+      // repeated .TST.PropertyMapEntryArchive property_map_to_reset = 2;
+      case 2: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_property_map_to_reset:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+                input, add_property_map_to_reset()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(18)) goto parse_property_map_to_reset;
+        if (input->ExpectAtEnd()) return true;
+        break;
+      }
+
+      default: {
+      handle_uninterpreted:
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          return true;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+  return true;
+#undef DO_
+}
+
+void CellDiffArchive::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // repeated .TST.PropertyMapEntryArchive property_map_to_set = 1;
+  for (int i = 0; i < this->property_map_to_set_size(); i++) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, this->property_map_to_set(i), output);
+  }
+
+  // repeated .TST.PropertyMapEntryArchive property_map_to_reset = 2;
+  for (int i = 0; i < this->property_map_to_reset_size(); i++) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      2, this->property_map_to_reset(i), output);
+  }
+
+  if (!unknown_fields().empty()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+}
+
+::google::protobuf::uint8* CellDiffArchive::SerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // repeated .TST.PropertyMapEntryArchive property_map_to_set = 1;
+  for (int i = 0; i < this->property_map_to_set_size(); i++) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        1, this->property_map_to_set(i), target);
+  }
+
+  // repeated .TST.PropertyMapEntryArchive property_map_to_reset = 2;
+  for (int i = 0; i < this->property_map_to_reset_size(); i++) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        2, this->property_map_to_reset(i), target);
+  }
+
+  if (!unknown_fields().empty()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  return target;
+}
+
+int CellDiffArchive::ByteSize() const {
+  int total_size = 0;
+
+  // repeated .TST.PropertyMapEntryArchive property_map_to_set = 1;
+  total_size += 1 * this->property_map_to_set_size();
+  for (int i = 0; i < this->property_map_to_set_size(); i++) {
+    total_size +=
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+        this->property_map_to_set(i));
+  }
+
+  // repeated .TST.PropertyMapEntryArchive property_map_to_reset = 2;
+  total_size += 1 * this->property_map_to_reset_size();
+  for (int i = 0; i < this->property_map_to_reset_size(); i++) {
+    total_size +=
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+        this->property_map_to_reset(i));
+  }
+
+  if (!unknown_fields().empty()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = total_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void CellDiffArchive::MergeFrom(const ::google::protobuf::Message& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  const CellDiffArchive* source =
+    ::google::protobuf::internal::dynamic_cast_if_available<const CellDiffArchive*>(
+      &from);
+  if (source == NULL) {
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+    MergeFrom(*source);
+  }
+}
+
+void CellDiffArchive::MergeFrom(const CellDiffArchive& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  property_map_to_set_.MergeFrom(from.property_map_to_set_);
+  property_map_to_reset_.MergeFrom(from.property_map_to_reset_);
+  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
+}
+
+void CellDiffArchive::CopyFrom(const ::google::protobuf::Message& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void CellDiffArchive::CopyFrom(const CellDiffArchive& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool CellDiffArchive::IsInitialized() const {
+
+  for (int i = 0; i < property_map_to_set_size(); i++) {
+    if (!this->property_map_to_set(i).IsInitialized()) return false;
+  }
+  for (int i = 0; i < property_map_to_reset_size(); i++) {
+    if (!this->property_map_to_reset(i).IsInitialized()) return false;
+  }
+  return true;
+}
+
+void CellDiffArchive::Swap(CellDiffArchive* other) {
+  if (other != this) {
+    property_map_to_set_.Swap(&other->property_map_to_set_);
+    property_map_to_reset_.Swap(&other->property_map_to_reset_);
+    std::swap(_has_bits_[0], other->_has_bits_[0]);
+    _unknown_fields_.Swap(&other->_unknown_fields_);
+    std::swap(_cached_size_, other->_cached_size_);
+  }
+}
+
+::google::protobuf::Metadata CellDiffArchive::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = CellDiffArchive_descriptor_;
+  metadata.reflection = CellDiffArchive_reflection_;
+  return metadata;
+}
+
+
+// ===================================================================
+
+#ifndef _MSC_VER
+const int CellDiffMapArchive::kCellIdsFieldNumber;
+const int CellDiffMapArchive::kCellDiffsFieldNumber;
+#endif  // !_MSC_VER
+
+CellDiffMapArchive::CellDiffMapArchive()
+  : ::google::protobuf::Message() {
+  SharedCtor();
+}
+
+void CellDiffMapArchive::InitAsDefaultInstance() {
+}
+
+CellDiffMapArchive::CellDiffMapArchive(const CellDiffMapArchive& from)
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  MergeFrom(from);
+}
+
+void CellDiffMapArchive::SharedCtor() {
+  _cached_size_ = 0;
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+}
+
+CellDiffMapArchive::~CellDiffMapArchive() {
+  SharedDtor();
+}
+
+void CellDiffMapArchive::SharedDtor() {
+  if (this != default_instance_) {
+  }
+}
+
+void CellDiffMapArchive::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* CellDiffMapArchive::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return CellDiffMapArchive_descriptor_;
+}
+
+const CellDiffMapArchive& CellDiffMapArchive::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_TSTArchives_2eproto();
+  return *default_instance_;
+}
+
+CellDiffMapArchive* CellDiffMapArchive::default_instance_ = NULL;
+
+CellDiffMapArchive* CellDiffMapArchive::New() const {
+  return new CellDiffMapArchive;
+}
+
+void CellDiffMapArchive::Clear() {
+  cell_ids_.Clear();
+  cell_diffs_.Clear();
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+  mutable_unknown_fields()->Clear();
+}
+
+bool CellDiffMapArchive::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!(EXPRESSION)) return false
+  ::google::protobuf::uint32 tag;
+  while ((tag = input->ReadTag()) != 0) {
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // repeated .TST.CellID cell_ids = 1;
+      case 1: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_cell_ids:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+                input, add_cell_ids()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(10)) goto parse_cell_ids;
+        if (input->ExpectTag(18)) goto parse_cell_diffs;
+        break;
+      }
+
+      // repeated .TSP.Reference cell_diffs = 2;
+      case 2: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_cell_diffs:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+                input, add_cell_diffs()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(18)) goto parse_cell_diffs;
+        if (input->ExpectAtEnd()) return true;
+        break;
+      }
+
+      default: {
+      handle_uninterpreted:
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          return true;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+  return true;
+#undef DO_
+}
+
+void CellDiffMapArchive::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // repeated .TST.CellID cell_ids = 1;
+  for (int i = 0; i < this->cell_ids_size(); i++) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, this->cell_ids(i), output);
+  }
+
+  // repeated .TSP.Reference cell_diffs = 2;
+  for (int i = 0; i < this->cell_diffs_size(); i++) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      2, this->cell_diffs(i), output);
+  }
+
+  if (!unknown_fields().empty()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+}
+
+::google::protobuf::uint8* CellDiffMapArchive::SerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // repeated .TST.CellID cell_ids = 1;
+  for (int i = 0; i < this->cell_ids_size(); i++) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        1, this->cell_ids(i), target);
+  }
+
+  // repeated .TSP.Reference cell_diffs = 2;
+  for (int i = 0; i < this->cell_diffs_size(); i++) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        2, this->cell_diffs(i), target);
+  }
+
+  if (!unknown_fields().empty()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  return target;
+}
+
+int CellDiffMapArchive::ByteSize() const {
+  int total_size = 0;
+
+  // repeated .TST.CellID cell_ids = 1;
+  total_size += 1 * this->cell_ids_size();
+  for (int i = 0; i < this->cell_ids_size(); i++) {
+    total_size +=
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+        this->cell_ids(i));
+  }
+
+  // repeated .TSP.Reference cell_diffs = 2;
+  total_size += 1 * this->cell_diffs_size();
+  for (int i = 0; i < this->cell_diffs_size(); i++) {
+    total_size +=
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+        this->cell_diffs(i));
+  }
+
+  if (!unknown_fields().empty()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = total_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void CellDiffMapArchive::MergeFrom(const ::google::protobuf::Message& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  const CellDiffMapArchive* source =
+    ::google::protobuf::internal::dynamic_cast_if_available<const CellDiffMapArchive*>(
+      &from);
+  if (source == NULL) {
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+    MergeFrom(*source);
+  }
+}
+
+void CellDiffMapArchive::MergeFrom(const CellDiffMapArchive& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  cell_ids_.MergeFrom(from.cell_ids_);
+  cell_diffs_.MergeFrom(from.cell_diffs_);
+  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
+}
+
+void CellDiffMapArchive::CopyFrom(const ::google::protobuf::Message& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void CellDiffMapArchive::CopyFrom(const CellDiffMapArchive& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool CellDiffMapArchive::IsInitialized() const {
+
+  for (int i = 0; i < cell_ids_size(); i++) {
+    if (!this->cell_ids(i).IsInitialized()) return false;
+  }
+  for (int i = 0; i < cell_diffs_size(); i++) {
+    if (!this->cell_diffs(i).IsInitialized()) return false;
+  }
+  return true;
+}
+
+void CellDiffMapArchive::Swap(CellDiffMapArchive* other) {
+  if (other != this) {
+    cell_ids_.Swap(&other->cell_ids_);
+    cell_diffs_.Swap(&other->cell_diffs_);
+    std::swap(_has_bits_[0], other->_has_bits_[0]);
+    _unknown_fields_.Swap(&other->_unknown_fields_);
+    std::swap(_cached_size_, other->_cached_size_);
+  }
+}
+
+::google::protobuf::Metadata CellDiffMapArchive::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = CellDiffMapArchive_descriptor_;
+  metadata.reflection = CellDiffMapArchive_reflection_;
   return metadata;
 }
 
@@ -26171,6 +30619,957 @@ void CellRegion::Swap(CellRegion* other) {
   ::google::protobuf::Metadata metadata;
   metadata.descriptor = CellRegion_descriptor_;
   metadata.reflection = CellRegion_reflection_;
+  return metadata;
+}
+
+
+// ===================================================================
+
+#ifndef _MSC_VER
+const int CellFillStandIn::kFillFieldNumber;
+const int CellFillStandIn::kTypeIsMixedFieldNumber;
+const int CellFillStandIn::kColorHasBeenModifiedFieldNumber;
+const int CellFillStandIn::kColorIsMixedFieldNumber;
+const int CellFillStandIn::kFirstColorHasBeenModifiedFieldNumber;
+const int CellFillStandIn::kFirstColorIsMixedFieldNumber;
+const int CellFillStandIn::kLastColorHasBeenModifiedFieldNumber;
+const int CellFillStandIn::kLastColorIsMixedFieldNumber;
+const int CellFillStandIn::kGradientTypeHasBeenModifiedFieldNumber;
+const int CellFillStandIn::kGradientTypeIsMixedFieldNumber;
+const int CellFillStandIn::kGradientAngleHasBeenModifiedFieldNumber;
+const int CellFillStandIn::kGradientAngleIsMixedFieldNumber;
+const int CellFillStandIn::kImageDataHasBeenModifiedFieldNumber;
+const int CellFillStandIn::kImageDataIsMixedFieldNumber;
+const int CellFillStandIn::kTintColorHasBeenModifiedFieldNumber;
+const int CellFillStandIn::kTintColorIsMixedFieldNumber;
+const int CellFillStandIn::kScaleHasBeenModifiedFieldNumber;
+const int CellFillStandIn::kScaleIsMixedFieldNumber;
+const int CellFillStandIn::kTechniqueHasBeenModifiedFieldNumber;
+const int CellFillStandIn::kTechniqueIsMixedFieldNumber;
+#endif  // !_MSC_VER
+
+CellFillStandIn::CellFillStandIn()
+  : ::google::protobuf::Message() {
+  SharedCtor();
+}
+
+void CellFillStandIn::InitAsDefaultInstance() {
+  fill_ = const_cast< ::TSD::FillArchive*>(&::TSD::FillArchive::default_instance());
+}
+
+CellFillStandIn::CellFillStandIn(const CellFillStandIn& from)
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  MergeFrom(from);
+}
+
+void CellFillStandIn::SharedCtor() {
+  _cached_size_ = 0;
+  fill_ = NULL;
+  type_is_mixed_ = false;
+  color_has_been_modified_ = false;
+  color_is_mixed_ = false;
+  first_color_has_been_modified_ = false;
+  first_color_is_mixed_ = false;
+  last_color_has_been_modified_ = false;
+  last_color_is_mixed_ = false;
+  gradient_type_has_been_modified_ = false;
+  gradient_type_is_mixed_ = false;
+  gradient_angle_has_been_modified_ = false;
+  gradient_angle_is_mixed_ = false;
+  image_data_has_been_modified_ = false;
+  image_data_is_mixed_ = false;
+  tint_color_has_been_modified_ = false;
+  tint_color_is_mixed_ = false;
+  scale_has_been_modified_ = false;
+  scale_is_mixed_ = false;
+  technique_has_been_modified_ = false;
+  technique_is_mixed_ = false;
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+}
+
+CellFillStandIn::~CellFillStandIn() {
+  SharedDtor();
+}
+
+void CellFillStandIn::SharedDtor() {
+  if (this != default_instance_) {
+    delete fill_;
+  }
+}
+
+void CellFillStandIn::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* CellFillStandIn::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return CellFillStandIn_descriptor_;
+}
+
+const CellFillStandIn& CellFillStandIn::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_TSTArchives_2eproto();
+  return *default_instance_;
+}
+
+CellFillStandIn* CellFillStandIn::default_instance_ = NULL;
+
+CellFillStandIn* CellFillStandIn::New() const {
+  return new CellFillStandIn;
+}
+
+void CellFillStandIn::Clear() {
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (has_fill()) {
+      if (fill_ != NULL) fill_->::TSD::FillArchive::Clear();
+    }
+    type_is_mixed_ = false;
+    color_has_been_modified_ = false;
+    color_is_mixed_ = false;
+    first_color_has_been_modified_ = false;
+    first_color_is_mixed_ = false;
+    last_color_has_been_modified_ = false;
+    last_color_is_mixed_ = false;
+  }
+  if (_has_bits_[8 / 32] & (0xffu << (8 % 32))) {
+    gradient_type_has_been_modified_ = false;
+    gradient_type_is_mixed_ = false;
+    gradient_angle_has_been_modified_ = false;
+    gradient_angle_is_mixed_ = false;
+    image_data_has_been_modified_ = false;
+    image_data_is_mixed_ = false;
+    tint_color_has_been_modified_ = false;
+    tint_color_is_mixed_ = false;
+  }
+  if (_has_bits_[16 / 32] & (0xffu << (16 % 32))) {
+    scale_has_been_modified_ = false;
+    scale_is_mixed_ = false;
+    technique_has_been_modified_ = false;
+    technique_is_mixed_ = false;
+  }
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+  mutable_unknown_fields()->Clear();
+}
+
+bool CellFillStandIn::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!(EXPRESSION)) return false
+  ::google::protobuf::uint32 tag;
+  while ((tag = input->ReadTag()) != 0) {
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // required .TSD.FillArchive fill = 1;
+      case 1: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_fill()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(16)) goto parse_type_is_mixed;
+        break;
+      }
+
+      // optional bool type_is_mixed = 2;
+      case 2: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_type_is_mixed:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &type_is_mixed_)));
+          set_has_type_is_mixed();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(24)) goto parse_color_has_been_modified;
+        break;
+      }
+
+      // optional bool color_has_been_modified = 3;
+      case 3: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_color_has_been_modified:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &color_has_been_modified_)));
+          set_has_color_has_been_modified();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(32)) goto parse_color_is_mixed;
+        break;
+      }
+
+      // optional bool color_is_mixed = 4;
+      case 4: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_color_is_mixed:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &color_is_mixed_)));
+          set_has_color_is_mixed();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(40)) goto parse_first_color_has_been_modified;
+        break;
+      }
+
+      // optional bool first_color_has_been_modified = 5;
+      case 5: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_first_color_has_been_modified:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &first_color_has_been_modified_)));
+          set_has_first_color_has_been_modified();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(48)) goto parse_first_color_is_mixed;
+        break;
+      }
+
+      // optional bool first_color_is_mixed = 6;
+      case 6: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_first_color_is_mixed:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &first_color_is_mixed_)));
+          set_has_first_color_is_mixed();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(56)) goto parse_last_color_has_been_modified;
+        break;
+      }
+
+      // optional bool last_color_has_been_modified = 7;
+      case 7: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_last_color_has_been_modified:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &last_color_has_been_modified_)));
+          set_has_last_color_has_been_modified();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(64)) goto parse_last_color_is_mixed;
+        break;
+      }
+
+      // optional bool last_color_is_mixed = 8;
+      case 8: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_last_color_is_mixed:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &last_color_is_mixed_)));
+          set_has_last_color_is_mixed();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(72)) goto parse_gradient_type_has_been_modified;
+        break;
+      }
+
+      // optional bool gradient_type_has_been_modified = 9;
+      case 9: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_gradient_type_has_been_modified:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &gradient_type_has_been_modified_)));
+          set_has_gradient_type_has_been_modified();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(80)) goto parse_gradient_type_is_mixed;
+        break;
+      }
+
+      // optional bool gradient_type_is_mixed = 10;
+      case 10: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_gradient_type_is_mixed:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &gradient_type_is_mixed_)));
+          set_has_gradient_type_is_mixed();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(88)) goto parse_gradient_angle_has_been_modified;
+        break;
+      }
+
+      // optional bool gradient_angle_has_been_modified = 11;
+      case 11: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_gradient_angle_has_been_modified:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &gradient_angle_has_been_modified_)));
+          set_has_gradient_angle_has_been_modified();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(96)) goto parse_gradient_angle_is_mixed;
+        break;
+      }
+
+      // optional bool gradient_angle_is_mixed = 12;
+      case 12: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_gradient_angle_is_mixed:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &gradient_angle_is_mixed_)));
+          set_has_gradient_angle_is_mixed();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(104)) goto parse_image_data_has_been_modified;
+        break;
+      }
+
+      // optional bool image_data_has_been_modified = 13;
+      case 13: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_image_data_has_been_modified:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &image_data_has_been_modified_)));
+          set_has_image_data_has_been_modified();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(112)) goto parse_image_data_is_mixed;
+        break;
+      }
+
+      // optional bool image_data_is_mixed = 14;
+      case 14: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_image_data_is_mixed:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &image_data_is_mixed_)));
+          set_has_image_data_is_mixed();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(120)) goto parse_tint_color_has_been_modified;
+        break;
+      }
+
+      // optional bool tint_color_has_been_modified = 15;
+      case 15: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_tint_color_has_been_modified:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &tint_color_has_been_modified_)));
+          set_has_tint_color_has_been_modified();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(128)) goto parse_tint_color_is_mixed;
+        break;
+      }
+
+      // optional bool tint_color_is_mixed = 16;
+      case 16: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_tint_color_is_mixed:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &tint_color_is_mixed_)));
+          set_has_tint_color_is_mixed();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(136)) goto parse_scale_has_been_modified;
+        break;
+      }
+
+      // optional bool scale_has_been_modified = 17;
+      case 17: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_scale_has_been_modified:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &scale_has_been_modified_)));
+          set_has_scale_has_been_modified();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(144)) goto parse_scale_is_mixed;
+        break;
+      }
+
+      // optional bool scale_is_mixed = 18;
+      case 18: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_scale_is_mixed:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &scale_is_mixed_)));
+          set_has_scale_is_mixed();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(152)) goto parse_technique_has_been_modified;
+        break;
+      }
+
+      // optional bool technique_has_been_modified = 19;
+      case 19: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_technique_has_been_modified:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &technique_has_been_modified_)));
+          set_has_technique_has_been_modified();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(160)) goto parse_technique_is_mixed;
+        break;
+      }
+
+      // optional bool technique_is_mixed = 20;
+      case 20: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_technique_is_mixed:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &technique_is_mixed_)));
+          set_has_technique_is_mixed();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectAtEnd()) return true;
+        break;
+      }
+
+      default: {
+      handle_uninterpreted:
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          return true;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+  return true;
+#undef DO_
+}
+
+void CellFillStandIn::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // required .TSD.FillArchive fill = 1;
+  if (has_fill()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, this->fill(), output);
+  }
+
+  // optional bool type_is_mixed = 2;
+  if (has_type_is_mixed()) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(2, this->type_is_mixed(), output);
+  }
+
+  // optional bool color_has_been_modified = 3;
+  if (has_color_has_been_modified()) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(3, this->color_has_been_modified(), output);
+  }
+
+  // optional bool color_is_mixed = 4;
+  if (has_color_is_mixed()) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(4, this->color_is_mixed(), output);
+  }
+
+  // optional bool first_color_has_been_modified = 5;
+  if (has_first_color_has_been_modified()) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(5, this->first_color_has_been_modified(), output);
+  }
+
+  // optional bool first_color_is_mixed = 6;
+  if (has_first_color_is_mixed()) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(6, this->first_color_is_mixed(), output);
+  }
+
+  // optional bool last_color_has_been_modified = 7;
+  if (has_last_color_has_been_modified()) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(7, this->last_color_has_been_modified(), output);
+  }
+
+  // optional bool last_color_is_mixed = 8;
+  if (has_last_color_is_mixed()) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(8, this->last_color_is_mixed(), output);
+  }
+
+  // optional bool gradient_type_has_been_modified = 9;
+  if (has_gradient_type_has_been_modified()) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(9, this->gradient_type_has_been_modified(), output);
+  }
+
+  // optional bool gradient_type_is_mixed = 10;
+  if (has_gradient_type_is_mixed()) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(10, this->gradient_type_is_mixed(), output);
+  }
+
+  // optional bool gradient_angle_has_been_modified = 11;
+  if (has_gradient_angle_has_been_modified()) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(11, this->gradient_angle_has_been_modified(), output);
+  }
+
+  // optional bool gradient_angle_is_mixed = 12;
+  if (has_gradient_angle_is_mixed()) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(12, this->gradient_angle_is_mixed(), output);
+  }
+
+  // optional bool image_data_has_been_modified = 13;
+  if (has_image_data_has_been_modified()) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(13, this->image_data_has_been_modified(), output);
+  }
+
+  // optional bool image_data_is_mixed = 14;
+  if (has_image_data_is_mixed()) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(14, this->image_data_is_mixed(), output);
+  }
+
+  // optional bool tint_color_has_been_modified = 15;
+  if (has_tint_color_has_been_modified()) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(15, this->tint_color_has_been_modified(), output);
+  }
+
+  // optional bool tint_color_is_mixed = 16;
+  if (has_tint_color_is_mixed()) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(16, this->tint_color_is_mixed(), output);
+  }
+
+  // optional bool scale_has_been_modified = 17;
+  if (has_scale_has_been_modified()) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(17, this->scale_has_been_modified(), output);
+  }
+
+  // optional bool scale_is_mixed = 18;
+  if (has_scale_is_mixed()) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(18, this->scale_is_mixed(), output);
+  }
+
+  // optional bool technique_has_been_modified = 19;
+  if (has_technique_has_been_modified()) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(19, this->technique_has_been_modified(), output);
+  }
+
+  // optional bool technique_is_mixed = 20;
+  if (has_technique_is_mixed()) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(20, this->technique_is_mixed(), output);
+  }
+
+  if (!unknown_fields().empty()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+}
+
+::google::protobuf::uint8* CellFillStandIn::SerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // required .TSD.FillArchive fill = 1;
+  if (has_fill()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        1, this->fill(), target);
+  }
+
+  // optional bool type_is_mixed = 2;
+  if (has_type_is_mixed()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(2, this->type_is_mixed(), target);
+  }
+
+  // optional bool color_has_been_modified = 3;
+  if (has_color_has_been_modified()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(3, this->color_has_been_modified(), target);
+  }
+
+  // optional bool color_is_mixed = 4;
+  if (has_color_is_mixed()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(4, this->color_is_mixed(), target);
+  }
+
+  // optional bool first_color_has_been_modified = 5;
+  if (has_first_color_has_been_modified()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(5, this->first_color_has_been_modified(), target);
+  }
+
+  // optional bool first_color_is_mixed = 6;
+  if (has_first_color_is_mixed()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(6, this->first_color_is_mixed(), target);
+  }
+
+  // optional bool last_color_has_been_modified = 7;
+  if (has_last_color_has_been_modified()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(7, this->last_color_has_been_modified(), target);
+  }
+
+  // optional bool last_color_is_mixed = 8;
+  if (has_last_color_is_mixed()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(8, this->last_color_is_mixed(), target);
+  }
+
+  // optional bool gradient_type_has_been_modified = 9;
+  if (has_gradient_type_has_been_modified()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(9, this->gradient_type_has_been_modified(), target);
+  }
+
+  // optional bool gradient_type_is_mixed = 10;
+  if (has_gradient_type_is_mixed()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(10, this->gradient_type_is_mixed(), target);
+  }
+
+  // optional bool gradient_angle_has_been_modified = 11;
+  if (has_gradient_angle_has_been_modified()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(11, this->gradient_angle_has_been_modified(), target);
+  }
+
+  // optional bool gradient_angle_is_mixed = 12;
+  if (has_gradient_angle_is_mixed()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(12, this->gradient_angle_is_mixed(), target);
+  }
+
+  // optional bool image_data_has_been_modified = 13;
+  if (has_image_data_has_been_modified()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(13, this->image_data_has_been_modified(), target);
+  }
+
+  // optional bool image_data_is_mixed = 14;
+  if (has_image_data_is_mixed()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(14, this->image_data_is_mixed(), target);
+  }
+
+  // optional bool tint_color_has_been_modified = 15;
+  if (has_tint_color_has_been_modified()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(15, this->tint_color_has_been_modified(), target);
+  }
+
+  // optional bool tint_color_is_mixed = 16;
+  if (has_tint_color_is_mixed()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(16, this->tint_color_is_mixed(), target);
+  }
+
+  // optional bool scale_has_been_modified = 17;
+  if (has_scale_has_been_modified()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(17, this->scale_has_been_modified(), target);
+  }
+
+  // optional bool scale_is_mixed = 18;
+  if (has_scale_is_mixed()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(18, this->scale_is_mixed(), target);
+  }
+
+  // optional bool technique_has_been_modified = 19;
+  if (has_technique_has_been_modified()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(19, this->technique_has_been_modified(), target);
+  }
+
+  // optional bool technique_is_mixed = 20;
+  if (has_technique_is_mixed()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(20, this->technique_is_mixed(), target);
+  }
+
+  if (!unknown_fields().empty()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  return target;
+}
+
+int CellFillStandIn::ByteSize() const {
+  int total_size = 0;
+
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    // required .TSD.FillArchive fill = 1;
+    if (has_fill()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->fill());
+    }
+
+    // optional bool type_is_mixed = 2;
+    if (has_type_is_mixed()) {
+      total_size += 1 + 1;
+    }
+
+    // optional bool color_has_been_modified = 3;
+    if (has_color_has_been_modified()) {
+      total_size += 1 + 1;
+    }
+
+    // optional bool color_is_mixed = 4;
+    if (has_color_is_mixed()) {
+      total_size += 1 + 1;
+    }
+
+    // optional bool first_color_has_been_modified = 5;
+    if (has_first_color_has_been_modified()) {
+      total_size += 1 + 1;
+    }
+
+    // optional bool first_color_is_mixed = 6;
+    if (has_first_color_is_mixed()) {
+      total_size += 1 + 1;
+    }
+
+    // optional bool last_color_has_been_modified = 7;
+    if (has_last_color_has_been_modified()) {
+      total_size += 1 + 1;
+    }
+
+    // optional bool last_color_is_mixed = 8;
+    if (has_last_color_is_mixed()) {
+      total_size += 1 + 1;
+    }
+
+  }
+  if (_has_bits_[8 / 32] & (0xffu << (8 % 32))) {
+    // optional bool gradient_type_has_been_modified = 9;
+    if (has_gradient_type_has_been_modified()) {
+      total_size += 1 + 1;
+    }
+
+    // optional bool gradient_type_is_mixed = 10;
+    if (has_gradient_type_is_mixed()) {
+      total_size += 1 + 1;
+    }
+
+    // optional bool gradient_angle_has_been_modified = 11;
+    if (has_gradient_angle_has_been_modified()) {
+      total_size += 1 + 1;
+    }
+
+    // optional bool gradient_angle_is_mixed = 12;
+    if (has_gradient_angle_is_mixed()) {
+      total_size += 1 + 1;
+    }
+
+    // optional bool image_data_has_been_modified = 13;
+    if (has_image_data_has_been_modified()) {
+      total_size += 1 + 1;
+    }
+
+    // optional bool image_data_is_mixed = 14;
+    if (has_image_data_is_mixed()) {
+      total_size += 1 + 1;
+    }
+
+    // optional bool tint_color_has_been_modified = 15;
+    if (has_tint_color_has_been_modified()) {
+      total_size += 1 + 1;
+    }
+
+    // optional bool tint_color_is_mixed = 16;
+    if (has_tint_color_is_mixed()) {
+      total_size += 2 + 1;
+    }
+
+  }
+  if (_has_bits_[16 / 32] & (0xffu << (16 % 32))) {
+    // optional bool scale_has_been_modified = 17;
+    if (has_scale_has_been_modified()) {
+      total_size += 2 + 1;
+    }
+
+    // optional bool scale_is_mixed = 18;
+    if (has_scale_is_mixed()) {
+      total_size += 2 + 1;
+    }
+
+    // optional bool technique_has_been_modified = 19;
+    if (has_technique_has_been_modified()) {
+      total_size += 2 + 1;
+    }
+
+    // optional bool technique_is_mixed = 20;
+    if (has_technique_is_mixed()) {
+      total_size += 2 + 1;
+    }
+
+  }
+  if (!unknown_fields().empty()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = total_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void CellFillStandIn::MergeFrom(const ::google::protobuf::Message& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  const CellFillStandIn* source =
+    ::google::protobuf::internal::dynamic_cast_if_available<const CellFillStandIn*>(
+      &from);
+  if (source == NULL) {
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+    MergeFrom(*source);
+  }
+}
+
+void CellFillStandIn::MergeFrom(const CellFillStandIn& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (from.has_fill()) {
+      mutable_fill()->::TSD::FillArchive::MergeFrom(from.fill());
+    }
+    if (from.has_type_is_mixed()) {
+      set_type_is_mixed(from.type_is_mixed());
+    }
+    if (from.has_color_has_been_modified()) {
+      set_color_has_been_modified(from.color_has_been_modified());
+    }
+    if (from.has_color_is_mixed()) {
+      set_color_is_mixed(from.color_is_mixed());
+    }
+    if (from.has_first_color_has_been_modified()) {
+      set_first_color_has_been_modified(from.first_color_has_been_modified());
+    }
+    if (from.has_first_color_is_mixed()) {
+      set_first_color_is_mixed(from.first_color_is_mixed());
+    }
+    if (from.has_last_color_has_been_modified()) {
+      set_last_color_has_been_modified(from.last_color_has_been_modified());
+    }
+    if (from.has_last_color_is_mixed()) {
+      set_last_color_is_mixed(from.last_color_is_mixed());
+    }
+  }
+  if (from._has_bits_[8 / 32] & (0xffu << (8 % 32))) {
+    if (from.has_gradient_type_has_been_modified()) {
+      set_gradient_type_has_been_modified(from.gradient_type_has_been_modified());
+    }
+    if (from.has_gradient_type_is_mixed()) {
+      set_gradient_type_is_mixed(from.gradient_type_is_mixed());
+    }
+    if (from.has_gradient_angle_has_been_modified()) {
+      set_gradient_angle_has_been_modified(from.gradient_angle_has_been_modified());
+    }
+    if (from.has_gradient_angle_is_mixed()) {
+      set_gradient_angle_is_mixed(from.gradient_angle_is_mixed());
+    }
+    if (from.has_image_data_has_been_modified()) {
+      set_image_data_has_been_modified(from.image_data_has_been_modified());
+    }
+    if (from.has_image_data_is_mixed()) {
+      set_image_data_is_mixed(from.image_data_is_mixed());
+    }
+    if (from.has_tint_color_has_been_modified()) {
+      set_tint_color_has_been_modified(from.tint_color_has_been_modified());
+    }
+    if (from.has_tint_color_is_mixed()) {
+      set_tint_color_is_mixed(from.tint_color_is_mixed());
+    }
+  }
+  if (from._has_bits_[16 / 32] & (0xffu << (16 % 32))) {
+    if (from.has_scale_has_been_modified()) {
+      set_scale_has_been_modified(from.scale_has_been_modified());
+    }
+    if (from.has_scale_is_mixed()) {
+      set_scale_is_mixed(from.scale_is_mixed());
+    }
+    if (from.has_technique_has_been_modified()) {
+      set_technique_has_been_modified(from.technique_has_been_modified());
+    }
+    if (from.has_technique_is_mixed()) {
+      set_technique_is_mixed(from.technique_is_mixed());
+    }
+  }
+  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
+}
+
+void CellFillStandIn::CopyFrom(const ::google::protobuf::Message& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void CellFillStandIn::CopyFrom(const CellFillStandIn& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool CellFillStandIn::IsInitialized() const {
+  if ((_has_bits_[0] & 0x00000001) != 0x00000001) return false;
+
+  if (has_fill()) {
+    if (!this->fill().IsInitialized()) return false;
+  }
+  return true;
+}
+
+void CellFillStandIn::Swap(CellFillStandIn* other) {
+  if (other != this) {
+    std::swap(fill_, other->fill_);
+    std::swap(type_is_mixed_, other->type_is_mixed_);
+    std::swap(color_has_been_modified_, other->color_has_been_modified_);
+    std::swap(color_is_mixed_, other->color_is_mixed_);
+    std::swap(first_color_has_been_modified_, other->first_color_has_been_modified_);
+    std::swap(first_color_is_mixed_, other->first_color_is_mixed_);
+    std::swap(last_color_has_been_modified_, other->last_color_has_been_modified_);
+    std::swap(last_color_is_mixed_, other->last_color_is_mixed_);
+    std::swap(gradient_type_has_been_modified_, other->gradient_type_has_been_modified_);
+    std::swap(gradient_type_is_mixed_, other->gradient_type_is_mixed_);
+    std::swap(gradient_angle_has_been_modified_, other->gradient_angle_has_been_modified_);
+    std::swap(gradient_angle_is_mixed_, other->gradient_angle_is_mixed_);
+    std::swap(image_data_has_been_modified_, other->image_data_has_been_modified_);
+    std::swap(image_data_is_mixed_, other->image_data_is_mixed_);
+    std::swap(tint_color_has_been_modified_, other->tint_color_has_been_modified_);
+    std::swap(tint_color_is_mixed_, other->tint_color_is_mixed_);
+    std::swap(scale_has_been_modified_, other->scale_has_been_modified_);
+    std::swap(scale_is_mixed_, other->scale_is_mixed_);
+    std::swap(technique_has_been_modified_, other->technique_has_been_modified_);
+    std::swap(technique_is_mixed_, other->technique_is_mixed_);
+    std::swap(_has_bits_[0], other->_has_bits_[0]);
+    _unknown_fields_.Swap(&other->_unknown_fields_);
+    std::swap(_cached_size_, other->_cached_size_);
+  }
+}
+
+::google::protobuf::Metadata CellFillStandIn::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = CellFillStandIn_descriptor_;
+  metadata.reflection = CellFillStandIn_reflection_;
   return metadata;
 }
 

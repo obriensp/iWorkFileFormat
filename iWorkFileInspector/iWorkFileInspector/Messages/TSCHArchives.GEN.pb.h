@@ -48,6 +48,10 @@ class ChartAxisStyleArchive;
 class ChartAxisNonStyleArchive;
 class ChartSeriesStyleArchive;
 class ChartSeriesNonStyleArchive;
+class ChartGenericPropertyMapArchive;
+class LegendGenericPropertyMapArchive;
+class ChartAxisGenericPropertyMapArchive;
+class ChartSeriesGenericPropertyMapArchive;
 
 // ===================================================================
 
@@ -1413,14 +1417,50 @@ class ChartAxisNonStyleArchive : public ::google::protobuf::Message {
   inline ::google::protobuf::int32 tschchartaxisdefault3dlabelposition() const;
   inline void set_tschchartaxisdefault3dlabelposition(::google::protobuf::int32 value);
 
-  // optional .TSK.FormatStructArchive tschchartaxisdefaultnumberformat = 2;
+  // optional .TSK.FormatStructArchive tschchartaxisdefault1_0numberformat = 2;
+  inline bool has_tschchartaxisdefault1_0numberformat() const;
+  inline void clear_tschchartaxisdefault1_0numberformat();
+  static const int kTschchartaxisdefault10NumberformatFieldNumber = 2;
+  inline const ::TSK::FormatStructArchive& tschchartaxisdefault1_0numberformat() const;
+  inline ::TSK::FormatStructArchive* mutable_tschchartaxisdefault1_0numberformat();
+  inline ::TSK::FormatStructArchive* release_tschchartaxisdefault1_0numberformat();
+  inline void set_allocated_tschchartaxisdefault1_0numberformat(::TSK::FormatStructArchive* tschchartaxisdefault1_0numberformat);
+
+  // optional .TSK.FormatStructArchive tschchartaxisdefaultnumberformat = 42;
   inline bool has_tschchartaxisdefaultnumberformat() const;
   inline void clear_tschchartaxisdefaultnumberformat();
-  static const int kTschchartaxisdefaultnumberformatFieldNumber = 2;
+  static const int kTschchartaxisdefaultnumberformatFieldNumber = 42;
   inline const ::TSK::FormatStructArchive& tschchartaxisdefaultnumberformat() const;
   inline ::TSK::FormatStructArchive* mutable_tschchartaxisdefaultnumberformat();
   inline ::TSK::FormatStructArchive* release_tschchartaxisdefaultnumberformat();
   inline void set_allocated_tschchartaxisdefaultnumberformat(::TSK::FormatStructArchive* tschchartaxisdefaultnumberformat);
+
+  // optional .TSK.FormatStructArchive tschchartaxisdefault1_0dateformat = 20;
+  inline bool has_tschchartaxisdefault1_0dateformat() const;
+  inline void clear_tschchartaxisdefault1_0dateformat();
+  static const int kTschchartaxisdefault10DateformatFieldNumber = 20;
+  inline const ::TSK::FormatStructArchive& tschchartaxisdefault1_0dateformat() const;
+  inline ::TSK::FormatStructArchive* mutable_tschchartaxisdefault1_0dateformat();
+  inline ::TSK::FormatStructArchive* release_tschchartaxisdefault1_0dateformat();
+  inline void set_allocated_tschchartaxisdefault1_0dateformat(::TSK::FormatStructArchive* tschchartaxisdefault1_0dateformat);
+
+  // optional .TSK.FormatStructArchive tschchartaxisdefaultdurationformat = 21;
+  inline bool has_tschchartaxisdefaultdurationformat() const;
+  inline void clear_tschchartaxisdefaultdurationformat();
+  static const int kTschchartaxisdefaultdurationformatFieldNumber = 21;
+  inline const ::TSK::FormatStructArchive& tschchartaxisdefaultdurationformat() const;
+  inline ::TSK::FormatStructArchive* mutable_tschchartaxisdefaultdurationformat();
+  inline ::TSK::FormatStructArchive* release_tschchartaxisdefaultdurationformat();
+  inline void set_allocated_tschchartaxisdefaultdurationformat(::TSK::FormatStructArchive* tschchartaxisdefaultdurationformat);
+
+  // optional .TSK.FormatStructArchive tschchartaxisdefaultdateformat = 22;
+  inline bool has_tschchartaxisdefaultdateformat() const;
+  inline void clear_tschchartaxisdefaultdateformat();
+  static const int kTschchartaxisdefaultdateformatFieldNumber = 22;
+  inline const ::TSK::FormatStructArchive& tschchartaxisdefaultdateformat() const;
+  inline ::TSK::FormatStructArchive* mutable_tschchartaxisdefaultdateformat();
+  inline ::TSK::FormatStructArchive* release_tschchartaxisdefaultdateformat();
+  inline void set_allocated_tschchartaxisdefaultdateformat(::TSK::FormatStructArchive* tschchartaxisdefaultdateformat);
 
   // optional int32 tschchartaxisdefaultnumberformattype = 3;
   inline bool has_tschchartaxisdefaultnumberformattype() const;
@@ -1563,8 +1603,16 @@ class ChartAxisNonStyleArchive : public ::google::protobuf::Message {
  private:
   inline void set_has_tschchartaxisdefault3dlabelposition();
   inline void clear_has_tschchartaxisdefault3dlabelposition();
+  inline void set_has_tschchartaxisdefault1_0numberformat();
+  inline void clear_has_tschchartaxisdefault1_0numberformat();
   inline void set_has_tschchartaxisdefaultnumberformat();
   inline void clear_has_tschchartaxisdefaultnumberformat();
+  inline void set_has_tschchartaxisdefault1_0dateformat();
+  inline void clear_has_tschchartaxisdefault1_0dateformat();
+  inline void set_has_tschchartaxisdefaultdurationformat();
+  inline void clear_has_tschchartaxisdefaultdurationformat();
+  inline void set_has_tschchartaxisdefaultdateformat();
+  inline void clear_has_tschchartaxisdefaultdateformat();
   inline void set_has_tschchartaxisdefaultnumberformattype();
   inline void clear_has_tschchartaxisdefaultnumberformattype();
   inline void set_has_tschchartaxisvaluenumberofdecades();
@@ -1602,9 +1650,13 @@ class ChartAxisNonStyleArchive : public ::google::protobuf::Message {
 
   ::google::protobuf::UnknownFieldSet _unknown_fields_;
 
+  ::TSK::FormatStructArchive* tschchartaxisdefault1_0numberformat_;
   ::TSK::FormatStructArchive* tschchartaxisdefaultnumberformat_;
+  ::TSK::FormatStructArchive* tschchartaxisdefault1_0dateformat_;
   ::google::protobuf::int32 tschchartaxisdefault3dlabelposition_;
   ::google::protobuf::int32 tschchartaxisdefaultnumberformattype_;
+  ::TSK::FormatStructArchive* tschchartaxisdefaultdurationformat_;
+  ::TSK::FormatStructArchive* tschchartaxisdefaultdateformat_;
   ::google::protobuf::int32 tschchartaxisvaluenumberofdecades_;
   ::google::protobuf::int32 tschchartaxisvaluenumberofmajorgridlines_;
   ::google::protobuf::int32 tschchartaxisvaluenumberofminorgridlines_;
@@ -1623,7 +1675,7 @@ class ChartAxisNonStyleArchive : public ::google::protobuf::Message {
   ::TSCH::ChartsNSNumberDoubleArchive* tschchartaxisdefaultusermin_;
 
   mutable int _cached_size_;
-  ::google::protobuf::uint32 _has_bits_[(19 + 31) / 32];
+  ::google::protobuf::uint32 _has_bits_[(23 + 31) / 32];
 
   friend void  protobuf_AddDesc_TSCHArchives_2eGEN_2eproto();
   friend void protobuf_AssignDesc_TSCHArchives_2eGEN_2eproto();
@@ -2992,19 +3044,64 @@ class ChartSeriesNonStyleArchive : public ::google::protobuf::Message {
   inline ::google::protobuf::int32 tschchartseriesscatterlinetype() const;
   inline void set_tschchartseriesscatterlinetype(::google::protobuf::int32 value);
 
-  // optional .TSK.FormatStructArchive tschchartseriesdefaultnumberformat = 21;
+  // optional .TSK.FormatStructArchive tschchartseriesdefault1_0numberformat = 21;
+  inline bool has_tschchartseriesdefault1_0numberformat() const;
+  inline void clear_tschchartseriesdefault1_0numberformat();
+  static const int kTschchartseriesdefault10NumberformatFieldNumber = 21;
+  inline const ::TSK::FormatStructArchive& tschchartseriesdefault1_0numberformat() const;
+  inline ::TSK::FormatStructArchive* mutable_tschchartseriesdefault1_0numberformat();
+  inline ::TSK::FormatStructArchive* release_tschchartseriesdefault1_0numberformat();
+  inline void set_allocated_tschchartseriesdefault1_0numberformat(::TSK::FormatStructArchive* tschchartseriesdefault1_0numberformat);
+
+  // optional .TSK.FormatStructArchive tschchartseriesdefaultnumberformat = 98;
   inline bool has_tschchartseriesdefaultnumberformat() const;
   inline void clear_tschchartseriesdefaultnumberformat();
-  static const int kTschchartseriesdefaultnumberformatFieldNumber = 21;
+  static const int kTschchartseriesdefaultnumberformatFieldNumber = 98;
   inline const ::TSK::FormatStructArchive& tschchartseriesdefaultnumberformat() const;
   inline ::TSK::FormatStructArchive* mutable_tschchartseriesdefaultnumberformat();
   inline ::TSK::FormatStructArchive* release_tschchartseriesdefaultnumberformat();
   inline void set_allocated_tschchartseriesdefaultnumberformat(::TSK::FormatStructArchive* tschchartseriesdefaultnumberformat);
 
-  // optional .TSK.FormatStructArchive tschchartseriespienumberformat = 22;
+  // optional .TSK.FormatStructArchive tschchartseriesdefault1_0dateformat = 69;
+  inline bool has_tschchartseriesdefault1_0dateformat() const;
+  inline void clear_tschchartseriesdefault1_0dateformat();
+  static const int kTschchartseriesdefault10DateformatFieldNumber = 69;
+  inline const ::TSK::FormatStructArchive& tschchartseriesdefault1_0dateformat() const;
+  inline ::TSK::FormatStructArchive* mutable_tschchartseriesdefault1_0dateformat();
+  inline ::TSK::FormatStructArchive* release_tschchartseriesdefault1_0dateformat();
+  inline void set_allocated_tschchartseriesdefault1_0dateformat(::TSK::FormatStructArchive* tschchartseriesdefault1_0dateformat);
+
+  // optional .TSK.FormatStructArchive tschchartseriesdefaultdurationformat = 70;
+  inline bool has_tschchartseriesdefaultdurationformat() const;
+  inline void clear_tschchartseriesdefaultdurationformat();
+  static const int kTschchartseriesdefaultdurationformatFieldNumber = 70;
+  inline const ::TSK::FormatStructArchive& tschchartseriesdefaultdurationformat() const;
+  inline ::TSK::FormatStructArchive* mutable_tschchartseriesdefaultdurationformat();
+  inline ::TSK::FormatStructArchive* release_tschchartseriesdefaultdurationformat();
+  inline void set_allocated_tschchartseriesdefaultdurationformat(::TSK::FormatStructArchive* tschchartseriesdefaultdurationformat);
+
+  // optional .TSK.FormatStructArchive tschchartseriesdefaultdateformat = 71;
+  inline bool has_tschchartseriesdefaultdateformat() const;
+  inline void clear_tschchartseriesdefaultdateformat();
+  static const int kTschchartseriesdefaultdateformatFieldNumber = 71;
+  inline const ::TSK::FormatStructArchive& tschchartseriesdefaultdateformat() const;
+  inline ::TSK::FormatStructArchive* mutable_tschchartseriesdefaultdateformat();
+  inline ::TSK::FormatStructArchive* release_tschchartseriesdefaultdateformat();
+  inline void set_allocated_tschchartseriesdefaultdateformat(::TSK::FormatStructArchive* tschchartseriesdefaultdateformat);
+
+  // optional .TSK.FormatStructArchive tschchartseriespie1_0numberformat = 22;
+  inline bool has_tschchartseriespie1_0numberformat() const;
+  inline void clear_tschchartseriespie1_0numberformat();
+  static const int kTschchartseriespie10NumberformatFieldNumber = 22;
+  inline const ::TSK::FormatStructArchive& tschchartseriespie1_0numberformat() const;
+  inline ::TSK::FormatStructArchive* mutable_tschchartseriespie1_0numberformat();
+  inline ::TSK::FormatStructArchive* release_tschchartseriespie1_0numberformat();
+  inline void set_allocated_tschchartseriespie1_0numberformat(::TSK::FormatStructArchive* tschchartseriespie1_0numberformat);
+
+  // optional .TSK.FormatStructArchive tschchartseriespienumberformat = 99;
   inline bool has_tschchartseriespienumberformat() const;
   inline void clear_tschchartseriespienumberformat();
-  static const int kTschchartseriespienumberformatFieldNumber = 22;
+  static const int kTschchartseriespienumberformatFieldNumber = 99;
   inline const ::TSK::FormatStructArchive& tschchartseriespienumberformat() const;
   inline ::TSK::FormatStructArchive* mutable_tschchartseriespienumberformat();
   inline ::TSK::FormatStructArchive* release_tschchartseriespienumberformat();
@@ -3339,6 +3436,20 @@ class ChartSeriesNonStyleArchive : public ::google::protobuf::Message {
   inline ::google::protobuf::int32 tschchartseriesscattervaluelabelsaxis() const;
   inline void set_tschchartseriesscattervaluelabelsaxis(::google::protobuf::int32 value);
 
+  // optional bool tschchartseriesdefaultshowlabelsinfront = 100;
+  inline bool has_tschchartseriesdefaultshowlabelsinfront() const;
+  inline void clear_tschchartseriesdefaultshowlabelsinfront();
+  static const int kTschchartseriesdefaultshowlabelsinfrontFieldNumber = 100;
+  inline bool tschchartseriesdefaultshowlabelsinfront() const;
+  inline void set_tschchartseriesdefaultshowlabelsinfront(bool value);
+
+  // optional bool tschchartseriesbubbleshowlabelsinfront = 101;
+  inline bool has_tschchartseriesbubbleshowlabelsinfront() const;
+  inline void clear_tschchartseriesbubbleshowlabelsinfront();
+  static const int kTschchartseriesbubbleshowlabelsinfrontFieldNumber = 101;
+  inline bool tschchartseriesbubbleshowlabelsinfront() const;
+  inline void set_tschchartseriesbubbleshowlabelsinfront(bool value);
+
   static const int kCurrentFieldNumber = 10000;
   static ::google::protobuf::internal::ExtensionIdentifier< ::TSCH::ChartSeriesNonStyleArchive,
       ::google::protobuf::internal::MessageTypeTraits< ::TSCH::Generated::ChartSeriesNonStyleArchive >, 11, false >
@@ -3385,8 +3496,18 @@ class ChartSeriesNonStyleArchive : public ::google::protobuf::Message {
   inline void clear_has_tschchartseriesmixedlinelinetype();
   inline void set_has_tschchartseriesscatterlinetype();
   inline void clear_has_tschchartseriesscatterlinetype();
+  inline void set_has_tschchartseriesdefault1_0numberformat();
+  inline void clear_has_tschchartseriesdefault1_0numberformat();
   inline void set_has_tschchartseriesdefaultnumberformat();
   inline void clear_has_tschchartseriesdefaultnumberformat();
+  inline void set_has_tschchartseriesdefault1_0dateformat();
+  inline void clear_has_tschchartseriesdefault1_0dateformat();
+  inline void set_has_tschchartseriesdefaultdurationformat();
+  inline void clear_has_tschchartseriesdefaultdurationformat();
+  inline void set_has_tschchartseriesdefaultdateformat();
+  inline void clear_has_tschchartseriesdefaultdateformat();
+  inline void set_has_tschchartseriespie1_0numberformat();
+  inline void clear_has_tschchartseriespie1_0numberformat();
   inline void set_has_tschchartseriespienumberformat();
   inline void clear_has_tschchartseriespienumberformat();
   inline void set_has_tschchartseriesdefaultnumberformattype();
@@ -3481,6 +3602,10 @@ class ChartSeriesNonStyleArchive : public ::google::protobuf::Message {
   inline void clear_has_tschchartseriesscattershowserieslabels();
   inline void set_has_tschchartseriesscattervaluelabelsaxis();
   inline void clear_has_tschchartseriesscattervaluelabelsaxis();
+  inline void set_has_tschchartseriesdefaultshowlabelsinfront();
+  inline void clear_has_tschchartseriesdefaultshowlabelsinfront();
+  inline void set_has_tschchartseriesbubbleshowlabelsinfront();
+  inline void clear_has_tschchartseriesbubbleshowlabelsinfront();
 
   ::google::protobuf::UnknownFieldSet _unknown_fields_;
 
@@ -3504,7 +3629,12 @@ class ChartSeriesNonStyleArchive : public ::google::protobuf::Message {
   ::google::protobuf::int32 tschchartserieslinelinetype_;
   ::google::protobuf::int32 tschchartseriesmixedlinelinetype_;
   ::google::protobuf::int32 tschchartseriesscatterlinetype_;
+  ::TSK::FormatStructArchive* tschchartseriesdefault1_0numberformat_;
   ::TSK::FormatStructArchive* tschchartseriesdefaultnumberformat_;
+  ::TSK::FormatStructArchive* tschchartseriesdefault1_0dateformat_;
+  ::TSK::FormatStructArchive* tschchartseriesdefaultdurationformat_;
+  ::TSK::FormatStructArchive* tschchartseriesdefaultdateformat_;
+  ::TSK::FormatStructArchive* tschchartseriespie1_0numberformat_;
   ::TSK::FormatStructArchive* tschchartseriespienumberformat_;
   ::google::protobuf::int32 tschchartseriesdefaultnumberformattype_;
   ::google::protobuf::int32 tschchartseriespienumberformattype_;
@@ -3552,9 +3682,11 @@ class ChartSeriesNonStyleArchive : public ::google::protobuf::Message {
   ::google::protobuf::int32 tschchartseriesdefaultyaxisordinal_;
   ::google::protobuf::int32 tschchartseriesbubblevaluelabelsaxis_;
   ::google::protobuf::int32 tschchartseriesscattervaluelabelsaxis_;
+  bool tschchartseriesdefaultshowlabelsinfront_;
+  bool tschchartseriesbubbleshowlabelsinfront_;
 
   mutable int _cached_size_;
-  ::google::protobuf::uint32 _has_bits_[(68 + 31) / 32];
+  ::google::protobuf::uint32 _has_bits_[(75 + 31) / 32];
 
   friend void  protobuf_AddDesc_TSCHArchives_2eGEN_2eproto();
   friend void protobuf_AssignDesc_TSCHArchives_2eGEN_2eproto();
@@ -3562,6 +3694,1863 @@ class ChartSeriesNonStyleArchive : public ::google::protobuf::Message {
 
   void InitAsDefaultInstance();
   static ChartSeriesNonStyleArchive* default_instance_;
+};
+// -------------------------------------------------------------------
+
+class ChartGenericPropertyMapArchive : public ::google::protobuf::Message {
+ public:
+  ChartGenericPropertyMapArchive();
+  virtual ~ChartGenericPropertyMapArchive();
+
+  ChartGenericPropertyMapArchive(const ChartGenericPropertyMapArchive& from);
+
+  inline ChartGenericPropertyMapArchive& operator=(const ChartGenericPropertyMapArchive& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _unknown_fields_;
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return &_unknown_fields_;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const ChartGenericPropertyMapArchive& default_instance();
+
+  void Swap(ChartGenericPropertyMapArchive* other);
+
+  // implements Message ----------------------------------------------
+
+  ChartGenericPropertyMapArchive* New() const;
+  void CopyFrom(const ::google::protobuf::Message& from);
+  void MergeFrom(const ::google::protobuf::Message& from);
+  void CopyFrom(const ChartGenericPropertyMapArchive& from);
+  void MergeFrom(const ChartGenericPropertyMapArchive& from);
+  void Clear();
+  bool IsInitialized() const;
+
+  int ByteSize() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional int32 tschchartinfo3dbarshape = 1;
+  inline bool has_tschchartinfo3dbarshape() const;
+  inline void clear_tschchartinfo3dbarshape();
+  static const int kTschchartinfo3DbarshapeFieldNumber = 1;
+  inline ::google::protobuf::int32 tschchartinfo3dbarshape() const;
+  inline void set_tschchartinfo3dbarshape(::google::protobuf::int32 value);
+
+  // optional bool tschchartinfo3dbeveledges = 2;
+  inline bool has_tschchartinfo3dbeveledges() const;
+  inline void clear_tschchartinfo3dbeveledges();
+  static const int kTschchartinfo3DbeveledgesFieldNumber = 2;
+  inline bool tschchartinfo3dbeveledges() const;
+  inline void set_tschchartinfo3dbeveledges(bool value);
+
+  // optional float tschchartinfo3dintersetdepthgap = 3;
+  inline bool has_tschchartinfo3dintersetdepthgap() const;
+  inline void clear_tschchartinfo3dintersetdepthgap();
+  static const int kTschchartinfo3DintersetdepthgapFieldNumber = 3;
+  inline float tschchartinfo3dintersetdepthgap() const;
+  inline void set_tschchartinfo3dintersetdepthgap(float value);
+
+  // optional .TSCH.Chart3DVectorArchive tschchartinfo3drotation = 4;
+  inline bool has_tschchartinfo3drotation() const;
+  inline void clear_tschchartinfo3drotation();
+  static const int kTschchartinfo3DrotationFieldNumber = 4;
+  inline const ::TSCH::Chart3DVectorArchive& tschchartinfo3drotation() const;
+  inline ::TSCH::Chart3DVectorArchive* mutable_tschchartinfo3drotation();
+  inline ::TSCH::Chart3DVectorArchive* release_tschchartinfo3drotation();
+  inline void set_allocated_tschchartinfo3drotation(::TSCH::Chart3DVectorArchive* tschchartinfo3drotation);
+
+  // optional .TSCH.Chart3DVectorArchive tschchartinfo3dscale = 5;
+  inline bool has_tschchartinfo3dscale() const;
+  inline void clear_tschchartinfo3dscale();
+  static const int kTschchartinfo3DscaleFieldNumber = 5;
+  inline const ::TSCH::Chart3DVectorArchive& tschchartinfo3dscale() const;
+  inline ::TSCH::Chart3DVectorArchive* mutable_tschchartinfo3dscale();
+  inline ::TSCH::Chart3DVectorArchive* release_tschchartinfo3dscale();
+  inline void set_allocated_tschchartinfo3dscale(::TSCH::Chart3DVectorArchive* tschchartinfo3dscale);
+
+  // optional .TSCH.Chart3DVectorArchive tschchartinfo3dviewport = 6;
+  inline bool has_tschchartinfo3dviewport() const;
+  inline void clear_tschchartinfo3dviewport();
+  static const int kTschchartinfo3DviewportFieldNumber = 6;
+  inline const ::TSCH::Chart3DVectorArchive& tschchartinfo3dviewport() const;
+  inline ::TSCH::Chart3DVectorArchive* mutable_tschchartinfo3dviewport();
+  inline ::TSCH::Chart3DVectorArchive* release_tschchartinfo3dviewport();
+  inline void set_allocated_tschchartinfo3dviewport(::TSCH::Chart3DVectorArchive* tschchartinfo3dviewport);
+
+  // optional float tschchartinfopiestartangle = 7;
+  inline bool has_tschchartinfopiestartangle() const;
+  inline void clear_tschchartinfopiestartangle();
+  static const int kTschchartinfopiestartangleFieldNumber = 7;
+  inline float tschchartinfopiestartangle() const;
+  inline void set_tschchartinfopiestartangle(float value);
+
+  // optional bool tschchartinfoshowlegend = 8;
+  inline bool has_tschchartinfoshowlegend() const;
+  inline void clear_tschchartinfoshowlegend();
+  static const int kTschchartinfoshowlegendFieldNumber = 8;
+  inline bool tschchartinfoshowlegend() const;
+  inline void set_tschchartinfoshowlegend(bool value);
+
+  // optional bool tschchartinfoshowtitle = 9;
+  inline bool has_tschchartinfoshowtitle() const;
+  inline void clear_tschchartinfoshowtitle();
+  static const int kTschchartinfoshowtitleFieldNumber = 9;
+  inline bool tschchartinfoshowtitle() const;
+  inline void set_tschchartinfoshowtitle(bool value);
+
+  // optional bool tschchartinfoskiphiddendata = 10;
+  inline bool has_tschchartinfoskiphiddendata() const;
+  inline void clear_tschchartinfoskiphiddendata();
+  static const int kTschchartinfoskiphiddendataFieldNumber = 10;
+  inline bool tschchartinfoskiphiddendata() const;
+  inline void set_tschchartinfoskiphiddendata(bool value);
+
+  // optional string tschchartinfotitle = 11;
+  inline bool has_tschchartinfotitle() const;
+  inline void clear_tschchartinfotitle();
+  static const int kTschchartinfotitleFieldNumber = 11;
+  inline const ::std::string& tschchartinfotitle() const;
+  inline void set_tschchartinfotitle(const ::std::string& value);
+  inline void set_tschchartinfotitle(const char* value);
+  inline void set_tschchartinfotitle(const char* value, size_t size);
+  inline ::std::string* mutable_tschchartinfotitle();
+  inline ::std::string* release_tschchartinfotitle();
+  inline void set_allocated_tschchartinfotitle(::std::string* tschchartinfotitle);
+
+  // optional int32 tschchartinfodatasetnamelocation = 12;
+  inline bool has_tschchartinfodatasetnamelocation() const;
+  inline void clear_tschchartinfodatasetnamelocation();
+  static const int kTschchartinfodatasetnamelocationFieldNumber = 12;
+  inline ::google::protobuf::int32 tschchartinfodatasetnamelocation() const;
+  inline void set_tschchartinfodatasetnamelocation(::google::protobuf::int32 value);
+
+  // optional int32 tschchartinfomultidatacontroltype = 13;
+  inline bool has_tschchartinfomultidatacontroltype() const;
+  inline void clear_tschchartinfomultidatacontroltype();
+  static const int kTschchartinfomultidatacontroltypeFieldNumber = 13;
+  inline ::google::protobuf::int32 tschchartinfomultidatacontroltype() const;
+  inline void set_tschchartinfomultidatacontroltype(::google::protobuf::int32 value);
+
+  // optional float tschchartinfo3dchartopacity = 14;
+  inline bool has_tschchartinfo3dchartopacity() const;
+  inline void clear_tschchartinfo3dchartopacity();
+  static const int kTschchartinfo3DchartopacityFieldNumber = 14;
+  inline float tschchartinfo3dchartopacity() const;
+  inline void set_tschchartinfo3dchartopacity(float value);
+
+  // optional .TSCH.Chart3DLightingPackageArchive tschchartinfo3dlightingpackage = 15;
+  inline bool has_tschchartinfo3dlightingpackage() const;
+  inline void clear_tschchartinfo3dlightingpackage();
+  static const int kTschchartinfo3DlightingpackageFieldNumber = 15;
+  inline const ::TSCH::Chart3DLightingPackageArchive& tschchartinfo3dlightingpackage() const;
+  inline ::TSCH::Chart3DLightingPackageArchive* mutable_tschchartinfo3dlightingpackage();
+  inline ::TSCH::Chart3DLightingPackageArchive* release_tschchartinfo3dlightingpackage();
+  inline void set_allocated_tschchartinfo3dlightingpackage(::TSCH::Chart3DLightingPackageArchive* tschchartinfo3dlightingpackage);
+
+  // optional .TSD.FillArchive tschchartinfobackgroundfill = 16;
+  inline bool has_tschchartinfobackgroundfill() const;
+  inline void clear_tschchartinfobackgroundfill();
+  static const int kTschchartinfobackgroundfillFieldNumber = 16;
+  inline const ::TSD::FillArchive& tschchartinfobackgroundfill() const;
+  inline ::TSD::FillArchive* mutable_tschchartinfobackgroundfill();
+  inline ::TSD::FillArchive* release_tschchartinfobackgroundfill();
+  inline void set_allocated_tschchartinfobackgroundfill(::TSD::FillArchive* tschchartinfobackgroundfill);
+
+  // optional .TSD.StrokeArchive tschchartinfobackgroundstroke = 17;
+  inline bool has_tschchartinfobackgroundstroke() const;
+  inline void clear_tschchartinfobackgroundstroke();
+  static const int kTschchartinfobackgroundstrokeFieldNumber = 17;
+  inline const ::TSD::StrokeArchive& tschchartinfobackgroundstroke() const;
+  inline ::TSD::StrokeArchive* mutable_tschchartinfobackgroundstroke();
+  inline ::TSD::StrokeArchive* release_tschchartinfobackgroundstroke();
+  inline void set_allocated_tschchartinfobackgroundstroke(::TSD::StrokeArchive* tschchartinfobackgroundstroke);
+
+  // optional float tschchartinfoborderopacity = 18;
+  inline bool has_tschchartinfoborderopacity() const;
+  inline void clear_tschchartinfoborderopacity();
+  static const int kTschchartinfoborderopacityFieldNumber = 18;
+  inline float tschchartinfoborderopacity() const;
+  inline void set_tschchartinfoborderopacity(float value);
+
+  // optional .TSD.ShadowArchive tschchartinfobordershadow = 19;
+  inline bool has_tschchartinfobordershadow() const;
+  inline void clear_tschchartinfobordershadow();
+  static const int kTschchartinfobordershadowFieldNumber = 19;
+  inline const ::TSD::ShadowArchive& tschchartinfobordershadow() const;
+  inline ::TSD::ShadowArchive* mutable_tschchartinfobordershadow();
+  inline ::TSD::ShadowArchive* release_tschchartinfobordershadow();
+  inline void set_allocated_tschchartinfobordershadow(::TSD::ShadowArchive* tschchartinfobordershadow);
+
+  // optional .TSD.StrokeArchive tschchartinfoborderstroke = 20;
+  inline bool has_tschchartinfoborderstroke() const;
+  inline void clear_tschchartinfoborderstroke();
+  static const int kTschchartinfoborderstrokeFieldNumber = 20;
+  inline const ::TSD::StrokeArchive& tschchartinfoborderstroke() const;
+  inline ::TSD::StrokeArchive* mutable_tschchartinfoborderstroke();
+  inline ::TSD::StrokeArchive* release_tschchartinfoborderstroke();
+  inline void set_allocated_tschchartinfoborderstroke(::TSD::StrokeArchive* tschchartinfoborderstroke);
+
+  // optional bool tschchartinfocombinelayers = 21;
+  inline bool has_tschchartinfocombinelayers() const;
+  inline void clear_tschchartinfocombinelayers();
+  static const int kTschchartinfocombinelayersFieldNumber = 21;
+  inline bool tschchartinfocombinelayers() const;
+  inline void set_tschchartinfocombinelayers(bool value);
+
+  // optional .TSD.FillArchive tschchartinfogridbackgroundfill = 22;
+  inline bool has_tschchartinfogridbackgroundfill() const;
+  inline void clear_tschchartinfogridbackgroundfill();
+  static const int kTschchartinfogridbackgroundfillFieldNumber = 22;
+  inline const ::TSD::FillArchive& tschchartinfogridbackgroundfill() const;
+  inline ::TSD::FillArchive* mutable_tschchartinfogridbackgroundfill();
+  inline ::TSD::FillArchive* release_tschchartinfogridbackgroundfill();
+  inline void set_allocated_tschchartinfogridbackgroundfill(::TSD::FillArchive* tschchartinfogridbackgroundfill);
+
+  // optional float tschchartinfogridbackgroundopacity = 23;
+  inline bool has_tschchartinfogridbackgroundopacity() const;
+  inline void clear_tschchartinfogridbackgroundopacity();
+  static const int kTschchartinfogridbackgroundopacityFieldNumber = 23;
+  inline float tschchartinfogridbackgroundopacity() const;
+  inline void set_tschchartinfogridbackgroundopacity(float value);
+
+  // optional float tschchartinfointerbargap = 24;
+  inline bool has_tschchartinfointerbargap() const;
+  inline void clear_tschchartinfointerbargap();
+  static const int kTschchartinfointerbargapFieldNumber = 24;
+  inline float tschchartinfointerbargap() const;
+  inline void set_tschchartinfointerbargap(float value);
+
+  // optional float tschchartinfointersetgap = 25;
+  inline bool has_tschchartinfointersetgap() const;
+  inline void clear_tschchartinfointersetgap();
+  static const int kTschchartinfointersetgapFieldNumber = 25;
+  inline float tschchartinfointersetgap() const;
+  inline void set_tschchartinfointersetgap(float value);
+
+  // optional bool tschchartinfoshowborder = 26;
+  inline bool has_tschchartinfoshowborder() const;
+  inline void clear_tschchartinfoshowborder();
+  static const int kTschchartinfoshowborderFieldNumber = 26;
+  inline bool tschchartinfoshowborder() const;
+  inline void set_tschchartinfoshowborder(bool value);
+
+  // optional .TSP.Color tschchartinfotitlecolor = 27;
+  inline bool has_tschchartinfotitlecolor() const;
+  inline void clear_tschchartinfotitlecolor();
+  static const int kTschchartinfotitlecolorFieldNumber = 27;
+  inline const ::TSP::Color& tschchartinfotitlecolor() const;
+  inline ::TSP::Color* mutable_tschchartinfotitlecolor();
+  inline ::TSP::Color* release_tschchartinfotitlecolor();
+  inline void set_allocated_tschchartinfotitlecolor(::TSP::Color* tschchartinfotitlecolor);
+
+  // optional int32 tschchartinfotitleparagraphstyleindex = 28;
+  inline bool has_tschchartinfotitleparagraphstyleindex() const;
+  inline void clear_tschchartinfotitleparagraphstyleindex();
+  static const int kTschchartinfotitleparagraphstyleindexFieldNumber = 28;
+  inline ::google::protobuf::int32 tschchartinfotitleparagraphstyleindex() const;
+  inline void set_tschchartinfotitleparagraphstyleindex(::google::protobuf::int32 value);
+
+  // optional int32 tschchartinfodatasetnameparagraphstyleindex = 29;
+  inline bool has_tschchartinfodatasetnameparagraphstyleindex() const;
+  inline void clear_tschchartinfodatasetnameparagraphstyleindex();
+  static const int kTschchartinfodatasetnameparagraphstyleindexFieldNumber = 29;
+  inline ::google::protobuf::int32 tschchartinfodatasetnameparagraphstyleindex() const;
+  inline void set_tschchartinfodatasetnameparagraphstyleindex(::google::protobuf::int32 value);
+
+  // @@protoc_insertion_point(class_scope:TSCH.Generated.ChartGenericPropertyMapArchive)
+ private:
+  inline void set_has_tschchartinfo3dbarshape();
+  inline void clear_has_tschchartinfo3dbarshape();
+  inline void set_has_tschchartinfo3dbeveledges();
+  inline void clear_has_tschchartinfo3dbeveledges();
+  inline void set_has_tschchartinfo3dintersetdepthgap();
+  inline void clear_has_tschchartinfo3dintersetdepthgap();
+  inline void set_has_tschchartinfo3drotation();
+  inline void clear_has_tschchartinfo3drotation();
+  inline void set_has_tschchartinfo3dscale();
+  inline void clear_has_tschchartinfo3dscale();
+  inline void set_has_tschchartinfo3dviewport();
+  inline void clear_has_tschchartinfo3dviewport();
+  inline void set_has_tschchartinfopiestartangle();
+  inline void clear_has_tschchartinfopiestartangle();
+  inline void set_has_tschchartinfoshowlegend();
+  inline void clear_has_tschchartinfoshowlegend();
+  inline void set_has_tschchartinfoshowtitle();
+  inline void clear_has_tschchartinfoshowtitle();
+  inline void set_has_tschchartinfoskiphiddendata();
+  inline void clear_has_tschchartinfoskiphiddendata();
+  inline void set_has_tschchartinfotitle();
+  inline void clear_has_tschchartinfotitle();
+  inline void set_has_tschchartinfodatasetnamelocation();
+  inline void clear_has_tschchartinfodatasetnamelocation();
+  inline void set_has_tschchartinfomultidatacontroltype();
+  inline void clear_has_tschchartinfomultidatacontroltype();
+  inline void set_has_tschchartinfo3dchartopacity();
+  inline void clear_has_tschchartinfo3dchartopacity();
+  inline void set_has_tschchartinfo3dlightingpackage();
+  inline void clear_has_tschchartinfo3dlightingpackage();
+  inline void set_has_tschchartinfobackgroundfill();
+  inline void clear_has_tschchartinfobackgroundfill();
+  inline void set_has_tschchartinfobackgroundstroke();
+  inline void clear_has_tschchartinfobackgroundstroke();
+  inline void set_has_tschchartinfoborderopacity();
+  inline void clear_has_tschchartinfoborderopacity();
+  inline void set_has_tschchartinfobordershadow();
+  inline void clear_has_tschchartinfobordershadow();
+  inline void set_has_tschchartinfoborderstroke();
+  inline void clear_has_tschchartinfoborderstroke();
+  inline void set_has_tschchartinfocombinelayers();
+  inline void clear_has_tschchartinfocombinelayers();
+  inline void set_has_tschchartinfogridbackgroundfill();
+  inline void clear_has_tschchartinfogridbackgroundfill();
+  inline void set_has_tschchartinfogridbackgroundopacity();
+  inline void clear_has_tschchartinfogridbackgroundopacity();
+  inline void set_has_tschchartinfointerbargap();
+  inline void clear_has_tschchartinfointerbargap();
+  inline void set_has_tschchartinfointersetgap();
+  inline void clear_has_tschchartinfointersetgap();
+  inline void set_has_tschchartinfoshowborder();
+  inline void clear_has_tschchartinfoshowborder();
+  inline void set_has_tschchartinfotitlecolor();
+  inline void clear_has_tschchartinfotitlecolor();
+  inline void set_has_tschchartinfotitleparagraphstyleindex();
+  inline void clear_has_tschchartinfotitleparagraphstyleindex();
+  inline void set_has_tschchartinfodatasetnameparagraphstyleindex();
+  inline void clear_has_tschchartinfodatasetnameparagraphstyleindex();
+
+  ::google::protobuf::UnknownFieldSet _unknown_fields_;
+
+  ::google::protobuf::int32 tschchartinfo3dbarshape_;
+  float tschchartinfo3dintersetdepthgap_;
+  ::TSCH::Chart3DVectorArchive* tschchartinfo3drotation_;
+  ::TSCH::Chart3DVectorArchive* tschchartinfo3dscale_;
+  ::TSCH::Chart3DVectorArchive* tschchartinfo3dviewport_;
+  float tschchartinfopiestartangle_;
+  bool tschchartinfo3dbeveledges_;
+  bool tschchartinfoshowlegend_;
+  bool tschchartinfoshowtitle_;
+  bool tschchartinfoskiphiddendata_;
+  ::std::string* tschchartinfotitle_;
+  ::google::protobuf::int32 tschchartinfodatasetnamelocation_;
+  ::google::protobuf::int32 tschchartinfomultidatacontroltype_;
+  ::TSCH::Chart3DLightingPackageArchive* tschchartinfo3dlightingpackage_;
+  float tschchartinfo3dchartopacity_;
+  float tschchartinfoborderopacity_;
+  ::TSD::FillArchive* tschchartinfobackgroundfill_;
+  ::TSD::StrokeArchive* tschchartinfobackgroundstroke_;
+  ::TSD::ShadowArchive* tschchartinfobordershadow_;
+  ::TSD::StrokeArchive* tschchartinfoborderstroke_;
+  ::TSD::FillArchive* tschchartinfogridbackgroundfill_;
+  float tschchartinfogridbackgroundopacity_;
+  bool tschchartinfocombinelayers_;
+  bool tschchartinfoshowborder_;
+  float tschchartinfointerbargap_;
+  float tschchartinfointersetgap_;
+  ::TSP::Color* tschchartinfotitlecolor_;
+  ::google::protobuf::int32 tschchartinfotitleparagraphstyleindex_;
+  ::google::protobuf::int32 tschchartinfodatasetnameparagraphstyleindex_;
+
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 _has_bits_[(29 + 31) / 32];
+
+  friend void  protobuf_AddDesc_TSCHArchives_2eGEN_2eproto();
+  friend void protobuf_AssignDesc_TSCHArchives_2eGEN_2eproto();
+  friend void protobuf_ShutdownFile_TSCHArchives_2eGEN_2eproto();
+
+  void InitAsDefaultInstance();
+  static ChartGenericPropertyMapArchive* default_instance_;
+};
+// -------------------------------------------------------------------
+
+class LegendGenericPropertyMapArchive : public ::google::protobuf::Message {
+ public:
+  LegendGenericPropertyMapArchive();
+  virtual ~LegendGenericPropertyMapArchive();
+
+  LegendGenericPropertyMapArchive(const LegendGenericPropertyMapArchive& from);
+
+  inline LegendGenericPropertyMapArchive& operator=(const LegendGenericPropertyMapArchive& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _unknown_fields_;
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return &_unknown_fields_;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const LegendGenericPropertyMapArchive& default_instance();
+
+  void Swap(LegendGenericPropertyMapArchive* other);
+
+  // implements Message ----------------------------------------------
+
+  LegendGenericPropertyMapArchive* New() const;
+  void CopyFrom(const ::google::protobuf::Message& from);
+  void MergeFrom(const ::google::protobuf::Message& from);
+  void CopyFrom(const LegendGenericPropertyMapArchive& from);
+  void MergeFrom(const LegendGenericPropertyMapArchive& from);
+  void Clear();
+  bool IsInitialized() const;
+
+  int ByteSize() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional .TSD.FillArchive tschlegendmodelfill = 1;
+  inline bool has_tschlegendmodelfill() const;
+  inline void clear_tschlegendmodelfill();
+  static const int kTschlegendmodelfillFieldNumber = 1;
+  inline const ::TSD::FillArchive& tschlegendmodelfill() const;
+  inline ::TSD::FillArchive* mutable_tschlegendmodelfill();
+  inline ::TSD::FillArchive* release_tschlegendmodelfill();
+  inline void set_allocated_tschlegendmodelfill(::TSD::FillArchive* tschlegendmodelfill);
+
+  // optional int32 tschlegendmodellabelparagraphstyleindex = 2;
+  inline bool has_tschlegendmodellabelparagraphstyleindex() const;
+  inline void clear_tschlegendmodellabelparagraphstyleindex();
+  static const int kTschlegendmodellabelparagraphstyleindexFieldNumber = 2;
+  inline ::google::protobuf::int32 tschlegendmodellabelparagraphstyleindex() const;
+  inline void set_tschlegendmodellabelparagraphstyleindex(::google::protobuf::int32 value);
+
+  // optional float tschlegendmodelopacity = 3;
+  inline bool has_tschlegendmodelopacity() const;
+  inline void clear_tschlegendmodelopacity();
+  static const int kTschlegendmodelopacityFieldNumber = 3;
+  inline float tschlegendmodelopacity() const;
+  inline void set_tschlegendmodelopacity(float value);
+
+  // optional .TSD.ShadowArchive tschlegendmodelshadow = 4;
+  inline bool has_tschlegendmodelshadow() const;
+  inline void clear_tschlegendmodelshadow();
+  static const int kTschlegendmodelshadowFieldNumber = 4;
+  inline const ::TSD::ShadowArchive& tschlegendmodelshadow() const;
+  inline ::TSD::ShadowArchive* mutable_tschlegendmodelshadow();
+  inline ::TSD::ShadowArchive* release_tschlegendmodelshadow();
+  inline void set_allocated_tschlegendmodelshadow(::TSD::ShadowArchive* tschlegendmodelshadow);
+
+  // optional .TSD.StrokeArchive tschlegendmodelstroke = 5;
+  inline bool has_tschlegendmodelstroke() const;
+  inline void clear_tschlegendmodelstroke();
+  static const int kTschlegendmodelstrokeFieldNumber = 5;
+  inline const ::TSD::StrokeArchive& tschlegendmodelstroke() const;
+  inline ::TSD::StrokeArchive* mutable_tschlegendmodelstroke();
+  inline ::TSD::StrokeArchive* release_tschlegendmodelstroke();
+  inline void set_allocated_tschlegendmodelstroke(::TSD::StrokeArchive* tschlegendmodelstroke);
+
+  // @@protoc_insertion_point(class_scope:TSCH.Generated.LegendGenericPropertyMapArchive)
+ private:
+  inline void set_has_tschlegendmodelfill();
+  inline void clear_has_tschlegendmodelfill();
+  inline void set_has_tschlegendmodellabelparagraphstyleindex();
+  inline void clear_has_tschlegendmodellabelparagraphstyleindex();
+  inline void set_has_tschlegendmodelopacity();
+  inline void clear_has_tschlegendmodelopacity();
+  inline void set_has_tschlegendmodelshadow();
+  inline void clear_has_tschlegendmodelshadow();
+  inline void set_has_tschlegendmodelstroke();
+  inline void clear_has_tschlegendmodelstroke();
+
+  ::google::protobuf::UnknownFieldSet _unknown_fields_;
+
+  ::TSD::FillArchive* tschlegendmodelfill_;
+  ::google::protobuf::int32 tschlegendmodellabelparagraphstyleindex_;
+  float tschlegendmodelopacity_;
+  ::TSD::ShadowArchive* tschlegendmodelshadow_;
+  ::TSD::StrokeArchive* tschlegendmodelstroke_;
+
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 _has_bits_[(5 + 31) / 32];
+
+  friend void  protobuf_AddDesc_TSCHArchives_2eGEN_2eproto();
+  friend void protobuf_AssignDesc_TSCHArchives_2eGEN_2eproto();
+  friend void protobuf_ShutdownFile_TSCHArchives_2eGEN_2eproto();
+
+  void InitAsDefaultInstance();
+  static LegendGenericPropertyMapArchive* default_instance_;
+};
+// -------------------------------------------------------------------
+
+class ChartAxisGenericPropertyMapArchive : public ::google::protobuf::Message {
+ public:
+  ChartAxisGenericPropertyMapArchive();
+  virtual ~ChartAxisGenericPropertyMapArchive();
+
+  ChartAxisGenericPropertyMapArchive(const ChartAxisGenericPropertyMapArchive& from);
+
+  inline ChartAxisGenericPropertyMapArchive& operator=(const ChartAxisGenericPropertyMapArchive& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _unknown_fields_;
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return &_unknown_fields_;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const ChartAxisGenericPropertyMapArchive& default_instance();
+
+  void Swap(ChartAxisGenericPropertyMapArchive* other);
+
+  // implements Message ----------------------------------------------
+
+  ChartAxisGenericPropertyMapArchive* New() const;
+  void CopyFrom(const ::google::protobuf::Message& from);
+  void MergeFrom(const ::google::protobuf::Message& from);
+  void CopyFrom(const ChartAxisGenericPropertyMapArchive& from);
+  void MergeFrom(const ChartAxisGenericPropertyMapArchive& from);
+  void Clear();
+  bool IsInitialized() const;
+
+  int ByteSize() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional int32 tschchartaxis3dlabelposition = 1;
+  inline bool has_tschchartaxis3dlabelposition() const;
+  inline void clear_tschchartaxis3dlabelposition();
+  static const int kTschchartaxis3DlabelpositionFieldNumber = 1;
+  inline ::google::protobuf::int32 tschchartaxis3dlabelposition() const;
+  inline void set_tschchartaxis3dlabelposition(::google::protobuf::int32 value);
+
+  // optional .TSK.FormatStructArchive tschchartaxis1_0numberformat = 2;
+  inline bool has_tschchartaxis1_0numberformat() const;
+  inline void clear_tschchartaxis1_0numberformat();
+  static const int kTschchartaxis10NumberformatFieldNumber = 2;
+  inline const ::TSK::FormatStructArchive& tschchartaxis1_0numberformat() const;
+  inline ::TSK::FormatStructArchive* mutable_tschchartaxis1_0numberformat();
+  inline ::TSK::FormatStructArchive* release_tschchartaxis1_0numberformat();
+  inline void set_allocated_tschchartaxis1_0numberformat(::TSK::FormatStructArchive* tschchartaxis1_0numberformat);
+
+  // optional .TSK.FormatStructArchive tschchartaxisnumberformat = 3;
+  inline bool has_tschchartaxisnumberformat() const;
+  inline void clear_tschchartaxisnumberformat();
+  static const int kTschchartaxisnumberformatFieldNumber = 3;
+  inline const ::TSK::FormatStructArchive& tschchartaxisnumberformat() const;
+  inline ::TSK::FormatStructArchive* mutable_tschchartaxisnumberformat();
+  inline ::TSK::FormatStructArchive* release_tschchartaxisnumberformat();
+  inline void set_allocated_tschchartaxisnumberformat(::TSK::FormatStructArchive* tschchartaxisnumberformat);
+
+  // optional .TSK.FormatStructArchive tschchartaxis1_0dateformat = 4;
+  inline bool has_tschchartaxis1_0dateformat() const;
+  inline void clear_tschchartaxis1_0dateformat();
+  static const int kTschchartaxis10DateformatFieldNumber = 4;
+  inline const ::TSK::FormatStructArchive& tschchartaxis1_0dateformat() const;
+  inline ::TSK::FormatStructArchive* mutable_tschchartaxis1_0dateformat();
+  inline ::TSK::FormatStructArchive* release_tschchartaxis1_0dateformat();
+  inline void set_allocated_tschchartaxis1_0dateformat(::TSK::FormatStructArchive* tschchartaxis1_0dateformat);
+
+  // optional .TSK.FormatStructArchive tschchartaxisdurationformat = 5;
+  inline bool has_tschchartaxisdurationformat() const;
+  inline void clear_tschchartaxisdurationformat();
+  static const int kTschchartaxisdurationformatFieldNumber = 5;
+  inline const ::TSK::FormatStructArchive& tschchartaxisdurationformat() const;
+  inline ::TSK::FormatStructArchive* mutable_tschchartaxisdurationformat();
+  inline ::TSK::FormatStructArchive* release_tschchartaxisdurationformat();
+  inline void set_allocated_tschchartaxisdurationformat(::TSK::FormatStructArchive* tschchartaxisdurationformat);
+
+  // optional .TSK.FormatStructArchive tschchartaxisdateformat = 6;
+  inline bool has_tschchartaxisdateformat() const;
+  inline void clear_tschchartaxisdateformat();
+  static const int kTschchartaxisdateformatFieldNumber = 6;
+  inline const ::TSK::FormatStructArchive& tschchartaxisdateformat() const;
+  inline ::TSK::FormatStructArchive* mutable_tschchartaxisdateformat();
+  inline ::TSK::FormatStructArchive* release_tschchartaxisdateformat();
+  inline void set_allocated_tschchartaxisdateformat(::TSK::FormatStructArchive* tschchartaxisdateformat);
+
+  // optional int32 tschchartaxisnumberformattype = 7;
+  inline bool has_tschchartaxisnumberformattype() const;
+  inline void clear_tschchartaxisnumberformattype();
+  static const int kTschchartaxisnumberformattypeFieldNumber = 7;
+  inline ::google::protobuf::int32 tschchartaxisnumberformattype() const;
+  inline void set_tschchartaxisnumberformattype(::google::protobuf::int32 value);
+
+  // optional int32 tschchartaxisnumberofdecades = 8;
+  inline bool has_tschchartaxisnumberofdecades() const;
+  inline void clear_tschchartaxisnumberofdecades();
+  static const int kTschchartaxisnumberofdecadesFieldNumber = 8;
+  inline ::google::protobuf::int32 tschchartaxisnumberofdecades() const;
+  inline void set_tschchartaxisnumberofdecades(::google::protobuf::int32 value);
+
+  // optional int32 tschchartaxisnumberofmajorgridlines = 9;
+  inline bool has_tschchartaxisnumberofmajorgridlines() const;
+  inline void clear_tschchartaxisnumberofmajorgridlines();
+  static const int kTschchartaxisnumberofmajorgridlinesFieldNumber = 9;
+  inline ::google::protobuf::int32 tschchartaxisnumberofmajorgridlines() const;
+  inline void set_tschchartaxisnumberofmajorgridlines(::google::protobuf::int32 value);
+
+  // optional int32 tschchartaxisnumberofminorgridlines = 10;
+  inline bool has_tschchartaxisnumberofminorgridlines() const;
+  inline void clear_tschchartaxisnumberofminorgridlines();
+  static const int kTschchartaxisnumberofminorgridlinesFieldNumber = 10;
+  inline ::google::protobuf::int32 tschchartaxisnumberofminorgridlines() const;
+  inline void set_tschchartaxisnumberofminorgridlines(::google::protobuf::int32 value);
+
+  // optional bool tschchartaxisplottoedges = 11;
+  inline bool has_tschchartaxisplottoedges() const;
+  inline void clear_tschchartaxisplottoedges();
+  static const int kTschchartaxisplottoedgesFieldNumber = 11;
+  inline bool tschchartaxisplottoedges() const;
+  inline void set_tschchartaxisplottoedges(bool value);
+
+  // optional int32 tschchartaxisscale = 12;
+  inline bool has_tschchartaxisscale() const;
+  inline void clear_tschchartaxisscale();
+  static const int kTschchartaxisscaleFieldNumber = 12;
+  inline ::google::protobuf::int32 tschchartaxisscale() const;
+  inline void set_tschchartaxisscale(::google::protobuf::int32 value);
+
+  // optional bool tschchartaxisshowlabels = 13;
+  inline bool has_tschchartaxisshowlabels() const;
+  inline void clear_tschchartaxisshowlabels();
+  static const int kTschchartaxisshowlabelsFieldNumber = 13;
+  inline bool tschchartaxisshowlabels() const;
+  inline void set_tschchartaxisshowlabels(bool value);
+
+  // optional bool tschchartaxisshowserieslabels = 14;
+  inline bool has_tschchartaxisshowserieslabels() const;
+  inline void clear_tschchartaxisshowserieslabels();
+  static const int kTschchartaxisshowserieslabelsFieldNumber = 14;
+  inline bool tschchartaxisshowserieslabels() const;
+  inline void set_tschchartaxisshowserieslabels(bool value);
+
+  // optional bool tschchartaxisshowtitle = 15;
+  inline bool has_tschchartaxisshowtitle() const;
+  inline void clear_tschchartaxisshowtitle();
+  static const int kTschchartaxisshowtitleFieldNumber = 15;
+  inline bool tschchartaxisshowtitle() const;
+  inline void set_tschchartaxisshowtitle(bool value);
+
+  // optional string tschchartaxistitle = 16;
+  inline bool has_tschchartaxistitle() const;
+  inline void clear_tschchartaxistitle();
+  static const int kTschchartaxistitleFieldNumber = 16;
+  inline const ::std::string& tschchartaxistitle() const;
+  inline void set_tschchartaxistitle(const ::std::string& value);
+  inline void set_tschchartaxistitle(const char* value);
+  inline void set_tschchartaxistitle(const char* value, size_t size);
+  inline ::std::string* mutable_tschchartaxistitle();
+  inline ::std::string* release_tschchartaxistitle();
+  inline void set_allocated_tschchartaxistitle(::std::string* tschchartaxistitle);
+
+  // optional .TSCH.ChartsNSNumberDoubleArchive tschchartaxisusermax = 17;
+  inline bool has_tschchartaxisusermax() const;
+  inline void clear_tschchartaxisusermax();
+  static const int kTschchartaxisusermaxFieldNumber = 17;
+  inline const ::TSCH::ChartsNSNumberDoubleArchive& tschchartaxisusermax() const;
+  inline ::TSCH::ChartsNSNumberDoubleArchive* mutable_tschchartaxisusermax();
+  inline ::TSCH::ChartsNSNumberDoubleArchive* release_tschchartaxisusermax();
+  inline void set_allocated_tschchartaxisusermax(::TSCH::ChartsNSNumberDoubleArchive* tschchartaxisusermax);
+
+  // optional .TSCH.ChartsNSNumberDoubleArchive tschchartaxisusermin = 18;
+  inline bool has_tschchartaxisusermin() const;
+  inline void clear_tschchartaxisusermin();
+  static const int kTschchartaxisuserminFieldNumber = 18;
+  inline const ::TSCH::ChartsNSNumberDoubleArchive& tschchartaxisusermin() const;
+  inline ::TSCH::ChartsNSNumberDoubleArchive* mutable_tschchartaxisusermin();
+  inline ::TSCH::ChartsNSNumberDoubleArchive* release_tschchartaxisusermin();
+  inline void set_allocated_tschchartaxisusermin(::TSCH::ChartsNSNumberDoubleArchive* tschchartaxisusermin);
+
+  // optional float tschchartaxis3dgridlineopacity = 19;
+  inline bool has_tschchartaxis3dgridlineopacity() const;
+  inline void clear_tschchartaxis3dgridlineopacity();
+  static const int kTschchartaxis3DgridlineopacityFieldNumber = 19;
+  inline float tschchartaxis3dgridlineopacity() const;
+  inline void set_tschchartaxis3dgridlineopacity(float value);
+
+  // optional .TSD.StrokeArchive tschchartaxis3dgridlinestroke = 20;
+  inline bool has_tschchartaxis3dgridlinestroke() const;
+  inline void clear_tschchartaxis3dgridlinestroke();
+  static const int kTschchartaxis3DgridlinestrokeFieldNumber = 20;
+  inline const ::TSD::StrokeArchive& tschchartaxis3dgridlinestroke() const;
+  inline ::TSD::StrokeArchive* mutable_tschchartaxis3dgridlinestroke();
+  inline ::TSD::StrokeArchive* release_tschchartaxis3dgridlinestroke();
+  inline void set_allocated_tschchartaxis3dgridlinestroke(::TSD::StrokeArchive* tschchartaxis3dgridlinestroke);
+
+  // optional int32 tschchartaxishorizontalspacing = 21;
+  inline bool has_tschchartaxishorizontalspacing() const;
+  inline void clear_tschchartaxishorizontalspacing();
+  static const int kTschchartaxishorizontalspacingFieldNumber = 21;
+  inline ::google::protobuf::int32 tschchartaxishorizontalspacing() const;
+  inline void set_tschchartaxishorizontalspacing(::google::protobuf::int32 value);
+
+  // optional int32 tschchartaxislabelparagraphstyleindex = 22;
+  inline bool has_tschchartaxislabelparagraphstyleindex() const;
+  inline void clear_tschchartaxislabelparagraphstyleindex();
+  static const int kTschchartaxislabelparagraphstyleindexFieldNumber = 22;
+  inline ::google::protobuf::int32 tschchartaxislabelparagraphstyleindex() const;
+  inline void set_tschchartaxislabelparagraphstyleindex(::google::protobuf::int32 value);
+
+  // optional float tschchartaxislabelsorientation = 23;
+  inline bool has_tschchartaxislabelsorientation() const;
+  inline void clear_tschchartaxislabelsorientation();
+  static const int kTschchartaxislabelsorientationFieldNumber = 23;
+  inline float tschchartaxislabelsorientation() const;
+  inline void set_tschchartaxislabelsorientation(float value);
+
+  // optional float tschchartaxismajorgridlineopacity = 24;
+  inline bool has_tschchartaxismajorgridlineopacity() const;
+  inline void clear_tschchartaxismajorgridlineopacity();
+  static const int kTschchartaxismajorgridlineopacityFieldNumber = 24;
+  inline float tschchartaxismajorgridlineopacity() const;
+  inline void set_tschchartaxismajorgridlineopacity(float value);
+
+  // optional .TSD.ShadowArchive tschchartaxismajorgridlineshadow = 25;
+  inline bool has_tschchartaxismajorgridlineshadow() const;
+  inline void clear_tschchartaxismajorgridlineshadow();
+  static const int kTschchartaxismajorgridlineshadowFieldNumber = 25;
+  inline const ::TSD::ShadowArchive& tschchartaxismajorgridlineshadow() const;
+  inline ::TSD::ShadowArchive* mutable_tschchartaxismajorgridlineshadow();
+  inline ::TSD::ShadowArchive* release_tschchartaxismajorgridlineshadow();
+  inline void set_allocated_tschchartaxismajorgridlineshadow(::TSD::ShadowArchive* tschchartaxismajorgridlineshadow);
+
+  // optional .TSD.StrokeArchive tschchartaxismajorgridlinestroke = 26;
+  inline bool has_tschchartaxismajorgridlinestroke() const;
+  inline void clear_tschchartaxismajorgridlinestroke();
+  static const int kTschchartaxismajorgridlinestrokeFieldNumber = 26;
+  inline const ::TSD::StrokeArchive& tschchartaxismajorgridlinestroke() const;
+  inline ::TSD::StrokeArchive* mutable_tschchartaxismajorgridlinestroke();
+  inline ::TSD::StrokeArchive* release_tschchartaxismajorgridlinestroke();
+  inline void set_allocated_tschchartaxismajorgridlinestroke(::TSD::StrokeArchive* tschchartaxismajorgridlinestroke);
+
+  // optional float tschchartaxisminorgridlineopacity = 27;
+  inline bool has_tschchartaxisminorgridlineopacity() const;
+  inline void clear_tschchartaxisminorgridlineopacity();
+  static const int kTschchartaxisminorgridlineopacityFieldNumber = 27;
+  inline float tschchartaxisminorgridlineopacity() const;
+  inline void set_tschchartaxisminorgridlineopacity(float value);
+
+  // optional .TSD.ShadowArchive tschchartaxisminorgridlineshadow = 28;
+  inline bool has_tschchartaxisminorgridlineshadow() const;
+  inline void clear_tschchartaxisminorgridlineshadow();
+  static const int kTschchartaxisminorgridlineshadowFieldNumber = 28;
+  inline const ::TSD::ShadowArchive& tschchartaxisminorgridlineshadow() const;
+  inline ::TSD::ShadowArchive* mutable_tschchartaxisminorgridlineshadow();
+  inline ::TSD::ShadowArchive* release_tschchartaxisminorgridlineshadow();
+  inline void set_allocated_tschchartaxisminorgridlineshadow(::TSD::ShadowArchive* tschchartaxisminorgridlineshadow);
+
+  // optional .TSD.StrokeArchive tschchartaxisminorgridlinestroke = 29;
+  inline bool has_tschchartaxisminorgridlinestroke() const;
+  inline void clear_tschchartaxisminorgridlinestroke();
+  static const int kTschchartaxisminorgridlinestrokeFieldNumber = 29;
+  inline const ::TSD::StrokeArchive& tschchartaxisminorgridlinestroke() const;
+  inline ::TSD::StrokeArchive* mutable_tschchartaxisminorgridlinestroke();
+  inline ::TSD::StrokeArchive* release_tschchartaxisminorgridlinestroke();
+  inline void set_allocated_tschchartaxisminorgridlinestroke(::TSD::StrokeArchive* tschchartaxisminorgridlinestroke);
+
+  // optional bool tschchartaxisshowaxis = 30;
+  inline bool has_tschchartaxisshowaxis() const;
+  inline void clear_tschchartaxisshowaxis();
+  static const int kTschchartaxisshowaxisFieldNumber = 30;
+  inline bool tschchartaxisshowaxis() const;
+  inline void set_tschchartaxisshowaxis(bool value);
+
+  // optional bool tschchartaxisshowlastlabel = 31;
+  inline bool has_tschchartaxisshowlastlabel() const;
+  inline void clear_tschchartaxisshowlastlabel();
+  static const int kTschchartaxisshowlastlabelFieldNumber = 31;
+  inline bool tschchartaxisshowlastlabel() const;
+  inline void set_tschchartaxisshowlastlabel(bool value);
+
+  // optional bool tschchartaxisshowmajorgridlines = 32;
+  inline bool has_tschchartaxisshowmajorgridlines() const;
+  inline void clear_tschchartaxisshowmajorgridlines();
+  static const int kTschchartaxisshowmajorgridlinesFieldNumber = 32;
+  inline bool tschchartaxisshowmajorgridlines() const;
+  inline void set_tschchartaxisshowmajorgridlines(bool value);
+
+  // optional bool tschchartaxisshowmajortickmarks = 33;
+  inline bool has_tschchartaxisshowmajortickmarks() const;
+  inline void clear_tschchartaxisshowmajortickmarks();
+  static const int kTschchartaxisshowmajortickmarksFieldNumber = 33;
+  inline bool tschchartaxisshowmajortickmarks() const;
+  inline void set_tschchartaxisshowmajortickmarks(bool value);
+
+  // optional bool tschchartaxisshowminimumlabel = 34;
+  inline bool has_tschchartaxisshowminimumlabel() const;
+  inline void clear_tschchartaxisshowminimumlabel();
+  static const int kTschchartaxisshowminimumlabelFieldNumber = 34;
+  inline bool tschchartaxisshowminimumlabel() const;
+  inline void set_tschchartaxisshowminimumlabel(bool value);
+
+  // optional bool tschchartaxisshowminorgridlines = 35;
+  inline bool has_tschchartaxisshowminorgridlines() const;
+  inline void clear_tschchartaxisshowminorgridlines();
+  static const int kTschchartaxisshowminorgridlinesFieldNumber = 35;
+  inline bool tschchartaxisshowminorgridlines() const;
+  inline void set_tschchartaxisshowminorgridlines(bool value);
+
+  // optional bool tschchartaxisshowminortickmarks = 36;
+  inline bool has_tschchartaxisshowminortickmarks() const;
+  inline void clear_tschchartaxisshowminortickmarks();
+  static const int kTschchartaxisshowminortickmarksFieldNumber = 36;
+  inline bool tschchartaxisshowminortickmarks() const;
+  inline void set_tschchartaxisshowminortickmarks(bool value);
+
+  // optional int32 tschchartaxistickmarklocation = 37;
+  inline bool has_tschchartaxistickmarklocation() const;
+  inline void clear_tschchartaxistickmarklocation();
+  static const int kTschchartaxistickmarklocationFieldNumber = 37;
+  inline ::google::protobuf::int32 tschchartaxistickmarklocation() const;
+  inline void set_tschchartaxistickmarklocation(::google::protobuf::int32 value);
+
+  // optional int32 tschchartaxistitleparagraphstyleindex = 38;
+  inline bool has_tschchartaxistitleparagraphstyleindex() const;
+  inline void clear_tschchartaxistitleparagraphstyleindex();
+  static const int kTschchartaxistitleparagraphstyleindexFieldNumber = 38;
+  inline ::google::protobuf::int32 tschchartaxistitleparagraphstyleindex() const;
+  inline void set_tschchartaxistitleparagraphstyleindex(::google::protobuf::int32 value);
+
+  // optional int32 tschchartaxisverticalspacing = 39;
+  inline bool has_tschchartaxisverticalspacing() const;
+  inline void clear_tschchartaxisverticalspacing();
+  static const int kTschchartaxisverticalspacingFieldNumber = 39;
+  inline ::google::protobuf::int32 tschchartaxisverticalspacing() const;
+  inline void set_tschchartaxisverticalspacing(::google::protobuf::int32 value);
+
+  // @@protoc_insertion_point(class_scope:TSCH.Generated.ChartAxisGenericPropertyMapArchive)
+ private:
+  inline void set_has_tschchartaxis3dlabelposition();
+  inline void clear_has_tschchartaxis3dlabelposition();
+  inline void set_has_tschchartaxis1_0numberformat();
+  inline void clear_has_tschchartaxis1_0numberformat();
+  inline void set_has_tschchartaxisnumberformat();
+  inline void clear_has_tschchartaxisnumberformat();
+  inline void set_has_tschchartaxis1_0dateformat();
+  inline void clear_has_tschchartaxis1_0dateformat();
+  inline void set_has_tschchartaxisdurationformat();
+  inline void clear_has_tschchartaxisdurationformat();
+  inline void set_has_tschchartaxisdateformat();
+  inline void clear_has_tschchartaxisdateformat();
+  inline void set_has_tschchartaxisnumberformattype();
+  inline void clear_has_tschchartaxisnumberformattype();
+  inline void set_has_tschchartaxisnumberofdecades();
+  inline void clear_has_tschchartaxisnumberofdecades();
+  inline void set_has_tschchartaxisnumberofmajorgridlines();
+  inline void clear_has_tschchartaxisnumberofmajorgridlines();
+  inline void set_has_tschchartaxisnumberofminorgridlines();
+  inline void clear_has_tschchartaxisnumberofminorgridlines();
+  inline void set_has_tschchartaxisplottoedges();
+  inline void clear_has_tschchartaxisplottoedges();
+  inline void set_has_tschchartaxisscale();
+  inline void clear_has_tschchartaxisscale();
+  inline void set_has_tschchartaxisshowlabels();
+  inline void clear_has_tschchartaxisshowlabels();
+  inline void set_has_tschchartaxisshowserieslabels();
+  inline void clear_has_tschchartaxisshowserieslabels();
+  inline void set_has_tschchartaxisshowtitle();
+  inline void clear_has_tschchartaxisshowtitle();
+  inline void set_has_tschchartaxistitle();
+  inline void clear_has_tschchartaxistitle();
+  inline void set_has_tschchartaxisusermax();
+  inline void clear_has_tschchartaxisusermax();
+  inline void set_has_tschchartaxisusermin();
+  inline void clear_has_tschchartaxisusermin();
+  inline void set_has_tschchartaxis3dgridlineopacity();
+  inline void clear_has_tschchartaxis3dgridlineopacity();
+  inline void set_has_tschchartaxis3dgridlinestroke();
+  inline void clear_has_tschchartaxis3dgridlinestroke();
+  inline void set_has_tschchartaxishorizontalspacing();
+  inline void clear_has_tschchartaxishorizontalspacing();
+  inline void set_has_tschchartaxislabelparagraphstyleindex();
+  inline void clear_has_tschchartaxislabelparagraphstyleindex();
+  inline void set_has_tschchartaxislabelsorientation();
+  inline void clear_has_tschchartaxislabelsorientation();
+  inline void set_has_tschchartaxismajorgridlineopacity();
+  inline void clear_has_tschchartaxismajorgridlineopacity();
+  inline void set_has_tschchartaxismajorgridlineshadow();
+  inline void clear_has_tschchartaxismajorgridlineshadow();
+  inline void set_has_tschchartaxismajorgridlinestroke();
+  inline void clear_has_tschchartaxismajorgridlinestroke();
+  inline void set_has_tschchartaxisminorgridlineopacity();
+  inline void clear_has_tschchartaxisminorgridlineopacity();
+  inline void set_has_tschchartaxisminorgridlineshadow();
+  inline void clear_has_tschchartaxisminorgridlineshadow();
+  inline void set_has_tschchartaxisminorgridlinestroke();
+  inline void clear_has_tschchartaxisminorgridlinestroke();
+  inline void set_has_tschchartaxisshowaxis();
+  inline void clear_has_tschchartaxisshowaxis();
+  inline void set_has_tschchartaxisshowlastlabel();
+  inline void clear_has_tschchartaxisshowlastlabel();
+  inline void set_has_tschchartaxisshowmajorgridlines();
+  inline void clear_has_tschchartaxisshowmajorgridlines();
+  inline void set_has_tschchartaxisshowmajortickmarks();
+  inline void clear_has_tschchartaxisshowmajortickmarks();
+  inline void set_has_tschchartaxisshowminimumlabel();
+  inline void clear_has_tschchartaxisshowminimumlabel();
+  inline void set_has_tschchartaxisshowminorgridlines();
+  inline void clear_has_tschchartaxisshowminorgridlines();
+  inline void set_has_tschchartaxisshowminortickmarks();
+  inline void clear_has_tschchartaxisshowminortickmarks();
+  inline void set_has_tschchartaxistickmarklocation();
+  inline void clear_has_tschchartaxistickmarklocation();
+  inline void set_has_tschchartaxistitleparagraphstyleindex();
+  inline void clear_has_tschchartaxistitleparagraphstyleindex();
+  inline void set_has_tschchartaxisverticalspacing();
+  inline void clear_has_tschchartaxisverticalspacing();
+
+  ::google::protobuf::UnknownFieldSet _unknown_fields_;
+
+  ::TSK::FormatStructArchive* tschchartaxis1_0numberformat_;
+  ::TSK::FormatStructArchive* tschchartaxisnumberformat_;
+  ::TSK::FormatStructArchive* tschchartaxis1_0dateformat_;
+  ::google::protobuf::int32 tschchartaxis3dlabelposition_;
+  ::google::protobuf::int32 tschchartaxisnumberformattype_;
+  ::TSK::FormatStructArchive* tschchartaxisdurationformat_;
+  ::TSK::FormatStructArchive* tschchartaxisdateformat_;
+  ::google::protobuf::int32 tschchartaxisnumberofdecades_;
+  ::google::protobuf::int32 tschchartaxisnumberofmajorgridlines_;
+  ::google::protobuf::int32 tschchartaxisnumberofminorgridlines_;
+  ::google::protobuf::int32 tschchartaxisscale_;
+  bool tschchartaxisplottoedges_;
+  bool tschchartaxisshowlabels_;
+  bool tschchartaxisshowserieslabels_;
+  bool tschchartaxisshowtitle_;
+  float tschchartaxis3dgridlineopacity_;
+  ::std::string* tschchartaxistitle_;
+  ::TSCH::ChartsNSNumberDoubleArchive* tschchartaxisusermax_;
+  ::TSCH::ChartsNSNumberDoubleArchive* tschchartaxisusermin_;
+  ::TSD::StrokeArchive* tschchartaxis3dgridlinestroke_;
+  ::google::protobuf::int32 tschchartaxishorizontalspacing_;
+  ::google::protobuf::int32 tschchartaxislabelparagraphstyleindex_;
+  float tschchartaxislabelsorientation_;
+  float tschchartaxismajorgridlineopacity_;
+  ::TSD::ShadowArchive* tschchartaxismajorgridlineshadow_;
+  ::TSD::StrokeArchive* tschchartaxismajorgridlinestroke_;
+  ::TSD::ShadowArchive* tschchartaxisminorgridlineshadow_;
+  ::TSD::StrokeArchive* tschchartaxisminorgridlinestroke_;
+  float tschchartaxisminorgridlineopacity_;
+  bool tschchartaxisshowaxis_;
+  bool tschchartaxisshowlastlabel_;
+  bool tschchartaxisshowmajorgridlines_;
+  bool tschchartaxisshowmajortickmarks_;
+  bool tschchartaxisshowminimumlabel_;
+  bool tschchartaxisshowminorgridlines_;
+  bool tschchartaxisshowminortickmarks_;
+  ::google::protobuf::int32 tschchartaxistickmarklocation_;
+  ::google::protobuf::int32 tschchartaxistitleparagraphstyleindex_;
+  ::google::protobuf::int32 tschchartaxisverticalspacing_;
+
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 _has_bits_[(39 + 31) / 32];
+
+  friend void  protobuf_AddDesc_TSCHArchives_2eGEN_2eproto();
+  friend void protobuf_AssignDesc_TSCHArchives_2eGEN_2eproto();
+  friend void protobuf_ShutdownFile_TSCHArchives_2eGEN_2eproto();
+
+  void InitAsDefaultInstance();
+  static ChartAxisGenericPropertyMapArchive* default_instance_;
+};
+// -------------------------------------------------------------------
+
+class ChartSeriesGenericPropertyMapArchive : public ::google::protobuf::Message {
+ public:
+  ChartSeriesGenericPropertyMapArchive();
+  virtual ~ChartSeriesGenericPropertyMapArchive();
+
+  ChartSeriesGenericPropertyMapArchive(const ChartSeriesGenericPropertyMapArchive& from);
+
+  inline ChartSeriesGenericPropertyMapArchive& operator=(const ChartSeriesGenericPropertyMapArchive& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _unknown_fields_;
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return &_unknown_fields_;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const ChartSeriesGenericPropertyMapArchive& default_instance();
+
+  void Swap(ChartSeriesGenericPropertyMapArchive* other);
+
+  // implements Message ----------------------------------------------
+
+  ChartSeriesGenericPropertyMapArchive* New() const;
+  void CopyFrom(const ::google::protobuf::Message& from);
+  void MergeFrom(const ::google::protobuf::Message& from);
+  void CopyFrom(const ChartSeriesGenericPropertyMapArchive& from);
+  void MergeFrom(const ChartSeriesGenericPropertyMapArchive& from);
+  void Clear();
+  bool IsInitialized() const;
+
+  int ByteSize() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional float tschchartseriesadjustmentscale = 1;
+  inline bool has_tschchartseriesadjustmentscale() const;
+  inline void clear_tschchartseriesadjustmentscale();
+  static const int kTschchartseriesadjustmentscaleFieldNumber = 1;
+  inline float tschchartseriesadjustmentscale() const;
+  inline void set_tschchartseriesadjustmentscale(float value);
+
+  // optional .TSCH.ChartsNSArrayOfNSNumberDoubleArchive tschchartserieserrorbarcustomnegativedata = 2;
+  inline bool has_tschchartserieserrorbarcustomnegativedata() const;
+  inline void clear_tschchartserieserrorbarcustomnegativedata();
+  static const int kTschchartserieserrorbarcustomnegativedataFieldNumber = 2;
+  inline const ::TSCH::ChartsNSArrayOfNSNumberDoubleArchive& tschchartserieserrorbarcustomnegativedata() const;
+  inline ::TSCH::ChartsNSArrayOfNSNumberDoubleArchive* mutable_tschchartserieserrorbarcustomnegativedata();
+  inline ::TSCH::ChartsNSArrayOfNSNumberDoubleArchive* release_tschchartserieserrorbarcustomnegativedata();
+  inline void set_allocated_tschchartserieserrorbarcustomnegativedata(::TSCH::ChartsNSArrayOfNSNumberDoubleArchive* tschchartserieserrorbarcustomnegativedata);
+
+  // optional .TSCH.ChartsNSArrayOfNSNumberDoubleArchive tschchartserieserrorbarcustomnegativedatascatterx = 3;
+  inline bool has_tschchartserieserrorbarcustomnegativedatascatterx() const;
+  inline void clear_tschchartserieserrorbarcustomnegativedatascatterx();
+  static const int kTschchartserieserrorbarcustomnegativedatascatterxFieldNumber = 3;
+  inline const ::TSCH::ChartsNSArrayOfNSNumberDoubleArchive& tschchartserieserrorbarcustomnegativedatascatterx() const;
+  inline ::TSCH::ChartsNSArrayOfNSNumberDoubleArchive* mutable_tschchartserieserrorbarcustomnegativedatascatterx();
+  inline ::TSCH::ChartsNSArrayOfNSNumberDoubleArchive* release_tschchartserieserrorbarcustomnegativedatascatterx();
+  inline void set_allocated_tschchartserieserrorbarcustomnegativedatascatterx(::TSCH::ChartsNSArrayOfNSNumberDoubleArchive* tschchartserieserrorbarcustomnegativedatascatterx);
+
+  // optional .TSCH.ChartsNSArrayOfNSNumberDoubleArchive tschchartserieserrorbarcustompositivedata = 4;
+  inline bool has_tschchartserieserrorbarcustompositivedata() const;
+  inline void clear_tschchartserieserrorbarcustompositivedata();
+  static const int kTschchartserieserrorbarcustompositivedataFieldNumber = 4;
+  inline const ::TSCH::ChartsNSArrayOfNSNumberDoubleArchive& tschchartserieserrorbarcustompositivedata() const;
+  inline ::TSCH::ChartsNSArrayOfNSNumberDoubleArchive* mutable_tschchartserieserrorbarcustompositivedata();
+  inline ::TSCH::ChartsNSArrayOfNSNumberDoubleArchive* release_tschchartserieserrorbarcustompositivedata();
+  inline void set_allocated_tschchartserieserrorbarcustompositivedata(::TSCH::ChartsNSArrayOfNSNumberDoubleArchive* tschchartserieserrorbarcustompositivedata);
+
+  // optional .TSCH.ChartsNSArrayOfNSNumberDoubleArchive tschchartserieserrorbarcustompositivedatascatterx = 5;
+  inline bool has_tschchartserieserrorbarcustompositivedatascatterx() const;
+  inline void clear_tschchartserieserrorbarcustompositivedatascatterx();
+  static const int kTschchartserieserrorbarcustompositivedatascatterxFieldNumber = 5;
+  inline const ::TSCH::ChartsNSArrayOfNSNumberDoubleArchive& tschchartserieserrorbarcustompositivedatascatterx() const;
+  inline ::TSCH::ChartsNSArrayOfNSNumberDoubleArchive* mutable_tschchartserieserrorbarcustompositivedatascatterx();
+  inline ::TSCH::ChartsNSArrayOfNSNumberDoubleArchive* release_tschchartserieserrorbarcustompositivedatascatterx();
+  inline void set_allocated_tschchartserieserrorbarcustompositivedatascatterx(::TSCH::ChartsNSArrayOfNSNumberDoubleArchive* tschchartserieserrorbarcustompositivedatascatterx);
+
+  // optional float tschchartserieserrorbarfixedvalue = 6;
+  inline bool has_tschchartserieserrorbarfixedvalue() const;
+  inline void clear_tschchartserieserrorbarfixedvalue();
+  static const int kTschchartserieserrorbarfixedvalueFieldNumber = 6;
+  inline float tschchartserieserrorbarfixedvalue() const;
+  inline void set_tschchartserieserrorbarfixedvalue(float value);
+
+  // optional float tschchartserieserrorbarfixedvaluescatterx = 7;
+  inline bool has_tschchartserieserrorbarfixedvaluescatterx() const;
+  inline void clear_tschchartserieserrorbarfixedvaluescatterx();
+  static const int kTschchartserieserrorbarfixedvaluescatterxFieldNumber = 7;
+  inline float tschchartserieserrorbarfixedvaluescatterx() const;
+  inline void set_tschchartserieserrorbarfixedvaluescatterx(float value);
+
+  // optional float tschchartserieserrorbarpercentvalue = 8;
+  inline bool has_tschchartserieserrorbarpercentvalue() const;
+  inline void clear_tschchartserieserrorbarpercentvalue();
+  static const int kTschchartserieserrorbarpercentvalueFieldNumber = 8;
+  inline float tschchartserieserrorbarpercentvalue() const;
+  inline void set_tschchartserieserrorbarpercentvalue(float value);
+
+  // optional float tschchartserieserrorbarpercentvaluescatterx = 9;
+  inline bool has_tschchartserieserrorbarpercentvaluescatterx() const;
+  inline void clear_tschchartserieserrorbarpercentvaluescatterx();
+  static const int kTschchartserieserrorbarpercentvaluescatterxFieldNumber = 9;
+  inline float tschchartserieserrorbarpercentvaluescatterx() const;
+  inline void set_tschchartserieserrorbarpercentvaluescatterx(float value);
+
+  // optional int32 tschchartserieserrorbarsetting = 10;
+  inline bool has_tschchartserieserrorbarsetting() const;
+  inline void clear_tschchartserieserrorbarsetting();
+  static const int kTschchartserieserrorbarsettingFieldNumber = 10;
+  inline ::google::protobuf::int32 tschchartserieserrorbarsetting() const;
+  inline void set_tschchartserieserrorbarsetting(::google::protobuf::int32 value);
+
+  // optional int32 tschchartserieserrorbarsettingscatterx = 11;
+  inline bool has_tschchartserieserrorbarsettingscatterx() const;
+  inline void clear_tschchartserieserrorbarsettingscatterx();
+  static const int kTschchartserieserrorbarsettingscatterxFieldNumber = 11;
+  inline ::google::protobuf::int32 tschchartserieserrorbarsettingscatterx() const;
+  inline void set_tschchartserieserrorbarsettingscatterx(::google::protobuf::int32 value);
+
+  // optional float tschchartserieserrorbarstddevvalue = 12;
+  inline bool has_tschchartserieserrorbarstddevvalue() const;
+  inline void clear_tschchartserieserrorbarstddevvalue();
+  static const int kTschchartserieserrorbarstddevvalueFieldNumber = 12;
+  inline float tschchartserieserrorbarstddevvalue() const;
+  inline void set_tschchartserieserrorbarstddevvalue(float value);
+
+  // optional float tschchartserieserrorbarstddevvaluescatterx = 13;
+  inline bool has_tschchartserieserrorbarstddevvaluescatterx() const;
+  inline void clear_tschchartserieserrorbarstddevvaluescatterx();
+  static const int kTschchartserieserrorbarstddevvaluescatterxFieldNumber = 13;
+  inline float tschchartserieserrorbarstddevvaluescatterx() const;
+  inline void set_tschchartserieserrorbarstddevvaluescatterx(float value);
+
+  // optional int32 tschchartserieserrorbartype = 14;
+  inline bool has_tschchartserieserrorbartype() const;
+  inline void clear_tschchartserieserrorbartype();
+  static const int kTschchartserieserrorbartypeFieldNumber = 14;
+  inline ::google::protobuf::int32 tschchartserieserrorbartype() const;
+  inline void set_tschchartserieserrorbartype(::google::protobuf::int32 value);
+
+  // optional int32 tschchartserieserrorbartypescatterx = 15;
+  inline bool has_tschchartserieserrorbartypescatterx() const;
+  inline void clear_tschchartserieserrorbartypescatterx();
+  static const int kTschchartserieserrorbartypescatterxFieldNumber = 15;
+  inline ::google::protobuf::int32 tschchartserieserrorbartypescatterx() const;
+  inline void set_tschchartserieserrorbartypescatterx(::google::protobuf::int32 value);
+
+  // optional float tschchartserieslabelexplosion = 16;
+  inline bool has_tschchartserieslabelexplosion() const;
+  inline void clear_tschchartserieslabelexplosion();
+  static const int kTschchartserieslabelexplosionFieldNumber = 16;
+  inline float tschchartserieslabelexplosion() const;
+  inline void set_tschchartserieslabelexplosion(float value);
+
+  // optional int32 tschchartserieslinetype = 17;
+  inline bool has_tschchartserieslinetype() const;
+  inline void clear_tschchartserieslinetype();
+  static const int kTschchartserieslinetypeFieldNumber = 17;
+  inline ::google::protobuf::int32 tschchartserieslinetype() const;
+  inline void set_tschchartserieslinetype(::google::protobuf::int32 value);
+
+  // optional .TSK.FormatStructArchive tschchartseries1_0numberformat = 18;
+  inline bool has_tschchartseries1_0numberformat() const;
+  inline void clear_tschchartseries1_0numberformat();
+  static const int kTschchartseries10NumberformatFieldNumber = 18;
+  inline const ::TSK::FormatStructArchive& tschchartseries1_0numberformat() const;
+  inline ::TSK::FormatStructArchive* mutable_tschchartseries1_0numberformat();
+  inline ::TSK::FormatStructArchive* release_tschchartseries1_0numberformat();
+  inline void set_allocated_tschchartseries1_0numberformat(::TSK::FormatStructArchive* tschchartseries1_0numberformat);
+
+  // optional .TSK.FormatStructArchive tschchartseriesnumberformat = 19;
+  inline bool has_tschchartseriesnumberformat() const;
+  inline void clear_tschchartseriesnumberformat();
+  static const int kTschchartseriesnumberformatFieldNumber = 19;
+  inline const ::TSK::FormatStructArchive& tschchartseriesnumberformat() const;
+  inline ::TSK::FormatStructArchive* mutable_tschchartseriesnumberformat();
+  inline ::TSK::FormatStructArchive* release_tschchartseriesnumberformat();
+  inline void set_allocated_tschchartseriesnumberformat(::TSK::FormatStructArchive* tschchartseriesnumberformat);
+
+  // optional .TSK.FormatStructArchive tschchartseries1_0dateformat = 20;
+  inline bool has_tschchartseries1_0dateformat() const;
+  inline void clear_tschchartseries1_0dateformat();
+  static const int kTschchartseries10DateformatFieldNumber = 20;
+  inline const ::TSK::FormatStructArchive& tschchartseries1_0dateformat() const;
+  inline ::TSK::FormatStructArchive* mutable_tschchartseries1_0dateformat();
+  inline ::TSK::FormatStructArchive* release_tschchartseries1_0dateformat();
+  inline void set_allocated_tschchartseries1_0dateformat(::TSK::FormatStructArchive* tschchartseries1_0dateformat);
+
+  // optional .TSK.FormatStructArchive tschchartseriesdurationformat = 21;
+  inline bool has_tschchartseriesdurationformat() const;
+  inline void clear_tschchartseriesdurationformat();
+  static const int kTschchartseriesdurationformatFieldNumber = 21;
+  inline const ::TSK::FormatStructArchive& tschchartseriesdurationformat() const;
+  inline ::TSK::FormatStructArchive* mutable_tschchartseriesdurationformat();
+  inline ::TSK::FormatStructArchive* release_tschchartseriesdurationformat();
+  inline void set_allocated_tschchartseriesdurationformat(::TSK::FormatStructArchive* tschchartseriesdurationformat);
+
+  // optional .TSK.FormatStructArchive tschchartseriesdateformat = 22;
+  inline bool has_tschchartseriesdateformat() const;
+  inline void clear_tschchartseriesdateformat();
+  static const int kTschchartseriesdateformatFieldNumber = 22;
+  inline const ::TSK::FormatStructArchive& tschchartseriesdateformat() const;
+  inline ::TSK::FormatStructArchive* mutable_tschchartseriesdateformat();
+  inline ::TSK::FormatStructArchive* release_tschchartseriesdateformat();
+  inline void set_allocated_tschchartseriesdateformat(::TSK::FormatStructArchive* tschchartseriesdateformat);
+
+  // optional int32 tschchartseriesnumberformattype = 23;
+  inline bool has_tschchartseriesnumberformattype() const;
+  inline void clear_tschchartseriesnumberformattype();
+  static const int kTschchartseriesnumberformattypeFieldNumber = 23;
+  inline ::google::protobuf::int32 tschchartseriesnumberformattype() const;
+  inline void set_tschchartseriesnumberformattype(::google::protobuf::int32 value);
+
+  // optional .TSK.FormatStructArchive tschchartseriespercentnumberformat = 24;
+  inline bool has_tschchartseriespercentnumberformat() const;
+  inline void clear_tschchartseriespercentnumberformat();
+  static const int kTschchartseriespercentnumberformatFieldNumber = 24;
+  inline const ::TSK::FormatStructArchive& tschchartseriespercentnumberformat() const;
+  inline ::TSK::FormatStructArchive* mutable_tschchartseriespercentnumberformat();
+  inline ::TSK::FormatStructArchive* release_tschchartseriespercentnumberformat();
+  inline void set_allocated_tschchartseriespercentnumberformat(::TSK::FormatStructArchive* tschchartseriespercentnumberformat);
+
+  // optional int32 tschchartseriesseriestype = 25;
+  inline bool has_tschchartseriesseriestype() const;
+  inline void clear_tschchartseriesseriestype();
+  static const int kTschchartseriesseriestypeFieldNumber = 25;
+  inline ::google::protobuf::int32 tschchartseriesseriestype() const;
+  inline void set_tschchartseriesseriestype(::google::protobuf::int32 value);
+
+  // optional bool tschchartseriesshowerrorbar = 26;
+  inline bool has_tschchartseriesshowerrorbar() const;
+  inline void clear_tschchartseriesshowerrorbar();
+  static const int kTschchartseriesshowerrorbarFieldNumber = 26;
+  inline bool tschchartseriesshowerrorbar() const;
+  inline void set_tschchartseriesshowerrorbar(bool value);
+
+  // optional bool tschchartseriesshowerrorbarscatterx = 27;
+  inline bool has_tschchartseriesshowerrorbarscatterx() const;
+  inline void clear_tschchartseriesshowerrorbarscatterx();
+  static const int kTschchartseriesshowerrorbarscatterxFieldNumber = 27;
+  inline bool tschchartseriesshowerrorbarscatterx() const;
+  inline void set_tschchartseriesshowerrorbarscatterx(bool value);
+
+  // optional bool tschchartseriesshowline = 28;
+  inline bool has_tschchartseriesshowline() const;
+  inline void clear_tschchartseriesshowline();
+  static const int kTschchartseriesshowlineFieldNumber = 28;
+  inline bool tschchartseriesshowline() const;
+  inline void set_tschchartseriesshowline(bool value);
+
+  // optional bool tschchartseriesshownegativedata = 29;
+  inline bool has_tschchartseriesshownegativedata() const;
+  inline void clear_tschchartseriesshownegativedata();
+  static const int kTschchartseriesshownegativedataFieldNumber = 29;
+  inline bool tschchartseriesshownegativedata() const;
+  inline void set_tschchartseriesshownegativedata(bool value);
+
+  // optional bool tschchartseriesshowserieslabels = 30;
+  inline bool has_tschchartseriesshowserieslabels() const;
+  inline void clear_tschchartseriesshowserieslabels();
+  static const int kTschchartseriesshowserieslabelsFieldNumber = 30;
+  inline bool tschchartseriesshowserieslabels() const;
+  inline void set_tschchartseriesshowserieslabels(bool value);
+
+  // optional bool tschchartseriesshowsymbol = 31;
+  inline bool has_tschchartseriesshowsymbol() const;
+  inline void clear_tschchartseriesshowsymbol();
+  static const int kTschchartseriesshowsymbolFieldNumber = 31;
+  inline bool tschchartseriesshowsymbol() const;
+  inline void set_tschchartseriesshowsymbol(bool value);
+
+  // optional bool tschchartseriesshowtrendline = 32;
+  inline bool has_tschchartseriesshowtrendline() const;
+  inline void clear_tschchartseriesshowtrendline();
+  static const int kTschchartseriesshowtrendlineFieldNumber = 32;
+  inline bool tschchartseriesshowtrendline() const;
+  inline void set_tschchartseriesshowtrendline(bool value);
+
+  // optional bool tschchartseriesshowvaluelabels = 33;
+  inline bool has_tschchartseriesshowvaluelabels() const;
+  inline void clear_tschchartseriesshowvaluelabels();
+  static const int kTschchartseriesshowvaluelabelsFieldNumber = 33;
+  inline bool tschchartseriesshowvaluelabels() const;
+  inline void set_tschchartseriesshowvaluelabels(bool value);
+
+  // optional int32 tschchartseriessizedimension = 34;
+  inline bool has_tschchartseriessizedimension() const;
+  inline void clear_tschchartseriessizedimension();
+  static const int kTschchartseriessizedimensionFieldNumber = 34;
+  inline ::google::protobuf::int32 tschchartseriessizedimension() const;
+  inline void set_tschchartseriessizedimension(::google::protobuf::int32 value);
+
+  // optional int32 tschchartseriessymboltype = 35;
+  inline bool has_tschchartseriessymboltype() const;
+  inline void clear_tschchartseriessymboltype();
+  static const int kTschchartseriessymboltypeFieldNumber = 35;
+  inline ::google::protobuf::int32 tschchartseriessymboltype() const;
+  inline void set_tschchartseriessymboltype(::google::protobuf::int32 value);
+
+  // optional float tschchartseriestrendlineequationoffsetx = 36;
+  inline bool has_tschchartseriestrendlineequationoffsetx() const;
+  inline void clear_tschchartseriestrendlineequationoffsetx();
+  static const int kTschchartseriestrendlineequationoffsetxFieldNumber = 36;
+  inline float tschchartseriestrendlineequationoffsetx() const;
+  inline void set_tschchartseriestrendlineequationoffsetx(float value);
+
+  // optional float tschchartseriestrendlineequationoffsety = 37;
+  inline bool has_tschchartseriestrendlineequationoffsety() const;
+  inline void clear_tschchartseriestrendlineequationoffsety();
+  static const int kTschchartseriestrendlineequationoffsetyFieldNumber = 37;
+  inline float tschchartseriestrendlineequationoffsety() const;
+  inline void set_tschchartseriestrendlineequationoffsety(float value);
+
+  // optional string tschchartseriestrendlinelabelstring = 38;
+  inline bool has_tschchartseriestrendlinelabelstring() const;
+  inline void clear_tschchartseriestrendlinelabelstring();
+  static const int kTschchartseriestrendlinelabelstringFieldNumber = 38;
+  inline const ::std::string& tschchartseriestrendlinelabelstring() const;
+  inline void set_tschchartseriestrendlinelabelstring(const ::std::string& value);
+  inline void set_tschchartseriestrendlinelabelstring(const char* value);
+  inline void set_tschchartseriestrendlinelabelstring(const char* value, size_t size);
+  inline ::std::string* mutable_tschchartseriestrendlinelabelstring();
+  inline ::std::string* release_tschchartseriestrendlinelabelstring();
+  inline void set_allocated_tschchartseriestrendlinelabelstring(::std::string* tschchartseriestrendlinelabelstring);
+
+  // optional int32 tschchartseriestrendlineorder = 39;
+  inline bool has_tschchartseriestrendlineorder() const;
+  inline void clear_tschchartseriestrendlineorder();
+  static const int kTschchartseriestrendlineorderFieldNumber = 39;
+  inline ::google::protobuf::int32 tschchartseriestrendlineorder() const;
+  inline void set_tschchartseriestrendlineorder(::google::protobuf::int32 value);
+
+  // optional int32 tschchartseriestrendlineperiod = 40;
+  inline bool has_tschchartseriestrendlineperiod() const;
+  inline void clear_tschchartseriestrendlineperiod();
+  static const int kTschchartseriestrendlineperiodFieldNumber = 40;
+  inline ::google::protobuf::int32 tschchartseriestrendlineperiod() const;
+  inline void set_tschchartseriestrendlineperiod(::google::protobuf::int32 value);
+
+  // optional float tschchartseriestrendlinersquaredoffsetx = 41;
+  inline bool has_tschchartseriestrendlinersquaredoffsetx() const;
+  inline void clear_tschchartseriestrendlinersquaredoffsetx();
+  static const int kTschchartseriestrendlinersquaredoffsetxFieldNumber = 41;
+  inline float tschchartseriestrendlinersquaredoffsetx() const;
+  inline void set_tschchartseriestrendlinersquaredoffsetx(float value);
+
+  // optional float tschchartseriestrendlinersquaredoffsety = 42;
+  inline bool has_tschchartseriestrendlinersquaredoffsety() const;
+  inline void clear_tschchartseriestrendlinersquaredoffsety();
+  static const int kTschchartseriestrendlinersquaredoffsetyFieldNumber = 42;
+  inline float tschchartseriestrendlinersquaredoffsety() const;
+  inline void set_tschchartseriestrendlinersquaredoffsety(float value);
+
+  // optional bool tschchartseriestrendlineshowequation = 43;
+  inline bool has_tschchartseriestrendlineshowequation() const;
+  inline void clear_tschchartseriestrendlineshowequation();
+  static const int kTschchartseriestrendlineshowequationFieldNumber = 43;
+  inline bool tschchartseriestrendlineshowequation() const;
+  inline void set_tschchartseriestrendlineshowequation(bool value);
+
+  // optional bool tschchartseriestrendlineshowlabel = 44;
+  inline bool has_tschchartseriestrendlineshowlabel() const;
+  inline void clear_tschchartseriestrendlineshowlabel();
+  static const int kTschchartseriestrendlineshowlabelFieldNumber = 44;
+  inline bool tschchartseriestrendlineshowlabel() const;
+  inline void set_tschchartseriestrendlineshowlabel(bool value);
+
+  // optional bool tschchartseriestrendlineshowr2value = 45;
+  inline bool has_tschchartseriestrendlineshowr2value() const;
+  inline void clear_tschchartseriestrendlineshowr2value();
+  static const int kTschchartseriestrendlineshowr2ValueFieldNumber = 45;
+  inline bool tschchartseriestrendlineshowr2value() const;
+  inline void set_tschchartseriestrendlineshowr2value(bool value);
+
+  // optional int32 tschchartseriestrendlinetype = 46;
+  inline bool has_tschchartseriestrendlinetype() const;
+  inline void clear_tschchartseriestrendlinetype();
+  static const int kTschchartseriestrendlinetypeFieldNumber = 46;
+  inline ::google::protobuf::int32 tschchartseriestrendlinetype() const;
+  inline void set_tschchartseriestrendlinetype(::google::protobuf::int32 value);
+
+  // optional float tschchartserieswedgeexplosion = 47;
+  inline bool has_tschchartserieswedgeexplosion() const;
+  inline void clear_tschchartserieswedgeexplosion();
+  static const int kTschchartserieswedgeexplosionFieldNumber = 47;
+  inline float tschchartserieswedgeexplosion() const;
+  inline void set_tschchartserieswedgeexplosion(float value);
+
+  // optional int32 tschchartseriesyaxisordinal = 48;
+  inline bool has_tschchartseriesyaxisordinal() const;
+  inline void clear_tschchartseriesyaxisordinal();
+  static const int kTschchartseriesyaxisordinalFieldNumber = 48;
+  inline ::google::protobuf::int32 tschchartseriesyaxisordinal() const;
+  inline void set_tschchartseriesyaxisordinal(::google::protobuf::int32 value);
+
+  // optional int32 tschchartseriesvaluelabelsaxis = 49;
+  inline bool has_tschchartseriesvaluelabelsaxis() const;
+  inline void clear_tschchartseriesvaluelabelsaxis();
+  static const int kTschchartseriesvaluelabelsaxisFieldNumber = 49;
+  inline ::google::protobuf::int32 tschchartseriesvaluelabelsaxis() const;
+  inline void set_tschchartseriesvaluelabelsaxis(::google::protobuf::int32 value);
+
+  // optional .TSD.LineEndArchive tschchartserieserrorbarlineend = 50;
+  inline bool has_tschchartserieserrorbarlineend() const;
+  inline void clear_tschchartserieserrorbarlineend();
+  static const int kTschchartserieserrorbarlineendFieldNumber = 50;
+  inline const ::TSD::LineEndArchive& tschchartserieserrorbarlineend() const;
+  inline ::TSD::LineEndArchive* mutable_tschchartserieserrorbarlineend();
+  inline ::TSD::LineEndArchive* release_tschchartserieserrorbarlineend();
+  inline void set_allocated_tschchartserieserrorbarlineend(::TSD::LineEndArchive* tschchartserieserrorbarlineend);
+
+  // optional .TSD.LineEndArchive tschchartserieserrorbarlineendscatterx = 51;
+  inline bool has_tschchartserieserrorbarlineendscatterx() const;
+  inline void clear_tschchartserieserrorbarlineendscatterx();
+  static const int kTschchartserieserrorbarlineendscatterxFieldNumber = 51;
+  inline const ::TSD::LineEndArchive& tschchartserieserrorbarlineendscatterx() const;
+  inline ::TSD::LineEndArchive* mutable_tschchartserieserrorbarlineendscatterx();
+  inline ::TSD::LineEndArchive* release_tschchartserieserrorbarlineendscatterx();
+  inline void set_allocated_tschchartserieserrorbarlineendscatterx(::TSD::LineEndArchive* tschchartserieserrorbarlineendscatterx);
+
+  // optional .TSD.ShadowArchive tschchartserieserrorbarshadow = 52;
+  inline bool has_tschchartserieserrorbarshadow() const;
+  inline void clear_tschchartserieserrorbarshadow();
+  static const int kTschchartserieserrorbarshadowFieldNumber = 52;
+  inline const ::TSD::ShadowArchive& tschchartserieserrorbarshadow() const;
+  inline ::TSD::ShadowArchive* mutable_tschchartserieserrorbarshadow();
+  inline ::TSD::ShadowArchive* release_tschchartserieserrorbarshadow();
+  inline void set_allocated_tschchartserieserrorbarshadow(::TSD::ShadowArchive* tschchartserieserrorbarshadow);
+
+  // optional .TSD.StrokeArchive tschchartserieserrorbarstroke = 53;
+  inline bool has_tschchartserieserrorbarstroke() const;
+  inline void clear_tschchartserieserrorbarstroke();
+  static const int kTschchartserieserrorbarstrokeFieldNumber = 53;
+  inline const ::TSD::StrokeArchive& tschchartserieserrorbarstroke() const;
+  inline ::TSD::StrokeArchive* mutable_tschchartserieserrorbarstroke();
+  inline ::TSD::StrokeArchive* release_tschchartserieserrorbarstroke();
+  inline void set_allocated_tschchartserieserrorbarstroke(::TSD::StrokeArchive* tschchartserieserrorbarstroke);
+
+  // optional .TSD.StrokeArchive tschchartserieserrorbarstrokescatterx = 54;
+  inline bool has_tschchartserieserrorbarstrokescatterx() const;
+  inline void clear_tschchartserieserrorbarstrokescatterx();
+  static const int kTschchartserieserrorbarstrokescatterxFieldNumber = 54;
+  inline const ::TSD::StrokeArchive& tschchartserieserrorbarstrokescatterx() const;
+  inline ::TSD::StrokeArchive* mutable_tschchartserieserrorbarstrokescatterx();
+  inline ::TSD::StrokeArchive* release_tschchartserieserrorbarstrokescatterx();
+  inline void set_allocated_tschchartserieserrorbarstrokescatterx(::TSD::StrokeArchive* tschchartserieserrorbarstrokescatterx);
+
+  // optional .TSD.FillArchive tschchartseriesfill = 55;
+  inline bool has_tschchartseriesfill() const;
+  inline void clear_tschchartseriesfill();
+  static const int kTschchartseriesfillFieldNumber = 55;
+  inline const ::TSD::FillArchive& tschchartseriesfill() const;
+  inline ::TSD::FillArchive* mutable_tschchartseriesfill();
+  inline ::TSD::FillArchive* release_tschchartseriesfill();
+  inline void set_allocated_tschchartseriesfill(::TSD::FillArchive* tschchartseriesfill);
+
+  // optional int32 tschchartserieslabelparagraphstyleindex = 56;
+  inline bool has_tschchartserieslabelparagraphstyleindex() const;
+  inline void clear_tschchartserieslabelparagraphstyleindex();
+  static const int kTschchartserieslabelparagraphstyleindexFieldNumber = 56;
+  inline ::google::protobuf::int32 tschchartserieslabelparagraphstyleindex() const;
+  inline void set_tschchartserieslabelparagraphstyleindex(::google::protobuf::int32 value);
+
+  // optional float tschchartseriesopacity = 57;
+  inline bool has_tschchartseriesopacity() const;
+  inline void clear_tschchartseriesopacity();
+  static const int kTschchartseriesopacityFieldNumber = 57;
+  inline float tschchartseriesopacity() const;
+  inline void set_tschchartseriesopacity(float value);
+
+  // optional int32 tschchartseriesoutsidelabelparagraphstyleindex = 58;
+  inline bool has_tschchartseriesoutsidelabelparagraphstyleindex() const;
+  inline void clear_tschchartseriesoutsidelabelparagraphstyleindex();
+  static const int kTschchartseriesoutsidelabelparagraphstyleindexFieldNumber = 58;
+  inline ::google::protobuf::int32 tschchartseriesoutsidelabelparagraphstyleindex() const;
+  inline void set_tschchartseriesoutsidelabelparagraphstyleindex(::google::protobuf::int32 value);
+
+  // optional .TSD.ShadowArchive tschchartseriesshadow = 59;
+  inline bool has_tschchartseriesshadow() const;
+  inline void clear_tschchartseriesshadow();
+  static const int kTschchartseriesshadowFieldNumber = 59;
+  inline const ::TSD::ShadowArchive& tschchartseriesshadow() const;
+  inline ::TSD::ShadowArchive* mutable_tschchartseriesshadow();
+  inline ::TSD::ShadowArchive* release_tschchartseriesshadow();
+  inline void set_allocated_tschchartseriesshadow(::TSD::ShadowArchive* tschchartseriesshadow);
+
+  // optional .TSD.StrokeArchive tschchartseriesstroke = 60;
+  inline bool has_tschchartseriesstroke() const;
+  inline void clear_tschchartseriesstroke();
+  static const int kTschchartseriesstrokeFieldNumber = 60;
+  inline const ::TSD::StrokeArchive& tschchartseriesstroke() const;
+  inline ::TSD::StrokeArchive* mutable_tschchartseriesstroke();
+  inline ::TSD::StrokeArchive* release_tschchartseriesstroke();
+  inline void set_allocated_tschchartseriesstroke(::TSD::StrokeArchive* tschchartseriesstroke);
+
+  // optional .TSD.FillArchive tschchartseriessymbolfill = 61;
+  inline bool has_tschchartseriessymbolfill() const;
+  inline void clear_tschchartseriessymbolfill();
+  static const int kTschchartseriessymbolfillFieldNumber = 61;
+  inline const ::TSD::FillArchive& tschchartseriessymbolfill() const;
+  inline ::TSD::FillArchive* mutable_tschchartseriessymbolfill();
+  inline ::TSD::FillArchive* release_tschchartseriessymbolfill();
+  inline void set_allocated_tschchartseriessymbolfill(::TSD::FillArchive* tschchartseriessymbolfill);
+
+  // optional bool tschchartseriessymbolfilluseseriesfill = 62;
+  inline bool has_tschchartseriessymbolfilluseseriesfill() const;
+  inline void clear_tschchartseriessymbolfilluseseriesfill();
+  static const int kTschchartseriessymbolfilluseseriesfillFieldNumber = 62;
+  inline bool tschchartseriessymbolfilluseseriesfill() const;
+  inline void set_tschchartseriessymbolfilluseseriesfill(bool value);
+
+  // optional bool tschchartseriessymbolfilluseseriesstroke = 63;
+  inline bool has_tschchartseriessymbolfilluseseriesstroke() const;
+  inline void clear_tschchartseriessymbolfilluseseriesstroke();
+  static const int kTschchartseriessymbolfilluseseriesstrokeFieldNumber = 63;
+  inline bool tschchartseriessymbolfilluseseriesstroke() const;
+  inline void set_tschchartseriessymbolfilluseseriesstroke(bool value);
+
+  // optional float tschchartseriessymbolsize = 64;
+  inline bool has_tschchartseriessymbolsize() const;
+  inline void clear_tschchartseriessymbolsize();
+  static const int kTschchartseriessymbolsizeFieldNumber = 64;
+  inline float tschchartseriessymbolsize() const;
+  inline void set_tschchartseriessymbolsize(float value);
+
+  // optional .TSD.StrokeArchive tschchartseriessymbolstroke = 65;
+  inline bool has_tschchartseriessymbolstroke() const;
+  inline void clear_tschchartseriessymbolstroke();
+  static const int kTschchartseriessymbolstrokeFieldNumber = 65;
+  inline const ::TSD::StrokeArchive& tschchartseriessymbolstroke() const;
+  inline ::TSD::StrokeArchive* mutable_tschchartseriessymbolstroke();
+  inline ::TSD::StrokeArchive* release_tschchartseriessymbolstroke();
+  inline void set_allocated_tschchartseriessymbolstroke(::TSD::StrokeArchive* tschchartseriessymbolstroke);
+
+  // optional float tschchartseriestrendlineequationopacity = 66;
+  inline bool has_tschchartseriestrendlineequationopacity() const;
+  inline void clear_tschchartseriestrendlineequationopacity();
+  static const int kTschchartseriestrendlineequationopacityFieldNumber = 66;
+  inline float tschchartseriestrendlineequationopacity() const;
+  inline void set_tschchartseriestrendlineequationopacity(float value);
+
+  // optional int32 tschchartseriestrendlineequationparagraphstyleindex = 67;
+  inline bool has_tschchartseriestrendlineequationparagraphstyleindex() const;
+  inline void clear_tschchartseriestrendlineequationparagraphstyleindex();
+  static const int kTschchartseriestrendlineequationparagraphstyleindexFieldNumber = 67;
+  inline ::google::protobuf::int32 tschchartseriestrendlineequationparagraphstyleindex() const;
+  inline void set_tschchartseriestrendlineequationparagraphstyleindex(::google::protobuf::int32 value);
+
+  // optional float tschchartseriestrendlinersquaredopacity = 68;
+  inline bool has_tschchartseriestrendlinersquaredopacity() const;
+  inline void clear_tschchartseriestrendlinersquaredopacity();
+  static const int kTschchartseriestrendlinersquaredopacityFieldNumber = 68;
+  inline float tschchartseriestrendlinersquaredopacity() const;
+  inline void set_tschchartseriestrendlinersquaredopacity(float value);
+
+  // optional int32 tschchartseriestrendlinersquaredparagraphstyleindex = 69;
+  inline bool has_tschchartseriestrendlinersquaredparagraphstyleindex() const;
+  inline void clear_tschchartseriestrendlinersquaredparagraphstyleindex();
+  static const int kTschchartseriestrendlinersquaredparagraphstyleindexFieldNumber = 69;
+  inline ::google::protobuf::int32 tschchartseriestrendlinersquaredparagraphstyleindex() const;
+  inline void set_tschchartseriestrendlinersquaredparagraphstyleindex(::google::protobuf::int32 value);
+
+  // optional .TSD.ShadowArchive tschchartseriestrendlineshadow = 70;
+  inline bool has_tschchartseriestrendlineshadow() const;
+  inline void clear_tschchartseriestrendlineshadow();
+  static const int kTschchartseriestrendlineshadowFieldNumber = 70;
+  inline const ::TSD::ShadowArchive& tschchartseriestrendlineshadow() const;
+  inline ::TSD::ShadowArchive* mutable_tschchartseriestrendlineshadow();
+  inline ::TSD::ShadowArchive* release_tschchartseriestrendlineshadow();
+  inline void set_allocated_tschchartseriestrendlineshadow(::TSD::ShadowArchive* tschchartseriestrendlineshadow);
+
+  // optional .TSD.StrokeArchive tschchartseriestrendlinestroke = 71;
+  inline bool has_tschchartseriestrendlinestroke() const;
+  inline void clear_tschchartseriestrendlinestroke();
+  static const int kTschchartseriestrendlinestrokeFieldNumber = 71;
+  inline const ::TSD::StrokeArchive& tschchartseriestrendlinestroke() const;
+  inline ::TSD::StrokeArchive* mutable_tschchartseriestrendlinestroke();
+  inline ::TSD::StrokeArchive* release_tschchartseriestrendlinestroke();
+  inline void set_allocated_tschchartseriestrendlinestroke(::TSD::StrokeArchive* tschchartseriestrendlinestroke);
+
+  // optional int32 tschchartseriesvaluelabelposition = 72;
+  inline bool has_tschchartseriesvaluelabelposition() const;
+  inline void clear_tschchartseriesvaluelabelposition();
+  static const int kTschchartseriesvaluelabelpositionFieldNumber = 72;
+  inline ::google::protobuf::int32 tschchartseriesvaluelabelposition() const;
+  inline void set_tschchartseriesvaluelabelposition(::google::protobuf::int32 value);
+
+  // optional bool tschchartseriesshowlabelsinfront = 73;
+  inline bool has_tschchartseriesshowlabelsinfront() const;
+  inline void clear_tschchartseriesshowlabelsinfront();
+  static const int kTschchartseriesshowlabelsinfrontFieldNumber = 73;
+  inline bool tschchartseriesshowlabelsinfront() const;
+  inline void set_tschchartseriesshowlabelsinfront(bool value);
+
+  // @@protoc_insertion_point(class_scope:TSCH.Generated.ChartSeriesGenericPropertyMapArchive)
+ private:
+  inline void set_has_tschchartseriesadjustmentscale();
+  inline void clear_has_tschchartseriesadjustmentscale();
+  inline void set_has_tschchartserieserrorbarcustomnegativedata();
+  inline void clear_has_tschchartserieserrorbarcustomnegativedata();
+  inline void set_has_tschchartserieserrorbarcustomnegativedatascatterx();
+  inline void clear_has_tschchartserieserrorbarcustomnegativedatascatterx();
+  inline void set_has_tschchartserieserrorbarcustompositivedata();
+  inline void clear_has_tschchartserieserrorbarcustompositivedata();
+  inline void set_has_tschchartserieserrorbarcustompositivedatascatterx();
+  inline void clear_has_tschchartserieserrorbarcustompositivedatascatterx();
+  inline void set_has_tschchartserieserrorbarfixedvalue();
+  inline void clear_has_tschchartserieserrorbarfixedvalue();
+  inline void set_has_tschchartserieserrorbarfixedvaluescatterx();
+  inline void clear_has_tschchartserieserrorbarfixedvaluescatterx();
+  inline void set_has_tschchartserieserrorbarpercentvalue();
+  inline void clear_has_tschchartserieserrorbarpercentvalue();
+  inline void set_has_tschchartserieserrorbarpercentvaluescatterx();
+  inline void clear_has_tschchartserieserrorbarpercentvaluescatterx();
+  inline void set_has_tschchartserieserrorbarsetting();
+  inline void clear_has_tschchartserieserrorbarsetting();
+  inline void set_has_tschchartserieserrorbarsettingscatterx();
+  inline void clear_has_tschchartserieserrorbarsettingscatterx();
+  inline void set_has_tschchartserieserrorbarstddevvalue();
+  inline void clear_has_tschchartserieserrorbarstddevvalue();
+  inline void set_has_tschchartserieserrorbarstddevvaluescatterx();
+  inline void clear_has_tschchartserieserrorbarstddevvaluescatterx();
+  inline void set_has_tschchartserieserrorbartype();
+  inline void clear_has_tschchartserieserrorbartype();
+  inline void set_has_tschchartserieserrorbartypescatterx();
+  inline void clear_has_tschchartserieserrorbartypescatterx();
+  inline void set_has_tschchartserieslabelexplosion();
+  inline void clear_has_tschchartserieslabelexplosion();
+  inline void set_has_tschchartserieslinetype();
+  inline void clear_has_tschchartserieslinetype();
+  inline void set_has_tschchartseries1_0numberformat();
+  inline void clear_has_tschchartseries1_0numberformat();
+  inline void set_has_tschchartseriesnumberformat();
+  inline void clear_has_tschchartseriesnumberformat();
+  inline void set_has_tschchartseries1_0dateformat();
+  inline void clear_has_tschchartseries1_0dateformat();
+  inline void set_has_tschchartseriesdurationformat();
+  inline void clear_has_tschchartseriesdurationformat();
+  inline void set_has_tschchartseriesdateformat();
+  inline void clear_has_tschchartseriesdateformat();
+  inline void set_has_tschchartseriesnumberformattype();
+  inline void clear_has_tschchartseriesnumberformattype();
+  inline void set_has_tschchartseriespercentnumberformat();
+  inline void clear_has_tschchartseriespercentnumberformat();
+  inline void set_has_tschchartseriesseriestype();
+  inline void clear_has_tschchartseriesseriestype();
+  inline void set_has_tschchartseriesshowerrorbar();
+  inline void clear_has_tschchartseriesshowerrorbar();
+  inline void set_has_tschchartseriesshowerrorbarscatterx();
+  inline void clear_has_tschchartseriesshowerrorbarscatterx();
+  inline void set_has_tschchartseriesshowline();
+  inline void clear_has_tschchartseriesshowline();
+  inline void set_has_tschchartseriesshownegativedata();
+  inline void clear_has_tschchartseriesshownegativedata();
+  inline void set_has_tschchartseriesshowserieslabels();
+  inline void clear_has_tschchartseriesshowserieslabels();
+  inline void set_has_tschchartseriesshowsymbol();
+  inline void clear_has_tschchartseriesshowsymbol();
+  inline void set_has_tschchartseriesshowtrendline();
+  inline void clear_has_tschchartseriesshowtrendline();
+  inline void set_has_tschchartseriesshowvaluelabels();
+  inline void clear_has_tschchartseriesshowvaluelabels();
+  inline void set_has_tschchartseriessizedimension();
+  inline void clear_has_tschchartseriessizedimension();
+  inline void set_has_tschchartseriessymboltype();
+  inline void clear_has_tschchartseriessymboltype();
+  inline void set_has_tschchartseriestrendlineequationoffsetx();
+  inline void clear_has_tschchartseriestrendlineequationoffsetx();
+  inline void set_has_tschchartseriestrendlineequationoffsety();
+  inline void clear_has_tschchartseriestrendlineequationoffsety();
+  inline void set_has_tschchartseriestrendlinelabelstring();
+  inline void clear_has_tschchartseriestrendlinelabelstring();
+  inline void set_has_tschchartseriestrendlineorder();
+  inline void clear_has_tschchartseriestrendlineorder();
+  inline void set_has_tschchartseriestrendlineperiod();
+  inline void clear_has_tschchartseriestrendlineperiod();
+  inline void set_has_tschchartseriestrendlinersquaredoffsetx();
+  inline void clear_has_tschchartseriestrendlinersquaredoffsetx();
+  inline void set_has_tschchartseriestrendlinersquaredoffsety();
+  inline void clear_has_tschchartseriestrendlinersquaredoffsety();
+  inline void set_has_tschchartseriestrendlineshowequation();
+  inline void clear_has_tschchartseriestrendlineshowequation();
+  inline void set_has_tschchartseriestrendlineshowlabel();
+  inline void clear_has_tschchartseriestrendlineshowlabel();
+  inline void set_has_tschchartseriestrendlineshowr2value();
+  inline void clear_has_tschchartseriestrendlineshowr2value();
+  inline void set_has_tschchartseriestrendlinetype();
+  inline void clear_has_tschchartseriestrendlinetype();
+  inline void set_has_tschchartserieswedgeexplosion();
+  inline void clear_has_tschchartserieswedgeexplosion();
+  inline void set_has_tschchartseriesyaxisordinal();
+  inline void clear_has_tschchartseriesyaxisordinal();
+  inline void set_has_tschchartseriesvaluelabelsaxis();
+  inline void clear_has_tschchartseriesvaluelabelsaxis();
+  inline void set_has_tschchartserieserrorbarlineend();
+  inline void clear_has_tschchartserieserrorbarlineend();
+  inline void set_has_tschchartserieserrorbarlineendscatterx();
+  inline void clear_has_tschchartserieserrorbarlineendscatterx();
+  inline void set_has_tschchartserieserrorbarshadow();
+  inline void clear_has_tschchartserieserrorbarshadow();
+  inline void set_has_tschchartserieserrorbarstroke();
+  inline void clear_has_tschchartserieserrorbarstroke();
+  inline void set_has_tschchartserieserrorbarstrokescatterx();
+  inline void clear_has_tschchartserieserrorbarstrokescatterx();
+  inline void set_has_tschchartseriesfill();
+  inline void clear_has_tschchartseriesfill();
+  inline void set_has_tschchartserieslabelparagraphstyleindex();
+  inline void clear_has_tschchartserieslabelparagraphstyleindex();
+  inline void set_has_tschchartseriesopacity();
+  inline void clear_has_tschchartseriesopacity();
+  inline void set_has_tschchartseriesoutsidelabelparagraphstyleindex();
+  inline void clear_has_tschchartseriesoutsidelabelparagraphstyleindex();
+  inline void set_has_tschchartseriesshadow();
+  inline void clear_has_tschchartseriesshadow();
+  inline void set_has_tschchartseriesstroke();
+  inline void clear_has_tschchartseriesstroke();
+  inline void set_has_tschchartseriessymbolfill();
+  inline void clear_has_tschchartseriessymbolfill();
+  inline void set_has_tschchartseriessymbolfilluseseriesfill();
+  inline void clear_has_tschchartseriessymbolfilluseseriesfill();
+  inline void set_has_tschchartseriessymbolfilluseseriesstroke();
+  inline void clear_has_tschchartseriessymbolfilluseseriesstroke();
+  inline void set_has_tschchartseriessymbolsize();
+  inline void clear_has_tschchartseriessymbolsize();
+  inline void set_has_tschchartseriessymbolstroke();
+  inline void clear_has_tschchartseriessymbolstroke();
+  inline void set_has_tschchartseriestrendlineequationopacity();
+  inline void clear_has_tschchartseriestrendlineequationopacity();
+  inline void set_has_tschchartseriestrendlineequationparagraphstyleindex();
+  inline void clear_has_tschchartseriestrendlineequationparagraphstyleindex();
+  inline void set_has_tschchartseriestrendlinersquaredopacity();
+  inline void clear_has_tschchartseriestrendlinersquaredopacity();
+  inline void set_has_tschchartseriestrendlinersquaredparagraphstyleindex();
+  inline void clear_has_tschchartseriestrendlinersquaredparagraphstyleindex();
+  inline void set_has_tschchartseriestrendlineshadow();
+  inline void clear_has_tschchartseriestrendlineshadow();
+  inline void set_has_tschchartseriestrendlinestroke();
+  inline void clear_has_tschchartseriestrendlinestroke();
+  inline void set_has_tschchartseriesvaluelabelposition();
+  inline void clear_has_tschchartseriesvaluelabelposition();
+  inline void set_has_tschchartseriesshowlabelsinfront();
+  inline void clear_has_tschchartseriesshowlabelsinfront();
+
+  ::google::protobuf::UnknownFieldSet _unknown_fields_;
+
+  ::TSCH::ChartsNSArrayOfNSNumberDoubleArchive* tschchartserieserrorbarcustomnegativedata_;
+  ::TSCH::ChartsNSArrayOfNSNumberDoubleArchive* tschchartserieserrorbarcustomnegativedatascatterx_;
+  float tschchartseriesadjustmentscale_;
+  float tschchartserieserrorbarfixedvalue_;
+  ::TSCH::ChartsNSArrayOfNSNumberDoubleArchive* tschchartserieserrorbarcustompositivedata_;
+  ::TSCH::ChartsNSArrayOfNSNumberDoubleArchive* tschchartserieserrorbarcustompositivedatascatterx_;
+  float tschchartserieserrorbarfixedvaluescatterx_;
+  float tschchartserieserrorbarpercentvalue_;
+  float tschchartserieserrorbarpercentvaluescatterx_;
+  ::google::protobuf::int32 tschchartserieserrorbarsetting_;
+  ::google::protobuf::int32 tschchartserieserrorbarsettingscatterx_;
+  float tschchartserieserrorbarstddevvalue_;
+  float tschchartserieserrorbarstddevvaluescatterx_;
+  ::google::protobuf::int32 tschchartserieserrorbartype_;
+  ::google::protobuf::int32 tschchartserieserrorbartypescatterx_;
+  float tschchartserieslabelexplosion_;
+  ::TSK::FormatStructArchive* tschchartseries1_0numberformat_;
+  ::TSK::FormatStructArchive* tschchartseriesnumberformat_;
+  ::TSK::FormatStructArchive* tschchartseries1_0dateformat_;
+  ::google::protobuf::int32 tschchartserieslinetype_;
+  ::google::protobuf::int32 tschchartseriesnumberformattype_;
+  ::TSK::FormatStructArchive* tschchartseriesdurationformat_;
+  ::TSK::FormatStructArchive* tschchartseriesdateformat_;
+  ::TSK::FormatStructArchive* tschchartseriespercentnumberformat_;
+  ::google::protobuf::int32 tschchartseriesseriestype_;
+  bool tschchartseriesshowerrorbar_;
+  bool tschchartseriesshowerrorbarscatterx_;
+  bool tschchartseriesshowline_;
+  bool tschchartseriesshownegativedata_;
+  bool tschchartseriesshowserieslabels_;
+  bool tschchartseriesshowsymbol_;
+  bool tschchartseriesshowtrendline_;
+  bool tschchartseriesshowvaluelabels_;
+  ::google::protobuf::int32 tschchartseriessizedimension_;
+  ::google::protobuf::int32 tschchartseriessymboltype_;
+  float tschchartseriestrendlineequationoffsetx_;
+  ::std::string* tschchartseriestrendlinelabelstring_;
+  float tschchartseriestrendlineequationoffsety_;
+  ::google::protobuf::int32 tschchartseriestrendlineorder_;
+  ::google::protobuf::int32 tschchartseriestrendlineperiod_;
+  float tschchartseriestrendlinersquaredoffsetx_;
+  float tschchartseriestrendlinersquaredoffsety_;
+  ::google::protobuf::int32 tschchartseriestrendlinetype_;
+  float tschchartserieswedgeexplosion_;
+  ::google::protobuf::int32 tschchartseriesyaxisordinal_;
+  bool tschchartseriestrendlineshowequation_;
+  bool tschchartseriestrendlineshowlabel_;
+  bool tschchartseriestrendlineshowr2value_;
+  bool tschchartseriessymbolfilluseseriesfill_;
+  ::google::protobuf::int32 tschchartseriesvaluelabelsaxis_;
+  ::TSD::LineEndArchive* tschchartserieserrorbarlineend_;
+  ::TSD::LineEndArchive* tschchartserieserrorbarlineendscatterx_;
+  ::TSD::ShadowArchive* tschchartserieserrorbarshadow_;
+  ::TSD::StrokeArchive* tschchartserieserrorbarstroke_;
+  ::TSD::StrokeArchive* tschchartserieserrorbarstrokescatterx_;
+  ::TSD::FillArchive* tschchartseriesfill_;
+  ::google::protobuf::int32 tschchartserieslabelparagraphstyleindex_;
+  float tschchartseriesopacity_;
+  ::TSD::ShadowArchive* tschchartseriesshadow_;
+  ::TSD::StrokeArchive* tschchartseriesstroke_;
+  ::google::protobuf::int32 tschchartseriesoutsidelabelparagraphstyleindex_;
+  float tschchartseriessymbolsize_;
+  ::TSD::FillArchive* tschchartseriessymbolfill_;
+  ::TSD::StrokeArchive* tschchartseriessymbolstroke_;
+  float tschchartseriestrendlineequationopacity_;
+  ::google::protobuf::int32 tschchartseriestrendlineequationparagraphstyleindex_;
+  float tschchartseriestrendlinersquaredopacity_;
+  bool tschchartseriessymbolfilluseseriesstroke_;
+  bool tschchartseriesshowlabelsinfront_;
+  ::TSD::ShadowArchive* tschchartseriestrendlineshadow_;
+  ::google::protobuf::int32 tschchartseriestrendlinersquaredparagraphstyleindex_;
+  ::google::protobuf::int32 tschchartseriesvaluelabelposition_;
+  ::TSD::StrokeArchive* tschchartseriestrendlinestroke_;
+
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 _has_bits_[(73 + 31) / 32];
+
+  friend void  protobuf_AddDesc_TSCHArchives_2eGEN_2eproto();
+  friend void protobuf_AssignDesc_TSCHArchives_2eGEN_2eproto();
+  friend void protobuf_ShutdownFile_TSCHArchives_2eGEN_2eproto();
+
+  void InitAsDefaultInstance();
+  static ChartSeriesGenericPropertyMapArchive* default_instance_;
 };
 // ===================================================================
 
@@ -6058,15 +8047,53 @@ inline void ChartAxisNonStyleArchive::set_tschchartaxisdefault3dlabelposition(::
   tschchartaxisdefault3dlabelposition_ = value;
 }
 
-// optional .TSK.FormatStructArchive tschchartaxisdefaultnumberformat = 2;
-inline bool ChartAxisNonStyleArchive::has_tschchartaxisdefaultnumberformat() const {
+// optional .TSK.FormatStructArchive tschchartaxisdefault1_0numberformat = 2;
+inline bool ChartAxisNonStyleArchive::has_tschchartaxisdefault1_0numberformat() const {
   return (_has_bits_[0] & 0x00000002u) != 0;
 }
-inline void ChartAxisNonStyleArchive::set_has_tschchartaxisdefaultnumberformat() {
+inline void ChartAxisNonStyleArchive::set_has_tschchartaxisdefault1_0numberformat() {
   _has_bits_[0] |= 0x00000002u;
 }
-inline void ChartAxisNonStyleArchive::clear_has_tschchartaxisdefaultnumberformat() {
+inline void ChartAxisNonStyleArchive::clear_has_tschchartaxisdefault1_0numberformat() {
   _has_bits_[0] &= ~0x00000002u;
+}
+inline void ChartAxisNonStyleArchive::clear_tschchartaxisdefault1_0numberformat() {
+  if (tschchartaxisdefault1_0numberformat_ != NULL) tschchartaxisdefault1_0numberformat_->::TSK::FormatStructArchive::Clear();
+  clear_has_tschchartaxisdefault1_0numberformat();
+}
+inline const ::TSK::FormatStructArchive& ChartAxisNonStyleArchive::tschchartaxisdefault1_0numberformat() const {
+  return tschchartaxisdefault1_0numberformat_ != NULL ? *tschchartaxisdefault1_0numberformat_ : *default_instance_->tschchartaxisdefault1_0numberformat_;
+}
+inline ::TSK::FormatStructArchive* ChartAxisNonStyleArchive::mutable_tschchartaxisdefault1_0numberformat() {
+  set_has_tschchartaxisdefault1_0numberformat();
+  if (tschchartaxisdefault1_0numberformat_ == NULL) tschchartaxisdefault1_0numberformat_ = new ::TSK::FormatStructArchive;
+  return tschchartaxisdefault1_0numberformat_;
+}
+inline ::TSK::FormatStructArchive* ChartAxisNonStyleArchive::release_tschchartaxisdefault1_0numberformat() {
+  clear_has_tschchartaxisdefault1_0numberformat();
+  ::TSK::FormatStructArchive* temp = tschchartaxisdefault1_0numberformat_;
+  tschchartaxisdefault1_0numberformat_ = NULL;
+  return temp;
+}
+inline void ChartAxisNonStyleArchive::set_allocated_tschchartaxisdefault1_0numberformat(::TSK::FormatStructArchive* tschchartaxisdefault1_0numberformat) {
+  delete tschchartaxisdefault1_0numberformat_;
+  tschchartaxisdefault1_0numberformat_ = tschchartaxisdefault1_0numberformat;
+  if (tschchartaxisdefault1_0numberformat) {
+    set_has_tschchartaxisdefault1_0numberformat();
+  } else {
+    clear_has_tschchartaxisdefault1_0numberformat();
+  }
+}
+
+// optional .TSK.FormatStructArchive tschchartaxisdefaultnumberformat = 42;
+inline bool ChartAxisNonStyleArchive::has_tschchartaxisdefaultnumberformat() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void ChartAxisNonStyleArchive::set_has_tschchartaxisdefaultnumberformat() {
+  _has_bits_[0] |= 0x00000004u;
+}
+inline void ChartAxisNonStyleArchive::clear_has_tschchartaxisdefaultnumberformat() {
+  _has_bits_[0] &= ~0x00000004u;
 }
 inline void ChartAxisNonStyleArchive::clear_tschchartaxisdefaultnumberformat() {
   if (tschchartaxisdefaultnumberformat_ != NULL) tschchartaxisdefaultnumberformat_->::TSK::FormatStructArchive::Clear();
@@ -6096,15 +8123,129 @@ inline void ChartAxisNonStyleArchive::set_allocated_tschchartaxisdefaultnumberfo
   }
 }
 
+// optional .TSK.FormatStructArchive tschchartaxisdefault1_0dateformat = 20;
+inline bool ChartAxisNonStyleArchive::has_tschchartaxisdefault1_0dateformat() const {
+  return (_has_bits_[0] & 0x00000008u) != 0;
+}
+inline void ChartAxisNonStyleArchive::set_has_tschchartaxisdefault1_0dateformat() {
+  _has_bits_[0] |= 0x00000008u;
+}
+inline void ChartAxisNonStyleArchive::clear_has_tschchartaxisdefault1_0dateformat() {
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline void ChartAxisNonStyleArchive::clear_tschchartaxisdefault1_0dateformat() {
+  if (tschchartaxisdefault1_0dateformat_ != NULL) tschchartaxisdefault1_0dateformat_->::TSK::FormatStructArchive::Clear();
+  clear_has_tschchartaxisdefault1_0dateformat();
+}
+inline const ::TSK::FormatStructArchive& ChartAxisNonStyleArchive::tschchartaxisdefault1_0dateformat() const {
+  return tschchartaxisdefault1_0dateformat_ != NULL ? *tschchartaxisdefault1_0dateformat_ : *default_instance_->tschchartaxisdefault1_0dateformat_;
+}
+inline ::TSK::FormatStructArchive* ChartAxisNonStyleArchive::mutable_tschchartaxisdefault1_0dateformat() {
+  set_has_tschchartaxisdefault1_0dateformat();
+  if (tschchartaxisdefault1_0dateformat_ == NULL) tschchartaxisdefault1_0dateformat_ = new ::TSK::FormatStructArchive;
+  return tschchartaxisdefault1_0dateformat_;
+}
+inline ::TSK::FormatStructArchive* ChartAxisNonStyleArchive::release_tschchartaxisdefault1_0dateformat() {
+  clear_has_tschchartaxisdefault1_0dateformat();
+  ::TSK::FormatStructArchive* temp = tschchartaxisdefault1_0dateformat_;
+  tschchartaxisdefault1_0dateformat_ = NULL;
+  return temp;
+}
+inline void ChartAxisNonStyleArchive::set_allocated_tschchartaxisdefault1_0dateformat(::TSK::FormatStructArchive* tschchartaxisdefault1_0dateformat) {
+  delete tschchartaxisdefault1_0dateformat_;
+  tschchartaxisdefault1_0dateformat_ = tschchartaxisdefault1_0dateformat;
+  if (tschchartaxisdefault1_0dateformat) {
+    set_has_tschchartaxisdefault1_0dateformat();
+  } else {
+    clear_has_tschchartaxisdefault1_0dateformat();
+  }
+}
+
+// optional .TSK.FormatStructArchive tschchartaxisdefaultdurationformat = 21;
+inline bool ChartAxisNonStyleArchive::has_tschchartaxisdefaultdurationformat() const {
+  return (_has_bits_[0] & 0x00000010u) != 0;
+}
+inline void ChartAxisNonStyleArchive::set_has_tschchartaxisdefaultdurationformat() {
+  _has_bits_[0] |= 0x00000010u;
+}
+inline void ChartAxisNonStyleArchive::clear_has_tschchartaxisdefaultdurationformat() {
+  _has_bits_[0] &= ~0x00000010u;
+}
+inline void ChartAxisNonStyleArchive::clear_tschchartaxisdefaultdurationformat() {
+  if (tschchartaxisdefaultdurationformat_ != NULL) tschchartaxisdefaultdurationformat_->::TSK::FormatStructArchive::Clear();
+  clear_has_tschchartaxisdefaultdurationformat();
+}
+inline const ::TSK::FormatStructArchive& ChartAxisNonStyleArchive::tschchartaxisdefaultdurationformat() const {
+  return tschchartaxisdefaultdurationformat_ != NULL ? *tschchartaxisdefaultdurationformat_ : *default_instance_->tschchartaxisdefaultdurationformat_;
+}
+inline ::TSK::FormatStructArchive* ChartAxisNonStyleArchive::mutable_tschchartaxisdefaultdurationformat() {
+  set_has_tschchartaxisdefaultdurationformat();
+  if (tschchartaxisdefaultdurationformat_ == NULL) tschchartaxisdefaultdurationformat_ = new ::TSK::FormatStructArchive;
+  return tschchartaxisdefaultdurationformat_;
+}
+inline ::TSK::FormatStructArchive* ChartAxisNonStyleArchive::release_tschchartaxisdefaultdurationformat() {
+  clear_has_tschchartaxisdefaultdurationformat();
+  ::TSK::FormatStructArchive* temp = tschchartaxisdefaultdurationformat_;
+  tschchartaxisdefaultdurationformat_ = NULL;
+  return temp;
+}
+inline void ChartAxisNonStyleArchive::set_allocated_tschchartaxisdefaultdurationformat(::TSK::FormatStructArchive* tschchartaxisdefaultdurationformat) {
+  delete tschchartaxisdefaultdurationformat_;
+  tschchartaxisdefaultdurationformat_ = tschchartaxisdefaultdurationformat;
+  if (tschchartaxisdefaultdurationformat) {
+    set_has_tschchartaxisdefaultdurationformat();
+  } else {
+    clear_has_tschchartaxisdefaultdurationformat();
+  }
+}
+
+// optional .TSK.FormatStructArchive tschchartaxisdefaultdateformat = 22;
+inline bool ChartAxisNonStyleArchive::has_tschchartaxisdefaultdateformat() const {
+  return (_has_bits_[0] & 0x00000020u) != 0;
+}
+inline void ChartAxisNonStyleArchive::set_has_tschchartaxisdefaultdateformat() {
+  _has_bits_[0] |= 0x00000020u;
+}
+inline void ChartAxisNonStyleArchive::clear_has_tschchartaxisdefaultdateformat() {
+  _has_bits_[0] &= ~0x00000020u;
+}
+inline void ChartAxisNonStyleArchive::clear_tschchartaxisdefaultdateformat() {
+  if (tschchartaxisdefaultdateformat_ != NULL) tschchartaxisdefaultdateformat_->::TSK::FormatStructArchive::Clear();
+  clear_has_tschchartaxisdefaultdateformat();
+}
+inline const ::TSK::FormatStructArchive& ChartAxisNonStyleArchive::tschchartaxisdefaultdateformat() const {
+  return tschchartaxisdefaultdateformat_ != NULL ? *tschchartaxisdefaultdateformat_ : *default_instance_->tschchartaxisdefaultdateformat_;
+}
+inline ::TSK::FormatStructArchive* ChartAxisNonStyleArchive::mutable_tschchartaxisdefaultdateformat() {
+  set_has_tschchartaxisdefaultdateformat();
+  if (tschchartaxisdefaultdateformat_ == NULL) tschchartaxisdefaultdateformat_ = new ::TSK::FormatStructArchive;
+  return tschchartaxisdefaultdateformat_;
+}
+inline ::TSK::FormatStructArchive* ChartAxisNonStyleArchive::release_tschchartaxisdefaultdateformat() {
+  clear_has_tschchartaxisdefaultdateformat();
+  ::TSK::FormatStructArchive* temp = tschchartaxisdefaultdateformat_;
+  tschchartaxisdefaultdateformat_ = NULL;
+  return temp;
+}
+inline void ChartAxisNonStyleArchive::set_allocated_tschchartaxisdefaultdateformat(::TSK::FormatStructArchive* tschchartaxisdefaultdateformat) {
+  delete tschchartaxisdefaultdateformat_;
+  tschchartaxisdefaultdateformat_ = tschchartaxisdefaultdateformat;
+  if (tschchartaxisdefaultdateformat) {
+    set_has_tschchartaxisdefaultdateformat();
+  } else {
+    clear_has_tschchartaxisdefaultdateformat();
+  }
+}
+
 // optional int32 tschchartaxisdefaultnumberformattype = 3;
 inline bool ChartAxisNonStyleArchive::has_tschchartaxisdefaultnumberformattype() const {
-  return (_has_bits_[0] & 0x00000004u) != 0;
+  return (_has_bits_[0] & 0x00000040u) != 0;
 }
 inline void ChartAxisNonStyleArchive::set_has_tschchartaxisdefaultnumberformattype() {
-  _has_bits_[0] |= 0x00000004u;
+  _has_bits_[0] |= 0x00000040u;
 }
 inline void ChartAxisNonStyleArchive::clear_has_tschchartaxisdefaultnumberformattype() {
-  _has_bits_[0] &= ~0x00000004u;
+  _has_bits_[0] &= ~0x00000040u;
 }
 inline void ChartAxisNonStyleArchive::clear_tschchartaxisdefaultnumberformattype() {
   tschchartaxisdefaultnumberformattype_ = 0;
@@ -6120,13 +8261,13 @@ inline void ChartAxisNonStyleArchive::set_tschchartaxisdefaultnumberformattype(:
 
 // optional int32 tschchartaxisvaluenumberofdecades = 4;
 inline bool ChartAxisNonStyleArchive::has_tschchartaxisvaluenumberofdecades() const {
-  return (_has_bits_[0] & 0x00000008u) != 0;
+  return (_has_bits_[0] & 0x00000080u) != 0;
 }
 inline void ChartAxisNonStyleArchive::set_has_tschchartaxisvaluenumberofdecades() {
-  _has_bits_[0] |= 0x00000008u;
+  _has_bits_[0] |= 0x00000080u;
 }
 inline void ChartAxisNonStyleArchive::clear_has_tschchartaxisvaluenumberofdecades() {
-  _has_bits_[0] &= ~0x00000008u;
+  _has_bits_[0] &= ~0x00000080u;
 }
 inline void ChartAxisNonStyleArchive::clear_tschchartaxisvaluenumberofdecades() {
   tschchartaxisvaluenumberofdecades_ = 0;
@@ -6142,13 +8283,13 @@ inline void ChartAxisNonStyleArchive::set_tschchartaxisvaluenumberofdecades(::go
 
 // optional int32 tschchartaxisvaluenumberofmajorgridlines = 5;
 inline bool ChartAxisNonStyleArchive::has_tschchartaxisvaluenumberofmajorgridlines() const {
-  return (_has_bits_[0] & 0x00000010u) != 0;
+  return (_has_bits_[0] & 0x00000100u) != 0;
 }
 inline void ChartAxisNonStyleArchive::set_has_tschchartaxisvaluenumberofmajorgridlines() {
-  _has_bits_[0] |= 0x00000010u;
+  _has_bits_[0] |= 0x00000100u;
 }
 inline void ChartAxisNonStyleArchive::clear_has_tschchartaxisvaluenumberofmajorgridlines() {
-  _has_bits_[0] &= ~0x00000010u;
+  _has_bits_[0] &= ~0x00000100u;
 }
 inline void ChartAxisNonStyleArchive::clear_tschchartaxisvaluenumberofmajorgridlines() {
   tschchartaxisvaluenumberofmajorgridlines_ = 0;
@@ -6164,13 +8305,13 @@ inline void ChartAxisNonStyleArchive::set_tschchartaxisvaluenumberofmajorgridlin
 
 // optional int32 tschchartaxisvaluenumberofminorgridlines = 6;
 inline bool ChartAxisNonStyleArchive::has_tschchartaxisvaluenumberofminorgridlines() const {
-  return (_has_bits_[0] & 0x00000020u) != 0;
+  return (_has_bits_[0] & 0x00000200u) != 0;
 }
 inline void ChartAxisNonStyleArchive::set_has_tschchartaxisvaluenumberofminorgridlines() {
-  _has_bits_[0] |= 0x00000020u;
+  _has_bits_[0] |= 0x00000200u;
 }
 inline void ChartAxisNonStyleArchive::clear_has_tschchartaxisvaluenumberofminorgridlines() {
-  _has_bits_[0] &= ~0x00000020u;
+  _has_bits_[0] &= ~0x00000200u;
 }
 inline void ChartAxisNonStyleArchive::clear_tschchartaxisvaluenumberofminorgridlines() {
   tschchartaxisvaluenumberofminorgridlines_ = 0;
@@ -6186,13 +8327,13 @@ inline void ChartAxisNonStyleArchive::set_tschchartaxisvaluenumberofminorgridlin
 
 // optional bool tschchartaxiscategoryplottoedges = 7;
 inline bool ChartAxisNonStyleArchive::has_tschchartaxiscategoryplottoedges() const {
-  return (_has_bits_[0] & 0x00000040u) != 0;
+  return (_has_bits_[0] & 0x00000400u) != 0;
 }
 inline void ChartAxisNonStyleArchive::set_has_tschchartaxiscategoryplottoedges() {
-  _has_bits_[0] |= 0x00000040u;
+  _has_bits_[0] |= 0x00000400u;
 }
 inline void ChartAxisNonStyleArchive::clear_has_tschchartaxiscategoryplottoedges() {
-  _has_bits_[0] &= ~0x00000040u;
+  _has_bits_[0] &= ~0x00000400u;
 }
 inline void ChartAxisNonStyleArchive::clear_tschchartaxiscategoryplottoedges() {
   tschchartaxiscategoryplottoedges_ = false;
@@ -6208,13 +8349,13 @@ inline void ChartAxisNonStyleArchive::set_tschchartaxiscategoryplottoedges(bool 
 
 // optional int32 tschchartaxisvaluescale = 8;
 inline bool ChartAxisNonStyleArchive::has_tschchartaxisvaluescale() const {
-  return (_has_bits_[0] & 0x00000080u) != 0;
+  return (_has_bits_[0] & 0x00000800u) != 0;
 }
 inline void ChartAxisNonStyleArchive::set_has_tschchartaxisvaluescale() {
-  _has_bits_[0] |= 0x00000080u;
+  _has_bits_[0] |= 0x00000800u;
 }
 inline void ChartAxisNonStyleArchive::clear_has_tschchartaxisvaluescale() {
-  _has_bits_[0] &= ~0x00000080u;
+  _has_bits_[0] &= ~0x00000800u;
 }
 inline void ChartAxisNonStyleArchive::clear_tschchartaxisvaluescale() {
   tschchartaxisvaluescale_ = 0;
@@ -6230,13 +8371,13 @@ inline void ChartAxisNonStyleArchive::set_tschchartaxisvaluescale(::google::prot
 
 // optional bool tschchartaxiscategoryshowlabels = 9;
 inline bool ChartAxisNonStyleArchive::has_tschchartaxiscategoryshowlabels() const {
-  return (_has_bits_[0] & 0x00000100u) != 0;
+  return (_has_bits_[0] & 0x00001000u) != 0;
 }
 inline void ChartAxisNonStyleArchive::set_has_tschchartaxiscategoryshowlabels() {
-  _has_bits_[0] |= 0x00000100u;
+  _has_bits_[0] |= 0x00001000u;
 }
 inline void ChartAxisNonStyleArchive::clear_has_tschchartaxiscategoryshowlabels() {
-  _has_bits_[0] &= ~0x00000100u;
+  _has_bits_[0] &= ~0x00001000u;
 }
 inline void ChartAxisNonStyleArchive::clear_tschchartaxiscategoryshowlabels() {
   tschchartaxiscategoryshowlabels_ = false;
@@ -6252,13 +8393,13 @@ inline void ChartAxisNonStyleArchive::set_tschchartaxiscategoryshowlabels(bool v
 
 // optional bool tschchartaxisdefaultshowlabels = 10;
 inline bool ChartAxisNonStyleArchive::has_tschchartaxisdefaultshowlabels() const {
-  return (_has_bits_[0] & 0x00000200u) != 0;
+  return (_has_bits_[0] & 0x00002000u) != 0;
 }
 inline void ChartAxisNonStyleArchive::set_has_tschchartaxisdefaultshowlabels() {
-  _has_bits_[0] |= 0x00000200u;
+  _has_bits_[0] |= 0x00002000u;
 }
 inline void ChartAxisNonStyleArchive::clear_has_tschchartaxisdefaultshowlabels() {
-  _has_bits_[0] &= ~0x00000200u;
+  _has_bits_[0] &= ~0x00002000u;
 }
 inline void ChartAxisNonStyleArchive::clear_tschchartaxisdefaultshowlabels() {
   tschchartaxisdefaultshowlabels_ = false;
@@ -6274,13 +8415,13 @@ inline void ChartAxisNonStyleArchive::set_tschchartaxisdefaultshowlabels(bool va
 
 // optional bool tschchartaxisvalueshowlabels = 11;
 inline bool ChartAxisNonStyleArchive::has_tschchartaxisvalueshowlabels() const {
-  return (_has_bits_[0] & 0x00000400u) != 0;
+  return (_has_bits_[0] & 0x00004000u) != 0;
 }
 inline void ChartAxisNonStyleArchive::set_has_tschchartaxisvalueshowlabels() {
-  _has_bits_[0] |= 0x00000400u;
+  _has_bits_[0] |= 0x00004000u;
 }
 inline void ChartAxisNonStyleArchive::clear_has_tschchartaxisvalueshowlabels() {
-  _has_bits_[0] &= ~0x00000400u;
+  _has_bits_[0] &= ~0x00004000u;
 }
 inline void ChartAxisNonStyleArchive::clear_tschchartaxisvalueshowlabels() {
   tschchartaxisvalueshowlabels_ = false;
@@ -6296,13 +8437,13 @@ inline void ChartAxisNonStyleArchive::set_tschchartaxisvalueshowlabels(bool valu
 
 // optional bool tschchartaxiscategoryshowserieslabels = 12;
 inline bool ChartAxisNonStyleArchive::has_tschchartaxiscategoryshowserieslabels() const {
-  return (_has_bits_[0] & 0x00000800u) != 0;
+  return (_has_bits_[0] & 0x00008000u) != 0;
 }
 inline void ChartAxisNonStyleArchive::set_has_tschchartaxiscategoryshowserieslabels() {
-  _has_bits_[0] |= 0x00000800u;
+  _has_bits_[0] |= 0x00008000u;
 }
 inline void ChartAxisNonStyleArchive::clear_has_tschchartaxiscategoryshowserieslabels() {
-  _has_bits_[0] &= ~0x00000800u;
+  _has_bits_[0] &= ~0x00008000u;
 }
 inline void ChartAxisNonStyleArchive::clear_tschchartaxiscategoryshowserieslabels() {
   tschchartaxiscategoryshowserieslabels_ = false;
@@ -6318,13 +8459,13 @@ inline void ChartAxisNonStyleArchive::set_tschchartaxiscategoryshowserieslabels(
 
 // optional bool tschchartaxismultidatashowserieslabels = 19;
 inline bool ChartAxisNonStyleArchive::has_tschchartaxismultidatashowserieslabels() const {
-  return (_has_bits_[0] & 0x00001000u) != 0;
+  return (_has_bits_[0] & 0x00010000u) != 0;
 }
 inline void ChartAxisNonStyleArchive::set_has_tschchartaxismultidatashowserieslabels() {
-  _has_bits_[0] |= 0x00001000u;
+  _has_bits_[0] |= 0x00010000u;
 }
 inline void ChartAxisNonStyleArchive::clear_has_tschchartaxismultidatashowserieslabels() {
-  _has_bits_[0] &= ~0x00001000u;
+  _has_bits_[0] &= ~0x00010000u;
 }
 inline void ChartAxisNonStyleArchive::clear_tschchartaxismultidatashowserieslabels() {
   tschchartaxismultidatashowserieslabels_ = false;
@@ -6340,13 +8481,13 @@ inline void ChartAxisNonStyleArchive::set_tschchartaxismultidatashowserieslabels
 
 // optional bool tschchartaxiscategoryshowtitle = 13;
 inline bool ChartAxisNonStyleArchive::has_tschchartaxiscategoryshowtitle() const {
-  return (_has_bits_[0] & 0x00002000u) != 0;
+  return (_has_bits_[0] & 0x00020000u) != 0;
 }
 inline void ChartAxisNonStyleArchive::set_has_tschchartaxiscategoryshowtitle() {
-  _has_bits_[0] |= 0x00002000u;
+  _has_bits_[0] |= 0x00020000u;
 }
 inline void ChartAxisNonStyleArchive::clear_has_tschchartaxiscategoryshowtitle() {
-  _has_bits_[0] &= ~0x00002000u;
+  _has_bits_[0] &= ~0x00020000u;
 }
 inline void ChartAxisNonStyleArchive::clear_tschchartaxiscategoryshowtitle() {
   tschchartaxiscategoryshowtitle_ = false;
@@ -6362,13 +8503,13 @@ inline void ChartAxisNonStyleArchive::set_tschchartaxiscategoryshowtitle(bool va
 
 // optional bool tschchartaxisvalueshowtitle = 14;
 inline bool ChartAxisNonStyleArchive::has_tschchartaxisvalueshowtitle() const {
-  return (_has_bits_[0] & 0x00004000u) != 0;
+  return (_has_bits_[0] & 0x00040000u) != 0;
 }
 inline void ChartAxisNonStyleArchive::set_has_tschchartaxisvalueshowtitle() {
-  _has_bits_[0] |= 0x00004000u;
+  _has_bits_[0] |= 0x00040000u;
 }
 inline void ChartAxisNonStyleArchive::clear_has_tschchartaxisvalueshowtitle() {
-  _has_bits_[0] &= ~0x00004000u;
+  _has_bits_[0] &= ~0x00040000u;
 }
 inline void ChartAxisNonStyleArchive::clear_tschchartaxisvalueshowtitle() {
   tschchartaxisvalueshowtitle_ = false;
@@ -6384,13 +8525,13 @@ inline void ChartAxisNonStyleArchive::set_tschchartaxisvalueshowtitle(bool value
 
 // optional string tschchartaxiscategorytitle = 15;
 inline bool ChartAxisNonStyleArchive::has_tschchartaxiscategorytitle() const {
-  return (_has_bits_[0] & 0x00008000u) != 0;
+  return (_has_bits_[0] & 0x00080000u) != 0;
 }
 inline void ChartAxisNonStyleArchive::set_has_tschchartaxiscategorytitle() {
-  _has_bits_[0] |= 0x00008000u;
+  _has_bits_[0] |= 0x00080000u;
 }
 inline void ChartAxisNonStyleArchive::clear_has_tschchartaxiscategorytitle() {
-  _has_bits_[0] &= ~0x00008000u;
+  _has_bits_[0] &= ~0x00080000u;
 }
 inline void ChartAxisNonStyleArchive::clear_tschchartaxiscategorytitle() {
   if (tschchartaxiscategorytitle_ != &::google::protobuf::internal::kEmptyString) {
@@ -6454,13 +8595,13 @@ inline void ChartAxisNonStyleArchive::set_allocated_tschchartaxiscategorytitle(:
 
 // optional string tschchartaxisvaluetitle = 16;
 inline bool ChartAxisNonStyleArchive::has_tschchartaxisvaluetitle() const {
-  return (_has_bits_[0] & 0x00010000u) != 0;
+  return (_has_bits_[0] & 0x00100000u) != 0;
 }
 inline void ChartAxisNonStyleArchive::set_has_tschchartaxisvaluetitle() {
-  _has_bits_[0] |= 0x00010000u;
+  _has_bits_[0] |= 0x00100000u;
 }
 inline void ChartAxisNonStyleArchive::clear_has_tschchartaxisvaluetitle() {
-  _has_bits_[0] &= ~0x00010000u;
+  _has_bits_[0] &= ~0x00100000u;
 }
 inline void ChartAxisNonStyleArchive::clear_tschchartaxisvaluetitle() {
   if (tschchartaxisvaluetitle_ != &::google::protobuf::internal::kEmptyString) {
@@ -6524,13 +8665,13 @@ inline void ChartAxisNonStyleArchive::set_allocated_tschchartaxisvaluetitle(::st
 
 // optional .TSCH.ChartsNSNumberDoubleArchive tschchartaxisdefaultusermax = 17;
 inline bool ChartAxisNonStyleArchive::has_tschchartaxisdefaultusermax() const {
-  return (_has_bits_[0] & 0x00020000u) != 0;
+  return (_has_bits_[0] & 0x00200000u) != 0;
 }
 inline void ChartAxisNonStyleArchive::set_has_tschchartaxisdefaultusermax() {
-  _has_bits_[0] |= 0x00020000u;
+  _has_bits_[0] |= 0x00200000u;
 }
 inline void ChartAxisNonStyleArchive::clear_has_tschchartaxisdefaultusermax() {
-  _has_bits_[0] &= ~0x00020000u;
+  _has_bits_[0] &= ~0x00200000u;
 }
 inline void ChartAxisNonStyleArchive::clear_tschchartaxisdefaultusermax() {
   if (tschchartaxisdefaultusermax_ != NULL) tschchartaxisdefaultusermax_->::TSCH::ChartsNSNumberDoubleArchive::Clear();
@@ -6562,13 +8703,13 @@ inline void ChartAxisNonStyleArchive::set_allocated_tschchartaxisdefaultusermax(
 
 // optional .TSCH.ChartsNSNumberDoubleArchive tschchartaxisdefaultusermin = 18;
 inline bool ChartAxisNonStyleArchive::has_tschchartaxisdefaultusermin() const {
-  return (_has_bits_[0] & 0x00040000u) != 0;
+  return (_has_bits_[0] & 0x00400000u) != 0;
 }
 inline void ChartAxisNonStyleArchive::set_has_tschchartaxisdefaultusermin() {
-  _has_bits_[0] |= 0x00040000u;
+  _has_bits_[0] |= 0x00400000u;
 }
 inline void ChartAxisNonStyleArchive::clear_has_tschchartaxisdefaultusermin() {
-  _has_bits_[0] &= ~0x00040000u;
+  _has_bits_[0] &= ~0x00400000u;
 }
 inline void ChartAxisNonStyleArchive::clear_tschchartaxisdefaultusermin() {
   if (tschchartaxisdefaultusermin_ != NULL) tschchartaxisdefaultusermin_->::TSCH::ChartsNSNumberDoubleArchive::Clear();
@@ -10124,15 +12265,53 @@ inline void ChartSeriesNonStyleArchive::set_tschchartseriesscatterlinetype(::goo
   tschchartseriesscatterlinetype_ = value;
 }
 
-// optional .TSK.FormatStructArchive tschchartseriesdefaultnumberformat = 21;
-inline bool ChartSeriesNonStyleArchive::has_tschchartseriesdefaultnumberformat() const {
+// optional .TSK.FormatStructArchive tschchartseriesdefault1_0numberformat = 21;
+inline bool ChartSeriesNonStyleArchive::has_tschchartseriesdefault1_0numberformat() const {
   return (_has_bits_[0] & 0x00100000u) != 0;
 }
-inline void ChartSeriesNonStyleArchive::set_has_tschchartseriesdefaultnumberformat() {
+inline void ChartSeriesNonStyleArchive::set_has_tschchartseriesdefault1_0numberformat() {
   _has_bits_[0] |= 0x00100000u;
 }
-inline void ChartSeriesNonStyleArchive::clear_has_tschchartseriesdefaultnumberformat() {
+inline void ChartSeriesNonStyleArchive::clear_has_tschchartseriesdefault1_0numberformat() {
   _has_bits_[0] &= ~0x00100000u;
+}
+inline void ChartSeriesNonStyleArchive::clear_tschchartseriesdefault1_0numberformat() {
+  if (tschchartseriesdefault1_0numberformat_ != NULL) tschchartseriesdefault1_0numberformat_->::TSK::FormatStructArchive::Clear();
+  clear_has_tschchartseriesdefault1_0numberformat();
+}
+inline const ::TSK::FormatStructArchive& ChartSeriesNonStyleArchive::tschchartseriesdefault1_0numberformat() const {
+  return tschchartseriesdefault1_0numberformat_ != NULL ? *tschchartseriesdefault1_0numberformat_ : *default_instance_->tschchartseriesdefault1_0numberformat_;
+}
+inline ::TSK::FormatStructArchive* ChartSeriesNonStyleArchive::mutable_tschchartseriesdefault1_0numberformat() {
+  set_has_tschchartseriesdefault1_0numberformat();
+  if (tschchartseriesdefault1_0numberformat_ == NULL) tschchartseriesdefault1_0numberformat_ = new ::TSK::FormatStructArchive;
+  return tschchartseriesdefault1_0numberformat_;
+}
+inline ::TSK::FormatStructArchive* ChartSeriesNonStyleArchive::release_tschchartseriesdefault1_0numberformat() {
+  clear_has_tschchartseriesdefault1_0numberformat();
+  ::TSK::FormatStructArchive* temp = tschchartseriesdefault1_0numberformat_;
+  tschchartseriesdefault1_0numberformat_ = NULL;
+  return temp;
+}
+inline void ChartSeriesNonStyleArchive::set_allocated_tschchartseriesdefault1_0numberformat(::TSK::FormatStructArchive* tschchartseriesdefault1_0numberformat) {
+  delete tschchartseriesdefault1_0numberformat_;
+  tschchartseriesdefault1_0numberformat_ = tschchartseriesdefault1_0numberformat;
+  if (tschchartseriesdefault1_0numberformat) {
+    set_has_tschchartseriesdefault1_0numberformat();
+  } else {
+    clear_has_tschchartseriesdefault1_0numberformat();
+  }
+}
+
+// optional .TSK.FormatStructArchive tschchartseriesdefaultnumberformat = 98;
+inline bool ChartSeriesNonStyleArchive::has_tschchartseriesdefaultnumberformat() const {
+  return (_has_bits_[0] & 0x00200000u) != 0;
+}
+inline void ChartSeriesNonStyleArchive::set_has_tschchartseriesdefaultnumberformat() {
+  _has_bits_[0] |= 0x00200000u;
+}
+inline void ChartSeriesNonStyleArchive::clear_has_tschchartseriesdefaultnumberformat() {
+  _has_bits_[0] &= ~0x00200000u;
 }
 inline void ChartSeriesNonStyleArchive::clear_tschchartseriesdefaultnumberformat() {
   if (tschchartseriesdefaultnumberformat_ != NULL) tschchartseriesdefaultnumberformat_->::TSK::FormatStructArchive::Clear();
@@ -10162,15 +12341,167 @@ inline void ChartSeriesNonStyleArchive::set_allocated_tschchartseriesdefaultnumb
   }
 }
 
-// optional .TSK.FormatStructArchive tschchartseriespienumberformat = 22;
+// optional .TSK.FormatStructArchive tschchartseriesdefault1_0dateformat = 69;
+inline bool ChartSeriesNonStyleArchive::has_tschchartseriesdefault1_0dateformat() const {
+  return (_has_bits_[0] & 0x00400000u) != 0;
+}
+inline void ChartSeriesNonStyleArchive::set_has_tschchartseriesdefault1_0dateformat() {
+  _has_bits_[0] |= 0x00400000u;
+}
+inline void ChartSeriesNonStyleArchive::clear_has_tschchartseriesdefault1_0dateformat() {
+  _has_bits_[0] &= ~0x00400000u;
+}
+inline void ChartSeriesNonStyleArchive::clear_tschchartseriesdefault1_0dateformat() {
+  if (tschchartseriesdefault1_0dateformat_ != NULL) tschchartseriesdefault1_0dateformat_->::TSK::FormatStructArchive::Clear();
+  clear_has_tschchartseriesdefault1_0dateformat();
+}
+inline const ::TSK::FormatStructArchive& ChartSeriesNonStyleArchive::tschchartseriesdefault1_0dateformat() const {
+  return tschchartseriesdefault1_0dateformat_ != NULL ? *tschchartseriesdefault1_0dateformat_ : *default_instance_->tschchartseriesdefault1_0dateformat_;
+}
+inline ::TSK::FormatStructArchive* ChartSeriesNonStyleArchive::mutable_tschchartseriesdefault1_0dateformat() {
+  set_has_tschchartseriesdefault1_0dateformat();
+  if (tschchartseriesdefault1_0dateformat_ == NULL) tschchartseriesdefault1_0dateformat_ = new ::TSK::FormatStructArchive;
+  return tschchartseriesdefault1_0dateformat_;
+}
+inline ::TSK::FormatStructArchive* ChartSeriesNonStyleArchive::release_tschchartseriesdefault1_0dateformat() {
+  clear_has_tschchartseriesdefault1_0dateformat();
+  ::TSK::FormatStructArchive* temp = tschchartseriesdefault1_0dateformat_;
+  tschchartseriesdefault1_0dateformat_ = NULL;
+  return temp;
+}
+inline void ChartSeriesNonStyleArchive::set_allocated_tschchartseriesdefault1_0dateformat(::TSK::FormatStructArchive* tschchartseriesdefault1_0dateformat) {
+  delete tschchartseriesdefault1_0dateformat_;
+  tschchartseriesdefault1_0dateformat_ = tschchartseriesdefault1_0dateformat;
+  if (tschchartseriesdefault1_0dateformat) {
+    set_has_tschchartseriesdefault1_0dateformat();
+  } else {
+    clear_has_tschchartseriesdefault1_0dateformat();
+  }
+}
+
+// optional .TSK.FormatStructArchive tschchartseriesdefaultdurationformat = 70;
+inline bool ChartSeriesNonStyleArchive::has_tschchartseriesdefaultdurationformat() const {
+  return (_has_bits_[0] & 0x00800000u) != 0;
+}
+inline void ChartSeriesNonStyleArchive::set_has_tschchartseriesdefaultdurationformat() {
+  _has_bits_[0] |= 0x00800000u;
+}
+inline void ChartSeriesNonStyleArchive::clear_has_tschchartseriesdefaultdurationformat() {
+  _has_bits_[0] &= ~0x00800000u;
+}
+inline void ChartSeriesNonStyleArchive::clear_tschchartseriesdefaultdurationformat() {
+  if (tschchartseriesdefaultdurationformat_ != NULL) tschchartseriesdefaultdurationformat_->::TSK::FormatStructArchive::Clear();
+  clear_has_tschchartseriesdefaultdurationformat();
+}
+inline const ::TSK::FormatStructArchive& ChartSeriesNonStyleArchive::tschchartseriesdefaultdurationformat() const {
+  return tschchartseriesdefaultdurationformat_ != NULL ? *tschchartseriesdefaultdurationformat_ : *default_instance_->tschchartseriesdefaultdurationformat_;
+}
+inline ::TSK::FormatStructArchive* ChartSeriesNonStyleArchive::mutable_tschchartseriesdefaultdurationformat() {
+  set_has_tschchartseriesdefaultdurationformat();
+  if (tschchartseriesdefaultdurationformat_ == NULL) tschchartseriesdefaultdurationformat_ = new ::TSK::FormatStructArchive;
+  return tschchartseriesdefaultdurationformat_;
+}
+inline ::TSK::FormatStructArchive* ChartSeriesNonStyleArchive::release_tschchartseriesdefaultdurationformat() {
+  clear_has_tschchartseriesdefaultdurationformat();
+  ::TSK::FormatStructArchive* temp = tschchartseriesdefaultdurationformat_;
+  tschchartseriesdefaultdurationformat_ = NULL;
+  return temp;
+}
+inline void ChartSeriesNonStyleArchive::set_allocated_tschchartseriesdefaultdurationformat(::TSK::FormatStructArchive* tschchartseriesdefaultdurationformat) {
+  delete tschchartseriesdefaultdurationformat_;
+  tschchartseriesdefaultdurationformat_ = tschchartseriesdefaultdurationformat;
+  if (tschchartseriesdefaultdurationformat) {
+    set_has_tschchartseriesdefaultdurationformat();
+  } else {
+    clear_has_tschchartseriesdefaultdurationformat();
+  }
+}
+
+// optional .TSK.FormatStructArchive tschchartseriesdefaultdateformat = 71;
+inline bool ChartSeriesNonStyleArchive::has_tschchartseriesdefaultdateformat() const {
+  return (_has_bits_[0] & 0x01000000u) != 0;
+}
+inline void ChartSeriesNonStyleArchive::set_has_tschchartseriesdefaultdateformat() {
+  _has_bits_[0] |= 0x01000000u;
+}
+inline void ChartSeriesNonStyleArchive::clear_has_tschchartseriesdefaultdateformat() {
+  _has_bits_[0] &= ~0x01000000u;
+}
+inline void ChartSeriesNonStyleArchive::clear_tschchartseriesdefaultdateformat() {
+  if (tschchartseriesdefaultdateformat_ != NULL) tschchartseriesdefaultdateformat_->::TSK::FormatStructArchive::Clear();
+  clear_has_tschchartseriesdefaultdateformat();
+}
+inline const ::TSK::FormatStructArchive& ChartSeriesNonStyleArchive::tschchartseriesdefaultdateformat() const {
+  return tschchartseriesdefaultdateformat_ != NULL ? *tschchartseriesdefaultdateformat_ : *default_instance_->tschchartseriesdefaultdateformat_;
+}
+inline ::TSK::FormatStructArchive* ChartSeriesNonStyleArchive::mutable_tschchartseriesdefaultdateformat() {
+  set_has_tschchartseriesdefaultdateformat();
+  if (tschchartseriesdefaultdateformat_ == NULL) tschchartseriesdefaultdateformat_ = new ::TSK::FormatStructArchive;
+  return tschchartseriesdefaultdateformat_;
+}
+inline ::TSK::FormatStructArchive* ChartSeriesNonStyleArchive::release_tschchartseriesdefaultdateformat() {
+  clear_has_tschchartseriesdefaultdateformat();
+  ::TSK::FormatStructArchive* temp = tschchartseriesdefaultdateformat_;
+  tschchartseriesdefaultdateformat_ = NULL;
+  return temp;
+}
+inline void ChartSeriesNonStyleArchive::set_allocated_tschchartseriesdefaultdateformat(::TSK::FormatStructArchive* tschchartseriesdefaultdateformat) {
+  delete tschchartseriesdefaultdateformat_;
+  tschchartseriesdefaultdateformat_ = tschchartseriesdefaultdateformat;
+  if (tschchartseriesdefaultdateformat) {
+    set_has_tschchartseriesdefaultdateformat();
+  } else {
+    clear_has_tschchartseriesdefaultdateformat();
+  }
+}
+
+// optional .TSK.FormatStructArchive tschchartseriespie1_0numberformat = 22;
+inline bool ChartSeriesNonStyleArchive::has_tschchartseriespie1_0numberformat() const {
+  return (_has_bits_[0] & 0x02000000u) != 0;
+}
+inline void ChartSeriesNonStyleArchive::set_has_tschchartseriespie1_0numberformat() {
+  _has_bits_[0] |= 0x02000000u;
+}
+inline void ChartSeriesNonStyleArchive::clear_has_tschchartseriespie1_0numberformat() {
+  _has_bits_[0] &= ~0x02000000u;
+}
+inline void ChartSeriesNonStyleArchive::clear_tschchartseriespie1_0numberformat() {
+  if (tschchartseriespie1_0numberformat_ != NULL) tschchartseriespie1_0numberformat_->::TSK::FormatStructArchive::Clear();
+  clear_has_tschchartseriespie1_0numberformat();
+}
+inline const ::TSK::FormatStructArchive& ChartSeriesNonStyleArchive::tschchartseriespie1_0numberformat() const {
+  return tschchartseriespie1_0numberformat_ != NULL ? *tschchartseriespie1_0numberformat_ : *default_instance_->tschchartseriespie1_0numberformat_;
+}
+inline ::TSK::FormatStructArchive* ChartSeriesNonStyleArchive::mutable_tschchartseriespie1_0numberformat() {
+  set_has_tschchartseriespie1_0numberformat();
+  if (tschchartseriespie1_0numberformat_ == NULL) tschchartseriespie1_0numberformat_ = new ::TSK::FormatStructArchive;
+  return tschchartseriespie1_0numberformat_;
+}
+inline ::TSK::FormatStructArchive* ChartSeriesNonStyleArchive::release_tschchartseriespie1_0numberformat() {
+  clear_has_tschchartseriespie1_0numberformat();
+  ::TSK::FormatStructArchive* temp = tschchartseriespie1_0numberformat_;
+  tschchartseriespie1_0numberformat_ = NULL;
+  return temp;
+}
+inline void ChartSeriesNonStyleArchive::set_allocated_tschchartseriespie1_0numberformat(::TSK::FormatStructArchive* tschchartseriespie1_0numberformat) {
+  delete tschchartseriespie1_0numberformat_;
+  tschchartseriespie1_0numberformat_ = tschchartseriespie1_0numberformat;
+  if (tschchartseriespie1_0numberformat) {
+    set_has_tschchartseriespie1_0numberformat();
+  } else {
+    clear_has_tschchartseriespie1_0numberformat();
+  }
+}
+
+// optional .TSK.FormatStructArchive tschchartseriespienumberformat = 99;
 inline bool ChartSeriesNonStyleArchive::has_tschchartseriespienumberformat() const {
-  return (_has_bits_[0] & 0x00200000u) != 0;
+  return (_has_bits_[0] & 0x04000000u) != 0;
 }
 inline void ChartSeriesNonStyleArchive::set_has_tschchartseriespienumberformat() {
-  _has_bits_[0] |= 0x00200000u;
+  _has_bits_[0] |= 0x04000000u;
 }
 inline void ChartSeriesNonStyleArchive::clear_has_tschchartseriespienumberformat() {
-  _has_bits_[0] &= ~0x00200000u;
+  _has_bits_[0] &= ~0x04000000u;
 }
 inline void ChartSeriesNonStyleArchive::clear_tschchartseriespienumberformat() {
   if (tschchartseriespienumberformat_ != NULL) tschchartseriespienumberformat_->::TSK::FormatStructArchive::Clear();
@@ -10202,13 +12533,13 @@ inline void ChartSeriesNonStyleArchive::set_allocated_tschchartseriespienumberfo
 
 // optional int32 tschchartseriesdefaultnumberformattype = 23;
 inline bool ChartSeriesNonStyleArchive::has_tschchartseriesdefaultnumberformattype() const {
-  return (_has_bits_[0] & 0x00400000u) != 0;
+  return (_has_bits_[0] & 0x08000000u) != 0;
 }
 inline void ChartSeriesNonStyleArchive::set_has_tschchartseriesdefaultnumberformattype() {
-  _has_bits_[0] |= 0x00400000u;
+  _has_bits_[0] |= 0x08000000u;
 }
 inline void ChartSeriesNonStyleArchive::clear_has_tschchartseriesdefaultnumberformattype() {
-  _has_bits_[0] &= ~0x00400000u;
+  _has_bits_[0] &= ~0x08000000u;
 }
 inline void ChartSeriesNonStyleArchive::clear_tschchartseriesdefaultnumberformattype() {
   tschchartseriesdefaultnumberformattype_ = 0;
@@ -10224,13 +12555,13 @@ inline void ChartSeriesNonStyleArchive::set_tschchartseriesdefaultnumberformatty
 
 // optional int32 tschchartseriespienumberformattype = 24;
 inline bool ChartSeriesNonStyleArchive::has_tschchartseriespienumberformattype() const {
-  return (_has_bits_[0] & 0x00800000u) != 0;
+  return (_has_bits_[0] & 0x10000000u) != 0;
 }
 inline void ChartSeriesNonStyleArchive::set_has_tschchartseriespienumberformattype() {
-  _has_bits_[0] |= 0x00800000u;
+  _has_bits_[0] |= 0x10000000u;
 }
 inline void ChartSeriesNonStyleArchive::clear_has_tschchartseriespienumberformattype() {
-  _has_bits_[0] &= ~0x00800000u;
+  _has_bits_[0] &= ~0x10000000u;
 }
 inline void ChartSeriesNonStyleArchive::clear_tschchartseriespienumberformattype() {
   tschchartseriespienumberformattype_ = 0;
@@ -10246,13 +12577,13 @@ inline void ChartSeriesNonStyleArchive::set_tschchartseriespienumberformattype(:
 
 // optional .TSK.FormatStructArchive tschchartseriesstackedpercentnumberformat = 25;
 inline bool ChartSeriesNonStyleArchive::has_tschchartseriesstackedpercentnumberformat() const {
-  return (_has_bits_[0] & 0x01000000u) != 0;
+  return (_has_bits_[0] & 0x20000000u) != 0;
 }
 inline void ChartSeriesNonStyleArchive::set_has_tschchartseriesstackedpercentnumberformat() {
-  _has_bits_[0] |= 0x01000000u;
+  _has_bits_[0] |= 0x20000000u;
 }
 inline void ChartSeriesNonStyleArchive::clear_has_tschchartseriesstackedpercentnumberformat() {
-  _has_bits_[0] &= ~0x01000000u;
+  _has_bits_[0] &= ~0x20000000u;
 }
 inline void ChartSeriesNonStyleArchive::clear_tschchartseriesstackedpercentnumberformat() {
   if (tschchartseriesstackedpercentnumberformat_ != NULL) tschchartseriesstackedpercentnumberformat_->::TSK::FormatStructArchive::Clear();
@@ -10284,13 +12615,13 @@ inline void ChartSeriesNonStyleArchive::set_allocated_tschchartseriesstackedperc
 
 // optional int32 tschchartseriesdefaultseriestype = 26;
 inline bool ChartSeriesNonStyleArchive::has_tschchartseriesdefaultseriestype() const {
-  return (_has_bits_[0] & 0x02000000u) != 0;
+  return (_has_bits_[0] & 0x40000000u) != 0;
 }
 inline void ChartSeriesNonStyleArchive::set_has_tschchartseriesdefaultseriestype() {
-  _has_bits_[0] |= 0x02000000u;
+  _has_bits_[0] |= 0x40000000u;
 }
 inline void ChartSeriesNonStyleArchive::clear_has_tschchartseriesdefaultseriestype() {
-  _has_bits_[0] &= ~0x02000000u;
+  _has_bits_[0] &= ~0x40000000u;
 }
 inline void ChartSeriesNonStyleArchive::clear_tschchartseriesdefaultseriestype() {
   tschchartseriesdefaultseriestype_ = 0;
@@ -10306,13 +12637,13 @@ inline void ChartSeriesNonStyleArchive::set_tschchartseriesdefaultseriestype(::g
 
 // optional bool tschchartseriesdefaultshowerrorbar = 27;
 inline bool ChartSeriesNonStyleArchive::has_tschchartseriesdefaultshowerrorbar() const {
-  return (_has_bits_[0] & 0x04000000u) != 0;
+  return (_has_bits_[0] & 0x80000000u) != 0;
 }
 inline void ChartSeriesNonStyleArchive::set_has_tschchartseriesdefaultshowerrorbar() {
-  _has_bits_[0] |= 0x04000000u;
+  _has_bits_[0] |= 0x80000000u;
 }
 inline void ChartSeriesNonStyleArchive::clear_has_tschchartseriesdefaultshowerrorbar() {
-  _has_bits_[0] &= ~0x04000000u;
+  _has_bits_[0] &= ~0x80000000u;
 }
 inline void ChartSeriesNonStyleArchive::clear_tschchartseriesdefaultshowerrorbar() {
   tschchartseriesdefaultshowerrorbar_ = false;
@@ -10328,13 +12659,13 @@ inline void ChartSeriesNonStyleArchive::set_tschchartseriesdefaultshowerrorbar(b
 
 // optional bool tschchartseriesdefaultshowerrorbarscatterx = 28;
 inline bool ChartSeriesNonStyleArchive::has_tschchartseriesdefaultshowerrorbarscatterx() const {
-  return (_has_bits_[0] & 0x08000000u) != 0;
+  return (_has_bits_[1] & 0x00000001u) != 0;
 }
 inline void ChartSeriesNonStyleArchive::set_has_tschchartseriesdefaultshowerrorbarscatterx() {
-  _has_bits_[0] |= 0x08000000u;
+  _has_bits_[1] |= 0x00000001u;
 }
 inline void ChartSeriesNonStyleArchive::clear_has_tschchartseriesdefaultshowerrorbarscatterx() {
-  _has_bits_[0] &= ~0x08000000u;
+  _has_bits_[1] &= ~0x00000001u;
 }
 inline void ChartSeriesNonStyleArchive::clear_tschchartseriesdefaultshowerrorbarscatterx() {
   tschchartseriesdefaultshowerrorbarscatterx_ = false;
@@ -10350,13 +12681,13 @@ inline void ChartSeriesNonStyleArchive::set_tschchartseriesdefaultshowerrorbarsc
 
 // optional bool tschchartseriesscattershowline = 29;
 inline bool ChartSeriesNonStyleArchive::has_tschchartseriesscattershowline() const {
-  return (_has_bits_[0] & 0x10000000u) != 0;
+  return (_has_bits_[1] & 0x00000002u) != 0;
 }
 inline void ChartSeriesNonStyleArchive::set_has_tschchartseriesscattershowline() {
-  _has_bits_[0] |= 0x10000000u;
+  _has_bits_[1] |= 0x00000002u;
 }
 inline void ChartSeriesNonStyleArchive::clear_has_tschchartseriesscattershowline() {
-  _has_bits_[0] &= ~0x10000000u;
+  _has_bits_[1] &= ~0x00000002u;
 }
 inline void ChartSeriesNonStyleArchive::clear_tschchartseriesscattershowline() {
   tschchartseriesscattershowline_ = false;
@@ -10372,13 +12703,13 @@ inline void ChartSeriesNonStyleArchive::set_tschchartseriesscattershowline(bool 
 
 // optional bool tschchartseriesbubbleshownegativedata = 30;
 inline bool ChartSeriesNonStyleArchive::has_tschchartseriesbubbleshownegativedata() const {
-  return (_has_bits_[0] & 0x20000000u) != 0;
+  return (_has_bits_[1] & 0x00000004u) != 0;
 }
 inline void ChartSeriesNonStyleArchive::set_has_tschchartseriesbubbleshownegativedata() {
-  _has_bits_[0] |= 0x20000000u;
+  _has_bits_[1] |= 0x00000004u;
 }
 inline void ChartSeriesNonStyleArchive::clear_has_tschchartseriesbubbleshownegativedata() {
-  _has_bits_[0] &= ~0x20000000u;
+  _has_bits_[1] &= ~0x00000004u;
 }
 inline void ChartSeriesNonStyleArchive::clear_tschchartseriesbubbleshownegativedata() {
   tschchartseriesbubbleshownegativedata_ = false;
@@ -10394,13 +12725,13 @@ inline void ChartSeriesNonStyleArchive::set_tschchartseriesbubbleshownegativedat
 
 // optional bool tschchartseriespieshowserieslabels = 31;
 inline bool ChartSeriesNonStyleArchive::has_tschchartseriespieshowserieslabels() const {
-  return (_has_bits_[0] & 0x40000000u) != 0;
+  return (_has_bits_[1] & 0x00000008u) != 0;
 }
 inline void ChartSeriesNonStyleArchive::set_has_tschchartseriespieshowserieslabels() {
-  _has_bits_[0] |= 0x40000000u;
+  _has_bits_[1] |= 0x00000008u;
 }
 inline void ChartSeriesNonStyleArchive::clear_has_tschchartseriespieshowserieslabels() {
-  _has_bits_[0] &= ~0x40000000u;
+  _has_bits_[1] &= ~0x00000008u;
 }
 inline void ChartSeriesNonStyleArchive::clear_tschchartseriespieshowserieslabels() {
   tschchartseriespieshowserieslabels_ = false;
@@ -10416,13 +12747,13 @@ inline void ChartSeriesNonStyleArchive::set_tschchartseriespieshowserieslabels(b
 
 // optional bool tschchartseriesareashowsymbol = 32;
 inline bool ChartSeriesNonStyleArchive::has_tschchartseriesareashowsymbol() const {
-  return (_has_bits_[0] & 0x80000000u) != 0;
+  return (_has_bits_[1] & 0x00000010u) != 0;
 }
 inline void ChartSeriesNonStyleArchive::set_has_tschchartseriesareashowsymbol() {
-  _has_bits_[0] |= 0x80000000u;
+  _has_bits_[1] |= 0x00000010u;
 }
 inline void ChartSeriesNonStyleArchive::clear_has_tschchartseriesareashowsymbol() {
-  _has_bits_[0] &= ~0x80000000u;
+  _has_bits_[1] &= ~0x00000010u;
 }
 inline void ChartSeriesNonStyleArchive::clear_tschchartseriesareashowsymbol() {
   tschchartseriesareashowsymbol_ = false;
@@ -10438,13 +12769,13 @@ inline void ChartSeriesNonStyleArchive::set_tschchartseriesareashowsymbol(bool v
 
 // optional bool tschchartserieslineshowsymbol = 33;
 inline bool ChartSeriesNonStyleArchive::has_tschchartserieslineshowsymbol() const {
-  return (_has_bits_[1] & 0x00000001u) != 0;
+  return (_has_bits_[1] & 0x00000020u) != 0;
 }
 inline void ChartSeriesNonStyleArchive::set_has_tschchartserieslineshowsymbol() {
-  _has_bits_[1] |= 0x00000001u;
+  _has_bits_[1] |= 0x00000020u;
 }
 inline void ChartSeriesNonStyleArchive::clear_has_tschchartserieslineshowsymbol() {
-  _has_bits_[1] &= ~0x00000001u;
+  _has_bits_[1] &= ~0x00000020u;
 }
 inline void ChartSeriesNonStyleArchive::clear_tschchartserieslineshowsymbol() {
   tschchartserieslineshowsymbol_ = false;
@@ -10460,13 +12791,13 @@ inline void ChartSeriesNonStyleArchive::set_tschchartserieslineshowsymbol(bool v
 
 // optional bool tschchartseriesmixedareashowsymbol = 34;
 inline bool ChartSeriesNonStyleArchive::has_tschchartseriesmixedareashowsymbol() const {
-  return (_has_bits_[1] & 0x00000002u) != 0;
+  return (_has_bits_[1] & 0x00000040u) != 0;
 }
 inline void ChartSeriesNonStyleArchive::set_has_tschchartseriesmixedareashowsymbol() {
-  _has_bits_[1] |= 0x00000002u;
+  _has_bits_[1] |= 0x00000040u;
 }
 inline void ChartSeriesNonStyleArchive::clear_has_tschchartseriesmixedareashowsymbol() {
-  _has_bits_[1] &= ~0x00000002u;
+  _has_bits_[1] &= ~0x00000040u;
 }
 inline void ChartSeriesNonStyleArchive::clear_tschchartseriesmixedareashowsymbol() {
   tschchartseriesmixedareashowsymbol_ = false;
@@ -10482,13 +12813,13 @@ inline void ChartSeriesNonStyleArchive::set_tschchartseriesmixedareashowsymbol(b
 
 // optional bool tschchartseriesmixedlineshowsymbol = 35;
 inline bool ChartSeriesNonStyleArchive::has_tschchartseriesmixedlineshowsymbol() const {
-  return (_has_bits_[1] & 0x00000004u) != 0;
+  return (_has_bits_[1] & 0x00000080u) != 0;
 }
 inline void ChartSeriesNonStyleArchive::set_has_tschchartseriesmixedlineshowsymbol() {
-  _has_bits_[1] |= 0x00000004u;
+  _has_bits_[1] |= 0x00000080u;
 }
 inline void ChartSeriesNonStyleArchive::clear_has_tschchartseriesmixedlineshowsymbol() {
-  _has_bits_[1] &= ~0x00000004u;
+  _has_bits_[1] &= ~0x00000080u;
 }
 inline void ChartSeriesNonStyleArchive::clear_tschchartseriesmixedlineshowsymbol() {
   tschchartseriesmixedlineshowsymbol_ = false;
@@ -10504,13 +12835,13 @@ inline void ChartSeriesNonStyleArchive::set_tschchartseriesmixedlineshowsymbol(b
 
 // optional bool tschchartseriesscattershowsymbol = 36;
 inline bool ChartSeriesNonStyleArchive::has_tschchartseriesscattershowsymbol() const {
-  return (_has_bits_[1] & 0x00000008u) != 0;
+  return (_has_bits_[1] & 0x00000100u) != 0;
 }
 inline void ChartSeriesNonStyleArchive::set_has_tschchartseriesscattershowsymbol() {
-  _has_bits_[1] |= 0x00000008u;
+  _has_bits_[1] |= 0x00000100u;
 }
 inline void ChartSeriesNonStyleArchive::clear_has_tschchartseriesscattershowsymbol() {
-  _has_bits_[1] &= ~0x00000008u;
+  _has_bits_[1] &= ~0x00000100u;
 }
 inline void ChartSeriesNonStyleArchive::clear_tschchartseriesscattershowsymbol() {
   tschchartseriesscattershowsymbol_ = false;
@@ -10526,13 +12857,13 @@ inline void ChartSeriesNonStyleArchive::set_tschchartseriesscattershowsymbol(boo
 
 // optional bool tschchartseriesdefaultshowtrendline = 37;
 inline bool ChartSeriesNonStyleArchive::has_tschchartseriesdefaultshowtrendline() const {
-  return (_has_bits_[1] & 0x00000010u) != 0;
+  return (_has_bits_[1] & 0x00000200u) != 0;
 }
 inline void ChartSeriesNonStyleArchive::set_has_tschchartseriesdefaultshowtrendline() {
-  _has_bits_[1] |= 0x00000010u;
+  _has_bits_[1] |= 0x00000200u;
 }
 inline void ChartSeriesNonStyleArchive::clear_has_tschchartseriesdefaultshowtrendline() {
-  _has_bits_[1] &= ~0x00000010u;
+  _has_bits_[1] &= ~0x00000200u;
 }
 inline void ChartSeriesNonStyleArchive::clear_tschchartseriesdefaultshowtrendline() {
   tschchartseriesdefaultshowtrendline_ = false;
@@ -10548,13 +12879,13 @@ inline void ChartSeriesNonStyleArchive::set_tschchartseriesdefaultshowtrendline(
 
 // optional bool tschchartseriesareashowvaluelabels = 38;
 inline bool ChartSeriesNonStyleArchive::has_tschchartseriesareashowvaluelabels() const {
-  return (_has_bits_[1] & 0x00000020u) != 0;
+  return (_has_bits_[1] & 0x00000400u) != 0;
 }
 inline void ChartSeriesNonStyleArchive::set_has_tschchartseriesareashowvaluelabels() {
-  _has_bits_[1] |= 0x00000020u;
+  _has_bits_[1] |= 0x00000400u;
 }
 inline void ChartSeriesNonStyleArchive::clear_has_tschchartseriesareashowvaluelabels() {
-  _has_bits_[1] &= ~0x00000020u;
+  _has_bits_[1] &= ~0x00000400u;
 }
 inline void ChartSeriesNonStyleArchive::clear_tschchartseriesareashowvaluelabels() {
   tschchartseriesareashowvaluelabels_ = false;
@@ -10570,13 +12901,13 @@ inline void ChartSeriesNonStyleArchive::set_tschchartseriesareashowvaluelabels(b
 
 // optional bool tschchartseriesbarshowvaluelabels = 39;
 inline bool ChartSeriesNonStyleArchive::has_tschchartseriesbarshowvaluelabels() const {
-  return (_has_bits_[1] & 0x00000040u) != 0;
+  return (_has_bits_[1] & 0x00000800u) != 0;
 }
 inline void ChartSeriesNonStyleArchive::set_has_tschchartseriesbarshowvaluelabels() {
-  _has_bits_[1] |= 0x00000040u;
+  _has_bits_[1] |= 0x00000800u;
 }
 inline void ChartSeriesNonStyleArchive::clear_has_tschchartseriesbarshowvaluelabels() {
-  _has_bits_[1] &= ~0x00000040u;
+  _has_bits_[1] &= ~0x00000800u;
 }
 inline void ChartSeriesNonStyleArchive::clear_tschchartseriesbarshowvaluelabels() {
   tschchartseriesbarshowvaluelabels_ = false;
@@ -10592,13 +12923,13 @@ inline void ChartSeriesNonStyleArchive::set_tschchartseriesbarshowvaluelabels(bo
 
 // optional bool tschchartseriesbubbleshowvaluelabels = 40;
 inline bool ChartSeriesNonStyleArchive::has_tschchartseriesbubbleshowvaluelabels() const {
-  return (_has_bits_[1] & 0x00000080u) != 0;
+  return (_has_bits_[1] & 0x00001000u) != 0;
 }
 inline void ChartSeriesNonStyleArchive::set_has_tschchartseriesbubbleshowvaluelabels() {
-  _has_bits_[1] |= 0x00000080u;
+  _has_bits_[1] |= 0x00001000u;
 }
 inline void ChartSeriesNonStyleArchive::clear_has_tschchartseriesbubbleshowvaluelabels() {
-  _has_bits_[1] &= ~0x00000080u;
+  _has_bits_[1] &= ~0x00001000u;
 }
 inline void ChartSeriesNonStyleArchive::clear_tschchartseriesbubbleshowvaluelabels() {
   tschchartseriesbubbleshowvaluelabels_ = false;
@@ -10614,13 +12945,13 @@ inline void ChartSeriesNonStyleArchive::set_tschchartseriesbubbleshowvaluelabels
 
 // optional bool tschchartseriesdefaultshowvaluelabels = 41;
 inline bool ChartSeriesNonStyleArchive::has_tschchartseriesdefaultshowvaluelabels() const {
-  return (_has_bits_[1] & 0x00000100u) != 0;
+  return (_has_bits_[1] & 0x00002000u) != 0;
 }
 inline void ChartSeriesNonStyleArchive::set_has_tschchartseriesdefaultshowvaluelabels() {
-  _has_bits_[1] |= 0x00000100u;
+  _has_bits_[1] |= 0x00002000u;
 }
 inline void ChartSeriesNonStyleArchive::clear_has_tschchartseriesdefaultshowvaluelabels() {
-  _has_bits_[1] &= ~0x00000100u;
+  _has_bits_[1] &= ~0x00002000u;
 }
 inline void ChartSeriesNonStyleArchive::clear_tschchartseriesdefaultshowvaluelabels() {
   tschchartseriesdefaultshowvaluelabels_ = false;
@@ -10636,13 +12967,13 @@ inline void ChartSeriesNonStyleArchive::set_tschchartseriesdefaultshowvaluelabel
 
 // optional bool tschchartserieslineshowvaluelabels = 42;
 inline bool ChartSeriesNonStyleArchive::has_tschchartserieslineshowvaluelabels() const {
-  return (_has_bits_[1] & 0x00000200u) != 0;
+  return (_has_bits_[1] & 0x00004000u) != 0;
 }
 inline void ChartSeriesNonStyleArchive::set_has_tschchartserieslineshowvaluelabels() {
-  _has_bits_[1] |= 0x00000200u;
+  _has_bits_[1] |= 0x00004000u;
 }
 inline void ChartSeriesNonStyleArchive::clear_has_tschchartserieslineshowvaluelabels() {
-  _has_bits_[1] &= ~0x00000200u;
+  _has_bits_[1] &= ~0x00004000u;
 }
 inline void ChartSeriesNonStyleArchive::clear_tschchartserieslineshowvaluelabels() {
   tschchartserieslineshowvaluelabels_ = false;
@@ -10658,13 +12989,13 @@ inline void ChartSeriesNonStyleArchive::set_tschchartserieslineshowvaluelabels(b
 
 // optional bool tschchartseriesmixedshowvaluelabels = 43;
 inline bool ChartSeriesNonStyleArchive::has_tschchartseriesmixedshowvaluelabels() const {
-  return (_has_bits_[1] & 0x00000400u) != 0;
+  return (_has_bits_[1] & 0x00008000u) != 0;
 }
 inline void ChartSeriesNonStyleArchive::set_has_tschchartseriesmixedshowvaluelabels() {
-  _has_bits_[1] |= 0x00000400u;
+  _has_bits_[1] |= 0x00008000u;
 }
 inline void ChartSeriesNonStyleArchive::clear_has_tschchartseriesmixedshowvaluelabels() {
-  _has_bits_[1] &= ~0x00000400u;
+  _has_bits_[1] &= ~0x00008000u;
 }
 inline void ChartSeriesNonStyleArchive::clear_tschchartseriesmixedshowvaluelabels() {
   tschchartseriesmixedshowvaluelabels_ = false;
@@ -10680,13 +13011,13 @@ inline void ChartSeriesNonStyleArchive::set_tschchartseriesmixedshowvaluelabels(
 
 // optional bool tschchartseriespieshowvaluelabels = 44;
 inline bool ChartSeriesNonStyleArchive::has_tschchartseriespieshowvaluelabels() const {
-  return (_has_bits_[1] & 0x00000800u) != 0;
+  return (_has_bits_[1] & 0x00010000u) != 0;
 }
 inline void ChartSeriesNonStyleArchive::set_has_tschchartseriespieshowvaluelabels() {
-  _has_bits_[1] |= 0x00000800u;
+  _has_bits_[1] |= 0x00010000u;
 }
 inline void ChartSeriesNonStyleArchive::clear_has_tschchartseriespieshowvaluelabels() {
-  _has_bits_[1] &= ~0x00000800u;
+  _has_bits_[1] &= ~0x00010000u;
 }
 inline void ChartSeriesNonStyleArchive::clear_tschchartseriespieshowvaluelabels() {
   tschchartseriespieshowvaluelabels_ = false;
@@ -10702,13 +13033,13 @@ inline void ChartSeriesNonStyleArchive::set_tschchartseriespieshowvaluelabels(bo
 
 // optional bool tschchartseriesscattershowvaluelabels = 45;
 inline bool ChartSeriesNonStyleArchive::has_tschchartseriesscattershowvaluelabels() const {
-  return (_has_bits_[1] & 0x00001000u) != 0;
+  return (_has_bits_[1] & 0x00020000u) != 0;
 }
 inline void ChartSeriesNonStyleArchive::set_has_tschchartseriesscattershowvaluelabels() {
-  _has_bits_[1] |= 0x00001000u;
+  _has_bits_[1] |= 0x00020000u;
 }
 inline void ChartSeriesNonStyleArchive::clear_has_tschchartseriesscattershowvaluelabels() {
-  _has_bits_[1] &= ~0x00001000u;
+  _has_bits_[1] &= ~0x00020000u;
 }
 inline void ChartSeriesNonStyleArchive::clear_tschchartseriesscattershowvaluelabels() {
   tschchartseriesscattershowvaluelabels_ = false;
@@ -10724,13 +13055,13 @@ inline void ChartSeriesNonStyleArchive::set_tschchartseriesscattershowvaluelabel
 
 // optional int32 tschchartseriesbubblesizedimension = 46;
 inline bool ChartSeriesNonStyleArchive::has_tschchartseriesbubblesizedimension() const {
-  return (_has_bits_[1] & 0x00002000u) != 0;
+  return (_has_bits_[1] & 0x00040000u) != 0;
 }
 inline void ChartSeriesNonStyleArchive::set_has_tschchartseriesbubblesizedimension() {
-  _has_bits_[1] |= 0x00002000u;
+  _has_bits_[1] |= 0x00040000u;
 }
 inline void ChartSeriesNonStyleArchive::clear_has_tschchartseriesbubblesizedimension() {
-  _has_bits_[1] &= ~0x00002000u;
+  _has_bits_[1] &= ~0x00040000u;
 }
 inline void ChartSeriesNonStyleArchive::clear_tschchartseriesbubblesizedimension() {
   tschchartseriesbubblesizedimension_ = 0;
@@ -10746,13 +13077,13 @@ inline void ChartSeriesNonStyleArchive::set_tschchartseriesbubblesizedimension(:
 
 // optional int32 tschchartseriesareasymboltype = 47;
 inline bool ChartSeriesNonStyleArchive::has_tschchartseriesareasymboltype() const {
-  return (_has_bits_[1] & 0x00004000u) != 0;
+  return (_has_bits_[1] & 0x00080000u) != 0;
 }
 inline void ChartSeriesNonStyleArchive::set_has_tschchartseriesareasymboltype() {
-  _has_bits_[1] |= 0x00004000u;
+  _has_bits_[1] |= 0x00080000u;
 }
 inline void ChartSeriesNonStyleArchive::clear_has_tschchartseriesareasymboltype() {
-  _has_bits_[1] &= ~0x00004000u;
+  _has_bits_[1] &= ~0x00080000u;
 }
 inline void ChartSeriesNonStyleArchive::clear_tschchartseriesareasymboltype() {
   tschchartseriesareasymboltype_ = 0;
@@ -10768,13 +13099,13 @@ inline void ChartSeriesNonStyleArchive::set_tschchartseriesareasymboltype(::goog
 
 // optional int32 tschchartserieslinesymboltype = 48;
 inline bool ChartSeriesNonStyleArchive::has_tschchartserieslinesymboltype() const {
-  return (_has_bits_[1] & 0x00008000u) != 0;
+  return (_has_bits_[1] & 0x00100000u) != 0;
 }
 inline void ChartSeriesNonStyleArchive::set_has_tschchartserieslinesymboltype() {
-  _has_bits_[1] |= 0x00008000u;
+  _has_bits_[1] |= 0x00100000u;
 }
 inline void ChartSeriesNonStyleArchive::clear_has_tschchartserieslinesymboltype() {
-  _has_bits_[1] &= ~0x00008000u;
+  _has_bits_[1] &= ~0x00100000u;
 }
 inline void ChartSeriesNonStyleArchive::clear_tschchartserieslinesymboltype() {
   tschchartserieslinesymboltype_ = 0;
@@ -10790,13 +13121,13 @@ inline void ChartSeriesNonStyleArchive::set_tschchartserieslinesymboltype(::goog
 
 // optional int32 tschchartseriesmixedareasymboltype = 49;
 inline bool ChartSeriesNonStyleArchive::has_tschchartseriesmixedareasymboltype() const {
-  return (_has_bits_[1] & 0x00010000u) != 0;
+  return (_has_bits_[1] & 0x00200000u) != 0;
 }
 inline void ChartSeriesNonStyleArchive::set_has_tschchartseriesmixedareasymboltype() {
-  _has_bits_[1] |= 0x00010000u;
+  _has_bits_[1] |= 0x00200000u;
 }
 inline void ChartSeriesNonStyleArchive::clear_has_tschchartseriesmixedareasymboltype() {
-  _has_bits_[1] &= ~0x00010000u;
+  _has_bits_[1] &= ~0x00200000u;
 }
 inline void ChartSeriesNonStyleArchive::clear_tschchartseriesmixedareasymboltype() {
   tschchartseriesmixedareasymboltype_ = 0;
@@ -10812,13 +13143,13 @@ inline void ChartSeriesNonStyleArchive::set_tschchartseriesmixedareasymboltype(:
 
 // optional int32 tschchartseriesmixedlinesymboltype = 50;
 inline bool ChartSeriesNonStyleArchive::has_tschchartseriesmixedlinesymboltype() const {
-  return (_has_bits_[1] & 0x00020000u) != 0;
+  return (_has_bits_[1] & 0x00400000u) != 0;
 }
 inline void ChartSeriesNonStyleArchive::set_has_tschchartseriesmixedlinesymboltype() {
-  _has_bits_[1] |= 0x00020000u;
+  _has_bits_[1] |= 0x00400000u;
 }
 inline void ChartSeriesNonStyleArchive::clear_has_tschchartseriesmixedlinesymboltype() {
-  _has_bits_[1] &= ~0x00020000u;
+  _has_bits_[1] &= ~0x00400000u;
 }
 inline void ChartSeriesNonStyleArchive::clear_tschchartseriesmixedlinesymboltype() {
   tschchartseriesmixedlinesymboltype_ = 0;
@@ -10834,13 +13165,13 @@ inline void ChartSeriesNonStyleArchive::set_tschchartseriesmixedlinesymboltype(:
 
 // optional int32 tschchartseriesscattersymboltype = 51;
 inline bool ChartSeriesNonStyleArchive::has_tschchartseriesscattersymboltype() const {
-  return (_has_bits_[1] & 0x00040000u) != 0;
+  return (_has_bits_[1] & 0x00800000u) != 0;
 }
 inline void ChartSeriesNonStyleArchive::set_has_tschchartseriesscattersymboltype() {
-  _has_bits_[1] |= 0x00040000u;
+  _has_bits_[1] |= 0x00800000u;
 }
 inline void ChartSeriesNonStyleArchive::clear_has_tschchartseriesscattersymboltype() {
-  _has_bits_[1] &= ~0x00040000u;
+  _has_bits_[1] &= ~0x00800000u;
 }
 inline void ChartSeriesNonStyleArchive::clear_tschchartseriesscattersymboltype() {
   tschchartseriesscattersymboltype_ = 0;
@@ -10856,13 +13187,13 @@ inline void ChartSeriesNonStyleArchive::set_tschchartseriesscattersymboltype(::g
 
 // optional float tschchartseriesdefaulttrendlineequationoffsetx = 52;
 inline bool ChartSeriesNonStyleArchive::has_tschchartseriesdefaulttrendlineequationoffsetx() const {
-  return (_has_bits_[1] & 0x00080000u) != 0;
+  return (_has_bits_[1] & 0x01000000u) != 0;
 }
 inline void ChartSeriesNonStyleArchive::set_has_tschchartseriesdefaulttrendlineequationoffsetx() {
-  _has_bits_[1] |= 0x00080000u;
+  _has_bits_[1] |= 0x01000000u;
 }
 inline void ChartSeriesNonStyleArchive::clear_has_tschchartseriesdefaulttrendlineequationoffsetx() {
-  _has_bits_[1] &= ~0x00080000u;
+  _has_bits_[1] &= ~0x01000000u;
 }
 inline void ChartSeriesNonStyleArchive::clear_tschchartseriesdefaulttrendlineequationoffsetx() {
   tschchartseriesdefaulttrendlineequationoffsetx_ = 0;
@@ -10878,13 +13209,13 @@ inline void ChartSeriesNonStyleArchive::set_tschchartseriesdefaulttrendlineequat
 
 // optional float tschchartseriesdefaulttrendlineequationoffsety = 53;
 inline bool ChartSeriesNonStyleArchive::has_tschchartseriesdefaulttrendlineequationoffsety() const {
-  return (_has_bits_[1] & 0x00100000u) != 0;
+  return (_has_bits_[1] & 0x02000000u) != 0;
 }
 inline void ChartSeriesNonStyleArchive::set_has_tschchartseriesdefaulttrendlineequationoffsety() {
-  _has_bits_[1] |= 0x00100000u;
+  _has_bits_[1] |= 0x02000000u;
 }
 inline void ChartSeriesNonStyleArchive::clear_has_tschchartseriesdefaulttrendlineequationoffsety() {
-  _has_bits_[1] &= ~0x00100000u;
+  _has_bits_[1] &= ~0x02000000u;
 }
 inline void ChartSeriesNonStyleArchive::clear_tschchartseriesdefaulttrendlineequationoffsety() {
   tschchartseriesdefaulttrendlineequationoffsety_ = 0;
@@ -10900,13 +13231,13 @@ inline void ChartSeriesNonStyleArchive::set_tschchartseriesdefaulttrendlineequat
 
 // optional string tschchartseriesdefaulttrendlinelabelstring = 54;
 inline bool ChartSeriesNonStyleArchive::has_tschchartseriesdefaulttrendlinelabelstring() const {
-  return (_has_bits_[1] & 0x00200000u) != 0;
+  return (_has_bits_[1] & 0x04000000u) != 0;
 }
 inline void ChartSeriesNonStyleArchive::set_has_tschchartseriesdefaulttrendlinelabelstring() {
-  _has_bits_[1] |= 0x00200000u;
+  _has_bits_[1] |= 0x04000000u;
 }
 inline void ChartSeriesNonStyleArchive::clear_has_tschchartseriesdefaulttrendlinelabelstring() {
-  _has_bits_[1] &= ~0x00200000u;
+  _has_bits_[1] &= ~0x04000000u;
 }
 inline void ChartSeriesNonStyleArchive::clear_tschchartseriesdefaulttrendlinelabelstring() {
   if (tschchartseriesdefaulttrendlinelabelstring_ != &::google::protobuf::internal::kEmptyString) {
@@ -10970,13 +13301,13 @@ inline void ChartSeriesNonStyleArchive::set_allocated_tschchartseriesdefaulttren
 
 // optional int32 tschchartseriesdefaulttrendlineorder = 55;
 inline bool ChartSeriesNonStyleArchive::has_tschchartseriesdefaulttrendlineorder() const {
-  return (_has_bits_[1] & 0x00400000u) != 0;
+  return (_has_bits_[1] & 0x08000000u) != 0;
 }
 inline void ChartSeriesNonStyleArchive::set_has_tschchartseriesdefaulttrendlineorder() {
-  _has_bits_[1] |= 0x00400000u;
+  _has_bits_[1] |= 0x08000000u;
 }
 inline void ChartSeriesNonStyleArchive::clear_has_tschchartseriesdefaulttrendlineorder() {
-  _has_bits_[1] &= ~0x00400000u;
+  _has_bits_[1] &= ~0x08000000u;
 }
 inline void ChartSeriesNonStyleArchive::clear_tschchartseriesdefaulttrendlineorder() {
   tschchartseriesdefaulttrendlineorder_ = 0;
@@ -10992,13 +13323,13 @@ inline void ChartSeriesNonStyleArchive::set_tschchartseriesdefaulttrendlineorder
 
 // optional int32 tschchartseriesdefaulttrendlineperiod = 56;
 inline bool ChartSeriesNonStyleArchive::has_tschchartseriesdefaulttrendlineperiod() const {
-  return (_has_bits_[1] & 0x00800000u) != 0;
+  return (_has_bits_[1] & 0x10000000u) != 0;
 }
 inline void ChartSeriesNonStyleArchive::set_has_tschchartseriesdefaulttrendlineperiod() {
-  _has_bits_[1] |= 0x00800000u;
+  _has_bits_[1] |= 0x10000000u;
 }
 inline void ChartSeriesNonStyleArchive::clear_has_tschchartseriesdefaulttrendlineperiod() {
-  _has_bits_[1] &= ~0x00800000u;
+  _has_bits_[1] &= ~0x10000000u;
 }
 inline void ChartSeriesNonStyleArchive::clear_tschchartseriesdefaulttrendlineperiod() {
   tschchartseriesdefaulttrendlineperiod_ = 0;
@@ -11014,13 +13345,13 @@ inline void ChartSeriesNonStyleArchive::set_tschchartseriesdefaulttrendlineperio
 
 // optional float tschchartseriesdefaulttrendlinersquaredoffsetx = 57;
 inline bool ChartSeriesNonStyleArchive::has_tschchartseriesdefaulttrendlinersquaredoffsetx() const {
-  return (_has_bits_[1] & 0x01000000u) != 0;
+  return (_has_bits_[1] & 0x20000000u) != 0;
 }
 inline void ChartSeriesNonStyleArchive::set_has_tschchartseriesdefaulttrendlinersquaredoffsetx() {
-  _has_bits_[1] |= 0x01000000u;
+  _has_bits_[1] |= 0x20000000u;
 }
 inline void ChartSeriesNonStyleArchive::clear_has_tschchartseriesdefaulttrendlinersquaredoffsetx() {
-  _has_bits_[1] &= ~0x01000000u;
+  _has_bits_[1] &= ~0x20000000u;
 }
 inline void ChartSeriesNonStyleArchive::clear_tschchartseriesdefaulttrendlinersquaredoffsetx() {
   tschchartseriesdefaulttrendlinersquaredoffsetx_ = 0;
@@ -11036,13 +13367,13 @@ inline void ChartSeriesNonStyleArchive::set_tschchartseriesdefaulttrendlinersqua
 
 // optional float tschchartseriesdefaulttrendlinersquaredoffsety = 58;
 inline bool ChartSeriesNonStyleArchive::has_tschchartseriesdefaulttrendlinersquaredoffsety() const {
-  return (_has_bits_[1] & 0x02000000u) != 0;
+  return (_has_bits_[1] & 0x40000000u) != 0;
 }
 inline void ChartSeriesNonStyleArchive::set_has_tschchartseriesdefaulttrendlinersquaredoffsety() {
-  _has_bits_[1] |= 0x02000000u;
+  _has_bits_[1] |= 0x40000000u;
 }
 inline void ChartSeriesNonStyleArchive::clear_has_tschchartseriesdefaulttrendlinersquaredoffsety() {
-  _has_bits_[1] &= ~0x02000000u;
+  _has_bits_[1] &= ~0x40000000u;
 }
 inline void ChartSeriesNonStyleArchive::clear_tschchartseriesdefaulttrendlinersquaredoffsety() {
   tschchartseriesdefaulttrendlinersquaredoffsety_ = 0;
@@ -11058,13 +13389,13 @@ inline void ChartSeriesNonStyleArchive::set_tschchartseriesdefaulttrendlinersqua
 
 // optional bool tschchartseriesdefaulttrendlineshowequation = 59;
 inline bool ChartSeriesNonStyleArchive::has_tschchartseriesdefaulttrendlineshowequation() const {
-  return (_has_bits_[1] & 0x04000000u) != 0;
+  return (_has_bits_[1] & 0x80000000u) != 0;
 }
 inline void ChartSeriesNonStyleArchive::set_has_tschchartseriesdefaulttrendlineshowequation() {
-  _has_bits_[1] |= 0x04000000u;
+  _has_bits_[1] |= 0x80000000u;
 }
 inline void ChartSeriesNonStyleArchive::clear_has_tschchartseriesdefaulttrendlineshowequation() {
-  _has_bits_[1] &= ~0x04000000u;
+  _has_bits_[1] &= ~0x80000000u;
 }
 inline void ChartSeriesNonStyleArchive::clear_tschchartseriesdefaulttrendlineshowequation() {
   tschchartseriesdefaulttrendlineshowequation_ = false;
@@ -11080,13 +13411,13 @@ inline void ChartSeriesNonStyleArchive::set_tschchartseriesdefaulttrendlineshowe
 
 // optional bool tschchartseriesdefaulttrendlineshowlabel = 60;
 inline bool ChartSeriesNonStyleArchive::has_tschchartseriesdefaulttrendlineshowlabel() const {
-  return (_has_bits_[1] & 0x08000000u) != 0;
+  return (_has_bits_[2] & 0x00000001u) != 0;
 }
 inline void ChartSeriesNonStyleArchive::set_has_tschchartseriesdefaulttrendlineshowlabel() {
-  _has_bits_[1] |= 0x08000000u;
+  _has_bits_[2] |= 0x00000001u;
 }
 inline void ChartSeriesNonStyleArchive::clear_has_tschchartseriesdefaulttrendlineshowlabel() {
-  _has_bits_[1] &= ~0x08000000u;
+  _has_bits_[2] &= ~0x00000001u;
 }
 inline void ChartSeriesNonStyleArchive::clear_tschchartseriesdefaulttrendlineshowlabel() {
   tschchartseriesdefaulttrendlineshowlabel_ = false;
@@ -11102,13 +13433,13 @@ inline void ChartSeriesNonStyleArchive::set_tschchartseriesdefaulttrendlineshowl
 
 // optional bool tschchartseriesdefaulttrendlineshowr2value = 61;
 inline bool ChartSeriesNonStyleArchive::has_tschchartseriesdefaulttrendlineshowr2value() const {
-  return (_has_bits_[1] & 0x10000000u) != 0;
+  return (_has_bits_[2] & 0x00000002u) != 0;
 }
 inline void ChartSeriesNonStyleArchive::set_has_tschchartseriesdefaulttrendlineshowr2value() {
-  _has_bits_[1] |= 0x10000000u;
+  _has_bits_[2] |= 0x00000002u;
 }
 inline void ChartSeriesNonStyleArchive::clear_has_tschchartseriesdefaulttrendlineshowr2value() {
-  _has_bits_[1] &= ~0x10000000u;
+  _has_bits_[2] &= ~0x00000002u;
 }
 inline void ChartSeriesNonStyleArchive::clear_tschchartseriesdefaulttrendlineshowr2value() {
   tschchartseriesdefaulttrendlineshowr2value_ = false;
@@ -11124,13 +13455,13 @@ inline void ChartSeriesNonStyleArchive::set_tschchartseriesdefaulttrendlineshowr
 
 // optional int32 tschchartseriesdefaulttrendlinetype = 62;
 inline bool ChartSeriesNonStyleArchive::has_tschchartseriesdefaulttrendlinetype() const {
-  return (_has_bits_[1] & 0x20000000u) != 0;
+  return (_has_bits_[2] & 0x00000004u) != 0;
 }
 inline void ChartSeriesNonStyleArchive::set_has_tschchartseriesdefaulttrendlinetype() {
-  _has_bits_[1] |= 0x20000000u;
+  _has_bits_[2] |= 0x00000004u;
 }
 inline void ChartSeriesNonStyleArchive::clear_has_tschchartseriesdefaulttrendlinetype() {
-  _has_bits_[1] &= ~0x20000000u;
+  _has_bits_[2] &= ~0x00000004u;
 }
 inline void ChartSeriesNonStyleArchive::clear_tschchartseriesdefaulttrendlinetype() {
   tschchartseriesdefaulttrendlinetype_ = 0;
@@ -11146,13 +13477,13 @@ inline void ChartSeriesNonStyleArchive::set_tschchartseriesdefaulttrendlinetype(
 
 // optional float tschchartseriespiewedgeexplosion = 63;
 inline bool ChartSeriesNonStyleArchive::has_tschchartseriespiewedgeexplosion() const {
-  return (_has_bits_[1] & 0x40000000u) != 0;
+  return (_has_bits_[2] & 0x00000008u) != 0;
 }
 inline void ChartSeriesNonStyleArchive::set_has_tschchartseriespiewedgeexplosion() {
-  _has_bits_[1] |= 0x40000000u;
+  _has_bits_[2] |= 0x00000008u;
 }
 inline void ChartSeriesNonStyleArchive::clear_has_tschchartseriespiewedgeexplosion() {
-  _has_bits_[1] &= ~0x40000000u;
+  _has_bits_[2] &= ~0x00000008u;
 }
 inline void ChartSeriesNonStyleArchive::clear_tschchartseriespiewedgeexplosion() {
   tschchartseriespiewedgeexplosion_ = 0;
@@ -11168,13 +13499,13 @@ inline void ChartSeriesNonStyleArchive::set_tschchartseriespiewedgeexplosion(flo
 
 // optional int32 tschchartseriesdefaultyaxisordinal = 64;
 inline bool ChartSeriesNonStyleArchive::has_tschchartseriesdefaultyaxisordinal() const {
-  return (_has_bits_[1] & 0x80000000u) != 0;
+  return (_has_bits_[2] & 0x00000010u) != 0;
 }
 inline void ChartSeriesNonStyleArchive::set_has_tschchartseriesdefaultyaxisordinal() {
-  _has_bits_[1] |= 0x80000000u;
+  _has_bits_[2] |= 0x00000010u;
 }
 inline void ChartSeriesNonStyleArchive::clear_has_tschchartseriesdefaultyaxisordinal() {
-  _has_bits_[1] &= ~0x80000000u;
+  _has_bits_[2] &= ~0x00000010u;
 }
 inline void ChartSeriesNonStyleArchive::clear_tschchartseriesdefaultyaxisordinal() {
   tschchartseriesdefaultyaxisordinal_ = 0;
@@ -11190,13 +13521,13 @@ inline void ChartSeriesNonStyleArchive::set_tschchartseriesdefaultyaxisordinal(:
 
 // optional bool tschchartseriesbubbleshowserieslabels = 65;
 inline bool ChartSeriesNonStyleArchive::has_tschchartseriesbubbleshowserieslabels() const {
-  return (_has_bits_[2] & 0x00000001u) != 0;
+  return (_has_bits_[2] & 0x00000020u) != 0;
 }
 inline void ChartSeriesNonStyleArchive::set_has_tschchartseriesbubbleshowserieslabels() {
-  _has_bits_[2] |= 0x00000001u;
+  _has_bits_[2] |= 0x00000020u;
 }
 inline void ChartSeriesNonStyleArchive::clear_has_tschchartseriesbubbleshowserieslabels() {
-  _has_bits_[2] &= ~0x00000001u;
+  _has_bits_[2] &= ~0x00000020u;
 }
 inline void ChartSeriesNonStyleArchive::clear_tschchartseriesbubbleshowserieslabels() {
   tschchartseriesbubbleshowserieslabels_ = false;
@@ -11212,13 +13543,13 @@ inline void ChartSeriesNonStyleArchive::set_tschchartseriesbubbleshowserieslabel
 
 // optional int32 tschchartseriesbubblevaluelabelsaxis = 66;
 inline bool ChartSeriesNonStyleArchive::has_tschchartseriesbubblevaluelabelsaxis() const {
-  return (_has_bits_[2] & 0x00000002u) != 0;
+  return (_has_bits_[2] & 0x00000040u) != 0;
 }
 inline void ChartSeriesNonStyleArchive::set_has_tschchartseriesbubblevaluelabelsaxis() {
-  _has_bits_[2] |= 0x00000002u;
+  _has_bits_[2] |= 0x00000040u;
 }
 inline void ChartSeriesNonStyleArchive::clear_has_tschchartseriesbubblevaluelabelsaxis() {
-  _has_bits_[2] &= ~0x00000002u;
+  _has_bits_[2] &= ~0x00000040u;
 }
 inline void ChartSeriesNonStyleArchive::clear_tschchartseriesbubblevaluelabelsaxis() {
   tschchartseriesbubblevaluelabelsaxis_ = 0;
@@ -11234,13 +13565,13 @@ inline void ChartSeriesNonStyleArchive::set_tschchartseriesbubblevaluelabelsaxis
 
 // optional bool tschchartseriesscattershowserieslabels = 67;
 inline bool ChartSeriesNonStyleArchive::has_tschchartseriesscattershowserieslabels() const {
-  return (_has_bits_[2] & 0x00000004u) != 0;
+  return (_has_bits_[2] & 0x00000080u) != 0;
 }
 inline void ChartSeriesNonStyleArchive::set_has_tschchartseriesscattershowserieslabels() {
-  _has_bits_[2] |= 0x00000004u;
+  _has_bits_[2] |= 0x00000080u;
 }
 inline void ChartSeriesNonStyleArchive::clear_has_tschchartseriesscattershowserieslabels() {
-  _has_bits_[2] &= ~0x00000004u;
+  _has_bits_[2] &= ~0x00000080u;
 }
 inline void ChartSeriesNonStyleArchive::clear_tschchartseriesscattershowserieslabels() {
   tschchartseriesscattershowserieslabels_ = false;
@@ -11256,13 +13587,13 @@ inline void ChartSeriesNonStyleArchive::set_tschchartseriesscattershowserieslabe
 
 // optional int32 tschchartseriesscattervaluelabelsaxis = 68;
 inline bool ChartSeriesNonStyleArchive::has_tschchartseriesscattervaluelabelsaxis() const {
-  return (_has_bits_[2] & 0x00000008u) != 0;
+  return (_has_bits_[2] & 0x00000100u) != 0;
 }
 inline void ChartSeriesNonStyleArchive::set_has_tschchartseriesscattervaluelabelsaxis() {
-  _has_bits_[2] |= 0x00000008u;
+  _has_bits_[2] |= 0x00000100u;
 }
 inline void ChartSeriesNonStyleArchive::clear_has_tschchartseriesscattervaluelabelsaxis() {
-  _has_bits_[2] &= ~0x00000008u;
+  _has_bits_[2] &= ~0x00000100u;
 }
 inline void ChartSeriesNonStyleArchive::clear_tschchartseriesscattervaluelabelsaxis() {
   tschchartseriesscattervaluelabelsaxis_ = 0;
@@ -11274,6 +13605,4174 @@ inline ::google::protobuf::int32 ChartSeriesNonStyleArchive::tschchartseriesscat
 inline void ChartSeriesNonStyleArchive::set_tschchartseriesscattervaluelabelsaxis(::google::protobuf::int32 value) {
   set_has_tschchartseriesscattervaluelabelsaxis();
   tschchartseriesscattervaluelabelsaxis_ = value;
+}
+
+// optional bool tschchartseriesdefaultshowlabelsinfront = 100;
+inline bool ChartSeriesNonStyleArchive::has_tschchartseriesdefaultshowlabelsinfront() const {
+  return (_has_bits_[2] & 0x00000200u) != 0;
+}
+inline void ChartSeriesNonStyleArchive::set_has_tschchartseriesdefaultshowlabelsinfront() {
+  _has_bits_[2] |= 0x00000200u;
+}
+inline void ChartSeriesNonStyleArchive::clear_has_tschchartseriesdefaultshowlabelsinfront() {
+  _has_bits_[2] &= ~0x00000200u;
+}
+inline void ChartSeriesNonStyleArchive::clear_tschchartseriesdefaultshowlabelsinfront() {
+  tschchartseriesdefaultshowlabelsinfront_ = false;
+  clear_has_tschchartseriesdefaultshowlabelsinfront();
+}
+inline bool ChartSeriesNonStyleArchive::tschchartseriesdefaultshowlabelsinfront() const {
+  return tschchartseriesdefaultshowlabelsinfront_;
+}
+inline void ChartSeriesNonStyleArchive::set_tschchartseriesdefaultshowlabelsinfront(bool value) {
+  set_has_tschchartseriesdefaultshowlabelsinfront();
+  tschchartseriesdefaultshowlabelsinfront_ = value;
+}
+
+// optional bool tschchartseriesbubbleshowlabelsinfront = 101;
+inline bool ChartSeriesNonStyleArchive::has_tschchartseriesbubbleshowlabelsinfront() const {
+  return (_has_bits_[2] & 0x00000400u) != 0;
+}
+inline void ChartSeriesNonStyleArchive::set_has_tschchartseriesbubbleshowlabelsinfront() {
+  _has_bits_[2] |= 0x00000400u;
+}
+inline void ChartSeriesNonStyleArchive::clear_has_tschchartseriesbubbleshowlabelsinfront() {
+  _has_bits_[2] &= ~0x00000400u;
+}
+inline void ChartSeriesNonStyleArchive::clear_tschchartseriesbubbleshowlabelsinfront() {
+  tschchartseriesbubbleshowlabelsinfront_ = false;
+  clear_has_tschchartseriesbubbleshowlabelsinfront();
+}
+inline bool ChartSeriesNonStyleArchive::tschchartseriesbubbleshowlabelsinfront() const {
+  return tschchartseriesbubbleshowlabelsinfront_;
+}
+inline void ChartSeriesNonStyleArchive::set_tschchartseriesbubbleshowlabelsinfront(bool value) {
+  set_has_tschchartseriesbubbleshowlabelsinfront();
+  tschchartseriesbubbleshowlabelsinfront_ = value;
+}
+
+// -------------------------------------------------------------------
+
+// ChartGenericPropertyMapArchive
+
+// optional int32 tschchartinfo3dbarshape = 1;
+inline bool ChartGenericPropertyMapArchive::has_tschchartinfo3dbarshape() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void ChartGenericPropertyMapArchive::set_has_tschchartinfo3dbarshape() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void ChartGenericPropertyMapArchive::clear_has_tschchartinfo3dbarshape() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void ChartGenericPropertyMapArchive::clear_tschchartinfo3dbarshape() {
+  tschchartinfo3dbarshape_ = 0;
+  clear_has_tschchartinfo3dbarshape();
+}
+inline ::google::protobuf::int32 ChartGenericPropertyMapArchive::tschchartinfo3dbarshape() const {
+  return tschchartinfo3dbarshape_;
+}
+inline void ChartGenericPropertyMapArchive::set_tschchartinfo3dbarshape(::google::protobuf::int32 value) {
+  set_has_tschchartinfo3dbarshape();
+  tschchartinfo3dbarshape_ = value;
+}
+
+// optional bool tschchartinfo3dbeveledges = 2;
+inline bool ChartGenericPropertyMapArchive::has_tschchartinfo3dbeveledges() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void ChartGenericPropertyMapArchive::set_has_tschchartinfo3dbeveledges() {
+  _has_bits_[0] |= 0x00000002u;
+}
+inline void ChartGenericPropertyMapArchive::clear_has_tschchartinfo3dbeveledges() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline void ChartGenericPropertyMapArchive::clear_tschchartinfo3dbeveledges() {
+  tschchartinfo3dbeveledges_ = false;
+  clear_has_tschchartinfo3dbeveledges();
+}
+inline bool ChartGenericPropertyMapArchive::tschchartinfo3dbeveledges() const {
+  return tschchartinfo3dbeveledges_;
+}
+inline void ChartGenericPropertyMapArchive::set_tschchartinfo3dbeveledges(bool value) {
+  set_has_tschchartinfo3dbeveledges();
+  tschchartinfo3dbeveledges_ = value;
+}
+
+// optional float tschchartinfo3dintersetdepthgap = 3;
+inline bool ChartGenericPropertyMapArchive::has_tschchartinfo3dintersetdepthgap() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void ChartGenericPropertyMapArchive::set_has_tschchartinfo3dintersetdepthgap() {
+  _has_bits_[0] |= 0x00000004u;
+}
+inline void ChartGenericPropertyMapArchive::clear_has_tschchartinfo3dintersetdepthgap() {
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline void ChartGenericPropertyMapArchive::clear_tschchartinfo3dintersetdepthgap() {
+  tschchartinfo3dintersetdepthgap_ = 0;
+  clear_has_tschchartinfo3dintersetdepthgap();
+}
+inline float ChartGenericPropertyMapArchive::tschchartinfo3dintersetdepthgap() const {
+  return tschchartinfo3dintersetdepthgap_;
+}
+inline void ChartGenericPropertyMapArchive::set_tschchartinfo3dintersetdepthgap(float value) {
+  set_has_tschchartinfo3dintersetdepthgap();
+  tschchartinfo3dintersetdepthgap_ = value;
+}
+
+// optional .TSCH.Chart3DVectorArchive tschchartinfo3drotation = 4;
+inline bool ChartGenericPropertyMapArchive::has_tschchartinfo3drotation() const {
+  return (_has_bits_[0] & 0x00000008u) != 0;
+}
+inline void ChartGenericPropertyMapArchive::set_has_tschchartinfo3drotation() {
+  _has_bits_[0] |= 0x00000008u;
+}
+inline void ChartGenericPropertyMapArchive::clear_has_tschchartinfo3drotation() {
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline void ChartGenericPropertyMapArchive::clear_tschchartinfo3drotation() {
+  if (tschchartinfo3drotation_ != NULL) tschchartinfo3drotation_->::TSCH::Chart3DVectorArchive::Clear();
+  clear_has_tschchartinfo3drotation();
+}
+inline const ::TSCH::Chart3DVectorArchive& ChartGenericPropertyMapArchive::tschchartinfo3drotation() const {
+  return tschchartinfo3drotation_ != NULL ? *tschchartinfo3drotation_ : *default_instance_->tschchartinfo3drotation_;
+}
+inline ::TSCH::Chart3DVectorArchive* ChartGenericPropertyMapArchive::mutable_tschchartinfo3drotation() {
+  set_has_tschchartinfo3drotation();
+  if (tschchartinfo3drotation_ == NULL) tschchartinfo3drotation_ = new ::TSCH::Chart3DVectorArchive;
+  return tschchartinfo3drotation_;
+}
+inline ::TSCH::Chart3DVectorArchive* ChartGenericPropertyMapArchive::release_tschchartinfo3drotation() {
+  clear_has_tschchartinfo3drotation();
+  ::TSCH::Chart3DVectorArchive* temp = tschchartinfo3drotation_;
+  tschchartinfo3drotation_ = NULL;
+  return temp;
+}
+inline void ChartGenericPropertyMapArchive::set_allocated_tschchartinfo3drotation(::TSCH::Chart3DVectorArchive* tschchartinfo3drotation) {
+  delete tschchartinfo3drotation_;
+  tschchartinfo3drotation_ = tschchartinfo3drotation;
+  if (tschchartinfo3drotation) {
+    set_has_tschchartinfo3drotation();
+  } else {
+    clear_has_tschchartinfo3drotation();
+  }
+}
+
+// optional .TSCH.Chart3DVectorArchive tschchartinfo3dscale = 5;
+inline bool ChartGenericPropertyMapArchive::has_tschchartinfo3dscale() const {
+  return (_has_bits_[0] & 0x00000010u) != 0;
+}
+inline void ChartGenericPropertyMapArchive::set_has_tschchartinfo3dscale() {
+  _has_bits_[0] |= 0x00000010u;
+}
+inline void ChartGenericPropertyMapArchive::clear_has_tschchartinfo3dscale() {
+  _has_bits_[0] &= ~0x00000010u;
+}
+inline void ChartGenericPropertyMapArchive::clear_tschchartinfo3dscale() {
+  if (tschchartinfo3dscale_ != NULL) tschchartinfo3dscale_->::TSCH::Chart3DVectorArchive::Clear();
+  clear_has_tschchartinfo3dscale();
+}
+inline const ::TSCH::Chart3DVectorArchive& ChartGenericPropertyMapArchive::tschchartinfo3dscale() const {
+  return tschchartinfo3dscale_ != NULL ? *tschchartinfo3dscale_ : *default_instance_->tschchartinfo3dscale_;
+}
+inline ::TSCH::Chart3DVectorArchive* ChartGenericPropertyMapArchive::mutable_tschchartinfo3dscale() {
+  set_has_tschchartinfo3dscale();
+  if (tschchartinfo3dscale_ == NULL) tschchartinfo3dscale_ = new ::TSCH::Chart3DVectorArchive;
+  return tschchartinfo3dscale_;
+}
+inline ::TSCH::Chart3DVectorArchive* ChartGenericPropertyMapArchive::release_tschchartinfo3dscale() {
+  clear_has_tschchartinfo3dscale();
+  ::TSCH::Chart3DVectorArchive* temp = tschchartinfo3dscale_;
+  tschchartinfo3dscale_ = NULL;
+  return temp;
+}
+inline void ChartGenericPropertyMapArchive::set_allocated_tschchartinfo3dscale(::TSCH::Chart3DVectorArchive* tschchartinfo3dscale) {
+  delete tschchartinfo3dscale_;
+  tschchartinfo3dscale_ = tschchartinfo3dscale;
+  if (tschchartinfo3dscale) {
+    set_has_tschchartinfo3dscale();
+  } else {
+    clear_has_tschchartinfo3dscale();
+  }
+}
+
+// optional .TSCH.Chart3DVectorArchive tschchartinfo3dviewport = 6;
+inline bool ChartGenericPropertyMapArchive::has_tschchartinfo3dviewport() const {
+  return (_has_bits_[0] & 0x00000020u) != 0;
+}
+inline void ChartGenericPropertyMapArchive::set_has_tschchartinfo3dviewport() {
+  _has_bits_[0] |= 0x00000020u;
+}
+inline void ChartGenericPropertyMapArchive::clear_has_tschchartinfo3dviewport() {
+  _has_bits_[0] &= ~0x00000020u;
+}
+inline void ChartGenericPropertyMapArchive::clear_tschchartinfo3dviewport() {
+  if (tschchartinfo3dviewport_ != NULL) tschchartinfo3dviewport_->::TSCH::Chart3DVectorArchive::Clear();
+  clear_has_tschchartinfo3dviewport();
+}
+inline const ::TSCH::Chart3DVectorArchive& ChartGenericPropertyMapArchive::tschchartinfo3dviewport() const {
+  return tschchartinfo3dviewport_ != NULL ? *tschchartinfo3dviewport_ : *default_instance_->tschchartinfo3dviewport_;
+}
+inline ::TSCH::Chart3DVectorArchive* ChartGenericPropertyMapArchive::mutable_tschchartinfo3dviewport() {
+  set_has_tschchartinfo3dviewport();
+  if (tschchartinfo3dviewport_ == NULL) tschchartinfo3dviewport_ = new ::TSCH::Chart3DVectorArchive;
+  return tschchartinfo3dviewport_;
+}
+inline ::TSCH::Chart3DVectorArchive* ChartGenericPropertyMapArchive::release_tschchartinfo3dviewport() {
+  clear_has_tschchartinfo3dviewport();
+  ::TSCH::Chart3DVectorArchive* temp = tschchartinfo3dviewport_;
+  tschchartinfo3dviewport_ = NULL;
+  return temp;
+}
+inline void ChartGenericPropertyMapArchive::set_allocated_tschchartinfo3dviewport(::TSCH::Chart3DVectorArchive* tschchartinfo3dviewport) {
+  delete tschchartinfo3dviewport_;
+  tschchartinfo3dviewport_ = tschchartinfo3dviewport;
+  if (tschchartinfo3dviewport) {
+    set_has_tschchartinfo3dviewport();
+  } else {
+    clear_has_tschchartinfo3dviewport();
+  }
+}
+
+// optional float tschchartinfopiestartangle = 7;
+inline bool ChartGenericPropertyMapArchive::has_tschchartinfopiestartangle() const {
+  return (_has_bits_[0] & 0x00000040u) != 0;
+}
+inline void ChartGenericPropertyMapArchive::set_has_tschchartinfopiestartangle() {
+  _has_bits_[0] |= 0x00000040u;
+}
+inline void ChartGenericPropertyMapArchive::clear_has_tschchartinfopiestartangle() {
+  _has_bits_[0] &= ~0x00000040u;
+}
+inline void ChartGenericPropertyMapArchive::clear_tschchartinfopiestartangle() {
+  tschchartinfopiestartangle_ = 0;
+  clear_has_tschchartinfopiestartangle();
+}
+inline float ChartGenericPropertyMapArchive::tschchartinfopiestartangle() const {
+  return tschchartinfopiestartangle_;
+}
+inline void ChartGenericPropertyMapArchive::set_tschchartinfopiestartangle(float value) {
+  set_has_tschchartinfopiestartangle();
+  tschchartinfopiestartangle_ = value;
+}
+
+// optional bool tschchartinfoshowlegend = 8;
+inline bool ChartGenericPropertyMapArchive::has_tschchartinfoshowlegend() const {
+  return (_has_bits_[0] & 0x00000080u) != 0;
+}
+inline void ChartGenericPropertyMapArchive::set_has_tschchartinfoshowlegend() {
+  _has_bits_[0] |= 0x00000080u;
+}
+inline void ChartGenericPropertyMapArchive::clear_has_tschchartinfoshowlegend() {
+  _has_bits_[0] &= ~0x00000080u;
+}
+inline void ChartGenericPropertyMapArchive::clear_tschchartinfoshowlegend() {
+  tschchartinfoshowlegend_ = false;
+  clear_has_tschchartinfoshowlegend();
+}
+inline bool ChartGenericPropertyMapArchive::tschchartinfoshowlegend() const {
+  return tschchartinfoshowlegend_;
+}
+inline void ChartGenericPropertyMapArchive::set_tschchartinfoshowlegend(bool value) {
+  set_has_tschchartinfoshowlegend();
+  tschchartinfoshowlegend_ = value;
+}
+
+// optional bool tschchartinfoshowtitle = 9;
+inline bool ChartGenericPropertyMapArchive::has_tschchartinfoshowtitle() const {
+  return (_has_bits_[0] & 0x00000100u) != 0;
+}
+inline void ChartGenericPropertyMapArchive::set_has_tschchartinfoshowtitle() {
+  _has_bits_[0] |= 0x00000100u;
+}
+inline void ChartGenericPropertyMapArchive::clear_has_tschchartinfoshowtitle() {
+  _has_bits_[0] &= ~0x00000100u;
+}
+inline void ChartGenericPropertyMapArchive::clear_tschchartinfoshowtitle() {
+  tschchartinfoshowtitle_ = false;
+  clear_has_tschchartinfoshowtitle();
+}
+inline bool ChartGenericPropertyMapArchive::tschchartinfoshowtitle() const {
+  return tschchartinfoshowtitle_;
+}
+inline void ChartGenericPropertyMapArchive::set_tschchartinfoshowtitle(bool value) {
+  set_has_tschchartinfoshowtitle();
+  tschchartinfoshowtitle_ = value;
+}
+
+// optional bool tschchartinfoskiphiddendata = 10;
+inline bool ChartGenericPropertyMapArchive::has_tschchartinfoskiphiddendata() const {
+  return (_has_bits_[0] & 0x00000200u) != 0;
+}
+inline void ChartGenericPropertyMapArchive::set_has_tschchartinfoskiphiddendata() {
+  _has_bits_[0] |= 0x00000200u;
+}
+inline void ChartGenericPropertyMapArchive::clear_has_tschchartinfoskiphiddendata() {
+  _has_bits_[0] &= ~0x00000200u;
+}
+inline void ChartGenericPropertyMapArchive::clear_tschchartinfoskiphiddendata() {
+  tschchartinfoskiphiddendata_ = false;
+  clear_has_tschchartinfoskiphiddendata();
+}
+inline bool ChartGenericPropertyMapArchive::tschchartinfoskiphiddendata() const {
+  return tschchartinfoskiphiddendata_;
+}
+inline void ChartGenericPropertyMapArchive::set_tschchartinfoskiphiddendata(bool value) {
+  set_has_tschchartinfoskiphiddendata();
+  tschchartinfoskiphiddendata_ = value;
+}
+
+// optional string tschchartinfotitle = 11;
+inline bool ChartGenericPropertyMapArchive::has_tschchartinfotitle() const {
+  return (_has_bits_[0] & 0x00000400u) != 0;
+}
+inline void ChartGenericPropertyMapArchive::set_has_tschchartinfotitle() {
+  _has_bits_[0] |= 0x00000400u;
+}
+inline void ChartGenericPropertyMapArchive::clear_has_tschchartinfotitle() {
+  _has_bits_[0] &= ~0x00000400u;
+}
+inline void ChartGenericPropertyMapArchive::clear_tschchartinfotitle() {
+  if (tschchartinfotitle_ != &::google::protobuf::internal::kEmptyString) {
+    tschchartinfotitle_->clear();
+  }
+  clear_has_tschchartinfotitle();
+}
+inline const ::std::string& ChartGenericPropertyMapArchive::tschchartinfotitle() const {
+  return *tschchartinfotitle_;
+}
+inline void ChartGenericPropertyMapArchive::set_tschchartinfotitle(const ::std::string& value) {
+  set_has_tschchartinfotitle();
+  if (tschchartinfotitle_ == &::google::protobuf::internal::kEmptyString) {
+    tschchartinfotitle_ = new ::std::string;
+  }
+  tschchartinfotitle_->assign(value);
+}
+inline void ChartGenericPropertyMapArchive::set_tschchartinfotitle(const char* value) {
+  set_has_tschchartinfotitle();
+  if (tschchartinfotitle_ == &::google::protobuf::internal::kEmptyString) {
+    tschchartinfotitle_ = new ::std::string;
+  }
+  tschchartinfotitle_->assign(value);
+}
+inline void ChartGenericPropertyMapArchive::set_tschchartinfotitle(const char* value, size_t size) {
+  set_has_tschchartinfotitle();
+  if (tschchartinfotitle_ == &::google::protobuf::internal::kEmptyString) {
+    tschchartinfotitle_ = new ::std::string;
+  }
+  tschchartinfotitle_->assign(reinterpret_cast<const char*>(value), size);
+}
+inline ::std::string* ChartGenericPropertyMapArchive::mutable_tschchartinfotitle() {
+  set_has_tschchartinfotitle();
+  if (tschchartinfotitle_ == &::google::protobuf::internal::kEmptyString) {
+    tschchartinfotitle_ = new ::std::string;
+  }
+  return tschchartinfotitle_;
+}
+inline ::std::string* ChartGenericPropertyMapArchive::release_tschchartinfotitle() {
+  clear_has_tschchartinfotitle();
+  if (tschchartinfotitle_ == &::google::protobuf::internal::kEmptyString) {
+    return NULL;
+  } else {
+    ::std::string* temp = tschchartinfotitle_;
+    tschchartinfotitle_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+    return temp;
+  }
+}
+inline void ChartGenericPropertyMapArchive::set_allocated_tschchartinfotitle(::std::string* tschchartinfotitle) {
+  if (tschchartinfotitle_ != &::google::protobuf::internal::kEmptyString) {
+    delete tschchartinfotitle_;
+  }
+  if (tschchartinfotitle) {
+    set_has_tschchartinfotitle();
+    tschchartinfotitle_ = tschchartinfotitle;
+  } else {
+    clear_has_tschchartinfotitle();
+    tschchartinfotitle_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+  }
+}
+
+// optional int32 tschchartinfodatasetnamelocation = 12;
+inline bool ChartGenericPropertyMapArchive::has_tschchartinfodatasetnamelocation() const {
+  return (_has_bits_[0] & 0x00000800u) != 0;
+}
+inline void ChartGenericPropertyMapArchive::set_has_tschchartinfodatasetnamelocation() {
+  _has_bits_[0] |= 0x00000800u;
+}
+inline void ChartGenericPropertyMapArchive::clear_has_tschchartinfodatasetnamelocation() {
+  _has_bits_[0] &= ~0x00000800u;
+}
+inline void ChartGenericPropertyMapArchive::clear_tschchartinfodatasetnamelocation() {
+  tschchartinfodatasetnamelocation_ = 0;
+  clear_has_tschchartinfodatasetnamelocation();
+}
+inline ::google::protobuf::int32 ChartGenericPropertyMapArchive::tschchartinfodatasetnamelocation() const {
+  return tschchartinfodatasetnamelocation_;
+}
+inline void ChartGenericPropertyMapArchive::set_tschchartinfodatasetnamelocation(::google::protobuf::int32 value) {
+  set_has_tschchartinfodatasetnamelocation();
+  tschchartinfodatasetnamelocation_ = value;
+}
+
+// optional int32 tschchartinfomultidatacontroltype = 13;
+inline bool ChartGenericPropertyMapArchive::has_tschchartinfomultidatacontroltype() const {
+  return (_has_bits_[0] & 0x00001000u) != 0;
+}
+inline void ChartGenericPropertyMapArchive::set_has_tschchartinfomultidatacontroltype() {
+  _has_bits_[0] |= 0x00001000u;
+}
+inline void ChartGenericPropertyMapArchive::clear_has_tschchartinfomultidatacontroltype() {
+  _has_bits_[0] &= ~0x00001000u;
+}
+inline void ChartGenericPropertyMapArchive::clear_tschchartinfomultidatacontroltype() {
+  tschchartinfomultidatacontroltype_ = 0;
+  clear_has_tschchartinfomultidatacontroltype();
+}
+inline ::google::protobuf::int32 ChartGenericPropertyMapArchive::tschchartinfomultidatacontroltype() const {
+  return tschchartinfomultidatacontroltype_;
+}
+inline void ChartGenericPropertyMapArchive::set_tschchartinfomultidatacontroltype(::google::protobuf::int32 value) {
+  set_has_tschchartinfomultidatacontroltype();
+  tschchartinfomultidatacontroltype_ = value;
+}
+
+// optional float tschchartinfo3dchartopacity = 14;
+inline bool ChartGenericPropertyMapArchive::has_tschchartinfo3dchartopacity() const {
+  return (_has_bits_[0] & 0x00002000u) != 0;
+}
+inline void ChartGenericPropertyMapArchive::set_has_tschchartinfo3dchartopacity() {
+  _has_bits_[0] |= 0x00002000u;
+}
+inline void ChartGenericPropertyMapArchive::clear_has_tschchartinfo3dchartopacity() {
+  _has_bits_[0] &= ~0x00002000u;
+}
+inline void ChartGenericPropertyMapArchive::clear_tschchartinfo3dchartopacity() {
+  tschchartinfo3dchartopacity_ = 0;
+  clear_has_tschchartinfo3dchartopacity();
+}
+inline float ChartGenericPropertyMapArchive::tschchartinfo3dchartopacity() const {
+  return tschchartinfo3dchartopacity_;
+}
+inline void ChartGenericPropertyMapArchive::set_tschchartinfo3dchartopacity(float value) {
+  set_has_tschchartinfo3dchartopacity();
+  tschchartinfo3dchartopacity_ = value;
+}
+
+// optional .TSCH.Chart3DLightingPackageArchive tschchartinfo3dlightingpackage = 15;
+inline bool ChartGenericPropertyMapArchive::has_tschchartinfo3dlightingpackage() const {
+  return (_has_bits_[0] & 0x00004000u) != 0;
+}
+inline void ChartGenericPropertyMapArchive::set_has_tschchartinfo3dlightingpackage() {
+  _has_bits_[0] |= 0x00004000u;
+}
+inline void ChartGenericPropertyMapArchive::clear_has_tschchartinfo3dlightingpackage() {
+  _has_bits_[0] &= ~0x00004000u;
+}
+inline void ChartGenericPropertyMapArchive::clear_tschchartinfo3dlightingpackage() {
+  if (tschchartinfo3dlightingpackage_ != NULL) tschchartinfo3dlightingpackage_->::TSCH::Chart3DLightingPackageArchive::Clear();
+  clear_has_tschchartinfo3dlightingpackage();
+}
+inline const ::TSCH::Chart3DLightingPackageArchive& ChartGenericPropertyMapArchive::tschchartinfo3dlightingpackage() const {
+  return tschchartinfo3dlightingpackage_ != NULL ? *tschchartinfo3dlightingpackage_ : *default_instance_->tschchartinfo3dlightingpackage_;
+}
+inline ::TSCH::Chart3DLightingPackageArchive* ChartGenericPropertyMapArchive::mutable_tschchartinfo3dlightingpackage() {
+  set_has_tschchartinfo3dlightingpackage();
+  if (tschchartinfo3dlightingpackage_ == NULL) tschchartinfo3dlightingpackage_ = new ::TSCH::Chart3DLightingPackageArchive;
+  return tschchartinfo3dlightingpackage_;
+}
+inline ::TSCH::Chart3DLightingPackageArchive* ChartGenericPropertyMapArchive::release_tschchartinfo3dlightingpackage() {
+  clear_has_tschchartinfo3dlightingpackage();
+  ::TSCH::Chart3DLightingPackageArchive* temp = tschchartinfo3dlightingpackage_;
+  tschchartinfo3dlightingpackage_ = NULL;
+  return temp;
+}
+inline void ChartGenericPropertyMapArchive::set_allocated_tschchartinfo3dlightingpackage(::TSCH::Chart3DLightingPackageArchive* tschchartinfo3dlightingpackage) {
+  delete tschchartinfo3dlightingpackage_;
+  tschchartinfo3dlightingpackage_ = tschchartinfo3dlightingpackage;
+  if (tschchartinfo3dlightingpackage) {
+    set_has_tschchartinfo3dlightingpackage();
+  } else {
+    clear_has_tschchartinfo3dlightingpackage();
+  }
+}
+
+// optional .TSD.FillArchive tschchartinfobackgroundfill = 16;
+inline bool ChartGenericPropertyMapArchive::has_tschchartinfobackgroundfill() const {
+  return (_has_bits_[0] & 0x00008000u) != 0;
+}
+inline void ChartGenericPropertyMapArchive::set_has_tschchartinfobackgroundfill() {
+  _has_bits_[0] |= 0x00008000u;
+}
+inline void ChartGenericPropertyMapArchive::clear_has_tschchartinfobackgroundfill() {
+  _has_bits_[0] &= ~0x00008000u;
+}
+inline void ChartGenericPropertyMapArchive::clear_tschchartinfobackgroundfill() {
+  if (tschchartinfobackgroundfill_ != NULL) tschchartinfobackgroundfill_->::TSD::FillArchive::Clear();
+  clear_has_tschchartinfobackgroundfill();
+}
+inline const ::TSD::FillArchive& ChartGenericPropertyMapArchive::tschchartinfobackgroundfill() const {
+  return tschchartinfobackgroundfill_ != NULL ? *tschchartinfobackgroundfill_ : *default_instance_->tschchartinfobackgroundfill_;
+}
+inline ::TSD::FillArchive* ChartGenericPropertyMapArchive::mutable_tschchartinfobackgroundfill() {
+  set_has_tschchartinfobackgroundfill();
+  if (tschchartinfobackgroundfill_ == NULL) tschchartinfobackgroundfill_ = new ::TSD::FillArchive;
+  return tschchartinfobackgroundfill_;
+}
+inline ::TSD::FillArchive* ChartGenericPropertyMapArchive::release_tschchartinfobackgroundfill() {
+  clear_has_tschchartinfobackgroundfill();
+  ::TSD::FillArchive* temp = tschchartinfobackgroundfill_;
+  tschchartinfobackgroundfill_ = NULL;
+  return temp;
+}
+inline void ChartGenericPropertyMapArchive::set_allocated_tschchartinfobackgroundfill(::TSD::FillArchive* tschchartinfobackgroundfill) {
+  delete tschchartinfobackgroundfill_;
+  tschchartinfobackgroundfill_ = tschchartinfobackgroundfill;
+  if (tschchartinfobackgroundfill) {
+    set_has_tschchartinfobackgroundfill();
+  } else {
+    clear_has_tschchartinfobackgroundfill();
+  }
+}
+
+// optional .TSD.StrokeArchive tschchartinfobackgroundstroke = 17;
+inline bool ChartGenericPropertyMapArchive::has_tschchartinfobackgroundstroke() const {
+  return (_has_bits_[0] & 0x00010000u) != 0;
+}
+inline void ChartGenericPropertyMapArchive::set_has_tschchartinfobackgroundstroke() {
+  _has_bits_[0] |= 0x00010000u;
+}
+inline void ChartGenericPropertyMapArchive::clear_has_tschchartinfobackgroundstroke() {
+  _has_bits_[0] &= ~0x00010000u;
+}
+inline void ChartGenericPropertyMapArchive::clear_tschchartinfobackgroundstroke() {
+  if (tschchartinfobackgroundstroke_ != NULL) tschchartinfobackgroundstroke_->::TSD::StrokeArchive::Clear();
+  clear_has_tschchartinfobackgroundstroke();
+}
+inline const ::TSD::StrokeArchive& ChartGenericPropertyMapArchive::tschchartinfobackgroundstroke() const {
+  return tschchartinfobackgroundstroke_ != NULL ? *tschchartinfobackgroundstroke_ : *default_instance_->tschchartinfobackgroundstroke_;
+}
+inline ::TSD::StrokeArchive* ChartGenericPropertyMapArchive::mutable_tschchartinfobackgroundstroke() {
+  set_has_tschchartinfobackgroundstroke();
+  if (tschchartinfobackgroundstroke_ == NULL) tschchartinfobackgroundstroke_ = new ::TSD::StrokeArchive;
+  return tschchartinfobackgroundstroke_;
+}
+inline ::TSD::StrokeArchive* ChartGenericPropertyMapArchive::release_tschchartinfobackgroundstroke() {
+  clear_has_tschchartinfobackgroundstroke();
+  ::TSD::StrokeArchive* temp = tschchartinfobackgroundstroke_;
+  tschchartinfobackgroundstroke_ = NULL;
+  return temp;
+}
+inline void ChartGenericPropertyMapArchive::set_allocated_tschchartinfobackgroundstroke(::TSD::StrokeArchive* tschchartinfobackgroundstroke) {
+  delete tschchartinfobackgroundstroke_;
+  tschchartinfobackgroundstroke_ = tschchartinfobackgroundstroke;
+  if (tschchartinfobackgroundstroke) {
+    set_has_tschchartinfobackgroundstroke();
+  } else {
+    clear_has_tschchartinfobackgroundstroke();
+  }
+}
+
+// optional float tschchartinfoborderopacity = 18;
+inline bool ChartGenericPropertyMapArchive::has_tschchartinfoborderopacity() const {
+  return (_has_bits_[0] & 0x00020000u) != 0;
+}
+inline void ChartGenericPropertyMapArchive::set_has_tschchartinfoborderopacity() {
+  _has_bits_[0] |= 0x00020000u;
+}
+inline void ChartGenericPropertyMapArchive::clear_has_tschchartinfoborderopacity() {
+  _has_bits_[0] &= ~0x00020000u;
+}
+inline void ChartGenericPropertyMapArchive::clear_tschchartinfoborderopacity() {
+  tschchartinfoborderopacity_ = 0;
+  clear_has_tschchartinfoborderopacity();
+}
+inline float ChartGenericPropertyMapArchive::tschchartinfoborderopacity() const {
+  return tschchartinfoborderopacity_;
+}
+inline void ChartGenericPropertyMapArchive::set_tschchartinfoborderopacity(float value) {
+  set_has_tschchartinfoborderopacity();
+  tschchartinfoborderopacity_ = value;
+}
+
+// optional .TSD.ShadowArchive tschchartinfobordershadow = 19;
+inline bool ChartGenericPropertyMapArchive::has_tschchartinfobordershadow() const {
+  return (_has_bits_[0] & 0x00040000u) != 0;
+}
+inline void ChartGenericPropertyMapArchive::set_has_tschchartinfobordershadow() {
+  _has_bits_[0] |= 0x00040000u;
+}
+inline void ChartGenericPropertyMapArchive::clear_has_tschchartinfobordershadow() {
+  _has_bits_[0] &= ~0x00040000u;
+}
+inline void ChartGenericPropertyMapArchive::clear_tschchartinfobordershadow() {
+  if (tschchartinfobordershadow_ != NULL) tschchartinfobordershadow_->::TSD::ShadowArchive::Clear();
+  clear_has_tschchartinfobordershadow();
+}
+inline const ::TSD::ShadowArchive& ChartGenericPropertyMapArchive::tschchartinfobordershadow() const {
+  return tschchartinfobordershadow_ != NULL ? *tschchartinfobordershadow_ : *default_instance_->tschchartinfobordershadow_;
+}
+inline ::TSD::ShadowArchive* ChartGenericPropertyMapArchive::mutable_tschchartinfobordershadow() {
+  set_has_tschchartinfobordershadow();
+  if (tschchartinfobordershadow_ == NULL) tschchartinfobordershadow_ = new ::TSD::ShadowArchive;
+  return tschchartinfobordershadow_;
+}
+inline ::TSD::ShadowArchive* ChartGenericPropertyMapArchive::release_tschchartinfobordershadow() {
+  clear_has_tschchartinfobordershadow();
+  ::TSD::ShadowArchive* temp = tschchartinfobordershadow_;
+  tschchartinfobordershadow_ = NULL;
+  return temp;
+}
+inline void ChartGenericPropertyMapArchive::set_allocated_tschchartinfobordershadow(::TSD::ShadowArchive* tschchartinfobordershadow) {
+  delete tschchartinfobordershadow_;
+  tschchartinfobordershadow_ = tschchartinfobordershadow;
+  if (tschchartinfobordershadow) {
+    set_has_tschchartinfobordershadow();
+  } else {
+    clear_has_tschchartinfobordershadow();
+  }
+}
+
+// optional .TSD.StrokeArchive tschchartinfoborderstroke = 20;
+inline bool ChartGenericPropertyMapArchive::has_tschchartinfoborderstroke() const {
+  return (_has_bits_[0] & 0x00080000u) != 0;
+}
+inline void ChartGenericPropertyMapArchive::set_has_tschchartinfoborderstroke() {
+  _has_bits_[0] |= 0x00080000u;
+}
+inline void ChartGenericPropertyMapArchive::clear_has_tschchartinfoborderstroke() {
+  _has_bits_[0] &= ~0x00080000u;
+}
+inline void ChartGenericPropertyMapArchive::clear_tschchartinfoborderstroke() {
+  if (tschchartinfoborderstroke_ != NULL) tschchartinfoborderstroke_->::TSD::StrokeArchive::Clear();
+  clear_has_tschchartinfoborderstroke();
+}
+inline const ::TSD::StrokeArchive& ChartGenericPropertyMapArchive::tschchartinfoborderstroke() const {
+  return tschchartinfoborderstroke_ != NULL ? *tschchartinfoborderstroke_ : *default_instance_->tschchartinfoborderstroke_;
+}
+inline ::TSD::StrokeArchive* ChartGenericPropertyMapArchive::mutable_tschchartinfoborderstroke() {
+  set_has_tschchartinfoborderstroke();
+  if (tschchartinfoborderstroke_ == NULL) tschchartinfoborderstroke_ = new ::TSD::StrokeArchive;
+  return tschchartinfoborderstroke_;
+}
+inline ::TSD::StrokeArchive* ChartGenericPropertyMapArchive::release_tschchartinfoborderstroke() {
+  clear_has_tschchartinfoborderstroke();
+  ::TSD::StrokeArchive* temp = tschchartinfoborderstroke_;
+  tschchartinfoborderstroke_ = NULL;
+  return temp;
+}
+inline void ChartGenericPropertyMapArchive::set_allocated_tschchartinfoborderstroke(::TSD::StrokeArchive* tschchartinfoborderstroke) {
+  delete tschchartinfoborderstroke_;
+  tschchartinfoborderstroke_ = tschchartinfoborderstroke;
+  if (tschchartinfoborderstroke) {
+    set_has_tschchartinfoborderstroke();
+  } else {
+    clear_has_tschchartinfoborderstroke();
+  }
+}
+
+// optional bool tschchartinfocombinelayers = 21;
+inline bool ChartGenericPropertyMapArchive::has_tschchartinfocombinelayers() const {
+  return (_has_bits_[0] & 0x00100000u) != 0;
+}
+inline void ChartGenericPropertyMapArchive::set_has_tschchartinfocombinelayers() {
+  _has_bits_[0] |= 0x00100000u;
+}
+inline void ChartGenericPropertyMapArchive::clear_has_tschchartinfocombinelayers() {
+  _has_bits_[0] &= ~0x00100000u;
+}
+inline void ChartGenericPropertyMapArchive::clear_tschchartinfocombinelayers() {
+  tschchartinfocombinelayers_ = false;
+  clear_has_tschchartinfocombinelayers();
+}
+inline bool ChartGenericPropertyMapArchive::tschchartinfocombinelayers() const {
+  return tschchartinfocombinelayers_;
+}
+inline void ChartGenericPropertyMapArchive::set_tschchartinfocombinelayers(bool value) {
+  set_has_tschchartinfocombinelayers();
+  tschchartinfocombinelayers_ = value;
+}
+
+// optional .TSD.FillArchive tschchartinfogridbackgroundfill = 22;
+inline bool ChartGenericPropertyMapArchive::has_tschchartinfogridbackgroundfill() const {
+  return (_has_bits_[0] & 0x00200000u) != 0;
+}
+inline void ChartGenericPropertyMapArchive::set_has_tschchartinfogridbackgroundfill() {
+  _has_bits_[0] |= 0x00200000u;
+}
+inline void ChartGenericPropertyMapArchive::clear_has_tschchartinfogridbackgroundfill() {
+  _has_bits_[0] &= ~0x00200000u;
+}
+inline void ChartGenericPropertyMapArchive::clear_tschchartinfogridbackgroundfill() {
+  if (tschchartinfogridbackgroundfill_ != NULL) tschchartinfogridbackgroundfill_->::TSD::FillArchive::Clear();
+  clear_has_tschchartinfogridbackgroundfill();
+}
+inline const ::TSD::FillArchive& ChartGenericPropertyMapArchive::tschchartinfogridbackgroundfill() const {
+  return tschchartinfogridbackgroundfill_ != NULL ? *tschchartinfogridbackgroundfill_ : *default_instance_->tschchartinfogridbackgroundfill_;
+}
+inline ::TSD::FillArchive* ChartGenericPropertyMapArchive::mutable_tschchartinfogridbackgroundfill() {
+  set_has_tschchartinfogridbackgroundfill();
+  if (tschchartinfogridbackgroundfill_ == NULL) tschchartinfogridbackgroundfill_ = new ::TSD::FillArchive;
+  return tschchartinfogridbackgroundfill_;
+}
+inline ::TSD::FillArchive* ChartGenericPropertyMapArchive::release_tschchartinfogridbackgroundfill() {
+  clear_has_tschchartinfogridbackgroundfill();
+  ::TSD::FillArchive* temp = tschchartinfogridbackgroundfill_;
+  tschchartinfogridbackgroundfill_ = NULL;
+  return temp;
+}
+inline void ChartGenericPropertyMapArchive::set_allocated_tschchartinfogridbackgroundfill(::TSD::FillArchive* tschchartinfogridbackgroundfill) {
+  delete tschchartinfogridbackgroundfill_;
+  tschchartinfogridbackgroundfill_ = tschchartinfogridbackgroundfill;
+  if (tschchartinfogridbackgroundfill) {
+    set_has_tschchartinfogridbackgroundfill();
+  } else {
+    clear_has_tschchartinfogridbackgroundfill();
+  }
+}
+
+// optional float tschchartinfogridbackgroundopacity = 23;
+inline bool ChartGenericPropertyMapArchive::has_tschchartinfogridbackgroundopacity() const {
+  return (_has_bits_[0] & 0x00400000u) != 0;
+}
+inline void ChartGenericPropertyMapArchive::set_has_tschchartinfogridbackgroundopacity() {
+  _has_bits_[0] |= 0x00400000u;
+}
+inline void ChartGenericPropertyMapArchive::clear_has_tschchartinfogridbackgroundopacity() {
+  _has_bits_[0] &= ~0x00400000u;
+}
+inline void ChartGenericPropertyMapArchive::clear_tschchartinfogridbackgroundopacity() {
+  tschchartinfogridbackgroundopacity_ = 0;
+  clear_has_tschchartinfogridbackgroundopacity();
+}
+inline float ChartGenericPropertyMapArchive::tschchartinfogridbackgroundopacity() const {
+  return tschchartinfogridbackgroundopacity_;
+}
+inline void ChartGenericPropertyMapArchive::set_tschchartinfogridbackgroundopacity(float value) {
+  set_has_tschchartinfogridbackgroundopacity();
+  tschchartinfogridbackgroundopacity_ = value;
+}
+
+// optional float tschchartinfointerbargap = 24;
+inline bool ChartGenericPropertyMapArchive::has_tschchartinfointerbargap() const {
+  return (_has_bits_[0] & 0x00800000u) != 0;
+}
+inline void ChartGenericPropertyMapArchive::set_has_tschchartinfointerbargap() {
+  _has_bits_[0] |= 0x00800000u;
+}
+inline void ChartGenericPropertyMapArchive::clear_has_tschchartinfointerbargap() {
+  _has_bits_[0] &= ~0x00800000u;
+}
+inline void ChartGenericPropertyMapArchive::clear_tschchartinfointerbargap() {
+  tschchartinfointerbargap_ = 0;
+  clear_has_tschchartinfointerbargap();
+}
+inline float ChartGenericPropertyMapArchive::tschchartinfointerbargap() const {
+  return tschchartinfointerbargap_;
+}
+inline void ChartGenericPropertyMapArchive::set_tschchartinfointerbargap(float value) {
+  set_has_tschchartinfointerbargap();
+  tschchartinfointerbargap_ = value;
+}
+
+// optional float tschchartinfointersetgap = 25;
+inline bool ChartGenericPropertyMapArchive::has_tschchartinfointersetgap() const {
+  return (_has_bits_[0] & 0x01000000u) != 0;
+}
+inline void ChartGenericPropertyMapArchive::set_has_tschchartinfointersetgap() {
+  _has_bits_[0] |= 0x01000000u;
+}
+inline void ChartGenericPropertyMapArchive::clear_has_tschchartinfointersetgap() {
+  _has_bits_[0] &= ~0x01000000u;
+}
+inline void ChartGenericPropertyMapArchive::clear_tschchartinfointersetgap() {
+  tschchartinfointersetgap_ = 0;
+  clear_has_tschchartinfointersetgap();
+}
+inline float ChartGenericPropertyMapArchive::tschchartinfointersetgap() const {
+  return tschchartinfointersetgap_;
+}
+inline void ChartGenericPropertyMapArchive::set_tschchartinfointersetgap(float value) {
+  set_has_tschchartinfointersetgap();
+  tschchartinfointersetgap_ = value;
+}
+
+// optional bool tschchartinfoshowborder = 26;
+inline bool ChartGenericPropertyMapArchive::has_tschchartinfoshowborder() const {
+  return (_has_bits_[0] & 0x02000000u) != 0;
+}
+inline void ChartGenericPropertyMapArchive::set_has_tschchartinfoshowborder() {
+  _has_bits_[0] |= 0x02000000u;
+}
+inline void ChartGenericPropertyMapArchive::clear_has_tschchartinfoshowborder() {
+  _has_bits_[0] &= ~0x02000000u;
+}
+inline void ChartGenericPropertyMapArchive::clear_tschchartinfoshowborder() {
+  tschchartinfoshowborder_ = false;
+  clear_has_tschchartinfoshowborder();
+}
+inline bool ChartGenericPropertyMapArchive::tschchartinfoshowborder() const {
+  return tschchartinfoshowborder_;
+}
+inline void ChartGenericPropertyMapArchive::set_tschchartinfoshowborder(bool value) {
+  set_has_tschchartinfoshowborder();
+  tschchartinfoshowborder_ = value;
+}
+
+// optional .TSP.Color tschchartinfotitlecolor = 27;
+inline bool ChartGenericPropertyMapArchive::has_tschchartinfotitlecolor() const {
+  return (_has_bits_[0] & 0x04000000u) != 0;
+}
+inline void ChartGenericPropertyMapArchive::set_has_tschchartinfotitlecolor() {
+  _has_bits_[0] |= 0x04000000u;
+}
+inline void ChartGenericPropertyMapArchive::clear_has_tschchartinfotitlecolor() {
+  _has_bits_[0] &= ~0x04000000u;
+}
+inline void ChartGenericPropertyMapArchive::clear_tschchartinfotitlecolor() {
+  if (tschchartinfotitlecolor_ != NULL) tschchartinfotitlecolor_->::TSP::Color::Clear();
+  clear_has_tschchartinfotitlecolor();
+}
+inline const ::TSP::Color& ChartGenericPropertyMapArchive::tschchartinfotitlecolor() const {
+  return tschchartinfotitlecolor_ != NULL ? *tschchartinfotitlecolor_ : *default_instance_->tschchartinfotitlecolor_;
+}
+inline ::TSP::Color* ChartGenericPropertyMapArchive::mutable_tschchartinfotitlecolor() {
+  set_has_tschchartinfotitlecolor();
+  if (tschchartinfotitlecolor_ == NULL) tschchartinfotitlecolor_ = new ::TSP::Color;
+  return tschchartinfotitlecolor_;
+}
+inline ::TSP::Color* ChartGenericPropertyMapArchive::release_tschchartinfotitlecolor() {
+  clear_has_tschchartinfotitlecolor();
+  ::TSP::Color* temp = tschchartinfotitlecolor_;
+  tschchartinfotitlecolor_ = NULL;
+  return temp;
+}
+inline void ChartGenericPropertyMapArchive::set_allocated_tschchartinfotitlecolor(::TSP::Color* tschchartinfotitlecolor) {
+  delete tschchartinfotitlecolor_;
+  tschchartinfotitlecolor_ = tschchartinfotitlecolor;
+  if (tschchartinfotitlecolor) {
+    set_has_tschchartinfotitlecolor();
+  } else {
+    clear_has_tschchartinfotitlecolor();
+  }
+}
+
+// optional int32 tschchartinfotitleparagraphstyleindex = 28;
+inline bool ChartGenericPropertyMapArchive::has_tschchartinfotitleparagraphstyleindex() const {
+  return (_has_bits_[0] & 0x08000000u) != 0;
+}
+inline void ChartGenericPropertyMapArchive::set_has_tschchartinfotitleparagraphstyleindex() {
+  _has_bits_[0] |= 0x08000000u;
+}
+inline void ChartGenericPropertyMapArchive::clear_has_tschchartinfotitleparagraphstyleindex() {
+  _has_bits_[0] &= ~0x08000000u;
+}
+inline void ChartGenericPropertyMapArchive::clear_tschchartinfotitleparagraphstyleindex() {
+  tschchartinfotitleparagraphstyleindex_ = 0;
+  clear_has_tschchartinfotitleparagraphstyleindex();
+}
+inline ::google::protobuf::int32 ChartGenericPropertyMapArchive::tschchartinfotitleparagraphstyleindex() const {
+  return tschchartinfotitleparagraphstyleindex_;
+}
+inline void ChartGenericPropertyMapArchive::set_tschchartinfotitleparagraphstyleindex(::google::protobuf::int32 value) {
+  set_has_tschchartinfotitleparagraphstyleindex();
+  tschchartinfotitleparagraphstyleindex_ = value;
+}
+
+// optional int32 tschchartinfodatasetnameparagraphstyleindex = 29;
+inline bool ChartGenericPropertyMapArchive::has_tschchartinfodatasetnameparagraphstyleindex() const {
+  return (_has_bits_[0] & 0x10000000u) != 0;
+}
+inline void ChartGenericPropertyMapArchive::set_has_tschchartinfodatasetnameparagraphstyleindex() {
+  _has_bits_[0] |= 0x10000000u;
+}
+inline void ChartGenericPropertyMapArchive::clear_has_tschchartinfodatasetnameparagraphstyleindex() {
+  _has_bits_[0] &= ~0x10000000u;
+}
+inline void ChartGenericPropertyMapArchive::clear_tschchartinfodatasetnameparagraphstyleindex() {
+  tschchartinfodatasetnameparagraphstyleindex_ = 0;
+  clear_has_tschchartinfodatasetnameparagraphstyleindex();
+}
+inline ::google::protobuf::int32 ChartGenericPropertyMapArchive::tschchartinfodatasetnameparagraphstyleindex() const {
+  return tschchartinfodatasetnameparagraphstyleindex_;
+}
+inline void ChartGenericPropertyMapArchive::set_tschchartinfodatasetnameparagraphstyleindex(::google::protobuf::int32 value) {
+  set_has_tschchartinfodatasetnameparagraphstyleindex();
+  tschchartinfodatasetnameparagraphstyleindex_ = value;
+}
+
+// -------------------------------------------------------------------
+
+// LegendGenericPropertyMapArchive
+
+// optional .TSD.FillArchive tschlegendmodelfill = 1;
+inline bool LegendGenericPropertyMapArchive::has_tschlegendmodelfill() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void LegendGenericPropertyMapArchive::set_has_tschlegendmodelfill() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void LegendGenericPropertyMapArchive::clear_has_tschlegendmodelfill() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void LegendGenericPropertyMapArchive::clear_tschlegendmodelfill() {
+  if (tschlegendmodelfill_ != NULL) tschlegendmodelfill_->::TSD::FillArchive::Clear();
+  clear_has_tschlegendmodelfill();
+}
+inline const ::TSD::FillArchive& LegendGenericPropertyMapArchive::tschlegendmodelfill() const {
+  return tschlegendmodelfill_ != NULL ? *tschlegendmodelfill_ : *default_instance_->tschlegendmodelfill_;
+}
+inline ::TSD::FillArchive* LegendGenericPropertyMapArchive::mutable_tschlegendmodelfill() {
+  set_has_tschlegendmodelfill();
+  if (tschlegendmodelfill_ == NULL) tschlegendmodelfill_ = new ::TSD::FillArchive;
+  return tschlegendmodelfill_;
+}
+inline ::TSD::FillArchive* LegendGenericPropertyMapArchive::release_tschlegendmodelfill() {
+  clear_has_tschlegendmodelfill();
+  ::TSD::FillArchive* temp = tschlegendmodelfill_;
+  tschlegendmodelfill_ = NULL;
+  return temp;
+}
+inline void LegendGenericPropertyMapArchive::set_allocated_tschlegendmodelfill(::TSD::FillArchive* tschlegendmodelfill) {
+  delete tschlegendmodelfill_;
+  tschlegendmodelfill_ = tschlegendmodelfill;
+  if (tschlegendmodelfill) {
+    set_has_tschlegendmodelfill();
+  } else {
+    clear_has_tschlegendmodelfill();
+  }
+}
+
+// optional int32 tschlegendmodellabelparagraphstyleindex = 2;
+inline bool LegendGenericPropertyMapArchive::has_tschlegendmodellabelparagraphstyleindex() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void LegendGenericPropertyMapArchive::set_has_tschlegendmodellabelparagraphstyleindex() {
+  _has_bits_[0] |= 0x00000002u;
+}
+inline void LegendGenericPropertyMapArchive::clear_has_tschlegendmodellabelparagraphstyleindex() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline void LegendGenericPropertyMapArchive::clear_tschlegendmodellabelparagraphstyleindex() {
+  tschlegendmodellabelparagraphstyleindex_ = 0;
+  clear_has_tschlegendmodellabelparagraphstyleindex();
+}
+inline ::google::protobuf::int32 LegendGenericPropertyMapArchive::tschlegendmodellabelparagraphstyleindex() const {
+  return tschlegendmodellabelparagraphstyleindex_;
+}
+inline void LegendGenericPropertyMapArchive::set_tschlegendmodellabelparagraphstyleindex(::google::protobuf::int32 value) {
+  set_has_tschlegendmodellabelparagraphstyleindex();
+  tschlegendmodellabelparagraphstyleindex_ = value;
+}
+
+// optional float tschlegendmodelopacity = 3;
+inline bool LegendGenericPropertyMapArchive::has_tschlegendmodelopacity() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void LegendGenericPropertyMapArchive::set_has_tschlegendmodelopacity() {
+  _has_bits_[0] |= 0x00000004u;
+}
+inline void LegendGenericPropertyMapArchive::clear_has_tschlegendmodelopacity() {
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline void LegendGenericPropertyMapArchive::clear_tschlegendmodelopacity() {
+  tschlegendmodelopacity_ = 0;
+  clear_has_tschlegendmodelopacity();
+}
+inline float LegendGenericPropertyMapArchive::tschlegendmodelopacity() const {
+  return tschlegendmodelopacity_;
+}
+inline void LegendGenericPropertyMapArchive::set_tschlegendmodelopacity(float value) {
+  set_has_tschlegendmodelopacity();
+  tschlegendmodelopacity_ = value;
+}
+
+// optional .TSD.ShadowArchive tschlegendmodelshadow = 4;
+inline bool LegendGenericPropertyMapArchive::has_tschlegendmodelshadow() const {
+  return (_has_bits_[0] & 0x00000008u) != 0;
+}
+inline void LegendGenericPropertyMapArchive::set_has_tschlegendmodelshadow() {
+  _has_bits_[0] |= 0x00000008u;
+}
+inline void LegendGenericPropertyMapArchive::clear_has_tschlegendmodelshadow() {
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline void LegendGenericPropertyMapArchive::clear_tschlegendmodelshadow() {
+  if (tschlegendmodelshadow_ != NULL) tschlegendmodelshadow_->::TSD::ShadowArchive::Clear();
+  clear_has_tschlegendmodelshadow();
+}
+inline const ::TSD::ShadowArchive& LegendGenericPropertyMapArchive::tschlegendmodelshadow() const {
+  return tschlegendmodelshadow_ != NULL ? *tschlegendmodelshadow_ : *default_instance_->tschlegendmodelshadow_;
+}
+inline ::TSD::ShadowArchive* LegendGenericPropertyMapArchive::mutable_tschlegendmodelshadow() {
+  set_has_tschlegendmodelshadow();
+  if (tschlegendmodelshadow_ == NULL) tschlegendmodelshadow_ = new ::TSD::ShadowArchive;
+  return tschlegendmodelshadow_;
+}
+inline ::TSD::ShadowArchive* LegendGenericPropertyMapArchive::release_tschlegendmodelshadow() {
+  clear_has_tschlegendmodelshadow();
+  ::TSD::ShadowArchive* temp = tschlegendmodelshadow_;
+  tschlegendmodelshadow_ = NULL;
+  return temp;
+}
+inline void LegendGenericPropertyMapArchive::set_allocated_tschlegendmodelshadow(::TSD::ShadowArchive* tschlegendmodelshadow) {
+  delete tschlegendmodelshadow_;
+  tschlegendmodelshadow_ = tschlegendmodelshadow;
+  if (tschlegendmodelshadow) {
+    set_has_tschlegendmodelshadow();
+  } else {
+    clear_has_tschlegendmodelshadow();
+  }
+}
+
+// optional .TSD.StrokeArchive tschlegendmodelstroke = 5;
+inline bool LegendGenericPropertyMapArchive::has_tschlegendmodelstroke() const {
+  return (_has_bits_[0] & 0x00000010u) != 0;
+}
+inline void LegendGenericPropertyMapArchive::set_has_tschlegendmodelstroke() {
+  _has_bits_[0] |= 0x00000010u;
+}
+inline void LegendGenericPropertyMapArchive::clear_has_tschlegendmodelstroke() {
+  _has_bits_[0] &= ~0x00000010u;
+}
+inline void LegendGenericPropertyMapArchive::clear_tschlegendmodelstroke() {
+  if (tschlegendmodelstroke_ != NULL) tschlegendmodelstroke_->::TSD::StrokeArchive::Clear();
+  clear_has_tschlegendmodelstroke();
+}
+inline const ::TSD::StrokeArchive& LegendGenericPropertyMapArchive::tschlegendmodelstroke() const {
+  return tschlegendmodelstroke_ != NULL ? *tschlegendmodelstroke_ : *default_instance_->tschlegendmodelstroke_;
+}
+inline ::TSD::StrokeArchive* LegendGenericPropertyMapArchive::mutable_tschlegendmodelstroke() {
+  set_has_tschlegendmodelstroke();
+  if (tschlegendmodelstroke_ == NULL) tschlegendmodelstroke_ = new ::TSD::StrokeArchive;
+  return tschlegendmodelstroke_;
+}
+inline ::TSD::StrokeArchive* LegendGenericPropertyMapArchive::release_tschlegendmodelstroke() {
+  clear_has_tschlegendmodelstroke();
+  ::TSD::StrokeArchive* temp = tschlegendmodelstroke_;
+  tschlegendmodelstroke_ = NULL;
+  return temp;
+}
+inline void LegendGenericPropertyMapArchive::set_allocated_tschlegendmodelstroke(::TSD::StrokeArchive* tschlegendmodelstroke) {
+  delete tschlegendmodelstroke_;
+  tschlegendmodelstroke_ = tschlegendmodelstroke;
+  if (tschlegendmodelstroke) {
+    set_has_tschlegendmodelstroke();
+  } else {
+    clear_has_tschlegendmodelstroke();
+  }
+}
+
+// -------------------------------------------------------------------
+
+// ChartAxisGenericPropertyMapArchive
+
+// optional int32 tschchartaxis3dlabelposition = 1;
+inline bool ChartAxisGenericPropertyMapArchive::has_tschchartaxis3dlabelposition() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void ChartAxisGenericPropertyMapArchive::set_has_tschchartaxis3dlabelposition() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void ChartAxisGenericPropertyMapArchive::clear_has_tschchartaxis3dlabelposition() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void ChartAxisGenericPropertyMapArchive::clear_tschchartaxis3dlabelposition() {
+  tschchartaxis3dlabelposition_ = 0;
+  clear_has_tschchartaxis3dlabelposition();
+}
+inline ::google::protobuf::int32 ChartAxisGenericPropertyMapArchive::tschchartaxis3dlabelposition() const {
+  return tschchartaxis3dlabelposition_;
+}
+inline void ChartAxisGenericPropertyMapArchive::set_tschchartaxis3dlabelposition(::google::protobuf::int32 value) {
+  set_has_tschchartaxis3dlabelposition();
+  tschchartaxis3dlabelposition_ = value;
+}
+
+// optional .TSK.FormatStructArchive tschchartaxis1_0numberformat = 2;
+inline bool ChartAxisGenericPropertyMapArchive::has_tschchartaxis1_0numberformat() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void ChartAxisGenericPropertyMapArchive::set_has_tschchartaxis1_0numberformat() {
+  _has_bits_[0] |= 0x00000002u;
+}
+inline void ChartAxisGenericPropertyMapArchive::clear_has_tschchartaxis1_0numberformat() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline void ChartAxisGenericPropertyMapArchive::clear_tschchartaxis1_0numberformat() {
+  if (tschchartaxis1_0numberformat_ != NULL) tschchartaxis1_0numberformat_->::TSK::FormatStructArchive::Clear();
+  clear_has_tschchartaxis1_0numberformat();
+}
+inline const ::TSK::FormatStructArchive& ChartAxisGenericPropertyMapArchive::tschchartaxis1_0numberformat() const {
+  return tschchartaxis1_0numberformat_ != NULL ? *tschchartaxis1_0numberformat_ : *default_instance_->tschchartaxis1_0numberformat_;
+}
+inline ::TSK::FormatStructArchive* ChartAxisGenericPropertyMapArchive::mutable_tschchartaxis1_0numberformat() {
+  set_has_tschchartaxis1_0numberformat();
+  if (tschchartaxis1_0numberformat_ == NULL) tschchartaxis1_0numberformat_ = new ::TSK::FormatStructArchive;
+  return tschchartaxis1_0numberformat_;
+}
+inline ::TSK::FormatStructArchive* ChartAxisGenericPropertyMapArchive::release_tschchartaxis1_0numberformat() {
+  clear_has_tschchartaxis1_0numberformat();
+  ::TSK::FormatStructArchive* temp = tschchartaxis1_0numberformat_;
+  tschchartaxis1_0numberformat_ = NULL;
+  return temp;
+}
+inline void ChartAxisGenericPropertyMapArchive::set_allocated_tschchartaxis1_0numberformat(::TSK::FormatStructArchive* tschchartaxis1_0numberformat) {
+  delete tschchartaxis1_0numberformat_;
+  tschchartaxis1_0numberformat_ = tschchartaxis1_0numberformat;
+  if (tschchartaxis1_0numberformat) {
+    set_has_tschchartaxis1_0numberformat();
+  } else {
+    clear_has_tschchartaxis1_0numberformat();
+  }
+}
+
+// optional .TSK.FormatStructArchive tschchartaxisnumberformat = 3;
+inline bool ChartAxisGenericPropertyMapArchive::has_tschchartaxisnumberformat() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void ChartAxisGenericPropertyMapArchive::set_has_tschchartaxisnumberformat() {
+  _has_bits_[0] |= 0x00000004u;
+}
+inline void ChartAxisGenericPropertyMapArchive::clear_has_tschchartaxisnumberformat() {
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline void ChartAxisGenericPropertyMapArchive::clear_tschchartaxisnumberformat() {
+  if (tschchartaxisnumberformat_ != NULL) tschchartaxisnumberformat_->::TSK::FormatStructArchive::Clear();
+  clear_has_tschchartaxisnumberformat();
+}
+inline const ::TSK::FormatStructArchive& ChartAxisGenericPropertyMapArchive::tschchartaxisnumberformat() const {
+  return tschchartaxisnumberformat_ != NULL ? *tschchartaxisnumberformat_ : *default_instance_->tschchartaxisnumberformat_;
+}
+inline ::TSK::FormatStructArchive* ChartAxisGenericPropertyMapArchive::mutable_tschchartaxisnumberformat() {
+  set_has_tschchartaxisnumberformat();
+  if (tschchartaxisnumberformat_ == NULL) tschchartaxisnumberformat_ = new ::TSK::FormatStructArchive;
+  return tschchartaxisnumberformat_;
+}
+inline ::TSK::FormatStructArchive* ChartAxisGenericPropertyMapArchive::release_tschchartaxisnumberformat() {
+  clear_has_tschchartaxisnumberformat();
+  ::TSK::FormatStructArchive* temp = tschchartaxisnumberformat_;
+  tschchartaxisnumberformat_ = NULL;
+  return temp;
+}
+inline void ChartAxisGenericPropertyMapArchive::set_allocated_tschchartaxisnumberformat(::TSK::FormatStructArchive* tschchartaxisnumberformat) {
+  delete tschchartaxisnumberformat_;
+  tschchartaxisnumberformat_ = tschchartaxisnumberformat;
+  if (tschchartaxisnumberformat) {
+    set_has_tschchartaxisnumberformat();
+  } else {
+    clear_has_tschchartaxisnumberformat();
+  }
+}
+
+// optional .TSK.FormatStructArchive tschchartaxis1_0dateformat = 4;
+inline bool ChartAxisGenericPropertyMapArchive::has_tschchartaxis1_0dateformat() const {
+  return (_has_bits_[0] & 0x00000008u) != 0;
+}
+inline void ChartAxisGenericPropertyMapArchive::set_has_tschchartaxis1_0dateformat() {
+  _has_bits_[0] |= 0x00000008u;
+}
+inline void ChartAxisGenericPropertyMapArchive::clear_has_tschchartaxis1_0dateformat() {
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline void ChartAxisGenericPropertyMapArchive::clear_tschchartaxis1_0dateformat() {
+  if (tschchartaxis1_0dateformat_ != NULL) tschchartaxis1_0dateformat_->::TSK::FormatStructArchive::Clear();
+  clear_has_tschchartaxis1_0dateformat();
+}
+inline const ::TSK::FormatStructArchive& ChartAxisGenericPropertyMapArchive::tschchartaxis1_0dateformat() const {
+  return tschchartaxis1_0dateformat_ != NULL ? *tschchartaxis1_0dateformat_ : *default_instance_->tschchartaxis1_0dateformat_;
+}
+inline ::TSK::FormatStructArchive* ChartAxisGenericPropertyMapArchive::mutable_tschchartaxis1_0dateformat() {
+  set_has_tschchartaxis1_0dateformat();
+  if (tschchartaxis1_0dateformat_ == NULL) tschchartaxis1_0dateformat_ = new ::TSK::FormatStructArchive;
+  return tschchartaxis1_0dateformat_;
+}
+inline ::TSK::FormatStructArchive* ChartAxisGenericPropertyMapArchive::release_tschchartaxis1_0dateformat() {
+  clear_has_tschchartaxis1_0dateformat();
+  ::TSK::FormatStructArchive* temp = tschchartaxis1_0dateformat_;
+  tschchartaxis1_0dateformat_ = NULL;
+  return temp;
+}
+inline void ChartAxisGenericPropertyMapArchive::set_allocated_tschchartaxis1_0dateformat(::TSK::FormatStructArchive* tschchartaxis1_0dateformat) {
+  delete tschchartaxis1_0dateformat_;
+  tschchartaxis1_0dateformat_ = tschchartaxis1_0dateformat;
+  if (tschchartaxis1_0dateformat) {
+    set_has_tschchartaxis1_0dateformat();
+  } else {
+    clear_has_tschchartaxis1_0dateformat();
+  }
+}
+
+// optional .TSK.FormatStructArchive tschchartaxisdurationformat = 5;
+inline bool ChartAxisGenericPropertyMapArchive::has_tschchartaxisdurationformat() const {
+  return (_has_bits_[0] & 0x00000010u) != 0;
+}
+inline void ChartAxisGenericPropertyMapArchive::set_has_tschchartaxisdurationformat() {
+  _has_bits_[0] |= 0x00000010u;
+}
+inline void ChartAxisGenericPropertyMapArchive::clear_has_tschchartaxisdurationformat() {
+  _has_bits_[0] &= ~0x00000010u;
+}
+inline void ChartAxisGenericPropertyMapArchive::clear_tschchartaxisdurationformat() {
+  if (tschchartaxisdurationformat_ != NULL) tschchartaxisdurationformat_->::TSK::FormatStructArchive::Clear();
+  clear_has_tschchartaxisdurationformat();
+}
+inline const ::TSK::FormatStructArchive& ChartAxisGenericPropertyMapArchive::tschchartaxisdurationformat() const {
+  return tschchartaxisdurationformat_ != NULL ? *tschchartaxisdurationformat_ : *default_instance_->tschchartaxisdurationformat_;
+}
+inline ::TSK::FormatStructArchive* ChartAxisGenericPropertyMapArchive::mutable_tschchartaxisdurationformat() {
+  set_has_tschchartaxisdurationformat();
+  if (tschchartaxisdurationformat_ == NULL) tschchartaxisdurationformat_ = new ::TSK::FormatStructArchive;
+  return tschchartaxisdurationformat_;
+}
+inline ::TSK::FormatStructArchive* ChartAxisGenericPropertyMapArchive::release_tschchartaxisdurationformat() {
+  clear_has_tschchartaxisdurationformat();
+  ::TSK::FormatStructArchive* temp = tschchartaxisdurationformat_;
+  tschchartaxisdurationformat_ = NULL;
+  return temp;
+}
+inline void ChartAxisGenericPropertyMapArchive::set_allocated_tschchartaxisdurationformat(::TSK::FormatStructArchive* tschchartaxisdurationformat) {
+  delete tschchartaxisdurationformat_;
+  tschchartaxisdurationformat_ = tschchartaxisdurationformat;
+  if (tschchartaxisdurationformat) {
+    set_has_tschchartaxisdurationformat();
+  } else {
+    clear_has_tschchartaxisdurationformat();
+  }
+}
+
+// optional .TSK.FormatStructArchive tschchartaxisdateformat = 6;
+inline bool ChartAxisGenericPropertyMapArchive::has_tschchartaxisdateformat() const {
+  return (_has_bits_[0] & 0x00000020u) != 0;
+}
+inline void ChartAxisGenericPropertyMapArchive::set_has_tschchartaxisdateformat() {
+  _has_bits_[0] |= 0x00000020u;
+}
+inline void ChartAxisGenericPropertyMapArchive::clear_has_tschchartaxisdateformat() {
+  _has_bits_[0] &= ~0x00000020u;
+}
+inline void ChartAxisGenericPropertyMapArchive::clear_tschchartaxisdateformat() {
+  if (tschchartaxisdateformat_ != NULL) tschchartaxisdateformat_->::TSK::FormatStructArchive::Clear();
+  clear_has_tschchartaxisdateformat();
+}
+inline const ::TSK::FormatStructArchive& ChartAxisGenericPropertyMapArchive::tschchartaxisdateformat() const {
+  return tschchartaxisdateformat_ != NULL ? *tschchartaxisdateformat_ : *default_instance_->tschchartaxisdateformat_;
+}
+inline ::TSK::FormatStructArchive* ChartAxisGenericPropertyMapArchive::mutable_tschchartaxisdateformat() {
+  set_has_tschchartaxisdateformat();
+  if (tschchartaxisdateformat_ == NULL) tschchartaxisdateformat_ = new ::TSK::FormatStructArchive;
+  return tschchartaxisdateformat_;
+}
+inline ::TSK::FormatStructArchive* ChartAxisGenericPropertyMapArchive::release_tschchartaxisdateformat() {
+  clear_has_tschchartaxisdateformat();
+  ::TSK::FormatStructArchive* temp = tschchartaxisdateformat_;
+  tschchartaxisdateformat_ = NULL;
+  return temp;
+}
+inline void ChartAxisGenericPropertyMapArchive::set_allocated_tschchartaxisdateformat(::TSK::FormatStructArchive* tschchartaxisdateformat) {
+  delete tschchartaxisdateformat_;
+  tschchartaxisdateformat_ = tschchartaxisdateformat;
+  if (tschchartaxisdateformat) {
+    set_has_tschchartaxisdateformat();
+  } else {
+    clear_has_tschchartaxisdateformat();
+  }
+}
+
+// optional int32 tschchartaxisnumberformattype = 7;
+inline bool ChartAxisGenericPropertyMapArchive::has_tschchartaxisnumberformattype() const {
+  return (_has_bits_[0] & 0x00000040u) != 0;
+}
+inline void ChartAxisGenericPropertyMapArchive::set_has_tschchartaxisnumberformattype() {
+  _has_bits_[0] |= 0x00000040u;
+}
+inline void ChartAxisGenericPropertyMapArchive::clear_has_tschchartaxisnumberformattype() {
+  _has_bits_[0] &= ~0x00000040u;
+}
+inline void ChartAxisGenericPropertyMapArchive::clear_tschchartaxisnumberformattype() {
+  tschchartaxisnumberformattype_ = 0;
+  clear_has_tschchartaxisnumberformattype();
+}
+inline ::google::protobuf::int32 ChartAxisGenericPropertyMapArchive::tschchartaxisnumberformattype() const {
+  return tschchartaxisnumberformattype_;
+}
+inline void ChartAxisGenericPropertyMapArchive::set_tschchartaxisnumberformattype(::google::protobuf::int32 value) {
+  set_has_tschchartaxisnumberformattype();
+  tschchartaxisnumberformattype_ = value;
+}
+
+// optional int32 tschchartaxisnumberofdecades = 8;
+inline bool ChartAxisGenericPropertyMapArchive::has_tschchartaxisnumberofdecades() const {
+  return (_has_bits_[0] & 0x00000080u) != 0;
+}
+inline void ChartAxisGenericPropertyMapArchive::set_has_tschchartaxisnumberofdecades() {
+  _has_bits_[0] |= 0x00000080u;
+}
+inline void ChartAxisGenericPropertyMapArchive::clear_has_tschchartaxisnumberofdecades() {
+  _has_bits_[0] &= ~0x00000080u;
+}
+inline void ChartAxisGenericPropertyMapArchive::clear_tschchartaxisnumberofdecades() {
+  tschchartaxisnumberofdecades_ = 0;
+  clear_has_tschchartaxisnumberofdecades();
+}
+inline ::google::protobuf::int32 ChartAxisGenericPropertyMapArchive::tschchartaxisnumberofdecades() const {
+  return tschchartaxisnumberofdecades_;
+}
+inline void ChartAxisGenericPropertyMapArchive::set_tschchartaxisnumberofdecades(::google::protobuf::int32 value) {
+  set_has_tschchartaxisnumberofdecades();
+  tschchartaxisnumberofdecades_ = value;
+}
+
+// optional int32 tschchartaxisnumberofmajorgridlines = 9;
+inline bool ChartAxisGenericPropertyMapArchive::has_tschchartaxisnumberofmajorgridlines() const {
+  return (_has_bits_[0] & 0x00000100u) != 0;
+}
+inline void ChartAxisGenericPropertyMapArchive::set_has_tschchartaxisnumberofmajorgridlines() {
+  _has_bits_[0] |= 0x00000100u;
+}
+inline void ChartAxisGenericPropertyMapArchive::clear_has_tschchartaxisnumberofmajorgridlines() {
+  _has_bits_[0] &= ~0x00000100u;
+}
+inline void ChartAxisGenericPropertyMapArchive::clear_tschchartaxisnumberofmajorgridlines() {
+  tschchartaxisnumberofmajorgridlines_ = 0;
+  clear_has_tschchartaxisnumberofmajorgridlines();
+}
+inline ::google::protobuf::int32 ChartAxisGenericPropertyMapArchive::tschchartaxisnumberofmajorgridlines() const {
+  return tschchartaxisnumberofmajorgridlines_;
+}
+inline void ChartAxisGenericPropertyMapArchive::set_tschchartaxisnumberofmajorgridlines(::google::protobuf::int32 value) {
+  set_has_tschchartaxisnumberofmajorgridlines();
+  tschchartaxisnumberofmajorgridlines_ = value;
+}
+
+// optional int32 tschchartaxisnumberofminorgridlines = 10;
+inline bool ChartAxisGenericPropertyMapArchive::has_tschchartaxisnumberofminorgridlines() const {
+  return (_has_bits_[0] & 0x00000200u) != 0;
+}
+inline void ChartAxisGenericPropertyMapArchive::set_has_tschchartaxisnumberofminorgridlines() {
+  _has_bits_[0] |= 0x00000200u;
+}
+inline void ChartAxisGenericPropertyMapArchive::clear_has_tschchartaxisnumberofminorgridlines() {
+  _has_bits_[0] &= ~0x00000200u;
+}
+inline void ChartAxisGenericPropertyMapArchive::clear_tschchartaxisnumberofminorgridlines() {
+  tschchartaxisnumberofminorgridlines_ = 0;
+  clear_has_tschchartaxisnumberofminorgridlines();
+}
+inline ::google::protobuf::int32 ChartAxisGenericPropertyMapArchive::tschchartaxisnumberofminorgridlines() const {
+  return tschchartaxisnumberofminorgridlines_;
+}
+inline void ChartAxisGenericPropertyMapArchive::set_tschchartaxisnumberofminorgridlines(::google::protobuf::int32 value) {
+  set_has_tschchartaxisnumberofminorgridlines();
+  tschchartaxisnumberofminorgridlines_ = value;
+}
+
+// optional bool tschchartaxisplottoedges = 11;
+inline bool ChartAxisGenericPropertyMapArchive::has_tschchartaxisplottoedges() const {
+  return (_has_bits_[0] & 0x00000400u) != 0;
+}
+inline void ChartAxisGenericPropertyMapArchive::set_has_tschchartaxisplottoedges() {
+  _has_bits_[0] |= 0x00000400u;
+}
+inline void ChartAxisGenericPropertyMapArchive::clear_has_tschchartaxisplottoedges() {
+  _has_bits_[0] &= ~0x00000400u;
+}
+inline void ChartAxisGenericPropertyMapArchive::clear_tschchartaxisplottoedges() {
+  tschchartaxisplottoedges_ = false;
+  clear_has_tschchartaxisplottoedges();
+}
+inline bool ChartAxisGenericPropertyMapArchive::tschchartaxisplottoedges() const {
+  return tschchartaxisplottoedges_;
+}
+inline void ChartAxisGenericPropertyMapArchive::set_tschchartaxisplottoedges(bool value) {
+  set_has_tschchartaxisplottoedges();
+  tschchartaxisplottoedges_ = value;
+}
+
+// optional int32 tschchartaxisscale = 12;
+inline bool ChartAxisGenericPropertyMapArchive::has_tschchartaxisscale() const {
+  return (_has_bits_[0] & 0x00000800u) != 0;
+}
+inline void ChartAxisGenericPropertyMapArchive::set_has_tschchartaxisscale() {
+  _has_bits_[0] |= 0x00000800u;
+}
+inline void ChartAxisGenericPropertyMapArchive::clear_has_tschchartaxisscale() {
+  _has_bits_[0] &= ~0x00000800u;
+}
+inline void ChartAxisGenericPropertyMapArchive::clear_tschchartaxisscale() {
+  tschchartaxisscale_ = 0;
+  clear_has_tschchartaxisscale();
+}
+inline ::google::protobuf::int32 ChartAxisGenericPropertyMapArchive::tschchartaxisscale() const {
+  return tschchartaxisscale_;
+}
+inline void ChartAxisGenericPropertyMapArchive::set_tschchartaxisscale(::google::protobuf::int32 value) {
+  set_has_tschchartaxisscale();
+  tschchartaxisscale_ = value;
+}
+
+// optional bool tschchartaxisshowlabels = 13;
+inline bool ChartAxisGenericPropertyMapArchive::has_tschchartaxisshowlabels() const {
+  return (_has_bits_[0] & 0x00001000u) != 0;
+}
+inline void ChartAxisGenericPropertyMapArchive::set_has_tschchartaxisshowlabels() {
+  _has_bits_[0] |= 0x00001000u;
+}
+inline void ChartAxisGenericPropertyMapArchive::clear_has_tschchartaxisshowlabels() {
+  _has_bits_[0] &= ~0x00001000u;
+}
+inline void ChartAxisGenericPropertyMapArchive::clear_tschchartaxisshowlabels() {
+  tschchartaxisshowlabels_ = false;
+  clear_has_tschchartaxisshowlabels();
+}
+inline bool ChartAxisGenericPropertyMapArchive::tschchartaxisshowlabels() const {
+  return tschchartaxisshowlabels_;
+}
+inline void ChartAxisGenericPropertyMapArchive::set_tschchartaxisshowlabels(bool value) {
+  set_has_tschchartaxisshowlabels();
+  tschchartaxisshowlabels_ = value;
+}
+
+// optional bool tschchartaxisshowserieslabels = 14;
+inline bool ChartAxisGenericPropertyMapArchive::has_tschchartaxisshowserieslabels() const {
+  return (_has_bits_[0] & 0x00002000u) != 0;
+}
+inline void ChartAxisGenericPropertyMapArchive::set_has_tschchartaxisshowserieslabels() {
+  _has_bits_[0] |= 0x00002000u;
+}
+inline void ChartAxisGenericPropertyMapArchive::clear_has_tschchartaxisshowserieslabels() {
+  _has_bits_[0] &= ~0x00002000u;
+}
+inline void ChartAxisGenericPropertyMapArchive::clear_tschchartaxisshowserieslabels() {
+  tschchartaxisshowserieslabels_ = false;
+  clear_has_tschchartaxisshowserieslabels();
+}
+inline bool ChartAxisGenericPropertyMapArchive::tschchartaxisshowserieslabels() const {
+  return tschchartaxisshowserieslabels_;
+}
+inline void ChartAxisGenericPropertyMapArchive::set_tschchartaxisshowserieslabels(bool value) {
+  set_has_tschchartaxisshowserieslabels();
+  tschchartaxisshowserieslabels_ = value;
+}
+
+// optional bool tschchartaxisshowtitle = 15;
+inline bool ChartAxisGenericPropertyMapArchive::has_tschchartaxisshowtitle() const {
+  return (_has_bits_[0] & 0x00004000u) != 0;
+}
+inline void ChartAxisGenericPropertyMapArchive::set_has_tschchartaxisshowtitle() {
+  _has_bits_[0] |= 0x00004000u;
+}
+inline void ChartAxisGenericPropertyMapArchive::clear_has_tschchartaxisshowtitle() {
+  _has_bits_[0] &= ~0x00004000u;
+}
+inline void ChartAxisGenericPropertyMapArchive::clear_tschchartaxisshowtitle() {
+  tschchartaxisshowtitle_ = false;
+  clear_has_tschchartaxisshowtitle();
+}
+inline bool ChartAxisGenericPropertyMapArchive::tschchartaxisshowtitle() const {
+  return tschchartaxisshowtitle_;
+}
+inline void ChartAxisGenericPropertyMapArchive::set_tschchartaxisshowtitle(bool value) {
+  set_has_tschchartaxisshowtitle();
+  tschchartaxisshowtitle_ = value;
+}
+
+// optional string tschchartaxistitle = 16;
+inline bool ChartAxisGenericPropertyMapArchive::has_tschchartaxistitle() const {
+  return (_has_bits_[0] & 0x00008000u) != 0;
+}
+inline void ChartAxisGenericPropertyMapArchive::set_has_tschchartaxistitle() {
+  _has_bits_[0] |= 0x00008000u;
+}
+inline void ChartAxisGenericPropertyMapArchive::clear_has_tschchartaxistitle() {
+  _has_bits_[0] &= ~0x00008000u;
+}
+inline void ChartAxisGenericPropertyMapArchive::clear_tschchartaxistitle() {
+  if (tschchartaxistitle_ != &::google::protobuf::internal::kEmptyString) {
+    tschchartaxistitle_->clear();
+  }
+  clear_has_tschchartaxistitle();
+}
+inline const ::std::string& ChartAxisGenericPropertyMapArchive::tschchartaxistitle() const {
+  return *tschchartaxistitle_;
+}
+inline void ChartAxisGenericPropertyMapArchive::set_tschchartaxistitle(const ::std::string& value) {
+  set_has_tschchartaxistitle();
+  if (tschchartaxistitle_ == &::google::protobuf::internal::kEmptyString) {
+    tschchartaxistitle_ = new ::std::string;
+  }
+  tschchartaxistitle_->assign(value);
+}
+inline void ChartAxisGenericPropertyMapArchive::set_tschchartaxistitle(const char* value) {
+  set_has_tschchartaxistitle();
+  if (tschchartaxistitle_ == &::google::protobuf::internal::kEmptyString) {
+    tschchartaxistitle_ = new ::std::string;
+  }
+  tschchartaxistitle_->assign(value);
+}
+inline void ChartAxisGenericPropertyMapArchive::set_tschchartaxistitle(const char* value, size_t size) {
+  set_has_tschchartaxistitle();
+  if (tschchartaxistitle_ == &::google::protobuf::internal::kEmptyString) {
+    tschchartaxistitle_ = new ::std::string;
+  }
+  tschchartaxistitle_->assign(reinterpret_cast<const char*>(value), size);
+}
+inline ::std::string* ChartAxisGenericPropertyMapArchive::mutable_tschchartaxistitle() {
+  set_has_tschchartaxistitle();
+  if (tschchartaxistitle_ == &::google::protobuf::internal::kEmptyString) {
+    tschchartaxistitle_ = new ::std::string;
+  }
+  return tschchartaxistitle_;
+}
+inline ::std::string* ChartAxisGenericPropertyMapArchive::release_tschchartaxistitle() {
+  clear_has_tschchartaxistitle();
+  if (tschchartaxistitle_ == &::google::protobuf::internal::kEmptyString) {
+    return NULL;
+  } else {
+    ::std::string* temp = tschchartaxistitle_;
+    tschchartaxistitle_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+    return temp;
+  }
+}
+inline void ChartAxisGenericPropertyMapArchive::set_allocated_tschchartaxistitle(::std::string* tschchartaxistitle) {
+  if (tschchartaxistitle_ != &::google::protobuf::internal::kEmptyString) {
+    delete tschchartaxistitle_;
+  }
+  if (tschchartaxistitle) {
+    set_has_tschchartaxistitle();
+    tschchartaxistitle_ = tschchartaxistitle;
+  } else {
+    clear_has_tschchartaxistitle();
+    tschchartaxistitle_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+  }
+}
+
+// optional .TSCH.ChartsNSNumberDoubleArchive tschchartaxisusermax = 17;
+inline bool ChartAxisGenericPropertyMapArchive::has_tschchartaxisusermax() const {
+  return (_has_bits_[0] & 0x00010000u) != 0;
+}
+inline void ChartAxisGenericPropertyMapArchive::set_has_tschchartaxisusermax() {
+  _has_bits_[0] |= 0x00010000u;
+}
+inline void ChartAxisGenericPropertyMapArchive::clear_has_tschchartaxisusermax() {
+  _has_bits_[0] &= ~0x00010000u;
+}
+inline void ChartAxisGenericPropertyMapArchive::clear_tschchartaxisusermax() {
+  if (tschchartaxisusermax_ != NULL) tschchartaxisusermax_->::TSCH::ChartsNSNumberDoubleArchive::Clear();
+  clear_has_tschchartaxisusermax();
+}
+inline const ::TSCH::ChartsNSNumberDoubleArchive& ChartAxisGenericPropertyMapArchive::tschchartaxisusermax() const {
+  return tschchartaxisusermax_ != NULL ? *tschchartaxisusermax_ : *default_instance_->tschchartaxisusermax_;
+}
+inline ::TSCH::ChartsNSNumberDoubleArchive* ChartAxisGenericPropertyMapArchive::mutable_tschchartaxisusermax() {
+  set_has_tschchartaxisusermax();
+  if (tschchartaxisusermax_ == NULL) tschchartaxisusermax_ = new ::TSCH::ChartsNSNumberDoubleArchive;
+  return tschchartaxisusermax_;
+}
+inline ::TSCH::ChartsNSNumberDoubleArchive* ChartAxisGenericPropertyMapArchive::release_tschchartaxisusermax() {
+  clear_has_tschchartaxisusermax();
+  ::TSCH::ChartsNSNumberDoubleArchive* temp = tschchartaxisusermax_;
+  tschchartaxisusermax_ = NULL;
+  return temp;
+}
+inline void ChartAxisGenericPropertyMapArchive::set_allocated_tschchartaxisusermax(::TSCH::ChartsNSNumberDoubleArchive* tschchartaxisusermax) {
+  delete tschchartaxisusermax_;
+  tschchartaxisusermax_ = tschchartaxisusermax;
+  if (tschchartaxisusermax) {
+    set_has_tschchartaxisusermax();
+  } else {
+    clear_has_tschchartaxisusermax();
+  }
+}
+
+// optional .TSCH.ChartsNSNumberDoubleArchive tschchartaxisusermin = 18;
+inline bool ChartAxisGenericPropertyMapArchive::has_tschchartaxisusermin() const {
+  return (_has_bits_[0] & 0x00020000u) != 0;
+}
+inline void ChartAxisGenericPropertyMapArchive::set_has_tschchartaxisusermin() {
+  _has_bits_[0] |= 0x00020000u;
+}
+inline void ChartAxisGenericPropertyMapArchive::clear_has_tschchartaxisusermin() {
+  _has_bits_[0] &= ~0x00020000u;
+}
+inline void ChartAxisGenericPropertyMapArchive::clear_tschchartaxisusermin() {
+  if (tschchartaxisusermin_ != NULL) tschchartaxisusermin_->::TSCH::ChartsNSNumberDoubleArchive::Clear();
+  clear_has_tschchartaxisusermin();
+}
+inline const ::TSCH::ChartsNSNumberDoubleArchive& ChartAxisGenericPropertyMapArchive::tschchartaxisusermin() const {
+  return tschchartaxisusermin_ != NULL ? *tschchartaxisusermin_ : *default_instance_->tschchartaxisusermin_;
+}
+inline ::TSCH::ChartsNSNumberDoubleArchive* ChartAxisGenericPropertyMapArchive::mutable_tschchartaxisusermin() {
+  set_has_tschchartaxisusermin();
+  if (tschchartaxisusermin_ == NULL) tschchartaxisusermin_ = new ::TSCH::ChartsNSNumberDoubleArchive;
+  return tschchartaxisusermin_;
+}
+inline ::TSCH::ChartsNSNumberDoubleArchive* ChartAxisGenericPropertyMapArchive::release_tschchartaxisusermin() {
+  clear_has_tschchartaxisusermin();
+  ::TSCH::ChartsNSNumberDoubleArchive* temp = tschchartaxisusermin_;
+  tschchartaxisusermin_ = NULL;
+  return temp;
+}
+inline void ChartAxisGenericPropertyMapArchive::set_allocated_tschchartaxisusermin(::TSCH::ChartsNSNumberDoubleArchive* tschchartaxisusermin) {
+  delete tschchartaxisusermin_;
+  tschchartaxisusermin_ = tschchartaxisusermin;
+  if (tschchartaxisusermin) {
+    set_has_tschchartaxisusermin();
+  } else {
+    clear_has_tschchartaxisusermin();
+  }
+}
+
+// optional float tschchartaxis3dgridlineopacity = 19;
+inline bool ChartAxisGenericPropertyMapArchive::has_tschchartaxis3dgridlineopacity() const {
+  return (_has_bits_[0] & 0x00040000u) != 0;
+}
+inline void ChartAxisGenericPropertyMapArchive::set_has_tschchartaxis3dgridlineopacity() {
+  _has_bits_[0] |= 0x00040000u;
+}
+inline void ChartAxisGenericPropertyMapArchive::clear_has_tschchartaxis3dgridlineopacity() {
+  _has_bits_[0] &= ~0x00040000u;
+}
+inline void ChartAxisGenericPropertyMapArchive::clear_tschchartaxis3dgridlineopacity() {
+  tschchartaxis3dgridlineopacity_ = 0;
+  clear_has_tschchartaxis3dgridlineopacity();
+}
+inline float ChartAxisGenericPropertyMapArchive::tschchartaxis3dgridlineopacity() const {
+  return tschchartaxis3dgridlineopacity_;
+}
+inline void ChartAxisGenericPropertyMapArchive::set_tschchartaxis3dgridlineopacity(float value) {
+  set_has_tschchartaxis3dgridlineopacity();
+  tschchartaxis3dgridlineopacity_ = value;
+}
+
+// optional .TSD.StrokeArchive tschchartaxis3dgridlinestroke = 20;
+inline bool ChartAxisGenericPropertyMapArchive::has_tschchartaxis3dgridlinestroke() const {
+  return (_has_bits_[0] & 0x00080000u) != 0;
+}
+inline void ChartAxisGenericPropertyMapArchive::set_has_tschchartaxis3dgridlinestroke() {
+  _has_bits_[0] |= 0x00080000u;
+}
+inline void ChartAxisGenericPropertyMapArchive::clear_has_tschchartaxis3dgridlinestroke() {
+  _has_bits_[0] &= ~0x00080000u;
+}
+inline void ChartAxisGenericPropertyMapArchive::clear_tschchartaxis3dgridlinestroke() {
+  if (tschchartaxis3dgridlinestroke_ != NULL) tschchartaxis3dgridlinestroke_->::TSD::StrokeArchive::Clear();
+  clear_has_tschchartaxis3dgridlinestroke();
+}
+inline const ::TSD::StrokeArchive& ChartAxisGenericPropertyMapArchive::tschchartaxis3dgridlinestroke() const {
+  return tschchartaxis3dgridlinestroke_ != NULL ? *tschchartaxis3dgridlinestroke_ : *default_instance_->tschchartaxis3dgridlinestroke_;
+}
+inline ::TSD::StrokeArchive* ChartAxisGenericPropertyMapArchive::mutable_tschchartaxis3dgridlinestroke() {
+  set_has_tschchartaxis3dgridlinestroke();
+  if (tschchartaxis3dgridlinestroke_ == NULL) tschchartaxis3dgridlinestroke_ = new ::TSD::StrokeArchive;
+  return tschchartaxis3dgridlinestroke_;
+}
+inline ::TSD::StrokeArchive* ChartAxisGenericPropertyMapArchive::release_tschchartaxis3dgridlinestroke() {
+  clear_has_tschchartaxis3dgridlinestroke();
+  ::TSD::StrokeArchive* temp = tschchartaxis3dgridlinestroke_;
+  tschchartaxis3dgridlinestroke_ = NULL;
+  return temp;
+}
+inline void ChartAxisGenericPropertyMapArchive::set_allocated_tschchartaxis3dgridlinestroke(::TSD::StrokeArchive* tschchartaxis3dgridlinestroke) {
+  delete tschchartaxis3dgridlinestroke_;
+  tschchartaxis3dgridlinestroke_ = tschchartaxis3dgridlinestroke;
+  if (tschchartaxis3dgridlinestroke) {
+    set_has_tschchartaxis3dgridlinestroke();
+  } else {
+    clear_has_tschchartaxis3dgridlinestroke();
+  }
+}
+
+// optional int32 tschchartaxishorizontalspacing = 21;
+inline bool ChartAxisGenericPropertyMapArchive::has_tschchartaxishorizontalspacing() const {
+  return (_has_bits_[0] & 0x00100000u) != 0;
+}
+inline void ChartAxisGenericPropertyMapArchive::set_has_tschchartaxishorizontalspacing() {
+  _has_bits_[0] |= 0x00100000u;
+}
+inline void ChartAxisGenericPropertyMapArchive::clear_has_tschchartaxishorizontalspacing() {
+  _has_bits_[0] &= ~0x00100000u;
+}
+inline void ChartAxisGenericPropertyMapArchive::clear_tschchartaxishorizontalspacing() {
+  tschchartaxishorizontalspacing_ = 0;
+  clear_has_tschchartaxishorizontalspacing();
+}
+inline ::google::protobuf::int32 ChartAxisGenericPropertyMapArchive::tschchartaxishorizontalspacing() const {
+  return tschchartaxishorizontalspacing_;
+}
+inline void ChartAxisGenericPropertyMapArchive::set_tschchartaxishorizontalspacing(::google::protobuf::int32 value) {
+  set_has_tschchartaxishorizontalspacing();
+  tschchartaxishorizontalspacing_ = value;
+}
+
+// optional int32 tschchartaxislabelparagraphstyleindex = 22;
+inline bool ChartAxisGenericPropertyMapArchive::has_tschchartaxislabelparagraphstyleindex() const {
+  return (_has_bits_[0] & 0x00200000u) != 0;
+}
+inline void ChartAxisGenericPropertyMapArchive::set_has_tschchartaxislabelparagraphstyleindex() {
+  _has_bits_[0] |= 0x00200000u;
+}
+inline void ChartAxisGenericPropertyMapArchive::clear_has_tschchartaxislabelparagraphstyleindex() {
+  _has_bits_[0] &= ~0x00200000u;
+}
+inline void ChartAxisGenericPropertyMapArchive::clear_tschchartaxislabelparagraphstyleindex() {
+  tschchartaxislabelparagraphstyleindex_ = 0;
+  clear_has_tschchartaxislabelparagraphstyleindex();
+}
+inline ::google::protobuf::int32 ChartAxisGenericPropertyMapArchive::tschchartaxislabelparagraphstyleindex() const {
+  return tschchartaxislabelparagraphstyleindex_;
+}
+inline void ChartAxisGenericPropertyMapArchive::set_tschchartaxislabelparagraphstyleindex(::google::protobuf::int32 value) {
+  set_has_tschchartaxislabelparagraphstyleindex();
+  tschchartaxislabelparagraphstyleindex_ = value;
+}
+
+// optional float tschchartaxislabelsorientation = 23;
+inline bool ChartAxisGenericPropertyMapArchive::has_tschchartaxislabelsorientation() const {
+  return (_has_bits_[0] & 0x00400000u) != 0;
+}
+inline void ChartAxisGenericPropertyMapArchive::set_has_tschchartaxislabelsorientation() {
+  _has_bits_[0] |= 0x00400000u;
+}
+inline void ChartAxisGenericPropertyMapArchive::clear_has_tschchartaxislabelsorientation() {
+  _has_bits_[0] &= ~0x00400000u;
+}
+inline void ChartAxisGenericPropertyMapArchive::clear_tschchartaxislabelsorientation() {
+  tschchartaxislabelsorientation_ = 0;
+  clear_has_tschchartaxislabelsorientation();
+}
+inline float ChartAxisGenericPropertyMapArchive::tschchartaxislabelsorientation() const {
+  return tschchartaxislabelsorientation_;
+}
+inline void ChartAxisGenericPropertyMapArchive::set_tschchartaxislabelsorientation(float value) {
+  set_has_tschchartaxislabelsorientation();
+  tschchartaxislabelsorientation_ = value;
+}
+
+// optional float tschchartaxismajorgridlineopacity = 24;
+inline bool ChartAxisGenericPropertyMapArchive::has_tschchartaxismajorgridlineopacity() const {
+  return (_has_bits_[0] & 0x00800000u) != 0;
+}
+inline void ChartAxisGenericPropertyMapArchive::set_has_tschchartaxismajorgridlineopacity() {
+  _has_bits_[0] |= 0x00800000u;
+}
+inline void ChartAxisGenericPropertyMapArchive::clear_has_tschchartaxismajorgridlineopacity() {
+  _has_bits_[0] &= ~0x00800000u;
+}
+inline void ChartAxisGenericPropertyMapArchive::clear_tschchartaxismajorgridlineopacity() {
+  tschchartaxismajorgridlineopacity_ = 0;
+  clear_has_tschchartaxismajorgridlineopacity();
+}
+inline float ChartAxisGenericPropertyMapArchive::tschchartaxismajorgridlineopacity() const {
+  return tschchartaxismajorgridlineopacity_;
+}
+inline void ChartAxisGenericPropertyMapArchive::set_tschchartaxismajorgridlineopacity(float value) {
+  set_has_tschchartaxismajorgridlineopacity();
+  tschchartaxismajorgridlineopacity_ = value;
+}
+
+// optional .TSD.ShadowArchive tschchartaxismajorgridlineshadow = 25;
+inline bool ChartAxisGenericPropertyMapArchive::has_tschchartaxismajorgridlineshadow() const {
+  return (_has_bits_[0] & 0x01000000u) != 0;
+}
+inline void ChartAxisGenericPropertyMapArchive::set_has_tschchartaxismajorgridlineshadow() {
+  _has_bits_[0] |= 0x01000000u;
+}
+inline void ChartAxisGenericPropertyMapArchive::clear_has_tschchartaxismajorgridlineshadow() {
+  _has_bits_[0] &= ~0x01000000u;
+}
+inline void ChartAxisGenericPropertyMapArchive::clear_tschchartaxismajorgridlineshadow() {
+  if (tschchartaxismajorgridlineshadow_ != NULL) tschchartaxismajorgridlineshadow_->::TSD::ShadowArchive::Clear();
+  clear_has_tschchartaxismajorgridlineshadow();
+}
+inline const ::TSD::ShadowArchive& ChartAxisGenericPropertyMapArchive::tschchartaxismajorgridlineshadow() const {
+  return tschchartaxismajorgridlineshadow_ != NULL ? *tschchartaxismajorgridlineshadow_ : *default_instance_->tschchartaxismajorgridlineshadow_;
+}
+inline ::TSD::ShadowArchive* ChartAxisGenericPropertyMapArchive::mutable_tschchartaxismajorgridlineshadow() {
+  set_has_tschchartaxismajorgridlineshadow();
+  if (tschchartaxismajorgridlineshadow_ == NULL) tschchartaxismajorgridlineshadow_ = new ::TSD::ShadowArchive;
+  return tschchartaxismajorgridlineshadow_;
+}
+inline ::TSD::ShadowArchive* ChartAxisGenericPropertyMapArchive::release_tschchartaxismajorgridlineshadow() {
+  clear_has_tschchartaxismajorgridlineshadow();
+  ::TSD::ShadowArchive* temp = tschchartaxismajorgridlineshadow_;
+  tschchartaxismajorgridlineshadow_ = NULL;
+  return temp;
+}
+inline void ChartAxisGenericPropertyMapArchive::set_allocated_tschchartaxismajorgridlineshadow(::TSD::ShadowArchive* tschchartaxismajorgridlineshadow) {
+  delete tschchartaxismajorgridlineshadow_;
+  tschchartaxismajorgridlineshadow_ = tschchartaxismajorgridlineshadow;
+  if (tschchartaxismajorgridlineshadow) {
+    set_has_tschchartaxismajorgridlineshadow();
+  } else {
+    clear_has_tschchartaxismajorgridlineshadow();
+  }
+}
+
+// optional .TSD.StrokeArchive tschchartaxismajorgridlinestroke = 26;
+inline bool ChartAxisGenericPropertyMapArchive::has_tschchartaxismajorgridlinestroke() const {
+  return (_has_bits_[0] & 0x02000000u) != 0;
+}
+inline void ChartAxisGenericPropertyMapArchive::set_has_tschchartaxismajorgridlinestroke() {
+  _has_bits_[0] |= 0x02000000u;
+}
+inline void ChartAxisGenericPropertyMapArchive::clear_has_tschchartaxismajorgridlinestroke() {
+  _has_bits_[0] &= ~0x02000000u;
+}
+inline void ChartAxisGenericPropertyMapArchive::clear_tschchartaxismajorgridlinestroke() {
+  if (tschchartaxismajorgridlinestroke_ != NULL) tschchartaxismajorgridlinestroke_->::TSD::StrokeArchive::Clear();
+  clear_has_tschchartaxismajorgridlinestroke();
+}
+inline const ::TSD::StrokeArchive& ChartAxisGenericPropertyMapArchive::tschchartaxismajorgridlinestroke() const {
+  return tschchartaxismajorgridlinestroke_ != NULL ? *tschchartaxismajorgridlinestroke_ : *default_instance_->tschchartaxismajorgridlinestroke_;
+}
+inline ::TSD::StrokeArchive* ChartAxisGenericPropertyMapArchive::mutable_tschchartaxismajorgridlinestroke() {
+  set_has_tschchartaxismajorgridlinestroke();
+  if (tschchartaxismajorgridlinestroke_ == NULL) tschchartaxismajorgridlinestroke_ = new ::TSD::StrokeArchive;
+  return tschchartaxismajorgridlinestroke_;
+}
+inline ::TSD::StrokeArchive* ChartAxisGenericPropertyMapArchive::release_tschchartaxismajorgridlinestroke() {
+  clear_has_tschchartaxismajorgridlinestroke();
+  ::TSD::StrokeArchive* temp = tschchartaxismajorgridlinestroke_;
+  tschchartaxismajorgridlinestroke_ = NULL;
+  return temp;
+}
+inline void ChartAxisGenericPropertyMapArchive::set_allocated_tschchartaxismajorgridlinestroke(::TSD::StrokeArchive* tschchartaxismajorgridlinestroke) {
+  delete tschchartaxismajorgridlinestroke_;
+  tschchartaxismajorgridlinestroke_ = tschchartaxismajorgridlinestroke;
+  if (tschchartaxismajorgridlinestroke) {
+    set_has_tschchartaxismajorgridlinestroke();
+  } else {
+    clear_has_tschchartaxismajorgridlinestroke();
+  }
+}
+
+// optional float tschchartaxisminorgridlineopacity = 27;
+inline bool ChartAxisGenericPropertyMapArchive::has_tschchartaxisminorgridlineopacity() const {
+  return (_has_bits_[0] & 0x04000000u) != 0;
+}
+inline void ChartAxisGenericPropertyMapArchive::set_has_tschchartaxisminorgridlineopacity() {
+  _has_bits_[0] |= 0x04000000u;
+}
+inline void ChartAxisGenericPropertyMapArchive::clear_has_tschchartaxisminorgridlineopacity() {
+  _has_bits_[0] &= ~0x04000000u;
+}
+inline void ChartAxisGenericPropertyMapArchive::clear_tschchartaxisminorgridlineopacity() {
+  tschchartaxisminorgridlineopacity_ = 0;
+  clear_has_tschchartaxisminorgridlineopacity();
+}
+inline float ChartAxisGenericPropertyMapArchive::tschchartaxisminorgridlineopacity() const {
+  return tschchartaxisminorgridlineopacity_;
+}
+inline void ChartAxisGenericPropertyMapArchive::set_tschchartaxisminorgridlineopacity(float value) {
+  set_has_tschchartaxisminorgridlineopacity();
+  tschchartaxisminorgridlineopacity_ = value;
+}
+
+// optional .TSD.ShadowArchive tschchartaxisminorgridlineshadow = 28;
+inline bool ChartAxisGenericPropertyMapArchive::has_tschchartaxisminorgridlineshadow() const {
+  return (_has_bits_[0] & 0x08000000u) != 0;
+}
+inline void ChartAxisGenericPropertyMapArchive::set_has_tschchartaxisminorgridlineshadow() {
+  _has_bits_[0] |= 0x08000000u;
+}
+inline void ChartAxisGenericPropertyMapArchive::clear_has_tschchartaxisminorgridlineshadow() {
+  _has_bits_[0] &= ~0x08000000u;
+}
+inline void ChartAxisGenericPropertyMapArchive::clear_tschchartaxisminorgridlineshadow() {
+  if (tschchartaxisminorgridlineshadow_ != NULL) tschchartaxisminorgridlineshadow_->::TSD::ShadowArchive::Clear();
+  clear_has_tschchartaxisminorgridlineshadow();
+}
+inline const ::TSD::ShadowArchive& ChartAxisGenericPropertyMapArchive::tschchartaxisminorgridlineshadow() const {
+  return tschchartaxisminorgridlineshadow_ != NULL ? *tschchartaxisminorgridlineshadow_ : *default_instance_->tschchartaxisminorgridlineshadow_;
+}
+inline ::TSD::ShadowArchive* ChartAxisGenericPropertyMapArchive::mutable_tschchartaxisminorgridlineshadow() {
+  set_has_tschchartaxisminorgridlineshadow();
+  if (tschchartaxisminorgridlineshadow_ == NULL) tschchartaxisminorgridlineshadow_ = new ::TSD::ShadowArchive;
+  return tschchartaxisminorgridlineshadow_;
+}
+inline ::TSD::ShadowArchive* ChartAxisGenericPropertyMapArchive::release_tschchartaxisminorgridlineshadow() {
+  clear_has_tschchartaxisminorgridlineshadow();
+  ::TSD::ShadowArchive* temp = tschchartaxisminorgridlineshadow_;
+  tschchartaxisminorgridlineshadow_ = NULL;
+  return temp;
+}
+inline void ChartAxisGenericPropertyMapArchive::set_allocated_tschchartaxisminorgridlineshadow(::TSD::ShadowArchive* tschchartaxisminorgridlineshadow) {
+  delete tschchartaxisminorgridlineshadow_;
+  tschchartaxisminorgridlineshadow_ = tschchartaxisminorgridlineshadow;
+  if (tschchartaxisminorgridlineshadow) {
+    set_has_tschchartaxisminorgridlineshadow();
+  } else {
+    clear_has_tschchartaxisminorgridlineshadow();
+  }
+}
+
+// optional .TSD.StrokeArchive tschchartaxisminorgridlinestroke = 29;
+inline bool ChartAxisGenericPropertyMapArchive::has_tschchartaxisminorgridlinestroke() const {
+  return (_has_bits_[0] & 0x10000000u) != 0;
+}
+inline void ChartAxisGenericPropertyMapArchive::set_has_tschchartaxisminorgridlinestroke() {
+  _has_bits_[0] |= 0x10000000u;
+}
+inline void ChartAxisGenericPropertyMapArchive::clear_has_tschchartaxisminorgridlinestroke() {
+  _has_bits_[0] &= ~0x10000000u;
+}
+inline void ChartAxisGenericPropertyMapArchive::clear_tschchartaxisminorgridlinestroke() {
+  if (tschchartaxisminorgridlinestroke_ != NULL) tschchartaxisminorgridlinestroke_->::TSD::StrokeArchive::Clear();
+  clear_has_tschchartaxisminorgridlinestroke();
+}
+inline const ::TSD::StrokeArchive& ChartAxisGenericPropertyMapArchive::tschchartaxisminorgridlinestroke() const {
+  return tschchartaxisminorgridlinestroke_ != NULL ? *tschchartaxisminorgridlinestroke_ : *default_instance_->tschchartaxisminorgridlinestroke_;
+}
+inline ::TSD::StrokeArchive* ChartAxisGenericPropertyMapArchive::mutable_tschchartaxisminorgridlinestroke() {
+  set_has_tschchartaxisminorgridlinestroke();
+  if (tschchartaxisminorgridlinestroke_ == NULL) tschchartaxisminorgridlinestroke_ = new ::TSD::StrokeArchive;
+  return tschchartaxisminorgridlinestroke_;
+}
+inline ::TSD::StrokeArchive* ChartAxisGenericPropertyMapArchive::release_tschchartaxisminorgridlinestroke() {
+  clear_has_tschchartaxisminorgridlinestroke();
+  ::TSD::StrokeArchive* temp = tschchartaxisminorgridlinestroke_;
+  tschchartaxisminorgridlinestroke_ = NULL;
+  return temp;
+}
+inline void ChartAxisGenericPropertyMapArchive::set_allocated_tschchartaxisminorgridlinestroke(::TSD::StrokeArchive* tschchartaxisminorgridlinestroke) {
+  delete tschchartaxisminorgridlinestroke_;
+  tschchartaxisminorgridlinestroke_ = tschchartaxisminorgridlinestroke;
+  if (tschchartaxisminorgridlinestroke) {
+    set_has_tschchartaxisminorgridlinestroke();
+  } else {
+    clear_has_tschchartaxisminorgridlinestroke();
+  }
+}
+
+// optional bool tschchartaxisshowaxis = 30;
+inline bool ChartAxisGenericPropertyMapArchive::has_tschchartaxisshowaxis() const {
+  return (_has_bits_[0] & 0x20000000u) != 0;
+}
+inline void ChartAxisGenericPropertyMapArchive::set_has_tschchartaxisshowaxis() {
+  _has_bits_[0] |= 0x20000000u;
+}
+inline void ChartAxisGenericPropertyMapArchive::clear_has_tschchartaxisshowaxis() {
+  _has_bits_[0] &= ~0x20000000u;
+}
+inline void ChartAxisGenericPropertyMapArchive::clear_tschchartaxisshowaxis() {
+  tschchartaxisshowaxis_ = false;
+  clear_has_tschchartaxisshowaxis();
+}
+inline bool ChartAxisGenericPropertyMapArchive::tschchartaxisshowaxis() const {
+  return tschchartaxisshowaxis_;
+}
+inline void ChartAxisGenericPropertyMapArchive::set_tschchartaxisshowaxis(bool value) {
+  set_has_tschchartaxisshowaxis();
+  tschchartaxisshowaxis_ = value;
+}
+
+// optional bool tschchartaxisshowlastlabel = 31;
+inline bool ChartAxisGenericPropertyMapArchive::has_tschchartaxisshowlastlabel() const {
+  return (_has_bits_[0] & 0x40000000u) != 0;
+}
+inline void ChartAxisGenericPropertyMapArchive::set_has_tschchartaxisshowlastlabel() {
+  _has_bits_[0] |= 0x40000000u;
+}
+inline void ChartAxisGenericPropertyMapArchive::clear_has_tschchartaxisshowlastlabel() {
+  _has_bits_[0] &= ~0x40000000u;
+}
+inline void ChartAxisGenericPropertyMapArchive::clear_tschchartaxisshowlastlabel() {
+  tschchartaxisshowlastlabel_ = false;
+  clear_has_tschchartaxisshowlastlabel();
+}
+inline bool ChartAxisGenericPropertyMapArchive::tschchartaxisshowlastlabel() const {
+  return tschchartaxisshowlastlabel_;
+}
+inline void ChartAxisGenericPropertyMapArchive::set_tschchartaxisshowlastlabel(bool value) {
+  set_has_tschchartaxisshowlastlabel();
+  tschchartaxisshowlastlabel_ = value;
+}
+
+// optional bool tschchartaxisshowmajorgridlines = 32;
+inline bool ChartAxisGenericPropertyMapArchive::has_tschchartaxisshowmajorgridlines() const {
+  return (_has_bits_[0] & 0x80000000u) != 0;
+}
+inline void ChartAxisGenericPropertyMapArchive::set_has_tschchartaxisshowmajorgridlines() {
+  _has_bits_[0] |= 0x80000000u;
+}
+inline void ChartAxisGenericPropertyMapArchive::clear_has_tschchartaxisshowmajorgridlines() {
+  _has_bits_[0] &= ~0x80000000u;
+}
+inline void ChartAxisGenericPropertyMapArchive::clear_tschchartaxisshowmajorgridlines() {
+  tschchartaxisshowmajorgridlines_ = false;
+  clear_has_tschchartaxisshowmajorgridlines();
+}
+inline bool ChartAxisGenericPropertyMapArchive::tschchartaxisshowmajorgridlines() const {
+  return tschchartaxisshowmajorgridlines_;
+}
+inline void ChartAxisGenericPropertyMapArchive::set_tschchartaxisshowmajorgridlines(bool value) {
+  set_has_tschchartaxisshowmajorgridlines();
+  tschchartaxisshowmajorgridlines_ = value;
+}
+
+// optional bool tschchartaxisshowmajortickmarks = 33;
+inline bool ChartAxisGenericPropertyMapArchive::has_tschchartaxisshowmajortickmarks() const {
+  return (_has_bits_[1] & 0x00000001u) != 0;
+}
+inline void ChartAxisGenericPropertyMapArchive::set_has_tschchartaxisshowmajortickmarks() {
+  _has_bits_[1] |= 0x00000001u;
+}
+inline void ChartAxisGenericPropertyMapArchive::clear_has_tschchartaxisshowmajortickmarks() {
+  _has_bits_[1] &= ~0x00000001u;
+}
+inline void ChartAxisGenericPropertyMapArchive::clear_tschchartaxisshowmajortickmarks() {
+  tschchartaxisshowmajortickmarks_ = false;
+  clear_has_tschchartaxisshowmajortickmarks();
+}
+inline bool ChartAxisGenericPropertyMapArchive::tschchartaxisshowmajortickmarks() const {
+  return tschchartaxisshowmajortickmarks_;
+}
+inline void ChartAxisGenericPropertyMapArchive::set_tschchartaxisshowmajortickmarks(bool value) {
+  set_has_tschchartaxisshowmajortickmarks();
+  tschchartaxisshowmajortickmarks_ = value;
+}
+
+// optional bool tschchartaxisshowminimumlabel = 34;
+inline bool ChartAxisGenericPropertyMapArchive::has_tschchartaxisshowminimumlabel() const {
+  return (_has_bits_[1] & 0x00000002u) != 0;
+}
+inline void ChartAxisGenericPropertyMapArchive::set_has_tschchartaxisshowminimumlabel() {
+  _has_bits_[1] |= 0x00000002u;
+}
+inline void ChartAxisGenericPropertyMapArchive::clear_has_tschchartaxisshowminimumlabel() {
+  _has_bits_[1] &= ~0x00000002u;
+}
+inline void ChartAxisGenericPropertyMapArchive::clear_tschchartaxisshowminimumlabel() {
+  tschchartaxisshowminimumlabel_ = false;
+  clear_has_tschchartaxisshowminimumlabel();
+}
+inline bool ChartAxisGenericPropertyMapArchive::tschchartaxisshowminimumlabel() const {
+  return tschchartaxisshowminimumlabel_;
+}
+inline void ChartAxisGenericPropertyMapArchive::set_tschchartaxisshowminimumlabel(bool value) {
+  set_has_tschchartaxisshowminimumlabel();
+  tschchartaxisshowminimumlabel_ = value;
+}
+
+// optional bool tschchartaxisshowminorgridlines = 35;
+inline bool ChartAxisGenericPropertyMapArchive::has_tschchartaxisshowminorgridlines() const {
+  return (_has_bits_[1] & 0x00000004u) != 0;
+}
+inline void ChartAxisGenericPropertyMapArchive::set_has_tschchartaxisshowminorgridlines() {
+  _has_bits_[1] |= 0x00000004u;
+}
+inline void ChartAxisGenericPropertyMapArchive::clear_has_tschchartaxisshowminorgridlines() {
+  _has_bits_[1] &= ~0x00000004u;
+}
+inline void ChartAxisGenericPropertyMapArchive::clear_tschchartaxisshowminorgridlines() {
+  tschchartaxisshowminorgridlines_ = false;
+  clear_has_tschchartaxisshowminorgridlines();
+}
+inline bool ChartAxisGenericPropertyMapArchive::tschchartaxisshowminorgridlines() const {
+  return tschchartaxisshowminorgridlines_;
+}
+inline void ChartAxisGenericPropertyMapArchive::set_tschchartaxisshowminorgridlines(bool value) {
+  set_has_tschchartaxisshowminorgridlines();
+  tschchartaxisshowminorgridlines_ = value;
+}
+
+// optional bool tschchartaxisshowminortickmarks = 36;
+inline bool ChartAxisGenericPropertyMapArchive::has_tschchartaxisshowminortickmarks() const {
+  return (_has_bits_[1] & 0x00000008u) != 0;
+}
+inline void ChartAxisGenericPropertyMapArchive::set_has_tschchartaxisshowminortickmarks() {
+  _has_bits_[1] |= 0x00000008u;
+}
+inline void ChartAxisGenericPropertyMapArchive::clear_has_tschchartaxisshowminortickmarks() {
+  _has_bits_[1] &= ~0x00000008u;
+}
+inline void ChartAxisGenericPropertyMapArchive::clear_tschchartaxisshowminortickmarks() {
+  tschchartaxisshowminortickmarks_ = false;
+  clear_has_tschchartaxisshowminortickmarks();
+}
+inline bool ChartAxisGenericPropertyMapArchive::tschchartaxisshowminortickmarks() const {
+  return tschchartaxisshowminortickmarks_;
+}
+inline void ChartAxisGenericPropertyMapArchive::set_tschchartaxisshowminortickmarks(bool value) {
+  set_has_tschchartaxisshowminortickmarks();
+  tschchartaxisshowminortickmarks_ = value;
+}
+
+// optional int32 tschchartaxistickmarklocation = 37;
+inline bool ChartAxisGenericPropertyMapArchive::has_tschchartaxistickmarklocation() const {
+  return (_has_bits_[1] & 0x00000010u) != 0;
+}
+inline void ChartAxisGenericPropertyMapArchive::set_has_tschchartaxistickmarklocation() {
+  _has_bits_[1] |= 0x00000010u;
+}
+inline void ChartAxisGenericPropertyMapArchive::clear_has_tschchartaxistickmarklocation() {
+  _has_bits_[1] &= ~0x00000010u;
+}
+inline void ChartAxisGenericPropertyMapArchive::clear_tschchartaxistickmarklocation() {
+  tschchartaxistickmarklocation_ = 0;
+  clear_has_tschchartaxistickmarklocation();
+}
+inline ::google::protobuf::int32 ChartAxisGenericPropertyMapArchive::tschchartaxistickmarklocation() const {
+  return tschchartaxistickmarklocation_;
+}
+inline void ChartAxisGenericPropertyMapArchive::set_tschchartaxistickmarklocation(::google::protobuf::int32 value) {
+  set_has_tschchartaxistickmarklocation();
+  tschchartaxistickmarklocation_ = value;
+}
+
+// optional int32 tschchartaxistitleparagraphstyleindex = 38;
+inline bool ChartAxisGenericPropertyMapArchive::has_tschchartaxistitleparagraphstyleindex() const {
+  return (_has_bits_[1] & 0x00000020u) != 0;
+}
+inline void ChartAxisGenericPropertyMapArchive::set_has_tschchartaxistitleparagraphstyleindex() {
+  _has_bits_[1] |= 0x00000020u;
+}
+inline void ChartAxisGenericPropertyMapArchive::clear_has_tschchartaxistitleparagraphstyleindex() {
+  _has_bits_[1] &= ~0x00000020u;
+}
+inline void ChartAxisGenericPropertyMapArchive::clear_tschchartaxistitleparagraphstyleindex() {
+  tschchartaxistitleparagraphstyleindex_ = 0;
+  clear_has_tschchartaxistitleparagraphstyleindex();
+}
+inline ::google::protobuf::int32 ChartAxisGenericPropertyMapArchive::tschchartaxistitleparagraphstyleindex() const {
+  return tschchartaxistitleparagraphstyleindex_;
+}
+inline void ChartAxisGenericPropertyMapArchive::set_tschchartaxistitleparagraphstyleindex(::google::protobuf::int32 value) {
+  set_has_tschchartaxistitleparagraphstyleindex();
+  tschchartaxistitleparagraphstyleindex_ = value;
+}
+
+// optional int32 tschchartaxisverticalspacing = 39;
+inline bool ChartAxisGenericPropertyMapArchive::has_tschchartaxisverticalspacing() const {
+  return (_has_bits_[1] & 0x00000040u) != 0;
+}
+inline void ChartAxisGenericPropertyMapArchive::set_has_tschchartaxisverticalspacing() {
+  _has_bits_[1] |= 0x00000040u;
+}
+inline void ChartAxisGenericPropertyMapArchive::clear_has_tschchartaxisverticalspacing() {
+  _has_bits_[1] &= ~0x00000040u;
+}
+inline void ChartAxisGenericPropertyMapArchive::clear_tschchartaxisverticalspacing() {
+  tschchartaxisverticalspacing_ = 0;
+  clear_has_tschchartaxisverticalspacing();
+}
+inline ::google::protobuf::int32 ChartAxisGenericPropertyMapArchive::tschchartaxisverticalspacing() const {
+  return tschchartaxisverticalspacing_;
+}
+inline void ChartAxisGenericPropertyMapArchive::set_tschchartaxisverticalspacing(::google::protobuf::int32 value) {
+  set_has_tschchartaxisverticalspacing();
+  tschchartaxisverticalspacing_ = value;
+}
+
+// -------------------------------------------------------------------
+
+// ChartSeriesGenericPropertyMapArchive
+
+// optional float tschchartseriesadjustmentscale = 1;
+inline bool ChartSeriesGenericPropertyMapArchive::has_tschchartseriesadjustmentscale() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_has_tschchartseriesadjustmentscale() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_has_tschchartseriesadjustmentscale() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_tschchartseriesadjustmentscale() {
+  tschchartseriesadjustmentscale_ = 0;
+  clear_has_tschchartseriesadjustmentscale();
+}
+inline float ChartSeriesGenericPropertyMapArchive::tschchartseriesadjustmentscale() const {
+  return tschchartseriesadjustmentscale_;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_tschchartseriesadjustmentscale(float value) {
+  set_has_tschchartseriesadjustmentscale();
+  tschchartseriesadjustmentscale_ = value;
+}
+
+// optional .TSCH.ChartsNSArrayOfNSNumberDoubleArchive tschchartserieserrorbarcustomnegativedata = 2;
+inline bool ChartSeriesGenericPropertyMapArchive::has_tschchartserieserrorbarcustomnegativedata() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_has_tschchartserieserrorbarcustomnegativedata() {
+  _has_bits_[0] |= 0x00000002u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_has_tschchartserieserrorbarcustomnegativedata() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_tschchartserieserrorbarcustomnegativedata() {
+  if (tschchartserieserrorbarcustomnegativedata_ != NULL) tschchartserieserrorbarcustomnegativedata_->::TSCH::ChartsNSArrayOfNSNumberDoubleArchive::Clear();
+  clear_has_tschchartserieserrorbarcustomnegativedata();
+}
+inline const ::TSCH::ChartsNSArrayOfNSNumberDoubleArchive& ChartSeriesGenericPropertyMapArchive::tschchartserieserrorbarcustomnegativedata() const {
+  return tschchartserieserrorbarcustomnegativedata_ != NULL ? *tschchartserieserrorbarcustomnegativedata_ : *default_instance_->tschchartserieserrorbarcustomnegativedata_;
+}
+inline ::TSCH::ChartsNSArrayOfNSNumberDoubleArchive* ChartSeriesGenericPropertyMapArchive::mutable_tschchartserieserrorbarcustomnegativedata() {
+  set_has_tschchartserieserrorbarcustomnegativedata();
+  if (tschchartserieserrorbarcustomnegativedata_ == NULL) tschchartserieserrorbarcustomnegativedata_ = new ::TSCH::ChartsNSArrayOfNSNumberDoubleArchive;
+  return tschchartserieserrorbarcustomnegativedata_;
+}
+inline ::TSCH::ChartsNSArrayOfNSNumberDoubleArchive* ChartSeriesGenericPropertyMapArchive::release_tschchartserieserrorbarcustomnegativedata() {
+  clear_has_tschchartserieserrorbarcustomnegativedata();
+  ::TSCH::ChartsNSArrayOfNSNumberDoubleArchive* temp = tschchartserieserrorbarcustomnegativedata_;
+  tschchartserieserrorbarcustomnegativedata_ = NULL;
+  return temp;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_allocated_tschchartserieserrorbarcustomnegativedata(::TSCH::ChartsNSArrayOfNSNumberDoubleArchive* tschchartserieserrorbarcustomnegativedata) {
+  delete tschchartserieserrorbarcustomnegativedata_;
+  tschchartserieserrorbarcustomnegativedata_ = tschchartserieserrorbarcustomnegativedata;
+  if (tschchartserieserrorbarcustomnegativedata) {
+    set_has_tschchartserieserrorbarcustomnegativedata();
+  } else {
+    clear_has_tschchartserieserrorbarcustomnegativedata();
+  }
+}
+
+// optional .TSCH.ChartsNSArrayOfNSNumberDoubleArchive tschchartserieserrorbarcustomnegativedatascatterx = 3;
+inline bool ChartSeriesGenericPropertyMapArchive::has_tschchartserieserrorbarcustomnegativedatascatterx() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_has_tschchartserieserrorbarcustomnegativedatascatterx() {
+  _has_bits_[0] |= 0x00000004u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_has_tschchartserieserrorbarcustomnegativedatascatterx() {
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_tschchartserieserrorbarcustomnegativedatascatterx() {
+  if (tschchartserieserrorbarcustomnegativedatascatterx_ != NULL) tschchartserieserrorbarcustomnegativedatascatterx_->::TSCH::ChartsNSArrayOfNSNumberDoubleArchive::Clear();
+  clear_has_tschchartserieserrorbarcustomnegativedatascatterx();
+}
+inline const ::TSCH::ChartsNSArrayOfNSNumberDoubleArchive& ChartSeriesGenericPropertyMapArchive::tschchartserieserrorbarcustomnegativedatascatterx() const {
+  return tschchartserieserrorbarcustomnegativedatascatterx_ != NULL ? *tschchartserieserrorbarcustomnegativedatascatterx_ : *default_instance_->tschchartserieserrorbarcustomnegativedatascatterx_;
+}
+inline ::TSCH::ChartsNSArrayOfNSNumberDoubleArchive* ChartSeriesGenericPropertyMapArchive::mutable_tschchartserieserrorbarcustomnegativedatascatterx() {
+  set_has_tschchartserieserrorbarcustomnegativedatascatterx();
+  if (tschchartserieserrorbarcustomnegativedatascatterx_ == NULL) tschchartserieserrorbarcustomnegativedatascatterx_ = new ::TSCH::ChartsNSArrayOfNSNumberDoubleArchive;
+  return tschchartserieserrorbarcustomnegativedatascatterx_;
+}
+inline ::TSCH::ChartsNSArrayOfNSNumberDoubleArchive* ChartSeriesGenericPropertyMapArchive::release_tschchartserieserrorbarcustomnegativedatascatterx() {
+  clear_has_tschchartserieserrorbarcustomnegativedatascatterx();
+  ::TSCH::ChartsNSArrayOfNSNumberDoubleArchive* temp = tschchartserieserrorbarcustomnegativedatascatterx_;
+  tschchartserieserrorbarcustomnegativedatascatterx_ = NULL;
+  return temp;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_allocated_tschchartserieserrorbarcustomnegativedatascatterx(::TSCH::ChartsNSArrayOfNSNumberDoubleArchive* tschchartserieserrorbarcustomnegativedatascatterx) {
+  delete tschchartserieserrorbarcustomnegativedatascatterx_;
+  tschchartserieserrorbarcustomnegativedatascatterx_ = tschchartserieserrorbarcustomnegativedatascatterx;
+  if (tschchartserieserrorbarcustomnegativedatascatterx) {
+    set_has_tschchartserieserrorbarcustomnegativedatascatterx();
+  } else {
+    clear_has_tschchartserieserrorbarcustomnegativedatascatterx();
+  }
+}
+
+// optional .TSCH.ChartsNSArrayOfNSNumberDoubleArchive tschchartserieserrorbarcustompositivedata = 4;
+inline bool ChartSeriesGenericPropertyMapArchive::has_tschchartserieserrorbarcustompositivedata() const {
+  return (_has_bits_[0] & 0x00000008u) != 0;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_has_tschchartserieserrorbarcustompositivedata() {
+  _has_bits_[0] |= 0x00000008u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_has_tschchartserieserrorbarcustompositivedata() {
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_tschchartserieserrorbarcustompositivedata() {
+  if (tschchartserieserrorbarcustompositivedata_ != NULL) tschchartserieserrorbarcustompositivedata_->::TSCH::ChartsNSArrayOfNSNumberDoubleArchive::Clear();
+  clear_has_tschchartserieserrorbarcustompositivedata();
+}
+inline const ::TSCH::ChartsNSArrayOfNSNumberDoubleArchive& ChartSeriesGenericPropertyMapArchive::tschchartserieserrorbarcustompositivedata() const {
+  return tschchartserieserrorbarcustompositivedata_ != NULL ? *tschchartserieserrorbarcustompositivedata_ : *default_instance_->tschchartserieserrorbarcustompositivedata_;
+}
+inline ::TSCH::ChartsNSArrayOfNSNumberDoubleArchive* ChartSeriesGenericPropertyMapArchive::mutable_tschchartserieserrorbarcustompositivedata() {
+  set_has_tschchartserieserrorbarcustompositivedata();
+  if (tschchartserieserrorbarcustompositivedata_ == NULL) tschchartserieserrorbarcustompositivedata_ = new ::TSCH::ChartsNSArrayOfNSNumberDoubleArchive;
+  return tschchartserieserrorbarcustompositivedata_;
+}
+inline ::TSCH::ChartsNSArrayOfNSNumberDoubleArchive* ChartSeriesGenericPropertyMapArchive::release_tschchartserieserrorbarcustompositivedata() {
+  clear_has_tschchartserieserrorbarcustompositivedata();
+  ::TSCH::ChartsNSArrayOfNSNumberDoubleArchive* temp = tschchartserieserrorbarcustompositivedata_;
+  tschchartserieserrorbarcustompositivedata_ = NULL;
+  return temp;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_allocated_tschchartserieserrorbarcustompositivedata(::TSCH::ChartsNSArrayOfNSNumberDoubleArchive* tschchartserieserrorbarcustompositivedata) {
+  delete tschchartserieserrorbarcustompositivedata_;
+  tschchartserieserrorbarcustompositivedata_ = tschchartserieserrorbarcustompositivedata;
+  if (tschchartserieserrorbarcustompositivedata) {
+    set_has_tschchartserieserrorbarcustompositivedata();
+  } else {
+    clear_has_tschchartserieserrorbarcustompositivedata();
+  }
+}
+
+// optional .TSCH.ChartsNSArrayOfNSNumberDoubleArchive tschchartserieserrorbarcustompositivedatascatterx = 5;
+inline bool ChartSeriesGenericPropertyMapArchive::has_tschchartserieserrorbarcustompositivedatascatterx() const {
+  return (_has_bits_[0] & 0x00000010u) != 0;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_has_tschchartserieserrorbarcustompositivedatascatterx() {
+  _has_bits_[0] |= 0x00000010u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_has_tschchartserieserrorbarcustompositivedatascatterx() {
+  _has_bits_[0] &= ~0x00000010u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_tschchartserieserrorbarcustompositivedatascatterx() {
+  if (tschchartserieserrorbarcustompositivedatascatterx_ != NULL) tschchartserieserrorbarcustompositivedatascatterx_->::TSCH::ChartsNSArrayOfNSNumberDoubleArchive::Clear();
+  clear_has_tschchartserieserrorbarcustompositivedatascatterx();
+}
+inline const ::TSCH::ChartsNSArrayOfNSNumberDoubleArchive& ChartSeriesGenericPropertyMapArchive::tschchartserieserrorbarcustompositivedatascatterx() const {
+  return tschchartserieserrorbarcustompositivedatascatterx_ != NULL ? *tschchartserieserrorbarcustompositivedatascatterx_ : *default_instance_->tschchartserieserrorbarcustompositivedatascatterx_;
+}
+inline ::TSCH::ChartsNSArrayOfNSNumberDoubleArchive* ChartSeriesGenericPropertyMapArchive::mutable_tschchartserieserrorbarcustompositivedatascatterx() {
+  set_has_tschchartserieserrorbarcustompositivedatascatterx();
+  if (tschchartserieserrorbarcustompositivedatascatterx_ == NULL) tschchartserieserrorbarcustompositivedatascatterx_ = new ::TSCH::ChartsNSArrayOfNSNumberDoubleArchive;
+  return tschchartserieserrorbarcustompositivedatascatterx_;
+}
+inline ::TSCH::ChartsNSArrayOfNSNumberDoubleArchive* ChartSeriesGenericPropertyMapArchive::release_tschchartserieserrorbarcustompositivedatascatterx() {
+  clear_has_tschchartserieserrorbarcustompositivedatascatterx();
+  ::TSCH::ChartsNSArrayOfNSNumberDoubleArchive* temp = tschchartserieserrorbarcustompositivedatascatterx_;
+  tschchartserieserrorbarcustompositivedatascatterx_ = NULL;
+  return temp;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_allocated_tschchartserieserrorbarcustompositivedatascatterx(::TSCH::ChartsNSArrayOfNSNumberDoubleArchive* tschchartserieserrorbarcustompositivedatascatterx) {
+  delete tschchartserieserrorbarcustompositivedatascatterx_;
+  tschchartserieserrorbarcustompositivedatascatterx_ = tschchartserieserrorbarcustompositivedatascatterx;
+  if (tschchartserieserrorbarcustompositivedatascatterx) {
+    set_has_tschchartserieserrorbarcustompositivedatascatterx();
+  } else {
+    clear_has_tschchartserieserrorbarcustompositivedatascatterx();
+  }
+}
+
+// optional float tschchartserieserrorbarfixedvalue = 6;
+inline bool ChartSeriesGenericPropertyMapArchive::has_tschchartserieserrorbarfixedvalue() const {
+  return (_has_bits_[0] & 0x00000020u) != 0;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_has_tschchartserieserrorbarfixedvalue() {
+  _has_bits_[0] |= 0x00000020u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_has_tschchartserieserrorbarfixedvalue() {
+  _has_bits_[0] &= ~0x00000020u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_tschchartserieserrorbarfixedvalue() {
+  tschchartserieserrorbarfixedvalue_ = 0;
+  clear_has_tschchartserieserrorbarfixedvalue();
+}
+inline float ChartSeriesGenericPropertyMapArchive::tschchartserieserrorbarfixedvalue() const {
+  return tschchartserieserrorbarfixedvalue_;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_tschchartserieserrorbarfixedvalue(float value) {
+  set_has_tschchartserieserrorbarfixedvalue();
+  tschchartserieserrorbarfixedvalue_ = value;
+}
+
+// optional float tschchartserieserrorbarfixedvaluescatterx = 7;
+inline bool ChartSeriesGenericPropertyMapArchive::has_tschchartserieserrorbarfixedvaluescatterx() const {
+  return (_has_bits_[0] & 0x00000040u) != 0;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_has_tschchartserieserrorbarfixedvaluescatterx() {
+  _has_bits_[0] |= 0x00000040u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_has_tschchartserieserrorbarfixedvaluescatterx() {
+  _has_bits_[0] &= ~0x00000040u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_tschchartserieserrorbarfixedvaluescatterx() {
+  tschchartserieserrorbarfixedvaluescatterx_ = 0;
+  clear_has_tschchartserieserrorbarfixedvaluescatterx();
+}
+inline float ChartSeriesGenericPropertyMapArchive::tschchartserieserrorbarfixedvaluescatterx() const {
+  return tschchartserieserrorbarfixedvaluescatterx_;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_tschchartserieserrorbarfixedvaluescatterx(float value) {
+  set_has_tschchartserieserrorbarfixedvaluescatterx();
+  tschchartserieserrorbarfixedvaluescatterx_ = value;
+}
+
+// optional float tschchartserieserrorbarpercentvalue = 8;
+inline bool ChartSeriesGenericPropertyMapArchive::has_tschchartserieserrorbarpercentvalue() const {
+  return (_has_bits_[0] & 0x00000080u) != 0;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_has_tschchartserieserrorbarpercentvalue() {
+  _has_bits_[0] |= 0x00000080u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_has_tschchartserieserrorbarpercentvalue() {
+  _has_bits_[0] &= ~0x00000080u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_tschchartserieserrorbarpercentvalue() {
+  tschchartserieserrorbarpercentvalue_ = 0;
+  clear_has_tschchartserieserrorbarpercentvalue();
+}
+inline float ChartSeriesGenericPropertyMapArchive::tschchartserieserrorbarpercentvalue() const {
+  return tschchartserieserrorbarpercentvalue_;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_tschchartserieserrorbarpercentvalue(float value) {
+  set_has_tschchartserieserrorbarpercentvalue();
+  tschchartserieserrorbarpercentvalue_ = value;
+}
+
+// optional float tschchartserieserrorbarpercentvaluescatterx = 9;
+inline bool ChartSeriesGenericPropertyMapArchive::has_tschchartserieserrorbarpercentvaluescatterx() const {
+  return (_has_bits_[0] & 0x00000100u) != 0;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_has_tschchartserieserrorbarpercentvaluescatterx() {
+  _has_bits_[0] |= 0x00000100u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_has_tschchartserieserrorbarpercentvaluescatterx() {
+  _has_bits_[0] &= ~0x00000100u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_tschchartserieserrorbarpercentvaluescatterx() {
+  tschchartserieserrorbarpercentvaluescatterx_ = 0;
+  clear_has_tschchartserieserrorbarpercentvaluescatterx();
+}
+inline float ChartSeriesGenericPropertyMapArchive::tschchartserieserrorbarpercentvaluescatterx() const {
+  return tschchartserieserrorbarpercentvaluescatterx_;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_tschchartserieserrorbarpercentvaluescatterx(float value) {
+  set_has_tschchartserieserrorbarpercentvaluescatterx();
+  tschchartserieserrorbarpercentvaluescatterx_ = value;
+}
+
+// optional int32 tschchartserieserrorbarsetting = 10;
+inline bool ChartSeriesGenericPropertyMapArchive::has_tschchartserieserrorbarsetting() const {
+  return (_has_bits_[0] & 0x00000200u) != 0;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_has_tschchartserieserrorbarsetting() {
+  _has_bits_[0] |= 0x00000200u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_has_tschchartserieserrorbarsetting() {
+  _has_bits_[0] &= ~0x00000200u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_tschchartserieserrorbarsetting() {
+  tschchartserieserrorbarsetting_ = 0;
+  clear_has_tschchartserieserrorbarsetting();
+}
+inline ::google::protobuf::int32 ChartSeriesGenericPropertyMapArchive::tschchartserieserrorbarsetting() const {
+  return tschchartserieserrorbarsetting_;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_tschchartserieserrorbarsetting(::google::protobuf::int32 value) {
+  set_has_tschchartserieserrorbarsetting();
+  tschchartserieserrorbarsetting_ = value;
+}
+
+// optional int32 tschchartserieserrorbarsettingscatterx = 11;
+inline bool ChartSeriesGenericPropertyMapArchive::has_tschchartserieserrorbarsettingscatterx() const {
+  return (_has_bits_[0] & 0x00000400u) != 0;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_has_tschchartserieserrorbarsettingscatterx() {
+  _has_bits_[0] |= 0x00000400u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_has_tschchartserieserrorbarsettingscatterx() {
+  _has_bits_[0] &= ~0x00000400u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_tschchartserieserrorbarsettingscatterx() {
+  tschchartserieserrorbarsettingscatterx_ = 0;
+  clear_has_tschchartserieserrorbarsettingscatterx();
+}
+inline ::google::protobuf::int32 ChartSeriesGenericPropertyMapArchive::tschchartserieserrorbarsettingscatterx() const {
+  return tschchartserieserrorbarsettingscatterx_;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_tschchartserieserrorbarsettingscatterx(::google::protobuf::int32 value) {
+  set_has_tschchartserieserrorbarsettingscatterx();
+  tschchartserieserrorbarsettingscatterx_ = value;
+}
+
+// optional float tschchartserieserrorbarstddevvalue = 12;
+inline bool ChartSeriesGenericPropertyMapArchive::has_tschchartserieserrorbarstddevvalue() const {
+  return (_has_bits_[0] & 0x00000800u) != 0;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_has_tschchartserieserrorbarstddevvalue() {
+  _has_bits_[0] |= 0x00000800u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_has_tschchartserieserrorbarstddevvalue() {
+  _has_bits_[0] &= ~0x00000800u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_tschchartserieserrorbarstddevvalue() {
+  tschchartserieserrorbarstddevvalue_ = 0;
+  clear_has_tschchartserieserrorbarstddevvalue();
+}
+inline float ChartSeriesGenericPropertyMapArchive::tschchartserieserrorbarstddevvalue() const {
+  return tschchartserieserrorbarstddevvalue_;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_tschchartserieserrorbarstddevvalue(float value) {
+  set_has_tschchartserieserrorbarstddevvalue();
+  tschchartserieserrorbarstddevvalue_ = value;
+}
+
+// optional float tschchartserieserrorbarstddevvaluescatterx = 13;
+inline bool ChartSeriesGenericPropertyMapArchive::has_tschchartserieserrorbarstddevvaluescatterx() const {
+  return (_has_bits_[0] & 0x00001000u) != 0;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_has_tschchartserieserrorbarstddevvaluescatterx() {
+  _has_bits_[0] |= 0x00001000u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_has_tschchartserieserrorbarstddevvaluescatterx() {
+  _has_bits_[0] &= ~0x00001000u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_tschchartserieserrorbarstddevvaluescatterx() {
+  tschchartserieserrorbarstddevvaluescatterx_ = 0;
+  clear_has_tschchartserieserrorbarstddevvaluescatterx();
+}
+inline float ChartSeriesGenericPropertyMapArchive::tschchartserieserrorbarstddevvaluescatterx() const {
+  return tschchartserieserrorbarstddevvaluescatterx_;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_tschchartserieserrorbarstddevvaluescatterx(float value) {
+  set_has_tschchartserieserrorbarstddevvaluescatterx();
+  tschchartserieserrorbarstddevvaluescatterx_ = value;
+}
+
+// optional int32 tschchartserieserrorbartype = 14;
+inline bool ChartSeriesGenericPropertyMapArchive::has_tschchartserieserrorbartype() const {
+  return (_has_bits_[0] & 0x00002000u) != 0;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_has_tschchartserieserrorbartype() {
+  _has_bits_[0] |= 0x00002000u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_has_tschchartserieserrorbartype() {
+  _has_bits_[0] &= ~0x00002000u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_tschchartserieserrorbartype() {
+  tschchartserieserrorbartype_ = 0;
+  clear_has_tschchartserieserrorbartype();
+}
+inline ::google::protobuf::int32 ChartSeriesGenericPropertyMapArchive::tschchartserieserrorbartype() const {
+  return tschchartserieserrorbartype_;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_tschchartserieserrorbartype(::google::protobuf::int32 value) {
+  set_has_tschchartserieserrorbartype();
+  tschchartserieserrorbartype_ = value;
+}
+
+// optional int32 tschchartserieserrorbartypescatterx = 15;
+inline bool ChartSeriesGenericPropertyMapArchive::has_tschchartserieserrorbartypescatterx() const {
+  return (_has_bits_[0] & 0x00004000u) != 0;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_has_tschchartserieserrorbartypescatterx() {
+  _has_bits_[0] |= 0x00004000u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_has_tschchartserieserrorbartypescatterx() {
+  _has_bits_[0] &= ~0x00004000u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_tschchartserieserrorbartypescatterx() {
+  tschchartserieserrorbartypescatterx_ = 0;
+  clear_has_tschchartserieserrorbartypescatterx();
+}
+inline ::google::protobuf::int32 ChartSeriesGenericPropertyMapArchive::tschchartserieserrorbartypescatterx() const {
+  return tschchartserieserrorbartypescatterx_;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_tschchartserieserrorbartypescatterx(::google::protobuf::int32 value) {
+  set_has_tschchartserieserrorbartypescatterx();
+  tschchartserieserrorbartypescatterx_ = value;
+}
+
+// optional float tschchartserieslabelexplosion = 16;
+inline bool ChartSeriesGenericPropertyMapArchive::has_tschchartserieslabelexplosion() const {
+  return (_has_bits_[0] & 0x00008000u) != 0;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_has_tschchartserieslabelexplosion() {
+  _has_bits_[0] |= 0x00008000u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_has_tschchartserieslabelexplosion() {
+  _has_bits_[0] &= ~0x00008000u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_tschchartserieslabelexplosion() {
+  tschchartserieslabelexplosion_ = 0;
+  clear_has_tschchartserieslabelexplosion();
+}
+inline float ChartSeriesGenericPropertyMapArchive::tschchartserieslabelexplosion() const {
+  return tschchartserieslabelexplosion_;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_tschchartserieslabelexplosion(float value) {
+  set_has_tschchartserieslabelexplosion();
+  tschchartserieslabelexplosion_ = value;
+}
+
+// optional int32 tschchartserieslinetype = 17;
+inline bool ChartSeriesGenericPropertyMapArchive::has_tschchartserieslinetype() const {
+  return (_has_bits_[0] & 0x00010000u) != 0;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_has_tschchartserieslinetype() {
+  _has_bits_[0] |= 0x00010000u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_has_tschchartserieslinetype() {
+  _has_bits_[0] &= ~0x00010000u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_tschchartserieslinetype() {
+  tschchartserieslinetype_ = 0;
+  clear_has_tschchartserieslinetype();
+}
+inline ::google::protobuf::int32 ChartSeriesGenericPropertyMapArchive::tschchartserieslinetype() const {
+  return tschchartserieslinetype_;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_tschchartserieslinetype(::google::protobuf::int32 value) {
+  set_has_tschchartserieslinetype();
+  tschchartserieslinetype_ = value;
+}
+
+// optional .TSK.FormatStructArchive tschchartseries1_0numberformat = 18;
+inline bool ChartSeriesGenericPropertyMapArchive::has_tschchartseries1_0numberformat() const {
+  return (_has_bits_[0] & 0x00020000u) != 0;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_has_tschchartseries1_0numberformat() {
+  _has_bits_[0] |= 0x00020000u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_has_tschchartseries1_0numberformat() {
+  _has_bits_[0] &= ~0x00020000u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_tschchartseries1_0numberformat() {
+  if (tschchartseries1_0numberformat_ != NULL) tschchartseries1_0numberformat_->::TSK::FormatStructArchive::Clear();
+  clear_has_tschchartseries1_0numberformat();
+}
+inline const ::TSK::FormatStructArchive& ChartSeriesGenericPropertyMapArchive::tschchartseries1_0numberformat() const {
+  return tschchartseries1_0numberformat_ != NULL ? *tschchartseries1_0numberformat_ : *default_instance_->tschchartseries1_0numberformat_;
+}
+inline ::TSK::FormatStructArchive* ChartSeriesGenericPropertyMapArchive::mutable_tschchartseries1_0numberformat() {
+  set_has_tschchartseries1_0numberformat();
+  if (tschchartseries1_0numberformat_ == NULL) tschchartseries1_0numberformat_ = new ::TSK::FormatStructArchive;
+  return tschchartseries1_0numberformat_;
+}
+inline ::TSK::FormatStructArchive* ChartSeriesGenericPropertyMapArchive::release_tschchartseries1_0numberformat() {
+  clear_has_tschchartseries1_0numberformat();
+  ::TSK::FormatStructArchive* temp = tschchartseries1_0numberformat_;
+  tschchartseries1_0numberformat_ = NULL;
+  return temp;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_allocated_tschchartseries1_0numberformat(::TSK::FormatStructArchive* tschchartseries1_0numberformat) {
+  delete tschchartseries1_0numberformat_;
+  tschchartseries1_0numberformat_ = tschchartseries1_0numberformat;
+  if (tschchartseries1_0numberformat) {
+    set_has_tschchartseries1_0numberformat();
+  } else {
+    clear_has_tschchartseries1_0numberformat();
+  }
+}
+
+// optional .TSK.FormatStructArchive tschchartseriesnumberformat = 19;
+inline bool ChartSeriesGenericPropertyMapArchive::has_tschchartseriesnumberformat() const {
+  return (_has_bits_[0] & 0x00040000u) != 0;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_has_tschchartseriesnumberformat() {
+  _has_bits_[0] |= 0x00040000u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_has_tschchartseriesnumberformat() {
+  _has_bits_[0] &= ~0x00040000u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_tschchartseriesnumberformat() {
+  if (tschchartseriesnumberformat_ != NULL) tschchartseriesnumberformat_->::TSK::FormatStructArchive::Clear();
+  clear_has_tschchartseriesnumberformat();
+}
+inline const ::TSK::FormatStructArchive& ChartSeriesGenericPropertyMapArchive::tschchartseriesnumberformat() const {
+  return tschchartseriesnumberformat_ != NULL ? *tschchartseriesnumberformat_ : *default_instance_->tschchartseriesnumberformat_;
+}
+inline ::TSK::FormatStructArchive* ChartSeriesGenericPropertyMapArchive::mutable_tschchartseriesnumberformat() {
+  set_has_tschchartseriesnumberformat();
+  if (tschchartseriesnumberformat_ == NULL) tschchartseriesnumberformat_ = new ::TSK::FormatStructArchive;
+  return tschchartseriesnumberformat_;
+}
+inline ::TSK::FormatStructArchive* ChartSeriesGenericPropertyMapArchive::release_tschchartseriesnumberformat() {
+  clear_has_tschchartseriesnumberformat();
+  ::TSK::FormatStructArchive* temp = tschchartseriesnumberformat_;
+  tschchartseriesnumberformat_ = NULL;
+  return temp;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_allocated_tschchartseriesnumberformat(::TSK::FormatStructArchive* tschchartseriesnumberformat) {
+  delete tschchartseriesnumberformat_;
+  tschchartseriesnumberformat_ = tschchartseriesnumberformat;
+  if (tschchartseriesnumberformat) {
+    set_has_tschchartseriesnumberformat();
+  } else {
+    clear_has_tschchartseriesnumberformat();
+  }
+}
+
+// optional .TSK.FormatStructArchive tschchartseries1_0dateformat = 20;
+inline bool ChartSeriesGenericPropertyMapArchive::has_tschchartseries1_0dateformat() const {
+  return (_has_bits_[0] & 0x00080000u) != 0;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_has_tschchartseries1_0dateformat() {
+  _has_bits_[0] |= 0x00080000u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_has_tschchartseries1_0dateformat() {
+  _has_bits_[0] &= ~0x00080000u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_tschchartseries1_0dateformat() {
+  if (tschchartseries1_0dateformat_ != NULL) tschchartseries1_0dateformat_->::TSK::FormatStructArchive::Clear();
+  clear_has_tschchartseries1_0dateformat();
+}
+inline const ::TSK::FormatStructArchive& ChartSeriesGenericPropertyMapArchive::tschchartseries1_0dateformat() const {
+  return tschchartseries1_0dateformat_ != NULL ? *tschchartseries1_0dateformat_ : *default_instance_->tschchartseries1_0dateformat_;
+}
+inline ::TSK::FormatStructArchive* ChartSeriesGenericPropertyMapArchive::mutable_tschchartseries1_0dateformat() {
+  set_has_tschchartseries1_0dateformat();
+  if (tschchartseries1_0dateformat_ == NULL) tschchartseries1_0dateformat_ = new ::TSK::FormatStructArchive;
+  return tschchartseries1_0dateformat_;
+}
+inline ::TSK::FormatStructArchive* ChartSeriesGenericPropertyMapArchive::release_tschchartseries1_0dateformat() {
+  clear_has_tschchartseries1_0dateformat();
+  ::TSK::FormatStructArchive* temp = tschchartseries1_0dateformat_;
+  tschchartseries1_0dateformat_ = NULL;
+  return temp;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_allocated_tschchartseries1_0dateformat(::TSK::FormatStructArchive* tschchartseries1_0dateformat) {
+  delete tschchartseries1_0dateformat_;
+  tschchartseries1_0dateformat_ = tschchartseries1_0dateformat;
+  if (tschchartseries1_0dateformat) {
+    set_has_tschchartseries1_0dateformat();
+  } else {
+    clear_has_tschchartseries1_0dateformat();
+  }
+}
+
+// optional .TSK.FormatStructArchive tschchartseriesdurationformat = 21;
+inline bool ChartSeriesGenericPropertyMapArchive::has_tschchartseriesdurationformat() const {
+  return (_has_bits_[0] & 0x00100000u) != 0;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_has_tschchartseriesdurationformat() {
+  _has_bits_[0] |= 0x00100000u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_has_tschchartseriesdurationformat() {
+  _has_bits_[0] &= ~0x00100000u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_tschchartseriesdurationformat() {
+  if (tschchartseriesdurationformat_ != NULL) tschchartseriesdurationformat_->::TSK::FormatStructArchive::Clear();
+  clear_has_tschchartseriesdurationformat();
+}
+inline const ::TSK::FormatStructArchive& ChartSeriesGenericPropertyMapArchive::tschchartseriesdurationformat() const {
+  return tschchartseriesdurationformat_ != NULL ? *tschchartseriesdurationformat_ : *default_instance_->tschchartseriesdurationformat_;
+}
+inline ::TSK::FormatStructArchive* ChartSeriesGenericPropertyMapArchive::mutable_tschchartseriesdurationformat() {
+  set_has_tschchartseriesdurationformat();
+  if (tschchartseriesdurationformat_ == NULL) tschchartseriesdurationformat_ = new ::TSK::FormatStructArchive;
+  return tschchartseriesdurationformat_;
+}
+inline ::TSK::FormatStructArchive* ChartSeriesGenericPropertyMapArchive::release_tschchartseriesdurationformat() {
+  clear_has_tschchartseriesdurationformat();
+  ::TSK::FormatStructArchive* temp = tschchartseriesdurationformat_;
+  tschchartseriesdurationformat_ = NULL;
+  return temp;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_allocated_tschchartseriesdurationformat(::TSK::FormatStructArchive* tschchartseriesdurationformat) {
+  delete tschchartseriesdurationformat_;
+  tschchartseriesdurationformat_ = tschchartseriesdurationformat;
+  if (tschchartseriesdurationformat) {
+    set_has_tschchartseriesdurationformat();
+  } else {
+    clear_has_tschchartseriesdurationformat();
+  }
+}
+
+// optional .TSK.FormatStructArchive tschchartseriesdateformat = 22;
+inline bool ChartSeriesGenericPropertyMapArchive::has_tschchartseriesdateformat() const {
+  return (_has_bits_[0] & 0x00200000u) != 0;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_has_tschchartseriesdateformat() {
+  _has_bits_[0] |= 0x00200000u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_has_tschchartseriesdateformat() {
+  _has_bits_[0] &= ~0x00200000u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_tschchartseriesdateformat() {
+  if (tschchartseriesdateformat_ != NULL) tschchartseriesdateformat_->::TSK::FormatStructArchive::Clear();
+  clear_has_tschchartseriesdateformat();
+}
+inline const ::TSK::FormatStructArchive& ChartSeriesGenericPropertyMapArchive::tschchartseriesdateformat() const {
+  return tschchartseriesdateformat_ != NULL ? *tschchartseriesdateformat_ : *default_instance_->tschchartseriesdateformat_;
+}
+inline ::TSK::FormatStructArchive* ChartSeriesGenericPropertyMapArchive::mutable_tschchartseriesdateformat() {
+  set_has_tschchartseriesdateformat();
+  if (tschchartseriesdateformat_ == NULL) tschchartseriesdateformat_ = new ::TSK::FormatStructArchive;
+  return tschchartseriesdateformat_;
+}
+inline ::TSK::FormatStructArchive* ChartSeriesGenericPropertyMapArchive::release_tschchartseriesdateformat() {
+  clear_has_tschchartseriesdateformat();
+  ::TSK::FormatStructArchive* temp = tschchartseriesdateformat_;
+  tschchartseriesdateformat_ = NULL;
+  return temp;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_allocated_tschchartseriesdateformat(::TSK::FormatStructArchive* tschchartseriesdateformat) {
+  delete tschchartseriesdateformat_;
+  tschchartseriesdateformat_ = tschchartseriesdateformat;
+  if (tschchartseriesdateformat) {
+    set_has_tschchartseriesdateformat();
+  } else {
+    clear_has_tschchartseriesdateformat();
+  }
+}
+
+// optional int32 tschchartseriesnumberformattype = 23;
+inline bool ChartSeriesGenericPropertyMapArchive::has_tschchartseriesnumberformattype() const {
+  return (_has_bits_[0] & 0x00400000u) != 0;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_has_tschchartseriesnumberformattype() {
+  _has_bits_[0] |= 0x00400000u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_has_tschchartseriesnumberformattype() {
+  _has_bits_[0] &= ~0x00400000u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_tschchartseriesnumberformattype() {
+  tschchartseriesnumberformattype_ = 0;
+  clear_has_tschchartseriesnumberformattype();
+}
+inline ::google::protobuf::int32 ChartSeriesGenericPropertyMapArchive::tschchartseriesnumberformattype() const {
+  return tschchartseriesnumberformattype_;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_tschchartseriesnumberformattype(::google::protobuf::int32 value) {
+  set_has_tschchartseriesnumberformattype();
+  tschchartseriesnumberformattype_ = value;
+}
+
+// optional .TSK.FormatStructArchive tschchartseriespercentnumberformat = 24;
+inline bool ChartSeriesGenericPropertyMapArchive::has_tschchartseriespercentnumberformat() const {
+  return (_has_bits_[0] & 0x00800000u) != 0;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_has_tschchartseriespercentnumberformat() {
+  _has_bits_[0] |= 0x00800000u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_has_tschchartseriespercentnumberformat() {
+  _has_bits_[0] &= ~0x00800000u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_tschchartseriespercentnumberformat() {
+  if (tschchartseriespercentnumberformat_ != NULL) tschchartseriespercentnumberformat_->::TSK::FormatStructArchive::Clear();
+  clear_has_tschchartseriespercentnumberformat();
+}
+inline const ::TSK::FormatStructArchive& ChartSeriesGenericPropertyMapArchive::tschchartseriespercentnumberformat() const {
+  return tschchartseriespercentnumberformat_ != NULL ? *tschchartseriespercentnumberformat_ : *default_instance_->tschchartseriespercentnumberformat_;
+}
+inline ::TSK::FormatStructArchive* ChartSeriesGenericPropertyMapArchive::mutable_tschchartseriespercentnumberformat() {
+  set_has_tschchartseriespercentnumberformat();
+  if (tschchartseriespercentnumberformat_ == NULL) tschchartseriespercentnumberformat_ = new ::TSK::FormatStructArchive;
+  return tschchartseriespercentnumberformat_;
+}
+inline ::TSK::FormatStructArchive* ChartSeriesGenericPropertyMapArchive::release_tschchartseriespercentnumberformat() {
+  clear_has_tschchartseriespercentnumberformat();
+  ::TSK::FormatStructArchive* temp = tschchartseriespercentnumberformat_;
+  tschchartseriespercentnumberformat_ = NULL;
+  return temp;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_allocated_tschchartseriespercentnumberformat(::TSK::FormatStructArchive* tschchartseriespercentnumberformat) {
+  delete tschchartseriespercentnumberformat_;
+  tschchartseriespercentnumberformat_ = tschchartseriespercentnumberformat;
+  if (tschchartseriespercentnumberformat) {
+    set_has_tschchartseriespercentnumberformat();
+  } else {
+    clear_has_tschchartseriespercentnumberformat();
+  }
+}
+
+// optional int32 tschchartseriesseriestype = 25;
+inline bool ChartSeriesGenericPropertyMapArchive::has_tschchartseriesseriestype() const {
+  return (_has_bits_[0] & 0x01000000u) != 0;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_has_tschchartseriesseriestype() {
+  _has_bits_[0] |= 0x01000000u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_has_tschchartseriesseriestype() {
+  _has_bits_[0] &= ~0x01000000u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_tschchartseriesseriestype() {
+  tschchartseriesseriestype_ = 0;
+  clear_has_tschchartseriesseriestype();
+}
+inline ::google::protobuf::int32 ChartSeriesGenericPropertyMapArchive::tschchartseriesseriestype() const {
+  return tschchartseriesseriestype_;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_tschchartseriesseriestype(::google::protobuf::int32 value) {
+  set_has_tschchartseriesseriestype();
+  tschchartseriesseriestype_ = value;
+}
+
+// optional bool tschchartseriesshowerrorbar = 26;
+inline bool ChartSeriesGenericPropertyMapArchive::has_tschchartseriesshowerrorbar() const {
+  return (_has_bits_[0] & 0x02000000u) != 0;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_has_tschchartseriesshowerrorbar() {
+  _has_bits_[0] |= 0x02000000u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_has_tschchartseriesshowerrorbar() {
+  _has_bits_[0] &= ~0x02000000u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_tschchartseriesshowerrorbar() {
+  tschchartseriesshowerrorbar_ = false;
+  clear_has_tschchartseriesshowerrorbar();
+}
+inline bool ChartSeriesGenericPropertyMapArchive::tschchartseriesshowerrorbar() const {
+  return tschchartseriesshowerrorbar_;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_tschchartseriesshowerrorbar(bool value) {
+  set_has_tschchartseriesshowerrorbar();
+  tschchartseriesshowerrorbar_ = value;
+}
+
+// optional bool tschchartseriesshowerrorbarscatterx = 27;
+inline bool ChartSeriesGenericPropertyMapArchive::has_tschchartseriesshowerrorbarscatterx() const {
+  return (_has_bits_[0] & 0x04000000u) != 0;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_has_tschchartseriesshowerrorbarscatterx() {
+  _has_bits_[0] |= 0x04000000u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_has_tschchartseriesshowerrorbarscatterx() {
+  _has_bits_[0] &= ~0x04000000u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_tschchartseriesshowerrorbarscatterx() {
+  tschchartseriesshowerrorbarscatterx_ = false;
+  clear_has_tschchartseriesshowerrorbarscatterx();
+}
+inline bool ChartSeriesGenericPropertyMapArchive::tschchartseriesshowerrorbarscatterx() const {
+  return tschchartseriesshowerrorbarscatterx_;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_tschchartseriesshowerrorbarscatterx(bool value) {
+  set_has_tschchartseriesshowerrorbarscatterx();
+  tschchartseriesshowerrorbarscatterx_ = value;
+}
+
+// optional bool tschchartseriesshowline = 28;
+inline bool ChartSeriesGenericPropertyMapArchive::has_tschchartseriesshowline() const {
+  return (_has_bits_[0] & 0x08000000u) != 0;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_has_tschchartseriesshowline() {
+  _has_bits_[0] |= 0x08000000u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_has_tschchartseriesshowline() {
+  _has_bits_[0] &= ~0x08000000u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_tschchartseriesshowline() {
+  tschchartseriesshowline_ = false;
+  clear_has_tschchartseriesshowline();
+}
+inline bool ChartSeriesGenericPropertyMapArchive::tschchartseriesshowline() const {
+  return tschchartseriesshowline_;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_tschchartseriesshowline(bool value) {
+  set_has_tschchartseriesshowline();
+  tschchartseriesshowline_ = value;
+}
+
+// optional bool tschchartseriesshownegativedata = 29;
+inline bool ChartSeriesGenericPropertyMapArchive::has_tschchartseriesshownegativedata() const {
+  return (_has_bits_[0] & 0x10000000u) != 0;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_has_tschchartseriesshownegativedata() {
+  _has_bits_[0] |= 0x10000000u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_has_tschchartseriesshownegativedata() {
+  _has_bits_[0] &= ~0x10000000u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_tschchartseriesshownegativedata() {
+  tschchartseriesshownegativedata_ = false;
+  clear_has_tschchartseriesshownegativedata();
+}
+inline bool ChartSeriesGenericPropertyMapArchive::tschchartseriesshownegativedata() const {
+  return tschchartseriesshownegativedata_;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_tschchartseriesshownegativedata(bool value) {
+  set_has_tschchartseriesshownegativedata();
+  tschchartseriesshownegativedata_ = value;
+}
+
+// optional bool tschchartseriesshowserieslabels = 30;
+inline bool ChartSeriesGenericPropertyMapArchive::has_tschchartseriesshowserieslabels() const {
+  return (_has_bits_[0] & 0x20000000u) != 0;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_has_tschchartseriesshowserieslabels() {
+  _has_bits_[0] |= 0x20000000u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_has_tschchartseriesshowserieslabels() {
+  _has_bits_[0] &= ~0x20000000u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_tschchartseriesshowserieslabels() {
+  tschchartseriesshowserieslabels_ = false;
+  clear_has_tschchartseriesshowserieslabels();
+}
+inline bool ChartSeriesGenericPropertyMapArchive::tschchartseriesshowserieslabels() const {
+  return tschchartseriesshowserieslabels_;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_tschchartseriesshowserieslabels(bool value) {
+  set_has_tschchartseriesshowserieslabels();
+  tschchartseriesshowserieslabels_ = value;
+}
+
+// optional bool tschchartseriesshowsymbol = 31;
+inline bool ChartSeriesGenericPropertyMapArchive::has_tschchartseriesshowsymbol() const {
+  return (_has_bits_[0] & 0x40000000u) != 0;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_has_tschchartseriesshowsymbol() {
+  _has_bits_[0] |= 0x40000000u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_has_tschchartseriesshowsymbol() {
+  _has_bits_[0] &= ~0x40000000u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_tschchartseriesshowsymbol() {
+  tschchartseriesshowsymbol_ = false;
+  clear_has_tschchartseriesshowsymbol();
+}
+inline bool ChartSeriesGenericPropertyMapArchive::tschchartseriesshowsymbol() const {
+  return tschchartseriesshowsymbol_;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_tschchartseriesshowsymbol(bool value) {
+  set_has_tschchartseriesshowsymbol();
+  tschchartseriesshowsymbol_ = value;
+}
+
+// optional bool tschchartseriesshowtrendline = 32;
+inline bool ChartSeriesGenericPropertyMapArchive::has_tschchartseriesshowtrendline() const {
+  return (_has_bits_[0] & 0x80000000u) != 0;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_has_tschchartseriesshowtrendline() {
+  _has_bits_[0] |= 0x80000000u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_has_tschchartseriesshowtrendline() {
+  _has_bits_[0] &= ~0x80000000u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_tschchartseriesshowtrendline() {
+  tschchartseriesshowtrendline_ = false;
+  clear_has_tschchartseriesshowtrendline();
+}
+inline bool ChartSeriesGenericPropertyMapArchive::tschchartseriesshowtrendline() const {
+  return tschchartseriesshowtrendline_;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_tschchartseriesshowtrendline(bool value) {
+  set_has_tschchartseriesshowtrendline();
+  tschchartseriesshowtrendline_ = value;
+}
+
+// optional bool tschchartseriesshowvaluelabels = 33;
+inline bool ChartSeriesGenericPropertyMapArchive::has_tschchartseriesshowvaluelabels() const {
+  return (_has_bits_[1] & 0x00000001u) != 0;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_has_tschchartseriesshowvaluelabels() {
+  _has_bits_[1] |= 0x00000001u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_has_tschchartseriesshowvaluelabels() {
+  _has_bits_[1] &= ~0x00000001u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_tschchartseriesshowvaluelabels() {
+  tschchartseriesshowvaluelabels_ = false;
+  clear_has_tschchartseriesshowvaluelabels();
+}
+inline bool ChartSeriesGenericPropertyMapArchive::tschchartseriesshowvaluelabels() const {
+  return tschchartseriesshowvaluelabels_;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_tschchartseriesshowvaluelabels(bool value) {
+  set_has_tschchartseriesshowvaluelabels();
+  tschchartseriesshowvaluelabels_ = value;
+}
+
+// optional int32 tschchartseriessizedimension = 34;
+inline bool ChartSeriesGenericPropertyMapArchive::has_tschchartseriessizedimension() const {
+  return (_has_bits_[1] & 0x00000002u) != 0;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_has_tschchartseriessizedimension() {
+  _has_bits_[1] |= 0x00000002u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_has_tschchartseriessizedimension() {
+  _has_bits_[1] &= ~0x00000002u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_tschchartseriessizedimension() {
+  tschchartseriessizedimension_ = 0;
+  clear_has_tschchartseriessizedimension();
+}
+inline ::google::protobuf::int32 ChartSeriesGenericPropertyMapArchive::tschchartseriessizedimension() const {
+  return tschchartseriessizedimension_;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_tschchartseriessizedimension(::google::protobuf::int32 value) {
+  set_has_tschchartseriessizedimension();
+  tschchartseriessizedimension_ = value;
+}
+
+// optional int32 tschchartseriessymboltype = 35;
+inline bool ChartSeriesGenericPropertyMapArchive::has_tschchartseriessymboltype() const {
+  return (_has_bits_[1] & 0x00000004u) != 0;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_has_tschchartseriessymboltype() {
+  _has_bits_[1] |= 0x00000004u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_has_tschchartseriessymboltype() {
+  _has_bits_[1] &= ~0x00000004u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_tschchartseriessymboltype() {
+  tschchartseriessymboltype_ = 0;
+  clear_has_tschchartseriessymboltype();
+}
+inline ::google::protobuf::int32 ChartSeriesGenericPropertyMapArchive::tschchartseriessymboltype() const {
+  return tschchartseriessymboltype_;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_tschchartseriessymboltype(::google::protobuf::int32 value) {
+  set_has_tschchartseriessymboltype();
+  tschchartseriessymboltype_ = value;
+}
+
+// optional float tschchartseriestrendlineequationoffsetx = 36;
+inline bool ChartSeriesGenericPropertyMapArchive::has_tschchartseriestrendlineequationoffsetx() const {
+  return (_has_bits_[1] & 0x00000008u) != 0;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_has_tschchartseriestrendlineequationoffsetx() {
+  _has_bits_[1] |= 0x00000008u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_has_tschchartseriestrendlineequationoffsetx() {
+  _has_bits_[1] &= ~0x00000008u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_tschchartseriestrendlineequationoffsetx() {
+  tschchartseriestrendlineequationoffsetx_ = 0;
+  clear_has_tschchartseriestrendlineequationoffsetx();
+}
+inline float ChartSeriesGenericPropertyMapArchive::tschchartseriestrendlineequationoffsetx() const {
+  return tschchartseriestrendlineequationoffsetx_;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_tschchartseriestrendlineequationoffsetx(float value) {
+  set_has_tschchartseriestrendlineequationoffsetx();
+  tschchartseriestrendlineequationoffsetx_ = value;
+}
+
+// optional float tschchartseriestrendlineequationoffsety = 37;
+inline bool ChartSeriesGenericPropertyMapArchive::has_tschchartseriestrendlineequationoffsety() const {
+  return (_has_bits_[1] & 0x00000010u) != 0;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_has_tschchartseriestrendlineequationoffsety() {
+  _has_bits_[1] |= 0x00000010u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_has_tschchartseriestrendlineequationoffsety() {
+  _has_bits_[1] &= ~0x00000010u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_tschchartseriestrendlineequationoffsety() {
+  tschchartseriestrendlineequationoffsety_ = 0;
+  clear_has_tschchartseriestrendlineequationoffsety();
+}
+inline float ChartSeriesGenericPropertyMapArchive::tschchartseriestrendlineequationoffsety() const {
+  return tschchartseriestrendlineequationoffsety_;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_tschchartseriestrendlineequationoffsety(float value) {
+  set_has_tschchartseriestrendlineequationoffsety();
+  tschchartseriestrendlineequationoffsety_ = value;
+}
+
+// optional string tschchartseriestrendlinelabelstring = 38;
+inline bool ChartSeriesGenericPropertyMapArchive::has_tschchartseriestrendlinelabelstring() const {
+  return (_has_bits_[1] & 0x00000020u) != 0;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_has_tschchartseriestrendlinelabelstring() {
+  _has_bits_[1] |= 0x00000020u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_has_tschchartseriestrendlinelabelstring() {
+  _has_bits_[1] &= ~0x00000020u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_tschchartseriestrendlinelabelstring() {
+  if (tschchartseriestrendlinelabelstring_ != &::google::protobuf::internal::kEmptyString) {
+    tschchartseriestrendlinelabelstring_->clear();
+  }
+  clear_has_tschchartseriestrendlinelabelstring();
+}
+inline const ::std::string& ChartSeriesGenericPropertyMapArchive::tschchartseriestrendlinelabelstring() const {
+  return *tschchartseriestrendlinelabelstring_;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_tschchartseriestrendlinelabelstring(const ::std::string& value) {
+  set_has_tschchartseriestrendlinelabelstring();
+  if (tschchartseriestrendlinelabelstring_ == &::google::protobuf::internal::kEmptyString) {
+    tschchartseriestrendlinelabelstring_ = new ::std::string;
+  }
+  tschchartseriestrendlinelabelstring_->assign(value);
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_tschchartseriestrendlinelabelstring(const char* value) {
+  set_has_tschchartseriestrendlinelabelstring();
+  if (tschchartseriestrendlinelabelstring_ == &::google::protobuf::internal::kEmptyString) {
+    tschchartseriestrendlinelabelstring_ = new ::std::string;
+  }
+  tschchartseriestrendlinelabelstring_->assign(value);
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_tschchartseriestrendlinelabelstring(const char* value, size_t size) {
+  set_has_tschchartseriestrendlinelabelstring();
+  if (tschchartseriestrendlinelabelstring_ == &::google::protobuf::internal::kEmptyString) {
+    tschchartseriestrendlinelabelstring_ = new ::std::string;
+  }
+  tschchartseriestrendlinelabelstring_->assign(reinterpret_cast<const char*>(value), size);
+}
+inline ::std::string* ChartSeriesGenericPropertyMapArchive::mutable_tschchartseriestrendlinelabelstring() {
+  set_has_tschchartseriestrendlinelabelstring();
+  if (tschchartseriestrendlinelabelstring_ == &::google::protobuf::internal::kEmptyString) {
+    tschchartseriestrendlinelabelstring_ = new ::std::string;
+  }
+  return tschchartseriestrendlinelabelstring_;
+}
+inline ::std::string* ChartSeriesGenericPropertyMapArchive::release_tschchartseriestrendlinelabelstring() {
+  clear_has_tschchartseriestrendlinelabelstring();
+  if (tschchartseriestrendlinelabelstring_ == &::google::protobuf::internal::kEmptyString) {
+    return NULL;
+  } else {
+    ::std::string* temp = tschchartseriestrendlinelabelstring_;
+    tschchartseriestrendlinelabelstring_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+    return temp;
+  }
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_allocated_tschchartseriestrendlinelabelstring(::std::string* tschchartseriestrendlinelabelstring) {
+  if (tschchartseriestrendlinelabelstring_ != &::google::protobuf::internal::kEmptyString) {
+    delete tschchartseriestrendlinelabelstring_;
+  }
+  if (tschchartseriestrendlinelabelstring) {
+    set_has_tschchartseriestrendlinelabelstring();
+    tschchartseriestrendlinelabelstring_ = tschchartseriestrendlinelabelstring;
+  } else {
+    clear_has_tschchartseriestrendlinelabelstring();
+    tschchartseriestrendlinelabelstring_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+  }
+}
+
+// optional int32 tschchartseriestrendlineorder = 39;
+inline bool ChartSeriesGenericPropertyMapArchive::has_tschchartseriestrendlineorder() const {
+  return (_has_bits_[1] & 0x00000040u) != 0;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_has_tschchartseriestrendlineorder() {
+  _has_bits_[1] |= 0x00000040u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_has_tschchartseriestrendlineorder() {
+  _has_bits_[1] &= ~0x00000040u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_tschchartseriestrendlineorder() {
+  tschchartseriestrendlineorder_ = 0;
+  clear_has_tschchartseriestrendlineorder();
+}
+inline ::google::protobuf::int32 ChartSeriesGenericPropertyMapArchive::tschchartseriestrendlineorder() const {
+  return tschchartseriestrendlineorder_;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_tschchartseriestrendlineorder(::google::protobuf::int32 value) {
+  set_has_tschchartseriestrendlineorder();
+  tschchartseriestrendlineorder_ = value;
+}
+
+// optional int32 tschchartseriestrendlineperiod = 40;
+inline bool ChartSeriesGenericPropertyMapArchive::has_tschchartseriestrendlineperiod() const {
+  return (_has_bits_[1] & 0x00000080u) != 0;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_has_tschchartseriestrendlineperiod() {
+  _has_bits_[1] |= 0x00000080u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_has_tschchartseriestrendlineperiod() {
+  _has_bits_[1] &= ~0x00000080u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_tschchartseriestrendlineperiod() {
+  tschchartseriestrendlineperiod_ = 0;
+  clear_has_tschchartseriestrendlineperiod();
+}
+inline ::google::protobuf::int32 ChartSeriesGenericPropertyMapArchive::tschchartseriestrendlineperiod() const {
+  return tschchartseriestrendlineperiod_;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_tschchartseriestrendlineperiod(::google::protobuf::int32 value) {
+  set_has_tschchartseriestrendlineperiod();
+  tschchartseriestrendlineperiod_ = value;
+}
+
+// optional float tschchartseriestrendlinersquaredoffsetx = 41;
+inline bool ChartSeriesGenericPropertyMapArchive::has_tschchartseriestrendlinersquaredoffsetx() const {
+  return (_has_bits_[1] & 0x00000100u) != 0;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_has_tschchartseriestrendlinersquaredoffsetx() {
+  _has_bits_[1] |= 0x00000100u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_has_tschchartseriestrendlinersquaredoffsetx() {
+  _has_bits_[1] &= ~0x00000100u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_tschchartseriestrendlinersquaredoffsetx() {
+  tschchartseriestrendlinersquaredoffsetx_ = 0;
+  clear_has_tschchartseriestrendlinersquaredoffsetx();
+}
+inline float ChartSeriesGenericPropertyMapArchive::tschchartseriestrendlinersquaredoffsetx() const {
+  return tschchartseriestrendlinersquaredoffsetx_;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_tschchartseriestrendlinersquaredoffsetx(float value) {
+  set_has_tschchartseriestrendlinersquaredoffsetx();
+  tschchartseriestrendlinersquaredoffsetx_ = value;
+}
+
+// optional float tschchartseriestrendlinersquaredoffsety = 42;
+inline bool ChartSeriesGenericPropertyMapArchive::has_tschchartseriestrendlinersquaredoffsety() const {
+  return (_has_bits_[1] & 0x00000200u) != 0;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_has_tschchartseriestrendlinersquaredoffsety() {
+  _has_bits_[1] |= 0x00000200u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_has_tschchartseriestrendlinersquaredoffsety() {
+  _has_bits_[1] &= ~0x00000200u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_tschchartseriestrendlinersquaredoffsety() {
+  tschchartseriestrendlinersquaredoffsety_ = 0;
+  clear_has_tschchartseriestrendlinersquaredoffsety();
+}
+inline float ChartSeriesGenericPropertyMapArchive::tschchartseriestrendlinersquaredoffsety() const {
+  return tschchartseriestrendlinersquaredoffsety_;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_tschchartseriestrendlinersquaredoffsety(float value) {
+  set_has_tschchartseriestrendlinersquaredoffsety();
+  tschchartseriestrendlinersquaredoffsety_ = value;
+}
+
+// optional bool tschchartseriestrendlineshowequation = 43;
+inline bool ChartSeriesGenericPropertyMapArchive::has_tschchartseriestrendlineshowequation() const {
+  return (_has_bits_[1] & 0x00000400u) != 0;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_has_tschchartseriestrendlineshowequation() {
+  _has_bits_[1] |= 0x00000400u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_has_tschchartseriestrendlineshowequation() {
+  _has_bits_[1] &= ~0x00000400u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_tschchartseriestrendlineshowequation() {
+  tschchartseriestrendlineshowequation_ = false;
+  clear_has_tschchartseriestrendlineshowequation();
+}
+inline bool ChartSeriesGenericPropertyMapArchive::tschchartseriestrendlineshowequation() const {
+  return tschchartseriestrendlineshowequation_;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_tschchartseriestrendlineshowequation(bool value) {
+  set_has_tschchartseriestrendlineshowequation();
+  tschchartseriestrendlineshowequation_ = value;
+}
+
+// optional bool tschchartseriestrendlineshowlabel = 44;
+inline bool ChartSeriesGenericPropertyMapArchive::has_tschchartseriestrendlineshowlabel() const {
+  return (_has_bits_[1] & 0x00000800u) != 0;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_has_tschchartseriestrendlineshowlabel() {
+  _has_bits_[1] |= 0x00000800u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_has_tschchartseriestrendlineshowlabel() {
+  _has_bits_[1] &= ~0x00000800u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_tschchartseriestrendlineshowlabel() {
+  tschchartseriestrendlineshowlabel_ = false;
+  clear_has_tschchartseriestrendlineshowlabel();
+}
+inline bool ChartSeriesGenericPropertyMapArchive::tschchartseriestrendlineshowlabel() const {
+  return tschchartseriestrendlineshowlabel_;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_tschchartseriestrendlineshowlabel(bool value) {
+  set_has_tschchartseriestrendlineshowlabel();
+  tschchartseriestrendlineshowlabel_ = value;
+}
+
+// optional bool tschchartseriestrendlineshowr2value = 45;
+inline bool ChartSeriesGenericPropertyMapArchive::has_tschchartseriestrendlineshowr2value() const {
+  return (_has_bits_[1] & 0x00001000u) != 0;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_has_tschchartseriestrendlineshowr2value() {
+  _has_bits_[1] |= 0x00001000u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_has_tschchartseriestrendlineshowr2value() {
+  _has_bits_[1] &= ~0x00001000u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_tschchartseriestrendlineshowr2value() {
+  tschchartseriestrendlineshowr2value_ = false;
+  clear_has_tschchartseriestrendlineshowr2value();
+}
+inline bool ChartSeriesGenericPropertyMapArchive::tschchartseriestrendlineshowr2value() const {
+  return tschchartseriestrendlineshowr2value_;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_tschchartseriestrendlineshowr2value(bool value) {
+  set_has_tschchartseriestrendlineshowr2value();
+  tschchartseriestrendlineshowr2value_ = value;
+}
+
+// optional int32 tschchartseriestrendlinetype = 46;
+inline bool ChartSeriesGenericPropertyMapArchive::has_tschchartseriestrendlinetype() const {
+  return (_has_bits_[1] & 0x00002000u) != 0;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_has_tschchartseriestrendlinetype() {
+  _has_bits_[1] |= 0x00002000u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_has_tschchartseriestrendlinetype() {
+  _has_bits_[1] &= ~0x00002000u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_tschchartseriestrendlinetype() {
+  tschchartseriestrendlinetype_ = 0;
+  clear_has_tschchartseriestrendlinetype();
+}
+inline ::google::protobuf::int32 ChartSeriesGenericPropertyMapArchive::tschchartseriestrendlinetype() const {
+  return tschchartseriestrendlinetype_;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_tschchartseriestrendlinetype(::google::protobuf::int32 value) {
+  set_has_tschchartseriestrendlinetype();
+  tschchartseriestrendlinetype_ = value;
+}
+
+// optional float tschchartserieswedgeexplosion = 47;
+inline bool ChartSeriesGenericPropertyMapArchive::has_tschchartserieswedgeexplosion() const {
+  return (_has_bits_[1] & 0x00004000u) != 0;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_has_tschchartserieswedgeexplosion() {
+  _has_bits_[1] |= 0x00004000u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_has_tschchartserieswedgeexplosion() {
+  _has_bits_[1] &= ~0x00004000u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_tschchartserieswedgeexplosion() {
+  tschchartserieswedgeexplosion_ = 0;
+  clear_has_tschchartserieswedgeexplosion();
+}
+inline float ChartSeriesGenericPropertyMapArchive::tschchartserieswedgeexplosion() const {
+  return tschchartserieswedgeexplosion_;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_tschchartserieswedgeexplosion(float value) {
+  set_has_tschchartserieswedgeexplosion();
+  tschchartserieswedgeexplosion_ = value;
+}
+
+// optional int32 tschchartseriesyaxisordinal = 48;
+inline bool ChartSeriesGenericPropertyMapArchive::has_tschchartseriesyaxisordinal() const {
+  return (_has_bits_[1] & 0x00008000u) != 0;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_has_tschchartseriesyaxisordinal() {
+  _has_bits_[1] |= 0x00008000u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_has_tschchartseriesyaxisordinal() {
+  _has_bits_[1] &= ~0x00008000u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_tschchartseriesyaxisordinal() {
+  tschchartseriesyaxisordinal_ = 0;
+  clear_has_tschchartseriesyaxisordinal();
+}
+inline ::google::protobuf::int32 ChartSeriesGenericPropertyMapArchive::tschchartseriesyaxisordinal() const {
+  return tschchartseriesyaxisordinal_;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_tschchartseriesyaxisordinal(::google::protobuf::int32 value) {
+  set_has_tschchartseriesyaxisordinal();
+  tschchartseriesyaxisordinal_ = value;
+}
+
+// optional int32 tschchartseriesvaluelabelsaxis = 49;
+inline bool ChartSeriesGenericPropertyMapArchive::has_tschchartseriesvaluelabelsaxis() const {
+  return (_has_bits_[1] & 0x00010000u) != 0;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_has_tschchartseriesvaluelabelsaxis() {
+  _has_bits_[1] |= 0x00010000u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_has_tschchartseriesvaluelabelsaxis() {
+  _has_bits_[1] &= ~0x00010000u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_tschchartseriesvaluelabelsaxis() {
+  tschchartseriesvaluelabelsaxis_ = 0;
+  clear_has_tschchartseriesvaluelabelsaxis();
+}
+inline ::google::protobuf::int32 ChartSeriesGenericPropertyMapArchive::tschchartseriesvaluelabelsaxis() const {
+  return tschchartseriesvaluelabelsaxis_;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_tschchartseriesvaluelabelsaxis(::google::protobuf::int32 value) {
+  set_has_tschchartseriesvaluelabelsaxis();
+  tschchartseriesvaluelabelsaxis_ = value;
+}
+
+// optional .TSD.LineEndArchive tschchartserieserrorbarlineend = 50;
+inline bool ChartSeriesGenericPropertyMapArchive::has_tschchartserieserrorbarlineend() const {
+  return (_has_bits_[1] & 0x00020000u) != 0;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_has_tschchartserieserrorbarlineend() {
+  _has_bits_[1] |= 0x00020000u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_has_tschchartserieserrorbarlineend() {
+  _has_bits_[1] &= ~0x00020000u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_tschchartserieserrorbarlineend() {
+  if (tschchartserieserrorbarlineend_ != NULL) tschchartserieserrorbarlineend_->::TSD::LineEndArchive::Clear();
+  clear_has_tschchartserieserrorbarlineend();
+}
+inline const ::TSD::LineEndArchive& ChartSeriesGenericPropertyMapArchive::tschchartserieserrorbarlineend() const {
+  return tschchartserieserrorbarlineend_ != NULL ? *tschchartserieserrorbarlineend_ : *default_instance_->tschchartserieserrorbarlineend_;
+}
+inline ::TSD::LineEndArchive* ChartSeriesGenericPropertyMapArchive::mutable_tschchartserieserrorbarlineend() {
+  set_has_tschchartserieserrorbarlineend();
+  if (tschchartserieserrorbarlineend_ == NULL) tschchartserieserrorbarlineend_ = new ::TSD::LineEndArchive;
+  return tschchartserieserrorbarlineend_;
+}
+inline ::TSD::LineEndArchive* ChartSeriesGenericPropertyMapArchive::release_tschchartserieserrorbarlineend() {
+  clear_has_tschchartserieserrorbarlineend();
+  ::TSD::LineEndArchive* temp = tschchartserieserrorbarlineend_;
+  tschchartserieserrorbarlineend_ = NULL;
+  return temp;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_allocated_tschchartserieserrorbarlineend(::TSD::LineEndArchive* tschchartserieserrorbarlineend) {
+  delete tschchartserieserrorbarlineend_;
+  tschchartserieserrorbarlineend_ = tschchartserieserrorbarlineend;
+  if (tschchartserieserrorbarlineend) {
+    set_has_tschchartserieserrorbarlineend();
+  } else {
+    clear_has_tschchartserieserrorbarlineend();
+  }
+}
+
+// optional .TSD.LineEndArchive tschchartserieserrorbarlineendscatterx = 51;
+inline bool ChartSeriesGenericPropertyMapArchive::has_tschchartserieserrorbarlineendscatterx() const {
+  return (_has_bits_[1] & 0x00040000u) != 0;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_has_tschchartserieserrorbarlineendscatterx() {
+  _has_bits_[1] |= 0x00040000u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_has_tschchartserieserrorbarlineendscatterx() {
+  _has_bits_[1] &= ~0x00040000u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_tschchartserieserrorbarlineendscatterx() {
+  if (tschchartserieserrorbarlineendscatterx_ != NULL) tschchartserieserrorbarlineendscatterx_->::TSD::LineEndArchive::Clear();
+  clear_has_tschchartserieserrorbarlineendscatterx();
+}
+inline const ::TSD::LineEndArchive& ChartSeriesGenericPropertyMapArchive::tschchartserieserrorbarlineendscatterx() const {
+  return tschchartserieserrorbarlineendscatterx_ != NULL ? *tschchartserieserrorbarlineendscatterx_ : *default_instance_->tschchartserieserrorbarlineendscatterx_;
+}
+inline ::TSD::LineEndArchive* ChartSeriesGenericPropertyMapArchive::mutable_tschchartserieserrorbarlineendscatterx() {
+  set_has_tschchartserieserrorbarlineendscatterx();
+  if (tschchartserieserrorbarlineendscatterx_ == NULL) tschchartserieserrorbarlineendscatterx_ = new ::TSD::LineEndArchive;
+  return tschchartserieserrorbarlineendscatterx_;
+}
+inline ::TSD::LineEndArchive* ChartSeriesGenericPropertyMapArchive::release_tschchartserieserrorbarlineendscatterx() {
+  clear_has_tschchartserieserrorbarlineendscatterx();
+  ::TSD::LineEndArchive* temp = tschchartserieserrorbarlineendscatterx_;
+  tschchartserieserrorbarlineendscatterx_ = NULL;
+  return temp;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_allocated_tschchartserieserrorbarlineendscatterx(::TSD::LineEndArchive* tschchartserieserrorbarlineendscatterx) {
+  delete tschchartserieserrorbarlineendscatterx_;
+  tschchartserieserrorbarlineendscatterx_ = tschchartserieserrorbarlineendscatterx;
+  if (tschchartserieserrorbarlineendscatterx) {
+    set_has_tschchartserieserrorbarlineendscatterx();
+  } else {
+    clear_has_tschchartserieserrorbarlineendscatterx();
+  }
+}
+
+// optional .TSD.ShadowArchive tschchartserieserrorbarshadow = 52;
+inline bool ChartSeriesGenericPropertyMapArchive::has_tschchartserieserrorbarshadow() const {
+  return (_has_bits_[1] & 0x00080000u) != 0;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_has_tschchartserieserrorbarshadow() {
+  _has_bits_[1] |= 0x00080000u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_has_tschchartserieserrorbarshadow() {
+  _has_bits_[1] &= ~0x00080000u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_tschchartserieserrorbarshadow() {
+  if (tschchartserieserrorbarshadow_ != NULL) tschchartserieserrorbarshadow_->::TSD::ShadowArchive::Clear();
+  clear_has_tschchartserieserrorbarshadow();
+}
+inline const ::TSD::ShadowArchive& ChartSeriesGenericPropertyMapArchive::tschchartserieserrorbarshadow() const {
+  return tschchartserieserrorbarshadow_ != NULL ? *tschchartserieserrorbarshadow_ : *default_instance_->tschchartserieserrorbarshadow_;
+}
+inline ::TSD::ShadowArchive* ChartSeriesGenericPropertyMapArchive::mutable_tschchartserieserrorbarshadow() {
+  set_has_tschchartserieserrorbarshadow();
+  if (tschchartserieserrorbarshadow_ == NULL) tschchartserieserrorbarshadow_ = new ::TSD::ShadowArchive;
+  return tschchartserieserrorbarshadow_;
+}
+inline ::TSD::ShadowArchive* ChartSeriesGenericPropertyMapArchive::release_tschchartserieserrorbarshadow() {
+  clear_has_tschchartserieserrorbarshadow();
+  ::TSD::ShadowArchive* temp = tschchartserieserrorbarshadow_;
+  tschchartserieserrorbarshadow_ = NULL;
+  return temp;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_allocated_tschchartserieserrorbarshadow(::TSD::ShadowArchive* tschchartserieserrorbarshadow) {
+  delete tschchartserieserrorbarshadow_;
+  tschchartserieserrorbarshadow_ = tschchartserieserrorbarshadow;
+  if (tschchartserieserrorbarshadow) {
+    set_has_tschchartserieserrorbarshadow();
+  } else {
+    clear_has_tschchartserieserrorbarshadow();
+  }
+}
+
+// optional .TSD.StrokeArchive tschchartserieserrorbarstroke = 53;
+inline bool ChartSeriesGenericPropertyMapArchive::has_tschchartserieserrorbarstroke() const {
+  return (_has_bits_[1] & 0x00100000u) != 0;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_has_tschchartserieserrorbarstroke() {
+  _has_bits_[1] |= 0x00100000u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_has_tschchartserieserrorbarstroke() {
+  _has_bits_[1] &= ~0x00100000u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_tschchartserieserrorbarstroke() {
+  if (tschchartserieserrorbarstroke_ != NULL) tschchartserieserrorbarstroke_->::TSD::StrokeArchive::Clear();
+  clear_has_tschchartserieserrorbarstroke();
+}
+inline const ::TSD::StrokeArchive& ChartSeriesGenericPropertyMapArchive::tschchartserieserrorbarstroke() const {
+  return tschchartserieserrorbarstroke_ != NULL ? *tschchartserieserrorbarstroke_ : *default_instance_->tschchartserieserrorbarstroke_;
+}
+inline ::TSD::StrokeArchive* ChartSeriesGenericPropertyMapArchive::mutable_tschchartserieserrorbarstroke() {
+  set_has_tschchartserieserrorbarstroke();
+  if (tschchartserieserrorbarstroke_ == NULL) tschchartserieserrorbarstroke_ = new ::TSD::StrokeArchive;
+  return tschchartserieserrorbarstroke_;
+}
+inline ::TSD::StrokeArchive* ChartSeriesGenericPropertyMapArchive::release_tschchartserieserrorbarstroke() {
+  clear_has_tschchartserieserrorbarstroke();
+  ::TSD::StrokeArchive* temp = tschchartserieserrorbarstroke_;
+  tschchartserieserrorbarstroke_ = NULL;
+  return temp;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_allocated_tschchartserieserrorbarstroke(::TSD::StrokeArchive* tschchartserieserrorbarstroke) {
+  delete tschchartserieserrorbarstroke_;
+  tschchartserieserrorbarstroke_ = tschchartserieserrorbarstroke;
+  if (tschchartserieserrorbarstroke) {
+    set_has_tschchartserieserrorbarstroke();
+  } else {
+    clear_has_tschchartserieserrorbarstroke();
+  }
+}
+
+// optional .TSD.StrokeArchive tschchartserieserrorbarstrokescatterx = 54;
+inline bool ChartSeriesGenericPropertyMapArchive::has_tschchartserieserrorbarstrokescatterx() const {
+  return (_has_bits_[1] & 0x00200000u) != 0;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_has_tschchartserieserrorbarstrokescatterx() {
+  _has_bits_[1] |= 0x00200000u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_has_tschchartserieserrorbarstrokescatterx() {
+  _has_bits_[1] &= ~0x00200000u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_tschchartserieserrorbarstrokescatterx() {
+  if (tschchartserieserrorbarstrokescatterx_ != NULL) tschchartserieserrorbarstrokescatterx_->::TSD::StrokeArchive::Clear();
+  clear_has_tschchartserieserrorbarstrokescatterx();
+}
+inline const ::TSD::StrokeArchive& ChartSeriesGenericPropertyMapArchive::tschchartserieserrorbarstrokescatterx() const {
+  return tschchartserieserrorbarstrokescatterx_ != NULL ? *tschchartserieserrorbarstrokescatterx_ : *default_instance_->tschchartserieserrorbarstrokescatterx_;
+}
+inline ::TSD::StrokeArchive* ChartSeriesGenericPropertyMapArchive::mutable_tschchartserieserrorbarstrokescatterx() {
+  set_has_tschchartserieserrorbarstrokescatterx();
+  if (tschchartserieserrorbarstrokescatterx_ == NULL) tschchartserieserrorbarstrokescatterx_ = new ::TSD::StrokeArchive;
+  return tschchartserieserrorbarstrokescatterx_;
+}
+inline ::TSD::StrokeArchive* ChartSeriesGenericPropertyMapArchive::release_tschchartserieserrorbarstrokescatterx() {
+  clear_has_tschchartserieserrorbarstrokescatterx();
+  ::TSD::StrokeArchive* temp = tschchartserieserrorbarstrokescatterx_;
+  tschchartserieserrorbarstrokescatterx_ = NULL;
+  return temp;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_allocated_tschchartserieserrorbarstrokescatterx(::TSD::StrokeArchive* tschchartserieserrorbarstrokescatterx) {
+  delete tschchartserieserrorbarstrokescatterx_;
+  tschchartserieserrorbarstrokescatterx_ = tschchartserieserrorbarstrokescatterx;
+  if (tschchartserieserrorbarstrokescatterx) {
+    set_has_tschchartserieserrorbarstrokescatterx();
+  } else {
+    clear_has_tschchartserieserrorbarstrokescatterx();
+  }
+}
+
+// optional .TSD.FillArchive tschchartseriesfill = 55;
+inline bool ChartSeriesGenericPropertyMapArchive::has_tschchartseriesfill() const {
+  return (_has_bits_[1] & 0x00400000u) != 0;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_has_tschchartseriesfill() {
+  _has_bits_[1] |= 0x00400000u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_has_tschchartseriesfill() {
+  _has_bits_[1] &= ~0x00400000u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_tschchartseriesfill() {
+  if (tschchartseriesfill_ != NULL) tschchartseriesfill_->::TSD::FillArchive::Clear();
+  clear_has_tschchartseriesfill();
+}
+inline const ::TSD::FillArchive& ChartSeriesGenericPropertyMapArchive::tschchartseriesfill() const {
+  return tschchartseriesfill_ != NULL ? *tschchartseriesfill_ : *default_instance_->tschchartseriesfill_;
+}
+inline ::TSD::FillArchive* ChartSeriesGenericPropertyMapArchive::mutable_tschchartseriesfill() {
+  set_has_tschchartseriesfill();
+  if (tschchartseriesfill_ == NULL) tschchartseriesfill_ = new ::TSD::FillArchive;
+  return tschchartseriesfill_;
+}
+inline ::TSD::FillArchive* ChartSeriesGenericPropertyMapArchive::release_tschchartseriesfill() {
+  clear_has_tschchartseriesfill();
+  ::TSD::FillArchive* temp = tschchartseriesfill_;
+  tschchartseriesfill_ = NULL;
+  return temp;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_allocated_tschchartseriesfill(::TSD::FillArchive* tschchartseriesfill) {
+  delete tschchartseriesfill_;
+  tschchartseriesfill_ = tschchartseriesfill;
+  if (tschchartseriesfill) {
+    set_has_tschchartseriesfill();
+  } else {
+    clear_has_tschchartseriesfill();
+  }
+}
+
+// optional int32 tschchartserieslabelparagraphstyleindex = 56;
+inline bool ChartSeriesGenericPropertyMapArchive::has_tschchartserieslabelparagraphstyleindex() const {
+  return (_has_bits_[1] & 0x00800000u) != 0;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_has_tschchartserieslabelparagraphstyleindex() {
+  _has_bits_[1] |= 0x00800000u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_has_tschchartserieslabelparagraphstyleindex() {
+  _has_bits_[1] &= ~0x00800000u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_tschchartserieslabelparagraphstyleindex() {
+  tschchartserieslabelparagraphstyleindex_ = 0;
+  clear_has_tschchartserieslabelparagraphstyleindex();
+}
+inline ::google::protobuf::int32 ChartSeriesGenericPropertyMapArchive::tschchartserieslabelparagraphstyleindex() const {
+  return tschchartserieslabelparagraphstyleindex_;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_tschchartserieslabelparagraphstyleindex(::google::protobuf::int32 value) {
+  set_has_tschchartserieslabelparagraphstyleindex();
+  tschchartserieslabelparagraphstyleindex_ = value;
+}
+
+// optional float tschchartseriesopacity = 57;
+inline bool ChartSeriesGenericPropertyMapArchive::has_tschchartseriesopacity() const {
+  return (_has_bits_[1] & 0x01000000u) != 0;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_has_tschchartseriesopacity() {
+  _has_bits_[1] |= 0x01000000u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_has_tschchartseriesopacity() {
+  _has_bits_[1] &= ~0x01000000u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_tschchartseriesopacity() {
+  tschchartseriesopacity_ = 0;
+  clear_has_tschchartseriesopacity();
+}
+inline float ChartSeriesGenericPropertyMapArchive::tschchartseriesopacity() const {
+  return tschchartseriesopacity_;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_tschchartseriesopacity(float value) {
+  set_has_tschchartseriesopacity();
+  tschchartseriesopacity_ = value;
+}
+
+// optional int32 tschchartseriesoutsidelabelparagraphstyleindex = 58;
+inline bool ChartSeriesGenericPropertyMapArchive::has_tschchartseriesoutsidelabelparagraphstyleindex() const {
+  return (_has_bits_[1] & 0x02000000u) != 0;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_has_tschchartseriesoutsidelabelparagraphstyleindex() {
+  _has_bits_[1] |= 0x02000000u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_has_tschchartseriesoutsidelabelparagraphstyleindex() {
+  _has_bits_[1] &= ~0x02000000u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_tschchartseriesoutsidelabelparagraphstyleindex() {
+  tschchartseriesoutsidelabelparagraphstyleindex_ = 0;
+  clear_has_tschchartseriesoutsidelabelparagraphstyleindex();
+}
+inline ::google::protobuf::int32 ChartSeriesGenericPropertyMapArchive::tschchartseriesoutsidelabelparagraphstyleindex() const {
+  return tschchartseriesoutsidelabelparagraphstyleindex_;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_tschchartseriesoutsidelabelparagraphstyleindex(::google::protobuf::int32 value) {
+  set_has_tschchartseriesoutsidelabelparagraphstyleindex();
+  tschchartseriesoutsidelabelparagraphstyleindex_ = value;
+}
+
+// optional .TSD.ShadowArchive tschchartseriesshadow = 59;
+inline bool ChartSeriesGenericPropertyMapArchive::has_tschchartseriesshadow() const {
+  return (_has_bits_[1] & 0x04000000u) != 0;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_has_tschchartseriesshadow() {
+  _has_bits_[1] |= 0x04000000u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_has_tschchartseriesshadow() {
+  _has_bits_[1] &= ~0x04000000u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_tschchartseriesshadow() {
+  if (tschchartseriesshadow_ != NULL) tschchartseriesshadow_->::TSD::ShadowArchive::Clear();
+  clear_has_tschchartseriesshadow();
+}
+inline const ::TSD::ShadowArchive& ChartSeriesGenericPropertyMapArchive::tschchartseriesshadow() const {
+  return tschchartseriesshadow_ != NULL ? *tschchartseriesshadow_ : *default_instance_->tschchartseriesshadow_;
+}
+inline ::TSD::ShadowArchive* ChartSeriesGenericPropertyMapArchive::mutable_tschchartseriesshadow() {
+  set_has_tschchartseriesshadow();
+  if (tschchartseriesshadow_ == NULL) tschchartseriesshadow_ = new ::TSD::ShadowArchive;
+  return tschchartseriesshadow_;
+}
+inline ::TSD::ShadowArchive* ChartSeriesGenericPropertyMapArchive::release_tschchartseriesshadow() {
+  clear_has_tschchartseriesshadow();
+  ::TSD::ShadowArchive* temp = tschchartseriesshadow_;
+  tschchartseriesshadow_ = NULL;
+  return temp;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_allocated_tschchartseriesshadow(::TSD::ShadowArchive* tschchartseriesshadow) {
+  delete tschchartseriesshadow_;
+  tschchartseriesshadow_ = tschchartseriesshadow;
+  if (tschchartseriesshadow) {
+    set_has_tschchartseriesshadow();
+  } else {
+    clear_has_tschchartseriesshadow();
+  }
+}
+
+// optional .TSD.StrokeArchive tschchartseriesstroke = 60;
+inline bool ChartSeriesGenericPropertyMapArchive::has_tschchartseriesstroke() const {
+  return (_has_bits_[1] & 0x08000000u) != 0;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_has_tschchartseriesstroke() {
+  _has_bits_[1] |= 0x08000000u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_has_tschchartseriesstroke() {
+  _has_bits_[1] &= ~0x08000000u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_tschchartseriesstroke() {
+  if (tschchartseriesstroke_ != NULL) tschchartseriesstroke_->::TSD::StrokeArchive::Clear();
+  clear_has_tschchartseriesstroke();
+}
+inline const ::TSD::StrokeArchive& ChartSeriesGenericPropertyMapArchive::tschchartseriesstroke() const {
+  return tschchartseriesstroke_ != NULL ? *tschchartseriesstroke_ : *default_instance_->tschchartseriesstroke_;
+}
+inline ::TSD::StrokeArchive* ChartSeriesGenericPropertyMapArchive::mutable_tschchartseriesstroke() {
+  set_has_tschchartseriesstroke();
+  if (tschchartseriesstroke_ == NULL) tschchartseriesstroke_ = new ::TSD::StrokeArchive;
+  return tschchartseriesstroke_;
+}
+inline ::TSD::StrokeArchive* ChartSeriesGenericPropertyMapArchive::release_tschchartseriesstroke() {
+  clear_has_tschchartseriesstroke();
+  ::TSD::StrokeArchive* temp = tschchartseriesstroke_;
+  tschchartseriesstroke_ = NULL;
+  return temp;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_allocated_tschchartseriesstroke(::TSD::StrokeArchive* tschchartseriesstroke) {
+  delete tschchartseriesstroke_;
+  tschchartseriesstroke_ = tschchartseriesstroke;
+  if (tschchartseriesstroke) {
+    set_has_tschchartseriesstroke();
+  } else {
+    clear_has_tschchartseriesstroke();
+  }
+}
+
+// optional .TSD.FillArchive tschchartseriessymbolfill = 61;
+inline bool ChartSeriesGenericPropertyMapArchive::has_tschchartseriessymbolfill() const {
+  return (_has_bits_[1] & 0x10000000u) != 0;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_has_tschchartseriessymbolfill() {
+  _has_bits_[1] |= 0x10000000u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_has_tschchartseriessymbolfill() {
+  _has_bits_[1] &= ~0x10000000u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_tschchartseriessymbolfill() {
+  if (tschchartseriessymbolfill_ != NULL) tschchartseriessymbolfill_->::TSD::FillArchive::Clear();
+  clear_has_tschchartseriessymbolfill();
+}
+inline const ::TSD::FillArchive& ChartSeriesGenericPropertyMapArchive::tschchartseriessymbolfill() const {
+  return tschchartseriessymbolfill_ != NULL ? *tschchartseriessymbolfill_ : *default_instance_->tschchartseriessymbolfill_;
+}
+inline ::TSD::FillArchive* ChartSeriesGenericPropertyMapArchive::mutable_tschchartseriessymbolfill() {
+  set_has_tschchartseriessymbolfill();
+  if (tschchartseriessymbolfill_ == NULL) tschchartseriessymbolfill_ = new ::TSD::FillArchive;
+  return tschchartseriessymbolfill_;
+}
+inline ::TSD::FillArchive* ChartSeriesGenericPropertyMapArchive::release_tschchartseriessymbolfill() {
+  clear_has_tschchartseriessymbolfill();
+  ::TSD::FillArchive* temp = tschchartseriessymbolfill_;
+  tschchartseriessymbolfill_ = NULL;
+  return temp;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_allocated_tschchartseriessymbolfill(::TSD::FillArchive* tschchartseriessymbolfill) {
+  delete tschchartseriessymbolfill_;
+  tschchartseriessymbolfill_ = tschchartseriessymbolfill;
+  if (tschchartseriessymbolfill) {
+    set_has_tschchartseriessymbolfill();
+  } else {
+    clear_has_tschchartseriessymbolfill();
+  }
+}
+
+// optional bool tschchartseriessymbolfilluseseriesfill = 62;
+inline bool ChartSeriesGenericPropertyMapArchive::has_tschchartseriessymbolfilluseseriesfill() const {
+  return (_has_bits_[1] & 0x20000000u) != 0;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_has_tschchartseriessymbolfilluseseriesfill() {
+  _has_bits_[1] |= 0x20000000u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_has_tschchartseriessymbolfilluseseriesfill() {
+  _has_bits_[1] &= ~0x20000000u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_tschchartseriessymbolfilluseseriesfill() {
+  tschchartseriessymbolfilluseseriesfill_ = false;
+  clear_has_tschchartseriessymbolfilluseseriesfill();
+}
+inline bool ChartSeriesGenericPropertyMapArchive::tschchartseriessymbolfilluseseriesfill() const {
+  return tschchartseriessymbolfilluseseriesfill_;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_tschchartseriessymbolfilluseseriesfill(bool value) {
+  set_has_tschchartseriessymbolfilluseseriesfill();
+  tschchartseriessymbolfilluseseriesfill_ = value;
+}
+
+// optional bool tschchartseriessymbolfilluseseriesstroke = 63;
+inline bool ChartSeriesGenericPropertyMapArchive::has_tschchartseriessymbolfilluseseriesstroke() const {
+  return (_has_bits_[1] & 0x40000000u) != 0;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_has_tschchartseriessymbolfilluseseriesstroke() {
+  _has_bits_[1] |= 0x40000000u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_has_tschchartseriessymbolfilluseseriesstroke() {
+  _has_bits_[1] &= ~0x40000000u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_tschchartseriessymbolfilluseseriesstroke() {
+  tschchartseriessymbolfilluseseriesstroke_ = false;
+  clear_has_tschchartseriessymbolfilluseseriesstroke();
+}
+inline bool ChartSeriesGenericPropertyMapArchive::tschchartseriessymbolfilluseseriesstroke() const {
+  return tschchartseriessymbolfilluseseriesstroke_;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_tschchartseriessymbolfilluseseriesstroke(bool value) {
+  set_has_tschchartseriessymbolfilluseseriesstroke();
+  tschchartseriessymbolfilluseseriesstroke_ = value;
+}
+
+// optional float tschchartseriessymbolsize = 64;
+inline bool ChartSeriesGenericPropertyMapArchive::has_tschchartseriessymbolsize() const {
+  return (_has_bits_[1] & 0x80000000u) != 0;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_has_tschchartseriessymbolsize() {
+  _has_bits_[1] |= 0x80000000u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_has_tschchartseriessymbolsize() {
+  _has_bits_[1] &= ~0x80000000u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_tschchartseriessymbolsize() {
+  tschchartseriessymbolsize_ = 0;
+  clear_has_tschchartseriessymbolsize();
+}
+inline float ChartSeriesGenericPropertyMapArchive::tschchartseriessymbolsize() const {
+  return tschchartseriessymbolsize_;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_tschchartseriessymbolsize(float value) {
+  set_has_tschchartseriessymbolsize();
+  tschchartseriessymbolsize_ = value;
+}
+
+// optional .TSD.StrokeArchive tschchartseriessymbolstroke = 65;
+inline bool ChartSeriesGenericPropertyMapArchive::has_tschchartseriessymbolstroke() const {
+  return (_has_bits_[2] & 0x00000001u) != 0;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_has_tschchartseriessymbolstroke() {
+  _has_bits_[2] |= 0x00000001u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_has_tschchartseriessymbolstroke() {
+  _has_bits_[2] &= ~0x00000001u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_tschchartseriessymbolstroke() {
+  if (tschchartseriessymbolstroke_ != NULL) tschchartseriessymbolstroke_->::TSD::StrokeArchive::Clear();
+  clear_has_tschchartseriessymbolstroke();
+}
+inline const ::TSD::StrokeArchive& ChartSeriesGenericPropertyMapArchive::tschchartseriessymbolstroke() const {
+  return tschchartseriessymbolstroke_ != NULL ? *tschchartseriessymbolstroke_ : *default_instance_->tschchartseriessymbolstroke_;
+}
+inline ::TSD::StrokeArchive* ChartSeriesGenericPropertyMapArchive::mutable_tschchartseriessymbolstroke() {
+  set_has_tschchartseriessymbolstroke();
+  if (tschchartseriessymbolstroke_ == NULL) tschchartseriessymbolstroke_ = new ::TSD::StrokeArchive;
+  return tschchartseriessymbolstroke_;
+}
+inline ::TSD::StrokeArchive* ChartSeriesGenericPropertyMapArchive::release_tschchartseriessymbolstroke() {
+  clear_has_tschchartseriessymbolstroke();
+  ::TSD::StrokeArchive* temp = tschchartseriessymbolstroke_;
+  tschchartseriessymbolstroke_ = NULL;
+  return temp;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_allocated_tschchartseriessymbolstroke(::TSD::StrokeArchive* tschchartseriessymbolstroke) {
+  delete tschchartseriessymbolstroke_;
+  tschchartseriessymbolstroke_ = tschchartseriessymbolstroke;
+  if (tschchartseriessymbolstroke) {
+    set_has_tschchartseriessymbolstroke();
+  } else {
+    clear_has_tschchartseriessymbolstroke();
+  }
+}
+
+// optional float tschchartseriestrendlineequationopacity = 66;
+inline bool ChartSeriesGenericPropertyMapArchive::has_tschchartseriestrendlineequationopacity() const {
+  return (_has_bits_[2] & 0x00000002u) != 0;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_has_tschchartseriestrendlineequationopacity() {
+  _has_bits_[2] |= 0x00000002u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_has_tschchartseriestrendlineequationopacity() {
+  _has_bits_[2] &= ~0x00000002u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_tschchartseriestrendlineequationopacity() {
+  tschchartseriestrendlineequationopacity_ = 0;
+  clear_has_tschchartseriestrendlineequationopacity();
+}
+inline float ChartSeriesGenericPropertyMapArchive::tschchartseriestrendlineequationopacity() const {
+  return tschchartseriestrendlineequationopacity_;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_tschchartseriestrendlineequationopacity(float value) {
+  set_has_tschchartseriestrendlineequationopacity();
+  tschchartseriestrendlineequationopacity_ = value;
+}
+
+// optional int32 tschchartseriestrendlineequationparagraphstyleindex = 67;
+inline bool ChartSeriesGenericPropertyMapArchive::has_tschchartseriestrendlineequationparagraphstyleindex() const {
+  return (_has_bits_[2] & 0x00000004u) != 0;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_has_tschchartseriestrendlineequationparagraphstyleindex() {
+  _has_bits_[2] |= 0x00000004u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_has_tschchartseriestrendlineequationparagraphstyleindex() {
+  _has_bits_[2] &= ~0x00000004u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_tschchartseriestrendlineequationparagraphstyleindex() {
+  tschchartseriestrendlineequationparagraphstyleindex_ = 0;
+  clear_has_tschchartseriestrendlineequationparagraphstyleindex();
+}
+inline ::google::protobuf::int32 ChartSeriesGenericPropertyMapArchive::tschchartseriestrendlineequationparagraphstyleindex() const {
+  return tschchartseriestrendlineequationparagraphstyleindex_;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_tschchartseriestrendlineequationparagraphstyleindex(::google::protobuf::int32 value) {
+  set_has_tschchartseriestrendlineequationparagraphstyleindex();
+  tschchartseriestrendlineequationparagraphstyleindex_ = value;
+}
+
+// optional float tschchartseriestrendlinersquaredopacity = 68;
+inline bool ChartSeriesGenericPropertyMapArchive::has_tschchartseriestrendlinersquaredopacity() const {
+  return (_has_bits_[2] & 0x00000008u) != 0;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_has_tschchartseriestrendlinersquaredopacity() {
+  _has_bits_[2] |= 0x00000008u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_has_tschchartseriestrendlinersquaredopacity() {
+  _has_bits_[2] &= ~0x00000008u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_tschchartseriestrendlinersquaredopacity() {
+  tschchartseriestrendlinersquaredopacity_ = 0;
+  clear_has_tschchartseriestrendlinersquaredopacity();
+}
+inline float ChartSeriesGenericPropertyMapArchive::tschchartseriestrendlinersquaredopacity() const {
+  return tschchartseriestrendlinersquaredopacity_;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_tschchartseriestrendlinersquaredopacity(float value) {
+  set_has_tschchartseriestrendlinersquaredopacity();
+  tschchartseriestrendlinersquaredopacity_ = value;
+}
+
+// optional int32 tschchartseriestrendlinersquaredparagraphstyleindex = 69;
+inline bool ChartSeriesGenericPropertyMapArchive::has_tschchartseriestrendlinersquaredparagraphstyleindex() const {
+  return (_has_bits_[2] & 0x00000010u) != 0;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_has_tschchartseriestrendlinersquaredparagraphstyleindex() {
+  _has_bits_[2] |= 0x00000010u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_has_tschchartseriestrendlinersquaredparagraphstyleindex() {
+  _has_bits_[2] &= ~0x00000010u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_tschchartseriestrendlinersquaredparagraphstyleindex() {
+  tschchartseriestrendlinersquaredparagraphstyleindex_ = 0;
+  clear_has_tschchartseriestrendlinersquaredparagraphstyleindex();
+}
+inline ::google::protobuf::int32 ChartSeriesGenericPropertyMapArchive::tschchartseriestrendlinersquaredparagraphstyleindex() const {
+  return tschchartseriestrendlinersquaredparagraphstyleindex_;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_tschchartseriestrendlinersquaredparagraphstyleindex(::google::protobuf::int32 value) {
+  set_has_tschchartseriestrendlinersquaredparagraphstyleindex();
+  tschchartseriestrendlinersquaredparagraphstyleindex_ = value;
+}
+
+// optional .TSD.ShadowArchive tschchartseriestrendlineshadow = 70;
+inline bool ChartSeriesGenericPropertyMapArchive::has_tschchartseriestrendlineshadow() const {
+  return (_has_bits_[2] & 0x00000020u) != 0;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_has_tschchartseriestrendlineshadow() {
+  _has_bits_[2] |= 0x00000020u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_has_tschchartseriestrendlineshadow() {
+  _has_bits_[2] &= ~0x00000020u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_tschchartseriestrendlineshadow() {
+  if (tschchartseriestrendlineshadow_ != NULL) tschchartseriestrendlineshadow_->::TSD::ShadowArchive::Clear();
+  clear_has_tschchartseriestrendlineshadow();
+}
+inline const ::TSD::ShadowArchive& ChartSeriesGenericPropertyMapArchive::tschchartseriestrendlineshadow() const {
+  return tschchartseriestrendlineshadow_ != NULL ? *tschchartseriestrendlineshadow_ : *default_instance_->tschchartseriestrendlineshadow_;
+}
+inline ::TSD::ShadowArchive* ChartSeriesGenericPropertyMapArchive::mutable_tschchartseriestrendlineshadow() {
+  set_has_tschchartseriestrendlineshadow();
+  if (tschchartseriestrendlineshadow_ == NULL) tschchartseriestrendlineshadow_ = new ::TSD::ShadowArchive;
+  return tschchartseriestrendlineshadow_;
+}
+inline ::TSD::ShadowArchive* ChartSeriesGenericPropertyMapArchive::release_tschchartseriestrendlineshadow() {
+  clear_has_tschchartseriestrendlineshadow();
+  ::TSD::ShadowArchive* temp = tschchartseriestrendlineshadow_;
+  tschchartseriestrendlineshadow_ = NULL;
+  return temp;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_allocated_tschchartseriestrendlineshadow(::TSD::ShadowArchive* tschchartseriestrendlineshadow) {
+  delete tschchartseriestrendlineshadow_;
+  tschchartseriestrendlineshadow_ = tschchartseriestrendlineshadow;
+  if (tschchartseriestrendlineshadow) {
+    set_has_tschchartseriestrendlineshadow();
+  } else {
+    clear_has_tschchartseriestrendlineshadow();
+  }
+}
+
+// optional .TSD.StrokeArchive tschchartseriestrendlinestroke = 71;
+inline bool ChartSeriesGenericPropertyMapArchive::has_tschchartseriestrendlinestroke() const {
+  return (_has_bits_[2] & 0x00000040u) != 0;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_has_tschchartseriestrendlinestroke() {
+  _has_bits_[2] |= 0x00000040u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_has_tschchartseriestrendlinestroke() {
+  _has_bits_[2] &= ~0x00000040u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_tschchartseriestrendlinestroke() {
+  if (tschchartseriestrendlinestroke_ != NULL) tschchartseriestrendlinestroke_->::TSD::StrokeArchive::Clear();
+  clear_has_tschchartseriestrendlinestroke();
+}
+inline const ::TSD::StrokeArchive& ChartSeriesGenericPropertyMapArchive::tschchartseriestrendlinestroke() const {
+  return tschchartseriestrendlinestroke_ != NULL ? *tschchartseriestrendlinestroke_ : *default_instance_->tschchartseriestrendlinestroke_;
+}
+inline ::TSD::StrokeArchive* ChartSeriesGenericPropertyMapArchive::mutable_tschchartseriestrendlinestroke() {
+  set_has_tschchartseriestrendlinestroke();
+  if (tschchartseriestrendlinestroke_ == NULL) tschchartseriestrendlinestroke_ = new ::TSD::StrokeArchive;
+  return tschchartseriestrendlinestroke_;
+}
+inline ::TSD::StrokeArchive* ChartSeriesGenericPropertyMapArchive::release_tschchartseriestrendlinestroke() {
+  clear_has_tschchartseriestrendlinestroke();
+  ::TSD::StrokeArchive* temp = tschchartseriestrendlinestroke_;
+  tschchartseriestrendlinestroke_ = NULL;
+  return temp;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_allocated_tschchartseriestrendlinestroke(::TSD::StrokeArchive* tschchartseriestrendlinestroke) {
+  delete tschchartseriestrendlinestroke_;
+  tschchartseriestrendlinestroke_ = tschchartseriestrendlinestroke;
+  if (tschchartseriestrendlinestroke) {
+    set_has_tschchartseriestrendlinestroke();
+  } else {
+    clear_has_tschchartseriestrendlinestroke();
+  }
+}
+
+// optional int32 tschchartseriesvaluelabelposition = 72;
+inline bool ChartSeriesGenericPropertyMapArchive::has_tschchartseriesvaluelabelposition() const {
+  return (_has_bits_[2] & 0x00000080u) != 0;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_has_tschchartseriesvaluelabelposition() {
+  _has_bits_[2] |= 0x00000080u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_has_tschchartseriesvaluelabelposition() {
+  _has_bits_[2] &= ~0x00000080u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_tschchartseriesvaluelabelposition() {
+  tschchartseriesvaluelabelposition_ = 0;
+  clear_has_tschchartseriesvaluelabelposition();
+}
+inline ::google::protobuf::int32 ChartSeriesGenericPropertyMapArchive::tschchartseriesvaluelabelposition() const {
+  return tschchartseriesvaluelabelposition_;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_tschchartseriesvaluelabelposition(::google::protobuf::int32 value) {
+  set_has_tschchartseriesvaluelabelposition();
+  tschchartseriesvaluelabelposition_ = value;
+}
+
+// optional bool tschchartseriesshowlabelsinfront = 73;
+inline bool ChartSeriesGenericPropertyMapArchive::has_tschchartseriesshowlabelsinfront() const {
+  return (_has_bits_[2] & 0x00000100u) != 0;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_has_tschchartseriesshowlabelsinfront() {
+  _has_bits_[2] |= 0x00000100u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_has_tschchartseriesshowlabelsinfront() {
+  _has_bits_[2] &= ~0x00000100u;
+}
+inline void ChartSeriesGenericPropertyMapArchive::clear_tschchartseriesshowlabelsinfront() {
+  tschchartseriesshowlabelsinfront_ = false;
+  clear_has_tschchartseriesshowlabelsinfront();
+}
+inline bool ChartSeriesGenericPropertyMapArchive::tschchartseriesshowlabelsinfront() const {
+  return tschchartseriesshowlabelsinfront_;
+}
+inline void ChartSeriesGenericPropertyMapArchive::set_tschchartseriesshowlabelsinfront(bool value) {
+  set_has_tschchartseriesshowlabelsinfront();
+  tschchartseriesshowlabelsinfront_ = value;
 }
 
 

@@ -51,6 +51,8 @@ class TileStorage;
 class TileStorage_Tile;
 class PopUpMenuModel;
 class PopUpMenuModel_CellValue;
+class ImportWarningSetArchive;
+class ImportWarningSetArchive_FormulaImportWarning;
 class TableDataList;
 class TableDataList_ListEntry;
 class TableRBTree;
@@ -63,12 +65,21 @@ class TableInfoArchive;
 class EditingStateArchive;
 class WPTableInfoArchive;
 class TableStyleNetworkArchive;
+class TableSortOrderArchive;
+class TableSortOrderArchive_SortRuleArchive;
+class SortRuleReferenceTrackerArchive;
 class TableModelArchive;
 class DurationWrapperArchive;
 class Cell;
 class MergeRegionMapArchive;
 class CellMapArchive;
 class CellMapArchive_CellMapEntry;
+class CellMapTileArchive;
+class CellMapTileArchive_CellMapEntry;
+class TiledCellMapArchive;
+class PropertyMapEntryArchive;
+class CellDiffArchive;
+class CellDiffMapArchive;
 class DoubleStyleMapArchive;
 class DoubleStyleMapArchive_DoubleStyleMapEntryArchive;
 class StyleTableMapArchive;
@@ -106,6 +117,7 @@ class HiddenStateFormulaOwnerArchive;
 class RichTextPayloadArchive;
 class FormulaEqualsTokenAttachmentArchive;
 class CellRegion;
+class CellFillStandIn;
 
 enum PopUpMenuModel_CellValueType {
   PopUpMenuModel_CellValueType_NIL_TYPE = 1,
@@ -129,6 +141,35 @@ inline bool PopUpMenuModel_CellValueType_Parse(
   return ::google::protobuf::internal::ParseNamedEnum<PopUpMenuModel_CellValueType>(
     PopUpMenuModel_CellValueType_descriptor(), name, value);
 }
+enum ImportWarningSetArchive_FormulaWarningType {
+  ImportWarningSetArchive_FormulaWarningType_THREE_D_REFERENCE = 1,
+  ImportWarningSetArchive_FormulaWarningType_ARRAYED_FORMULA = 2,
+  ImportWarningSetArchive_FormulaWarningType_DIFFERENT_BEHAVIOR_FOR_FUNCTION = 3,
+  ImportWarningSetArchive_FormulaWarningType_ERROR_TOKEN = 4,
+  ImportWarningSetArchive_FormulaWarningType_EXTERNAL_REFERENCE = 5,
+  ImportWarningSetArchive_FormulaWarningType_NATURAL_LANGUAGE_FORMULA = 6,
+  ImportWarningSetArchive_FormulaWarningType_REFERENCE_OUT_OF_BOUNDS = 7,
+  ImportWarningSetArchive_FormulaWarningType_SHARED_FORMULA_BASE_NOT_FOUND = 8,
+  ImportWarningSetArchive_FormulaWarningType_UNKNOWN_NAME = 9,
+  ImportWarningSetArchive_FormulaWarningType_UNSUPPORTED_FORMULA = 10,
+  ImportWarningSetArchive_FormulaWarningType_UNSUPPORTED_FUNCTION = 11,
+  ImportWarningSetArchive_FormulaWarningType_UNSUPPORTED_NAME = 12
+};
+bool ImportWarningSetArchive_FormulaWarningType_IsValid(int value);
+const ImportWarningSetArchive_FormulaWarningType ImportWarningSetArchive_FormulaWarningType_FormulaWarningType_MIN = ImportWarningSetArchive_FormulaWarningType_THREE_D_REFERENCE;
+const ImportWarningSetArchive_FormulaWarningType ImportWarningSetArchive_FormulaWarningType_FormulaWarningType_MAX = ImportWarningSetArchive_FormulaWarningType_UNSUPPORTED_NAME;
+const int ImportWarningSetArchive_FormulaWarningType_FormulaWarningType_ARRAYSIZE = ImportWarningSetArchive_FormulaWarningType_FormulaWarningType_MAX + 1;
+
+const ::google::protobuf::EnumDescriptor* ImportWarningSetArchive_FormulaWarningType_descriptor();
+inline const ::std::string& ImportWarningSetArchive_FormulaWarningType_Name(ImportWarningSetArchive_FormulaWarningType value) {
+  return ::google::protobuf::internal::NameOfEnum(
+    ImportWarningSetArchive_FormulaWarningType_descriptor(), value);
+}
+inline bool ImportWarningSetArchive_FormulaWarningType_Parse(
+    const ::std::string& name, ImportWarningSetArchive_FormulaWarningType* value) {
+  return ::google::protobuf::internal::ParseNamedEnum<ImportWarningSetArchive_FormulaWarningType>(
+    ImportWarningSetArchive_FormulaWarningType_descriptor(), name, value);
+}
 enum TableDataList_ListType {
   TableDataList_ListType_STRING = 1,
   TableDataList_ListType_FORMAT = 2,
@@ -139,11 +180,12 @@ enum TableDataList_ListType {
   TableDataList_ListType_MULTIPLE_CHOICE_LIST_FORMAT = 7,
   TableDataList_ListType_RICH_TEXT_PAYLOAD = 8,
   TableDataList_ListType_CONDITIONAL_STYLE = 9,
-  TableDataList_ListType_COMMENT_STORAGE = 10
+  TableDataList_ListType_COMMENT_STORAGE = 10,
+  TableDataList_ListType_IMPORT_WARNING = 11
 };
 bool TableDataList_ListType_IsValid(int value);
 const TableDataList_ListType TableDataList_ListType_ListType_MIN = TableDataList_ListType_STRING;
-const TableDataList_ListType TableDataList_ListType_ListType_MAX = TableDataList_ListType_COMMENT_STORAGE;
+const TableDataList_ListType TableDataList_ListType_ListType_MAX = TableDataList_ListType_IMPORT_WARNING;
 const int TableDataList_ListType_ListType_ARRAYSIZE = TableDataList_ListType_ListType_MAX + 1;
 
 const ::google::protobuf::EnumDescriptor* TableDataList_ListType_descriptor();
@@ -155,6 +197,44 @@ inline bool TableDataList_ListType_Parse(
     const ::std::string& name, TableDataList_ListType* value) {
   return ::google::protobuf::internal::ParseNamedEnum<TableDataList_ListType>(
     TableDataList_ListType_descriptor(), name, value);
+}
+enum TableSortOrderArchive_SortRuleArchive_Direction {
+  TableSortOrderArchive_SortRuleArchive_Direction_ascending = 0,
+  TableSortOrderArchive_SortRuleArchive_Direction_descending = 1
+};
+bool TableSortOrderArchive_SortRuleArchive_Direction_IsValid(int value);
+const TableSortOrderArchive_SortRuleArchive_Direction TableSortOrderArchive_SortRuleArchive_Direction_Direction_MIN = TableSortOrderArchive_SortRuleArchive_Direction_ascending;
+const TableSortOrderArchive_SortRuleArchive_Direction TableSortOrderArchive_SortRuleArchive_Direction_Direction_MAX = TableSortOrderArchive_SortRuleArchive_Direction_descending;
+const int TableSortOrderArchive_SortRuleArchive_Direction_Direction_ARRAYSIZE = TableSortOrderArchive_SortRuleArchive_Direction_Direction_MAX + 1;
+
+const ::google::protobuf::EnumDescriptor* TableSortOrderArchive_SortRuleArchive_Direction_descriptor();
+inline const ::std::string& TableSortOrderArchive_SortRuleArchive_Direction_Name(TableSortOrderArchive_SortRuleArchive_Direction value) {
+  return ::google::protobuf::internal::NameOfEnum(
+    TableSortOrderArchive_SortRuleArchive_Direction_descriptor(), value);
+}
+inline bool TableSortOrderArchive_SortRuleArchive_Direction_Parse(
+    const ::std::string& name, TableSortOrderArchive_SortRuleArchive_Direction* value) {
+  return ::google::protobuf::internal::ParseNamedEnum<TableSortOrderArchive_SortRuleArchive_Direction>(
+    TableSortOrderArchive_SortRuleArchive_Direction_descriptor(), name, value);
+}
+enum TableSortOrderArchive_SortType {
+  TableSortOrderArchive_SortType_entire_table = 0,
+  TableSortOrderArchive_SortType_row_range = 1
+};
+bool TableSortOrderArchive_SortType_IsValid(int value);
+const TableSortOrderArchive_SortType TableSortOrderArchive_SortType_SortType_MIN = TableSortOrderArchive_SortType_entire_table;
+const TableSortOrderArchive_SortType TableSortOrderArchive_SortType_SortType_MAX = TableSortOrderArchive_SortType_row_range;
+const int TableSortOrderArchive_SortType_SortType_ARRAYSIZE = TableSortOrderArchive_SortType_SortType_MAX + 1;
+
+const ::google::protobuf::EnumDescriptor* TableSortOrderArchive_SortType_descriptor();
+inline const ::std::string& TableSortOrderArchive_SortType_Name(TableSortOrderArchive_SortType value) {
+  return ::google::protobuf::internal::NameOfEnum(
+    TableSortOrderArchive_SortType_descriptor(), value);
+}
+inline bool TableSortOrderArchive_SortType_Parse(
+    const ::std::string& name, TableSortOrderArchive_SortType* value) {
+  return ::google::protobuf::internal::ParseNamedEnum<TableSortOrderArchive_SortType>(
+    TableSortOrderArchive_SortType_descriptor(), name, value);
 }
 enum FormulaPredicateArchive_FormulaPredicateType {
   FormulaPredicateArchive_FormulaPredicateType_PredNone = 0,
@@ -1487,6 +1567,383 @@ class PopUpMenuModel : public ::google::protobuf::Message {
 };
 // -------------------------------------------------------------------
 
+class ImportWarningSetArchive_FormulaImportWarning : public ::google::protobuf::Message {
+ public:
+  ImportWarningSetArchive_FormulaImportWarning();
+  virtual ~ImportWarningSetArchive_FormulaImportWarning();
+
+  ImportWarningSetArchive_FormulaImportWarning(const ImportWarningSetArchive_FormulaImportWarning& from);
+
+  inline ImportWarningSetArchive_FormulaImportWarning& operator=(const ImportWarningSetArchive_FormulaImportWarning& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _unknown_fields_;
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return &_unknown_fields_;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const ImportWarningSetArchive_FormulaImportWarning& default_instance();
+
+  void Swap(ImportWarningSetArchive_FormulaImportWarning* other);
+
+  // implements Message ----------------------------------------------
+
+  ImportWarningSetArchive_FormulaImportWarning* New() const;
+  void CopyFrom(const ::google::protobuf::Message& from);
+  void MergeFrom(const ::google::protobuf::Message& from);
+  void CopyFrom(const ImportWarningSetArchive_FormulaImportWarning& from);
+  void MergeFrom(const ImportWarningSetArchive_FormulaImportWarning& from);
+  void Clear();
+  bool IsInitialized() const;
+
+  int ByteSize() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // required .TST.ImportWarningSetArchive.FormulaWarningType formula_warning_type = 1;
+  inline bool has_formula_warning_type() const;
+  inline void clear_formula_warning_type();
+  static const int kFormulaWarningTypeFieldNumber = 1;
+  inline ::TST::ImportWarningSetArchive_FormulaWarningType formula_warning_type() const;
+  inline void set_formula_warning_type(::TST::ImportWarningSetArchive_FormulaWarningType value);
+
+  // optional string original_formula = 2;
+  inline bool has_original_formula() const;
+  inline void clear_original_formula();
+  static const int kOriginalFormulaFieldNumber = 2;
+  inline const ::std::string& original_formula() const;
+  inline void set_original_formula(const ::std::string& value);
+  inline void set_original_formula(const char* value);
+  inline void set_original_formula(const char* value, size_t size);
+  inline ::std::string* mutable_original_formula();
+  inline ::std::string* release_original_formula();
+  inline void set_allocated_original_formula(::std::string* original_formula);
+
+  // optional string supplementary_text = 3;
+  inline bool has_supplementary_text() const;
+  inline void clear_supplementary_text();
+  static const int kSupplementaryTextFieldNumber = 3;
+  inline const ::std::string& supplementary_text() const;
+  inline void set_supplementary_text(const ::std::string& value);
+  inline void set_supplementary_text(const char* value);
+  inline void set_supplementary_text(const char* value, size_t size);
+  inline ::std::string* mutable_supplementary_text();
+  inline ::std::string* release_supplementary_text();
+  inline void set_allocated_supplementary_text(::std::string* supplementary_text);
+
+  // @@protoc_insertion_point(class_scope:TST.ImportWarningSetArchive.FormulaImportWarning)
+ private:
+  inline void set_has_formula_warning_type();
+  inline void clear_has_formula_warning_type();
+  inline void set_has_original_formula();
+  inline void clear_has_original_formula();
+  inline void set_has_supplementary_text();
+  inline void clear_has_supplementary_text();
+
+  ::google::protobuf::UnknownFieldSet _unknown_fields_;
+
+  ::std::string* original_formula_;
+  ::std::string* supplementary_text_;
+  int formula_warning_type_;
+
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 _has_bits_[(3 + 31) / 32];
+
+  friend void  protobuf_AddDesc_TSTArchives_2eproto();
+  friend void protobuf_AssignDesc_TSTArchives_2eproto();
+  friend void protobuf_ShutdownFile_TSTArchives_2eproto();
+
+  void InitAsDefaultInstance();
+  static ImportWarningSetArchive_FormulaImportWarning* default_instance_;
+};
+// -------------------------------------------------------------------
+
+class ImportWarningSetArchive : public ::google::protobuf::Message {
+ public:
+  ImportWarningSetArchive();
+  virtual ~ImportWarningSetArchive();
+
+  ImportWarningSetArchive(const ImportWarningSetArchive& from);
+
+  inline ImportWarningSetArchive& operator=(const ImportWarningSetArchive& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _unknown_fields_;
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return &_unknown_fields_;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const ImportWarningSetArchive& default_instance();
+
+  void Swap(ImportWarningSetArchive* other);
+
+  // implements Message ----------------------------------------------
+
+  ImportWarningSetArchive* New() const;
+  void CopyFrom(const ::google::protobuf::Message& from);
+  void MergeFrom(const ::google::protobuf::Message& from);
+  void CopyFrom(const ImportWarningSetArchive& from);
+  void MergeFrom(const ImportWarningSetArchive& from);
+  void Clear();
+  bool IsInitialized() const;
+
+  int ByteSize() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const;
+
+  // nested types ----------------------------------------------------
+
+  typedef ImportWarningSetArchive_FormulaImportWarning FormulaImportWarning;
+
+  typedef ImportWarningSetArchive_FormulaWarningType FormulaWarningType;
+  static const FormulaWarningType THREE_D_REFERENCE = ImportWarningSetArchive_FormulaWarningType_THREE_D_REFERENCE;
+  static const FormulaWarningType ARRAYED_FORMULA = ImportWarningSetArchive_FormulaWarningType_ARRAYED_FORMULA;
+  static const FormulaWarningType DIFFERENT_BEHAVIOR_FOR_FUNCTION = ImportWarningSetArchive_FormulaWarningType_DIFFERENT_BEHAVIOR_FOR_FUNCTION;
+  static const FormulaWarningType ERROR_TOKEN = ImportWarningSetArchive_FormulaWarningType_ERROR_TOKEN;
+  static const FormulaWarningType EXTERNAL_REFERENCE = ImportWarningSetArchive_FormulaWarningType_EXTERNAL_REFERENCE;
+  static const FormulaWarningType NATURAL_LANGUAGE_FORMULA = ImportWarningSetArchive_FormulaWarningType_NATURAL_LANGUAGE_FORMULA;
+  static const FormulaWarningType REFERENCE_OUT_OF_BOUNDS = ImportWarningSetArchive_FormulaWarningType_REFERENCE_OUT_OF_BOUNDS;
+  static const FormulaWarningType SHARED_FORMULA_BASE_NOT_FOUND = ImportWarningSetArchive_FormulaWarningType_SHARED_FORMULA_BASE_NOT_FOUND;
+  static const FormulaWarningType UNKNOWN_NAME = ImportWarningSetArchive_FormulaWarningType_UNKNOWN_NAME;
+  static const FormulaWarningType UNSUPPORTED_FORMULA = ImportWarningSetArchive_FormulaWarningType_UNSUPPORTED_FORMULA;
+  static const FormulaWarningType UNSUPPORTED_FUNCTION = ImportWarningSetArchive_FormulaWarningType_UNSUPPORTED_FUNCTION;
+  static const FormulaWarningType UNSUPPORTED_NAME = ImportWarningSetArchive_FormulaWarningType_UNSUPPORTED_NAME;
+  static inline bool FormulaWarningType_IsValid(int value) {
+    return ImportWarningSetArchive_FormulaWarningType_IsValid(value);
+  }
+  static const FormulaWarningType FormulaWarningType_MIN =
+    ImportWarningSetArchive_FormulaWarningType_FormulaWarningType_MIN;
+  static const FormulaWarningType FormulaWarningType_MAX =
+    ImportWarningSetArchive_FormulaWarningType_FormulaWarningType_MAX;
+  static const int FormulaWarningType_ARRAYSIZE =
+    ImportWarningSetArchive_FormulaWarningType_FormulaWarningType_ARRAYSIZE;
+  static inline const ::google::protobuf::EnumDescriptor*
+  FormulaWarningType_descriptor() {
+    return ImportWarningSetArchive_FormulaWarningType_descriptor();
+  }
+  static inline const ::std::string& FormulaWarningType_Name(FormulaWarningType value) {
+    return ImportWarningSetArchive_FormulaWarningType_Name(value);
+  }
+  static inline bool FormulaWarningType_Parse(const ::std::string& name,
+      FormulaWarningType* value) {
+    return ImportWarningSetArchive_FormulaWarningType_Parse(name, value);
+  }
+
+  // accessors -------------------------------------------------------
+
+  // optional .TST.ImportWarningSetArchive.FormulaImportWarning formula_import_warning = 1;
+  inline bool has_formula_import_warning() const;
+  inline void clear_formula_import_warning();
+  static const int kFormulaImportWarningFieldNumber = 1;
+  inline const ::TST::ImportWarningSetArchive_FormulaImportWarning& formula_import_warning() const;
+  inline ::TST::ImportWarningSetArchive_FormulaImportWarning* mutable_formula_import_warning();
+  inline ::TST::ImportWarningSetArchive_FormulaImportWarning* release_formula_import_warning();
+  inline void set_allocated_formula_import_warning(::TST::ImportWarningSetArchive_FormulaImportWarning* formula_import_warning);
+
+  // optional bool cond_format_above_avg_equal_avg = 2 [default = false];
+  inline bool has_cond_format_above_avg_equal_avg() const;
+  inline void clear_cond_format_above_avg_equal_avg();
+  static const int kCondFormatAboveAvgEqualAvgFieldNumber = 2;
+  inline bool cond_format_above_avg_equal_avg() const;
+  inline void set_cond_format_above_avg_equal_avg(bool value);
+
+  // optional bool cond_format_above_avg_std_dev = 3 [default = false];
+  inline bool has_cond_format_above_avg_std_dev() const;
+  inline void clear_cond_format_above_avg_std_dev();
+  static const int kCondFormatAboveAvgStdDevFieldNumber = 3;
+  inline bool cond_format_above_avg_std_dev() const;
+  inline void set_cond_format_above_avg_std_dev(bool value);
+
+  // optional bool cond_format_complex_formula = 4 [default = false];
+  inline bool has_cond_format_complex_formula() const;
+  inline void clear_cond_format_complex_formula();
+  static const int kCondFormatComplexFormulaFieldNumber = 4;
+  inline bool cond_format_complex_formula() const;
+  inline void set_cond_format_complex_formula(bool value);
+
+  // optional bool cond_format_contains_errors = 5 [default = false];
+  inline bool has_cond_format_contains_errors() const;
+  inline void clear_cond_format_contains_errors();
+  static const int kCondFormatContainsErrorsFieldNumber = 5;
+  inline bool cond_format_contains_errors() const;
+  inline void set_cond_format_contains_errors(bool value);
+
+  // optional bool cond_format_expr = 6 [default = false];
+  inline bool has_cond_format_expr() const;
+  inline void clear_cond_format_expr();
+  static const int kCondFormatExprFieldNumber = 6;
+  inline bool cond_format_expr() const;
+  inline void set_cond_format_expr(bool value);
+
+  // optional bool cond_format_not_contains_errors = 7 [default = false];
+  inline bool has_cond_format_not_contains_errors() const;
+  inline void clear_cond_format_not_contains_errors();
+  static const int kCondFormatNotContainsErrorsFieldNumber = 7;
+  inline bool cond_format_not_contains_errors() const;
+  inline void set_cond_format_not_contains_errors(bool value);
+
+  // optional bool cond_format_parameters_not_all_same_type = 8 [default = false];
+  inline bool has_cond_format_parameters_not_all_same_type() const;
+  inline void clear_cond_format_parameters_not_all_same_type();
+  static const int kCondFormatParametersNotAllSameTypeFieldNumber = 8;
+  inline bool cond_format_parameters_not_all_same_type() const;
+  inline void set_cond_format_parameters_not_all_same_type(bool value);
+
+  // optional bool cond_format_stop_if_true = 9 [default = false];
+  inline bool has_cond_format_stop_if_true() const;
+  inline void clear_cond_format_stop_if_true();
+  static const int kCondFormatStopIfTrueFieldNumber = 9;
+  inline bool cond_format_stop_if_true() const;
+  inline void set_cond_format_stop_if_true(bool value);
+
+  // optional bool cond_format_unsupported_operator = 10 [default = false];
+  inline bool has_cond_format_unsupported_operator() const;
+  inline void clear_cond_format_unsupported_operator();
+  static const int kCondFormatUnsupportedOperatorFieldNumber = 10;
+  inline bool cond_format_unsupported_operator() const;
+  inline void set_cond_format_unsupported_operator(bool value);
+
+  // optional bool cond_format_unsupported_styling = 11 [default = false];
+  inline bool has_cond_format_unsupported_styling() const;
+  inline void clear_cond_format_unsupported_styling();
+  static const int kCondFormatUnsupportedStylingFieldNumber = 11;
+  inline bool cond_format_unsupported_styling() const;
+  inline void set_cond_format_unsupported_styling(bool value);
+
+  // optional bool cond_format_unsupported_time_period = 12 [default = false];
+  inline bool has_cond_format_unsupported_time_period() const;
+  inline void clear_cond_format_unsupported_time_period();
+  static const int kCondFormatUnsupportedTimePeriodFieldNumber = 12;
+  inline bool cond_format_unsupported_time_period() const;
+  inline void set_cond_format_unsupported_time_period(bool value);
+
+  // optional bool error_cell_with_no_formula = 13 [default = false];
+  inline bool has_error_cell_with_no_formula() const;
+  inline void clear_error_cell_with_no_formula();
+  static const int kErrorCellWithNoFormulaFieldNumber = 13;
+  inline bool error_cell_with_no_formula() const;
+  inline void set_error_cell_with_no_formula(bool value);
+
+  // optional bool unsupported_cond_format = 14 [default = false];
+  inline bool has_unsupported_cond_format() const;
+  inline void clear_unsupported_cond_format();
+  static const int kUnsupportedCondFormatFieldNumber = 14;
+  inline bool unsupported_cond_format() const;
+  inline void set_unsupported_cond_format(bool value);
+
+  // optional string original_data_format = 15;
+  inline bool has_original_data_format() const;
+  inline void clear_original_data_format();
+  static const int kOriginalDataFormatFieldNumber = 15;
+  inline const ::std::string& original_data_format() const;
+  inline void set_original_data_format(const ::std::string& value);
+  inline void set_original_data_format(const char* value);
+  inline void set_original_data_format(const char* value, size_t size);
+  inline ::std::string* mutable_original_data_format();
+  inline ::std::string* release_original_data_format();
+  inline void set_allocated_original_data_format(::std::string* original_data_format);
+
+  // @@protoc_insertion_point(class_scope:TST.ImportWarningSetArchive)
+ private:
+  inline void set_has_formula_import_warning();
+  inline void clear_has_formula_import_warning();
+  inline void set_has_cond_format_above_avg_equal_avg();
+  inline void clear_has_cond_format_above_avg_equal_avg();
+  inline void set_has_cond_format_above_avg_std_dev();
+  inline void clear_has_cond_format_above_avg_std_dev();
+  inline void set_has_cond_format_complex_formula();
+  inline void clear_has_cond_format_complex_formula();
+  inline void set_has_cond_format_contains_errors();
+  inline void clear_has_cond_format_contains_errors();
+  inline void set_has_cond_format_expr();
+  inline void clear_has_cond_format_expr();
+  inline void set_has_cond_format_not_contains_errors();
+  inline void clear_has_cond_format_not_contains_errors();
+  inline void set_has_cond_format_parameters_not_all_same_type();
+  inline void clear_has_cond_format_parameters_not_all_same_type();
+  inline void set_has_cond_format_stop_if_true();
+  inline void clear_has_cond_format_stop_if_true();
+  inline void set_has_cond_format_unsupported_operator();
+  inline void clear_has_cond_format_unsupported_operator();
+  inline void set_has_cond_format_unsupported_styling();
+  inline void clear_has_cond_format_unsupported_styling();
+  inline void set_has_cond_format_unsupported_time_period();
+  inline void clear_has_cond_format_unsupported_time_period();
+  inline void set_has_error_cell_with_no_formula();
+  inline void clear_has_error_cell_with_no_formula();
+  inline void set_has_unsupported_cond_format();
+  inline void clear_has_unsupported_cond_format();
+  inline void set_has_original_data_format();
+  inline void clear_has_original_data_format();
+
+  ::google::protobuf::UnknownFieldSet _unknown_fields_;
+
+  ::TST::ImportWarningSetArchive_FormulaImportWarning* formula_import_warning_;
+  bool cond_format_above_avg_equal_avg_;
+  bool cond_format_above_avg_std_dev_;
+  bool cond_format_complex_formula_;
+  bool cond_format_contains_errors_;
+  bool cond_format_expr_;
+  bool cond_format_not_contains_errors_;
+  bool cond_format_parameters_not_all_same_type_;
+  bool cond_format_stop_if_true_;
+  bool cond_format_unsupported_operator_;
+  bool cond_format_unsupported_styling_;
+  bool cond_format_unsupported_time_period_;
+  bool error_cell_with_no_formula_;
+  bool unsupported_cond_format_;
+  ::std::string* original_data_format_;
+
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 _has_bits_[(15 + 31) / 32];
+
+  friend void  protobuf_AddDesc_TSTArchives_2eproto();
+  friend void protobuf_AssignDesc_TSTArchives_2eproto();
+  friend void protobuf_ShutdownFile_TSTArchives_2eproto();
+
+  void InitAsDefaultInstance();
+  static ImportWarningSetArchive* default_instance_;
+};
+// -------------------------------------------------------------------
+
 class TableDataList_ListEntry : public ::google::protobuf::Message {
  public:
   TableDataList_ListEntry();
@@ -1630,6 +2087,15 @@ class TableDataList_ListEntry : public ::google::protobuf::Message {
   inline ::TSP::Reference* release_comment_storage();
   inline void set_allocated_comment_storage(::TSP::Reference* comment_storage);
 
+  // optional .TST.ImportWarningSetArchive import_warning_set = 11;
+  inline bool has_import_warning_set() const;
+  inline void clear_import_warning_set();
+  static const int kImportWarningSetFieldNumber = 11;
+  inline const ::TST::ImportWarningSetArchive& import_warning_set() const;
+  inline ::TST::ImportWarningSetArchive* mutable_import_warning_set();
+  inline ::TST::ImportWarningSetArchive* release_import_warning_set();
+  inline void set_allocated_import_warning_set(::TST::ImportWarningSetArchive* import_warning_set);
+
   // @@protoc_insertion_point(class_scope:TST.TableDataList.ListEntry)
  private:
   inline void set_has_key();
@@ -1652,6 +2118,8 @@ class TableDataList_ListEntry : public ::google::protobuf::Message {
   inline void clear_has_richtextpayload();
   inline void set_has_comment_storage();
   inline void clear_has_comment_storage();
+  inline void set_has_import_warning_set();
+  inline void clear_has_import_warning_set();
 
   ::google::protobuf::UnknownFieldSet _unknown_fields_;
 
@@ -1665,9 +2133,10 @@ class TableDataList_ListEntry : public ::google::protobuf::Message {
   ::TSK::CustomFormatArchive* custom_format_;
   ::TSP::Reference* richtextpayload_;
   ::TSP::Reference* comment_storage_;
+  ::TST::ImportWarningSetArchive* import_warning_set_;
 
   mutable int _cached_size_;
-  ::google::protobuf::uint32 _has_bits_[(10 + 31) / 32];
+  ::google::protobuf::uint32 _has_bits_[(11 + 31) / 32];
 
   friend void  protobuf_AddDesc_TSTArchives_2eproto();
   friend void protobuf_AssignDesc_TSTArchives_2eproto();
@@ -1743,6 +2212,7 @@ class TableDataList : public ::google::protobuf::Message {
   static const ListType RICH_TEXT_PAYLOAD = TableDataList_ListType_RICH_TEXT_PAYLOAD;
   static const ListType CONDITIONAL_STYLE = TableDataList_ListType_CONDITIONAL_STYLE;
   static const ListType COMMENT_STORAGE = TableDataList_ListType_COMMENT_STORAGE;
+  static const ListType IMPORT_WARNING = TableDataList_ListType_IMPORT_WARNING;
   static inline bool ListType_IsValid(int value) {
     return TableDataList_ListType_IsValid(value);
   }
@@ -2543,6 +3013,15 @@ class DataStore : public ::google::protobuf::Message {
   inline ::TSP::Reference* release_commentstoragetable();
   inline void set_allocated_commentstoragetable(::TSP::Reference* commentstoragetable);
 
+  // optional .TSP.Reference importWarningSetTable = 20;
+  inline bool has_importwarningsettable() const;
+  inline void clear_importwarningsettable();
+  static const int kImportWarningSetTableFieldNumber = 20;
+  inline const ::TSP::Reference& importwarningsettable() const;
+  inline ::TSP::Reference* mutable_importwarningsettable();
+  inline ::TSP::Reference* release_importwarningsettable();
+  inline void set_allocated_importwarningsettable(::TSP::Reference* importwarningsettable);
+
   // @@protoc_insertion_point(class_scope:TST.DataStore)
  private:
   inline void set_has_rowheaders();
@@ -2583,6 +3062,8 @@ class DataStore : public ::google::protobuf::Message {
   inline void clear_has_conditionalstyletable();
   inline void set_has_commentstoragetable();
   inline void clear_has_commentstoragetable();
+  inline void set_has_importwarningsettable();
+  inline void clear_has_importwarningsettable();
 
   ::google::protobuf::UnknownFieldSet _unknown_fields_;
 
@@ -2604,10 +3085,11 @@ class DataStore : public ::google::protobuf::Message {
   ::TSP::Reference* richtextpayloadtable_;
   ::TSP::Reference* conditionalstyletable_;
   ::TSP::Reference* commentstoragetable_;
+  ::TSP::Reference* importwarningsettable_;
   ::google::protobuf::uint32 storage_version_;
 
   mutable int _cached_size_;
-  ::google::protobuf::uint32 _has_bits_[(19 + 31) / 32];
+  ::google::protobuf::uint32 _has_bits_[(20 + 31) / 32];
 
   friend void  protobuf_AddDesc_TSTArchives_2eproto();
   friend void protobuf_AssignDesc_TSTArchives_2eproto();
@@ -3190,6 +3672,327 @@ class TableStyleNetworkArchive : public ::google::protobuf::Message {
 };
 // -------------------------------------------------------------------
 
+class TableSortOrderArchive_SortRuleArchive : public ::google::protobuf::Message {
+ public:
+  TableSortOrderArchive_SortRuleArchive();
+  virtual ~TableSortOrderArchive_SortRuleArchive();
+
+  TableSortOrderArchive_SortRuleArchive(const TableSortOrderArchive_SortRuleArchive& from);
+
+  inline TableSortOrderArchive_SortRuleArchive& operator=(const TableSortOrderArchive_SortRuleArchive& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _unknown_fields_;
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return &_unknown_fields_;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const TableSortOrderArchive_SortRuleArchive& default_instance();
+
+  void Swap(TableSortOrderArchive_SortRuleArchive* other);
+
+  // implements Message ----------------------------------------------
+
+  TableSortOrderArchive_SortRuleArchive* New() const;
+  void CopyFrom(const ::google::protobuf::Message& from);
+  void MergeFrom(const ::google::protobuf::Message& from);
+  void CopyFrom(const TableSortOrderArchive_SortRuleArchive& from);
+  void MergeFrom(const TableSortOrderArchive_SortRuleArchive& from);
+  void Clear();
+  bool IsInitialized() const;
+
+  int ByteSize() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const;
+
+  // nested types ----------------------------------------------------
+
+  typedef TableSortOrderArchive_SortRuleArchive_Direction Direction;
+  static const Direction ascending = TableSortOrderArchive_SortRuleArchive_Direction_ascending;
+  static const Direction descending = TableSortOrderArchive_SortRuleArchive_Direction_descending;
+  static inline bool Direction_IsValid(int value) {
+    return TableSortOrderArchive_SortRuleArchive_Direction_IsValid(value);
+  }
+  static const Direction Direction_MIN =
+    TableSortOrderArchive_SortRuleArchive_Direction_Direction_MIN;
+  static const Direction Direction_MAX =
+    TableSortOrderArchive_SortRuleArchive_Direction_Direction_MAX;
+  static const int Direction_ARRAYSIZE =
+    TableSortOrderArchive_SortRuleArchive_Direction_Direction_ARRAYSIZE;
+  static inline const ::google::protobuf::EnumDescriptor*
+  Direction_descriptor() {
+    return TableSortOrderArchive_SortRuleArchive_Direction_descriptor();
+  }
+  static inline const ::std::string& Direction_Name(Direction value) {
+    return TableSortOrderArchive_SortRuleArchive_Direction_Name(value);
+  }
+  static inline bool Direction_Parse(const ::std::string& name,
+      Direction* value) {
+    return TableSortOrderArchive_SortRuleArchive_Direction_Parse(name, value);
+  }
+
+  // accessors -------------------------------------------------------
+
+  // required uint32 column = 1;
+  inline bool has_column() const;
+  inline void clear_column();
+  static const int kColumnFieldNumber = 1;
+  inline ::google::protobuf::uint32 column() const;
+  inline void set_column(::google::protobuf::uint32 value);
+
+  // required .TST.TableSortOrderArchive.SortRuleArchive.Direction direction = 2;
+  inline bool has_direction() const;
+  inline void clear_direction();
+  static const int kDirectionFieldNumber = 2;
+  inline ::TST::TableSortOrderArchive_SortRuleArchive_Direction direction() const;
+  inline void set_direction(::TST::TableSortOrderArchive_SortRuleArchive_Direction value);
+
+  // @@protoc_insertion_point(class_scope:TST.TableSortOrderArchive.SortRuleArchive)
+ private:
+  inline void set_has_column();
+  inline void clear_has_column();
+  inline void set_has_direction();
+  inline void clear_has_direction();
+
+  ::google::protobuf::UnknownFieldSet _unknown_fields_;
+
+  ::google::protobuf::uint32 column_;
+  int direction_;
+
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 _has_bits_[(2 + 31) / 32];
+
+  friend void  protobuf_AddDesc_TSTArchives_2eproto();
+  friend void protobuf_AssignDesc_TSTArchives_2eproto();
+  friend void protobuf_ShutdownFile_TSTArchives_2eproto();
+
+  void InitAsDefaultInstance();
+  static TableSortOrderArchive_SortRuleArchive* default_instance_;
+};
+// -------------------------------------------------------------------
+
+class TableSortOrderArchive : public ::google::protobuf::Message {
+ public:
+  TableSortOrderArchive();
+  virtual ~TableSortOrderArchive();
+
+  TableSortOrderArchive(const TableSortOrderArchive& from);
+
+  inline TableSortOrderArchive& operator=(const TableSortOrderArchive& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _unknown_fields_;
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return &_unknown_fields_;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const TableSortOrderArchive& default_instance();
+
+  void Swap(TableSortOrderArchive* other);
+
+  // implements Message ----------------------------------------------
+
+  TableSortOrderArchive* New() const;
+  void CopyFrom(const ::google::protobuf::Message& from);
+  void MergeFrom(const ::google::protobuf::Message& from);
+  void CopyFrom(const TableSortOrderArchive& from);
+  void MergeFrom(const TableSortOrderArchive& from);
+  void Clear();
+  bool IsInitialized() const;
+
+  int ByteSize() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const;
+
+  // nested types ----------------------------------------------------
+
+  typedef TableSortOrderArchive_SortRuleArchive SortRuleArchive;
+
+  typedef TableSortOrderArchive_SortType SortType;
+  static const SortType entire_table = TableSortOrderArchive_SortType_entire_table;
+  static const SortType row_range = TableSortOrderArchive_SortType_row_range;
+  static inline bool SortType_IsValid(int value) {
+    return TableSortOrderArchive_SortType_IsValid(value);
+  }
+  static const SortType SortType_MIN =
+    TableSortOrderArchive_SortType_SortType_MIN;
+  static const SortType SortType_MAX =
+    TableSortOrderArchive_SortType_SortType_MAX;
+  static const int SortType_ARRAYSIZE =
+    TableSortOrderArchive_SortType_SortType_ARRAYSIZE;
+  static inline const ::google::protobuf::EnumDescriptor*
+  SortType_descriptor() {
+    return TableSortOrderArchive_SortType_descriptor();
+  }
+  static inline const ::std::string& SortType_Name(SortType value) {
+    return TableSortOrderArchive_SortType_Name(value);
+  }
+  static inline bool SortType_Parse(const ::std::string& name,
+      SortType* value) {
+    return TableSortOrderArchive_SortType_Parse(name, value);
+  }
+
+  // accessors -------------------------------------------------------
+
+  // required .TST.TableSortOrderArchive.SortType type = 1;
+  inline bool has_type() const;
+  inline void clear_type();
+  static const int kTypeFieldNumber = 1;
+  inline ::TST::TableSortOrderArchive_SortType type() const;
+  inline void set_type(::TST::TableSortOrderArchive_SortType value);
+
+  // repeated .TST.TableSortOrderArchive.SortRuleArchive rules = 2;
+  inline int rules_size() const;
+  inline void clear_rules();
+  static const int kRulesFieldNumber = 2;
+  inline const ::TST::TableSortOrderArchive_SortRuleArchive& rules(int index) const;
+  inline ::TST::TableSortOrderArchive_SortRuleArchive* mutable_rules(int index);
+  inline ::TST::TableSortOrderArchive_SortRuleArchive* add_rules();
+  inline const ::google::protobuf::RepeatedPtrField< ::TST::TableSortOrderArchive_SortRuleArchive >&
+      rules() const;
+  inline ::google::protobuf::RepeatedPtrField< ::TST::TableSortOrderArchive_SortRuleArchive >*
+      mutable_rules();
+
+  // @@protoc_insertion_point(class_scope:TST.TableSortOrderArchive)
+ private:
+  inline void set_has_type();
+  inline void clear_has_type();
+
+  ::google::protobuf::UnknownFieldSet _unknown_fields_;
+
+  ::google::protobuf::RepeatedPtrField< ::TST::TableSortOrderArchive_SortRuleArchive > rules_;
+  int type_;
+
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 _has_bits_[(2 + 31) / 32];
+
+  friend void  protobuf_AddDesc_TSTArchives_2eproto();
+  friend void protobuf_AssignDesc_TSTArchives_2eproto();
+  friend void protobuf_ShutdownFile_TSTArchives_2eproto();
+
+  void InitAsDefaultInstance();
+  static TableSortOrderArchive* default_instance_;
+};
+// -------------------------------------------------------------------
+
+class SortRuleReferenceTrackerArchive : public ::google::protobuf::Message {
+ public:
+  SortRuleReferenceTrackerArchive();
+  virtual ~SortRuleReferenceTrackerArchive();
+
+  SortRuleReferenceTrackerArchive(const SortRuleReferenceTrackerArchive& from);
+
+  inline SortRuleReferenceTrackerArchive& operator=(const SortRuleReferenceTrackerArchive& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _unknown_fields_;
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return &_unknown_fields_;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const SortRuleReferenceTrackerArchive& default_instance();
+
+  void Swap(SortRuleReferenceTrackerArchive* other);
+
+  // implements Message ----------------------------------------------
+
+  SortRuleReferenceTrackerArchive* New() const;
+  void CopyFrom(const ::google::protobuf::Message& from);
+  void MergeFrom(const ::google::protobuf::Message& from);
+  void CopyFrom(const SortRuleReferenceTrackerArchive& from);
+  void MergeFrom(const SortRuleReferenceTrackerArchive& from);
+  void Clear();
+  bool IsInitialized() const;
+
+  int ByteSize() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // required .TSP.Reference reference_tracker = 1;
+  inline bool has_reference_tracker() const;
+  inline void clear_reference_tracker();
+  static const int kReferenceTrackerFieldNumber = 1;
+  inline const ::TSP::Reference& reference_tracker() const;
+  inline ::TSP::Reference* mutable_reference_tracker();
+  inline ::TSP::Reference* release_reference_tracker();
+  inline void set_allocated_reference_tracker(::TSP::Reference* reference_tracker);
+
+  // @@protoc_insertion_point(class_scope:TST.SortRuleReferenceTrackerArchive)
+ private:
+  inline void set_has_reference_tracker();
+  inline void clear_has_reference_tracker();
+
+  ::google::protobuf::UnknownFieldSet _unknown_fields_;
+
+  ::TSP::Reference* reference_tracker_;
+
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 _has_bits_[(1 + 31) / 32];
+
+  friend void  protobuf_AddDesc_TSTArchives_2eproto();
+  friend void protobuf_AssignDesc_TSTArchives_2eproto();
+  friend void protobuf_ShutdownFile_TSTArchives_2eproto();
+
+  void InitAsDefaultInstance();
+  static SortRuleReferenceTrackerArchive* default_instance_;
+};
+// -------------------------------------------------------------------
+
 class TableModelArchive : public ::google::protobuf::Message {
  public:
   TableModelArchive();
@@ -3580,6 +4383,15 @@ class TableModelArchive : public ::google::protobuf::Message {
   inline ::TSP::Reference* release_filter_set();
   inline void set_allocated_filter_set(::TSP::Reference* filter_set);
 
+  // optional .TST.TableSortOrderArchive sort_order = 44;
+  inline bool has_sort_order() const;
+  inline void clear_sort_order();
+  static const int kSortOrderFieldNumber = 44;
+  inline const ::TST::TableSortOrderArchive& sort_order() const;
+  inline ::TST::TableSortOrderArchive* mutable_sort_order();
+  inline ::TST::TableSortOrderArchive* release_sort_order();
+  inline void set_allocated_sort_order(::TST::TableSortOrderArchive* sort_order);
+
   // optional .TSCE.CFUUIDArchive conditional_style_formula_owner_id = 39;
   inline bool has_conditional_style_formula_owner_id() const;
   inline void clear_conditional_style_formula_owner_id();
@@ -3588,6 +4400,15 @@ class TableModelArchive : public ::google::protobuf::Message {
   inline ::TSCE::CFUUIDArchive* mutable_conditional_style_formula_owner_id();
   inline ::TSCE::CFUUIDArchive* release_conditional_style_formula_owner_id();
   inline void set_allocated_conditional_style_formula_owner_id(::TSCE::CFUUIDArchive* conditional_style_formula_owner_id);
+
+  // optional .TST.SortRuleReferenceTrackerArchive sort_rule_reference_tracker = 45;
+  inline bool has_sort_rule_reference_tracker() const;
+  inline void clear_sort_rule_reference_tracker();
+  static const int kSortRuleReferenceTrackerFieldNumber = 45;
+  inline const ::TST::SortRuleReferenceTrackerArchive& sort_rule_reference_tracker() const;
+  inline ::TST::SortRuleReferenceTrackerArchive* mutable_sort_rule_reference_tracker();
+  inline ::TST::SortRuleReferenceTrackerArchive* release_sort_rule_reference_tracker();
+  inline void set_allocated_sort_rule_reference_tracker(::TST::SortRuleReferenceTrackerArchive* sort_rule_reference_tracker);
 
   // @@protoc_insertion_point(class_scope:TST.TableModelArchive)
  private:
@@ -3673,8 +4494,12 @@ class TableModelArchive : public ::google::protobuf::Message {
   inline void clear_has_hidden_state_formula_owner_for_rows();
   inline void set_has_filter_set();
   inline void clear_has_filter_set();
+  inline void set_has_sort_order();
+  inline void clear_has_sort_order();
   inline void set_has_conditional_style_formula_owner_id();
   inline void clear_has_conditional_style_formula_owner_id();
+  inline void set_has_sort_rule_reference_tracker();
+  inline void clear_has_sort_rule_reference_tracker();
 
   ::google::protobuf::UnknownFieldSet _unknown_fields_;
 
@@ -3709,20 +4534,22 @@ class TableModelArchive : public ::google::protobuf::Message {
   ::google::protobuf::uint32 number_of_user_hidden_rows_;
   ::google::protobuf::uint32 number_of_user_hidden_columns_;
   double default_row_height_;
+  double default_column_width_;
   ::google::protobuf::uint32 number_of_filtered_rows_;
   ::google::protobuf::uint32 preset_index_;
-  double default_column_width_;
   ::TST::CellID* origin_offset_;
   ::TSP::Reference* hidden_state_formula_owner_for_columns_;
   ::TSP::Reference* hidden_state_formula_owner_for_rows_;
   ::TSP::Reference* filter_set_;
+  ::TST::TableSortOrderArchive* sort_order_;
   ::TSCE::CFUUIDArchive* conditional_style_formula_owner_id_;
+  ::TST::SortRuleReferenceTrackerArchive* sort_rule_reference_tracker_;
   bool repeating_header_rows_enabled_;
   bool repeating_header_columns_enabled_;
   bool style_apply_clears_all_;
 
   mutable int _cached_size_;
-  ::google::protobuf::uint32 _has_bits_[(42 + 31) / 32];
+  ::google::protobuf::uint32 _has_bits_[(44 + 31) / 32];
 
   friend void  protobuf_AddDesc_TSTArchives_2eproto();
   friend void protobuf_AssignDesc_TSTArchives_2eproto();
@@ -4059,6 +4886,15 @@ class Cell : public ::google::protobuf::Message {
   inline ::google::protobuf::uint32 conditional_style_applied_rule() const;
   inline void set_conditional_style_applied_rule(::google::protobuf::uint32 value);
 
+  // optional .TST.ImportWarningSetArchive import_warning_set = 25;
+  inline bool has_import_warning_set() const;
+  inline void clear_import_warning_set();
+  static const int kImportWarningSetFieldNumber = 25;
+  inline const ::TST::ImportWarningSetArchive& import_warning_set() const;
+  inline ::TST::ImportWarningSetArchive* mutable_import_warning_set();
+  inline ::TST::ImportWarningSetArchive* release_import_warning_set();
+  inline void set_allocated_import_warning_set(::TST::ImportWarningSetArchive* import_warning_set);
+
   // @@protoc_insertion_point(class_scope:TST.Cell)
  private:
   inline void set_has_valuetype();
@@ -4107,6 +4943,8 @@ class Cell : public ::google::protobuf::Message {
   inline void clear_has_comment_storage();
   inline void set_has_conditional_style_applied_rule();
   inline void clear_has_conditional_style_applied_rule();
+  inline void set_has_import_warning_set();
+  inline void clear_has_import_warning_set();
 
   ::google::protobuf::UnknownFieldSet _unknown_fields_;
 
@@ -4133,9 +4971,10 @@ class Cell : public ::google::protobuf::Message {
   ::google::protobuf::uint32 conditional_style_applied_rule_;
   ::TSP::Reference* multiple_choice_list_;
   ::TSP::Reference* comment_storage_;
+  ::TST::ImportWarningSetArchive* import_warning_set_;
 
   mutable int _cached_size_;
-  ::google::protobuf::uint32 _has_bits_[(23 + 31) / 32];
+  ::google::protobuf::uint32 _has_bits_[(24 + 31) / 32];
 
   friend void  protobuf_AddDesc_TSTArchives_2eproto();
   friend void protobuf_AssignDesc_TSTArchives_2eproto();
@@ -4461,6 +5300,668 @@ class CellMapArchive : public ::google::protobuf::Message {
 
   void InitAsDefaultInstance();
   static CellMapArchive* default_instance_;
+};
+// -------------------------------------------------------------------
+
+class CellMapTileArchive_CellMapEntry : public ::google::protobuf::Message {
+ public:
+  CellMapTileArchive_CellMapEntry();
+  virtual ~CellMapTileArchive_CellMapEntry();
+
+  CellMapTileArchive_CellMapEntry(const CellMapTileArchive_CellMapEntry& from);
+
+  inline CellMapTileArchive_CellMapEntry& operator=(const CellMapTileArchive_CellMapEntry& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _unknown_fields_;
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return &_unknown_fields_;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const CellMapTileArchive_CellMapEntry& default_instance();
+
+  void Swap(CellMapTileArchive_CellMapEntry* other);
+
+  // implements Message ----------------------------------------------
+
+  CellMapTileArchive_CellMapEntry* New() const;
+  void CopyFrom(const ::google::protobuf::Message& from);
+  void MergeFrom(const ::google::protobuf::Message& from);
+  void CopyFrom(const CellMapTileArchive_CellMapEntry& from);
+  void MergeFrom(const CellMapTileArchive_CellMapEntry& from);
+  void Clear();
+  bool IsInitialized() const;
+
+  int ByteSize() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // required .TST.CellID cellID = 1;
+  inline bool has_cellid() const;
+  inline void clear_cellid();
+  static const int kCellIDFieldNumber = 1;
+  inline const ::TST::CellID& cellid() const;
+  inline ::TST::CellID* mutable_cellid();
+  inline ::TST::CellID* release_cellid();
+  inline void set_allocated_cellid(::TST::CellID* cellid);
+
+  // optional .TST.Cell cell = 2;
+  inline bool has_cell() const;
+  inline void clear_cell();
+  static const int kCellFieldNumber = 2;
+  inline const ::TST::Cell& cell() const;
+  inline ::TST::Cell* mutable_cell();
+  inline ::TST::Cell* release_cell();
+  inline void set_allocated_cell(::TST::Cell* cell);
+
+  // @@protoc_insertion_point(class_scope:TST.CellMapTileArchive.CellMapEntry)
+ private:
+  inline void set_has_cellid();
+  inline void clear_has_cellid();
+  inline void set_has_cell();
+  inline void clear_has_cell();
+
+  ::google::protobuf::UnknownFieldSet _unknown_fields_;
+
+  ::TST::CellID* cellid_;
+  ::TST::Cell* cell_;
+
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 _has_bits_[(2 + 31) / 32];
+
+  friend void  protobuf_AddDesc_TSTArchives_2eproto();
+  friend void protobuf_AssignDesc_TSTArchives_2eproto();
+  friend void protobuf_ShutdownFile_TSTArchives_2eproto();
+
+  void InitAsDefaultInstance();
+  static CellMapTileArchive_CellMapEntry* default_instance_;
+};
+// -------------------------------------------------------------------
+
+class CellMapTileArchive : public ::google::protobuf::Message {
+ public:
+  CellMapTileArchive();
+  virtual ~CellMapTileArchive();
+
+  CellMapTileArchive(const CellMapTileArchive& from);
+
+  inline CellMapTileArchive& operator=(const CellMapTileArchive& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _unknown_fields_;
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return &_unknown_fields_;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const CellMapTileArchive& default_instance();
+
+  void Swap(CellMapTileArchive* other);
+
+  // implements Message ----------------------------------------------
+
+  CellMapTileArchive* New() const;
+  void CopyFrom(const ::google::protobuf::Message& from);
+  void MergeFrom(const ::google::protobuf::Message& from);
+  void CopyFrom(const CellMapTileArchive& from);
+  void MergeFrom(const CellMapTileArchive& from);
+  void Clear();
+  bool IsInitialized() const;
+
+  int ByteSize() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const;
+
+  // nested types ----------------------------------------------------
+
+  typedef CellMapTileArchive_CellMapEntry CellMapEntry;
+
+  // accessors -------------------------------------------------------
+
+  // repeated .TST.CellMapTileArchive.CellMapEntry cellmap_entry = 2;
+  inline int cellmap_entry_size() const;
+  inline void clear_cellmap_entry();
+  static const int kCellmapEntryFieldNumber = 2;
+  inline const ::TST::CellMapTileArchive_CellMapEntry& cellmap_entry(int index) const;
+  inline ::TST::CellMapTileArchive_CellMapEntry* mutable_cellmap_entry(int index);
+  inline ::TST::CellMapTileArchive_CellMapEntry* add_cellmap_entry();
+  inline const ::google::protobuf::RepeatedPtrField< ::TST::CellMapTileArchive_CellMapEntry >&
+      cellmap_entry() const;
+  inline ::google::protobuf::RepeatedPtrField< ::TST::CellMapTileArchive_CellMapEntry >*
+      mutable_cellmap_entry();
+
+  // @@protoc_insertion_point(class_scope:TST.CellMapTileArchive)
+ private:
+
+  ::google::protobuf::UnknownFieldSet _unknown_fields_;
+
+  ::google::protobuf::RepeatedPtrField< ::TST::CellMapTileArchive_CellMapEntry > cellmap_entry_;
+
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 _has_bits_[(1 + 31) / 32];
+
+  friend void  protobuf_AddDesc_TSTArchives_2eproto();
+  friend void protobuf_AssignDesc_TSTArchives_2eproto();
+  friend void protobuf_ShutdownFile_TSTArchives_2eproto();
+
+  void InitAsDefaultInstance();
+  static CellMapTileArchive* default_instance_;
+};
+// -------------------------------------------------------------------
+
+class TiledCellMapArchive : public ::google::protobuf::Message {
+ public:
+  TiledCellMapArchive();
+  virtual ~TiledCellMapArchive();
+
+  TiledCellMapArchive(const TiledCellMapArchive& from);
+
+  inline TiledCellMapArchive& operator=(const TiledCellMapArchive& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _unknown_fields_;
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return &_unknown_fields_;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const TiledCellMapArchive& default_instance();
+
+  void Swap(TiledCellMapArchive* other);
+
+  // implements Message ----------------------------------------------
+
+  TiledCellMapArchive* New() const;
+  void CopyFrom(const ::google::protobuf::Message& from);
+  void MergeFrom(const ::google::protobuf::Message& from);
+  void CopyFrom(const TiledCellMapArchive& from);
+  void MergeFrom(const TiledCellMapArchive& from);
+  void Clear();
+  bool IsInitialized() const;
+
+  int ByteSize() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // repeated .TSP.Reference cellmap_tile = 1;
+  inline int cellmap_tile_size() const;
+  inline void clear_cellmap_tile();
+  static const int kCellmapTileFieldNumber = 1;
+  inline const ::TSP::Reference& cellmap_tile(int index) const;
+  inline ::TSP::Reference* mutable_cellmap_tile(int index);
+  inline ::TSP::Reference* add_cellmap_tile();
+  inline const ::google::protobuf::RepeatedPtrField< ::TSP::Reference >&
+      cellmap_tile() const;
+  inline ::google::protobuf::RepeatedPtrField< ::TSP::Reference >*
+      mutable_cellmap_tile();
+
+  // optional bool may_modify_formulas_in_cells = 2 [default = true];
+  inline bool has_may_modify_formulas_in_cells() const;
+  inline void clear_may_modify_formulas_in_cells();
+  static const int kMayModifyFormulasInCellsFieldNumber = 2;
+  inline bool may_modify_formulas_in_cells() const;
+  inline void set_may_modify_formulas_in_cells(bool value);
+
+  // optional bool may_modify_values_referenced_by_formulas = 3 [default = true];
+  inline bool has_may_modify_values_referenced_by_formulas() const;
+  inline void clear_may_modify_values_referenced_by_formulas();
+  static const int kMayModifyValuesReferencedByFormulasFieldNumber = 3;
+  inline bool may_modify_values_referenced_by_formulas() const;
+  inline void set_may_modify_values_referenced_by_formulas(bool value);
+
+  // optional bool applies_to_hidden = 4 [default = false];
+  inline bool has_applies_to_hidden() const;
+  inline void clear_applies_to_hidden();
+  static const int kAppliesToHiddenFieldNumber = 4;
+  inline bool applies_to_hidden() const;
+  inline void set_applies_to_hidden(bool value);
+
+  // @@protoc_insertion_point(class_scope:TST.TiledCellMapArchive)
+ private:
+  inline void set_has_may_modify_formulas_in_cells();
+  inline void clear_has_may_modify_formulas_in_cells();
+  inline void set_has_may_modify_values_referenced_by_formulas();
+  inline void clear_has_may_modify_values_referenced_by_formulas();
+  inline void set_has_applies_to_hidden();
+  inline void clear_has_applies_to_hidden();
+
+  ::google::protobuf::UnknownFieldSet _unknown_fields_;
+
+  ::google::protobuf::RepeatedPtrField< ::TSP::Reference > cellmap_tile_;
+  bool may_modify_formulas_in_cells_;
+  bool may_modify_values_referenced_by_formulas_;
+  bool applies_to_hidden_;
+
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 _has_bits_[(4 + 31) / 32];
+
+  friend void  protobuf_AddDesc_TSTArchives_2eproto();
+  friend void protobuf_AssignDesc_TSTArchives_2eproto();
+  friend void protobuf_ShutdownFile_TSTArchives_2eproto();
+
+  void InitAsDefaultInstance();
+  static TiledCellMapArchive* default_instance_;
+};
+// -------------------------------------------------------------------
+
+class PropertyMapEntryArchive : public ::google::protobuf::Message {
+ public:
+  PropertyMapEntryArchive();
+  virtual ~PropertyMapEntryArchive();
+
+  PropertyMapEntryArchive(const PropertyMapEntryArchive& from);
+
+  inline PropertyMapEntryArchive& operator=(const PropertyMapEntryArchive& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _unknown_fields_;
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return &_unknown_fields_;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const PropertyMapEntryArchive& default_instance();
+
+  void Swap(PropertyMapEntryArchive* other);
+
+  // implements Message ----------------------------------------------
+
+  PropertyMapEntryArchive* New() const;
+  void CopyFrom(const ::google::protobuf::Message& from);
+  void MergeFrom(const ::google::protobuf::Message& from);
+  void CopyFrom(const PropertyMapEntryArchive& from);
+  void MergeFrom(const PropertyMapEntryArchive& from);
+  void Clear();
+  bool IsInitialized() const;
+
+  int ByteSize() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // required uint32 property = 1;
+  inline bool has_property() const;
+  inline void clear_property();
+  static const int kPropertyFieldNumber = 1;
+  inline ::google::protobuf::uint32 property() const;
+  inline void set_property(::google::protobuf::uint32 value);
+
+  // required .TSS.ValueType valueType = 2;
+  inline bool has_valuetype() const;
+  inline void clear_valuetype();
+  static const int kValueTypeFieldNumber = 2;
+  inline ::TSS::ValueType valuetype() const;
+  inline void set_valuetype(::TSS::ValueType value);
+
+  // optional int32 int_value = 3;
+  inline bool has_int_value() const;
+  inline void clear_int_value();
+  static const int kIntValueFieldNumber = 3;
+  inline ::google::protobuf::int32 int_value() const;
+  inline void set_int_value(::google::protobuf::int32 value);
+
+  // optional float float_value = 4;
+  inline bool has_float_value() const;
+  inline void clear_float_value();
+  static const int kFloatValueFieldNumber = 4;
+  inline float float_value() const;
+  inline void set_float_value(float value);
+
+  // optional double double_value = 5;
+  inline bool has_double_value() const;
+  inline void clear_double_value();
+  static const int kDoubleValueFieldNumber = 5;
+  inline double double_value() const;
+  inline void set_double_value(double value);
+
+  // optional bool is_nsnull = 6 [default = false];
+  inline bool has_is_nsnull() const;
+  inline void clear_is_nsnull();
+  static const int kIsNsnullFieldNumber = 6;
+  inline bool is_nsnull() const;
+  inline void set_is_nsnull(bool value);
+
+  // optional .TSP.Reference tsp_reference = 7;
+  inline bool has_tsp_reference() const;
+  inline void clear_tsp_reference();
+  static const int kTspReferenceFieldNumber = 7;
+  inline const ::TSP::Reference& tsp_reference() const;
+  inline ::TSP::Reference* mutable_tsp_reference();
+  inline ::TSP::Reference* release_tsp_reference();
+  inline void set_allocated_tsp_reference(::TSP::Reference* tsp_reference);
+
+  // optional .TSD.FillArchive fill = 8;
+  inline bool has_fill() const;
+  inline void clear_fill();
+  static const int kFillFieldNumber = 8;
+  inline const ::TSD::FillArchive& fill() const;
+  inline ::TSD::FillArchive* mutable_fill();
+  inline ::TSD::FillArchive* release_fill();
+  inline void set_allocated_fill(::TSD::FillArchive* fill);
+
+  // optional .TST.ImportWarningSetArchive import_warning_set = 9;
+  inline bool has_import_warning_set() const;
+  inline void clear_import_warning_set();
+  static const int kImportWarningSetFieldNumber = 9;
+  inline const ::TST::ImportWarningSetArchive& import_warning_set() const;
+  inline ::TST::ImportWarningSetArchive* mutable_import_warning_set();
+  inline ::TST::ImportWarningSetArchive* release_import_warning_set();
+  inline void set_allocated_import_warning_set(::TST::ImportWarningSetArchive* import_warning_set);
+
+  // @@protoc_insertion_point(class_scope:TST.PropertyMapEntryArchive)
+ private:
+  inline void set_has_property();
+  inline void clear_has_property();
+  inline void set_has_valuetype();
+  inline void clear_has_valuetype();
+  inline void set_has_int_value();
+  inline void clear_has_int_value();
+  inline void set_has_float_value();
+  inline void clear_has_float_value();
+  inline void set_has_double_value();
+  inline void clear_has_double_value();
+  inline void set_has_is_nsnull();
+  inline void clear_has_is_nsnull();
+  inline void set_has_tsp_reference();
+  inline void clear_has_tsp_reference();
+  inline void set_has_fill();
+  inline void clear_has_fill();
+  inline void set_has_import_warning_set();
+  inline void clear_has_import_warning_set();
+
+  ::google::protobuf::UnknownFieldSet _unknown_fields_;
+
+  ::google::protobuf::uint32 property_;
+  int valuetype_;
+  ::google::protobuf::int32 int_value_;
+  float float_value_;
+  double double_value_;
+  ::TSP::Reference* tsp_reference_;
+  ::TSD::FillArchive* fill_;
+  ::TST::ImportWarningSetArchive* import_warning_set_;
+  bool is_nsnull_;
+
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 _has_bits_[(9 + 31) / 32];
+
+  friend void  protobuf_AddDesc_TSTArchives_2eproto();
+  friend void protobuf_AssignDesc_TSTArchives_2eproto();
+  friend void protobuf_ShutdownFile_TSTArchives_2eproto();
+
+  void InitAsDefaultInstance();
+  static PropertyMapEntryArchive* default_instance_;
+};
+// -------------------------------------------------------------------
+
+class CellDiffArchive : public ::google::protobuf::Message {
+ public:
+  CellDiffArchive();
+  virtual ~CellDiffArchive();
+
+  CellDiffArchive(const CellDiffArchive& from);
+
+  inline CellDiffArchive& operator=(const CellDiffArchive& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _unknown_fields_;
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return &_unknown_fields_;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const CellDiffArchive& default_instance();
+
+  void Swap(CellDiffArchive* other);
+
+  // implements Message ----------------------------------------------
+
+  CellDiffArchive* New() const;
+  void CopyFrom(const ::google::protobuf::Message& from);
+  void MergeFrom(const ::google::protobuf::Message& from);
+  void CopyFrom(const CellDiffArchive& from);
+  void MergeFrom(const CellDiffArchive& from);
+  void Clear();
+  bool IsInitialized() const;
+
+  int ByteSize() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // repeated .TST.PropertyMapEntryArchive property_map_to_set = 1;
+  inline int property_map_to_set_size() const;
+  inline void clear_property_map_to_set();
+  static const int kPropertyMapToSetFieldNumber = 1;
+  inline const ::TST::PropertyMapEntryArchive& property_map_to_set(int index) const;
+  inline ::TST::PropertyMapEntryArchive* mutable_property_map_to_set(int index);
+  inline ::TST::PropertyMapEntryArchive* add_property_map_to_set();
+  inline const ::google::protobuf::RepeatedPtrField< ::TST::PropertyMapEntryArchive >&
+      property_map_to_set() const;
+  inline ::google::protobuf::RepeatedPtrField< ::TST::PropertyMapEntryArchive >*
+      mutable_property_map_to_set();
+
+  // repeated .TST.PropertyMapEntryArchive property_map_to_reset = 2;
+  inline int property_map_to_reset_size() const;
+  inline void clear_property_map_to_reset();
+  static const int kPropertyMapToResetFieldNumber = 2;
+  inline const ::TST::PropertyMapEntryArchive& property_map_to_reset(int index) const;
+  inline ::TST::PropertyMapEntryArchive* mutable_property_map_to_reset(int index);
+  inline ::TST::PropertyMapEntryArchive* add_property_map_to_reset();
+  inline const ::google::protobuf::RepeatedPtrField< ::TST::PropertyMapEntryArchive >&
+      property_map_to_reset() const;
+  inline ::google::protobuf::RepeatedPtrField< ::TST::PropertyMapEntryArchive >*
+      mutable_property_map_to_reset();
+
+  // @@protoc_insertion_point(class_scope:TST.CellDiffArchive)
+ private:
+
+  ::google::protobuf::UnknownFieldSet _unknown_fields_;
+
+  ::google::protobuf::RepeatedPtrField< ::TST::PropertyMapEntryArchive > property_map_to_set_;
+  ::google::protobuf::RepeatedPtrField< ::TST::PropertyMapEntryArchive > property_map_to_reset_;
+
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 _has_bits_[(2 + 31) / 32];
+
+  friend void  protobuf_AddDesc_TSTArchives_2eproto();
+  friend void protobuf_AssignDesc_TSTArchives_2eproto();
+  friend void protobuf_ShutdownFile_TSTArchives_2eproto();
+
+  void InitAsDefaultInstance();
+  static CellDiffArchive* default_instance_;
+};
+// -------------------------------------------------------------------
+
+class CellDiffMapArchive : public ::google::protobuf::Message {
+ public:
+  CellDiffMapArchive();
+  virtual ~CellDiffMapArchive();
+
+  CellDiffMapArchive(const CellDiffMapArchive& from);
+
+  inline CellDiffMapArchive& operator=(const CellDiffMapArchive& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _unknown_fields_;
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return &_unknown_fields_;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const CellDiffMapArchive& default_instance();
+
+  void Swap(CellDiffMapArchive* other);
+
+  // implements Message ----------------------------------------------
+
+  CellDiffMapArchive* New() const;
+  void CopyFrom(const ::google::protobuf::Message& from);
+  void MergeFrom(const ::google::protobuf::Message& from);
+  void CopyFrom(const CellDiffMapArchive& from);
+  void MergeFrom(const CellDiffMapArchive& from);
+  void Clear();
+  bool IsInitialized() const;
+
+  int ByteSize() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // repeated .TST.CellID cell_ids = 1;
+  inline int cell_ids_size() const;
+  inline void clear_cell_ids();
+  static const int kCellIdsFieldNumber = 1;
+  inline const ::TST::CellID& cell_ids(int index) const;
+  inline ::TST::CellID* mutable_cell_ids(int index);
+  inline ::TST::CellID* add_cell_ids();
+  inline const ::google::protobuf::RepeatedPtrField< ::TST::CellID >&
+      cell_ids() const;
+  inline ::google::protobuf::RepeatedPtrField< ::TST::CellID >*
+      mutable_cell_ids();
+
+  // repeated .TSP.Reference cell_diffs = 2;
+  inline int cell_diffs_size() const;
+  inline void clear_cell_diffs();
+  static const int kCellDiffsFieldNumber = 2;
+  inline const ::TSP::Reference& cell_diffs(int index) const;
+  inline ::TSP::Reference* mutable_cell_diffs(int index);
+  inline ::TSP::Reference* add_cell_diffs();
+  inline const ::google::protobuf::RepeatedPtrField< ::TSP::Reference >&
+      cell_diffs() const;
+  inline ::google::protobuf::RepeatedPtrField< ::TSP::Reference >*
+      mutable_cell_diffs();
+
+  // @@protoc_insertion_point(class_scope:TST.CellDiffMapArchive)
+ private:
+
+  ::google::protobuf::UnknownFieldSet _unknown_fields_;
+
+  ::google::protobuf::RepeatedPtrField< ::TST::CellID > cell_ids_;
+  ::google::protobuf::RepeatedPtrField< ::TSP::Reference > cell_diffs_;
+
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 _has_bits_[(2 + 31) / 32];
+
+  friend void  protobuf_AddDesc_TSTArchives_2eproto();
+  friend void protobuf_AssignDesc_TSTArchives_2eproto();
+  friend void protobuf_ShutdownFile_TSTArchives_2eproto();
+
+  void InitAsDefaultInstance();
+  static CellDiffMapArchive* default_instance_;
 };
 // -------------------------------------------------------------------
 
@@ -8504,6 +10005,280 @@ class CellRegion : public ::google::protobuf::Message {
   void InitAsDefaultInstance();
   static CellRegion* default_instance_;
 };
+// -------------------------------------------------------------------
+
+class CellFillStandIn : public ::google::protobuf::Message {
+ public:
+  CellFillStandIn();
+  virtual ~CellFillStandIn();
+
+  CellFillStandIn(const CellFillStandIn& from);
+
+  inline CellFillStandIn& operator=(const CellFillStandIn& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _unknown_fields_;
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return &_unknown_fields_;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const CellFillStandIn& default_instance();
+
+  void Swap(CellFillStandIn* other);
+
+  // implements Message ----------------------------------------------
+
+  CellFillStandIn* New() const;
+  void CopyFrom(const ::google::protobuf::Message& from);
+  void MergeFrom(const ::google::protobuf::Message& from);
+  void CopyFrom(const CellFillStandIn& from);
+  void MergeFrom(const CellFillStandIn& from);
+  void Clear();
+  bool IsInitialized() const;
+
+  int ByteSize() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // required .TSD.FillArchive fill = 1;
+  inline bool has_fill() const;
+  inline void clear_fill();
+  static const int kFillFieldNumber = 1;
+  inline const ::TSD::FillArchive& fill() const;
+  inline ::TSD::FillArchive* mutable_fill();
+  inline ::TSD::FillArchive* release_fill();
+  inline void set_allocated_fill(::TSD::FillArchive* fill);
+
+  // optional bool type_is_mixed = 2;
+  inline bool has_type_is_mixed() const;
+  inline void clear_type_is_mixed();
+  static const int kTypeIsMixedFieldNumber = 2;
+  inline bool type_is_mixed() const;
+  inline void set_type_is_mixed(bool value);
+
+  // optional bool color_has_been_modified = 3;
+  inline bool has_color_has_been_modified() const;
+  inline void clear_color_has_been_modified();
+  static const int kColorHasBeenModifiedFieldNumber = 3;
+  inline bool color_has_been_modified() const;
+  inline void set_color_has_been_modified(bool value);
+
+  // optional bool color_is_mixed = 4;
+  inline bool has_color_is_mixed() const;
+  inline void clear_color_is_mixed();
+  static const int kColorIsMixedFieldNumber = 4;
+  inline bool color_is_mixed() const;
+  inline void set_color_is_mixed(bool value);
+
+  // optional bool first_color_has_been_modified = 5;
+  inline bool has_first_color_has_been_modified() const;
+  inline void clear_first_color_has_been_modified();
+  static const int kFirstColorHasBeenModifiedFieldNumber = 5;
+  inline bool first_color_has_been_modified() const;
+  inline void set_first_color_has_been_modified(bool value);
+
+  // optional bool first_color_is_mixed = 6;
+  inline bool has_first_color_is_mixed() const;
+  inline void clear_first_color_is_mixed();
+  static const int kFirstColorIsMixedFieldNumber = 6;
+  inline bool first_color_is_mixed() const;
+  inline void set_first_color_is_mixed(bool value);
+
+  // optional bool last_color_has_been_modified = 7;
+  inline bool has_last_color_has_been_modified() const;
+  inline void clear_last_color_has_been_modified();
+  static const int kLastColorHasBeenModifiedFieldNumber = 7;
+  inline bool last_color_has_been_modified() const;
+  inline void set_last_color_has_been_modified(bool value);
+
+  // optional bool last_color_is_mixed = 8;
+  inline bool has_last_color_is_mixed() const;
+  inline void clear_last_color_is_mixed();
+  static const int kLastColorIsMixedFieldNumber = 8;
+  inline bool last_color_is_mixed() const;
+  inline void set_last_color_is_mixed(bool value);
+
+  // optional bool gradient_type_has_been_modified = 9;
+  inline bool has_gradient_type_has_been_modified() const;
+  inline void clear_gradient_type_has_been_modified();
+  static const int kGradientTypeHasBeenModifiedFieldNumber = 9;
+  inline bool gradient_type_has_been_modified() const;
+  inline void set_gradient_type_has_been_modified(bool value);
+
+  // optional bool gradient_type_is_mixed = 10;
+  inline bool has_gradient_type_is_mixed() const;
+  inline void clear_gradient_type_is_mixed();
+  static const int kGradientTypeIsMixedFieldNumber = 10;
+  inline bool gradient_type_is_mixed() const;
+  inline void set_gradient_type_is_mixed(bool value);
+
+  // optional bool gradient_angle_has_been_modified = 11;
+  inline bool has_gradient_angle_has_been_modified() const;
+  inline void clear_gradient_angle_has_been_modified();
+  static const int kGradientAngleHasBeenModifiedFieldNumber = 11;
+  inline bool gradient_angle_has_been_modified() const;
+  inline void set_gradient_angle_has_been_modified(bool value);
+
+  // optional bool gradient_angle_is_mixed = 12;
+  inline bool has_gradient_angle_is_mixed() const;
+  inline void clear_gradient_angle_is_mixed();
+  static const int kGradientAngleIsMixedFieldNumber = 12;
+  inline bool gradient_angle_is_mixed() const;
+  inline void set_gradient_angle_is_mixed(bool value);
+
+  // optional bool image_data_has_been_modified = 13;
+  inline bool has_image_data_has_been_modified() const;
+  inline void clear_image_data_has_been_modified();
+  static const int kImageDataHasBeenModifiedFieldNumber = 13;
+  inline bool image_data_has_been_modified() const;
+  inline void set_image_data_has_been_modified(bool value);
+
+  // optional bool image_data_is_mixed = 14;
+  inline bool has_image_data_is_mixed() const;
+  inline void clear_image_data_is_mixed();
+  static const int kImageDataIsMixedFieldNumber = 14;
+  inline bool image_data_is_mixed() const;
+  inline void set_image_data_is_mixed(bool value);
+
+  // optional bool tint_color_has_been_modified = 15;
+  inline bool has_tint_color_has_been_modified() const;
+  inline void clear_tint_color_has_been_modified();
+  static const int kTintColorHasBeenModifiedFieldNumber = 15;
+  inline bool tint_color_has_been_modified() const;
+  inline void set_tint_color_has_been_modified(bool value);
+
+  // optional bool tint_color_is_mixed = 16;
+  inline bool has_tint_color_is_mixed() const;
+  inline void clear_tint_color_is_mixed();
+  static const int kTintColorIsMixedFieldNumber = 16;
+  inline bool tint_color_is_mixed() const;
+  inline void set_tint_color_is_mixed(bool value);
+
+  // optional bool scale_has_been_modified = 17;
+  inline bool has_scale_has_been_modified() const;
+  inline void clear_scale_has_been_modified();
+  static const int kScaleHasBeenModifiedFieldNumber = 17;
+  inline bool scale_has_been_modified() const;
+  inline void set_scale_has_been_modified(bool value);
+
+  // optional bool scale_is_mixed = 18;
+  inline bool has_scale_is_mixed() const;
+  inline void clear_scale_is_mixed();
+  static const int kScaleIsMixedFieldNumber = 18;
+  inline bool scale_is_mixed() const;
+  inline void set_scale_is_mixed(bool value);
+
+  // optional bool technique_has_been_modified = 19;
+  inline bool has_technique_has_been_modified() const;
+  inline void clear_technique_has_been_modified();
+  static const int kTechniqueHasBeenModifiedFieldNumber = 19;
+  inline bool technique_has_been_modified() const;
+  inline void set_technique_has_been_modified(bool value);
+
+  // optional bool technique_is_mixed = 20;
+  inline bool has_technique_is_mixed() const;
+  inline void clear_technique_is_mixed();
+  static const int kTechniqueIsMixedFieldNumber = 20;
+  inline bool technique_is_mixed() const;
+  inline void set_technique_is_mixed(bool value);
+
+  // @@protoc_insertion_point(class_scope:TST.CellFillStandIn)
+ private:
+  inline void set_has_fill();
+  inline void clear_has_fill();
+  inline void set_has_type_is_mixed();
+  inline void clear_has_type_is_mixed();
+  inline void set_has_color_has_been_modified();
+  inline void clear_has_color_has_been_modified();
+  inline void set_has_color_is_mixed();
+  inline void clear_has_color_is_mixed();
+  inline void set_has_first_color_has_been_modified();
+  inline void clear_has_first_color_has_been_modified();
+  inline void set_has_first_color_is_mixed();
+  inline void clear_has_first_color_is_mixed();
+  inline void set_has_last_color_has_been_modified();
+  inline void clear_has_last_color_has_been_modified();
+  inline void set_has_last_color_is_mixed();
+  inline void clear_has_last_color_is_mixed();
+  inline void set_has_gradient_type_has_been_modified();
+  inline void clear_has_gradient_type_has_been_modified();
+  inline void set_has_gradient_type_is_mixed();
+  inline void clear_has_gradient_type_is_mixed();
+  inline void set_has_gradient_angle_has_been_modified();
+  inline void clear_has_gradient_angle_has_been_modified();
+  inline void set_has_gradient_angle_is_mixed();
+  inline void clear_has_gradient_angle_is_mixed();
+  inline void set_has_image_data_has_been_modified();
+  inline void clear_has_image_data_has_been_modified();
+  inline void set_has_image_data_is_mixed();
+  inline void clear_has_image_data_is_mixed();
+  inline void set_has_tint_color_has_been_modified();
+  inline void clear_has_tint_color_has_been_modified();
+  inline void set_has_tint_color_is_mixed();
+  inline void clear_has_tint_color_is_mixed();
+  inline void set_has_scale_has_been_modified();
+  inline void clear_has_scale_has_been_modified();
+  inline void set_has_scale_is_mixed();
+  inline void clear_has_scale_is_mixed();
+  inline void set_has_technique_has_been_modified();
+  inline void clear_has_technique_has_been_modified();
+  inline void set_has_technique_is_mixed();
+  inline void clear_has_technique_is_mixed();
+
+  ::google::protobuf::UnknownFieldSet _unknown_fields_;
+
+  ::TSD::FillArchive* fill_;
+  bool type_is_mixed_;
+  bool color_has_been_modified_;
+  bool color_is_mixed_;
+  bool first_color_has_been_modified_;
+  bool first_color_is_mixed_;
+  bool last_color_has_been_modified_;
+  bool last_color_is_mixed_;
+  bool gradient_type_has_been_modified_;
+  bool gradient_type_is_mixed_;
+  bool gradient_angle_has_been_modified_;
+  bool gradient_angle_is_mixed_;
+  bool image_data_has_been_modified_;
+  bool image_data_is_mixed_;
+  bool tint_color_has_been_modified_;
+  bool tint_color_is_mixed_;
+  bool scale_has_been_modified_;
+  bool scale_is_mixed_;
+  bool technique_has_been_modified_;
+  bool technique_is_mixed_;
+
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 _has_bits_[(20 + 31) / 32];
+
+  friend void  protobuf_AddDesc_TSTArchives_2eproto();
+  friend void protobuf_AssignDesc_TSTArchives_2eproto();
+  friend void protobuf_ShutdownFile_TSTArchives_2eproto();
+
+  void InitAsDefaultInstance();
+  static CellFillStandIn* default_instance_;
+};
 // ===================================================================
 
 
@@ -9441,6 +11216,571 @@ PopUpMenuModel::mutable_tsce_item() {
 
 // -------------------------------------------------------------------
 
+// ImportWarningSetArchive_FormulaImportWarning
+
+// required .TST.ImportWarningSetArchive.FormulaWarningType formula_warning_type = 1;
+inline bool ImportWarningSetArchive_FormulaImportWarning::has_formula_warning_type() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void ImportWarningSetArchive_FormulaImportWarning::set_has_formula_warning_type() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void ImportWarningSetArchive_FormulaImportWarning::clear_has_formula_warning_type() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void ImportWarningSetArchive_FormulaImportWarning::clear_formula_warning_type() {
+  formula_warning_type_ = 1;
+  clear_has_formula_warning_type();
+}
+inline ::TST::ImportWarningSetArchive_FormulaWarningType ImportWarningSetArchive_FormulaImportWarning::formula_warning_type() const {
+  return static_cast< ::TST::ImportWarningSetArchive_FormulaWarningType >(formula_warning_type_);
+}
+inline void ImportWarningSetArchive_FormulaImportWarning::set_formula_warning_type(::TST::ImportWarningSetArchive_FormulaWarningType value) {
+  assert(::TST::ImportWarningSetArchive_FormulaWarningType_IsValid(value));
+  set_has_formula_warning_type();
+  formula_warning_type_ = value;
+}
+
+// optional string original_formula = 2;
+inline bool ImportWarningSetArchive_FormulaImportWarning::has_original_formula() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void ImportWarningSetArchive_FormulaImportWarning::set_has_original_formula() {
+  _has_bits_[0] |= 0x00000002u;
+}
+inline void ImportWarningSetArchive_FormulaImportWarning::clear_has_original_formula() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline void ImportWarningSetArchive_FormulaImportWarning::clear_original_formula() {
+  if (original_formula_ != &::google::protobuf::internal::kEmptyString) {
+    original_formula_->clear();
+  }
+  clear_has_original_formula();
+}
+inline const ::std::string& ImportWarningSetArchive_FormulaImportWarning::original_formula() const {
+  return *original_formula_;
+}
+inline void ImportWarningSetArchive_FormulaImportWarning::set_original_formula(const ::std::string& value) {
+  set_has_original_formula();
+  if (original_formula_ == &::google::protobuf::internal::kEmptyString) {
+    original_formula_ = new ::std::string;
+  }
+  original_formula_->assign(value);
+}
+inline void ImportWarningSetArchive_FormulaImportWarning::set_original_formula(const char* value) {
+  set_has_original_formula();
+  if (original_formula_ == &::google::protobuf::internal::kEmptyString) {
+    original_formula_ = new ::std::string;
+  }
+  original_formula_->assign(value);
+}
+inline void ImportWarningSetArchive_FormulaImportWarning::set_original_formula(const char* value, size_t size) {
+  set_has_original_formula();
+  if (original_formula_ == &::google::protobuf::internal::kEmptyString) {
+    original_formula_ = new ::std::string;
+  }
+  original_formula_->assign(reinterpret_cast<const char*>(value), size);
+}
+inline ::std::string* ImportWarningSetArchive_FormulaImportWarning::mutable_original_formula() {
+  set_has_original_formula();
+  if (original_formula_ == &::google::protobuf::internal::kEmptyString) {
+    original_formula_ = new ::std::string;
+  }
+  return original_formula_;
+}
+inline ::std::string* ImportWarningSetArchive_FormulaImportWarning::release_original_formula() {
+  clear_has_original_formula();
+  if (original_formula_ == &::google::protobuf::internal::kEmptyString) {
+    return NULL;
+  } else {
+    ::std::string* temp = original_formula_;
+    original_formula_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+    return temp;
+  }
+}
+inline void ImportWarningSetArchive_FormulaImportWarning::set_allocated_original_formula(::std::string* original_formula) {
+  if (original_formula_ != &::google::protobuf::internal::kEmptyString) {
+    delete original_formula_;
+  }
+  if (original_formula) {
+    set_has_original_formula();
+    original_formula_ = original_formula;
+  } else {
+    clear_has_original_formula();
+    original_formula_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+  }
+}
+
+// optional string supplementary_text = 3;
+inline bool ImportWarningSetArchive_FormulaImportWarning::has_supplementary_text() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void ImportWarningSetArchive_FormulaImportWarning::set_has_supplementary_text() {
+  _has_bits_[0] |= 0x00000004u;
+}
+inline void ImportWarningSetArchive_FormulaImportWarning::clear_has_supplementary_text() {
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline void ImportWarningSetArchive_FormulaImportWarning::clear_supplementary_text() {
+  if (supplementary_text_ != &::google::protobuf::internal::kEmptyString) {
+    supplementary_text_->clear();
+  }
+  clear_has_supplementary_text();
+}
+inline const ::std::string& ImportWarningSetArchive_FormulaImportWarning::supplementary_text() const {
+  return *supplementary_text_;
+}
+inline void ImportWarningSetArchive_FormulaImportWarning::set_supplementary_text(const ::std::string& value) {
+  set_has_supplementary_text();
+  if (supplementary_text_ == &::google::protobuf::internal::kEmptyString) {
+    supplementary_text_ = new ::std::string;
+  }
+  supplementary_text_->assign(value);
+}
+inline void ImportWarningSetArchive_FormulaImportWarning::set_supplementary_text(const char* value) {
+  set_has_supplementary_text();
+  if (supplementary_text_ == &::google::protobuf::internal::kEmptyString) {
+    supplementary_text_ = new ::std::string;
+  }
+  supplementary_text_->assign(value);
+}
+inline void ImportWarningSetArchive_FormulaImportWarning::set_supplementary_text(const char* value, size_t size) {
+  set_has_supplementary_text();
+  if (supplementary_text_ == &::google::protobuf::internal::kEmptyString) {
+    supplementary_text_ = new ::std::string;
+  }
+  supplementary_text_->assign(reinterpret_cast<const char*>(value), size);
+}
+inline ::std::string* ImportWarningSetArchive_FormulaImportWarning::mutable_supplementary_text() {
+  set_has_supplementary_text();
+  if (supplementary_text_ == &::google::protobuf::internal::kEmptyString) {
+    supplementary_text_ = new ::std::string;
+  }
+  return supplementary_text_;
+}
+inline ::std::string* ImportWarningSetArchive_FormulaImportWarning::release_supplementary_text() {
+  clear_has_supplementary_text();
+  if (supplementary_text_ == &::google::protobuf::internal::kEmptyString) {
+    return NULL;
+  } else {
+    ::std::string* temp = supplementary_text_;
+    supplementary_text_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+    return temp;
+  }
+}
+inline void ImportWarningSetArchive_FormulaImportWarning::set_allocated_supplementary_text(::std::string* supplementary_text) {
+  if (supplementary_text_ != &::google::protobuf::internal::kEmptyString) {
+    delete supplementary_text_;
+  }
+  if (supplementary_text) {
+    set_has_supplementary_text();
+    supplementary_text_ = supplementary_text;
+  } else {
+    clear_has_supplementary_text();
+    supplementary_text_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+  }
+}
+
+// -------------------------------------------------------------------
+
+// ImportWarningSetArchive
+
+// optional .TST.ImportWarningSetArchive.FormulaImportWarning formula_import_warning = 1;
+inline bool ImportWarningSetArchive::has_formula_import_warning() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void ImportWarningSetArchive::set_has_formula_import_warning() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void ImportWarningSetArchive::clear_has_formula_import_warning() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void ImportWarningSetArchive::clear_formula_import_warning() {
+  if (formula_import_warning_ != NULL) formula_import_warning_->::TST::ImportWarningSetArchive_FormulaImportWarning::Clear();
+  clear_has_formula_import_warning();
+}
+inline const ::TST::ImportWarningSetArchive_FormulaImportWarning& ImportWarningSetArchive::formula_import_warning() const {
+  return formula_import_warning_ != NULL ? *formula_import_warning_ : *default_instance_->formula_import_warning_;
+}
+inline ::TST::ImportWarningSetArchive_FormulaImportWarning* ImportWarningSetArchive::mutable_formula_import_warning() {
+  set_has_formula_import_warning();
+  if (formula_import_warning_ == NULL) formula_import_warning_ = new ::TST::ImportWarningSetArchive_FormulaImportWarning;
+  return formula_import_warning_;
+}
+inline ::TST::ImportWarningSetArchive_FormulaImportWarning* ImportWarningSetArchive::release_formula_import_warning() {
+  clear_has_formula_import_warning();
+  ::TST::ImportWarningSetArchive_FormulaImportWarning* temp = formula_import_warning_;
+  formula_import_warning_ = NULL;
+  return temp;
+}
+inline void ImportWarningSetArchive::set_allocated_formula_import_warning(::TST::ImportWarningSetArchive_FormulaImportWarning* formula_import_warning) {
+  delete formula_import_warning_;
+  formula_import_warning_ = formula_import_warning;
+  if (formula_import_warning) {
+    set_has_formula_import_warning();
+  } else {
+    clear_has_formula_import_warning();
+  }
+}
+
+// optional bool cond_format_above_avg_equal_avg = 2 [default = false];
+inline bool ImportWarningSetArchive::has_cond_format_above_avg_equal_avg() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void ImportWarningSetArchive::set_has_cond_format_above_avg_equal_avg() {
+  _has_bits_[0] |= 0x00000002u;
+}
+inline void ImportWarningSetArchive::clear_has_cond_format_above_avg_equal_avg() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline void ImportWarningSetArchive::clear_cond_format_above_avg_equal_avg() {
+  cond_format_above_avg_equal_avg_ = false;
+  clear_has_cond_format_above_avg_equal_avg();
+}
+inline bool ImportWarningSetArchive::cond_format_above_avg_equal_avg() const {
+  return cond_format_above_avg_equal_avg_;
+}
+inline void ImportWarningSetArchive::set_cond_format_above_avg_equal_avg(bool value) {
+  set_has_cond_format_above_avg_equal_avg();
+  cond_format_above_avg_equal_avg_ = value;
+}
+
+// optional bool cond_format_above_avg_std_dev = 3 [default = false];
+inline bool ImportWarningSetArchive::has_cond_format_above_avg_std_dev() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void ImportWarningSetArchive::set_has_cond_format_above_avg_std_dev() {
+  _has_bits_[0] |= 0x00000004u;
+}
+inline void ImportWarningSetArchive::clear_has_cond_format_above_avg_std_dev() {
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline void ImportWarningSetArchive::clear_cond_format_above_avg_std_dev() {
+  cond_format_above_avg_std_dev_ = false;
+  clear_has_cond_format_above_avg_std_dev();
+}
+inline bool ImportWarningSetArchive::cond_format_above_avg_std_dev() const {
+  return cond_format_above_avg_std_dev_;
+}
+inline void ImportWarningSetArchive::set_cond_format_above_avg_std_dev(bool value) {
+  set_has_cond_format_above_avg_std_dev();
+  cond_format_above_avg_std_dev_ = value;
+}
+
+// optional bool cond_format_complex_formula = 4 [default = false];
+inline bool ImportWarningSetArchive::has_cond_format_complex_formula() const {
+  return (_has_bits_[0] & 0x00000008u) != 0;
+}
+inline void ImportWarningSetArchive::set_has_cond_format_complex_formula() {
+  _has_bits_[0] |= 0x00000008u;
+}
+inline void ImportWarningSetArchive::clear_has_cond_format_complex_formula() {
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline void ImportWarningSetArchive::clear_cond_format_complex_formula() {
+  cond_format_complex_formula_ = false;
+  clear_has_cond_format_complex_formula();
+}
+inline bool ImportWarningSetArchive::cond_format_complex_formula() const {
+  return cond_format_complex_formula_;
+}
+inline void ImportWarningSetArchive::set_cond_format_complex_formula(bool value) {
+  set_has_cond_format_complex_formula();
+  cond_format_complex_formula_ = value;
+}
+
+// optional bool cond_format_contains_errors = 5 [default = false];
+inline bool ImportWarningSetArchive::has_cond_format_contains_errors() const {
+  return (_has_bits_[0] & 0x00000010u) != 0;
+}
+inline void ImportWarningSetArchive::set_has_cond_format_contains_errors() {
+  _has_bits_[0] |= 0x00000010u;
+}
+inline void ImportWarningSetArchive::clear_has_cond_format_contains_errors() {
+  _has_bits_[0] &= ~0x00000010u;
+}
+inline void ImportWarningSetArchive::clear_cond_format_contains_errors() {
+  cond_format_contains_errors_ = false;
+  clear_has_cond_format_contains_errors();
+}
+inline bool ImportWarningSetArchive::cond_format_contains_errors() const {
+  return cond_format_contains_errors_;
+}
+inline void ImportWarningSetArchive::set_cond_format_contains_errors(bool value) {
+  set_has_cond_format_contains_errors();
+  cond_format_contains_errors_ = value;
+}
+
+// optional bool cond_format_expr = 6 [default = false];
+inline bool ImportWarningSetArchive::has_cond_format_expr() const {
+  return (_has_bits_[0] & 0x00000020u) != 0;
+}
+inline void ImportWarningSetArchive::set_has_cond_format_expr() {
+  _has_bits_[0] |= 0x00000020u;
+}
+inline void ImportWarningSetArchive::clear_has_cond_format_expr() {
+  _has_bits_[0] &= ~0x00000020u;
+}
+inline void ImportWarningSetArchive::clear_cond_format_expr() {
+  cond_format_expr_ = false;
+  clear_has_cond_format_expr();
+}
+inline bool ImportWarningSetArchive::cond_format_expr() const {
+  return cond_format_expr_;
+}
+inline void ImportWarningSetArchive::set_cond_format_expr(bool value) {
+  set_has_cond_format_expr();
+  cond_format_expr_ = value;
+}
+
+// optional bool cond_format_not_contains_errors = 7 [default = false];
+inline bool ImportWarningSetArchive::has_cond_format_not_contains_errors() const {
+  return (_has_bits_[0] & 0x00000040u) != 0;
+}
+inline void ImportWarningSetArchive::set_has_cond_format_not_contains_errors() {
+  _has_bits_[0] |= 0x00000040u;
+}
+inline void ImportWarningSetArchive::clear_has_cond_format_not_contains_errors() {
+  _has_bits_[0] &= ~0x00000040u;
+}
+inline void ImportWarningSetArchive::clear_cond_format_not_contains_errors() {
+  cond_format_not_contains_errors_ = false;
+  clear_has_cond_format_not_contains_errors();
+}
+inline bool ImportWarningSetArchive::cond_format_not_contains_errors() const {
+  return cond_format_not_contains_errors_;
+}
+inline void ImportWarningSetArchive::set_cond_format_not_contains_errors(bool value) {
+  set_has_cond_format_not_contains_errors();
+  cond_format_not_contains_errors_ = value;
+}
+
+// optional bool cond_format_parameters_not_all_same_type = 8 [default = false];
+inline bool ImportWarningSetArchive::has_cond_format_parameters_not_all_same_type() const {
+  return (_has_bits_[0] & 0x00000080u) != 0;
+}
+inline void ImportWarningSetArchive::set_has_cond_format_parameters_not_all_same_type() {
+  _has_bits_[0] |= 0x00000080u;
+}
+inline void ImportWarningSetArchive::clear_has_cond_format_parameters_not_all_same_type() {
+  _has_bits_[0] &= ~0x00000080u;
+}
+inline void ImportWarningSetArchive::clear_cond_format_parameters_not_all_same_type() {
+  cond_format_parameters_not_all_same_type_ = false;
+  clear_has_cond_format_parameters_not_all_same_type();
+}
+inline bool ImportWarningSetArchive::cond_format_parameters_not_all_same_type() const {
+  return cond_format_parameters_not_all_same_type_;
+}
+inline void ImportWarningSetArchive::set_cond_format_parameters_not_all_same_type(bool value) {
+  set_has_cond_format_parameters_not_all_same_type();
+  cond_format_parameters_not_all_same_type_ = value;
+}
+
+// optional bool cond_format_stop_if_true = 9 [default = false];
+inline bool ImportWarningSetArchive::has_cond_format_stop_if_true() const {
+  return (_has_bits_[0] & 0x00000100u) != 0;
+}
+inline void ImportWarningSetArchive::set_has_cond_format_stop_if_true() {
+  _has_bits_[0] |= 0x00000100u;
+}
+inline void ImportWarningSetArchive::clear_has_cond_format_stop_if_true() {
+  _has_bits_[0] &= ~0x00000100u;
+}
+inline void ImportWarningSetArchive::clear_cond_format_stop_if_true() {
+  cond_format_stop_if_true_ = false;
+  clear_has_cond_format_stop_if_true();
+}
+inline bool ImportWarningSetArchive::cond_format_stop_if_true() const {
+  return cond_format_stop_if_true_;
+}
+inline void ImportWarningSetArchive::set_cond_format_stop_if_true(bool value) {
+  set_has_cond_format_stop_if_true();
+  cond_format_stop_if_true_ = value;
+}
+
+// optional bool cond_format_unsupported_operator = 10 [default = false];
+inline bool ImportWarningSetArchive::has_cond_format_unsupported_operator() const {
+  return (_has_bits_[0] & 0x00000200u) != 0;
+}
+inline void ImportWarningSetArchive::set_has_cond_format_unsupported_operator() {
+  _has_bits_[0] |= 0x00000200u;
+}
+inline void ImportWarningSetArchive::clear_has_cond_format_unsupported_operator() {
+  _has_bits_[0] &= ~0x00000200u;
+}
+inline void ImportWarningSetArchive::clear_cond_format_unsupported_operator() {
+  cond_format_unsupported_operator_ = false;
+  clear_has_cond_format_unsupported_operator();
+}
+inline bool ImportWarningSetArchive::cond_format_unsupported_operator() const {
+  return cond_format_unsupported_operator_;
+}
+inline void ImportWarningSetArchive::set_cond_format_unsupported_operator(bool value) {
+  set_has_cond_format_unsupported_operator();
+  cond_format_unsupported_operator_ = value;
+}
+
+// optional bool cond_format_unsupported_styling = 11 [default = false];
+inline bool ImportWarningSetArchive::has_cond_format_unsupported_styling() const {
+  return (_has_bits_[0] & 0x00000400u) != 0;
+}
+inline void ImportWarningSetArchive::set_has_cond_format_unsupported_styling() {
+  _has_bits_[0] |= 0x00000400u;
+}
+inline void ImportWarningSetArchive::clear_has_cond_format_unsupported_styling() {
+  _has_bits_[0] &= ~0x00000400u;
+}
+inline void ImportWarningSetArchive::clear_cond_format_unsupported_styling() {
+  cond_format_unsupported_styling_ = false;
+  clear_has_cond_format_unsupported_styling();
+}
+inline bool ImportWarningSetArchive::cond_format_unsupported_styling() const {
+  return cond_format_unsupported_styling_;
+}
+inline void ImportWarningSetArchive::set_cond_format_unsupported_styling(bool value) {
+  set_has_cond_format_unsupported_styling();
+  cond_format_unsupported_styling_ = value;
+}
+
+// optional bool cond_format_unsupported_time_period = 12 [default = false];
+inline bool ImportWarningSetArchive::has_cond_format_unsupported_time_period() const {
+  return (_has_bits_[0] & 0x00000800u) != 0;
+}
+inline void ImportWarningSetArchive::set_has_cond_format_unsupported_time_period() {
+  _has_bits_[0] |= 0x00000800u;
+}
+inline void ImportWarningSetArchive::clear_has_cond_format_unsupported_time_period() {
+  _has_bits_[0] &= ~0x00000800u;
+}
+inline void ImportWarningSetArchive::clear_cond_format_unsupported_time_period() {
+  cond_format_unsupported_time_period_ = false;
+  clear_has_cond_format_unsupported_time_period();
+}
+inline bool ImportWarningSetArchive::cond_format_unsupported_time_period() const {
+  return cond_format_unsupported_time_period_;
+}
+inline void ImportWarningSetArchive::set_cond_format_unsupported_time_period(bool value) {
+  set_has_cond_format_unsupported_time_period();
+  cond_format_unsupported_time_period_ = value;
+}
+
+// optional bool error_cell_with_no_formula = 13 [default = false];
+inline bool ImportWarningSetArchive::has_error_cell_with_no_formula() const {
+  return (_has_bits_[0] & 0x00001000u) != 0;
+}
+inline void ImportWarningSetArchive::set_has_error_cell_with_no_formula() {
+  _has_bits_[0] |= 0x00001000u;
+}
+inline void ImportWarningSetArchive::clear_has_error_cell_with_no_formula() {
+  _has_bits_[0] &= ~0x00001000u;
+}
+inline void ImportWarningSetArchive::clear_error_cell_with_no_formula() {
+  error_cell_with_no_formula_ = false;
+  clear_has_error_cell_with_no_formula();
+}
+inline bool ImportWarningSetArchive::error_cell_with_no_formula() const {
+  return error_cell_with_no_formula_;
+}
+inline void ImportWarningSetArchive::set_error_cell_with_no_formula(bool value) {
+  set_has_error_cell_with_no_formula();
+  error_cell_with_no_formula_ = value;
+}
+
+// optional bool unsupported_cond_format = 14 [default = false];
+inline bool ImportWarningSetArchive::has_unsupported_cond_format() const {
+  return (_has_bits_[0] & 0x00002000u) != 0;
+}
+inline void ImportWarningSetArchive::set_has_unsupported_cond_format() {
+  _has_bits_[0] |= 0x00002000u;
+}
+inline void ImportWarningSetArchive::clear_has_unsupported_cond_format() {
+  _has_bits_[0] &= ~0x00002000u;
+}
+inline void ImportWarningSetArchive::clear_unsupported_cond_format() {
+  unsupported_cond_format_ = false;
+  clear_has_unsupported_cond_format();
+}
+inline bool ImportWarningSetArchive::unsupported_cond_format() const {
+  return unsupported_cond_format_;
+}
+inline void ImportWarningSetArchive::set_unsupported_cond_format(bool value) {
+  set_has_unsupported_cond_format();
+  unsupported_cond_format_ = value;
+}
+
+// optional string original_data_format = 15;
+inline bool ImportWarningSetArchive::has_original_data_format() const {
+  return (_has_bits_[0] & 0x00004000u) != 0;
+}
+inline void ImportWarningSetArchive::set_has_original_data_format() {
+  _has_bits_[0] |= 0x00004000u;
+}
+inline void ImportWarningSetArchive::clear_has_original_data_format() {
+  _has_bits_[0] &= ~0x00004000u;
+}
+inline void ImportWarningSetArchive::clear_original_data_format() {
+  if (original_data_format_ != &::google::protobuf::internal::kEmptyString) {
+    original_data_format_->clear();
+  }
+  clear_has_original_data_format();
+}
+inline const ::std::string& ImportWarningSetArchive::original_data_format() const {
+  return *original_data_format_;
+}
+inline void ImportWarningSetArchive::set_original_data_format(const ::std::string& value) {
+  set_has_original_data_format();
+  if (original_data_format_ == &::google::protobuf::internal::kEmptyString) {
+    original_data_format_ = new ::std::string;
+  }
+  original_data_format_->assign(value);
+}
+inline void ImportWarningSetArchive::set_original_data_format(const char* value) {
+  set_has_original_data_format();
+  if (original_data_format_ == &::google::protobuf::internal::kEmptyString) {
+    original_data_format_ = new ::std::string;
+  }
+  original_data_format_->assign(value);
+}
+inline void ImportWarningSetArchive::set_original_data_format(const char* value, size_t size) {
+  set_has_original_data_format();
+  if (original_data_format_ == &::google::protobuf::internal::kEmptyString) {
+    original_data_format_ = new ::std::string;
+  }
+  original_data_format_->assign(reinterpret_cast<const char*>(value), size);
+}
+inline ::std::string* ImportWarningSetArchive::mutable_original_data_format() {
+  set_has_original_data_format();
+  if (original_data_format_ == &::google::protobuf::internal::kEmptyString) {
+    original_data_format_ = new ::std::string;
+  }
+  return original_data_format_;
+}
+inline ::std::string* ImportWarningSetArchive::release_original_data_format() {
+  clear_has_original_data_format();
+  if (original_data_format_ == &::google::protobuf::internal::kEmptyString) {
+    return NULL;
+  } else {
+    ::std::string* temp = original_data_format_;
+    original_data_format_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+    return temp;
+  }
+}
+inline void ImportWarningSetArchive::set_allocated_original_data_format(::std::string* original_data_format) {
+  if (original_data_format_ != &::google::protobuf::internal::kEmptyString) {
+    delete original_data_format_;
+  }
+  if (original_data_format) {
+    set_has_original_data_format();
+    original_data_format_ = original_data_format;
+  } else {
+    clear_has_original_data_format();
+    original_data_format_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+  }
+}
+
+// -------------------------------------------------------------------
+
 // TableDataList_ListEntry
 
 // required uint32 key = 1;
@@ -9820,6 +12160,44 @@ inline void TableDataList_ListEntry::set_allocated_comment_storage(::TSP::Refere
     set_has_comment_storage();
   } else {
     clear_has_comment_storage();
+  }
+}
+
+// optional .TST.ImportWarningSetArchive import_warning_set = 11;
+inline bool TableDataList_ListEntry::has_import_warning_set() const {
+  return (_has_bits_[0] & 0x00000400u) != 0;
+}
+inline void TableDataList_ListEntry::set_has_import_warning_set() {
+  _has_bits_[0] |= 0x00000400u;
+}
+inline void TableDataList_ListEntry::clear_has_import_warning_set() {
+  _has_bits_[0] &= ~0x00000400u;
+}
+inline void TableDataList_ListEntry::clear_import_warning_set() {
+  if (import_warning_set_ != NULL) import_warning_set_->::TST::ImportWarningSetArchive::Clear();
+  clear_has_import_warning_set();
+}
+inline const ::TST::ImportWarningSetArchive& TableDataList_ListEntry::import_warning_set() const {
+  return import_warning_set_ != NULL ? *import_warning_set_ : *default_instance_->import_warning_set_;
+}
+inline ::TST::ImportWarningSetArchive* TableDataList_ListEntry::mutable_import_warning_set() {
+  set_has_import_warning_set();
+  if (import_warning_set_ == NULL) import_warning_set_ = new ::TST::ImportWarningSetArchive;
+  return import_warning_set_;
+}
+inline ::TST::ImportWarningSetArchive* TableDataList_ListEntry::release_import_warning_set() {
+  clear_has_import_warning_set();
+  ::TST::ImportWarningSetArchive* temp = import_warning_set_;
+  import_warning_set_ = NULL;
+  return temp;
+}
+inline void TableDataList_ListEntry::set_allocated_import_warning_set(::TST::ImportWarningSetArchive* import_warning_set) {
+  delete import_warning_set_;
+  import_warning_set_ = import_warning_set;
+  if (import_warning_set) {
+    set_has_import_warning_set();
+  } else {
+    clear_has_import_warning_set();
   }
 }
 
@@ -10922,6 +13300,44 @@ inline void DataStore::set_allocated_commentstoragetable(::TSP::Reference* comme
   }
 }
 
+// optional .TSP.Reference importWarningSetTable = 20;
+inline bool DataStore::has_importwarningsettable() const {
+  return (_has_bits_[0] & 0x00080000u) != 0;
+}
+inline void DataStore::set_has_importwarningsettable() {
+  _has_bits_[0] |= 0x00080000u;
+}
+inline void DataStore::clear_has_importwarningsettable() {
+  _has_bits_[0] &= ~0x00080000u;
+}
+inline void DataStore::clear_importwarningsettable() {
+  if (importwarningsettable_ != NULL) importwarningsettable_->::TSP::Reference::Clear();
+  clear_has_importwarningsettable();
+}
+inline const ::TSP::Reference& DataStore::importwarningsettable() const {
+  return importwarningsettable_ != NULL ? *importwarningsettable_ : *default_instance_->importwarningsettable_;
+}
+inline ::TSP::Reference* DataStore::mutable_importwarningsettable() {
+  set_has_importwarningsettable();
+  if (importwarningsettable_ == NULL) importwarningsettable_ = new ::TSP::Reference;
+  return importwarningsettable_;
+}
+inline ::TSP::Reference* DataStore::release_importwarningsettable() {
+  clear_has_importwarningsettable();
+  ::TSP::Reference* temp = importwarningsettable_;
+  importwarningsettable_ = NULL;
+  return temp;
+}
+inline void DataStore::set_allocated_importwarningsettable(::TSP::Reference* importwarningsettable) {
+  delete importwarningsettable_;
+  importwarningsettable_ = importwarningsettable;
+  if (importwarningsettable) {
+    set_has_importwarningsettable();
+  } else {
+    clear_has_importwarningsettable();
+  }
+}
+
 // -------------------------------------------------------------------
 
 // TableInfoArchive
@@ -11816,6 +14232,149 @@ inline ::google::protobuf::uint32 TableStyleNetworkArchive::preset_index() const
 inline void TableStyleNetworkArchive::set_preset_index(::google::protobuf::uint32 value) {
   set_has_preset_index();
   preset_index_ = value;
+}
+
+// -------------------------------------------------------------------
+
+// TableSortOrderArchive_SortRuleArchive
+
+// required uint32 column = 1;
+inline bool TableSortOrderArchive_SortRuleArchive::has_column() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void TableSortOrderArchive_SortRuleArchive::set_has_column() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void TableSortOrderArchive_SortRuleArchive::clear_has_column() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void TableSortOrderArchive_SortRuleArchive::clear_column() {
+  column_ = 0u;
+  clear_has_column();
+}
+inline ::google::protobuf::uint32 TableSortOrderArchive_SortRuleArchive::column() const {
+  return column_;
+}
+inline void TableSortOrderArchive_SortRuleArchive::set_column(::google::protobuf::uint32 value) {
+  set_has_column();
+  column_ = value;
+}
+
+// required .TST.TableSortOrderArchive.SortRuleArchive.Direction direction = 2;
+inline bool TableSortOrderArchive_SortRuleArchive::has_direction() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void TableSortOrderArchive_SortRuleArchive::set_has_direction() {
+  _has_bits_[0] |= 0x00000002u;
+}
+inline void TableSortOrderArchive_SortRuleArchive::clear_has_direction() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline void TableSortOrderArchive_SortRuleArchive::clear_direction() {
+  direction_ = 0;
+  clear_has_direction();
+}
+inline ::TST::TableSortOrderArchive_SortRuleArchive_Direction TableSortOrderArchive_SortRuleArchive::direction() const {
+  return static_cast< ::TST::TableSortOrderArchive_SortRuleArchive_Direction >(direction_);
+}
+inline void TableSortOrderArchive_SortRuleArchive::set_direction(::TST::TableSortOrderArchive_SortRuleArchive_Direction value) {
+  assert(::TST::TableSortOrderArchive_SortRuleArchive_Direction_IsValid(value));
+  set_has_direction();
+  direction_ = value;
+}
+
+// -------------------------------------------------------------------
+
+// TableSortOrderArchive
+
+// required .TST.TableSortOrderArchive.SortType type = 1;
+inline bool TableSortOrderArchive::has_type() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void TableSortOrderArchive::set_has_type() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void TableSortOrderArchive::clear_has_type() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void TableSortOrderArchive::clear_type() {
+  type_ = 0;
+  clear_has_type();
+}
+inline ::TST::TableSortOrderArchive_SortType TableSortOrderArchive::type() const {
+  return static_cast< ::TST::TableSortOrderArchive_SortType >(type_);
+}
+inline void TableSortOrderArchive::set_type(::TST::TableSortOrderArchive_SortType value) {
+  assert(::TST::TableSortOrderArchive_SortType_IsValid(value));
+  set_has_type();
+  type_ = value;
+}
+
+// repeated .TST.TableSortOrderArchive.SortRuleArchive rules = 2;
+inline int TableSortOrderArchive::rules_size() const {
+  return rules_.size();
+}
+inline void TableSortOrderArchive::clear_rules() {
+  rules_.Clear();
+}
+inline const ::TST::TableSortOrderArchive_SortRuleArchive& TableSortOrderArchive::rules(int index) const {
+  return rules_.Get(index);
+}
+inline ::TST::TableSortOrderArchive_SortRuleArchive* TableSortOrderArchive::mutable_rules(int index) {
+  return rules_.Mutable(index);
+}
+inline ::TST::TableSortOrderArchive_SortRuleArchive* TableSortOrderArchive::add_rules() {
+  return rules_.Add();
+}
+inline const ::google::protobuf::RepeatedPtrField< ::TST::TableSortOrderArchive_SortRuleArchive >&
+TableSortOrderArchive::rules() const {
+  return rules_;
+}
+inline ::google::protobuf::RepeatedPtrField< ::TST::TableSortOrderArchive_SortRuleArchive >*
+TableSortOrderArchive::mutable_rules() {
+  return &rules_;
+}
+
+// -------------------------------------------------------------------
+
+// SortRuleReferenceTrackerArchive
+
+// required .TSP.Reference reference_tracker = 1;
+inline bool SortRuleReferenceTrackerArchive::has_reference_tracker() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void SortRuleReferenceTrackerArchive::set_has_reference_tracker() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void SortRuleReferenceTrackerArchive::clear_has_reference_tracker() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void SortRuleReferenceTrackerArchive::clear_reference_tracker() {
+  if (reference_tracker_ != NULL) reference_tracker_->::TSP::Reference::Clear();
+  clear_has_reference_tracker();
+}
+inline const ::TSP::Reference& SortRuleReferenceTrackerArchive::reference_tracker() const {
+  return reference_tracker_ != NULL ? *reference_tracker_ : *default_instance_->reference_tracker_;
+}
+inline ::TSP::Reference* SortRuleReferenceTrackerArchive::mutable_reference_tracker() {
+  set_has_reference_tracker();
+  if (reference_tracker_ == NULL) reference_tracker_ = new ::TSP::Reference;
+  return reference_tracker_;
+}
+inline ::TSP::Reference* SortRuleReferenceTrackerArchive::release_reference_tracker() {
+  clear_has_reference_tracker();
+  ::TSP::Reference* temp = reference_tracker_;
+  reference_tracker_ = NULL;
+  return temp;
+}
+inline void SortRuleReferenceTrackerArchive::set_allocated_reference_tracker(::TSP::Reference* reference_tracker) {
+  delete reference_tracker_;
+  reference_tracker_ = reference_tracker;
+  if (reference_tracker) {
+    set_has_reference_tracker();
+  } else {
+    clear_has_reference_tracker();
+  }
 }
 
 // -------------------------------------------------------------------
@@ -13140,15 +15699,53 @@ inline void TableModelArchive::set_allocated_filter_set(::TSP::Reference* filter
   }
 }
 
-// optional .TSCE.CFUUIDArchive conditional_style_formula_owner_id = 39;
-inline bool TableModelArchive::has_conditional_style_formula_owner_id() const {
+// optional .TST.TableSortOrderArchive sort_order = 44;
+inline bool TableModelArchive::has_sort_order() const {
   return (_has_bits_[1] & 0x00000200u) != 0;
 }
-inline void TableModelArchive::set_has_conditional_style_formula_owner_id() {
+inline void TableModelArchive::set_has_sort_order() {
   _has_bits_[1] |= 0x00000200u;
 }
-inline void TableModelArchive::clear_has_conditional_style_formula_owner_id() {
+inline void TableModelArchive::clear_has_sort_order() {
   _has_bits_[1] &= ~0x00000200u;
+}
+inline void TableModelArchive::clear_sort_order() {
+  if (sort_order_ != NULL) sort_order_->::TST::TableSortOrderArchive::Clear();
+  clear_has_sort_order();
+}
+inline const ::TST::TableSortOrderArchive& TableModelArchive::sort_order() const {
+  return sort_order_ != NULL ? *sort_order_ : *default_instance_->sort_order_;
+}
+inline ::TST::TableSortOrderArchive* TableModelArchive::mutable_sort_order() {
+  set_has_sort_order();
+  if (sort_order_ == NULL) sort_order_ = new ::TST::TableSortOrderArchive;
+  return sort_order_;
+}
+inline ::TST::TableSortOrderArchive* TableModelArchive::release_sort_order() {
+  clear_has_sort_order();
+  ::TST::TableSortOrderArchive* temp = sort_order_;
+  sort_order_ = NULL;
+  return temp;
+}
+inline void TableModelArchive::set_allocated_sort_order(::TST::TableSortOrderArchive* sort_order) {
+  delete sort_order_;
+  sort_order_ = sort_order;
+  if (sort_order) {
+    set_has_sort_order();
+  } else {
+    clear_has_sort_order();
+  }
+}
+
+// optional .TSCE.CFUUIDArchive conditional_style_formula_owner_id = 39;
+inline bool TableModelArchive::has_conditional_style_formula_owner_id() const {
+  return (_has_bits_[1] & 0x00000400u) != 0;
+}
+inline void TableModelArchive::set_has_conditional_style_formula_owner_id() {
+  _has_bits_[1] |= 0x00000400u;
+}
+inline void TableModelArchive::clear_has_conditional_style_formula_owner_id() {
+  _has_bits_[1] &= ~0x00000400u;
 }
 inline void TableModelArchive::clear_conditional_style_formula_owner_id() {
   if (conditional_style_formula_owner_id_ != NULL) conditional_style_formula_owner_id_->::TSCE::CFUUIDArchive::Clear();
@@ -13175,6 +15772,44 @@ inline void TableModelArchive::set_allocated_conditional_style_formula_owner_id(
     set_has_conditional_style_formula_owner_id();
   } else {
     clear_has_conditional_style_formula_owner_id();
+  }
+}
+
+// optional .TST.SortRuleReferenceTrackerArchive sort_rule_reference_tracker = 45;
+inline bool TableModelArchive::has_sort_rule_reference_tracker() const {
+  return (_has_bits_[1] & 0x00000800u) != 0;
+}
+inline void TableModelArchive::set_has_sort_rule_reference_tracker() {
+  _has_bits_[1] |= 0x00000800u;
+}
+inline void TableModelArchive::clear_has_sort_rule_reference_tracker() {
+  _has_bits_[1] &= ~0x00000800u;
+}
+inline void TableModelArchive::clear_sort_rule_reference_tracker() {
+  if (sort_rule_reference_tracker_ != NULL) sort_rule_reference_tracker_->::TST::SortRuleReferenceTrackerArchive::Clear();
+  clear_has_sort_rule_reference_tracker();
+}
+inline const ::TST::SortRuleReferenceTrackerArchive& TableModelArchive::sort_rule_reference_tracker() const {
+  return sort_rule_reference_tracker_ != NULL ? *sort_rule_reference_tracker_ : *default_instance_->sort_rule_reference_tracker_;
+}
+inline ::TST::SortRuleReferenceTrackerArchive* TableModelArchive::mutable_sort_rule_reference_tracker() {
+  set_has_sort_rule_reference_tracker();
+  if (sort_rule_reference_tracker_ == NULL) sort_rule_reference_tracker_ = new ::TST::SortRuleReferenceTrackerArchive;
+  return sort_rule_reference_tracker_;
+}
+inline ::TST::SortRuleReferenceTrackerArchive* TableModelArchive::release_sort_rule_reference_tracker() {
+  clear_has_sort_rule_reference_tracker();
+  ::TST::SortRuleReferenceTrackerArchive* temp = sort_rule_reference_tracker_;
+  sort_rule_reference_tracker_ = NULL;
+  return temp;
+}
+inline void TableModelArchive::set_allocated_sort_rule_reference_tracker(::TST::SortRuleReferenceTrackerArchive* sort_rule_reference_tracker) {
+  delete sort_rule_reference_tracker_;
+  sort_rule_reference_tracker_ = sort_rule_reference_tracker;
+  if (sort_rule_reference_tracker) {
+    set_has_sort_rule_reference_tracker();
+  } else {
+    clear_has_sort_rule_reference_tracker();
   }
 }
 
@@ -14013,6 +16648,44 @@ inline void Cell::set_conditional_style_applied_rule(::google::protobuf::uint32 
   conditional_style_applied_rule_ = value;
 }
 
+// optional .TST.ImportWarningSetArchive import_warning_set = 25;
+inline bool Cell::has_import_warning_set() const {
+  return (_has_bits_[0] & 0x00800000u) != 0;
+}
+inline void Cell::set_has_import_warning_set() {
+  _has_bits_[0] |= 0x00800000u;
+}
+inline void Cell::clear_has_import_warning_set() {
+  _has_bits_[0] &= ~0x00800000u;
+}
+inline void Cell::clear_import_warning_set() {
+  if (import_warning_set_ != NULL) import_warning_set_->::TST::ImportWarningSetArchive::Clear();
+  clear_has_import_warning_set();
+}
+inline const ::TST::ImportWarningSetArchive& Cell::import_warning_set() const {
+  return import_warning_set_ != NULL ? *import_warning_set_ : *default_instance_->import_warning_set_;
+}
+inline ::TST::ImportWarningSetArchive* Cell::mutable_import_warning_set() {
+  set_has_import_warning_set();
+  if (import_warning_set_ == NULL) import_warning_set_ = new ::TST::ImportWarningSetArchive;
+  return import_warning_set_;
+}
+inline ::TST::ImportWarningSetArchive* Cell::release_import_warning_set() {
+  clear_has_import_warning_set();
+  ::TST::ImportWarningSetArchive* temp = import_warning_set_;
+  import_warning_set_ = NULL;
+  return temp;
+}
+inline void Cell::set_allocated_import_warning_set(::TST::ImportWarningSetArchive* import_warning_set) {
+  delete import_warning_set_;
+  import_warning_set_ = import_warning_set;
+  if (import_warning_set) {
+    set_has_import_warning_set();
+  } else {
+    clear_has_import_warning_set();
+  }
+}
+
 // -------------------------------------------------------------------
 
 // MergeRegionMapArchive
@@ -14259,6 +16932,569 @@ inline bool CellMapArchive::applies_to_hidden() const {
 inline void CellMapArchive::set_applies_to_hidden(bool value) {
   set_has_applies_to_hidden();
   applies_to_hidden_ = value;
+}
+
+// -------------------------------------------------------------------
+
+// CellMapTileArchive_CellMapEntry
+
+// required .TST.CellID cellID = 1;
+inline bool CellMapTileArchive_CellMapEntry::has_cellid() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void CellMapTileArchive_CellMapEntry::set_has_cellid() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void CellMapTileArchive_CellMapEntry::clear_has_cellid() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void CellMapTileArchive_CellMapEntry::clear_cellid() {
+  if (cellid_ != NULL) cellid_->::TST::CellID::Clear();
+  clear_has_cellid();
+}
+inline const ::TST::CellID& CellMapTileArchive_CellMapEntry::cellid() const {
+  return cellid_ != NULL ? *cellid_ : *default_instance_->cellid_;
+}
+inline ::TST::CellID* CellMapTileArchive_CellMapEntry::mutable_cellid() {
+  set_has_cellid();
+  if (cellid_ == NULL) cellid_ = new ::TST::CellID;
+  return cellid_;
+}
+inline ::TST::CellID* CellMapTileArchive_CellMapEntry::release_cellid() {
+  clear_has_cellid();
+  ::TST::CellID* temp = cellid_;
+  cellid_ = NULL;
+  return temp;
+}
+inline void CellMapTileArchive_CellMapEntry::set_allocated_cellid(::TST::CellID* cellid) {
+  delete cellid_;
+  cellid_ = cellid;
+  if (cellid) {
+    set_has_cellid();
+  } else {
+    clear_has_cellid();
+  }
+}
+
+// optional .TST.Cell cell = 2;
+inline bool CellMapTileArchive_CellMapEntry::has_cell() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void CellMapTileArchive_CellMapEntry::set_has_cell() {
+  _has_bits_[0] |= 0x00000002u;
+}
+inline void CellMapTileArchive_CellMapEntry::clear_has_cell() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline void CellMapTileArchive_CellMapEntry::clear_cell() {
+  if (cell_ != NULL) cell_->::TST::Cell::Clear();
+  clear_has_cell();
+}
+inline const ::TST::Cell& CellMapTileArchive_CellMapEntry::cell() const {
+  return cell_ != NULL ? *cell_ : *default_instance_->cell_;
+}
+inline ::TST::Cell* CellMapTileArchive_CellMapEntry::mutable_cell() {
+  set_has_cell();
+  if (cell_ == NULL) cell_ = new ::TST::Cell;
+  return cell_;
+}
+inline ::TST::Cell* CellMapTileArchive_CellMapEntry::release_cell() {
+  clear_has_cell();
+  ::TST::Cell* temp = cell_;
+  cell_ = NULL;
+  return temp;
+}
+inline void CellMapTileArchive_CellMapEntry::set_allocated_cell(::TST::Cell* cell) {
+  delete cell_;
+  cell_ = cell;
+  if (cell) {
+    set_has_cell();
+  } else {
+    clear_has_cell();
+  }
+}
+
+// -------------------------------------------------------------------
+
+// CellMapTileArchive
+
+// repeated .TST.CellMapTileArchive.CellMapEntry cellmap_entry = 2;
+inline int CellMapTileArchive::cellmap_entry_size() const {
+  return cellmap_entry_.size();
+}
+inline void CellMapTileArchive::clear_cellmap_entry() {
+  cellmap_entry_.Clear();
+}
+inline const ::TST::CellMapTileArchive_CellMapEntry& CellMapTileArchive::cellmap_entry(int index) const {
+  return cellmap_entry_.Get(index);
+}
+inline ::TST::CellMapTileArchive_CellMapEntry* CellMapTileArchive::mutable_cellmap_entry(int index) {
+  return cellmap_entry_.Mutable(index);
+}
+inline ::TST::CellMapTileArchive_CellMapEntry* CellMapTileArchive::add_cellmap_entry() {
+  return cellmap_entry_.Add();
+}
+inline const ::google::protobuf::RepeatedPtrField< ::TST::CellMapTileArchive_CellMapEntry >&
+CellMapTileArchive::cellmap_entry() const {
+  return cellmap_entry_;
+}
+inline ::google::protobuf::RepeatedPtrField< ::TST::CellMapTileArchive_CellMapEntry >*
+CellMapTileArchive::mutable_cellmap_entry() {
+  return &cellmap_entry_;
+}
+
+// -------------------------------------------------------------------
+
+// TiledCellMapArchive
+
+// repeated .TSP.Reference cellmap_tile = 1;
+inline int TiledCellMapArchive::cellmap_tile_size() const {
+  return cellmap_tile_.size();
+}
+inline void TiledCellMapArchive::clear_cellmap_tile() {
+  cellmap_tile_.Clear();
+}
+inline const ::TSP::Reference& TiledCellMapArchive::cellmap_tile(int index) const {
+  return cellmap_tile_.Get(index);
+}
+inline ::TSP::Reference* TiledCellMapArchive::mutable_cellmap_tile(int index) {
+  return cellmap_tile_.Mutable(index);
+}
+inline ::TSP::Reference* TiledCellMapArchive::add_cellmap_tile() {
+  return cellmap_tile_.Add();
+}
+inline const ::google::protobuf::RepeatedPtrField< ::TSP::Reference >&
+TiledCellMapArchive::cellmap_tile() const {
+  return cellmap_tile_;
+}
+inline ::google::protobuf::RepeatedPtrField< ::TSP::Reference >*
+TiledCellMapArchive::mutable_cellmap_tile() {
+  return &cellmap_tile_;
+}
+
+// optional bool may_modify_formulas_in_cells = 2 [default = true];
+inline bool TiledCellMapArchive::has_may_modify_formulas_in_cells() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void TiledCellMapArchive::set_has_may_modify_formulas_in_cells() {
+  _has_bits_[0] |= 0x00000002u;
+}
+inline void TiledCellMapArchive::clear_has_may_modify_formulas_in_cells() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline void TiledCellMapArchive::clear_may_modify_formulas_in_cells() {
+  may_modify_formulas_in_cells_ = true;
+  clear_has_may_modify_formulas_in_cells();
+}
+inline bool TiledCellMapArchive::may_modify_formulas_in_cells() const {
+  return may_modify_formulas_in_cells_;
+}
+inline void TiledCellMapArchive::set_may_modify_formulas_in_cells(bool value) {
+  set_has_may_modify_formulas_in_cells();
+  may_modify_formulas_in_cells_ = value;
+}
+
+// optional bool may_modify_values_referenced_by_formulas = 3 [default = true];
+inline bool TiledCellMapArchive::has_may_modify_values_referenced_by_formulas() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void TiledCellMapArchive::set_has_may_modify_values_referenced_by_formulas() {
+  _has_bits_[0] |= 0x00000004u;
+}
+inline void TiledCellMapArchive::clear_has_may_modify_values_referenced_by_formulas() {
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline void TiledCellMapArchive::clear_may_modify_values_referenced_by_formulas() {
+  may_modify_values_referenced_by_formulas_ = true;
+  clear_has_may_modify_values_referenced_by_formulas();
+}
+inline bool TiledCellMapArchive::may_modify_values_referenced_by_formulas() const {
+  return may_modify_values_referenced_by_formulas_;
+}
+inline void TiledCellMapArchive::set_may_modify_values_referenced_by_formulas(bool value) {
+  set_has_may_modify_values_referenced_by_formulas();
+  may_modify_values_referenced_by_formulas_ = value;
+}
+
+// optional bool applies_to_hidden = 4 [default = false];
+inline bool TiledCellMapArchive::has_applies_to_hidden() const {
+  return (_has_bits_[0] & 0x00000008u) != 0;
+}
+inline void TiledCellMapArchive::set_has_applies_to_hidden() {
+  _has_bits_[0] |= 0x00000008u;
+}
+inline void TiledCellMapArchive::clear_has_applies_to_hidden() {
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline void TiledCellMapArchive::clear_applies_to_hidden() {
+  applies_to_hidden_ = false;
+  clear_has_applies_to_hidden();
+}
+inline bool TiledCellMapArchive::applies_to_hidden() const {
+  return applies_to_hidden_;
+}
+inline void TiledCellMapArchive::set_applies_to_hidden(bool value) {
+  set_has_applies_to_hidden();
+  applies_to_hidden_ = value;
+}
+
+// -------------------------------------------------------------------
+
+// PropertyMapEntryArchive
+
+// required uint32 property = 1;
+inline bool PropertyMapEntryArchive::has_property() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void PropertyMapEntryArchive::set_has_property() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void PropertyMapEntryArchive::clear_has_property() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void PropertyMapEntryArchive::clear_property() {
+  property_ = 0u;
+  clear_has_property();
+}
+inline ::google::protobuf::uint32 PropertyMapEntryArchive::property() const {
+  return property_;
+}
+inline void PropertyMapEntryArchive::set_property(::google::protobuf::uint32 value) {
+  set_has_property();
+  property_ = value;
+}
+
+// required .TSS.ValueType valueType = 2;
+inline bool PropertyMapEntryArchive::has_valuetype() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void PropertyMapEntryArchive::set_has_valuetype() {
+  _has_bits_[0] |= 0x00000002u;
+}
+inline void PropertyMapEntryArchive::clear_has_valuetype() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline void PropertyMapEntryArchive::clear_valuetype() {
+  valuetype_ = 0;
+  clear_has_valuetype();
+}
+inline ::TSS::ValueType PropertyMapEntryArchive::valuetype() const {
+  return static_cast< ::TSS::ValueType >(valuetype_);
+}
+inline void PropertyMapEntryArchive::set_valuetype(::TSS::ValueType value) {
+  assert(::TSS::ValueType_IsValid(value));
+  set_has_valuetype();
+  valuetype_ = value;
+}
+
+// optional int32 int_value = 3;
+inline bool PropertyMapEntryArchive::has_int_value() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void PropertyMapEntryArchive::set_has_int_value() {
+  _has_bits_[0] |= 0x00000004u;
+}
+inline void PropertyMapEntryArchive::clear_has_int_value() {
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline void PropertyMapEntryArchive::clear_int_value() {
+  int_value_ = 0;
+  clear_has_int_value();
+}
+inline ::google::protobuf::int32 PropertyMapEntryArchive::int_value() const {
+  return int_value_;
+}
+inline void PropertyMapEntryArchive::set_int_value(::google::protobuf::int32 value) {
+  set_has_int_value();
+  int_value_ = value;
+}
+
+// optional float float_value = 4;
+inline bool PropertyMapEntryArchive::has_float_value() const {
+  return (_has_bits_[0] & 0x00000008u) != 0;
+}
+inline void PropertyMapEntryArchive::set_has_float_value() {
+  _has_bits_[0] |= 0x00000008u;
+}
+inline void PropertyMapEntryArchive::clear_has_float_value() {
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline void PropertyMapEntryArchive::clear_float_value() {
+  float_value_ = 0;
+  clear_has_float_value();
+}
+inline float PropertyMapEntryArchive::float_value() const {
+  return float_value_;
+}
+inline void PropertyMapEntryArchive::set_float_value(float value) {
+  set_has_float_value();
+  float_value_ = value;
+}
+
+// optional double double_value = 5;
+inline bool PropertyMapEntryArchive::has_double_value() const {
+  return (_has_bits_[0] & 0x00000010u) != 0;
+}
+inline void PropertyMapEntryArchive::set_has_double_value() {
+  _has_bits_[0] |= 0x00000010u;
+}
+inline void PropertyMapEntryArchive::clear_has_double_value() {
+  _has_bits_[0] &= ~0x00000010u;
+}
+inline void PropertyMapEntryArchive::clear_double_value() {
+  double_value_ = 0;
+  clear_has_double_value();
+}
+inline double PropertyMapEntryArchive::double_value() const {
+  return double_value_;
+}
+inline void PropertyMapEntryArchive::set_double_value(double value) {
+  set_has_double_value();
+  double_value_ = value;
+}
+
+// optional bool is_nsnull = 6 [default = false];
+inline bool PropertyMapEntryArchive::has_is_nsnull() const {
+  return (_has_bits_[0] & 0x00000020u) != 0;
+}
+inline void PropertyMapEntryArchive::set_has_is_nsnull() {
+  _has_bits_[0] |= 0x00000020u;
+}
+inline void PropertyMapEntryArchive::clear_has_is_nsnull() {
+  _has_bits_[0] &= ~0x00000020u;
+}
+inline void PropertyMapEntryArchive::clear_is_nsnull() {
+  is_nsnull_ = false;
+  clear_has_is_nsnull();
+}
+inline bool PropertyMapEntryArchive::is_nsnull() const {
+  return is_nsnull_;
+}
+inline void PropertyMapEntryArchive::set_is_nsnull(bool value) {
+  set_has_is_nsnull();
+  is_nsnull_ = value;
+}
+
+// optional .TSP.Reference tsp_reference = 7;
+inline bool PropertyMapEntryArchive::has_tsp_reference() const {
+  return (_has_bits_[0] & 0x00000040u) != 0;
+}
+inline void PropertyMapEntryArchive::set_has_tsp_reference() {
+  _has_bits_[0] |= 0x00000040u;
+}
+inline void PropertyMapEntryArchive::clear_has_tsp_reference() {
+  _has_bits_[0] &= ~0x00000040u;
+}
+inline void PropertyMapEntryArchive::clear_tsp_reference() {
+  if (tsp_reference_ != NULL) tsp_reference_->::TSP::Reference::Clear();
+  clear_has_tsp_reference();
+}
+inline const ::TSP::Reference& PropertyMapEntryArchive::tsp_reference() const {
+  return tsp_reference_ != NULL ? *tsp_reference_ : *default_instance_->tsp_reference_;
+}
+inline ::TSP::Reference* PropertyMapEntryArchive::mutable_tsp_reference() {
+  set_has_tsp_reference();
+  if (tsp_reference_ == NULL) tsp_reference_ = new ::TSP::Reference;
+  return tsp_reference_;
+}
+inline ::TSP::Reference* PropertyMapEntryArchive::release_tsp_reference() {
+  clear_has_tsp_reference();
+  ::TSP::Reference* temp = tsp_reference_;
+  tsp_reference_ = NULL;
+  return temp;
+}
+inline void PropertyMapEntryArchive::set_allocated_tsp_reference(::TSP::Reference* tsp_reference) {
+  delete tsp_reference_;
+  tsp_reference_ = tsp_reference;
+  if (tsp_reference) {
+    set_has_tsp_reference();
+  } else {
+    clear_has_tsp_reference();
+  }
+}
+
+// optional .TSD.FillArchive fill = 8;
+inline bool PropertyMapEntryArchive::has_fill() const {
+  return (_has_bits_[0] & 0x00000080u) != 0;
+}
+inline void PropertyMapEntryArchive::set_has_fill() {
+  _has_bits_[0] |= 0x00000080u;
+}
+inline void PropertyMapEntryArchive::clear_has_fill() {
+  _has_bits_[0] &= ~0x00000080u;
+}
+inline void PropertyMapEntryArchive::clear_fill() {
+  if (fill_ != NULL) fill_->::TSD::FillArchive::Clear();
+  clear_has_fill();
+}
+inline const ::TSD::FillArchive& PropertyMapEntryArchive::fill() const {
+  return fill_ != NULL ? *fill_ : *default_instance_->fill_;
+}
+inline ::TSD::FillArchive* PropertyMapEntryArchive::mutable_fill() {
+  set_has_fill();
+  if (fill_ == NULL) fill_ = new ::TSD::FillArchive;
+  return fill_;
+}
+inline ::TSD::FillArchive* PropertyMapEntryArchive::release_fill() {
+  clear_has_fill();
+  ::TSD::FillArchive* temp = fill_;
+  fill_ = NULL;
+  return temp;
+}
+inline void PropertyMapEntryArchive::set_allocated_fill(::TSD::FillArchive* fill) {
+  delete fill_;
+  fill_ = fill;
+  if (fill) {
+    set_has_fill();
+  } else {
+    clear_has_fill();
+  }
+}
+
+// optional .TST.ImportWarningSetArchive import_warning_set = 9;
+inline bool PropertyMapEntryArchive::has_import_warning_set() const {
+  return (_has_bits_[0] & 0x00000100u) != 0;
+}
+inline void PropertyMapEntryArchive::set_has_import_warning_set() {
+  _has_bits_[0] |= 0x00000100u;
+}
+inline void PropertyMapEntryArchive::clear_has_import_warning_set() {
+  _has_bits_[0] &= ~0x00000100u;
+}
+inline void PropertyMapEntryArchive::clear_import_warning_set() {
+  if (import_warning_set_ != NULL) import_warning_set_->::TST::ImportWarningSetArchive::Clear();
+  clear_has_import_warning_set();
+}
+inline const ::TST::ImportWarningSetArchive& PropertyMapEntryArchive::import_warning_set() const {
+  return import_warning_set_ != NULL ? *import_warning_set_ : *default_instance_->import_warning_set_;
+}
+inline ::TST::ImportWarningSetArchive* PropertyMapEntryArchive::mutable_import_warning_set() {
+  set_has_import_warning_set();
+  if (import_warning_set_ == NULL) import_warning_set_ = new ::TST::ImportWarningSetArchive;
+  return import_warning_set_;
+}
+inline ::TST::ImportWarningSetArchive* PropertyMapEntryArchive::release_import_warning_set() {
+  clear_has_import_warning_set();
+  ::TST::ImportWarningSetArchive* temp = import_warning_set_;
+  import_warning_set_ = NULL;
+  return temp;
+}
+inline void PropertyMapEntryArchive::set_allocated_import_warning_set(::TST::ImportWarningSetArchive* import_warning_set) {
+  delete import_warning_set_;
+  import_warning_set_ = import_warning_set;
+  if (import_warning_set) {
+    set_has_import_warning_set();
+  } else {
+    clear_has_import_warning_set();
+  }
+}
+
+// -------------------------------------------------------------------
+
+// CellDiffArchive
+
+// repeated .TST.PropertyMapEntryArchive property_map_to_set = 1;
+inline int CellDiffArchive::property_map_to_set_size() const {
+  return property_map_to_set_.size();
+}
+inline void CellDiffArchive::clear_property_map_to_set() {
+  property_map_to_set_.Clear();
+}
+inline const ::TST::PropertyMapEntryArchive& CellDiffArchive::property_map_to_set(int index) const {
+  return property_map_to_set_.Get(index);
+}
+inline ::TST::PropertyMapEntryArchive* CellDiffArchive::mutable_property_map_to_set(int index) {
+  return property_map_to_set_.Mutable(index);
+}
+inline ::TST::PropertyMapEntryArchive* CellDiffArchive::add_property_map_to_set() {
+  return property_map_to_set_.Add();
+}
+inline const ::google::protobuf::RepeatedPtrField< ::TST::PropertyMapEntryArchive >&
+CellDiffArchive::property_map_to_set() const {
+  return property_map_to_set_;
+}
+inline ::google::protobuf::RepeatedPtrField< ::TST::PropertyMapEntryArchive >*
+CellDiffArchive::mutable_property_map_to_set() {
+  return &property_map_to_set_;
+}
+
+// repeated .TST.PropertyMapEntryArchive property_map_to_reset = 2;
+inline int CellDiffArchive::property_map_to_reset_size() const {
+  return property_map_to_reset_.size();
+}
+inline void CellDiffArchive::clear_property_map_to_reset() {
+  property_map_to_reset_.Clear();
+}
+inline const ::TST::PropertyMapEntryArchive& CellDiffArchive::property_map_to_reset(int index) const {
+  return property_map_to_reset_.Get(index);
+}
+inline ::TST::PropertyMapEntryArchive* CellDiffArchive::mutable_property_map_to_reset(int index) {
+  return property_map_to_reset_.Mutable(index);
+}
+inline ::TST::PropertyMapEntryArchive* CellDiffArchive::add_property_map_to_reset() {
+  return property_map_to_reset_.Add();
+}
+inline const ::google::protobuf::RepeatedPtrField< ::TST::PropertyMapEntryArchive >&
+CellDiffArchive::property_map_to_reset() const {
+  return property_map_to_reset_;
+}
+inline ::google::protobuf::RepeatedPtrField< ::TST::PropertyMapEntryArchive >*
+CellDiffArchive::mutable_property_map_to_reset() {
+  return &property_map_to_reset_;
+}
+
+// -------------------------------------------------------------------
+
+// CellDiffMapArchive
+
+// repeated .TST.CellID cell_ids = 1;
+inline int CellDiffMapArchive::cell_ids_size() const {
+  return cell_ids_.size();
+}
+inline void CellDiffMapArchive::clear_cell_ids() {
+  cell_ids_.Clear();
+}
+inline const ::TST::CellID& CellDiffMapArchive::cell_ids(int index) const {
+  return cell_ids_.Get(index);
+}
+inline ::TST::CellID* CellDiffMapArchive::mutable_cell_ids(int index) {
+  return cell_ids_.Mutable(index);
+}
+inline ::TST::CellID* CellDiffMapArchive::add_cell_ids() {
+  return cell_ids_.Add();
+}
+inline const ::google::protobuf::RepeatedPtrField< ::TST::CellID >&
+CellDiffMapArchive::cell_ids() const {
+  return cell_ids_;
+}
+inline ::google::protobuf::RepeatedPtrField< ::TST::CellID >*
+CellDiffMapArchive::mutable_cell_ids() {
+  return &cell_ids_;
+}
+
+// repeated .TSP.Reference cell_diffs = 2;
+inline int CellDiffMapArchive::cell_diffs_size() const {
+  return cell_diffs_.size();
+}
+inline void CellDiffMapArchive::clear_cell_diffs() {
+  cell_diffs_.Clear();
+}
+inline const ::TSP::Reference& CellDiffMapArchive::cell_diffs(int index) const {
+  return cell_diffs_.Get(index);
+}
+inline ::TSP::Reference* CellDiffMapArchive::mutable_cell_diffs(int index) {
+  return cell_diffs_.Mutable(index);
+}
+inline ::TSP::Reference* CellDiffMapArchive::add_cell_diffs() {
+  return cell_diffs_.Add();
+}
+inline const ::google::protobuf::RepeatedPtrField< ::TSP::Reference >&
+CellDiffMapArchive::cell_diffs() const {
+  return cell_diffs_;
+}
+inline ::google::protobuf::RepeatedPtrField< ::TSP::Reference >*
+CellDiffMapArchive::mutable_cell_diffs() {
+  return &cell_diffs_;
 }
 
 // -------------------------------------------------------------------
@@ -17927,6 +21163,466 @@ CellRegion::mutable_cell_ranges() {
   return &cell_ranges_;
 }
 
+// -------------------------------------------------------------------
+
+// CellFillStandIn
+
+// required .TSD.FillArchive fill = 1;
+inline bool CellFillStandIn::has_fill() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void CellFillStandIn::set_has_fill() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void CellFillStandIn::clear_has_fill() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void CellFillStandIn::clear_fill() {
+  if (fill_ != NULL) fill_->::TSD::FillArchive::Clear();
+  clear_has_fill();
+}
+inline const ::TSD::FillArchive& CellFillStandIn::fill() const {
+  return fill_ != NULL ? *fill_ : *default_instance_->fill_;
+}
+inline ::TSD::FillArchive* CellFillStandIn::mutable_fill() {
+  set_has_fill();
+  if (fill_ == NULL) fill_ = new ::TSD::FillArchive;
+  return fill_;
+}
+inline ::TSD::FillArchive* CellFillStandIn::release_fill() {
+  clear_has_fill();
+  ::TSD::FillArchive* temp = fill_;
+  fill_ = NULL;
+  return temp;
+}
+inline void CellFillStandIn::set_allocated_fill(::TSD::FillArchive* fill) {
+  delete fill_;
+  fill_ = fill;
+  if (fill) {
+    set_has_fill();
+  } else {
+    clear_has_fill();
+  }
+}
+
+// optional bool type_is_mixed = 2;
+inline bool CellFillStandIn::has_type_is_mixed() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void CellFillStandIn::set_has_type_is_mixed() {
+  _has_bits_[0] |= 0x00000002u;
+}
+inline void CellFillStandIn::clear_has_type_is_mixed() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline void CellFillStandIn::clear_type_is_mixed() {
+  type_is_mixed_ = false;
+  clear_has_type_is_mixed();
+}
+inline bool CellFillStandIn::type_is_mixed() const {
+  return type_is_mixed_;
+}
+inline void CellFillStandIn::set_type_is_mixed(bool value) {
+  set_has_type_is_mixed();
+  type_is_mixed_ = value;
+}
+
+// optional bool color_has_been_modified = 3;
+inline bool CellFillStandIn::has_color_has_been_modified() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void CellFillStandIn::set_has_color_has_been_modified() {
+  _has_bits_[0] |= 0x00000004u;
+}
+inline void CellFillStandIn::clear_has_color_has_been_modified() {
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline void CellFillStandIn::clear_color_has_been_modified() {
+  color_has_been_modified_ = false;
+  clear_has_color_has_been_modified();
+}
+inline bool CellFillStandIn::color_has_been_modified() const {
+  return color_has_been_modified_;
+}
+inline void CellFillStandIn::set_color_has_been_modified(bool value) {
+  set_has_color_has_been_modified();
+  color_has_been_modified_ = value;
+}
+
+// optional bool color_is_mixed = 4;
+inline bool CellFillStandIn::has_color_is_mixed() const {
+  return (_has_bits_[0] & 0x00000008u) != 0;
+}
+inline void CellFillStandIn::set_has_color_is_mixed() {
+  _has_bits_[0] |= 0x00000008u;
+}
+inline void CellFillStandIn::clear_has_color_is_mixed() {
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline void CellFillStandIn::clear_color_is_mixed() {
+  color_is_mixed_ = false;
+  clear_has_color_is_mixed();
+}
+inline bool CellFillStandIn::color_is_mixed() const {
+  return color_is_mixed_;
+}
+inline void CellFillStandIn::set_color_is_mixed(bool value) {
+  set_has_color_is_mixed();
+  color_is_mixed_ = value;
+}
+
+// optional bool first_color_has_been_modified = 5;
+inline bool CellFillStandIn::has_first_color_has_been_modified() const {
+  return (_has_bits_[0] & 0x00000010u) != 0;
+}
+inline void CellFillStandIn::set_has_first_color_has_been_modified() {
+  _has_bits_[0] |= 0x00000010u;
+}
+inline void CellFillStandIn::clear_has_first_color_has_been_modified() {
+  _has_bits_[0] &= ~0x00000010u;
+}
+inline void CellFillStandIn::clear_first_color_has_been_modified() {
+  first_color_has_been_modified_ = false;
+  clear_has_first_color_has_been_modified();
+}
+inline bool CellFillStandIn::first_color_has_been_modified() const {
+  return first_color_has_been_modified_;
+}
+inline void CellFillStandIn::set_first_color_has_been_modified(bool value) {
+  set_has_first_color_has_been_modified();
+  first_color_has_been_modified_ = value;
+}
+
+// optional bool first_color_is_mixed = 6;
+inline bool CellFillStandIn::has_first_color_is_mixed() const {
+  return (_has_bits_[0] & 0x00000020u) != 0;
+}
+inline void CellFillStandIn::set_has_first_color_is_mixed() {
+  _has_bits_[0] |= 0x00000020u;
+}
+inline void CellFillStandIn::clear_has_first_color_is_mixed() {
+  _has_bits_[0] &= ~0x00000020u;
+}
+inline void CellFillStandIn::clear_first_color_is_mixed() {
+  first_color_is_mixed_ = false;
+  clear_has_first_color_is_mixed();
+}
+inline bool CellFillStandIn::first_color_is_mixed() const {
+  return first_color_is_mixed_;
+}
+inline void CellFillStandIn::set_first_color_is_mixed(bool value) {
+  set_has_first_color_is_mixed();
+  first_color_is_mixed_ = value;
+}
+
+// optional bool last_color_has_been_modified = 7;
+inline bool CellFillStandIn::has_last_color_has_been_modified() const {
+  return (_has_bits_[0] & 0x00000040u) != 0;
+}
+inline void CellFillStandIn::set_has_last_color_has_been_modified() {
+  _has_bits_[0] |= 0x00000040u;
+}
+inline void CellFillStandIn::clear_has_last_color_has_been_modified() {
+  _has_bits_[0] &= ~0x00000040u;
+}
+inline void CellFillStandIn::clear_last_color_has_been_modified() {
+  last_color_has_been_modified_ = false;
+  clear_has_last_color_has_been_modified();
+}
+inline bool CellFillStandIn::last_color_has_been_modified() const {
+  return last_color_has_been_modified_;
+}
+inline void CellFillStandIn::set_last_color_has_been_modified(bool value) {
+  set_has_last_color_has_been_modified();
+  last_color_has_been_modified_ = value;
+}
+
+// optional bool last_color_is_mixed = 8;
+inline bool CellFillStandIn::has_last_color_is_mixed() const {
+  return (_has_bits_[0] & 0x00000080u) != 0;
+}
+inline void CellFillStandIn::set_has_last_color_is_mixed() {
+  _has_bits_[0] |= 0x00000080u;
+}
+inline void CellFillStandIn::clear_has_last_color_is_mixed() {
+  _has_bits_[0] &= ~0x00000080u;
+}
+inline void CellFillStandIn::clear_last_color_is_mixed() {
+  last_color_is_mixed_ = false;
+  clear_has_last_color_is_mixed();
+}
+inline bool CellFillStandIn::last_color_is_mixed() const {
+  return last_color_is_mixed_;
+}
+inline void CellFillStandIn::set_last_color_is_mixed(bool value) {
+  set_has_last_color_is_mixed();
+  last_color_is_mixed_ = value;
+}
+
+// optional bool gradient_type_has_been_modified = 9;
+inline bool CellFillStandIn::has_gradient_type_has_been_modified() const {
+  return (_has_bits_[0] & 0x00000100u) != 0;
+}
+inline void CellFillStandIn::set_has_gradient_type_has_been_modified() {
+  _has_bits_[0] |= 0x00000100u;
+}
+inline void CellFillStandIn::clear_has_gradient_type_has_been_modified() {
+  _has_bits_[0] &= ~0x00000100u;
+}
+inline void CellFillStandIn::clear_gradient_type_has_been_modified() {
+  gradient_type_has_been_modified_ = false;
+  clear_has_gradient_type_has_been_modified();
+}
+inline bool CellFillStandIn::gradient_type_has_been_modified() const {
+  return gradient_type_has_been_modified_;
+}
+inline void CellFillStandIn::set_gradient_type_has_been_modified(bool value) {
+  set_has_gradient_type_has_been_modified();
+  gradient_type_has_been_modified_ = value;
+}
+
+// optional bool gradient_type_is_mixed = 10;
+inline bool CellFillStandIn::has_gradient_type_is_mixed() const {
+  return (_has_bits_[0] & 0x00000200u) != 0;
+}
+inline void CellFillStandIn::set_has_gradient_type_is_mixed() {
+  _has_bits_[0] |= 0x00000200u;
+}
+inline void CellFillStandIn::clear_has_gradient_type_is_mixed() {
+  _has_bits_[0] &= ~0x00000200u;
+}
+inline void CellFillStandIn::clear_gradient_type_is_mixed() {
+  gradient_type_is_mixed_ = false;
+  clear_has_gradient_type_is_mixed();
+}
+inline bool CellFillStandIn::gradient_type_is_mixed() const {
+  return gradient_type_is_mixed_;
+}
+inline void CellFillStandIn::set_gradient_type_is_mixed(bool value) {
+  set_has_gradient_type_is_mixed();
+  gradient_type_is_mixed_ = value;
+}
+
+// optional bool gradient_angle_has_been_modified = 11;
+inline bool CellFillStandIn::has_gradient_angle_has_been_modified() const {
+  return (_has_bits_[0] & 0x00000400u) != 0;
+}
+inline void CellFillStandIn::set_has_gradient_angle_has_been_modified() {
+  _has_bits_[0] |= 0x00000400u;
+}
+inline void CellFillStandIn::clear_has_gradient_angle_has_been_modified() {
+  _has_bits_[0] &= ~0x00000400u;
+}
+inline void CellFillStandIn::clear_gradient_angle_has_been_modified() {
+  gradient_angle_has_been_modified_ = false;
+  clear_has_gradient_angle_has_been_modified();
+}
+inline bool CellFillStandIn::gradient_angle_has_been_modified() const {
+  return gradient_angle_has_been_modified_;
+}
+inline void CellFillStandIn::set_gradient_angle_has_been_modified(bool value) {
+  set_has_gradient_angle_has_been_modified();
+  gradient_angle_has_been_modified_ = value;
+}
+
+// optional bool gradient_angle_is_mixed = 12;
+inline bool CellFillStandIn::has_gradient_angle_is_mixed() const {
+  return (_has_bits_[0] & 0x00000800u) != 0;
+}
+inline void CellFillStandIn::set_has_gradient_angle_is_mixed() {
+  _has_bits_[0] |= 0x00000800u;
+}
+inline void CellFillStandIn::clear_has_gradient_angle_is_mixed() {
+  _has_bits_[0] &= ~0x00000800u;
+}
+inline void CellFillStandIn::clear_gradient_angle_is_mixed() {
+  gradient_angle_is_mixed_ = false;
+  clear_has_gradient_angle_is_mixed();
+}
+inline bool CellFillStandIn::gradient_angle_is_mixed() const {
+  return gradient_angle_is_mixed_;
+}
+inline void CellFillStandIn::set_gradient_angle_is_mixed(bool value) {
+  set_has_gradient_angle_is_mixed();
+  gradient_angle_is_mixed_ = value;
+}
+
+// optional bool image_data_has_been_modified = 13;
+inline bool CellFillStandIn::has_image_data_has_been_modified() const {
+  return (_has_bits_[0] & 0x00001000u) != 0;
+}
+inline void CellFillStandIn::set_has_image_data_has_been_modified() {
+  _has_bits_[0] |= 0x00001000u;
+}
+inline void CellFillStandIn::clear_has_image_data_has_been_modified() {
+  _has_bits_[0] &= ~0x00001000u;
+}
+inline void CellFillStandIn::clear_image_data_has_been_modified() {
+  image_data_has_been_modified_ = false;
+  clear_has_image_data_has_been_modified();
+}
+inline bool CellFillStandIn::image_data_has_been_modified() const {
+  return image_data_has_been_modified_;
+}
+inline void CellFillStandIn::set_image_data_has_been_modified(bool value) {
+  set_has_image_data_has_been_modified();
+  image_data_has_been_modified_ = value;
+}
+
+// optional bool image_data_is_mixed = 14;
+inline bool CellFillStandIn::has_image_data_is_mixed() const {
+  return (_has_bits_[0] & 0x00002000u) != 0;
+}
+inline void CellFillStandIn::set_has_image_data_is_mixed() {
+  _has_bits_[0] |= 0x00002000u;
+}
+inline void CellFillStandIn::clear_has_image_data_is_mixed() {
+  _has_bits_[0] &= ~0x00002000u;
+}
+inline void CellFillStandIn::clear_image_data_is_mixed() {
+  image_data_is_mixed_ = false;
+  clear_has_image_data_is_mixed();
+}
+inline bool CellFillStandIn::image_data_is_mixed() const {
+  return image_data_is_mixed_;
+}
+inline void CellFillStandIn::set_image_data_is_mixed(bool value) {
+  set_has_image_data_is_mixed();
+  image_data_is_mixed_ = value;
+}
+
+// optional bool tint_color_has_been_modified = 15;
+inline bool CellFillStandIn::has_tint_color_has_been_modified() const {
+  return (_has_bits_[0] & 0x00004000u) != 0;
+}
+inline void CellFillStandIn::set_has_tint_color_has_been_modified() {
+  _has_bits_[0] |= 0x00004000u;
+}
+inline void CellFillStandIn::clear_has_tint_color_has_been_modified() {
+  _has_bits_[0] &= ~0x00004000u;
+}
+inline void CellFillStandIn::clear_tint_color_has_been_modified() {
+  tint_color_has_been_modified_ = false;
+  clear_has_tint_color_has_been_modified();
+}
+inline bool CellFillStandIn::tint_color_has_been_modified() const {
+  return tint_color_has_been_modified_;
+}
+inline void CellFillStandIn::set_tint_color_has_been_modified(bool value) {
+  set_has_tint_color_has_been_modified();
+  tint_color_has_been_modified_ = value;
+}
+
+// optional bool tint_color_is_mixed = 16;
+inline bool CellFillStandIn::has_tint_color_is_mixed() const {
+  return (_has_bits_[0] & 0x00008000u) != 0;
+}
+inline void CellFillStandIn::set_has_tint_color_is_mixed() {
+  _has_bits_[0] |= 0x00008000u;
+}
+inline void CellFillStandIn::clear_has_tint_color_is_mixed() {
+  _has_bits_[0] &= ~0x00008000u;
+}
+inline void CellFillStandIn::clear_tint_color_is_mixed() {
+  tint_color_is_mixed_ = false;
+  clear_has_tint_color_is_mixed();
+}
+inline bool CellFillStandIn::tint_color_is_mixed() const {
+  return tint_color_is_mixed_;
+}
+inline void CellFillStandIn::set_tint_color_is_mixed(bool value) {
+  set_has_tint_color_is_mixed();
+  tint_color_is_mixed_ = value;
+}
+
+// optional bool scale_has_been_modified = 17;
+inline bool CellFillStandIn::has_scale_has_been_modified() const {
+  return (_has_bits_[0] & 0x00010000u) != 0;
+}
+inline void CellFillStandIn::set_has_scale_has_been_modified() {
+  _has_bits_[0] |= 0x00010000u;
+}
+inline void CellFillStandIn::clear_has_scale_has_been_modified() {
+  _has_bits_[0] &= ~0x00010000u;
+}
+inline void CellFillStandIn::clear_scale_has_been_modified() {
+  scale_has_been_modified_ = false;
+  clear_has_scale_has_been_modified();
+}
+inline bool CellFillStandIn::scale_has_been_modified() const {
+  return scale_has_been_modified_;
+}
+inline void CellFillStandIn::set_scale_has_been_modified(bool value) {
+  set_has_scale_has_been_modified();
+  scale_has_been_modified_ = value;
+}
+
+// optional bool scale_is_mixed = 18;
+inline bool CellFillStandIn::has_scale_is_mixed() const {
+  return (_has_bits_[0] & 0x00020000u) != 0;
+}
+inline void CellFillStandIn::set_has_scale_is_mixed() {
+  _has_bits_[0] |= 0x00020000u;
+}
+inline void CellFillStandIn::clear_has_scale_is_mixed() {
+  _has_bits_[0] &= ~0x00020000u;
+}
+inline void CellFillStandIn::clear_scale_is_mixed() {
+  scale_is_mixed_ = false;
+  clear_has_scale_is_mixed();
+}
+inline bool CellFillStandIn::scale_is_mixed() const {
+  return scale_is_mixed_;
+}
+inline void CellFillStandIn::set_scale_is_mixed(bool value) {
+  set_has_scale_is_mixed();
+  scale_is_mixed_ = value;
+}
+
+// optional bool technique_has_been_modified = 19;
+inline bool CellFillStandIn::has_technique_has_been_modified() const {
+  return (_has_bits_[0] & 0x00040000u) != 0;
+}
+inline void CellFillStandIn::set_has_technique_has_been_modified() {
+  _has_bits_[0] |= 0x00040000u;
+}
+inline void CellFillStandIn::clear_has_technique_has_been_modified() {
+  _has_bits_[0] &= ~0x00040000u;
+}
+inline void CellFillStandIn::clear_technique_has_been_modified() {
+  technique_has_been_modified_ = false;
+  clear_has_technique_has_been_modified();
+}
+inline bool CellFillStandIn::technique_has_been_modified() const {
+  return technique_has_been_modified_;
+}
+inline void CellFillStandIn::set_technique_has_been_modified(bool value) {
+  set_has_technique_has_been_modified();
+  technique_has_been_modified_ = value;
+}
+
+// optional bool technique_is_mixed = 20;
+inline bool CellFillStandIn::has_technique_is_mixed() const {
+  return (_has_bits_[0] & 0x00080000u) != 0;
+}
+inline void CellFillStandIn::set_has_technique_is_mixed() {
+  _has_bits_[0] |= 0x00080000u;
+}
+inline void CellFillStandIn::clear_has_technique_is_mixed() {
+  _has_bits_[0] &= ~0x00080000u;
+}
+inline void CellFillStandIn::clear_technique_is_mixed() {
+  technique_is_mixed_ = false;
+  clear_has_technique_is_mixed();
+}
+inline bool CellFillStandIn::technique_is_mixed() const {
+  return technique_is_mixed_;
+}
+inline void CellFillStandIn::set_technique_is_mixed(bool value) {
+  set_has_technique_is_mixed();
+  technique_is_mixed_ = value;
+}
+
 
 // @@protoc_insertion_point(namespace_scope)
 
@@ -17941,8 +21637,20 @@ inline const EnumDescriptor* GetEnumDescriptor< ::TST::PopUpMenuModel_CellValueT
   return ::TST::PopUpMenuModel_CellValueType_descriptor();
 }
 template <>
+inline const EnumDescriptor* GetEnumDescriptor< ::TST::ImportWarningSetArchive_FormulaWarningType>() {
+  return ::TST::ImportWarningSetArchive_FormulaWarningType_descriptor();
+}
+template <>
 inline const EnumDescriptor* GetEnumDescriptor< ::TST::TableDataList_ListType>() {
   return ::TST::TableDataList_ListType_descriptor();
+}
+template <>
+inline const EnumDescriptor* GetEnumDescriptor< ::TST::TableSortOrderArchive_SortRuleArchive_Direction>() {
+  return ::TST::TableSortOrderArchive_SortRuleArchive_Direction_descriptor();
+}
+template <>
+inline const EnumDescriptor* GetEnumDescriptor< ::TST::TableSortOrderArchive_SortType>() {
+  return ::TST::TableSortOrderArchive_SortType_descriptor();
 }
 template <>
 inline const EnumDescriptor* GetEnumDescriptor< ::TST::FormulaPredicateArchive_FormulaPredicateType>() {

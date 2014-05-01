@@ -23,6 +23,7 @@
 #include <google/protobuf/message.h>
 #include <google/protobuf/repeated_field.h>
 #include <google/protobuf/extension_set.h>
+#include <google/protobuf/generated_enum_reflection.h>
 #include <google/protobuf/unknown_field_set.h>
 #include "TSPMessages.pb.h"
 #include "TSKArchives.pb.h"
@@ -52,6 +53,27 @@ class ThemeRemoveStylePresetCommandArchive;
 class ThemeMovePresetCommandArchive;
 class ThemeReplaceStylePresetCommandArchive;
 
+enum ValueType {
+  ObjectType = 0,
+  IntType = 1,
+  FloatType = 2,
+  DoubleType = 3
+};
+bool ValueType_IsValid(int value);
+const ValueType ValueType_MIN = ObjectType;
+const ValueType ValueType_MAX = DoubleType;
+const int ValueType_ARRAYSIZE = ValueType_MAX + 1;
+
+const ::google::protobuf::EnumDescriptor* ValueType_descriptor();
+inline const ::std::string& ValueType_Name(ValueType value) {
+  return ::google::protobuf::internal::NameOfEnum(
+    ValueType_descriptor(), value);
+}
+inline bool ValueType_Parse(
+    const ::std::string& name, ValueType* value) {
+  return ::google::protobuf::internal::ParseNamedEnum<ValueType>(
+    ValueType_descriptor(), name, value);
+}
 // ===================================================================
 
 class StyleArchive : public ::google::protobuf::Message {
@@ -4577,6 +4599,10 @@ inline void ThemeReplaceStylePresetCommandArchive::set_allocated_old_preset(::TS
 namespace google {
 namespace protobuf {
 
+template <>
+inline const EnumDescriptor* GetEnumDescriptor< ::TSS::ValueType>() {
+  return ::TSS::ValueType_descriptor();
+}
 
 }  // namespace google
 }  // namespace protobuf

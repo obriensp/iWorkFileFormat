@@ -180,7 +180,7 @@ void protobuf_AssignDesc_KNArchives_2eproto() {
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(AnimationAttributesArchive));
   TransitionAttributesArchive_descriptor_ = file->message_type(1);
-  static const int TransitionAttributesArchive_offsets_[15] = {
+  static const int TransitionAttributesArchive_offsets_[16] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(TransitionAttributesArchive, animationattributes_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(TransitionAttributesArchive, isautomatic_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(TransitionAttributesArchive, custom_twist_),
@@ -190,6 +190,7 @@ void protobuf_AssignDesc_KNArchives_2eproto() {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(TransitionAttributesArchive, custom_magic_move_fade_unmatched_objects_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(TransitionAttributesArchive, custom_timing_curve_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(TransitionAttributesArchive, custom_text_delivery_type_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(TransitionAttributesArchive, custom_motion_blur_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(TransitionAttributesArchive, database_animationtype_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(TransitionAttributesArchive, database_effect_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(TransitionAttributesArchive, database_duration_),
@@ -246,7 +247,7 @@ void protobuf_AssignDesc_KNArchives_2eproto() {
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(BuildChunkArchive));
   BuildAttributesArchive_descriptor_ = file->message_type(4);
-  static const int BuildAttributesArchive_offsets_[28] = {
+  static const int BuildAttributesArchive_offsets_[29] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(BuildAttributesArchive, animationattributes_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(BuildAttributesArchive, eventtrigger_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(BuildAttributesArchive, delayautomaticafter_),
@@ -268,6 +269,7 @@ void protobuf_AssignDesc_KNArchives_2eproto() {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(BuildAttributesArchive, custom_action_repeatcount_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(BuildAttributesArchive, custom_action_scale_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(BuildAttributesArchive, custom_action_jiggleintensity_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(BuildAttributesArchive, custom_motion_blur_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(BuildAttributesArchive, database_animationtype_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(BuildAttributesArchive, database_effect_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(BuildAttributesArchive, database_direction_),
@@ -377,7 +379,7 @@ void protobuf_AssignDesc_KNArchives_2eproto() {
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(ClassicThemeRecordArchive));
   SlideArchive_descriptor_ = file->message_type(10);
-  static const int SlideArchive_offsets_[36] = {
+  static const int SlideArchive_offsets_[38] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SlideArchive, style_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SlideArchive, builds_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SlideArchive, buildchunks_),
@@ -386,7 +388,8 @@ void protobuf_AssignDesc_KNArchives_2eproto() {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SlideArchive, bodyplaceholder_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SlideArchive, objectplaceholder_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SlideArchive, slidenumberplaceholder_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SlideArchive, drawables_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SlideArchive, owned_drawables_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SlideArchive, drawables_z_order_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SlideArchive, sage_tag_to_info_map_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SlideArchive, name_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SlideArchive, titleplaceholdergeometry_),
@@ -406,6 +409,7 @@ void protobuf_AssignDesc_KNArchives_2eproto() {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SlideArchive, bodyliststyles_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SlideArchive, thumbnailtextfortitleplaceholder_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SlideArchive, thumbnailtextforbodyplaceholder_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SlideArchive, slideobjectslayerwithmaster_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SlideArchive, master_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SlideArchive, staticguides_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SlideArchive, userdefinedguidestorage_),
@@ -443,7 +447,7 @@ void protobuf_AssignDesc_KNArchives_2eproto() {
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(SlideArchive_SageTagMapEntry));
   SlideNodeArchive_descriptor_ = file->message_type(11);
-  static const int SlideNodeArchive_offsets_[19] = {
+  static const int SlideNodeArchive_offsets_[20] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SlideNodeArchive, children_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SlideNodeArchive, slide_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SlideNodeArchive, thumbnails_),
@@ -461,6 +465,7 @@ void protobuf_AssignDesc_KNArchives_2eproto() {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SlideNodeArchive, copyfromslideidentifier_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SlideNodeArchive, slidespecifichyperlinkcount_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SlideNodeArchive, eventcount_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SlideNodeArchive, has_explicit_builds_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SlideNodeArchive, database_thumbnail_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SlideNodeArchive, database_thumbnails_),
   };
@@ -498,7 +503,7 @@ void protobuf_AssignDesc_KNArchives_2eproto() {
   DesktopUILayoutArchive_SidebarViewMode_descriptor_ = DesktopUILayoutArchive_descriptor_->enum_type(0);
   DesktopUILayoutArchive_InspectorPaneViewMode_descriptor_ = DesktopUILayoutArchive_descriptor_->enum_type(1);
   UIStateArchive_descriptor_ = file->message_type(13);
-  static const int UIStateArchive_offsets_[24] = {
+  static const int UIStateArchive_offsets_[27] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(UIStateArchive, slidenodetoedit_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(UIStateArchive, deprecated_masterslidenodetoapply_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(UIStateArchive, deprecated_slidethumbnailsize_),
@@ -523,6 +528,9 @@ void protobuf_AssignDesc_KNArchives_2eproto() {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(UIStateArchive, desktop_navigator_view_width_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(UIStateArchive, desktop_outline_view_width_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(UIStateArchive, desktop_main_content_size_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(UIStateArchive, desktop_presenter_notes_view_height_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(UIStateArchive, desktop_main_window_origin_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(UIStateArchive, light_table_hides_skipped_slides_),
   };
   UIStateArchive_reflection_ =
     new ::google::protobuf::internal::GeneratedMessageReflection(
@@ -553,12 +561,14 @@ void protobuf_AssignDesc_KNArchives_2eproto() {
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CanvasSelectionArchive));
   ThemeArchive_descriptor_ = file->message_type(15);
-  static const int ThemeArchive_offsets_[5] = {
+  static const int ThemeArchive_offsets_[7] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ThemeArchive, super_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ThemeArchive, masters_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ThemeArchive, uuid_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ThemeArchive, classicthemerecords_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ThemeArchive, defaultmasterslidenode_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ThemeArchive, default_master_slide_node_reference_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ThemeArchive, default_master_slide_node_is_our_best_guess_),
   };
   ThemeArchive_reflection_ =
     new ::google::protobuf::internal::GeneratedMessageReflection(
@@ -672,13 +682,16 @@ void protobuf_AssignDesc_KNArchives_2eproto() {
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(SlideStyleArchive));
   PasteboardNativeStorageArchive_descriptor_ = file->message_type(21);
-  static const int PasteboardNativeStorageArchive_offsets_[6] = {
+  static const int PasteboardNativeStorageArchive_offsets_[9] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PasteboardNativeStorageArchive, drawables_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PasteboardNativeStorageArchive, builds_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PasteboardNativeStorageArchive, buildchunks_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PasteboardNativeStorageArchive, slidenodes_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PasteboardNativeStorageArchive, masterslidenodes_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PasteboardNativeStorageArchive, originalshowsize_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PasteboardNativeStorageArchive, titleranges_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PasteboardNativeStorageArchive, geometries_in_root_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PasteboardNativeStorageArchive, slide_node_unique_identifier_),
   };
   PasteboardNativeStorageArchive_reflection_ =
     new ::google::protobuf::internal::GeneratedMessageReflection(
@@ -786,8 +799,9 @@ void protobuf_AssignDesc_KNArchives_2eproto() {
       sizeof(RecordingNavigationEventArchive));
   RecordingNavigationEventArchive_RecordingNavigationEventAnimationPhase_descriptor_ = RecordingNavigationEventArchive_descriptor_->enum_type(0);
   RecordingLaserEventArchive_descriptor_ = file->message_type(27);
-  static const int RecordingLaserEventArchive_offsets_[1] = {
+  static const int RecordingLaserEventArchive_offsets_[2] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(RecordingLaserEventArchive, unscaled_location_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(RecordingLaserEventArchive, unit_location_),
   };
   RecordingLaserEventArchive_reflection_ =
     new ::google::protobuf::internal::GeneratedMessageReflection(
@@ -1122,7 +1136,7 @@ void protobuf_AddDesc_KNArchives_2eproto() {
     "nType\030\001 \001(\t\022\016\n\006effect\030\002 \001(\t\022\020\n\010duration\030"
     "\003 \001(\001\022\021\n\tdirection\030\004 \001(\r\022\r\n\005delay\030\005 \001(\001\022"
     "\023\n\013isAutomatic\030\006 \001(\010\022\031\n\005color\030\007 \001(\0132\n.TS"
-    "P.Color\"\241\t\n\033TransitionAttributesArchive\022"
+    "P.Color\"\325\t\n\033TransitionAttributesArchive\022"
     ";\n\023animationAttributes\030\010 \001(\0132\036.KN.Animat"
     "ionAttributesArchive\022\023\n\013isAutomatic\030\006 \001("
     "\010\022\024\n\014custom_twist\030\t \001(\002\022\032\n\022custom_mosaic"
@@ -1134,320 +1148,336 @@ void protobuf_AddDesc_KNArchives_2eproto() {
     "sTimingCurveType\022m\n\031custom_text_delivery"
     "_type\030\020 \001(\0162J.KN.TransitionAttributesArc"
     "hive.TransitionCustomAttributesTextDeliv"
-    "eryType\022\036\n\026database_animationType\030\001 \001(\t\022"
-    "\027\n\017database_effect\030\002 \001(\t\022\031\n\021database_dur"
-    "ation\030\003 \001(\001\022\032\n\022database_direction\030\004 \001(\r\022"
-    "\026\n\016database_delay\030\005 \001(\002\022\"\n\016database_colo"
-    "r\030\007 \001(\0132\n.TSP.Color\"\207\002\n)TransitionCustom"
-    "AttributesTimingCurveType\0223\n/TransitionC"
-    "ustomAttributesTimingCurveTypeLinear\020\001\0223"
-    "\n/TransitionCustomAttributesTimingCurveT"
-    "ypeEaseIn\020\002\0224\n0TransitionCustomAttribute"
-    "sTimingCurveTypeEaseOut\020\003\022:\n6TransitionC"
-    "ustomAttributesTimingCurveTypeEaseInEase"
-    "Out\020\004\"\213\002\n*TransitionCustomAttributesText"
-    "DeliveryType\0226\n2TransitionCustomAttribut"
-    "esTextDeliveryTypeByObject\020\001\0224\n0Transiti"
-    "onCustomAttributesTextDeliveryTypeByWord"
-    "\020\002\0229\n5TransitionCustomAttributesTextDeli"
-    "veryTypeByCharacter\020\003\0224\n0TransitionCusto"
-    "mAttributesTextDeliveryTypeByLine\020\004\"H\n\021T"
-    "ransitionArchive\0223\n\nattributes\030\002 \002(\0132\037.K"
-    "N.TransitionAttributesArchive\"\207\001\n\021BuildC"
-    "hunkArchive\022\035\n\005build\030\001 \002(\0132\016.TSP.Referen"
-    "ce\022\r\n\005index\030\002 \002(\r\022\r\n\005delay\030\003 \001(\001\022\020\n\010dura"
-    "tion\030\004 \001(\001\022\021\n\tautomatic\030\005 \001(\010\022\020\n\010referen"
-    "t\030\006 \001(\010\"\215\017\n\026BuildAttributesArchive\022;\n\023an"
-    "imationAttributes\030\022 \001(\0132\036.KN.AnimationAt"
-    "tributesArchive\022\024\n\014eventTrigger\030\004 \001(\r\022\033\n"
-    "\023delayAutomaticAfter\030\006 \001(\001\022\032\n\022delayAutom"
-    "aticWith\030\007 \001(\001\022H\n\ncurveStyle\030\016 \001(\01624.KN."
-    "BuildAttributesArchive.BuildAttributesCu"
-    "rveStyle\022\027\n\017ChartRotation3D\030\021 \001(\001\022\023\n\013sta"
-    "rtOffset\030\033 \001(\r\022\021\n\tendOffset\030\034 \001(\r\022\034\n\024act"
-    "ion_rotationAngle\030\t \001(\001\022]\n\030action_rotati"
-    "onDirection\030\n \001(\0162;.KN.BuildAttributesAr"
-    "chive.BuildAttributesRotationDirection\022\030"
-    "\n\020action_scaleSize\030\013 \001(\001\022\031\n\021action_color"
-    "Alpha\030\014 \001(\001\022S\n\023action_acceleration\030\r \001(\016"
-    "26.KN.BuildAttributesArchive.BuildAttrib"
-    "utesAcceleration\0227\n\027action_motionPathSou"
-    "rce\030\026 \001(\0132\026.TSD.PathSourceArchive\022\025\n\rcus"
-    "tom_bounce\030\023 \001(\010\022S\n\023custom_textDelivery\030"
-    "\024 \001(\01626.KN.BuildAttributesArchive.BuildA"
-    "ttributesTextDelivery\022W\n\025custom_delivery"
-    "Option\030\025 \001(\01628.KN.BuildAttributesArchive"
-    ".BuildAttributesDeliveryOption\022\033\n\023custom"
-    "_action_decay\030\027 \001(\010\022!\n\031custom_action_rep"
-    "eatCount\030\030 \001(\r\022\033\n\023custom_action_scale\030\031 "
-    "\001(\001\022f\n\035custom_action_jiggleIntensity\030\032 \001"
-    "(\0162\?.KN.BuildAttributesArchive.ActionBui"
-    "ldAttributesJiggleIntensity\022\036\n\026database_"
-    "animationType\030\001 \001(\t\022\027\n\017database_effect\030\002"
-    " \001(\t\022\032\n\022database_direction\030\003 \001(\r\022\026\n\016data"
-    "base_delay\030\005 \001(\001\022\031\n\021database_duration\030\010 "
-    "\001(\001\022\"\n\016database_color\030\020 \001(\0132\n.TSP.Color\022"
-    "\034\n\020motionPathString\030\017 \001(\tB\002\030\001\"R\n\033BuildAt"
-    "tributesAcceleration\022\t\n\005kNone\020\000\022\013\n\007kEase"
-    "In\020\001\022\014\n\010kEaseOut\020\002\022\r\n\tkEaseBoth\020\003\"I\n Bui"
-    "ldAttributesRotationDirection\022\016\n\nkClockw"
-    "ise\020\037\022\025\n\021kCounterclockwise\020 \"7\n\031BuildAtt"
-    "ributesCurveStyle\022\r\n\tkStraight\020\000\022\013\n\007kCur"
-    "ved\020\001\"\244\001\n\033BuildAttributesTextDelivery\022\032\n"
-    "\026kTextDeliveryUndefined\020\000\022\031\n\025kTextDelive"
-    "ryByObject\020\001\022\027\n\023kTextDeliveryByWord\020\002\022\034\n"
-    "\030kTextDeliveryByCharacter\020\003\022\027\n\023kTextDeli"
-    "veryByLine\020\004\"\316\001\n\035BuildAttributesDelivery"
-    "Option\022\034\n\030kDeliveryOptionUndefined\020\000\022\032\n\026"
-    "kDeliveryOptionForward\020\001\022\033\n\027kDeliveryOpt"
-    "ionBackward\020\002\022\035\n\031kDeliveryOptionFromCent"
-    "er\020\003\022\034\n\030kDeliveryOptionFromEdges\020\004\022\031\n\025kD"
-    "eliveryOptionRandom\020\005\"x\n$ActionBuildAttr"
-    "ibutesJiggleIntensity\022\031\n\025kJiggleIntensit"
-    "ySmall\020\000\022\032\n\026kJiggleIntensityMedium\020\001\022\031\n\025"
-    "kJiggleIntensityLarge\020\002\"\204\001\n\014BuildArchive"
-    "\022 \n\010drawable\030\001 \002(\0132\016.TSP.Reference\022\020\n\010de"
-    "livery\030\002 \002(\t\022\020\n\010duration\030\003 \002(\001\022.\n\nattrib"
-    "utes\030\004 \002(\0132\032.KN.BuildAttributesArchive\"\211"
-    "\002\n\022PlaceholderArchive\022%\n\005super\030\001 \002(\0132\026.T"
-    "SWP.ShapeInfoArchive\022;\n\004kind\030\002 \001(\0162\033.KN."
-    "PlaceholderArchive.Kind:\020kKindPlaceholde"
-    "r\"\216\001\n\004Kind\022\024\n\020kKindPlaceholder\020\000\022\037\n\033kKin"
-    "dSlideNumberPlaceholder\020\001\022\031\n\025kKindTitleP"
-    "laceholder\020\002\022\030\n\024kKindBodyPlaceholder\020\003\022\032"
-    "\n\026kKindObjectPlaceholder\020\004\"7\n\013NoteArchiv"
-    "e\022(\n\020containedStorage\030\001 \002(\0132\016.TSP.Refere"
-    "nce\"\215\001\n\036ClassicStylesheetRecordArchive\022L"
-    "\n\027identifier_to_style_map\030\001 \003(\0132+.TSS.St"
-    "ylesheetArchive.IdentifiedStyleEntry\022\035\n\005"
-    "theme\030\002 \001(\0132\016.TSP.Reference\"t\n\031ClassicTh"
-    "emeRecordArchive\022\014\n\004uuid\030\001 \001(\t\022(\n\020styles"
-    "heetRecord\030\002 \001(\0132\016.TSP.Reference\022\037\n\007mast"
-    "ers\030\003 \003(\0132\016.TSP.Reference\"\305\r\n\014SlideArchi"
-    "ve\022\035\n\005style\030\001 \002(\0132\016.TSP.Reference\022\036\n\006bui"
-    "lds\030\002 \003(\0132\016.TSP.Reference\022*\n\013buildChunks"
-    "\030\003 \003(\0132\025.KN.BuildChunkArchive\022)\n\ntransit"
-    "ion\030\004 \002(\0132\025.KN.TransitionArchive\022(\n\020titl"
-    "ePlaceholder\030\005 \001(\0132\016.TSP.Reference\022\'\n\017bo"
-    "dyPlaceholder\030\006 \001(\0132\016.TSP.Reference\022)\n\021o"
-    "bjectPlaceholder\030\036 \001(\0132\016.TSP.Reference\022."
-    "\n\026slideNumberPlaceholder\030\024 \001(\0132\016.TSP.Ref"
-    "erence\022!\n\tdrawables\030\007 \003(\0132\016.TSP.Referenc"
-    "e\022>\n\024sage_tag_to_info_map\030\034 \003(\0132 .KN.Sli"
-    "deArchive.SageTagMapEntry\022\014\n\004name\030\n \001(\t\022"
-    "6\n\030titlePlaceholderGeometry\030\013 \001(\0132\024.TSD."
-    "GeometryArchive\022\'\n\037titlePlaceholderShape"
-    "StyleIndex\030\014 \001(\r\022&\n\036titlePlaceholderText"
-    "StyleIndex\030\r \001(\r\022@\n\025titleLayoutPropertie"
-    "s\030\030 \001(\0132!.TSWP.ShapeStylePropertiesArchi"
-    "ve\0225\n\027bodyPlaceholderGeometry\030\016 \001(\0132\024.TS"
-    "D.GeometryArchive\022&\n\036bodyPlaceholderShap"
-    "eStyleIndex\030\017 \001(\r\022%\n\035bodyPlaceholderText"
-    "StyleIndex\030\020 \001(\r\022\?\n\024bodyLayoutProperties"
-    "\030\031 \001(\0132!.TSWP.ShapeStylePropertiesArchiv"
-    "e\022<\n\036slideNumberPlaceholderGeometry\030\025 \001("
-    "\0132\024.TSD.GeometryArchive\022-\n%slideNumberPl"
-    "aceholderShapeStyleIndex\030\026 \001(\r\022,\n$slideN"
-    "umberPlaceholderTextStyleIndex\030\027 \001(\r\022F\n\033"
-    "slideNumberLayoutProperties\030\032 \001(\0132!.TSWP"
-    ".ShapeStylePropertiesArchive\022/\n\027classicS"
-    "tylesheetRecord\030\035 \001(\0132\016.TSP.Reference\022+\n"
-    "\023bodyParagraphStyles\030\037 \003(\0132\016.TSP.Referen"
-    "ce\022&\n\016bodyListStyles\030# \003(\0132\016.TSP.Referen"
-    "ce\022(\n thumbnailTextForTitlePlaceholder\030%"
-    " \001(\t\022\'\n\037thumbnailTextForBodyPlaceholder\030"
-    "& \001(\t\022\036\n\006master\030\021 \001(\0132\016.TSP.Reference\022\'\n"
-    "\014staticGuides\030\022 \003(\0132\021.TSD.GuideArchive\022/"
-    "\n\027userDefinedGuideStorage\030$ \001(\0132\016.TSP.Re"
-    "ference\022\022\n\ninDocument\030\023 \002(\010\022\034\n\004note\030\033 \001("
-    "\0132\016.TSP.Reference\022>\n&info_using_object_p"
-    "laceholder_geometry\030\' \001(\0132\016.TSP.Referenc"
-    "e\022R\nJinfo_using_object_placeholder_geome"
-    "try_matches_object_placeholder_geometry\030"
-    "( \001(\010\0224\n,deprecated_objectPlaceholderVis"
-    "ibleForExport\030\" \001(\010\032<\n\017SageTagMapEntry\022\013"
-    "\n\003tag\030\001 \002(\t\022\034\n\004info\030\002 \002(\0132\016.TSP.Referenc"
-    "e\"\322\004\n\020SlideNodeArchive\022 \n\010children\030\001 \003(\013"
-    "2\016.TSP.Reference\022\035\n\005slide\030\002 \001(\0132\016.TSP.Re"
-    "ference\022&\n\nthumbnails\030\020 \003(\0132\022.TSP.DataRe"
-    "ference\022!\n\016thumbnailSizes\030\n \003(\0132\t.TSP.Si"
-    "ze\022\032\n\022thumbnailsAreDirty\030\016 \001(\010\022\020\n\010isHidd"
-    "en\030\004 \002(\010\022\027\n\013isCollapsed\030\005 \002(\010B\002\030\001\022 \n\030isC"
-    "ollapsedInOutlineView\030\021 \001(\010\022\034\n\024hasBodyIn"
-    "OutlineView\030\023 \001(\010\022\021\n\thasBuilds\030\006 \002(\010\022\025\n\r"
-    "hasTransition\030\007 \002(\010\022\017\n\007hasNote\030\010 \001(\010\022#\n\024"
-    "isSlideNumberVisible\030\022 \001(\010:\005false\022\030\n\020uni"
-    "queIdentifier\030\013 \001(\t\022\037\n\027copyFromSlideIden"
-    "tifier\030\014 \001(\t\022#\n\033slideSpecificHyperlinkCo"
-    "unt\030\r \001(\r\022\022\n\neventCount\030\017 \001(\r\022*\n\022databas"
-    "e_thumbnail\030\003 \001(\0132\016.TSP.Reference\022+\n\023dat"
-    "abase_thumbnails\030\t \003(\0132\016.TSP.Reference\"\222"
-    "\004\n\026DesktopUILayoutArchive\022\027\n\017sidebar_vis"
-    "ible\030\001 \001(\010\022E\n\021sidebar_view_mode\030\002 \001(\0162*."
-    "KN.DesktopUILayoutArchive.SidebarViewMod"
-    "e\022\025\n\rnotes_visible\030\003 \001(\010\022\033\n\023light_table_"
-    "visible\030\005 \001(\010\022$\n\026inspector_pane_visible\030"
-    "\006 \001(\010:\004true\022p\n\030inspector_pane_view_mode\030"
-    "\007 \001(\01620.KN.DesktopUILayoutArchive.Inspec"
-    "torPaneViewMode:\034kInspectorPaneViewModeF"
-    "ormat\"M\n\017SidebarViewMode\022\035\n\031kSidebarView"
-    "ModeNavigator\020\000\022\033\n\027kSidebarViewModeOutli"
-    "ne\020\001\"}\n\025InspectorPaneViewMode\022 \n\034kInspec"
-    "torPaneViewModeFormat\020\000\022!\n\035kInspectorPan"
-    "eViewModeAnimate\020\001\022\037\n\033kInspectorPaneView"
-    "ModeSetup\020\002\"\241\007\n\016UIStateArchive\022\'\n\017slideN"
-    "odeToEdit\030\001 \001(\0132\016.TSP.Reference\0229\n!depre"
-    "cated_masterSlideNodeToApply\030\002 \001(\0132\016.TSP"
-    ".Reference\0220\n\035deprecated_slideThumbnailS"
-    "ize\030\003 \001(\0132\t.TSP.Size\022\027\n\017canvasViewScale\030"
-    "\004 \001(\002\022 \n\014canvasOffset\030\005 \001(\0132\n.TSP.Point\022"
-    "*\n\022selectedSlideNodes\030\006 \003(\0132\016.TSP.Refere"
-    "nce\022\035\n\025iPhoneCanvasViewScale\030\007 \001(\002\022&\n\022iP"
-    "honeCanvasOffset\030\010 \001(\0132\n.TSP.Point\022 \n\030iP"
-    "hone568CanvasViewScale\030\t \001(\002\022)\n\025iPhone56"
-    "8CanvasOffset\030\n \001(\0132\n.TSP.Point\022)\n\021deskt"
-    "op_ui_layout\030\013 \001(\0132\016.TSP.Reference\022.\n&de"
-    "sktop_slide_view_content_fits_window\030\014 \001"
-    "(\010\022!\n\031desktop_canvas_view_scale\030\r \001(\002\022)\n"
-    "\025desktop_canvas_offset\030\025 \001(\0132\n.TSP.Point"
-    "\022\036\n\026light_table_zoom_scale\030\016 \001(\002\022*\n\016char"
-    "t_ui_state\030\017 \003(\0132\022.TSCH.ChartUIState\022\031\n\021"
-    "show_slide_guides\030\020 \001(\010\022\032\n\022show_master_g"
-    "uides\030\021 \001(\010\022\026\n\016shows_comments\030\022 \001(\010\022-\n\025c"
-    "ollapsed_slide_nodes\030\023 \003(\0132\016.TSP.Referen"
-    "ce\022\023\n\013shows_ruler\030\024 \001(\010\022$\n\034desktop_navig"
-    "ator_view_width\030\026 \001(\002\022\"\n\032desktop_outline"
-    "_view_width\030\027 \001(\002\022,\n\031desktop_main_conten"
-    "t_size\030\030 \001(\0132\t.TSP.Size\"\217\001\n\026CanvasSelect"
-    "ionArchive\022\035\n\005infos\030\001 \003(\0132\016.TSP.Referenc"
-    "e\022+\n\024action_ghost_indexes\030\003 \003(\0132\r.TSP.In"
-    "dexSet\022)\n\035database_action_ghost_indexes\030"
-    "\002 \003(\rB\002\030\001\"\274\001\n\014ThemeArchive\022 \n\005super\030\001 \002("
-    "\0132\021.TSS.ThemeArchive\022\037\n\007masters\030\002 \003(\0132\016."
-    "TSP.Reference\022\014\n\004uuid\030\003 \001(\t\022+\n\023classicTh"
-    "emeRecords\030\004 \003(\0132\016.TSP.Reference\022.\n\026defa"
-    "ultMasterSlideNode\030\005 \001(\0132\016.TSP.Reference"
-    "\"9\n\020SlideTreeArchive\022%\n\rrootSlideNode\030\001 "
-    "\001(\0132\016.TSP.Reference\"\364\004\n\013ShowArchive\022\037\n\007u"
-    "iState\030\001 \001(\0132\016.TSP.Reference\022\035\n\005theme\030\002 "
-    "\002(\0132\016.TSP.Reference\022\'\n\tslideTree\030\003 \002(\0132\024"
-    ".KN.SlideTreeArchive\022\027\n\004size\030\004 \002(\0132\t.TSP"
-    ".Size\022\"\n\nstylesheet\030\005 \002(\0132\016.TSP.Referenc"
-    "e\022\033\n\023slideNumbersVisible\030\006 \001(\010\022!\n\trecord"
-    "ing\030\007 \001(\0132\016.TSP.Reference\022\031\n\021loop_presen"
-    "tation\030\010 \001(\010\022;\n\004mode\030\t \001(\0162\032.KN.ShowArch"
-    "ive.KNShowMode:\021kKNShowModeNormal\022$\n\031aut"
-    "oplay_transition_delay\030\n \001(\001:\0015\022\037\n\024autop"
-    "lay_build_delay\030\013 \001(\001:\0012\022\031\n\021idle_timer_a"
-    "ctive\030\017 \001(\010\022\035\n\020idle_timer_delay\030\020 \001(\001:\0039"
-    "00\022\"\n\nsoundtrack\030\021 \001(\0132\016.TSP.Reference\022%"
-    "\n\035automatically_plays_upon_open\030\022 \001(\010\"[\n"
-    "\nKNShowMode\022\025\n\021kKNShowModeNormal\020\000\022\027\n\023kK"
-    "NShowModeAutoPlay\020\001\022\035\n\031kKNShowModeHyperl"
-    "inksOnly\020\002\"\207\001\n\017DocumentArchive\022#\n\005super\030"
-    "\003 \002(\0132\024.TSA.DocumentArchive\022\034\n\004show\030\002 \002("
-    "\0132\016.TSP.Reference\0221\n\031tables_custom_forma"
-    "t_list\030\004 \001(\0132\016.TSP.Reference\"\241\002\n\033SlideSt"
-    "ylePropertiesArchive\022\036\n\004fill\030\001 \001(\0132\020.TSD"
-    ".FillArchive\0223\n\ntransition\030\002 \001(\0132\037.KN.Tr"
-    "ansitionAttributesArchive\022\027\n\017transition_"
-    "null\030\003 \001(\010\022\"\n\032titlePlaceholderVisibility"
-    "\030\004 \001(\010\022!\n\031bodyPlaceholderVisibility\030\005 \001("
-    "\010\022#\n\033objectPlaceholderVisibility\030\007 \001(\010\022("
-    "\n slideNumberPlaceholderVisibility\030\006 \001(\010"
-    "\"\213\001\n\021SlideStyleArchive\022 \n\005super\030\001 \002(\0132\021."
-    "TSS.StyleArchive\022\031\n\016override_count\030\n \001(\r"
-    ":\0010\0229\n\020slide_properties\030\013 \001(\0132\037.KN.Slide"
-    "StylePropertiesArchive\"\371\001\n\036PasteboardNat"
-    "iveStorageArchive\022!\n\tdrawables\030\001 \003(\0132\016.T"
-    "SP.Reference\022\036\n\006builds\030\002 \003(\0132\016.TSP.Refer"
-    "ence\022*\n\013buildChunks\030\003 \003(\0132\025.KN.BuildChun"
-    "kArchive\022\"\n\nslideNodes\030\004 \003(\0132\016.TSP.Refer"
-    "ence\022#\n\020originalShowSize\030\005 \001(\0132\t.TSP.Siz"
-    "e\022\037\n\013titleRanges\030\006 \003(\0132\n.TSP.Range\"\241\002\n\027M"
-    "asterChangeBlobArchive\022\035\n\005slide\030\001 \001(\0132\016."
-    "TSP.Reference\022\036\n\006master\030\002 \001(\0132\016.TSP.Refe"
-    "rence\022#\n\013slide_style\030\003 \001(\0132\016.TSP.Referen"
-    "ce\022)\n\021title_placeholder\030\004 \001(\0132\016.TSP.Refe"
-    "rence\022(\n\020body_placeholder\030\005 \001(\0132\016.TSP.Re"
-    "ference\022*\n\022object_placeholder\030\007 \001(\0132\016.TS"
-    "P.Reference\022!\n\tdrawables\030\006 \003(\0132\016.TSP.Ref"
-    "erence\"\334\002\n\020RecordingArchive\022$\n\014event_tra"
-    "cks\030\001 \003(\0132\016.TSP.Reference\022#\n\013movie_track"
-    "\030\002 \001(\0132\016.TSP.Reference\022\020\n\010duration\030\003 \001(\001"
-    "\022^\n\nsync_state\030\004 \001(\0162\'.KN.RecordingArchi"
-    "ve.RecordingSyncState:!kRecordingSyncSta"
-    "teInSyncWithShow\022$\n\021modification_date\030\005 "
-    "\001(\0132\t.TSP.Date\"e\n\022RecordingSyncState\022%\n!"
-    "kRecordingSyncStateInSyncWithShow\020\000\022(\n$k"
-    "RecordingSyncStateOutOfSyncWithShow\020\001\"U\n"
-    "\032RecordingEventTrackArchive\022\014\n\004type\030\001 \001("
-    "\t\022)\n\006events\030\002 \003(\0132\031.KN.RecordingEventArc"
-    "hive\"\261\002\n\025RecordingEventArchive\022\026\n\nstart_"
-    "time\030\001 \001(\001:\002-1\022F\n\030navigation_event_archi"
-    "ve\030\350\007 \001(\0132#.KN.RecordingNavigationEventA"
-    "rchive\022<\n\023laser_event_archive\030\351\007 \001(\0132\036.K"
-    "N.RecordingLaserEventArchive\022<\n\023pause_ev"
-    "ent_archive\030\352\007 \001(\0132\036.KN.RecordingPauseEv"
-    "entArchive\022<\n\023movie_event_archive\030\353\007 \001(\013"
-    "2\036.KN.RecordingMovieEventArchive\"\257\003\n\037Rec"
-    "ordingNavigationEventArchive\0223\n\033target_s"
-    "lide_node_reference\030\001 \001(\0132\016.TSP.Referenc"
-    "e\022\032\n\022target_event_index\030\002 \001(\r\022\213\001\n\017animat"
-    "ion_phase\030\003 \001(\0162J.KN.RecordingNavigation"
-    "EventArchive.RecordingNavigationEventAni"
-    "mationPhase:&kRecordingNavigationEventAn"
-    "imationNone\"\254\001\n&RecordingNavigationEvent"
-    "AnimationPhase\022*\n&kRecordingNavigationEv"
-    "entAnimationNone\020\000\022+\n\'kRecordingNavigati"
-    "onEventAnimationStart\020\001\022)\n%kRecordingNav"
-    "igationEventAnimationEnd\020\002\"C\n\032RecordingL"
-    "aserEventArchive\022%\n\021unscaled_location\030\001 "
-    "\001(\0132\n.TSP.Point\"\315\002\n\032RecordingPauseEventA"
-    "rchive\022p\n\020pause_event_type\030\001 \001(\01626.KN.Re"
-    "cordingPauseEventArchive.RecordingPauseE"
-    "ventType:\036kRecordingPauseEventTypeResume"
-    "\"\274\001\n\027RecordingPauseEventType\022\"\n\036kRecordi"
-    "ngPauseEventTypeResume\020\000\022!\n\035kRecordingPa"
-    "useEventTypePause\020\001\022,\n(kRecordingPauseEv"
-    "entTypeConcealWithBlack\020\002\022,\n(kRecordingP"
-    "auseEventTypeConcealWithWhite\020\003\"\345\003\n\032Reco"
-    "rdingMovieEventArchive\022,\n\024movie_info_ref"
-    "erence\030\001 \001(\0132\016.TSP.Reference\022j\n\020movie_ev"
-    "ent_type\030\002 \001(\01626.KN.RecordingMovieEventA"
-    "rchive.RecordingMovieEventType:\030kRecordi"
-    "ngMovieEventSeek\022\031\n\021movie_event_value\030\003 "
-    "\001(\001\"\221\002\n\027RecordingMovieEventType\022\034\n\030kReco"
-    "rdingMovieEventNone\020\000\022\034\n\030kRecordingMovie"
-    "EventSeek\020\001\022\037\n\033kRecordingMovieEventSetRa"
-    "te\020\002\022%\n!kRecordingMovieEventStartPlaybac"
-    "k\020\003\022$\n kRecordingMovieEventStopPlayback\020"
-    "\004\022&\n\"kRecordingMovieEventBeginScrubbing\020"
-    "\005\022$\n kRecordingMovieEventEndScrubbing\020\006\""
-    "M\n\032RecordingMovieTrackArchive\022/\n\016movie_s"
-    "egments\030\001 \003(\0132\027.KN.MovieSegmentArchive\"\202"
-    "\001\n\023MovieSegmentArchive\022&\n\nmovie_data\030\003 \001"
-    "(\0132\022.TSP.DataReference\022\026\n\nstart_time\030\002 \001"
-    "(\001:\002-1\022+\n\023database_movie_data\030\001 \001(\0132\016.TS"
-    "P.Reference\"\371\001\n\nSoundtrack\022\016\n\006volume\030\001 \001"
-    "(\001\022F\n\004mode\030\002 \001(\0162\035.KN.Soundtrack.Soundtr"
-    "ackMode:\031kKNSoundtrackModePlayOnce\022\'\n\013mo"
-    "vie_media\030\003 \003(\0132\022.TSP.DataReference\"j\n\016S"
-    "oundtrackMode\022\035\n\031kKNSoundtrackModePlayOn"
-    "ce\020\000\022\031\n\025kKNSoundtrackModeLoop\020\001\022\036\n\032kKNSo"
-    "undtrackModeDoNotPlay\020\002\"M\n\034SlideNumberAt"
-    "tachmentArchive\022-\n\005super\030\001 \002(\0132\036.TSWP.Te"
-    "xtualAttachmentArchive\"\370\002\n\037SlideCollecti"
-    "onSelectionArchive\022#\n\013slide_nodes\030\001 \003(\0132"
-    "\016.TSP.Reference\022*\n\022slide_node_to_edit\030\002 "
-    "\001(\0132\016.TSP.Reference\022h\n*selected_paragrap"
-    "h_indexes_for_slide_nodes\030\003 \003(\01324.KN.Sli"
-    "deCollectionSelectionArchive.OutlineSele"
-    "ction\022/\n\033range_in_selected_paragraph\030\004 \001"
-    "(\0132\n.TSP.Range\032i\n\020OutlineSelection\022\"\n\nsl"
-    "ide_node\030\001 \002(\0132\016.TSP.Reference\0221\n\032select"
-    "ed_paragraph_indexes\030\002 \002(\0132\r.TSP.IndexSe"
-    "t", 13321);
+    "eryType\022\032\n\022custom_motion_blur\030\021 \001(\010\022\"\n\026d"
+    "atabase_animationType\030\001 \001(\tB\002\030\001\022\033\n\017datab"
+    "ase_effect\030\002 \001(\tB\002\030\001\022\035\n\021database_duratio"
+    "n\030\003 \001(\001B\002\030\001\022\036\n\022database_direction\030\004 \001(\rB"
+    "\002\030\001\022\032\n\016database_delay\030\005 \001(\002B\002\030\001\022&\n\016datab"
+    "ase_color\030\007 \001(\0132\n.TSP.ColorB\002\030\001\"\207\002\n)Tran"
+    "sitionCustomAttributesTimingCurveType\0223\n"
+    "/TransitionCustomAttributesTimingCurveTy"
+    "peLinear\020\001\0223\n/TransitionCustomAttributes"
+    "TimingCurveTypeEaseIn\020\002\0224\n0TransitionCus"
+    "tomAttributesTimingCurveTypeEaseOut\020\003\022:\n"
+    "6TransitionCustomAttributesTimingCurveTy"
+    "peEaseInEaseOut\020\004\"\213\002\n*TransitionCustomAt"
+    "tributesTextDeliveryType\0226\n2TransitionCu"
+    "stomAttributesTextDeliveryTypeByObject\020\001"
+    "\0224\n0TransitionCustomAttributesTextDelive"
+    "ryTypeByWord\020\002\0229\n5TransitionCustomAttrib"
+    "utesTextDeliveryTypeByCharacter\020\003\0224\n0Tra"
+    "nsitionCustomAttributesTextDeliveryTypeB"
+    "yLine\020\004\"H\n\021TransitionArchive\0223\n\nattribut"
+    "es\030\002 \002(\0132\037.KN.TransitionAttributesArchiv"
+    "e\"\207\001\n\021BuildChunkArchive\022\035\n\005build\030\001 \002(\0132\016"
+    ".TSP.Reference\022\r\n\005index\030\002 \002(\r\022\r\n\005delay\030\003"
+    " \001(\001\022\020\n\010duration\030\004 \001(\001\022\021\n\tautomatic\030\005 \001("
+    "\010\022\020\n\010referent\030\006 \001(\010\"\311\017\n\026BuildAttributesA"
+    "rchive\022;\n\023animationAttributes\030\022 \001(\0132\036.KN"
+    ".AnimationAttributesArchive\022\024\n\014eventTrig"
+    "ger\030\004 \001(\r\022\037\n\023delayAutomaticAfter\030\006 \001(\001B\002"
+    "\030\001\022\036\n\022delayAutomaticWith\030\007 \001(\001B\002\030\001\022H\n\ncu"
+    "rveStyle\030\016 \001(\01624.KN.BuildAttributesArchi"
+    "ve.BuildAttributesCurveStyle\022\027\n\017ChartRot"
+    "ation3D\030\021 \001(\001\022\023\n\013startOffset\030\033 \001(\r\022\021\n\ten"
+    "dOffset\030\034 \001(\r\022\034\n\024action_rotationAngle\030\t "
+    "\001(\001\022]\n\030action_rotationDirection\030\n \001(\0162;."
+    "KN.BuildAttributesArchive.BuildAttribute"
+    "sRotationDirection\022\030\n\020action_scaleSize\030\013"
+    " \001(\001\022\031\n\021action_colorAlpha\030\014 \001(\001\022S\n\023actio"
+    "n_acceleration\030\r \001(\01626.KN.BuildAttribute"
+    "sArchive.BuildAttributesAcceleration\0227\n\027"
+    "action_motionPathSource\030\026 \001(\0132\026.TSD.Path"
+    "SourceArchive\022\025\n\rcustom_bounce\030\023 \001(\010\022S\n\023"
+    "custom_textDelivery\030\024 \001(\01626.KN.BuildAttr"
+    "ibutesArchive.BuildAttributesTextDeliver"
+    "y\022W\n\025custom_deliveryOption\030\025 \001(\01628.KN.Bu"
+    "ildAttributesArchive.BuildAttributesDeli"
+    "veryOption\022\033\n\023custom_action_decay\030\027 \001(\010\022"
+    "!\n\031custom_action_repeatCount\030\030 \001(\r\022\033\n\023cu"
+    "stom_action_scale\030\031 \001(\001\022f\n\035custom_action"
+    "_jiggleIntensity\030\032 \001(\0162\?.KN.BuildAttribu"
+    "tesArchive.ActionBuildAttributesJiggleIn"
+    "tensity\022\032\n\022custom_motion_blur\030\035 \001(\010\022\"\n\026d"
+    "atabase_animationType\030\001 \001(\tB\002\030\001\022\033\n\017datab"
+    "ase_effect\030\002 \001(\tB\002\030\001\022\036\n\022database_directi"
+    "on\030\003 \001(\rB\002\030\001\022\032\n\016database_delay\030\005 \001(\001B\002\030\001"
+    "\022\035\n\021database_duration\030\010 \001(\001B\002\030\001\022&\n\016datab"
+    "ase_color\030\020 \001(\0132\n.TSP.ColorB\002\030\001\022\034\n\020motio"
+    "nPathString\030\017 \001(\tB\002\030\001\"R\n\033BuildAttributes"
+    "Acceleration\022\t\n\005kNone\020\000\022\013\n\007kEaseIn\020\001\022\014\n\010"
+    "kEaseOut\020\002\022\r\n\tkEaseBoth\020\003\"I\n BuildAttrib"
+    "utesRotationDirection\022\016\n\nkClockwise\020\037\022\025\n"
+    "\021kCounterclockwise\020 \"7\n\031BuildAttributesC"
+    "urveStyle\022\r\n\tkStraight\020\000\022\013\n\007kCurved\020\001\"\244\001"
+    "\n\033BuildAttributesTextDelivery\022\032\n\026kTextDe"
+    "liveryUndefined\020\000\022\031\n\025kTextDeliveryByObje"
+    "ct\020\001\022\027\n\023kTextDeliveryByWord\020\002\022\034\n\030kTextDe"
+    "liveryByCharacter\020\003\022\027\n\023kTextDeliveryByLi"
+    "ne\020\004\"\316\001\n\035BuildAttributesDeliveryOption\022\034"
+    "\n\030kDeliveryOptionUndefined\020\000\022\032\n\026kDeliver"
+    "yOptionForward\020\001\022\033\n\027kDeliveryOptionBackw"
+    "ard\020\002\022\035\n\031kDeliveryOptionFromCenter\020\003\022\034\n\030"
+    "kDeliveryOptionFromEdges\020\004\022\031\n\025kDeliveryO"
+    "ptionRandom\020\005\"x\n$ActionBuildAttributesJi"
+    "ggleIntensity\022\031\n\025kJiggleIntensitySmall\020\000"
+    "\022\032\n\026kJiggleIntensityMedium\020\001\022\031\n\025kJiggleI"
+    "ntensityLarge\020\002\"\204\001\n\014BuildArchive\022 \n\010draw"
+    "able\030\001 \002(\0132\016.TSP.Reference\022\020\n\010delivery\030\002"
+    " \002(\t\022\020\n\010duration\030\003 \002(\001\022.\n\nattributes\030\004 \002"
+    "(\0132\032.KN.BuildAttributesArchive\"\211\002\n\022Place"
+    "holderArchive\022%\n\005super\030\001 \002(\0132\026.TSWP.Shap"
+    "eInfoArchive\022;\n\004kind\030\002 \001(\0162\033.KN.Placehol"
+    "derArchive.Kind:\020kKindPlaceholder\"\216\001\n\004Ki"
+    "nd\022\024\n\020kKindPlaceholder\020\000\022\037\n\033kKindSlideNu"
+    "mberPlaceholder\020\001\022\031\n\025kKindTitlePlacehold"
+    "er\020\002\022\030\n\024kKindBodyPlaceholder\020\003\022\032\n\026kKindO"
+    "bjectPlaceholder\020\004\"7\n\013NoteArchive\022(\n\020con"
+    "tainedStorage\030\001 \002(\0132\016.TSP.Reference\"\215\001\n\036"
+    "ClassicStylesheetRecordArchive\022L\n\027identi"
+    "fier_to_style_map\030\001 \003(\0132+.TSS.Stylesheet"
+    "Archive.IdentifiedStyleEntry\022\035\n\005theme\030\002 "
+    "\001(\0132\016.TSP.Reference\"t\n\031ClassicThemeRecor"
+    "dArchive\022\014\n\004uuid\030\001 \001(\t\022(\n\020stylesheetReco"
+    "rd\030\002 \001(\0132\016.TSP.Reference\022\037\n\007masters\030\003 \003("
+    "\0132\016.TSP.Reference\"\242\016\n\014SlideArchive\022\035\n\005st"
+    "yle\030\001 \002(\0132\016.TSP.Reference\022\036\n\006builds\030\002 \003("
+    "\0132\016.TSP.Reference\022*\n\013buildChunks\030\003 \003(\0132\025"
+    ".KN.BuildChunkArchive\022)\n\ntransition\030\004 \002("
+    "\0132\025.KN.TransitionArchive\022(\n\020titlePlaceho"
+    "lder\030\005 \001(\0132\016.TSP.Reference\022\'\n\017bodyPlaceh"
+    "older\030\006 \001(\0132\016.TSP.Reference\022)\n\021objectPla"
+    "ceholder\030\036 \001(\0132\016.TSP.Reference\022.\n\026slideN"
+    "umberPlaceholder\030\024 \001(\0132\016.TSP.Reference\022\'"
+    "\n\017owned_drawables\030\007 \003(\0132\016.TSP.Reference\022"
+    ")\n\021drawables_z_order\030* \003(\0132\016.TSP.Referen"
+    "ce\022>\n\024sage_tag_to_info_map\030\034 \003(\0132 .KN.Sl"
+    "ideArchive.SageTagMapEntry\022\014\n\004name\030\n \001(\t"
+    "\0226\n\030titlePlaceholderGeometry\030\013 \001(\0132\024.TSD"
+    ".GeometryArchive\022\'\n\037titlePlaceholderShap"
+    "eStyleIndex\030\014 \001(\r\022&\n\036titlePlaceholderTex"
+    "tStyleIndex\030\r \001(\r\022@\n\025titleLayoutProperti"
+    "es\030\030 \001(\0132!.TSWP.ShapeStylePropertiesArch"
+    "ive\0225\n\027bodyPlaceholderGeometry\030\016 \001(\0132\024.T"
+    "SD.GeometryArchive\022&\n\036bodyPlaceholderSha"
+    "peStyleIndex\030\017 \001(\r\022%\n\035bodyPlaceholderTex"
+    "tStyleIndex\030\020 \001(\r\022\?\n\024bodyLayoutPropertie"
+    "s\030\031 \001(\0132!.TSWP.ShapeStylePropertiesArchi"
+    "ve\022<\n\036slideNumberPlaceholderGeometry\030\025 \001"
+    "(\0132\024.TSD.GeometryArchive\022-\n%slideNumberP"
+    "laceholderShapeStyleIndex\030\026 \001(\r\022,\n$slide"
+    "NumberPlaceholderTextStyleIndex\030\027 \001(\r\022F\n"
+    "\033slideNumberLayoutProperties\030\032 \001(\0132!.TSW"
+    "P.ShapeStylePropertiesArchive\022/\n\027classic"
+    "StylesheetRecord\030\035 \001(\0132\016.TSP.Reference\022+"
+    "\n\023bodyParagraphStyles\030\037 \003(\0132\016.TSP.Refere"
+    "nce\022&\n\016bodyListStyles\030# \003(\0132\016.TSP.Refere"
+    "nce\022(\n thumbnailTextForTitlePlaceholder\030"
+    "% \001(\t\022\'\n\037thumbnailTextForBodyPlaceholder"
+    "\030& \001(\t\022*\n\033slideObjectsLayerWithMaster\030) "
+    "\001(\010:\005false\022\036\n\006master\030\021 \001(\0132\016.TSP.Referen"
+    "ce\022\'\n\014staticGuides\030\022 \003(\0132\021.TSD.GuideArch"
+    "ive\022/\n\027userDefinedGuideStorage\030$ \001(\0132\016.T"
+    "SP.Reference\022\022\n\ninDocument\030\023 \002(\010\022\034\n\004note"
+    "\030\033 \001(\0132\016.TSP.Reference\022>\n&info_using_obj"
+    "ect_placeholder_geometry\030\' \001(\0132\016.TSP.Ref"
+    "erence\022R\nJinfo_using_object_placeholder_"
+    "geometry_matches_object_placeholder_geom"
+    "etry\030( \001(\010\0224\n,deprecated_objectPlacehold"
+    "erVisibleForExport\030\" \001(\010\032<\n\017SageTagMapEn"
+    "try\022\013\n\003tag\030\001 \002(\t\022\034\n\004info\030\002 \002(\0132\016.TSP.Ref"
+    "erence\"\363\004\n\020SlideNodeArchive\022 \n\010children\030"
+    "\001 \003(\0132\016.TSP.Reference\022\035\n\005slide\030\002 \001(\0132\016.T"
+    "SP.Reference\022&\n\nthumbnails\030\020 \003(\0132\022.TSP.D"
+    "ataReference\022!\n\016thumbnailSizes\030\n \003(\0132\t.T"
+    "SP.Size\022\032\n\022thumbnailsAreDirty\030\016 \001(\010\022\020\n\010i"
+    "sHidden\030\004 \002(\010\022\027\n\013isCollapsed\030\005 \002(\010B\002\030\001\022 "
+    "\n\030isCollapsedInOutlineView\030\021 \001(\010\022\034\n\024hasB"
+    "odyInOutlineView\030\023 \001(\010\022\025\n\thasBuilds\030\006 \002("
+    "\010B\002\030\001\022\025\n\rhasTransition\030\007 \002(\010\022\017\n\007hasNote\030"
+    "\010 \001(\010\022#\n\024isSlideNumberVisible\030\022 \001(\010:\005fal"
+    "se\022\030\n\020uniqueIdentifier\030\013 \001(\t\022\037\n\027copyFrom"
+    "SlideIdentifier\030\014 \001(\t\022#\n\033slideSpecificHy"
+    "perlinkCount\030\r \001(\r\022\022\n\neventCount\030\017 \001(\r\022\033"
+    "\n\023has_explicit_builds\030\024 \001(\010\022*\n\022database_"
+    "thumbnail\030\003 \001(\0132\016.TSP.Reference\022+\n\023datab"
+    "ase_thumbnails\030\t \003(\0132\016.TSP.Reference\"\222\004\n"
+    "\026DesktopUILayoutArchive\022\027\n\017sidebar_visib"
+    "le\030\001 \001(\010\022E\n\021sidebar_view_mode\030\002 \001(\0162*.KN"
+    ".DesktopUILayoutArchive.SidebarViewMode\022"
+    "\025\n\rnotes_visible\030\003 \001(\010\022\033\n\023light_table_vi"
+    "sible\030\005 \001(\010\022$\n\026inspector_pane_visible\030\006 "
+    "\001(\010:\004true\022p\n\030inspector_pane_view_mode\030\007 "
+    "\001(\01620.KN.DesktopUILayoutArchive.Inspecto"
+    "rPaneViewMode:\034kInspectorPaneViewModeFor"
+    "mat\"M\n\017SidebarViewMode\022\035\n\031kSidebarViewMo"
+    "deNavigator\020\000\022\033\n\027kSidebarViewModeOutline"
+    "\020\001\"}\n\025InspectorPaneViewMode\022 \n\034kInspecto"
+    "rPaneViewModeFormat\020\000\022!\n\035kInspectorPaneV"
+    "iewModeAnimate\020\001\022\037\n\033kInspectorPaneViewMo"
+    "deSetup\020\002\"\250\010\n\016UIStateArchive\022\'\n\017slideNod"
+    "eToEdit\030\001 \001(\0132\016.TSP.Reference\0229\n!depreca"
+    "ted_masterSlideNodeToApply\030\002 \001(\0132\016.TSP.R"
+    "eference\0220\n\035deprecated_slideThumbnailSiz"
+    "e\030\003 \001(\0132\t.TSP.Size\022\027\n\017canvasViewScale\030\004 "
+    "\001(\002\022 \n\014canvasOffset\030\005 \001(\0132\n.TSP.Point\022*\n"
+    "\022selectedSlideNodes\030\006 \003(\0132\016.TSP.Referenc"
+    "e\022\035\n\025iPhoneCanvasViewScale\030\007 \001(\002\022&\n\022iPho"
+    "neCanvasOffset\030\010 \001(\0132\n.TSP.Point\022 \n\030iPho"
+    "ne568CanvasViewScale\030\t \001(\002\022)\n\025iPhone568C"
+    "anvasOffset\030\n \001(\0132\n.TSP.Point\022)\n\021desktop"
+    "_ui_layout\030\013 \001(\0132\016.TSP.Reference\022.\n&desk"
+    "top_slide_view_content_fits_window\030\014 \001(\010"
+    "\022!\n\031desktop_canvas_view_scale\030\r \001(\002\022)\n\025d"
+    "esktop_canvas_offset\030\025 \001(\0132\n.TSP.Point\022\036"
+    "\n\026light_table_zoom_scale\030\016 \001(\002\022*\n\016chart_"
+    "ui_state\030\017 \003(\0132\022.TSCH.ChartUIState\022\031\n\021sh"
+    "ow_slide_guides\030\020 \001(\010\022\032\n\022show_master_gui"
+    "des\030\021 \001(\010\022\026\n\016shows_comments\030\022 \001(\010\022-\n\025col"
+    "lapsed_slide_nodes\030\023 \003(\0132\016.TSP.Reference"
+    "\022\023\n\013shows_ruler\030\024 \001(\010\022$\n\034desktop_navigat"
+    "or_view_width\030\026 \001(\002\022\"\n\032desktop_outline_v"
+    "iew_width\030\027 \001(\002\022,\n\031desktop_main_content_"
+    "size\030\030 \001(\0132\t.TSP.Size\022+\n#desktop_present"
+    "er_notes_view_height\030\031 \001(\002\022.\n\032desktop_ma"
+    "in_window_origin\030\032 \001(\0132\n.TSP.Point\022(\n li"
+    "ght_table_hides_skipped_slides\030\033 \001(\010\"\217\001\n"
+    "\026CanvasSelectionArchive\022\035\n\005infos\030\001 \003(\0132\016"
+    ".TSP.Reference\022+\n\024action_ghost_indexes\030\003"
+    " \003(\0132\r.TSP.IndexSet\022)\n\035database_action_g"
+    "host_indexes\030\002 \003(\rB\002\030\001\"\256\002\n\014ThemeArchive\022"
+    " \n\005super\030\001 \002(\0132\021.TSS.ThemeArchive\022\037\n\007mas"
+    "ters\030\002 \003(\0132\016.TSP.Reference\022\014\n\004uuid\030\003 \001(\t"
+    "\022+\n\023classicThemeRecords\030\004 \003(\0132\016.TSP.Refe"
+    "rence\022.\n\026defaultMasterSlideNode\030\005 \001(\0132\016."
+    "TSP.Reference\022;\n#default_master_slide_no"
+    "de_reference\030\006 \001(\0132\016.TSP.Reference\0223\n+de"
+    "fault_master_slide_node_is_our_best_gues"
+    "s\030\007 \001(\010\"9\n\020SlideTreeArchive\022%\n\rrootSlide"
+    "Node\030\001 \001(\0132\016.TSP.Reference\"\364\004\n\013ShowArchi"
+    "ve\022\037\n\007uiState\030\001 \001(\0132\016.TSP.Reference\022\035\n\005t"
+    "heme\030\002 \002(\0132\016.TSP.Reference\022\'\n\tslideTree\030"
+    "\003 \002(\0132\024.KN.SlideTreeArchive\022\027\n\004size\030\004 \002("
+    "\0132\t.TSP.Size\022\"\n\nstylesheet\030\005 \002(\0132\016.TSP.R"
+    "eference\022\033\n\023slideNumbersVisible\030\006 \001(\010\022!\n"
+    "\trecording\030\007 \001(\0132\016.TSP.Reference\022\031\n\021loop"
+    "_presentation\030\010 \001(\010\022;\n\004mode\030\t \001(\0162\032.KN.S"
+    "howArchive.KNShowMode:\021kKNShowModeNormal"
+    "\022$\n\031autoplay_transition_delay\030\n \001(\001:\0015\022\037"
+    "\n\024autoplay_build_delay\030\013 \001(\001:\0012\022\031\n\021idle_"
+    "timer_active\030\017 \001(\010\022\035\n\020idle_timer_delay\030\020"
+    " \001(\001:\003900\022\"\n\nsoundtrack\030\021 \001(\0132\016.TSP.Refe"
+    "rence\022%\n\035automatically_plays_upon_open\030\022"
+    " \001(\010\"[\n\nKNShowMode\022\025\n\021kKNShowModeNormal\020"
+    "\000\022\027\n\023kKNShowModeAutoPlay\020\001\022\035\n\031kKNShowMod"
+    "eHyperlinksOnly\020\002\"\207\001\n\017DocumentArchive\022#\n"
+    "\005super\030\003 \002(\0132\024.TSA.DocumentArchive\022\034\n\004sh"
+    "ow\030\002 \002(\0132\016.TSP.Reference\0221\n\031tables_custo"
+    "m_format_list\030\004 \001(\0132\016.TSP.Reference\"\241\002\n\033"
+    "SlideStylePropertiesArchive\022\036\n\004fill\030\001 \001("
+    "\0132\020.TSD.FillArchive\0223\n\ntransition\030\002 \001(\0132"
+    "\037.KN.TransitionAttributesArchive\022\027\n\017tran"
+    "sition_null\030\003 \001(\010\022\"\n\032titlePlaceholderVis"
+    "ibility\030\004 \001(\010\022!\n\031bodyPlaceholderVisibili"
+    "ty\030\005 \001(\010\022#\n\033objectPlaceholderVisibility\030"
+    "\007 \001(\010\022(\n slideNumberPlaceholderVisibilit"
+    "y\030\006 \001(\010\"\213\001\n\021SlideStyleArchive\022 \n\005super\030\001"
+    " \002(\0132\021.TSS.StyleArchive\022\031\n\016override_coun"
+    "t\030\n \001(\r:\0010\0229\n\020slide_properties\030\013 \001(\0132\037.K"
+    "N.SlideStylePropertiesArchive\"\373\002\n\036Pasteb"
+    "oardNativeStorageArchive\022!\n\tdrawables\030\001 "
+    "\003(\0132\016.TSP.Reference\022\036\n\006builds\030\002 \003(\0132\016.TS"
+    "P.Reference\022*\n\013buildChunks\030\003 \003(\0132\025.KN.Bu"
+    "ildChunkArchive\022\"\n\nslideNodes\030\004 \003(\0132\016.TS"
+    "P.Reference\022(\n\020masterSlideNodes\030\t \003(\0132\016."
+    "TSP.Reference\022#\n\020originalShowSize\030\005 \001(\0132"
+    "\t.TSP.Size\022\037\n\013titleRanges\030\006 \003(\0132\n.TSP.Ra"
+    "nge\0220\n\022geometries_in_root\030\007 \003(\0132\024.TSD.Ge"
+    "ometryArchive\022$\n\034slide_node_unique_ident"
+    "ifier\030\010 \001(\t\"\241\002\n\027MasterChangeBlobArchive\022"
+    "\035\n\005slide\030\001 \001(\0132\016.TSP.Reference\022\036\n\006master"
+    "\030\002 \001(\0132\016.TSP.Reference\022#\n\013slide_style\030\003 "
+    "\001(\0132\016.TSP.Reference\022)\n\021title_placeholder"
+    "\030\004 \001(\0132\016.TSP.Reference\022(\n\020body_placehold"
+    "er\030\005 \001(\0132\016.TSP.Reference\022*\n\022object_place"
+    "holder\030\007 \001(\0132\016.TSP.Reference\022!\n\tdrawable"
+    "s\030\006 \003(\0132\016.TSP.Reference\"\334\002\n\020RecordingArc"
+    "hive\022$\n\014event_tracks\030\001 \003(\0132\016.TSP.Referen"
+    "ce\022#\n\013movie_track\030\002 \001(\0132\016.TSP.Reference\022"
+    "\020\n\010duration\030\003 \001(\001\022^\n\nsync_state\030\004 \001(\0162\'."
+    "KN.RecordingArchive.RecordingSyncState:!"
+    "kRecordingSyncStateInSyncWithShow\022$\n\021mod"
+    "ification_date\030\005 \001(\0132\t.TSP.Date\"e\n\022Recor"
+    "dingSyncState\022%\n!kRecordingSyncStateInSy"
+    "ncWithShow\020\000\022(\n$kRecordingSyncStateOutOf"
+    "SyncWithShow\020\001\"U\n\032RecordingEventTrackArc"
+    "hive\022\014\n\004type\030\001 \001(\t\022)\n\006events\030\002 \003(\0132\031.KN."
+    "RecordingEventArchive\"\261\002\n\025RecordingEvent"
+    "Archive\022\026\n\nstart_time\030\001 \001(\001:\002-1\022F\n\030navig"
+    "ation_event_archive\030\350\007 \001(\0132#.KN.Recordin"
+    "gNavigationEventArchive\022<\n\023laser_event_a"
+    "rchive\030\351\007 \001(\0132\036.KN.RecordingLaserEventAr"
+    "chive\022<\n\023pause_event_archive\030\352\007 \001(\0132\036.KN"
+    ".RecordingPauseEventArchive\022<\n\023movie_eve"
+    "nt_archive\030\353\007 \001(\0132\036.KN.RecordingMovieEve"
+    "ntArchive\"\257\003\n\037RecordingNavigationEventAr"
+    "chive\0223\n\033target_slide_node_reference\030\001 \001"
+    "(\0132\016.TSP.Reference\022\032\n\022target_event_index"
+    "\030\002 \001(\r\022\213\001\n\017animation_phase\030\003 \001(\0162J.KN.Re"
+    "cordingNavigationEventArchive.RecordingN"
+    "avigationEventAnimationPhase:&kRecording"
+    "NavigationEventAnimationNone\"\254\001\n&Recordi"
+    "ngNavigationEventAnimationPhase\022*\n&kReco"
+    "rdingNavigationEventAnimationNone\020\000\022+\n\'k"
+    "RecordingNavigationEventAnimationStart\020\001"
+    "\022)\n%kRecordingNavigationEventAnimationEn"
+    "d\020\002\"j\n\032RecordingLaserEventArchive\022)\n\021uns"
+    "caled_location\030\001 \001(\0132\n.TSP.PointB\002\030\001\022!\n\r"
+    "unit_location\030\002 \001(\0132\n.TSP.Point\"\315\002\n\032Reco"
+    "rdingPauseEventArchive\022p\n\020pause_event_ty"
+    "pe\030\001 \001(\01626.KN.RecordingPauseEventArchive"
+    ".RecordingPauseEventType:\036kRecordingPaus"
+    "eEventTypeResume\"\274\001\n\027RecordingPauseEvent"
+    "Type\022\"\n\036kRecordingPauseEventTypeResume\020\000"
+    "\022!\n\035kRecordingPauseEventTypePause\020\001\022,\n(k"
+    "RecordingPauseEventTypeConcealWithBlack\020"
+    "\002\022,\n(kRecordingPauseEventTypeConcealWith"
+    "White\020\003\"\345\003\n\032RecordingMovieEventArchive\022,"
+    "\n\024movie_info_reference\030\001 \001(\0132\016.TSP.Refer"
+    "ence\022j\n\020movie_event_type\030\002 \001(\01626.KN.Reco"
+    "rdingMovieEventArchive.RecordingMovieEve"
+    "ntType:\030kRecordingMovieEventSeek\022\031\n\021movi"
+    "e_event_value\030\003 \001(\001\"\221\002\n\027RecordingMovieEv"
+    "entType\022\034\n\030kRecordingMovieEventNone\020\000\022\034\n"
+    "\030kRecordingMovieEventSeek\020\001\022\037\n\033kRecordin"
+    "gMovieEventSetRate\020\002\022%\n!kRecordingMovieE"
+    "ventStartPlayback\020\003\022$\n kRecordingMovieEv"
+    "entStopPlayback\020\004\022&\n\"kRecordingMovieEven"
+    "tBeginScrubbing\020\005\022$\n kRecordingMovieEven"
+    "tEndScrubbing\020\006\"M\n\032RecordingMovieTrackAr"
+    "chive\022/\n\016movie_segments\030\001 \003(\0132\027.KN.Movie"
+    "SegmentArchive\"\202\001\n\023MovieSegmentArchive\022&"
+    "\n\nmovie_data\030\003 \001(\0132\022.TSP.DataReference\022\026"
+    "\n\nstart_time\030\002 \001(\001:\002-1\022+\n\023database_movie"
+    "_data\030\001 \001(\0132\016.TSP.Reference\"\371\001\n\nSoundtra"
+    "ck\022\016\n\006volume\030\001 \001(\001\022F\n\004mode\030\002 \001(\0162\035.KN.So"
+    "undtrack.SoundtrackMode:\031kKNSoundtrackMo"
+    "dePlayOnce\022\'\n\013movie_media\030\003 \003(\0132\022.TSP.Da"
+    "taReference\"j\n\016SoundtrackMode\022\035\n\031kKNSoun"
+    "dtrackModePlayOnce\020\000\022\031\n\025kKNSoundtrackMod"
+    "eLoop\020\001\022\036\n\032kKNSoundtrackModeDoNotPlay\020\002\""
+    "M\n\034SlideNumberAttachmentArchive\022-\n\005super"
+    "\030\001 \002(\0132\036.TSWP.TextualAttachmentArchive\"\370"
+    "\002\n\037SlideCollectionSelectionArchive\022#\n\013sl"
+    "ide_nodes\030\001 \003(\0132\016.TSP.Reference\022*\n\022slide"
+    "_node_to_edit\030\002 \001(\0132\016.TSP.Reference\022h\n*s"
+    "elected_paragraph_indexes_for_slide_node"
+    "s\030\003 \003(\01324.KN.SlideCollectionSelectionArc"
+    "hive.OutlineSelection\022/\n\033range_in_select"
+    "ed_paragraph\030\004 \001(\0132\n.TSP.Range\032i\n\020Outlin"
+    "eSelection\022\"\n\nslide_node\030\001 \002(\0132\016.TSP.Ref"
+    "erence\0221\n\032selected_paragraph_indexes\030\002 \002"
+    "(\0132\r.TSP.IndexSet", 13977);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "KNArchives.proto", &protobuf_RegisterTypes);
   AnimationAttributesArchive::default_instance_ = new AnimationAttributesArchive();
@@ -2080,6 +2110,7 @@ const int TransitionAttributesArchive::kCustomBounceFieldNumber;
 const int TransitionAttributesArchive::kCustomMagicMoveFadeUnmatchedObjectsFieldNumber;
 const int TransitionAttributesArchive::kCustomTimingCurveFieldNumber;
 const int TransitionAttributesArchive::kCustomTextDeliveryTypeFieldNumber;
+const int TransitionAttributesArchive::kCustomMotionBlurFieldNumber;
 const int TransitionAttributesArchive::kDatabaseAnimationTypeFieldNumber;
 const int TransitionAttributesArchive::kDatabaseEffectFieldNumber;
 const int TransitionAttributesArchive::kDatabaseDurationFieldNumber;
@@ -2115,6 +2146,7 @@ void TransitionAttributesArchive::SharedCtor() {
   custom_magic_move_fade_unmatched_objects_ = false;
   custom_timing_curve_ = 1;
   custom_text_delivery_type_ = 1;
+  custom_motion_blur_ = false;
   database_animationtype_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
   database_effect_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
   database_duration_ = 0;
@@ -2177,6 +2209,7 @@ void TransitionAttributesArchive::Clear() {
   }
   if (_has_bits_[8 / 32] & (0xffu << (8 % 32))) {
     custom_text_delivery_type_ = 1;
+    custom_motion_blur_ = false;
     if (has_database_animationtype()) {
       if (database_animationtype_ != &::google::protobuf::internal::kEmptyString) {
         database_animationtype_->clear();
@@ -2204,7 +2237,7 @@ bool TransitionAttributesArchive::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   while ((tag = input->ReadTag()) != 0) {
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // optional string database_animationType = 1;
+      // optional string database_animationType = 1 [deprecated = true];
       case 1: {
         if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
             ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
@@ -2220,7 +2253,7 @@ bool TransitionAttributesArchive::MergePartialFromCodedStream(
         break;
       }
 
-      // optional string database_effect = 2;
+      // optional string database_effect = 2 [deprecated = true];
       case 2: {
         if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
             ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
@@ -2237,7 +2270,7 @@ bool TransitionAttributesArchive::MergePartialFromCodedStream(
         break;
       }
 
-      // optional double database_duration = 3;
+      // optional double database_duration = 3 [deprecated = true];
       case 3: {
         if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
             ::google::protobuf::internal::WireFormatLite::WIRETYPE_FIXED64) {
@@ -2253,7 +2286,7 @@ bool TransitionAttributesArchive::MergePartialFromCodedStream(
         break;
       }
 
-      // optional uint32 database_direction = 4;
+      // optional uint32 database_direction = 4 [deprecated = true];
       case 4: {
         if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
             ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
@@ -2269,7 +2302,7 @@ bool TransitionAttributesArchive::MergePartialFromCodedStream(
         break;
       }
 
-      // optional float database_delay = 5;
+      // optional float database_delay = 5 [deprecated = true];
       case 5: {
         if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
             ::google::protobuf::internal::WireFormatLite::WIRETYPE_FIXED32) {
@@ -2301,7 +2334,7 @@ bool TransitionAttributesArchive::MergePartialFromCodedStream(
         break;
       }
 
-      // optional .TSP.Color database_color = 7;
+      // optional .TSP.Color database_color = 7 [deprecated = true];
       case 7: {
         if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
             ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
@@ -2447,6 +2480,22 @@ bool TransitionAttributesArchive::MergePartialFromCodedStream(
         } else {
           goto handle_uninterpreted;
         }
+        if (input->ExpectTag(136)) goto parse_custom_motion_blur;
+        break;
+      }
+
+      // optional bool custom_motion_blur = 17;
+      case 17: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_custom_motion_blur:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &custom_motion_blur_)));
+          set_has_custom_motion_blur();
+        } else {
+          goto handle_uninterpreted;
+        }
         if (input->ExpectAtEnd()) return true;
         break;
       }
@@ -2469,7 +2518,7 @@ bool TransitionAttributesArchive::MergePartialFromCodedStream(
 
 void TransitionAttributesArchive::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
-  // optional string database_animationType = 1;
+  // optional string database_animationType = 1 [deprecated = true];
   if (has_database_animationtype()) {
     ::google::protobuf::internal::WireFormat::VerifyUTF8String(
       this->database_animationtype().data(), this->database_animationtype().length(),
@@ -2478,7 +2527,7 @@ void TransitionAttributesArchive::SerializeWithCachedSizes(
       1, this->database_animationtype(), output);
   }
 
-  // optional string database_effect = 2;
+  // optional string database_effect = 2 [deprecated = true];
   if (has_database_effect()) {
     ::google::protobuf::internal::WireFormat::VerifyUTF8String(
       this->database_effect().data(), this->database_effect().length(),
@@ -2487,17 +2536,17 @@ void TransitionAttributesArchive::SerializeWithCachedSizes(
       2, this->database_effect(), output);
   }
 
-  // optional double database_duration = 3;
+  // optional double database_duration = 3 [deprecated = true];
   if (has_database_duration()) {
     ::google::protobuf::internal::WireFormatLite::WriteDouble(3, this->database_duration(), output);
   }
 
-  // optional uint32 database_direction = 4;
+  // optional uint32 database_direction = 4 [deprecated = true];
   if (has_database_direction()) {
     ::google::protobuf::internal::WireFormatLite::WriteUInt32(4, this->database_direction(), output);
   }
 
-  // optional float database_delay = 5;
+  // optional float database_delay = 5 [deprecated = true];
   if (has_database_delay()) {
     ::google::protobuf::internal::WireFormatLite::WriteFloat(5, this->database_delay(), output);
   }
@@ -2507,7 +2556,7 @@ void TransitionAttributesArchive::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteBool(6, this->isautomatic(), output);
   }
 
-  // optional .TSP.Color database_color = 7;
+  // optional .TSP.Color database_color = 7 [deprecated = true];
   if (has_database_color()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
       7, this->database_color(), output);
@@ -2556,6 +2605,11 @@ void TransitionAttributesArchive::SerializeWithCachedSizes(
       16, this->custom_text_delivery_type(), output);
   }
 
+  // optional bool custom_motion_blur = 17;
+  if (has_custom_motion_blur()) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(17, this->custom_motion_blur(), output);
+  }
+
   if (!unknown_fields().empty()) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         unknown_fields(), output);
@@ -2564,7 +2618,7 @@ void TransitionAttributesArchive::SerializeWithCachedSizes(
 
 ::google::protobuf::uint8* TransitionAttributesArchive::SerializeWithCachedSizesToArray(
     ::google::protobuf::uint8* target) const {
-  // optional string database_animationType = 1;
+  // optional string database_animationType = 1 [deprecated = true];
   if (has_database_animationtype()) {
     ::google::protobuf::internal::WireFormat::VerifyUTF8String(
       this->database_animationtype().data(), this->database_animationtype().length(),
@@ -2574,7 +2628,7 @@ void TransitionAttributesArchive::SerializeWithCachedSizes(
         1, this->database_animationtype(), target);
   }
 
-  // optional string database_effect = 2;
+  // optional string database_effect = 2 [deprecated = true];
   if (has_database_effect()) {
     ::google::protobuf::internal::WireFormat::VerifyUTF8String(
       this->database_effect().data(), this->database_effect().length(),
@@ -2584,17 +2638,17 @@ void TransitionAttributesArchive::SerializeWithCachedSizes(
         2, this->database_effect(), target);
   }
 
-  // optional double database_duration = 3;
+  // optional double database_duration = 3 [deprecated = true];
   if (has_database_duration()) {
     target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(3, this->database_duration(), target);
   }
 
-  // optional uint32 database_direction = 4;
+  // optional uint32 database_direction = 4 [deprecated = true];
   if (has_database_direction()) {
     target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(4, this->database_direction(), target);
   }
 
-  // optional float database_delay = 5;
+  // optional float database_delay = 5 [deprecated = true];
   if (has_database_delay()) {
     target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(5, this->database_delay(), target);
   }
@@ -2604,7 +2658,7 @@ void TransitionAttributesArchive::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(6, this->isautomatic(), target);
   }
 
-  // optional .TSP.Color database_color = 7;
+  // optional .TSP.Color database_color = 7 [deprecated = true];
   if (has_database_color()) {
     target = ::google::protobuf::internal::WireFormatLite::
       WriteMessageNoVirtualToArray(
@@ -2653,6 +2707,11 @@ void TransitionAttributesArchive::SerializeWithCachedSizes(
   if (has_custom_text_delivery_type()) {
     target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
       16, this->custom_text_delivery_type(), target);
+  }
+
+  // optional bool custom_motion_blur = 17;
+  if (has_custom_motion_blur()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(17, this->custom_motion_blur(), target);
   }
 
   if (!unknown_fields().empty()) {
@@ -2721,38 +2780,43 @@ int TransitionAttributesArchive::ByteSize() const {
         ::google::protobuf::internal::WireFormatLite::EnumSize(this->custom_text_delivery_type());
     }
 
-    // optional string database_animationType = 1;
+    // optional bool custom_motion_blur = 17;
+    if (has_custom_motion_blur()) {
+      total_size += 2 + 1;
+    }
+
+    // optional string database_animationType = 1 [deprecated = true];
     if (has_database_animationtype()) {
       total_size += 1 +
         ::google::protobuf::internal::WireFormatLite::StringSize(
           this->database_animationtype());
     }
 
-    // optional string database_effect = 2;
+    // optional string database_effect = 2 [deprecated = true];
     if (has_database_effect()) {
       total_size += 1 +
         ::google::protobuf::internal::WireFormatLite::StringSize(
           this->database_effect());
     }
 
-    // optional double database_duration = 3;
+    // optional double database_duration = 3 [deprecated = true];
     if (has_database_duration()) {
       total_size += 1 + 8;
     }
 
-    // optional uint32 database_direction = 4;
+    // optional uint32 database_direction = 4 [deprecated = true];
     if (has_database_direction()) {
       total_size += 1 +
         ::google::protobuf::internal::WireFormatLite::UInt32Size(
           this->database_direction());
     }
 
-    // optional float database_delay = 5;
+    // optional float database_delay = 5 [deprecated = true];
     if (has_database_delay()) {
       total_size += 1 + 4;
     }
 
-    // optional .TSP.Color database_color = 7;
+    // optional .TSP.Color database_color = 7 [deprecated = true];
     if (has_database_color()) {
       total_size += 1 +
         ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
@@ -2815,6 +2879,9 @@ void TransitionAttributesArchive::MergeFrom(const TransitionAttributesArchive& f
     if (from.has_custom_text_delivery_type()) {
       set_custom_text_delivery_type(from.custom_text_delivery_type());
     }
+    if (from.has_custom_motion_blur()) {
+      set_custom_motion_blur(from.custom_motion_blur());
+    }
     if (from.has_database_animationtype()) {
       set_database_animationtype(from.database_animationtype());
     }
@@ -2871,6 +2938,7 @@ void TransitionAttributesArchive::Swap(TransitionAttributesArchive* other) {
     std::swap(custom_magic_move_fade_unmatched_objects_, other->custom_magic_move_fade_unmatched_objects_);
     std::swap(custom_timing_curve_, other->custom_timing_curve_);
     std::swap(custom_text_delivery_type_, other->custom_text_delivery_type_);
+    std::swap(custom_motion_blur_, other->custom_motion_blur_);
     std::swap(database_animationtype_, other->database_animationtype_);
     std::swap(database_effect_, other->database_effect_);
     std::swap(database_duration_, other->database_duration_);
@@ -3688,6 +3756,7 @@ const int BuildAttributesArchive::kCustomActionDecayFieldNumber;
 const int BuildAttributesArchive::kCustomActionRepeatCountFieldNumber;
 const int BuildAttributesArchive::kCustomActionScaleFieldNumber;
 const int BuildAttributesArchive::kCustomActionJiggleIntensityFieldNumber;
+const int BuildAttributesArchive::kCustomMotionBlurFieldNumber;
 const int BuildAttributesArchive::kDatabaseAnimationTypeFieldNumber;
 const int BuildAttributesArchive::kDatabaseEffectFieldNumber;
 const int BuildAttributesArchive::kDatabaseDirectionFieldNumber;
@@ -3737,6 +3806,7 @@ void BuildAttributesArchive::SharedCtor() {
   custom_action_repeatcount_ = 0u;
   custom_action_scale_ = 0;
   custom_action_jiggleintensity_ = 0;
+  custom_motion_blur_ = false;
   database_animationtype_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
   database_effect_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
   database_direction_ = 0u;
@@ -3820,6 +3890,7 @@ void BuildAttributesArchive::Clear() {
     custom_action_repeatcount_ = 0u;
     custom_action_scale_ = 0;
     custom_action_jiggleintensity_ = 0;
+    custom_motion_blur_ = false;
     if (has_database_animationtype()) {
       if (database_animationtype_ != &::google::protobuf::internal::kEmptyString) {
         database_animationtype_->clear();
@@ -3830,9 +3901,9 @@ void BuildAttributesArchive::Clear() {
         database_effect_->clear();
       }
     }
-    database_direction_ = 0u;
   }
   if (_has_bits_[24 / 32] & (0xffu << (24 % 32))) {
+    database_direction_ = 0u;
     database_delay_ = 0;
     database_duration_ = 0;
     if (has_database_color()) {
@@ -3854,7 +3925,7 @@ bool BuildAttributesArchive::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   while ((tag = input->ReadTag()) != 0) {
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // optional string database_animationType = 1;
+      // optional string database_animationType = 1 [deprecated = true];
       case 1: {
         if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
             ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
@@ -3870,7 +3941,7 @@ bool BuildAttributesArchive::MergePartialFromCodedStream(
         break;
       }
 
-      // optional string database_effect = 2;
+      // optional string database_effect = 2 [deprecated = true];
       case 2: {
         if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
             ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
@@ -3887,7 +3958,7 @@ bool BuildAttributesArchive::MergePartialFromCodedStream(
         break;
       }
 
-      // optional uint32 database_direction = 3;
+      // optional uint32 database_direction = 3 [deprecated = true];
       case 3: {
         if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
             ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
@@ -3919,7 +3990,7 @@ bool BuildAttributesArchive::MergePartialFromCodedStream(
         break;
       }
 
-      // optional double database_delay = 5;
+      // optional double database_delay = 5 [deprecated = true];
       case 5: {
         if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
             ::google::protobuf::internal::WireFormatLite::WIRETYPE_FIXED64) {
@@ -3935,7 +4006,7 @@ bool BuildAttributesArchive::MergePartialFromCodedStream(
         break;
       }
 
-      // optional double delayAutomaticAfter = 6;
+      // optional double delayAutomaticAfter = 6 [deprecated = true];
       case 6: {
         if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
             ::google::protobuf::internal::WireFormatLite::WIRETYPE_FIXED64) {
@@ -3951,7 +4022,7 @@ bool BuildAttributesArchive::MergePartialFromCodedStream(
         break;
       }
 
-      // optional double delayAutomaticWith = 7;
+      // optional double delayAutomaticWith = 7 [deprecated = true];
       case 7: {
         if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
             ::google::protobuf::internal::WireFormatLite::WIRETYPE_FIXED64) {
@@ -3967,7 +4038,7 @@ bool BuildAttributesArchive::MergePartialFromCodedStream(
         break;
       }
 
-      // optional double database_duration = 8;
+      // optional double database_duration = 8 [deprecated = true];
       case 8: {
         if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
             ::google::protobuf::internal::WireFormatLite::WIRETYPE_FIXED64) {
@@ -4111,7 +4182,7 @@ bool BuildAttributesArchive::MergePartialFromCodedStream(
         break;
       }
 
-      // optional .TSP.Color database_color = 16;
+      // optional .TSP.Color database_color = 16 [deprecated = true];
       case 16: {
         if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
             ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
@@ -4324,6 +4395,22 @@ bool BuildAttributesArchive::MergePartialFromCodedStream(
         } else {
           goto handle_uninterpreted;
         }
+        if (input->ExpectTag(232)) goto parse_custom_motion_blur;
+        break;
+      }
+
+      // optional bool custom_motion_blur = 29;
+      case 29: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_custom_motion_blur:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &custom_motion_blur_)));
+          set_has_custom_motion_blur();
+        } else {
+          goto handle_uninterpreted;
+        }
         if (input->ExpectAtEnd()) return true;
         break;
       }
@@ -4346,7 +4433,7 @@ bool BuildAttributesArchive::MergePartialFromCodedStream(
 
 void BuildAttributesArchive::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
-  // optional string database_animationType = 1;
+  // optional string database_animationType = 1 [deprecated = true];
   if (has_database_animationtype()) {
     ::google::protobuf::internal::WireFormat::VerifyUTF8String(
       this->database_animationtype().data(), this->database_animationtype().length(),
@@ -4355,7 +4442,7 @@ void BuildAttributesArchive::SerializeWithCachedSizes(
       1, this->database_animationtype(), output);
   }
 
-  // optional string database_effect = 2;
+  // optional string database_effect = 2 [deprecated = true];
   if (has_database_effect()) {
     ::google::protobuf::internal::WireFormat::VerifyUTF8String(
       this->database_effect().data(), this->database_effect().length(),
@@ -4364,7 +4451,7 @@ void BuildAttributesArchive::SerializeWithCachedSizes(
       2, this->database_effect(), output);
   }
 
-  // optional uint32 database_direction = 3;
+  // optional uint32 database_direction = 3 [deprecated = true];
   if (has_database_direction()) {
     ::google::protobuf::internal::WireFormatLite::WriteUInt32(3, this->database_direction(), output);
   }
@@ -4374,22 +4461,22 @@ void BuildAttributesArchive::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteUInt32(4, this->eventtrigger(), output);
   }
 
-  // optional double database_delay = 5;
+  // optional double database_delay = 5 [deprecated = true];
   if (has_database_delay()) {
     ::google::protobuf::internal::WireFormatLite::WriteDouble(5, this->database_delay(), output);
   }
 
-  // optional double delayAutomaticAfter = 6;
+  // optional double delayAutomaticAfter = 6 [deprecated = true];
   if (has_delayautomaticafter()) {
     ::google::protobuf::internal::WireFormatLite::WriteDouble(6, this->delayautomaticafter(), output);
   }
 
-  // optional double delayAutomaticWith = 7;
+  // optional double delayAutomaticWith = 7 [deprecated = true];
   if (has_delayautomaticwith()) {
     ::google::protobuf::internal::WireFormatLite::WriteDouble(7, this->delayautomaticwith(), output);
   }
 
-  // optional double database_duration = 8;
+  // optional double database_duration = 8 [deprecated = true];
   if (has_database_duration()) {
     ::google::protobuf::internal::WireFormatLite::WriteDouble(8, this->database_duration(), output);
   }
@@ -4436,7 +4523,7 @@ void BuildAttributesArchive::SerializeWithCachedSizes(
       15, this->motionpathstring(), output);
   }
 
-  // optional .TSP.Color database_color = 16;
+  // optional .TSP.Color database_color = 16 [deprecated = true];
   if (has_database_color()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
       16, this->database_color(), output);
@@ -4507,6 +4594,11 @@ void BuildAttributesArchive::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteUInt32(28, this->endoffset(), output);
   }
 
+  // optional bool custom_motion_blur = 29;
+  if (has_custom_motion_blur()) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(29, this->custom_motion_blur(), output);
+  }
+
   if (!unknown_fields().empty()) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         unknown_fields(), output);
@@ -4515,7 +4607,7 @@ void BuildAttributesArchive::SerializeWithCachedSizes(
 
 ::google::protobuf::uint8* BuildAttributesArchive::SerializeWithCachedSizesToArray(
     ::google::protobuf::uint8* target) const {
-  // optional string database_animationType = 1;
+  // optional string database_animationType = 1 [deprecated = true];
   if (has_database_animationtype()) {
     ::google::protobuf::internal::WireFormat::VerifyUTF8String(
       this->database_animationtype().data(), this->database_animationtype().length(),
@@ -4525,7 +4617,7 @@ void BuildAttributesArchive::SerializeWithCachedSizes(
         1, this->database_animationtype(), target);
   }
 
-  // optional string database_effect = 2;
+  // optional string database_effect = 2 [deprecated = true];
   if (has_database_effect()) {
     ::google::protobuf::internal::WireFormat::VerifyUTF8String(
       this->database_effect().data(), this->database_effect().length(),
@@ -4535,7 +4627,7 @@ void BuildAttributesArchive::SerializeWithCachedSizes(
         2, this->database_effect(), target);
   }
 
-  // optional uint32 database_direction = 3;
+  // optional uint32 database_direction = 3 [deprecated = true];
   if (has_database_direction()) {
     target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(3, this->database_direction(), target);
   }
@@ -4545,22 +4637,22 @@ void BuildAttributesArchive::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(4, this->eventtrigger(), target);
   }
 
-  // optional double database_delay = 5;
+  // optional double database_delay = 5 [deprecated = true];
   if (has_database_delay()) {
     target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(5, this->database_delay(), target);
   }
 
-  // optional double delayAutomaticAfter = 6;
+  // optional double delayAutomaticAfter = 6 [deprecated = true];
   if (has_delayautomaticafter()) {
     target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(6, this->delayautomaticafter(), target);
   }
 
-  // optional double delayAutomaticWith = 7;
+  // optional double delayAutomaticWith = 7 [deprecated = true];
   if (has_delayautomaticwith()) {
     target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(7, this->delayautomaticwith(), target);
   }
 
-  // optional double database_duration = 8;
+  // optional double database_duration = 8 [deprecated = true];
   if (has_database_duration()) {
     target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(8, this->database_duration(), target);
   }
@@ -4608,7 +4700,7 @@ void BuildAttributesArchive::SerializeWithCachedSizes(
         15, this->motionpathstring(), target);
   }
 
-  // optional .TSP.Color database_color = 16;
+  // optional .TSP.Color database_color = 16 [deprecated = true];
   if (has_database_color()) {
     target = ::google::protobuf::internal::WireFormatLite::
       WriteMessageNoVirtualToArray(
@@ -4682,6 +4774,11 @@ void BuildAttributesArchive::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(28, this->endoffset(), target);
   }
 
+  // optional bool custom_motion_blur = 29;
+  if (has_custom_motion_blur()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(29, this->custom_motion_blur(), target);
+  }
+
   if (!unknown_fields().empty()) {
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
         unknown_fields(), target);
@@ -4707,12 +4804,12 @@ int BuildAttributesArchive::ByteSize() const {
           this->eventtrigger());
     }
 
-    // optional double delayAutomaticAfter = 6;
+    // optional double delayAutomaticAfter = 6 [deprecated = true];
     if (has_delayautomaticafter()) {
       total_size += 1 + 8;
     }
 
-    // optional double delayAutomaticWith = 7;
+    // optional double delayAutomaticWith = 7 [deprecated = true];
     if (has_delayautomaticwith()) {
       total_size += 1 + 8;
     }
@@ -4820,40 +4917,45 @@ int BuildAttributesArchive::ByteSize() const {
         ::google::protobuf::internal::WireFormatLite::EnumSize(this->custom_action_jiggleintensity());
     }
 
-    // optional string database_animationType = 1;
+    // optional bool custom_motion_blur = 29;
+    if (has_custom_motion_blur()) {
+      total_size += 2 + 1;
+    }
+
+    // optional string database_animationType = 1 [deprecated = true];
     if (has_database_animationtype()) {
       total_size += 1 +
         ::google::protobuf::internal::WireFormatLite::StringSize(
           this->database_animationtype());
     }
 
-    // optional string database_effect = 2;
+    // optional string database_effect = 2 [deprecated = true];
     if (has_database_effect()) {
       total_size += 1 +
         ::google::protobuf::internal::WireFormatLite::StringSize(
           this->database_effect());
     }
 
-    // optional uint32 database_direction = 3;
+  }
+  if (_has_bits_[24 / 32] & (0xffu << (24 % 32))) {
+    // optional uint32 database_direction = 3 [deprecated = true];
     if (has_database_direction()) {
       total_size += 1 +
         ::google::protobuf::internal::WireFormatLite::UInt32Size(
           this->database_direction());
     }
 
-  }
-  if (_has_bits_[24 / 32] & (0xffu << (24 % 32))) {
-    // optional double database_delay = 5;
+    // optional double database_delay = 5 [deprecated = true];
     if (has_database_delay()) {
       total_size += 1 + 8;
     }
 
-    // optional double database_duration = 8;
+    // optional double database_duration = 8 [deprecated = true];
     if (has_database_duration()) {
       total_size += 1 + 8;
     }
 
-    // optional .TSP.Color database_color = 16;
+    // optional .TSP.Color database_color = 16 [deprecated = true];
     if (has_database_color()) {
       total_size += 2 +
         ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
@@ -4961,17 +5063,20 @@ void BuildAttributesArchive::MergeFrom(const BuildAttributesArchive& from) {
     if (from.has_custom_action_jiggleintensity()) {
       set_custom_action_jiggleintensity(from.custom_action_jiggleintensity());
     }
+    if (from.has_custom_motion_blur()) {
+      set_custom_motion_blur(from.custom_motion_blur());
+    }
     if (from.has_database_animationtype()) {
       set_database_animationtype(from.database_animationtype());
     }
     if (from.has_database_effect()) {
       set_database_effect(from.database_effect());
     }
+  }
+  if (from._has_bits_[24 / 32] & (0xffu << (24 % 32))) {
     if (from.has_database_direction()) {
       set_database_direction(from.database_direction());
     }
-  }
-  if (from._has_bits_[24 / 32] & (0xffu << (24 % 32))) {
     if (from.has_database_delay()) {
       set_database_delay(from.database_delay());
     }
@@ -5037,6 +5142,7 @@ void BuildAttributesArchive::Swap(BuildAttributesArchive* other) {
     std::swap(custom_action_repeatcount_, other->custom_action_repeatcount_);
     std::swap(custom_action_scale_, other->custom_action_scale_);
     std::swap(custom_action_jiggleintensity_, other->custom_action_jiggleintensity_);
+    std::swap(custom_motion_blur_, other->custom_motion_blur_);
     std::swap(database_animationtype_, other->database_animationtype_);
     std::swap(database_effect_, other->database_effect_);
     std::swap(database_direction_, other->database_direction_);
@@ -6787,7 +6893,8 @@ const int SlideArchive::kTitlePlaceholderFieldNumber;
 const int SlideArchive::kBodyPlaceholderFieldNumber;
 const int SlideArchive::kObjectPlaceholderFieldNumber;
 const int SlideArchive::kSlideNumberPlaceholderFieldNumber;
-const int SlideArchive::kDrawablesFieldNumber;
+const int SlideArchive::kOwnedDrawablesFieldNumber;
+const int SlideArchive::kDrawablesZOrderFieldNumber;
 const int SlideArchive::kSageTagToInfoMapFieldNumber;
 const int SlideArchive::kNameFieldNumber;
 const int SlideArchive::kTitlePlaceholderGeometryFieldNumber;
@@ -6807,6 +6914,7 @@ const int SlideArchive::kBodyParagraphStylesFieldNumber;
 const int SlideArchive::kBodyListStylesFieldNumber;
 const int SlideArchive::kThumbnailTextForTitlePlaceholderFieldNumber;
 const int SlideArchive::kThumbnailTextForBodyPlaceholderFieldNumber;
+const int SlideArchive::kSlideObjectsLayerWithMasterFieldNumber;
 const int SlideArchive::kMasterFieldNumber;
 const int SlideArchive::kStaticGuidesFieldNumber;
 const int SlideArchive::kUserDefinedGuideStorageFieldNumber;
@@ -6872,6 +6980,7 @@ void SlideArchive::SharedCtor() {
   classicstylesheetrecord_ = NULL;
   thumbnailtextfortitleplaceholder_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
   thumbnailtextforbodyplaceholder_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+  slideobjectslayerwithmaster_ = false;
   master_ = NULL;
   userdefinedguidestorage_ = NULL;
   indocument_ = false;
@@ -6959,7 +7068,7 @@ void SlideArchive::Clear() {
       if (slidenumberplaceholder_ != NULL) slidenumberplaceholder_->::TSP::Reference::Clear();
     }
   }
-  if (_has_bits_[10 / 32] & (0xffu << (10 % 32))) {
+  if (_has_bits_[11 / 32] & (0xffu << (11 % 32))) {
     if (has_name()) {
       if (name_ != &::google::protobuf::internal::kEmptyString) {
         name_->clear();
@@ -6973,11 +7082,11 @@ void SlideArchive::Clear() {
     if (has_titlelayoutproperties()) {
       if (titlelayoutproperties_ != NULL) titlelayoutproperties_->::TSWP::ShapeStylePropertiesArchive::Clear();
     }
+  }
+  if (_has_bits_[16 / 32] & (0xffu << (16 % 32))) {
     if (has_bodyplaceholdergeometry()) {
       if (bodyplaceholdergeometry_ != NULL) bodyplaceholdergeometry_->::TSD::GeometryArchive::Clear();
     }
-  }
-  if (_has_bits_[16 / 32] & (0xffu << (16 % 32))) {
     bodyplaceholdershapestyleindex_ = 0u;
     bodyplaceholdertextstyleindex_ = 0u;
     if (has_bodylayoutproperties()) {
@@ -6991,11 +7100,11 @@ void SlideArchive::Clear() {
     if (has_slidenumberlayoutproperties()) {
       if (slidenumberlayoutproperties_ != NULL) slidenumberlayoutproperties_->::TSWP::ShapeStylePropertiesArchive::Clear();
     }
+  }
+  if (_has_bits_[24 / 32] & (0xffu << (24 % 32))) {
     if (has_classicstylesheetrecord()) {
       if (classicstylesheetrecord_ != NULL) classicstylesheetrecord_->::TSP::Reference::Clear();
     }
-  }
-  if (_has_bits_[26 / 32] & (0xffu << (26 % 32))) {
     if (has_thumbnailtextfortitleplaceholder()) {
       if (thumbnailtextfortitleplaceholder_ != &::google::protobuf::internal::kEmptyString) {
         thumbnailtextfortitleplaceholder_->clear();
@@ -7006,15 +7115,16 @@ void SlideArchive::Clear() {
         thumbnailtextforbodyplaceholder_->clear();
       }
     }
+    slideobjectslayerwithmaster_ = false;
     if (has_master()) {
       if (master_ != NULL) master_->::TSP::Reference::Clear();
     }
+  }
+  if (_has_bits_[32 / 32] & (0xffu << (32 % 32))) {
     if (has_userdefinedguidestorage()) {
       if (userdefinedguidestorage_ != NULL) userdefinedguidestorage_->::TSP::Reference::Clear();
     }
     indocument_ = false;
-  }
-  if (_has_bits_[32 / 32] & (0xffu << (32 % 32))) {
     if (has_note()) {
       if (note_ != NULL) note_->::TSP::Reference::Clear();
     }
@@ -7026,7 +7136,8 @@ void SlideArchive::Clear() {
   }
   builds_.Clear();
   buildchunks_.Clear();
-  drawables_.Clear();
+  owned_drawables_.Clear();
+  drawables_z_order_.Clear();
   sage_tag_to_info_map_.Clear();
   bodyparagraphstyles_.Clear();
   bodyliststyles_.Clear();
@@ -7122,21 +7233,21 @@ bool SlideArchive::MergePartialFromCodedStream(
         } else {
           goto handle_uninterpreted;
         }
-        if (input->ExpectTag(58)) goto parse_drawables;
+        if (input->ExpectTag(58)) goto parse_owned_drawables;
         break;
       }
 
-      // repeated .TSP.Reference drawables = 7;
+      // repeated .TSP.Reference owned_drawables = 7;
       case 7: {
         if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
             ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
-         parse_drawables:
+         parse_owned_drawables:
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
-                input, add_drawables()));
+                input, add_owned_drawables()));
         } else {
           goto handle_uninterpreted;
         }
-        if (input->ExpectTag(58)) goto parse_drawables;
+        if (input->ExpectTag(58)) goto parse_owned_drawables;
         if (input->ExpectTag(82)) goto parse_name;
         break;
       }
@@ -7574,6 +7685,37 @@ bool SlideArchive::MergePartialFromCodedStream(
         } else {
           goto handle_uninterpreted;
         }
+        if (input->ExpectTag(328)) goto parse_slideObjectsLayerWithMaster;
+        break;
+      }
+
+      // optional bool slideObjectsLayerWithMaster = 41 [default = false];
+      case 41: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_slideObjectsLayerWithMaster:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &slideobjectslayerwithmaster_)));
+          set_has_slideobjectslayerwithmaster();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(338)) goto parse_drawables_z_order;
+        break;
+      }
+
+      // repeated .TSP.Reference drawables_z_order = 42;
+      case 42: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_drawables_z_order:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+                input, add_drawables_z_order()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(338)) goto parse_drawables_z_order;
         if (input->ExpectAtEnd()) return true;
         break;
       }
@@ -7632,10 +7774,10 @@ void SlideArchive::SerializeWithCachedSizes(
       6, this->bodyplaceholder(), output);
   }
 
-  // repeated .TSP.Reference drawables = 7;
-  for (int i = 0; i < this->drawables_size(); i++) {
+  // repeated .TSP.Reference owned_drawables = 7;
+  for (int i = 0; i < this->owned_drawables_size(); i++) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      7, this->drawables(i), output);
+      7, this->owned_drawables(i), output);
   }
 
   // optional string name = 10;
@@ -7812,6 +7954,17 @@ void SlideArchive::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteBool(40, this->info_using_object_placeholder_geometry_matches_object_placeholder_geometry(), output);
   }
 
+  // optional bool slideObjectsLayerWithMaster = 41 [default = false];
+  if (has_slideobjectslayerwithmaster()) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(41, this->slideobjectslayerwithmaster(), output);
+  }
+
+  // repeated .TSP.Reference drawables_z_order = 42;
+  for (int i = 0; i < this->drawables_z_order_size(); i++) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      42, this->drawables_z_order(i), output);
+  }
+
   if (!unknown_fields().empty()) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         unknown_fields(), output);
@@ -7862,11 +8015,11 @@ void SlideArchive::SerializeWithCachedSizes(
         6, this->bodyplaceholder(), target);
   }
 
-  // repeated .TSP.Reference drawables = 7;
-  for (int i = 0; i < this->drawables_size(); i++) {
+  // repeated .TSP.Reference owned_drawables = 7;
+  for (int i = 0; i < this->owned_drawables_size(); i++) {
     target = ::google::protobuf::internal::WireFormatLite::
       WriteMessageNoVirtualToArray(
-        7, this->drawables(i), target);
+        7, this->owned_drawables(i), target);
   }
 
   // optional string name = 10;
@@ -8063,6 +8216,18 @@ void SlideArchive::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(40, this->info_using_object_placeholder_geometry_matches_object_placeholder_geometry(), target);
   }
 
+  // optional bool slideObjectsLayerWithMaster = 41 [default = false];
+  if (has_slideobjectslayerwithmaster()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(41, this->slideobjectslayerwithmaster(), target);
+  }
+
+  // repeated .TSP.Reference drawables_z_order = 42;
+  for (int i = 0; i < this->drawables_z_order_size(); i++) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        42, this->drawables_z_order(i), target);
+  }
+
   if (!unknown_fields().empty()) {
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
         unknown_fields(), target);
@@ -8117,7 +8282,7 @@ int SlideArchive::ByteSize() const {
     }
 
   }
-  if (_has_bits_[10 / 32] & (0xffu << (10 % 32))) {
+  if (_has_bits_[11 / 32] & (0xffu << (11 % 32))) {
     // optional string name = 10;
     if (has_name()) {
       total_size += 1 +
@@ -8153,6 +8318,8 @@ int SlideArchive::ByteSize() const {
           this->titlelayoutproperties());
     }
 
+  }
+  if (_has_bits_[16 / 32] & (0xffu << (16 % 32))) {
     // optional .TSD.GeometryArchive bodyPlaceholderGeometry = 14;
     if (has_bodyplaceholdergeometry()) {
       total_size += 1 +
@@ -8160,8 +8327,6 @@ int SlideArchive::ByteSize() const {
           this->bodyplaceholdergeometry());
     }
 
-  }
-  if (_has_bits_[16 / 32] & (0xffu << (16 % 32))) {
     // optional uint32 bodyPlaceholderShapeStyleIndex = 15;
     if (has_bodyplaceholdershapestyleindex()) {
       total_size += 1 +
@@ -8211,6 +8376,8 @@ int SlideArchive::ByteSize() const {
           this->slidenumberlayoutproperties());
     }
 
+  }
+  if (_has_bits_[24 / 32] & (0xffu << (24 % 32))) {
     // optional .TSP.Reference classicStylesheetRecord = 29;
     if (has_classicstylesheetrecord()) {
       total_size += 2 +
@@ -8218,8 +8385,6 @@ int SlideArchive::ByteSize() const {
           this->classicstylesheetrecord());
     }
 
-  }
-  if (_has_bits_[26 / 32] & (0xffu << (26 % 32))) {
     // optional string thumbnailTextForTitlePlaceholder = 37;
     if (has_thumbnailtextfortitleplaceholder()) {
       total_size += 2 +
@@ -8234,6 +8399,11 @@ int SlideArchive::ByteSize() const {
           this->thumbnailtextforbodyplaceholder());
     }
 
+    // optional bool slideObjectsLayerWithMaster = 41 [default = false];
+    if (has_slideobjectslayerwithmaster()) {
+      total_size += 2 + 1;
+    }
+
     // optional .TSP.Reference master = 17;
     if (has_master()) {
       total_size += 2 +
@@ -8241,6 +8411,8 @@ int SlideArchive::ByteSize() const {
           this->master());
     }
 
+  }
+  if (_has_bits_[32 / 32] & (0xffu << (32 % 32))) {
     // optional .TSP.Reference userDefinedGuideStorage = 36;
     if (has_userdefinedguidestorage()) {
       total_size += 2 +
@@ -8253,8 +8425,6 @@ int SlideArchive::ByteSize() const {
       total_size += 2 + 1;
     }
 
-  }
-  if (_has_bits_[32 / 32] & (0xffu << (32 % 32))) {
     // optional .TSP.Reference note = 27;
     if (has_note()) {
       total_size += 2 +
@@ -8296,12 +8466,20 @@ int SlideArchive::ByteSize() const {
         this->buildchunks(i));
   }
 
-  // repeated .TSP.Reference drawables = 7;
-  total_size += 1 * this->drawables_size();
-  for (int i = 0; i < this->drawables_size(); i++) {
+  // repeated .TSP.Reference owned_drawables = 7;
+  total_size += 1 * this->owned_drawables_size();
+  for (int i = 0; i < this->owned_drawables_size(); i++) {
     total_size +=
       ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
-        this->drawables(i));
+        this->owned_drawables(i));
+  }
+
+  // repeated .TSP.Reference drawables_z_order = 42;
+  total_size += 2 * this->drawables_z_order_size();
+  for (int i = 0; i < this->drawables_z_order_size(); i++) {
+    total_size +=
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+        this->drawables_z_order(i));
   }
 
   // repeated .KN.SlideArchive.SageTagMapEntry sage_tag_to_info_map = 28;
@@ -8363,7 +8541,8 @@ void SlideArchive::MergeFrom(const SlideArchive& from) {
   GOOGLE_CHECK_NE(&from, this);
   builds_.MergeFrom(from.builds_);
   buildchunks_.MergeFrom(from.buildchunks_);
-  drawables_.MergeFrom(from.drawables_);
+  owned_drawables_.MergeFrom(from.owned_drawables_);
+  drawables_z_order_.MergeFrom(from.drawables_z_order_);
   sage_tag_to_info_map_.MergeFrom(from.sage_tag_to_info_map_);
   bodyparagraphstyles_.MergeFrom(from.bodyparagraphstyles_);
   bodyliststyles_.MergeFrom(from.bodyliststyles_);
@@ -8388,7 +8567,7 @@ void SlideArchive::MergeFrom(const SlideArchive& from) {
       mutable_slidenumberplaceholder()->::TSP::Reference::MergeFrom(from.slidenumberplaceholder());
     }
   }
-  if (from._has_bits_[10 / 32] & (0xffu << (10 % 32))) {
+  if (from._has_bits_[11 / 32] & (0xffu << (11 % 32))) {
     if (from.has_name()) {
       set_name(from.name());
     }
@@ -8404,11 +8583,11 @@ void SlideArchive::MergeFrom(const SlideArchive& from) {
     if (from.has_titlelayoutproperties()) {
       mutable_titlelayoutproperties()->::TSWP::ShapeStylePropertiesArchive::MergeFrom(from.titlelayoutproperties());
     }
+  }
+  if (from._has_bits_[16 / 32] & (0xffu << (16 % 32))) {
     if (from.has_bodyplaceholdergeometry()) {
       mutable_bodyplaceholdergeometry()->::TSD::GeometryArchive::MergeFrom(from.bodyplaceholdergeometry());
     }
-  }
-  if (from._has_bits_[16 / 32] & (0xffu << (16 % 32))) {
     if (from.has_bodyplaceholdershapestyleindex()) {
       set_bodyplaceholdershapestyleindex(from.bodyplaceholdershapestyleindex());
     }
@@ -8430,28 +8609,31 @@ void SlideArchive::MergeFrom(const SlideArchive& from) {
     if (from.has_slidenumberlayoutproperties()) {
       mutable_slidenumberlayoutproperties()->::TSWP::ShapeStylePropertiesArchive::MergeFrom(from.slidenumberlayoutproperties());
     }
+  }
+  if (from._has_bits_[24 / 32] & (0xffu << (24 % 32))) {
     if (from.has_classicstylesheetrecord()) {
       mutable_classicstylesheetrecord()->::TSP::Reference::MergeFrom(from.classicstylesheetrecord());
     }
-  }
-  if (from._has_bits_[26 / 32] & (0xffu << (26 % 32))) {
     if (from.has_thumbnailtextfortitleplaceholder()) {
       set_thumbnailtextfortitleplaceholder(from.thumbnailtextfortitleplaceholder());
     }
     if (from.has_thumbnailtextforbodyplaceholder()) {
       set_thumbnailtextforbodyplaceholder(from.thumbnailtextforbodyplaceholder());
     }
+    if (from.has_slideobjectslayerwithmaster()) {
+      set_slideobjectslayerwithmaster(from.slideobjectslayerwithmaster());
+    }
     if (from.has_master()) {
       mutable_master()->::TSP::Reference::MergeFrom(from.master());
     }
+  }
+  if (from._has_bits_[32 / 32] & (0xffu << (32 % 32))) {
     if (from.has_userdefinedguidestorage()) {
       mutable_userdefinedguidestorage()->::TSP::Reference::MergeFrom(from.userdefinedguidestorage());
     }
     if (from.has_indocument()) {
       set_indocument(from.indocument());
     }
-  }
-  if (from._has_bits_[32 / 32] & (0xffu << (32 % 32))) {
     if (from.has_note()) {
       mutable_note()->::TSP::Reference::MergeFrom(from.note());
     }
@@ -8481,7 +8663,8 @@ void SlideArchive::CopyFrom(const SlideArchive& from) {
 }
 
 bool SlideArchive::IsInitialized() const {
-  if ((_has_bits_[0] & 0x80000009) != 0x80000009) return false;
+  if ((_has_bits_[0] & 0x00000009) != 0x00000009) return false;
+  if ((_has_bits_[1] & 0x00000002) != 0x00000002) return false;
 
   if (has_style()) {
     if (!this->style().IsInitialized()) return false;
@@ -8507,8 +8690,11 @@ bool SlideArchive::IsInitialized() const {
   if (has_slidenumberplaceholder()) {
     if (!this->slidenumberplaceholder().IsInitialized()) return false;
   }
-  for (int i = 0; i < drawables_size(); i++) {
-    if (!this->drawables(i).IsInitialized()) return false;
+  for (int i = 0; i < owned_drawables_size(); i++) {
+    if (!this->owned_drawables(i).IsInitialized()) return false;
+  }
+  for (int i = 0; i < drawables_z_order_size(); i++) {
+    if (!this->drawables_z_order(i).IsInitialized()) return false;
   }
   for (int i = 0; i < sage_tag_to_info_map_size(); i++) {
     if (!this->sage_tag_to_info_map(i).IsInitialized()) return false;
@@ -8565,7 +8751,8 @@ void SlideArchive::Swap(SlideArchive* other) {
     std::swap(bodyplaceholder_, other->bodyplaceholder_);
     std::swap(objectplaceholder_, other->objectplaceholder_);
     std::swap(slidenumberplaceholder_, other->slidenumberplaceholder_);
-    drawables_.Swap(&other->drawables_);
+    owned_drawables_.Swap(&other->owned_drawables_);
+    drawables_z_order_.Swap(&other->drawables_z_order_);
     sage_tag_to_info_map_.Swap(&other->sage_tag_to_info_map_);
     std::swap(name_, other->name_);
     std::swap(titleplaceholdergeometry_, other->titleplaceholdergeometry_);
@@ -8585,6 +8772,7 @@ void SlideArchive::Swap(SlideArchive* other) {
     bodyliststyles_.Swap(&other->bodyliststyles_);
     std::swap(thumbnailtextfortitleplaceholder_, other->thumbnailtextfortitleplaceholder_);
     std::swap(thumbnailtextforbodyplaceholder_, other->thumbnailtextforbodyplaceholder_);
+    std::swap(slideobjectslayerwithmaster_, other->slideobjectslayerwithmaster_);
     std::swap(master_, other->master_);
     staticguides_.Swap(&other->staticguides_);
     std::swap(userdefinedguidestorage_, other->userdefinedguidestorage_);
@@ -8629,6 +8817,7 @@ const int SlideNodeArchive::kUniqueIdentifierFieldNumber;
 const int SlideNodeArchive::kCopyFromSlideIdentifierFieldNumber;
 const int SlideNodeArchive::kSlideSpecificHyperlinkCountFieldNumber;
 const int SlideNodeArchive::kEventCountFieldNumber;
+const int SlideNodeArchive::kHasExplicitBuildsFieldNumber;
 const int SlideNodeArchive::kDatabaseThumbnailFieldNumber;
 const int SlideNodeArchive::kDatabaseThumbnailsFieldNumber;
 #endif  // !_MSC_VER
@@ -8665,6 +8854,7 @@ void SlideNodeArchive::SharedCtor() {
   copyfromslideidentifier_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
   slidespecifichyperlinkcount_ = 0u;
   eventcount_ = 0u;
+  has_explicit_builds_ = false;
   database_thumbnail_ = NULL;
   ::memset(_has_bits_, 0, sizeof(_has_bits_));
 }
@@ -8737,6 +8927,7 @@ void SlideNodeArchive::Clear() {
   }
   if (_has_bits_[16 / 32] & (0xffu << (16 % 32))) {
     eventcount_ = 0u;
+    has_explicit_builds_ = false;
     if (has_database_thumbnail()) {
       if (database_thumbnail_ != NULL) database_thumbnail_->::TSP::Reference::Clear();
     }
@@ -8830,7 +9021,7 @@ bool SlideNodeArchive::MergePartialFromCodedStream(
         break;
       }
 
-      // required bool hasBuilds = 6;
+      // required bool hasBuilds = 6 [deprecated = true];
       case 6: {
         if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
             ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
@@ -9049,6 +9240,22 @@ bool SlideNodeArchive::MergePartialFromCodedStream(
         } else {
           goto handle_uninterpreted;
         }
+        if (input->ExpectTag(160)) goto parse_has_explicit_builds;
+        break;
+      }
+
+      // optional bool has_explicit_builds = 20;
+      case 20: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_has_explicit_builds:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &has_explicit_builds_)));
+          set_has_has_explicit_builds();
+        } else {
+          goto handle_uninterpreted;
+        }
         if (input->ExpectAtEnd()) return true;
         break;
       }
@@ -9099,7 +9306,7 @@ void SlideNodeArchive::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteBool(5, this->iscollapsed(), output);
   }
 
-  // required bool hasBuilds = 6;
+  // required bool hasBuilds = 6 [deprecated = true];
   if (has_hasbuilds()) {
     ::google::protobuf::internal::WireFormatLite::WriteBool(6, this->hasbuilds(), output);
   }
@@ -9180,6 +9387,11 @@ void SlideNodeArchive::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteBool(19, this->hasbodyinoutlineview(), output);
   }
 
+  // optional bool has_explicit_builds = 20;
+  if (has_has_explicit_builds()) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(20, this->has_explicit_builds(), output);
+  }
+
   if (!unknown_fields().empty()) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         unknown_fields(), output);
@@ -9219,7 +9431,7 @@ void SlideNodeArchive::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(5, this->iscollapsed(), target);
   }
 
-  // required bool hasBuilds = 6;
+  // required bool hasBuilds = 6 [deprecated = true];
   if (has_hasbuilds()) {
     target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(6, this->hasbuilds(), target);
   }
@@ -9305,6 +9517,11 @@ void SlideNodeArchive::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(19, this->hasbodyinoutlineview(), target);
   }
 
+  // optional bool has_explicit_builds = 20;
+  if (has_has_explicit_builds()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(20, this->has_explicit_builds(), target);
+  }
+
   if (!unknown_fields().empty()) {
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
         unknown_fields(), target);
@@ -9350,7 +9567,7 @@ int SlideNodeArchive::ByteSize() const {
       total_size += 2 + 1;
     }
 
-    // required bool hasBuilds = 6;
+    // required bool hasBuilds = 6 [deprecated = true];
     if (has_hasbuilds()) {
       total_size += 1 + 1;
     }
@@ -9398,6 +9615,11 @@ int SlideNodeArchive::ByteSize() const {
       total_size += 1 +
         ::google::protobuf::internal::WireFormatLite::UInt32Size(
           this->eventcount());
+    }
+
+    // optional bool has_explicit_builds = 20;
+    if (has_has_explicit_builds()) {
+      total_size += 2 + 1;
     }
 
     // optional .TSP.Reference database_thumbnail = 3;
@@ -9516,6 +9738,9 @@ void SlideNodeArchive::MergeFrom(const SlideNodeArchive& from) {
     if (from.has_eventcount()) {
       set_eventcount(from.eventcount());
     }
+    if (from.has_has_explicit_builds()) {
+      set_has_explicit_builds(from.has_explicit_builds());
+    }
     if (from.has_database_thumbnail()) {
       mutable_database_thumbnail()->::TSP::Reference::MergeFrom(from.database_thumbnail());
     }
@@ -9578,6 +9803,7 @@ void SlideNodeArchive::Swap(SlideNodeArchive* other) {
     std::swap(copyfromslideidentifier_, other->copyfromslideidentifier_);
     std::swap(slidespecifichyperlinkcount_, other->slidespecifichyperlinkcount_);
     std::swap(eventcount_, other->eventcount_);
+    std::swap(has_explicit_builds_, other->has_explicit_builds_);
     std::swap(database_thumbnail_, other->database_thumbnail_);
     database_thumbnails_.Swap(&other->database_thumbnails_);
     std::swap(_has_bits_[0], other->_has_bits_[0]);
@@ -10078,6 +10304,9 @@ const int UIStateArchive::kShowsRulerFieldNumber;
 const int UIStateArchive::kDesktopNavigatorViewWidthFieldNumber;
 const int UIStateArchive::kDesktopOutlineViewWidthFieldNumber;
 const int UIStateArchive::kDesktopMainContentSizeFieldNumber;
+const int UIStateArchive::kDesktopPresenterNotesViewHeightFieldNumber;
+const int UIStateArchive::kDesktopMainWindowOriginFieldNumber;
+const int UIStateArchive::kLightTableHidesSkippedSlidesFieldNumber;
 #endif  // !_MSC_VER
 
 UIStateArchive::UIStateArchive()
@@ -10095,6 +10324,7 @@ void UIStateArchive::InitAsDefaultInstance() {
   desktop_ui_layout_ = const_cast< ::TSP::Reference*>(&::TSP::Reference::default_instance());
   desktop_canvas_offset_ = const_cast< ::TSP::Point*>(&::TSP::Point::default_instance());
   desktop_main_content_size_ = const_cast< ::TSP::Size*>(&::TSP::Size::default_instance());
+  desktop_main_window_origin_ = const_cast< ::TSP::Point*>(&::TSP::Point::default_instance());
 }
 
 UIStateArchive::UIStateArchive(const UIStateArchive& from)
@@ -10126,6 +10356,9 @@ void UIStateArchive::SharedCtor() {
   desktop_navigator_view_width_ = 0;
   desktop_outline_view_width_ = 0;
   desktop_main_content_size_ = NULL;
+  desktop_presenter_notes_view_height_ = 0;
+  desktop_main_window_origin_ = NULL;
+  light_table_hides_skipped_slides_ = false;
   ::memset(_has_bits_, 0, sizeof(_has_bits_));
 }
 
@@ -10144,6 +10377,7 @@ void UIStateArchive::SharedDtor() {
     delete desktop_ui_layout_;
     delete desktop_canvas_offset_;
     delete desktop_main_content_size_;
+    delete desktop_main_window_origin_;
   }
 }
 
@@ -10213,6 +10447,13 @@ void UIStateArchive::Clear() {
     if (has_desktop_main_content_size()) {
       if (desktop_main_content_size_ != NULL) desktop_main_content_size_->::TSP::Size::Clear();
     }
+  }
+  if (_has_bits_[24 / 32] & (0xffu << (24 % 32))) {
+    desktop_presenter_notes_view_height_ = 0;
+    if (has_desktop_main_window_origin()) {
+      if (desktop_main_window_origin_ != NULL) desktop_main_window_origin_->::TSP::Point::Clear();
+    }
+    light_table_hides_skipped_slides_ = false;
   }
   selectedslidenodes_.Clear();
   chart_ui_state_.Clear();
@@ -10585,6 +10826,52 @@ bool UIStateArchive::MergePartialFromCodedStream(
         } else {
           goto handle_uninterpreted;
         }
+        if (input->ExpectTag(205)) goto parse_desktop_presenter_notes_view_height;
+        break;
+      }
+
+      // optional float desktop_presenter_notes_view_height = 25;
+      case 25: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_FIXED32) {
+         parse_desktop_presenter_notes_view_height:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
+                 input, &desktop_presenter_notes_view_height_)));
+          set_has_desktop_presenter_notes_view_height();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(210)) goto parse_desktop_main_window_origin;
+        break;
+      }
+
+      // optional .TSP.Point desktop_main_window_origin = 26;
+      case 26: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_desktop_main_window_origin:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_desktop_main_window_origin()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(216)) goto parse_light_table_hides_skipped_slides;
+        break;
+      }
+
+      // optional bool light_table_hides_skipped_slides = 27;
+      case 27: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_light_table_hides_skipped_slides:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &light_table_hides_skipped_slides_)));
+          set_has_light_table_hides_skipped_slides();
+        } else {
+          goto handle_uninterpreted;
+        }
         if (input->ExpectAtEnd()) return true;
         break;
       }
@@ -10739,6 +11026,22 @@ void UIStateArchive::SerializeWithCachedSizes(
       24, this->desktop_main_content_size(), output);
   }
 
+  // optional float desktop_presenter_notes_view_height = 25;
+  if (has_desktop_presenter_notes_view_height()) {
+    ::google::protobuf::internal::WireFormatLite::WriteFloat(25, this->desktop_presenter_notes_view_height(), output);
+  }
+
+  // optional .TSP.Point desktop_main_window_origin = 26;
+  if (has_desktop_main_window_origin()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      26, this->desktop_main_window_origin(), output);
+  }
+
+  // optional bool light_table_hides_skipped_slides = 27;
+  if (has_light_table_hides_skipped_slides()) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(27, this->light_table_hides_skipped_slides(), output);
+  }
+
   if (!unknown_fields().empty()) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         unknown_fields(), output);
@@ -10891,6 +11194,23 @@ void UIStateArchive::SerializeWithCachedSizes(
         24, this->desktop_main_content_size(), target);
   }
 
+  // optional float desktop_presenter_notes_view_height = 25;
+  if (has_desktop_presenter_notes_view_height()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(25, this->desktop_presenter_notes_view_height(), target);
+  }
+
+  // optional .TSP.Point desktop_main_window_origin = 26;
+  if (has_desktop_main_window_origin()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        26, this->desktop_main_window_origin(), target);
+  }
+
+  // optional bool light_table_hides_skipped_slides = 27;
+  if (has_light_table_hides_skipped_slides()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(27, this->light_table_hides_skipped_slides(), target);
+  }
+
   if (!unknown_fields().empty()) {
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
         unknown_fields(), target);
@@ -11030,6 +11350,25 @@ int UIStateArchive::ByteSize() const {
     }
 
   }
+  if (_has_bits_[24 / 32] & (0xffu << (24 % 32))) {
+    // optional float desktop_presenter_notes_view_height = 25;
+    if (has_desktop_presenter_notes_view_height()) {
+      total_size += 2 + 4;
+    }
+
+    // optional .TSP.Point desktop_main_window_origin = 26;
+    if (has_desktop_main_window_origin()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->desktop_main_window_origin());
+    }
+
+    // optional bool light_table_hides_skipped_slides = 27;
+    if (has_light_table_hides_skipped_slides()) {
+      total_size += 2 + 1;
+    }
+
+  }
   // repeated .TSP.Reference selectedSlideNodes = 6;
   total_size += 1 * this->selectedslidenodes_size();
   for (int i = 0; i < this->selectedslidenodes_size(); i++) {
@@ -11151,6 +11490,17 @@ void UIStateArchive::MergeFrom(const UIStateArchive& from) {
       mutable_desktop_main_content_size()->::TSP::Size::MergeFrom(from.desktop_main_content_size());
     }
   }
+  if (from._has_bits_[24 / 32] & (0xffu << (24 % 32))) {
+    if (from.has_desktop_presenter_notes_view_height()) {
+      set_desktop_presenter_notes_view_height(from.desktop_presenter_notes_view_height());
+    }
+    if (from.has_desktop_main_window_origin()) {
+      mutable_desktop_main_window_origin()->::TSP::Point::MergeFrom(from.desktop_main_window_origin());
+    }
+    if (from.has_light_table_hides_skipped_slides()) {
+      set_light_table_hides_skipped_slides(from.light_table_hides_skipped_slides());
+    }
+  }
   mutable_unknown_fields()->MergeFrom(from.unknown_fields());
 }
 
@@ -11204,6 +11554,9 @@ bool UIStateArchive::IsInitialized() const {
   if (has_desktop_main_content_size()) {
     if (!this->desktop_main_content_size().IsInitialized()) return false;
   }
+  if (has_desktop_main_window_origin()) {
+    if (!this->desktop_main_window_origin().IsInitialized()) return false;
+  }
   return true;
 }
 
@@ -11233,6 +11586,9 @@ void UIStateArchive::Swap(UIStateArchive* other) {
     std::swap(desktop_navigator_view_width_, other->desktop_navigator_view_width_);
     std::swap(desktop_outline_view_width_, other->desktop_outline_view_width_);
     std::swap(desktop_main_content_size_, other->desktop_main_content_size_);
+    std::swap(desktop_presenter_notes_view_height_, other->desktop_presenter_notes_view_height_);
+    std::swap(desktop_main_window_origin_, other->desktop_main_window_origin_);
+    std::swap(light_table_hides_skipped_slides_, other->light_table_hides_skipped_slides_);
     std::swap(_has_bits_[0], other->_has_bits_[0]);
     _unknown_fields_.Swap(&other->_unknown_fields_);
     std::swap(_cached_size_, other->_cached_size_);
@@ -11553,6 +11909,8 @@ const int ThemeArchive::kMastersFieldNumber;
 const int ThemeArchive::kUuidFieldNumber;
 const int ThemeArchive::kClassicThemeRecordsFieldNumber;
 const int ThemeArchive::kDefaultMasterSlideNodeFieldNumber;
+const int ThemeArchive::kDefaultMasterSlideNodeReferenceFieldNumber;
+const int ThemeArchive::kDefaultMasterSlideNodeIsOurBestGuessFieldNumber;
 #endif  // !_MSC_VER
 
 ThemeArchive::ThemeArchive()
@@ -11563,6 +11921,7 @@ ThemeArchive::ThemeArchive()
 void ThemeArchive::InitAsDefaultInstance() {
   super_ = const_cast< ::TSS::ThemeArchive*>(&::TSS::ThemeArchive::default_instance());
   defaultmasterslidenode_ = const_cast< ::TSP::Reference*>(&::TSP::Reference::default_instance());
+  default_master_slide_node_reference_ = const_cast< ::TSP::Reference*>(&::TSP::Reference::default_instance());
 }
 
 ThemeArchive::ThemeArchive(const ThemeArchive& from)
@@ -11576,6 +11935,8 @@ void ThemeArchive::SharedCtor() {
   super_ = NULL;
   uuid_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
   defaultmasterslidenode_ = NULL;
+  default_master_slide_node_reference_ = NULL;
+  default_master_slide_node_is_our_best_guess_ = false;
   ::memset(_has_bits_, 0, sizeof(_has_bits_));
 }
 
@@ -11590,6 +11951,7 @@ void ThemeArchive::SharedDtor() {
   if (this != default_instance_) {
     delete super_;
     delete defaultmasterslidenode_;
+    delete default_master_slide_node_reference_;
   }
 }
 
@@ -11627,6 +11989,10 @@ void ThemeArchive::Clear() {
     if (has_defaultmasterslidenode()) {
       if (defaultmasterslidenode_ != NULL) defaultmasterslidenode_->::TSP::Reference::Clear();
     }
+    if (has_default_master_slide_node_reference()) {
+      if (default_master_slide_node_reference_ != NULL) default_master_slide_node_reference_->::TSP::Reference::Clear();
+    }
+    default_master_slide_node_is_our_best_guess_ = false;
   }
   masters_.Clear();
   classicthemerecords_.Clear();
@@ -11710,6 +12076,36 @@ bool ThemeArchive::MergePartialFromCodedStream(
         } else {
           goto handle_uninterpreted;
         }
+        if (input->ExpectTag(50)) goto parse_default_master_slide_node_reference;
+        break;
+      }
+
+      // optional .TSP.Reference default_master_slide_node_reference = 6;
+      case 6: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_default_master_slide_node_reference:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_default_master_slide_node_reference()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(56)) goto parse_default_master_slide_node_is_our_best_guess;
+        break;
+      }
+
+      // optional bool default_master_slide_node_is_our_best_guess = 7;
+      case 7: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_default_master_slide_node_is_our_best_guess:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &default_master_slide_node_is_our_best_guess_)));
+          set_has_default_master_slide_node_is_our_best_guess();
+        } else {
+          goto handle_uninterpreted;
+        }
         if (input->ExpectAtEnd()) return true;
         break;
       }
@@ -11765,6 +12161,17 @@ void ThemeArchive::SerializeWithCachedSizes(
       5, this->defaultmasterslidenode(), output);
   }
 
+  // optional .TSP.Reference default_master_slide_node_reference = 6;
+  if (has_default_master_slide_node_reference()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      6, this->default_master_slide_node_reference(), output);
+  }
+
+  // optional bool default_master_slide_node_is_our_best_guess = 7;
+  if (has_default_master_slide_node_is_our_best_guess()) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(7, this->default_master_slide_node_is_our_best_guess(), output);
+  }
+
   if (!unknown_fields().empty()) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         unknown_fields(), output);
@@ -11811,6 +12218,18 @@ void ThemeArchive::SerializeWithCachedSizes(
         5, this->defaultmasterslidenode(), target);
   }
 
+  // optional .TSP.Reference default_master_slide_node_reference = 6;
+  if (has_default_master_slide_node_reference()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        6, this->default_master_slide_node_reference(), target);
+  }
+
+  // optional bool default_master_slide_node_is_our_best_guess = 7;
+  if (has_default_master_slide_node_is_our_best_guess()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(7, this->default_master_slide_node_is_our_best_guess(), target);
+  }
+
   if (!unknown_fields().empty()) {
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
         unknown_fields(), target);
@@ -11841,6 +12260,18 @@ int ThemeArchive::ByteSize() const {
       total_size += 1 +
         ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
           this->defaultmasterslidenode());
+    }
+
+    // optional .TSP.Reference default_master_slide_node_reference = 6;
+    if (has_default_master_slide_node_reference()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->default_master_slide_node_reference());
+    }
+
+    // optional bool default_master_slide_node_is_our_best_guess = 7;
+    if (has_default_master_slide_node_is_our_best_guess()) {
+      total_size += 1 + 1;
     }
 
   }
@@ -11897,6 +12328,12 @@ void ThemeArchive::MergeFrom(const ThemeArchive& from) {
     if (from.has_defaultmasterslidenode()) {
       mutable_defaultmasterslidenode()->::TSP::Reference::MergeFrom(from.defaultmasterslidenode());
     }
+    if (from.has_default_master_slide_node_reference()) {
+      mutable_default_master_slide_node_reference()->::TSP::Reference::MergeFrom(from.default_master_slide_node_reference());
+    }
+    if (from.has_default_master_slide_node_is_our_best_guess()) {
+      set_default_master_slide_node_is_our_best_guess(from.default_master_slide_node_is_our_best_guess());
+    }
   }
   mutable_unknown_fields()->MergeFrom(from.unknown_fields());
 }
@@ -11928,6 +12365,9 @@ bool ThemeArchive::IsInitialized() const {
   if (has_defaultmasterslidenode()) {
     if (!this->defaultmasterslidenode().IsInitialized()) return false;
   }
+  if (has_default_master_slide_node_reference()) {
+    if (!this->default_master_slide_node_reference().IsInitialized()) return false;
+  }
   return true;
 }
 
@@ -11938,6 +12378,8 @@ void ThemeArchive::Swap(ThemeArchive* other) {
     std::swap(uuid_, other->uuid_);
     classicthemerecords_.Swap(&other->classicthemerecords_);
     std::swap(defaultmasterslidenode_, other->defaultmasterslidenode_);
+    std::swap(default_master_slide_node_reference_, other->default_master_slide_node_reference_);
+    std::swap(default_master_slide_node_is_our_best_guess_, other->default_master_slide_node_is_our_best_guess_);
     std::swap(_has_bits_[0], other->_has_bits_[0]);
     _unknown_fields_.Swap(&other->_unknown_fields_);
     std::swap(_cached_size_, other->_cached_size_);
@@ -14094,8 +14536,11 @@ const int PasteboardNativeStorageArchive::kDrawablesFieldNumber;
 const int PasteboardNativeStorageArchive::kBuildsFieldNumber;
 const int PasteboardNativeStorageArchive::kBuildChunksFieldNumber;
 const int PasteboardNativeStorageArchive::kSlideNodesFieldNumber;
+const int PasteboardNativeStorageArchive::kMasterSlideNodesFieldNumber;
 const int PasteboardNativeStorageArchive::kOriginalShowSizeFieldNumber;
 const int PasteboardNativeStorageArchive::kTitleRangesFieldNumber;
+const int PasteboardNativeStorageArchive::kGeometriesInRootFieldNumber;
+const int PasteboardNativeStorageArchive::kSlideNodeUniqueIdentifierFieldNumber;
 #endif  // !_MSC_VER
 
 PasteboardNativeStorageArchive::PasteboardNativeStorageArchive()
@@ -14116,6 +14561,7 @@ PasteboardNativeStorageArchive::PasteboardNativeStorageArchive(const PasteboardN
 void PasteboardNativeStorageArchive::SharedCtor() {
   _cached_size_ = 0;
   originalshowsize_ = NULL;
+  slide_node_unique_identifier_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
   ::memset(_has_bits_, 0, sizeof(_has_bits_));
 }
 
@@ -14124,6 +14570,9 @@ PasteboardNativeStorageArchive::~PasteboardNativeStorageArchive() {
 }
 
 void PasteboardNativeStorageArchive::SharedDtor() {
+  if (slide_node_unique_identifier_ != &::google::protobuf::internal::kEmptyString) {
+    delete slide_node_unique_identifier_;
+  }
   if (this != default_instance_) {
     delete originalshowsize_;
   }
@@ -14151,16 +14600,25 @@ PasteboardNativeStorageArchive* PasteboardNativeStorageArchive::New() const {
 }
 
 void PasteboardNativeStorageArchive::Clear() {
-  if (_has_bits_[4 / 32] & (0xffu << (4 % 32))) {
+  if (_has_bits_[5 / 32] & (0xffu << (5 % 32))) {
     if (has_originalshowsize()) {
       if (originalshowsize_ != NULL) originalshowsize_->::TSP::Size::Clear();
+    }
+  }
+  if (_has_bits_[8 / 32] & (0xffu << (8 % 32))) {
+    if (has_slide_node_unique_identifier()) {
+      if (slide_node_unique_identifier_ != &::google::protobuf::internal::kEmptyString) {
+        slide_node_unique_identifier_->clear();
+      }
     }
   }
   drawables_.Clear();
   builds_.Clear();
   buildchunks_.Clear();
   slidenodes_.Clear();
+  masterslidenodes_.Clear();
   titleranges_.Clear();
+  geometries_in_root_.Clear();
   ::memset(_has_bits_, 0, sizeof(_has_bits_));
   mutable_unknown_fields()->Clear();
 }
@@ -14256,6 +14714,53 @@ bool PasteboardNativeStorageArchive::MergePartialFromCodedStream(
           goto handle_uninterpreted;
         }
         if (input->ExpectTag(50)) goto parse_titleRanges;
+        if (input->ExpectTag(58)) goto parse_geometries_in_root;
+        break;
+      }
+
+      // repeated .TSD.GeometryArchive geometries_in_root = 7;
+      case 7: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_geometries_in_root:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+                input, add_geometries_in_root()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(58)) goto parse_geometries_in_root;
+        if (input->ExpectTag(66)) goto parse_slide_node_unique_identifier;
+        break;
+      }
+
+      // optional string slide_node_unique_identifier = 8;
+      case 8: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_slide_node_unique_identifier:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_slide_node_unique_identifier()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+            this->slide_node_unique_identifier().data(), this->slide_node_unique_identifier().length(),
+            ::google::protobuf::internal::WireFormat::PARSE);
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(74)) goto parse_masterSlideNodes;
+        break;
+      }
+
+      // repeated .TSP.Reference masterSlideNodes = 9;
+      case 9: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_masterSlideNodes:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+                input, add_masterslidenodes()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(74)) goto parse_masterSlideNodes;
         if (input->ExpectAtEnd()) return true;
         break;
       }
@@ -14314,6 +14819,27 @@ void PasteboardNativeStorageArchive::SerializeWithCachedSizes(
       6, this->titleranges(i), output);
   }
 
+  // repeated .TSD.GeometryArchive geometries_in_root = 7;
+  for (int i = 0; i < this->geometries_in_root_size(); i++) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      7, this->geometries_in_root(i), output);
+  }
+
+  // optional string slide_node_unique_identifier = 8;
+  if (has_slide_node_unique_identifier()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+      this->slide_node_unique_identifier().data(), this->slide_node_unique_identifier().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE);
+    ::google::protobuf::internal::WireFormatLite::WriteString(
+      8, this->slide_node_unique_identifier(), output);
+  }
+
+  // repeated .TSP.Reference masterSlideNodes = 9;
+  for (int i = 0; i < this->masterslidenodes_size(); i++) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      9, this->masterslidenodes(i), output);
+  }
+
   if (!unknown_fields().empty()) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         unknown_fields(), output);
@@ -14364,6 +14890,30 @@ void PasteboardNativeStorageArchive::SerializeWithCachedSizes(
         6, this->titleranges(i), target);
   }
 
+  // repeated .TSD.GeometryArchive geometries_in_root = 7;
+  for (int i = 0; i < this->geometries_in_root_size(); i++) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        7, this->geometries_in_root(i), target);
+  }
+
+  // optional string slide_node_unique_identifier = 8;
+  if (has_slide_node_unique_identifier()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+      this->slide_node_unique_identifier().data(), this->slide_node_unique_identifier().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE);
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        8, this->slide_node_unique_identifier(), target);
+  }
+
+  // repeated .TSP.Reference masterSlideNodes = 9;
+  for (int i = 0; i < this->masterslidenodes_size(); i++) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        9, this->masterslidenodes(i), target);
+  }
+
   if (!unknown_fields().empty()) {
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
         unknown_fields(), target);
@@ -14374,12 +14924,21 @@ void PasteboardNativeStorageArchive::SerializeWithCachedSizes(
 int PasteboardNativeStorageArchive::ByteSize() const {
   int total_size = 0;
 
-  if (_has_bits_[4 / 32] & (0xffu << (4 % 32))) {
+  if (_has_bits_[5 / 32] & (0xffu << (5 % 32))) {
     // optional .TSP.Size originalShowSize = 5;
     if (has_originalshowsize()) {
       total_size += 1 +
         ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
           this->originalshowsize());
+    }
+
+  }
+  if (_has_bits_[8 / 32] & (0xffu << (8 % 32))) {
+    // optional string slide_node_unique_identifier = 8;
+    if (has_slide_node_unique_identifier()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->slide_node_unique_identifier());
     }
 
   }
@@ -14415,12 +14974,28 @@ int PasteboardNativeStorageArchive::ByteSize() const {
         this->slidenodes(i));
   }
 
+  // repeated .TSP.Reference masterSlideNodes = 9;
+  total_size += 1 * this->masterslidenodes_size();
+  for (int i = 0; i < this->masterslidenodes_size(); i++) {
+    total_size +=
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+        this->masterslidenodes(i));
+  }
+
   // repeated .TSP.Range titleRanges = 6;
   total_size += 1 * this->titleranges_size();
   for (int i = 0; i < this->titleranges_size(); i++) {
     total_size +=
       ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
         this->titleranges(i));
+  }
+
+  // repeated .TSD.GeometryArchive geometries_in_root = 7;
+  total_size += 1 * this->geometries_in_root_size();
+  for (int i = 0; i < this->geometries_in_root_size(); i++) {
+    total_size +=
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+        this->geometries_in_root(i));
   }
 
   if (!unknown_fields().empty()) {
@@ -14452,10 +15027,17 @@ void PasteboardNativeStorageArchive::MergeFrom(const PasteboardNativeStorageArch
   builds_.MergeFrom(from.builds_);
   buildchunks_.MergeFrom(from.buildchunks_);
   slidenodes_.MergeFrom(from.slidenodes_);
+  masterslidenodes_.MergeFrom(from.masterslidenodes_);
   titleranges_.MergeFrom(from.titleranges_);
-  if (from._has_bits_[4 / 32] & (0xffu << (4 % 32))) {
+  geometries_in_root_.MergeFrom(from.geometries_in_root_);
+  if (from._has_bits_[5 / 32] & (0xffu << (5 % 32))) {
     if (from.has_originalshowsize()) {
       mutable_originalshowsize()->::TSP::Size::MergeFrom(from.originalshowsize());
+    }
+  }
+  if (from._has_bits_[8 / 32] & (0xffu << (8 % 32))) {
+    if (from.has_slide_node_unique_identifier()) {
+      set_slide_node_unique_identifier(from.slide_node_unique_identifier());
     }
   }
   mutable_unknown_fields()->MergeFrom(from.unknown_fields());
@@ -14487,11 +15069,17 @@ bool PasteboardNativeStorageArchive::IsInitialized() const {
   for (int i = 0; i < slidenodes_size(); i++) {
     if (!this->slidenodes(i).IsInitialized()) return false;
   }
+  for (int i = 0; i < masterslidenodes_size(); i++) {
+    if (!this->masterslidenodes(i).IsInitialized()) return false;
+  }
   if (has_originalshowsize()) {
     if (!this->originalshowsize().IsInitialized()) return false;
   }
   for (int i = 0; i < titleranges_size(); i++) {
     if (!this->titleranges(i).IsInitialized()) return false;
+  }
+  for (int i = 0; i < geometries_in_root_size(); i++) {
+    if (!this->geometries_in_root(i).IsInitialized()) return false;
   }
   return true;
 }
@@ -14502,8 +15090,11 @@ void PasteboardNativeStorageArchive::Swap(PasteboardNativeStorageArchive* other)
     builds_.Swap(&other->builds_);
     buildchunks_.Swap(&other->buildchunks_);
     slidenodes_.Swap(&other->slidenodes_);
+    masterslidenodes_.Swap(&other->masterslidenodes_);
     std::swap(originalshowsize_, other->originalshowsize_);
     titleranges_.Swap(&other->titleranges_);
+    geometries_in_root_.Swap(&other->geometries_in_root_);
+    std::swap(slide_node_unique_identifier_, other->slide_node_unique_identifier_);
     std::swap(_has_bits_[0], other->_has_bits_[0]);
     _unknown_fields_.Swap(&other->_unknown_fields_);
     std::swap(_cached_size_, other->_cached_size_);
@@ -16423,6 +17014,7 @@ void RecordingNavigationEventArchive::Swap(RecordingNavigationEventArchive* othe
 
 #ifndef _MSC_VER
 const int RecordingLaserEventArchive::kUnscaledLocationFieldNumber;
+const int RecordingLaserEventArchive::kUnitLocationFieldNumber;
 #endif  // !_MSC_VER
 
 RecordingLaserEventArchive::RecordingLaserEventArchive()
@@ -16432,6 +17024,7 @@ RecordingLaserEventArchive::RecordingLaserEventArchive()
 
 void RecordingLaserEventArchive::InitAsDefaultInstance() {
   unscaled_location_ = const_cast< ::TSP::Point*>(&::TSP::Point::default_instance());
+  unit_location_ = const_cast< ::TSP::Point*>(&::TSP::Point::default_instance());
 }
 
 RecordingLaserEventArchive::RecordingLaserEventArchive(const RecordingLaserEventArchive& from)
@@ -16443,6 +17036,7 @@ RecordingLaserEventArchive::RecordingLaserEventArchive(const RecordingLaserEvent
 void RecordingLaserEventArchive::SharedCtor() {
   _cached_size_ = 0;
   unscaled_location_ = NULL;
+  unit_location_ = NULL;
   ::memset(_has_bits_, 0, sizeof(_has_bits_));
 }
 
@@ -16453,6 +17047,7 @@ RecordingLaserEventArchive::~RecordingLaserEventArchive() {
 void RecordingLaserEventArchive::SharedDtor() {
   if (this != default_instance_) {
     delete unscaled_location_;
+    delete unit_location_;
   }
 }
 
@@ -16482,6 +17077,9 @@ void RecordingLaserEventArchive::Clear() {
     if (has_unscaled_location()) {
       if (unscaled_location_ != NULL) unscaled_location_->::TSP::Point::Clear();
     }
+    if (has_unit_location()) {
+      if (unit_location_ != NULL) unit_location_->::TSP::Point::Clear();
+    }
   }
   ::memset(_has_bits_, 0, sizeof(_has_bits_));
   mutable_unknown_fields()->Clear();
@@ -16493,12 +17091,26 @@ bool RecordingLaserEventArchive::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   while ((tag = input->ReadTag()) != 0) {
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // optional .TSP.Point unscaled_location = 1;
+      // optional .TSP.Point unscaled_location = 1 [deprecated = true];
       case 1: {
         if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
             ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_unscaled_location()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(18)) goto parse_unit_location;
+        break;
+      }
+
+      // optional .TSP.Point unit_location = 2;
+      case 2: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_unit_location:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_unit_location()));
         } else {
           goto handle_uninterpreted;
         }
@@ -16524,10 +17136,16 @@ bool RecordingLaserEventArchive::MergePartialFromCodedStream(
 
 void RecordingLaserEventArchive::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
-  // optional .TSP.Point unscaled_location = 1;
+  // optional .TSP.Point unscaled_location = 1 [deprecated = true];
   if (has_unscaled_location()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
       1, this->unscaled_location(), output);
+  }
+
+  // optional .TSP.Point unit_location = 2;
+  if (has_unit_location()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      2, this->unit_location(), output);
   }
 
   if (!unknown_fields().empty()) {
@@ -16538,11 +17156,18 @@ void RecordingLaserEventArchive::SerializeWithCachedSizes(
 
 ::google::protobuf::uint8* RecordingLaserEventArchive::SerializeWithCachedSizesToArray(
     ::google::protobuf::uint8* target) const {
-  // optional .TSP.Point unscaled_location = 1;
+  // optional .TSP.Point unscaled_location = 1 [deprecated = true];
   if (has_unscaled_location()) {
     target = ::google::protobuf::internal::WireFormatLite::
       WriteMessageNoVirtualToArray(
         1, this->unscaled_location(), target);
+  }
+
+  // optional .TSP.Point unit_location = 2;
+  if (has_unit_location()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        2, this->unit_location(), target);
   }
 
   if (!unknown_fields().empty()) {
@@ -16556,11 +17181,18 @@ int RecordingLaserEventArchive::ByteSize() const {
   int total_size = 0;
 
   if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
-    // optional .TSP.Point unscaled_location = 1;
+    // optional .TSP.Point unscaled_location = 1 [deprecated = true];
     if (has_unscaled_location()) {
       total_size += 1 +
         ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
           this->unscaled_location());
+    }
+
+    // optional .TSP.Point unit_location = 2;
+    if (has_unit_location()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->unit_location());
     }
 
   }
@@ -16593,6 +17225,9 @@ void RecordingLaserEventArchive::MergeFrom(const RecordingLaserEventArchive& fro
     if (from.has_unscaled_location()) {
       mutable_unscaled_location()->::TSP::Point::MergeFrom(from.unscaled_location());
     }
+    if (from.has_unit_location()) {
+      mutable_unit_location()->::TSP::Point::MergeFrom(from.unit_location());
+    }
   }
   mutable_unknown_fields()->MergeFrom(from.unknown_fields());
 }
@@ -16614,12 +17249,16 @@ bool RecordingLaserEventArchive::IsInitialized() const {
   if (has_unscaled_location()) {
     if (!this->unscaled_location().IsInitialized()) return false;
   }
+  if (has_unit_location()) {
+    if (!this->unit_location().IsInitialized()) return false;
+  }
   return true;
 }
 
 void RecordingLaserEventArchive::Swap(RecordingLaserEventArchive* other) {
   if (other != this) {
     std::swap(unscaled_location_, other->unscaled_location_);
+    std::swap(unit_location_, other->unit_location_);
     std::swap(_has_bits_[0], other->_has_bits_[0]);
     _unknown_fields_.Swap(&other->_unknown_fields_);
     std::swap(_cached_size_, other->_cached_size_);

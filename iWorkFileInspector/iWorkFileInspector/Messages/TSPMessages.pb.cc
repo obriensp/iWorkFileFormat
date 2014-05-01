@@ -58,6 +58,12 @@ const ::google::protobuf::internal::GeneratedMessageReflection*
 const ::google::protobuf::Descriptor* ReferenceDictionary_Entry_descriptor_ = NULL;
 const ::google::protobuf::internal::GeneratedMessageReflection*
   ReferenceDictionary_Entry_reflection_ = NULL;
+const ::google::protobuf::Descriptor* UUID_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  UUID_reflection_ = NULL;
+const ::google::protobuf::Descriptor* UUIDPath_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  UUIDPath_reflection_ = NULL;
 const ::google::protobuf::Descriptor* PasteboardObject_descriptor_ = NULL;
 const ::google::protobuf::internal::GeneratedMessageReflection*
   PasteboardObject_reflection_ = NULL;
@@ -272,7 +278,38 @@ void protobuf_AssignDesc_TSPMessages_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(ReferenceDictionary_Entry));
-  PasteboardObject_descriptor_ = file->message_type(10);
+  UUID_descriptor_ = file->message_type(10);
+  static const int UUID_offsets_[2] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(UUID, lower_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(UUID, upper_),
+  };
+  UUID_reflection_ =
+    new ::google::protobuf::internal::GeneratedMessageReflection(
+      UUID_descriptor_,
+      UUID::default_instance_,
+      UUID_offsets_,
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(UUID, _has_bits_[0]),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(UUID, _unknown_fields_),
+      -1,
+      ::google::protobuf::DescriptorPool::generated_pool(),
+      ::google::protobuf::MessageFactory::generated_factory(),
+      sizeof(UUID));
+  UUIDPath_descriptor_ = file->message_type(11);
+  static const int UUIDPath_offsets_[1] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(UUIDPath, uuids_),
+  };
+  UUIDPath_reflection_ =
+    new ::google::protobuf::internal::GeneratedMessageReflection(
+      UUIDPath_descriptor_,
+      UUIDPath::default_instance_,
+      UUIDPath_offsets_,
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(UUIDPath, _has_bits_[0]),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(UUIDPath, _unknown_fields_),
+      -1,
+      ::google::protobuf::DescriptorPool::generated_pool(),
+      ::google::protobuf::MessageFactory::generated_factory(),
+      sizeof(UUIDPath));
+  PasteboardObject_descriptor_ = file->message_type(12);
   static const int PasteboardObject_offsets_[9] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PasteboardObject, stylesheet_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PasteboardObject, drawables_),
@@ -295,7 +332,7 @@ void protobuf_AssignDesc_TSPMessages_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(PasteboardObject));
-  ObjectContainer_descriptor_ = file->message_type(11);
+  ObjectContainer_descriptor_ = file->message_type(13);
   static const int ObjectContainer_offsets_[2] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ObjectContainer, identifier_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ObjectContainer, objects_),
@@ -348,6 +385,10 @@ void protobuf_RegisterTypes(const ::std::string&) {
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
     ReferenceDictionary_Entry_descriptor_, &ReferenceDictionary_Entry::default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+    UUID_descriptor_, &UUID::default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+    UUIDPath_descriptor_, &UUIDPath::default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
     PasteboardObject_descriptor_, &PasteboardObject::default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
     ObjectContainer_descriptor_, &ObjectContainer::default_instance());
@@ -380,6 +421,10 @@ void protobuf_ShutdownFile_TSPMessages_2eproto() {
   delete ReferenceDictionary_reflection_;
   delete ReferenceDictionary_Entry::default_instance_;
   delete ReferenceDictionary_Entry_reflection_;
+  delete UUID::default_instance_;
+  delete UUID_reflection_;
+  delete UUIDPath::default_instance_;
+  delete UUIDPath_reflection_;
   delete PasteboardObject::default_instance_;
   delete PasteboardObject_reflection_;
   delete ObjectContainer::default_instance_;
@@ -414,17 +459,19 @@ void protobuf_AddDesc_TSPMessages_2eproto() {
     "oseSubpath\020\005\"\213\001\n\023ReferenceDictionary\022/\n\007"
     "entries\030\001 \003(\0132\036.TSP.ReferenceDictionary."
     "Entry\032C\n\005Entry\022\033\n\003key\030\001 \002(\0132\016.TSP.Refere"
-    "nce\022\035\n\005value\030\002 \002(\0132\016.TSP.Reference\"\307\002\n\020P"
-    "asteboardObject\022\"\n\nstylesheet\030\001 \001(\0132\016.TS"
-    "P.Reference\022!\n\tdrawables\030\002 \003(\0132\016.TSP.Ref"
-    "erence\022\036\n\006styles\030\003 \003(\0132\016.TSP.Reference\022\035"
-    "\n\005theme\030\004 \001(\0132\016.TSP.Reference\022\"\n\nwp_stor"
-    "age\030\005 \001(\0132\016.TSP.Reference\022%\n\rguide_stora"
-    "ge\030\t \001(\0132\016.TSP.Reference\022)\n\021app_native_o"
-    "bject\030\006 \001(\0132\016.TSP.Reference\022\036\n\017is_text_p"
-    "rimary\030\007 \001(\010:\005false\022\027\n\010is_smart\030\010 \001(\010:\005f"
-    "alse\"F\n\017ObjectContainer\022\022\n\nidentifier\030\001 "
-    "\001(\r\022\037\n\007objects\030\002 \003(\0132\016.TSP.Reference", 1276);
+    "nce\022\035\n\005value\030\002 \002(\0132\016.TSP.Reference\"$\n\004UU"
+    "ID\022\r\n\005lower\030\001 \002(\004\022\r\n\005upper\030\002 \002(\004\"$\n\010UUID"
+    "Path\022\030\n\005uuids\030\001 \003(\0132\t.TSP.UUID\"\307\002\n\020Paste"
+    "boardObject\022\"\n\nstylesheet\030\001 \001(\0132\016.TSP.Re"
+    "ference\022!\n\tdrawables\030\002 \003(\0132\016.TSP.Referen"
+    "ce\022\036\n\006styles\030\003 \003(\0132\016.TSP.Reference\022\035\n\005th"
+    "eme\030\004 \001(\0132\016.TSP.Reference\022\"\n\nwp_storage\030"
+    "\005 \001(\0132\016.TSP.Reference\022%\n\rguide_storage\030\t"
+    " \001(\0132\016.TSP.Reference\022)\n\021app_native_objec"
+    "t\030\006 \001(\0132\016.TSP.Reference\022\036\n\017is_text_prima"
+    "ry\030\007 \001(\010:\005false\022\027\n\010is_smart\030\010 \001(\010:\005false"
+    "\"F\n\017ObjectContainer\022\022\n\nidentifier\030\001 \001(\r\022"
+    "\037\n\007objects\030\002 \003(\0132\016.TSP.Reference", 1352);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "TSPMessages.proto", &protobuf_RegisterTypes);
   Reference::default_instance_ = new Reference();
@@ -439,6 +486,8 @@ void protobuf_AddDesc_TSPMessages_2eproto() {
   Path_Element::default_instance_ = new Path_Element();
   ReferenceDictionary::default_instance_ = new ReferenceDictionary();
   ReferenceDictionary_Entry::default_instance_ = new ReferenceDictionary_Entry();
+  UUID::default_instance_ = new UUID();
+  UUIDPath::default_instance_ = new UUIDPath();
   PasteboardObject::default_instance_ = new PasteboardObject();
   ObjectContainer::default_instance_ = new ObjectContainer();
   Reference::default_instance_->InitAsDefaultInstance();
@@ -453,6 +502,8 @@ void protobuf_AddDesc_TSPMessages_2eproto() {
   Path_Element::default_instance_->InitAsDefaultInstance();
   ReferenceDictionary::default_instance_->InitAsDefaultInstance();
   ReferenceDictionary_Entry::default_instance_->InitAsDefaultInstance();
+  UUID::default_instance_->InitAsDefaultInstance();
+  UUIDPath::default_instance_->InitAsDefaultInstance();
   PasteboardObject::default_instance_->InitAsDefaultInstance();
   ObjectContainer::default_instance_->InitAsDefaultInstance();
   ::google::protobuf::internal::OnShutdown(&protobuf_ShutdownFile_TSPMessages_2eproto);
@@ -3657,6 +3708,461 @@ void ReferenceDictionary::Swap(ReferenceDictionary* other) {
   ::google::protobuf::Metadata metadata;
   metadata.descriptor = ReferenceDictionary_descriptor_;
   metadata.reflection = ReferenceDictionary_reflection_;
+  return metadata;
+}
+
+
+// ===================================================================
+
+#ifndef _MSC_VER
+const int UUID::kLowerFieldNumber;
+const int UUID::kUpperFieldNumber;
+#endif  // !_MSC_VER
+
+UUID::UUID()
+  : ::google::protobuf::Message() {
+  SharedCtor();
+}
+
+void UUID::InitAsDefaultInstance() {
+}
+
+UUID::UUID(const UUID& from)
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  MergeFrom(from);
+}
+
+void UUID::SharedCtor() {
+  _cached_size_ = 0;
+  lower_ = GOOGLE_ULONGLONG(0);
+  upper_ = GOOGLE_ULONGLONG(0);
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+}
+
+UUID::~UUID() {
+  SharedDtor();
+}
+
+void UUID::SharedDtor() {
+  if (this != default_instance_) {
+  }
+}
+
+void UUID::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* UUID::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return UUID_descriptor_;
+}
+
+const UUID& UUID::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_TSPMessages_2eproto();
+  return *default_instance_;
+}
+
+UUID* UUID::default_instance_ = NULL;
+
+UUID* UUID::New() const {
+  return new UUID;
+}
+
+void UUID::Clear() {
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    lower_ = GOOGLE_ULONGLONG(0);
+    upper_ = GOOGLE_ULONGLONG(0);
+  }
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+  mutable_unknown_fields()->Clear();
+}
+
+bool UUID::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!(EXPRESSION)) return false
+  ::google::protobuf::uint32 tag;
+  while ((tag = input->ReadTag()) != 0) {
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // required uint64 lower = 1;
+      case 1: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint64, ::google::protobuf::internal::WireFormatLite::TYPE_UINT64>(
+                 input, &lower_)));
+          set_has_lower();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(16)) goto parse_upper;
+        break;
+      }
+
+      // required uint64 upper = 2;
+      case 2: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_upper:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint64, ::google::protobuf::internal::WireFormatLite::TYPE_UINT64>(
+                 input, &upper_)));
+          set_has_upper();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectAtEnd()) return true;
+        break;
+      }
+
+      default: {
+      handle_uninterpreted:
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          return true;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+  return true;
+#undef DO_
+}
+
+void UUID::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // required uint64 lower = 1;
+  if (has_lower()) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt64(1, this->lower(), output);
+  }
+
+  // required uint64 upper = 2;
+  if (has_upper()) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt64(2, this->upper(), output);
+  }
+
+  if (!unknown_fields().empty()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+}
+
+::google::protobuf::uint8* UUID::SerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // required uint64 lower = 1;
+  if (has_lower()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt64ToArray(1, this->lower(), target);
+  }
+
+  // required uint64 upper = 2;
+  if (has_upper()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt64ToArray(2, this->upper(), target);
+  }
+
+  if (!unknown_fields().empty()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  return target;
+}
+
+int UUID::ByteSize() const {
+  int total_size = 0;
+
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    // required uint64 lower = 1;
+    if (has_lower()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::UInt64Size(
+          this->lower());
+    }
+
+    // required uint64 upper = 2;
+    if (has_upper()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::UInt64Size(
+          this->upper());
+    }
+
+  }
+  if (!unknown_fields().empty()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = total_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void UUID::MergeFrom(const ::google::protobuf::Message& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  const UUID* source =
+    ::google::protobuf::internal::dynamic_cast_if_available<const UUID*>(
+      &from);
+  if (source == NULL) {
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+    MergeFrom(*source);
+  }
+}
+
+void UUID::MergeFrom(const UUID& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (from.has_lower()) {
+      set_lower(from.lower());
+    }
+    if (from.has_upper()) {
+      set_upper(from.upper());
+    }
+  }
+  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
+}
+
+void UUID::CopyFrom(const ::google::protobuf::Message& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void UUID::CopyFrom(const UUID& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool UUID::IsInitialized() const {
+  if ((_has_bits_[0] & 0x00000003) != 0x00000003) return false;
+
+  return true;
+}
+
+void UUID::Swap(UUID* other) {
+  if (other != this) {
+    std::swap(lower_, other->lower_);
+    std::swap(upper_, other->upper_);
+    std::swap(_has_bits_[0], other->_has_bits_[0]);
+    _unknown_fields_.Swap(&other->_unknown_fields_);
+    std::swap(_cached_size_, other->_cached_size_);
+  }
+}
+
+::google::protobuf::Metadata UUID::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = UUID_descriptor_;
+  metadata.reflection = UUID_reflection_;
+  return metadata;
+}
+
+
+// ===================================================================
+
+#ifndef _MSC_VER
+const int UUIDPath::kUuidsFieldNumber;
+#endif  // !_MSC_VER
+
+UUIDPath::UUIDPath()
+  : ::google::protobuf::Message() {
+  SharedCtor();
+}
+
+void UUIDPath::InitAsDefaultInstance() {
+}
+
+UUIDPath::UUIDPath(const UUIDPath& from)
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  MergeFrom(from);
+}
+
+void UUIDPath::SharedCtor() {
+  _cached_size_ = 0;
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+}
+
+UUIDPath::~UUIDPath() {
+  SharedDtor();
+}
+
+void UUIDPath::SharedDtor() {
+  if (this != default_instance_) {
+  }
+}
+
+void UUIDPath::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* UUIDPath::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return UUIDPath_descriptor_;
+}
+
+const UUIDPath& UUIDPath::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_TSPMessages_2eproto();
+  return *default_instance_;
+}
+
+UUIDPath* UUIDPath::default_instance_ = NULL;
+
+UUIDPath* UUIDPath::New() const {
+  return new UUIDPath;
+}
+
+void UUIDPath::Clear() {
+  uuids_.Clear();
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+  mutable_unknown_fields()->Clear();
+}
+
+bool UUIDPath::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!(EXPRESSION)) return false
+  ::google::protobuf::uint32 tag;
+  while ((tag = input->ReadTag()) != 0) {
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // repeated .TSP.UUID uuids = 1;
+      case 1: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_uuids:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+                input, add_uuids()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(10)) goto parse_uuids;
+        if (input->ExpectAtEnd()) return true;
+        break;
+      }
+
+      default: {
+      handle_uninterpreted:
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          return true;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+  return true;
+#undef DO_
+}
+
+void UUIDPath::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // repeated .TSP.UUID uuids = 1;
+  for (int i = 0; i < this->uuids_size(); i++) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, this->uuids(i), output);
+  }
+
+  if (!unknown_fields().empty()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+}
+
+::google::protobuf::uint8* UUIDPath::SerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // repeated .TSP.UUID uuids = 1;
+  for (int i = 0; i < this->uuids_size(); i++) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        1, this->uuids(i), target);
+  }
+
+  if (!unknown_fields().empty()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  return target;
+}
+
+int UUIDPath::ByteSize() const {
+  int total_size = 0;
+
+  // repeated .TSP.UUID uuids = 1;
+  total_size += 1 * this->uuids_size();
+  for (int i = 0; i < this->uuids_size(); i++) {
+    total_size +=
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+        this->uuids(i));
+  }
+
+  if (!unknown_fields().empty()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = total_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void UUIDPath::MergeFrom(const ::google::protobuf::Message& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  const UUIDPath* source =
+    ::google::protobuf::internal::dynamic_cast_if_available<const UUIDPath*>(
+      &from);
+  if (source == NULL) {
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+    MergeFrom(*source);
+  }
+}
+
+void UUIDPath::MergeFrom(const UUIDPath& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  uuids_.MergeFrom(from.uuids_);
+  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
+}
+
+void UUIDPath::CopyFrom(const ::google::protobuf::Message& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void UUIDPath::CopyFrom(const UUIDPath& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool UUIDPath::IsInitialized() const {
+
+  for (int i = 0; i < uuids_size(); i++) {
+    if (!this->uuids(i).IsInitialized()) return false;
+  }
+  return true;
+}
+
+void UUIDPath::Swap(UUIDPath* other) {
+  if (other != this) {
+    uuids_.Swap(&other->uuids_);
+    std::swap(_has_bits_[0], other->_has_bits_[0]);
+    _unknown_fields_.Swap(&other->_unknown_fields_);
+    std::swap(_cached_size_, other->_cached_size_);
+  }
+}
+
+::google::protobuf::Metadata UUIDPath::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = UUIDPath_descriptor_;
+  metadata.reflection = UUIDPath_reflection_;
   return metadata;
 }
 

@@ -45,6 +45,18 @@ const ::google::protobuf::internal::GeneratedMessageReflection*
 const ::google::protobuf::Descriptor* ChartSeriesNonStyleArchive_descriptor_ = NULL;
 const ::google::protobuf::internal::GeneratedMessageReflection*
   ChartSeriesNonStyleArchive_reflection_ = NULL;
+const ::google::protobuf::Descriptor* ChartGenericPropertyMapArchive_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  ChartGenericPropertyMapArchive_reflection_ = NULL;
+const ::google::protobuf::Descriptor* LegendGenericPropertyMapArchive_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  LegendGenericPropertyMapArchive_reflection_ = NULL;
+const ::google::protobuf::Descriptor* ChartAxisGenericPropertyMapArchive_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  ChartAxisGenericPropertyMapArchive_reflection_ = NULL;
+const ::google::protobuf::Descriptor* ChartSeriesGenericPropertyMapArchive_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  ChartSeriesGenericPropertyMapArchive_reflection_ = NULL;
 
 }  // namespace
 
@@ -211,9 +223,13 @@ void protobuf_AssignDesc_TSCHArchives_2eGEN_2eproto() {
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(ChartAxisStyleArchive));
   ChartAxisNonStyleArchive_descriptor_ = file->message_type(5);
-  static const int ChartAxisNonStyleArchive_offsets_[19] = {
+  static const int ChartAxisNonStyleArchive_offsets_[23] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartAxisNonStyleArchive, tschchartaxisdefault3dlabelposition_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartAxisNonStyleArchive, tschchartaxisdefault1_0numberformat_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartAxisNonStyleArchive, tschchartaxisdefaultnumberformat_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartAxisNonStyleArchive, tschchartaxisdefault1_0dateformat_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartAxisNonStyleArchive, tschchartaxisdefaultdurationformat_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartAxisNonStyleArchive, tschchartaxisdefaultdateformat_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartAxisNonStyleArchive, tschchartaxisdefaultnumberformattype_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartAxisNonStyleArchive, tschchartaxisvaluenumberofdecades_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartAxisNonStyleArchive, tschchartaxisvaluenumberofmajorgridlines_),
@@ -355,7 +371,7 @@ void protobuf_AssignDesc_TSCHArchives_2eGEN_2eproto() {
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(ChartSeriesStyleArchive));
   ChartSeriesNonStyleArchive_descriptor_ = file->message_type(7);
-  static const int ChartSeriesNonStyleArchive_offsets_[68] = {
+  static const int ChartSeriesNonStyleArchive_offsets_[75] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartSeriesNonStyleArchive, tschchartseriesbubbleadjustmentscale_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartSeriesNonStyleArchive, tschchartseriesdefaulterrorbarcustomnegativedata_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartSeriesNonStyleArchive, tschchartseriesdefaulterrorbarcustomnegativedatascatterx_),
@@ -376,7 +392,12 @@ void protobuf_AssignDesc_TSCHArchives_2eGEN_2eproto() {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartSeriesNonStyleArchive, tschchartserieslinelinetype_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartSeriesNonStyleArchive, tschchartseriesmixedlinelinetype_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartSeriesNonStyleArchive, tschchartseriesscatterlinetype_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartSeriesNonStyleArchive, tschchartseriesdefault1_0numberformat_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartSeriesNonStyleArchive, tschchartseriesdefaultnumberformat_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartSeriesNonStyleArchive, tschchartseriesdefault1_0dateformat_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartSeriesNonStyleArchive, tschchartseriesdefaultdurationformat_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartSeriesNonStyleArchive, tschchartseriesdefaultdateformat_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartSeriesNonStyleArchive, tschchartseriespie1_0numberformat_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartSeriesNonStyleArchive, tschchartseriespienumberformat_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartSeriesNonStyleArchive, tschchartseriesdefaultnumberformattype_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartSeriesNonStyleArchive, tschchartseriespienumberformattype_),
@@ -424,6 +445,8 @@ void protobuf_AssignDesc_TSCHArchives_2eGEN_2eproto() {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartSeriesNonStyleArchive, tschchartseriesbubblevaluelabelsaxis_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartSeriesNonStyleArchive, tschchartseriesscattershowserieslabels_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartSeriesNonStyleArchive, tschchartseriesscattervaluelabelsaxis_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartSeriesNonStyleArchive, tschchartseriesdefaultshowlabelsinfront_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartSeriesNonStyleArchive, tschchartseriesbubbleshowlabelsinfront_),
   };
   ChartSeriesNonStyleArchive_reflection_ =
     new ::google::protobuf::internal::GeneratedMessageReflection(
@@ -436,6 +459,208 @@ void protobuf_AssignDesc_TSCHArchives_2eGEN_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(ChartSeriesNonStyleArchive));
+  ChartGenericPropertyMapArchive_descriptor_ = file->message_type(8);
+  static const int ChartGenericPropertyMapArchive_offsets_[29] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartGenericPropertyMapArchive, tschchartinfo3dbarshape_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartGenericPropertyMapArchive, tschchartinfo3dbeveledges_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartGenericPropertyMapArchive, tschchartinfo3dintersetdepthgap_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartGenericPropertyMapArchive, tschchartinfo3drotation_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartGenericPropertyMapArchive, tschchartinfo3dscale_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartGenericPropertyMapArchive, tschchartinfo3dviewport_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartGenericPropertyMapArchive, tschchartinfopiestartangle_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartGenericPropertyMapArchive, tschchartinfoshowlegend_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartGenericPropertyMapArchive, tschchartinfoshowtitle_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartGenericPropertyMapArchive, tschchartinfoskiphiddendata_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartGenericPropertyMapArchive, tschchartinfotitle_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartGenericPropertyMapArchive, tschchartinfodatasetnamelocation_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartGenericPropertyMapArchive, tschchartinfomultidatacontroltype_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartGenericPropertyMapArchive, tschchartinfo3dchartopacity_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartGenericPropertyMapArchive, tschchartinfo3dlightingpackage_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartGenericPropertyMapArchive, tschchartinfobackgroundfill_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartGenericPropertyMapArchive, tschchartinfobackgroundstroke_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartGenericPropertyMapArchive, tschchartinfoborderopacity_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartGenericPropertyMapArchive, tschchartinfobordershadow_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartGenericPropertyMapArchive, tschchartinfoborderstroke_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartGenericPropertyMapArchive, tschchartinfocombinelayers_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartGenericPropertyMapArchive, tschchartinfogridbackgroundfill_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartGenericPropertyMapArchive, tschchartinfogridbackgroundopacity_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartGenericPropertyMapArchive, tschchartinfointerbargap_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartGenericPropertyMapArchive, tschchartinfointersetgap_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartGenericPropertyMapArchive, tschchartinfoshowborder_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartGenericPropertyMapArchive, tschchartinfotitlecolor_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartGenericPropertyMapArchive, tschchartinfotitleparagraphstyleindex_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartGenericPropertyMapArchive, tschchartinfodatasetnameparagraphstyleindex_),
+  };
+  ChartGenericPropertyMapArchive_reflection_ =
+    new ::google::protobuf::internal::GeneratedMessageReflection(
+      ChartGenericPropertyMapArchive_descriptor_,
+      ChartGenericPropertyMapArchive::default_instance_,
+      ChartGenericPropertyMapArchive_offsets_,
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartGenericPropertyMapArchive, _has_bits_[0]),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartGenericPropertyMapArchive, _unknown_fields_),
+      -1,
+      ::google::protobuf::DescriptorPool::generated_pool(),
+      ::google::protobuf::MessageFactory::generated_factory(),
+      sizeof(ChartGenericPropertyMapArchive));
+  LegendGenericPropertyMapArchive_descriptor_ = file->message_type(9);
+  static const int LegendGenericPropertyMapArchive_offsets_[5] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LegendGenericPropertyMapArchive, tschlegendmodelfill_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LegendGenericPropertyMapArchive, tschlegendmodellabelparagraphstyleindex_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LegendGenericPropertyMapArchive, tschlegendmodelopacity_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LegendGenericPropertyMapArchive, tschlegendmodelshadow_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LegendGenericPropertyMapArchive, tschlegendmodelstroke_),
+  };
+  LegendGenericPropertyMapArchive_reflection_ =
+    new ::google::protobuf::internal::GeneratedMessageReflection(
+      LegendGenericPropertyMapArchive_descriptor_,
+      LegendGenericPropertyMapArchive::default_instance_,
+      LegendGenericPropertyMapArchive_offsets_,
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LegendGenericPropertyMapArchive, _has_bits_[0]),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LegendGenericPropertyMapArchive, _unknown_fields_),
+      -1,
+      ::google::protobuf::DescriptorPool::generated_pool(),
+      ::google::protobuf::MessageFactory::generated_factory(),
+      sizeof(LegendGenericPropertyMapArchive));
+  ChartAxisGenericPropertyMapArchive_descriptor_ = file->message_type(10);
+  static const int ChartAxisGenericPropertyMapArchive_offsets_[39] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartAxisGenericPropertyMapArchive, tschchartaxis3dlabelposition_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartAxisGenericPropertyMapArchive, tschchartaxis1_0numberformat_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartAxisGenericPropertyMapArchive, tschchartaxisnumberformat_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartAxisGenericPropertyMapArchive, tschchartaxis1_0dateformat_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartAxisGenericPropertyMapArchive, tschchartaxisdurationformat_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartAxisGenericPropertyMapArchive, tschchartaxisdateformat_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartAxisGenericPropertyMapArchive, tschchartaxisnumberformattype_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartAxisGenericPropertyMapArchive, tschchartaxisnumberofdecades_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartAxisGenericPropertyMapArchive, tschchartaxisnumberofmajorgridlines_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartAxisGenericPropertyMapArchive, tschchartaxisnumberofminorgridlines_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartAxisGenericPropertyMapArchive, tschchartaxisplottoedges_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartAxisGenericPropertyMapArchive, tschchartaxisscale_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartAxisGenericPropertyMapArchive, tschchartaxisshowlabels_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartAxisGenericPropertyMapArchive, tschchartaxisshowserieslabels_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartAxisGenericPropertyMapArchive, tschchartaxisshowtitle_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartAxisGenericPropertyMapArchive, tschchartaxistitle_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartAxisGenericPropertyMapArchive, tschchartaxisusermax_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartAxisGenericPropertyMapArchive, tschchartaxisusermin_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartAxisGenericPropertyMapArchive, tschchartaxis3dgridlineopacity_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartAxisGenericPropertyMapArchive, tschchartaxis3dgridlinestroke_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartAxisGenericPropertyMapArchive, tschchartaxishorizontalspacing_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartAxisGenericPropertyMapArchive, tschchartaxislabelparagraphstyleindex_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartAxisGenericPropertyMapArchive, tschchartaxislabelsorientation_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartAxisGenericPropertyMapArchive, tschchartaxismajorgridlineopacity_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartAxisGenericPropertyMapArchive, tschchartaxismajorgridlineshadow_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartAxisGenericPropertyMapArchive, tschchartaxismajorgridlinestroke_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartAxisGenericPropertyMapArchive, tschchartaxisminorgridlineopacity_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartAxisGenericPropertyMapArchive, tschchartaxisminorgridlineshadow_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartAxisGenericPropertyMapArchive, tschchartaxisminorgridlinestroke_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartAxisGenericPropertyMapArchive, tschchartaxisshowaxis_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartAxisGenericPropertyMapArchive, tschchartaxisshowlastlabel_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartAxisGenericPropertyMapArchive, tschchartaxisshowmajorgridlines_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartAxisGenericPropertyMapArchive, tschchartaxisshowmajortickmarks_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartAxisGenericPropertyMapArchive, tschchartaxisshowminimumlabel_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartAxisGenericPropertyMapArchive, tschchartaxisshowminorgridlines_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartAxisGenericPropertyMapArchive, tschchartaxisshowminortickmarks_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartAxisGenericPropertyMapArchive, tschchartaxistickmarklocation_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartAxisGenericPropertyMapArchive, tschchartaxistitleparagraphstyleindex_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartAxisGenericPropertyMapArchive, tschchartaxisverticalspacing_),
+  };
+  ChartAxisGenericPropertyMapArchive_reflection_ =
+    new ::google::protobuf::internal::GeneratedMessageReflection(
+      ChartAxisGenericPropertyMapArchive_descriptor_,
+      ChartAxisGenericPropertyMapArchive::default_instance_,
+      ChartAxisGenericPropertyMapArchive_offsets_,
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartAxisGenericPropertyMapArchive, _has_bits_[0]),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartAxisGenericPropertyMapArchive, _unknown_fields_),
+      -1,
+      ::google::protobuf::DescriptorPool::generated_pool(),
+      ::google::protobuf::MessageFactory::generated_factory(),
+      sizeof(ChartAxisGenericPropertyMapArchive));
+  ChartSeriesGenericPropertyMapArchive_descriptor_ = file->message_type(11);
+  static const int ChartSeriesGenericPropertyMapArchive_offsets_[73] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartSeriesGenericPropertyMapArchive, tschchartseriesadjustmentscale_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartSeriesGenericPropertyMapArchive, tschchartserieserrorbarcustomnegativedata_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartSeriesGenericPropertyMapArchive, tschchartserieserrorbarcustomnegativedatascatterx_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartSeriesGenericPropertyMapArchive, tschchartserieserrorbarcustompositivedata_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartSeriesGenericPropertyMapArchive, tschchartserieserrorbarcustompositivedatascatterx_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartSeriesGenericPropertyMapArchive, tschchartserieserrorbarfixedvalue_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartSeriesGenericPropertyMapArchive, tschchartserieserrorbarfixedvaluescatterx_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartSeriesGenericPropertyMapArchive, tschchartserieserrorbarpercentvalue_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartSeriesGenericPropertyMapArchive, tschchartserieserrorbarpercentvaluescatterx_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartSeriesGenericPropertyMapArchive, tschchartserieserrorbarsetting_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartSeriesGenericPropertyMapArchive, tschchartserieserrorbarsettingscatterx_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartSeriesGenericPropertyMapArchive, tschchartserieserrorbarstddevvalue_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartSeriesGenericPropertyMapArchive, tschchartserieserrorbarstddevvaluescatterx_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartSeriesGenericPropertyMapArchive, tschchartserieserrorbartype_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartSeriesGenericPropertyMapArchive, tschchartserieserrorbartypescatterx_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartSeriesGenericPropertyMapArchive, tschchartserieslabelexplosion_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartSeriesGenericPropertyMapArchive, tschchartserieslinetype_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartSeriesGenericPropertyMapArchive, tschchartseries1_0numberformat_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartSeriesGenericPropertyMapArchive, tschchartseriesnumberformat_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartSeriesGenericPropertyMapArchive, tschchartseries1_0dateformat_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartSeriesGenericPropertyMapArchive, tschchartseriesdurationformat_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartSeriesGenericPropertyMapArchive, tschchartseriesdateformat_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartSeriesGenericPropertyMapArchive, tschchartseriesnumberformattype_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartSeriesGenericPropertyMapArchive, tschchartseriespercentnumberformat_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartSeriesGenericPropertyMapArchive, tschchartseriesseriestype_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartSeriesGenericPropertyMapArchive, tschchartseriesshowerrorbar_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartSeriesGenericPropertyMapArchive, tschchartseriesshowerrorbarscatterx_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartSeriesGenericPropertyMapArchive, tschchartseriesshowline_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartSeriesGenericPropertyMapArchive, tschchartseriesshownegativedata_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartSeriesGenericPropertyMapArchive, tschchartseriesshowserieslabels_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartSeriesGenericPropertyMapArchive, tschchartseriesshowsymbol_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartSeriesGenericPropertyMapArchive, tschchartseriesshowtrendline_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartSeriesGenericPropertyMapArchive, tschchartseriesshowvaluelabels_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartSeriesGenericPropertyMapArchive, tschchartseriessizedimension_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartSeriesGenericPropertyMapArchive, tschchartseriessymboltype_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartSeriesGenericPropertyMapArchive, tschchartseriestrendlineequationoffsetx_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartSeriesGenericPropertyMapArchive, tschchartseriestrendlineequationoffsety_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartSeriesGenericPropertyMapArchive, tschchartseriestrendlinelabelstring_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartSeriesGenericPropertyMapArchive, tschchartseriestrendlineorder_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartSeriesGenericPropertyMapArchive, tschchartseriestrendlineperiod_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartSeriesGenericPropertyMapArchive, tschchartseriestrendlinersquaredoffsetx_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartSeriesGenericPropertyMapArchive, tschchartseriestrendlinersquaredoffsety_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartSeriesGenericPropertyMapArchive, tschchartseriestrendlineshowequation_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartSeriesGenericPropertyMapArchive, tschchartseriestrendlineshowlabel_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartSeriesGenericPropertyMapArchive, tschchartseriestrendlineshowr2value_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartSeriesGenericPropertyMapArchive, tschchartseriestrendlinetype_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartSeriesGenericPropertyMapArchive, tschchartserieswedgeexplosion_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartSeriesGenericPropertyMapArchive, tschchartseriesyaxisordinal_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartSeriesGenericPropertyMapArchive, tschchartseriesvaluelabelsaxis_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartSeriesGenericPropertyMapArchive, tschchartserieserrorbarlineend_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartSeriesGenericPropertyMapArchive, tschchartserieserrorbarlineendscatterx_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartSeriesGenericPropertyMapArchive, tschchartserieserrorbarshadow_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartSeriesGenericPropertyMapArchive, tschchartserieserrorbarstroke_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartSeriesGenericPropertyMapArchive, tschchartserieserrorbarstrokescatterx_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartSeriesGenericPropertyMapArchive, tschchartseriesfill_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartSeriesGenericPropertyMapArchive, tschchartserieslabelparagraphstyleindex_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartSeriesGenericPropertyMapArchive, tschchartseriesopacity_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartSeriesGenericPropertyMapArchive, tschchartseriesoutsidelabelparagraphstyleindex_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartSeriesGenericPropertyMapArchive, tschchartseriesshadow_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartSeriesGenericPropertyMapArchive, tschchartseriesstroke_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartSeriesGenericPropertyMapArchive, tschchartseriessymbolfill_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartSeriesGenericPropertyMapArchive, tschchartseriessymbolfilluseseriesfill_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartSeriesGenericPropertyMapArchive, tschchartseriessymbolfilluseseriesstroke_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartSeriesGenericPropertyMapArchive, tschchartseriessymbolsize_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartSeriesGenericPropertyMapArchive, tschchartseriessymbolstroke_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartSeriesGenericPropertyMapArchive, tschchartseriestrendlineequationopacity_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartSeriesGenericPropertyMapArchive, tschchartseriestrendlineequationparagraphstyleindex_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartSeriesGenericPropertyMapArchive, tschchartseriestrendlinersquaredopacity_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartSeriesGenericPropertyMapArchive, tschchartseriestrendlinersquaredparagraphstyleindex_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartSeriesGenericPropertyMapArchive, tschchartseriestrendlineshadow_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartSeriesGenericPropertyMapArchive, tschchartseriestrendlinestroke_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartSeriesGenericPropertyMapArchive, tschchartseriesvaluelabelposition_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartSeriesGenericPropertyMapArchive, tschchartseriesshowlabelsinfront_),
+  };
+  ChartSeriesGenericPropertyMapArchive_reflection_ =
+    new ::google::protobuf::internal::GeneratedMessageReflection(
+      ChartSeriesGenericPropertyMapArchive_descriptor_,
+      ChartSeriesGenericPropertyMapArchive::default_instance_,
+      ChartSeriesGenericPropertyMapArchive_offsets_,
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartSeriesGenericPropertyMapArchive, _has_bits_[0]),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartSeriesGenericPropertyMapArchive, _unknown_fields_),
+      -1,
+      ::google::protobuf::DescriptorPool::generated_pool(),
+      ::google::protobuf::MessageFactory::generated_factory(),
+      sizeof(ChartSeriesGenericPropertyMapArchive));
 }
 
 namespace {
@@ -464,6 +689,14 @@ void protobuf_RegisterTypes(const ::std::string&) {
     ChartSeriesStyleArchive_descriptor_, &ChartSeriesStyleArchive::default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
     ChartSeriesNonStyleArchive_descriptor_, &ChartSeriesNonStyleArchive::default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+    ChartGenericPropertyMapArchive_descriptor_, &ChartGenericPropertyMapArchive::default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+    LegendGenericPropertyMapArchive_descriptor_, &LegendGenericPropertyMapArchive::default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+    ChartAxisGenericPropertyMapArchive_descriptor_, &ChartAxisGenericPropertyMapArchive::default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+    ChartSeriesGenericPropertyMapArchive_descriptor_, &ChartSeriesGenericPropertyMapArchive::default_instance());
 }
 
 }  // namespace
@@ -485,6 +718,14 @@ void protobuf_ShutdownFile_TSCHArchives_2eGEN_2eproto() {
   delete ChartSeriesStyleArchive_reflection_;
   delete ChartSeriesNonStyleArchive::default_instance_;
   delete ChartSeriesNonStyleArchive_reflection_;
+  delete ChartGenericPropertyMapArchive::default_instance_;
+  delete ChartGenericPropertyMapArchive_reflection_;
+  delete LegendGenericPropertyMapArchive::default_instance_;
+  delete LegendGenericPropertyMapArchive_reflection_;
+  delete ChartAxisGenericPropertyMapArchive::default_instance_;
+  delete ChartAxisGenericPropertyMapArchive_reflection_;
+  delete ChartSeriesGenericPropertyMapArchive::default_instance_;
+  delete ChartSeriesGenericPropertyMapArchive_reflection_;
 }
 
 void protobuf_AddDesc_TSCHArchives_2eGEN_2eproto() {
@@ -633,262 +874,459 @@ void protobuf_AddDesc_TSCHArchives_2eGEN_2eproto() {
     "ndex\030( \001(\005\022,\n$tschchartaxiscategoryverti"
     "calspacing\030) \001(\0052T\n\007current\022\033.TSCH.Chart"
     "AxisStyleArchive\030\220N \001(\0132%.TSCH.Generated"
-    ".ChartAxisStyleArchive\"\347\007\n\030ChartAxisNonS"
+    ".ChartAxisStyleArchive\"\373\t\n\030ChartAxisNonS"
     "tyleArchive\022+\n#tschchartaxisdefault3dlab"
-    "elposition\030\001 \001(\005\022B\n tschchartaxisdefault"
-    "numberformat\030\002 \001(\0132\030.TSK.FormatStructArc"
-    "hive\022,\n$tschchartaxisdefaultnumberformat"
-    "type\030\003 \001(\005\022)\n!tschchartaxisvaluenumberof"
-    "decades\030\004 \001(\005\0220\n(tschchartaxisvaluenumbe"
-    "rofmajorgridlines\030\005 \001(\005\0220\n(tschchartaxis"
-    "valuenumberofminorgridlines\030\006 \001(\005\022(\n tsc"
-    "hchartaxiscategoryplottoedges\030\007 \001(\010\022\037\n\027t"
-    "schchartaxisvaluescale\030\010 \001(\005\022\'\n\037tschchar"
-    "taxiscategoryshowlabels\030\t \001(\010\022&\n\036tschcha"
-    "rtaxisdefaultshowlabels\030\n \001(\010\022$\n\034tschcha"
-    "rtaxisvalueshowlabels\030\013 \001(\010\022-\n%tschchart"
-    "axiscategoryshowserieslabels\030\014 \001(\010\022.\n&ts"
-    "chchartaxismultidatashowserieslabels\030\023 \001"
-    "(\010\022&\n\036tschchartaxiscategoryshowtitle\030\r \001"
-    "(\010\022#\n\033tschchartaxisvalueshowtitle\030\016 \001(\010\022"
-    "\"\n\032tschchartaxiscategorytitle\030\017 \001(\t\022\037\n\027t"
-    "schchartaxisvaluetitle\030\020 \001(\t\022F\n\033tschchar"
-    "taxisdefaultusermax\030\021 \001(\0132!.TSCH.ChartsN"
-    "SNumberDoubleArchive\022F\n\033tschchartaxisdef"
-    "aultusermin\030\022 \001(\0132!.TSCH.ChartsNSNumberD"
-    "oubleArchive2Z\n\007current\022\036.TSCH.ChartAxis"
-    "NonStyleArchive\030\220N \001(\0132(.TSCH.Generated."
-    "ChartAxisNonStyleArchive\"\307+\n\027ChartSeries"
-    "StyleArchive\022B\n%tschchartseriesdefaulter"
-    "rorbarlineend\030\001 \001(\0132\023.TSD.LineEndArchive"
-    "\022J\n-tschchartseriesdefaulterrorbarlineen"
-    "dscatterx\030\002 \001(\0132\023.TSD.LineEndArchive\022@\n$"
-    "tschchartseriesdefaulterrorbarshadow\030\003 \001"
-    "(\0132\022.TSD.ShadowArchive\022@\n$tschchartserie"
-    "sdefaulterrorbarstroke\030\004 \001(\0132\022.TSD.Strok"
-    "eArchive\022H\n,tschchartseriesdefaulterrorb"
-    "arstrokescatterx\030\005 \001(\0132\022.TSD.StrokeArchi"
-    "ve\0223\n\031tschchartseries3dareafill\030\006 \001(\0132\020."
-    "TSD.FillArchive\0222\n\030tschchartseries3dbarf"
-    "ill\030\007 \001(\0132\020.TSD.FillArchive\0225\n\033tschchart"
-    "series3dcolumnfill\030\010 \001(\0132\020.TSD.FillArchi"
-    "ve\0223\n\031tschchartseries3dlinefill\030\t \001(\0132\020."
-    "TSD.FillArchive\0222\n\030tschchartseries3dpief"
-    "ill\030\n \001(\0132\020.TSD.FillArchive\0221\n\027tschchart"
-    "seriesareafill\030\013 \001(\0132\020.TSD.FillArchive\0220"
-    "\n\026tschchartseriesbarfill\030\014 \001(\0132\020.TSD.Fil"
-    "lArchive\0223\n\031tschchartseriescolumnfill\030\r "
-    "\001(\0132\020.TSD.FillArchive\0224\n\032tschchartseries"
-    "defaultfill\030\016 \001(\0132\020.TSD.FillArchive\0226\n\034t"
-    "schchartseriesmixedareafill\030\017 \001(\0132\020.TSD."
-    "FillArchive\0228\n\036tschchartseriesmixedcolum"
-    "nfill\030\020 \001(\0132\020.TSD.FillArchive\0220\n\026tschcha"
-    "rtseriespiefill\030\021 \001(\0132\020.TSD.FillArchive\022"
-    "3\n+tschchartseriesarealabelparagraphstyl"
-    "eindex\030\022 \001(\005\0222\n*tschchartseriesbarlabelp"
-    "aragraphstyleindex\030\023 \001(\005\0226\n.tschchartser"
-    "iesdefaultlabelparagraphstyleindex\030\024 \001(\005"
-    "\0223\n+tschchartserieslinelabelparagraphsty"
-    "leindex\030\025 \001(\005\0224\n,tschchartseriesmixedlab"
-    "elparagraphstyleindex\030\026 \001(\005\0222\n*tschchart"
-    "seriespielabelparagraphstyleindex\030\027 \001(\005\022"
-    "%\n\035tschchartseriesdefaultopacity\030\030 \001(\002\022:"
-    "\n2tschchartseriesareaoutsidelabelparagra"
-    "phstyleindex\030\031 \001(\005\0229\n1tschchartseriesbar"
-    "outsidelabelparagraphstyleindex\030\032 \001(\005\022=\n"
-    "5tschchartseriesdefaultoutsidelabelparag"
-    "raphstyleindex\030\033 \001(\005\022;\n3tschchartseriesm"
-    "ixedoutsidelabelparagraphstyleindex\030\034 \001("
-    "\005\0229\n1tschchartseriespieoutsidelabelparag"
-    "raphstyleindex\030\035 \001(\005\0227\n\033tschchartseries3"
-    "dareashadow\030\036 \001(\0132\022.TSD.ShadowArchive\0226\n"
-    "\032tschchartseries3dbarshadow\030\037 \001(\0132\022.TSD."
-    "ShadowArchive\0229\n\035tschchartseries3dcolumn"
-    "shadow\030  \001(\0132\022.TSD.ShadowArchive\0227\n\033tsch"
-    "chartseries3dlineshadow\030! \001(\0132\022.TSD.Shad"
-    "owArchive\0226\n\032tschchartseries3dpieshadow\030"
-    "\" \001(\0132\022.TSD.ShadowArchive\0225\n\031tschchartse"
-    "riesareashadow\030# \001(\0132\022.TSD.ShadowArchive"
-    "\0224\n\030tschchartseriesbarshadow\030$ \001(\0132\022.TSD"
-    ".ShadowArchive\0227\n\033tschchartseriesbubbles"
-    "hadow\030% \001(\0132\022.TSD.ShadowArchive\0228\n\034tschc"
-    "hartseriesdefaultshadow\030& \001(\0132\022.TSD.Shad"
-    "owArchive\0225\n\031tschchartserieslineshadow\030\'"
-    " \001(\0132\022.TSD.ShadowArchive\022:\n\036tschchartser"
-    "iesmixedareashadow\030( \001(\0132\022.TSD.ShadowArc"
-    "hive\022<\n tschchartseriesmixedcolumnshadow"
-    "\030) \001(\0132\022.TSD.ShadowArchive\022:\n\036tschcharts"
-    "eriesmixedlineshadow\030* \001(\0132\022.TSD.ShadowA"
-    "rchive\0224\n\030tschchartseriespieshadow\030+ \001(\013"
-    "2\022.TSD.ShadowArchive\0228\n\034tschchartseriess"
-    "cattershadow\030, \001(\0132\022.TSD.ShadowArchive\0225"
-    "\n\031tschchartseriesareastroke\030- \001(\0132\022.TSD."
-    "StrokeArchive\0224\n\030tschchartseriesbarstrok"
-    "e\030. \001(\0132\022.TSD.StrokeArchive\0227\n\033tschchart"
-    "seriesbubblestroke\030/ \001(\0132\022.TSD.StrokeArc"
-    "hive\0225\n\031tschchartserieslinestroke\0300 \001(\0132"
-    "\022.TSD.StrokeArchive\022:\n\036tschchartseriesmi"
-    "xedareastroke\0301 \001(\0132\022.TSD.StrokeArchive\022"
-    "<\n tschchartseriesmixedcolumnstroke\0302 \001("
-    "\0132\022.TSD.StrokeArchive\022:\n\036tschchartseries"
-    "mixedlinestroke\0303 \001(\0132\022.TSD.StrokeArchiv"
-    "e\0224\n\030tschchartseriespiestroke\0304 \001(\0132\022.TS"
-    "D.StrokeArchive\0228\n\034tschchartseriesscatte"
-    "rstroke\0305 \001(\0132\022.TSD.StrokeArchive\0227\n\035tsc"
-    "hchartseriesareasymbolfill\0306 \001(\0132\020.TSD.F"
-    "illArchive\0229\n\037tschchartseriesbubblesymbo"
-    "lfill\0307 \001(\0132\020.TSD.FillArchive\0227\n\035tschcha"
-    "rtserieslinesymbolfill\0308 \001(\0132\020.TSD.FillA"
-    "rchive\022<\n\"tschchartseriesmixedareasymbol"
-    "fill\0309 \001(\0132\020.TSD.FillArchive\022<\n\"tschchar"
-    "tseriesmixedlinesymbolfill\030: \001(\0132\020.TSD.F"
-    "illArchive\022:\n tschchartseriesscattersymb"
-    "olfill\030; \001(\0132\020.TSD.FillArchive\0222\n*tschch"
-    "artseriesareasymbolfilluseseriesfill\030< \001"
-    "(\010\0222\n*tschchartserieslinesymbolfillusese"
-    "riesfill\030= \001(\010\0227\n/tschchartseriesmixedar"
-    "easymbolfilluseseriesfill\030> \001(\010\0227\n/tschc"
-    "hartseriesmixedlinesymbolfilluseseriesfi"
-    "ll\030\? \001(\010\0224\n,tschchartseriesareasymbolfil"
-    "luseseriesstroke\030@ \001(\010\0226\n.tschchartserie"
-    "sbubblesymbolfilluseseriesstroke\030A \001(\010\0224"
-    "\n,tschchartserieslinesymbolfilluseseries"
-    "stroke\030B \001(\010\0229\n1tschchartseriesmixedarea"
-    "symbolfilluseseriesstroke\030C \001(\010\0229\n1tschc"
-    "hartseriesmixedlinesymbolfilluseseriesst"
-    "roke\030D \001(\010\0227\n/tschchartseriesscattersymb"
-    "olfilluseseriesstroke\030E \001(\010\022%\n\035tschchart"
-    "seriesareasymbolsize\030F \001(\002\022%\n\035tschcharts"
-    "erieslinesymbolsize\030G \001(\002\022*\n\"tschchartse"
-    "riesmixedareasymbolsize\030H \001(\002\022*\n\"tschcha"
-    "rtseriesmixedlinesymbolsize\030I \001(\002\022(\n tsc"
-    "hchartseriesscattersymbolsize\030J \001(\002\022;\n\037t"
-    "schchartseriesareasymbolstroke\030K \001(\0132\022.T"
-    "SD.StrokeArchive\022=\n!tschchartseriesbubbl"
-    "esymbolstroke\030L \001(\0132\022.TSD.StrokeArchive\022"
-    ";\n\037tschchartserieslinesymbolstroke\030M \001(\013"
-    "2\022.TSD.StrokeArchive\022@\n$tschchartseriesm"
-    "ixedareasymbolstroke\030N \001(\0132\022.TSD.StrokeA"
-    "rchive\022@\n$tschchartseriesmixedlinesymbol"
-    "stroke\030O \001(\0132\022.TSD.StrokeArchive\022>\n\"tsch"
-    "chartseriesscattersymbolstroke\030P \001(\0132\022.T"
-    "SD.StrokeArchive\0226\n.tschchartseriesdefau"
-    "lttrendlineequationopacity\030Q \001(\002\022B\n:tsch"
-    "chartseriesdefaulttrendlineequationparag"
-    "raphstyleindex\030R \001(\005\0226\n.tschchartseriesd"
-    "efaulttrendlinersquaredopacity\030S \001(\002\022B\n:"
-    "tschchartseriesdefaulttrendlinersquaredp"
-    "aragraphstyleindex\030T \001(\005\022A\n%tschchartser"
-    "iesdefaulttrendlineshadow\030U \001(\0132\022.TSD.Sh"
-    "adowArchive\022A\n%tschchartseriesdefaulttre"
-    "ndlinestroke\030V \001(\0132\022.TSD.StrokeArchive\022-"
-    "\n%tschchartseriesareavaluelabelposition\030"
-    "W \001(\005\022,\n$tschchartseriesbarvaluelabelpos"
-    "ition\030X \001(\005\022/\n\'tschchartseriesbubblevalu"
-    "elabelposition\030Y \001(\005\0220\n(tschchartseriesd"
-    "efaultvaluelabelposition\030Z \001(\005\022-\n%tschch"
-    "artserieslinevaluelabelposition\030[ \001(\005\0222\n"
-    "*tschchartseriesmixedareavaluelabelposit"
-    "ion\030\\ \001(\005\0224\n,tschchartseriesmixedcolumnv"
-    "aluelabelposition\030] \001(\005\0222\n*tschchartseri"
-    "esmixedlinevaluelabelposition\030^ \001(\005\0220\n(t"
-    "schchartseriesscattervaluelabelposition\030"
-    "_ \001(\005\0224\n,tschchartseriesstackedareavalue"
-    "labelposition\030` \001(\005\0223\n+tschchartseriesst"
-    "ackedbarvaluelabelposition\030a \001(\0052X\n\007curr"
-    "ent\022\035.TSCH.ChartSeriesStyleArchive\030\220N \001("
-    "\0132\'.TSCH.Generated.ChartSeriesStyleArchi"
-    "ve\"\223\034\n\032ChartSeriesNonStyleArchive\022,\n$tsc"
-    "hchartseriesbubbleadjustmentscale\030\001 \001(\002\022"
-    "d\n0tschchartseriesdefaulterrorbarcustomn"
+    "elposition\030\001 \001(\005\022E\n#tschchartaxisdefault"
+    "1_0numberformat\030\002 \001(\0132\030.TSK.FormatStruct"
+    "Archive\022B\n tschchartaxisdefaultnumberfor"
+    "mat\030* \001(\0132\030.TSK.FormatStructArchive\022C\n!t"
+    "schchartaxisdefault1_0dateformat\030\024 \001(\0132\030"
+    ".TSK.FormatStructArchive\022D\n\"tschchartaxi"
+    "sdefaultdurationformat\030\025 \001(\0132\030.TSK.Forma"
+    "tStructArchive\022@\n\036tschchartaxisdefaultda"
+    "teformat\030\026 \001(\0132\030.TSK.FormatStructArchive"
+    "\022,\n$tschchartaxisdefaultnumberformattype"
+    "\030\003 \001(\005\022)\n!tschchartaxisvaluenumberofdeca"
+    "des\030\004 \001(\005\0220\n(tschchartaxisvaluenumberofm"
+    "ajorgridlines\030\005 \001(\005\0220\n(tschchartaxisvalu"
+    "enumberofminorgridlines\030\006 \001(\005\022(\n tschcha"
+    "rtaxiscategoryplottoedges\030\007 \001(\010\022\037\n\027tschc"
+    "hartaxisvaluescale\030\010 \001(\005\022\'\n\037tschchartaxi"
+    "scategoryshowlabels\030\t \001(\010\022&\n\036tschchartax"
+    "isdefaultshowlabels\030\n \001(\010\022$\n\034tschchartax"
+    "isvalueshowlabels\030\013 \001(\010\022-\n%tschchartaxis"
+    "categoryshowserieslabels\030\014 \001(\010\022.\n&tschch"
+    "artaxismultidatashowserieslabels\030\023 \001(\010\022&"
+    "\n\036tschchartaxiscategoryshowtitle\030\r \001(\010\022#"
+    "\n\033tschchartaxisvalueshowtitle\030\016 \001(\010\022\"\n\032t"
+    "schchartaxiscategorytitle\030\017 \001(\t\022\037\n\027tschc"
+    "hartaxisvaluetitle\030\020 \001(\t\022F\n\033tschchartaxi"
+    "sdefaultusermax\030\021 \001(\0132!.TSCH.ChartsNSNum"
+    "berDoubleArchive\022F\n\033tschchartaxisdefault"
+    "usermin\030\022 \001(\0132!.TSCH.ChartsNSNumberDoubl"
+    "eArchive2Z\n\007current\022\036.TSCH.ChartAxisNonS"
+    "tyleArchive\030\220N \001(\0132(.TSCH.Generated.Char"
+    "tAxisNonStyleArchive\"\307+\n\027ChartSeriesStyl"
+    "eArchive\022B\n%tschchartseriesdefaulterrorb"
+    "arlineend\030\001 \001(\0132\023.TSD.LineEndArchive\022J\n-"
+    "tschchartseriesdefaulterrorbarlineendsca"
+    "tterx\030\002 \001(\0132\023.TSD.LineEndArchive\022@\n$tsch"
+    "chartseriesdefaulterrorbarshadow\030\003 \001(\0132\022"
+    ".TSD.ShadowArchive\022@\n$tschchartseriesdef"
+    "aulterrorbarstroke\030\004 \001(\0132\022.TSD.StrokeArc"
+    "hive\022H\n,tschchartseriesdefaulterrorbarst"
+    "rokescatterx\030\005 \001(\0132\022.TSD.StrokeArchive\0223"
+    "\n\031tschchartseries3dareafill\030\006 \001(\0132\020.TSD."
+    "FillArchive\0222\n\030tschchartseries3dbarfill\030"
+    "\007 \001(\0132\020.TSD.FillArchive\0225\n\033tschchartseri"
+    "es3dcolumnfill\030\010 \001(\0132\020.TSD.FillArchive\0223"
+    "\n\031tschchartseries3dlinefill\030\t \001(\0132\020.TSD."
+    "FillArchive\0222\n\030tschchartseries3dpiefill\030"
+    "\n \001(\0132\020.TSD.FillArchive\0221\n\027tschchartseri"
+    "esareafill\030\013 \001(\0132\020.TSD.FillArchive\0220\n\026ts"
+    "chchartseriesbarfill\030\014 \001(\0132\020.TSD.FillArc"
+    "hive\0223\n\031tschchartseriescolumnfill\030\r \001(\0132"
+    "\020.TSD.FillArchive\0224\n\032tschchartseriesdefa"
+    "ultfill\030\016 \001(\0132\020.TSD.FillArchive\0226\n\034tschc"
+    "hartseriesmixedareafill\030\017 \001(\0132\020.TSD.Fill"
+    "Archive\0228\n\036tschchartseriesmixedcolumnfil"
+    "l\030\020 \001(\0132\020.TSD.FillArchive\0220\n\026tschchartse"
+    "riespiefill\030\021 \001(\0132\020.TSD.FillArchive\0223\n+t"
+    "schchartseriesarealabelparagraphstyleind"
+    "ex\030\022 \001(\005\0222\n*tschchartseriesbarlabelparag"
+    "raphstyleindex\030\023 \001(\005\0226\n.tschchartseriesd"
+    "efaultlabelparagraphstyleindex\030\024 \001(\005\0223\n+"
+    "tschchartserieslinelabelparagraphstylein"
+    "dex\030\025 \001(\005\0224\n,tschchartseriesmixedlabelpa"
+    "ragraphstyleindex\030\026 \001(\005\0222\n*tschchartseri"
+    "espielabelparagraphstyleindex\030\027 \001(\005\022%\n\035t"
+    "schchartseriesdefaultopacity\030\030 \001(\002\022:\n2ts"
+    "chchartseriesareaoutsidelabelparagraphst"
+    "yleindex\030\031 \001(\005\0229\n1tschchartseriesbarouts"
+    "idelabelparagraphstyleindex\030\032 \001(\005\022=\n5tsc"
+    "hchartseriesdefaultoutsidelabelparagraph"
+    "styleindex\030\033 \001(\005\022;\n3tschchartseriesmixed"
+    "outsidelabelparagraphstyleindex\030\034 \001(\005\0229\n"
+    "1tschchartseriespieoutsidelabelparagraph"
+    "styleindex\030\035 \001(\005\0227\n\033tschchartseries3dare"
+    "ashadow\030\036 \001(\0132\022.TSD.ShadowArchive\0226\n\032tsc"
+    "hchartseries3dbarshadow\030\037 \001(\0132\022.TSD.Shad"
+    "owArchive\0229\n\035tschchartseries3dcolumnshad"
+    "ow\030  \001(\0132\022.TSD.ShadowArchive\0227\n\033tschchar"
+    "tseries3dlineshadow\030! \001(\0132\022.TSD.ShadowAr"
+    "chive\0226\n\032tschchartseries3dpieshadow\030\" \001("
+    "\0132\022.TSD.ShadowArchive\0225\n\031tschchartseries"
+    "areashadow\030# \001(\0132\022.TSD.ShadowArchive\0224\n\030"
+    "tschchartseriesbarshadow\030$ \001(\0132\022.TSD.Sha"
+    "dowArchive\0227\n\033tschchartseriesbubbleshado"
+    "w\030% \001(\0132\022.TSD.ShadowArchive\0228\n\034tschchart"
+    "seriesdefaultshadow\030& \001(\0132\022.TSD.ShadowAr"
+    "chive\0225\n\031tschchartserieslineshadow\030\' \001(\013"
+    "2\022.TSD.ShadowArchive\022:\n\036tschchartseriesm"
+    "ixedareashadow\030( \001(\0132\022.TSD.ShadowArchive"
+    "\022<\n tschchartseriesmixedcolumnshadow\030) \001"
+    "(\0132\022.TSD.ShadowArchive\022:\n\036tschchartserie"
+    "smixedlineshadow\030* \001(\0132\022.TSD.ShadowArchi"
+    "ve\0224\n\030tschchartseriespieshadow\030+ \001(\0132\022.T"
+    "SD.ShadowArchive\0228\n\034tschchartseriesscatt"
+    "ershadow\030, \001(\0132\022.TSD.ShadowArchive\0225\n\031ts"
+    "chchartseriesareastroke\030- \001(\0132\022.TSD.Stro"
+    "keArchive\0224\n\030tschchartseriesbarstroke\030. "
+    "\001(\0132\022.TSD.StrokeArchive\0227\n\033tschchartseri"
+    "esbubblestroke\030/ \001(\0132\022.TSD.StrokeArchive"
+    "\0225\n\031tschchartserieslinestroke\0300 \001(\0132\022.TS"
+    "D.StrokeArchive\022:\n\036tschchartseriesmixeda"
+    "reastroke\0301 \001(\0132\022.TSD.StrokeArchive\022<\n t"
+    "schchartseriesmixedcolumnstroke\0302 \001(\0132\022."
+    "TSD.StrokeArchive\022:\n\036tschchartseriesmixe"
+    "dlinestroke\0303 \001(\0132\022.TSD.StrokeArchive\0224\n"
+    "\030tschchartseriespiestroke\0304 \001(\0132\022.TSD.St"
+    "rokeArchive\0228\n\034tschchartseriesscatterstr"
+    "oke\0305 \001(\0132\022.TSD.StrokeArchive\0227\n\035tschcha"
+    "rtseriesareasymbolfill\0306 \001(\0132\020.TSD.FillA"
+    "rchive\0229\n\037tschchartseriesbubblesymbolfil"
+    "l\0307 \001(\0132\020.TSD.FillArchive\0227\n\035tschchartse"
+    "rieslinesymbolfill\0308 \001(\0132\020.TSD.FillArchi"
+    "ve\022<\n\"tschchartseriesmixedareasymbolfill"
+    "\0309 \001(\0132\020.TSD.FillArchive\022<\n\"tschchartser"
+    "iesmixedlinesymbolfill\030: \001(\0132\020.TSD.FillA"
+    "rchive\022:\n tschchartseriesscattersymbolfi"
+    "ll\030; \001(\0132\020.TSD.FillArchive\0222\n*tschcharts"
+    "eriesareasymbolfilluseseriesfill\030< \001(\010\0222"
+    "\n*tschchartserieslinesymbolfilluseseries"
+    "fill\030= \001(\010\0227\n/tschchartseriesmixedareasy"
+    "mbolfilluseseriesfill\030> \001(\010\0227\n/tschchart"
+    "seriesmixedlinesymbolfilluseseriesfill\030\?"
+    " \001(\010\0224\n,tschchartseriesareasymbolfilluse"
+    "seriesstroke\030@ \001(\010\0226\n.tschchartseriesbub"
+    "blesymbolfilluseseriesstroke\030A \001(\010\0224\n,ts"
+    "chchartserieslinesymbolfilluseseriesstro"
+    "ke\030B \001(\010\0229\n1tschchartseriesmixedareasymb"
+    "olfilluseseriesstroke\030C \001(\010\0229\n1tschchart"
+    "seriesmixedlinesymbolfilluseseriesstroke"
+    "\030D \001(\010\0227\n/tschchartseriesscattersymbolfi"
+    "lluseseriesstroke\030E \001(\010\022%\n\035tschchartseri"
+    "esareasymbolsize\030F \001(\002\022%\n\035tschchartserie"
+    "slinesymbolsize\030G \001(\002\022*\n\"tschchartseries"
+    "mixedareasymbolsize\030H \001(\002\022*\n\"tschchartse"
+    "riesmixedlinesymbolsize\030I \001(\002\022(\n tschcha"
+    "rtseriesscattersymbolsize\030J \001(\002\022;\n\037tschc"
+    "hartseriesareasymbolstroke\030K \001(\0132\022.TSD.S"
+    "trokeArchive\022=\n!tschchartseriesbubblesym"
+    "bolstroke\030L \001(\0132\022.TSD.StrokeArchive\022;\n\037t"
+    "schchartserieslinesymbolstroke\030M \001(\0132\022.T"
+    "SD.StrokeArchive\022@\n$tschchartseriesmixed"
+    "areasymbolstroke\030N \001(\0132\022.TSD.StrokeArchi"
+    "ve\022@\n$tschchartseriesmixedlinesymbolstro"
+    "ke\030O \001(\0132\022.TSD.StrokeArchive\022>\n\"tschchar"
+    "tseriesscattersymbolstroke\030P \001(\0132\022.TSD.S"
+    "trokeArchive\0226\n.tschchartseriesdefaulttr"
+    "endlineequationopacity\030Q \001(\002\022B\n:tschchar"
+    "tseriesdefaulttrendlineequationparagraph"
+    "styleindex\030R \001(\005\0226\n.tschchartseriesdefau"
+    "lttrendlinersquaredopacity\030S \001(\002\022B\n:tsch"
+    "chartseriesdefaulttrendlinersquaredparag"
+    "raphstyleindex\030T \001(\005\022A\n%tschchartseriesd"
+    "efaulttrendlineshadow\030U \001(\0132\022.TSD.Shadow"
+    "Archive\022A\n%tschchartseriesdefaulttrendli"
+    "nestroke\030V \001(\0132\022.TSD.StrokeArchive\022-\n%ts"
+    "chchartseriesareavaluelabelposition\030W \001("
+    "\005\022,\n$tschchartseriesbarvaluelabelpositio"
+    "n\030X \001(\005\022/\n\'tschchartseriesbubblevaluelab"
+    "elposition\030Y \001(\005\0220\n(tschchartseriesdefau"
+    "ltvaluelabelposition\030Z \001(\005\022-\n%tschcharts"
+    "erieslinevaluelabelposition\030[ \001(\005\0222\n*tsc"
+    "hchartseriesmixedareavaluelabelposition\030"
+    "\\ \001(\005\0224\n,tschchartseriesmixedcolumnvalue"
+    "labelposition\030] \001(\005\0222\n*tschchartseriesmi"
+    "xedlinevaluelabelposition\030^ \001(\005\0220\n(tschc"
+    "hartseriesscattervaluelabelposition\030_ \001("
+    "\005\0224\n,tschchartseriesstackedareavaluelabe"
+    "lposition\030` \001(\005\0223\n+tschchartseriesstacke"
+    "dbarvaluelabelposition\030a \001(\0052X\n\007current\022"
+    "\035.TSCH.ChartSeriesStyleArchive\030\220N \001(\0132\'."
+    "TSCH.Generated.ChartSeriesStyleArchive\"\325"
+    "\037\n\032ChartSeriesNonStyleArchive\022,\n$tschcha"
+    "rtseriesbubbleadjustmentscale\030\001 \001(\002\022d\n0t"
+    "schchartseriesdefaulterrorbarcustomnegat"
+    "ivedata\030\002 \001(\0132*.TSCH.ChartsNSArrayOfNSNu"
+    "mberDoubleArchive\022l\n8tschchartseriesdefa"
+    "ulterrorbarcustomnegativedatascatterx\030\003 "
+    "\001(\0132*.TSCH.ChartsNSArrayOfNSNumberDouble"
+    "Archive\022d\n0tschchartseriesdefaulterrorba"
+    "rcustompositivedata\030\004 \001(\0132*.TSCH.ChartsN"
+    "SArrayOfNSNumberDoubleArchive\022l\n8tschcha"
+    "rtseriesdefaulterrorbarcustompositivedat"
+    "ascatterx\030\005 \001(\0132*.TSCH.ChartsNSArrayOfNS"
+    "NumberDoubleArchive\0220\n(tschchartseriesde"
+    "faulterrorbarfixedvalue\030\006 \001(\002\0228\n0tschcha"
+    "rtseriesdefaulterrorbarfixedvaluescatter"
+    "x\030\007 \001(\002\0222\n*tschchartseriesdefaulterrorba"
+    "rpercentvalue\030\010 \001(\002\022:\n2tschchartseriesde"
+    "faulterrorbarpercentvaluescatterx\030\t \001(\002\022"
+    "-\n%tschchartseriesdefaulterrorbarsetting"
+    "\030\n \001(\005\0225\n-tschchartseriesdefaulterrorbar"
+    "settingscatterx\030\013 \001(\005\0221\n)tschchartseries"
+    "defaulterrorbarstddevvalue\030\014 \001(\002\0229\n1tsch"
+    "chartseriesdefaulterrorbarstddevvaluesca"
+    "tterx\030\r \001(\002\022*\n\"tschchartseriesdefaulterr"
+    "orbartype\030\016 \001(\005\0222\n*tschchartseriesdefaul"
+    "terrorbartypescatterx\030\017 \001(\005\022(\n tschchart"
+    "seriespielabelexplosion\030\020 \001(\002\022%\n\035tschcha"
+    "rtseriesbubblelinetype\030\021 \001(\005\022#\n\033tschchar"
+    "tserieslinelinetype\030\022 \001(\005\022(\n tschchartse"
+    "riesmixedlinelinetype\030\023 \001(\005\022&\n\036tschchart"
+    "seriesscatterlinetype\030\024 \001(\005\022G\n%tschchart"
+    "seriesdefault1_0numberformat\030\025 \001(\0132\030.TSK"
+    ".FormatStructArchive\022D\n\"tschchartseriesd"
+    "efaultnumberformat\030b \001(\0132\030.TSK.FormatStr"
+    "uctArchive\022E\n#tschchartseriesdefault1_0d"
+    "ateformat\030E \001(\0132\030.TSK.FormatStructArchiv"
+    "e\022F\n$tschchartseriesdefaultdurationforma"
+    "t\030F \001(\0132\030.TSK.FormatStructArchive\022B\n tsc"
+    "hchartseriesdefaultdateformat\030G \001(\0132\030.TS"
+    "K.FormatStructArchive\022C\n!tschchartseries"
+    "pie1_0numberformat\030\026 \001(\0132\030.TSK.FormatStr"
+    "uctArchive\022@\n\036tschchartseriespienumberfo"
+    "rmat\030c \001(\0132\030.TSK.FormatStructArchive\022.\n&"
+    "tschchartseriesdefaultnumberformattype\030\027"
+    " \001(\005\022*\n\"tschchartseriespienumberformatty"
+    "pe\030\030 \001(\005\022K\n)tschchartseriesstackedpercen"
+    "tnumberformat\030\031 \001(\0132\030.TSK.FormatStructAr"
+    "chive\022(\n tschchartseriesdefaultseriestyp"
+    "e\030\032 \001(\005\022*\n\"tschchartseriesdefaultshowerr"
+    "orbar\030\033 \001(\010\0222\n*tschchartseriesdefaultsho"
+    "werrorbarscatterx\030\034 \001(\010\022&\n\036tschchartseri"
+    "esscattershowline\030\035 \001(\010\022-\n%tschchartseri"
+    "esbubbleshownegativedata\030\036 \001(\010\022*\n\"tschch"
+    "artseriespieshowserieslabels\030\037 \001(\010\022%\n\035ts"
+    "chchartseriesareashowsymbol\030  \001(\010\022%\n\035tsc"
+    "hchartserieslineshowsymbol\030! \001(\010\022*\n\"tsch"
+    "chartseriesmixedareashowsymbol\030\" \001(\010\022*\n\""
+    "tschchartseriesmixedlineshowsymbol\030# \001(\010"
+    "\022(\n tschchartseriesscattershowsymbol\030$ \001"
+    "(\010\022+\n#tschchartseriesdefaultshowtrendlin"
+    "e\030% \001(\010\022*\n\"tschchartseriesareashowvaluel"
+    "abels\030& \001(\010\022)\n!tschchartseriesbarshowval"
+    "uelabels\030\' \001(\010\022,\n$tschchartseriesbubbles"
+    "howvaluelabels\030( \001(\010\022-\n%tschchartseriesd"
+    "efaultshowvaluelabels\030) \001(\010\022*\n\"tschchart"
+    "serieslineshowvaluelabels\030* \001(\010\022+\n#tschc"
+    "hartseriesmixedshowvaluelabels\030+ \001(\010\022)\n!"
+    "tschchartseriespieshowvaluelabels\030, \001(\010\022"
+    "-\n%tschchartseriesscattershowvaluelabels"
+    "\030- \001(\010\022*\n\"tschchartseriesbubblesizedimen"
+    "sion\030. \001(\005\022%\n\035tschchartseriesareasymbolt"
+    "ype\030/ \001(\005\022%\n\035tschchartserieslinesymbolty"
+    "pe\0300 \001(\005\022*\n\"tschchartseriesmixedareasymb"
+    "oltype\0301 \001(\005\022*\n\"tschchartseriesmixedline"
+    "symboltype\0302 \001(\005\022(\n tschchartseriesscatt"
+    "ersymboltype\0303 \001(\005\0226\n.tschchartseriesdef"
+    "aulttrendlineequationoffsetx\0304 \001(\002\0226\n.ts"
+    "chchartseriesdefaulttrendlineequationoff"
+    "sety\0305 \001(\002\0222\n*tschchartseriesdefaulttren"
+    "dlinelabelstring\0306 \001(\t\022,\n$tschchartserie"
+    "sdefaulttrendlineorder\0307 \001(\005\022-\n%tschchar"
+    "tseriesdefaulttrendlineperiod\0308 \001(\005\0226\n.t"
+    "schchartseriesdefaulttrendlinersquaredof"
+    "fsetx\0309 \001(\002\0226\n.tschchartseriesdefaulttre"
+    "ndlinersquaredoffsety\030: \001(\002\0223\n+tschchart"
+    "seriesdefaulttrendlineshowequation\030; \001(\010"
+    "\0220\n(tschchartseriesdefaulttrendlineshowl"
+    "abel\030< \001(\010\0222\n*tschchartseriesdefaulttren"
+    "dlineshowr2value\030= \001(\010\022+\n#tschchartserie"
+    "sdefaulttrendlinetype\030> \001(\005\022(\n tschchart"
+    "seriespiewedgeexplosion\030\? \001(\002\022*\n\"tschcha"
+    "rtseriesdefaultyaxisordinal\030@ \001(\005\022-\n%tsc"
+    "hchartseriesbubbleshowserieslabels\030A \001(\010"
+    "\022,\n$tschchartseriesbubblevaluelabelsaxis"
+    "\030B \001(\005\022.\n&tschchartseriesscattershowseri"
+    "eslabels\030C \001(\010\022-\n%tschchartseriesscatter"
+    "valuelabelsaxis\030D \001(\005\022/\n\'tschchartseries"
+    "defaultshowlabelsinfront\030d \001(\010\022.\n&tschch"
+    "artseriesbubbleshowlabelsinfront\030e \001(\0102^"
+    "\n\007current\022 .TSCH.ChartSeriesNonStyleArch"
+    "ive\030\220N \001(\0132*.TSCH.Generated.ChartSeriesN"
+    "onStyleArchive\"\263\n\n\036ChartGenericPropertyM"
+    "apArchive\022\037\n\027tschchartinfo3dbarshape\030\001 \001"
+    "(\005\022!\n\031tschchartinfo3dbeveledges\030\002 \001(\010\022\'\n"
+    "\037tschchartinfo3dintersetdepthgap\030\003 \001(\002\022;"
+    "\n\027tschchartinfo3drotation\030\004 \001(\0132\032.TSCH.C"
+    "hart3DVectorArchive\0228\n\024tschchartinfo3dsc"
+    "ale\030\005 \001(\0132\032.TSCH.Chart3DVectorArchive\022;\n"
+    "\027tschchartinfo3dviewport\030\006 \001(\0132\032.TSCH.Ch"
+    "art3DVectorArchive\022\"\n\032tschchartinfopiest"
+    "artangle\030\007 \001(\002\022\037\n\027tschchartinfoshowlegen"
+    "d\030\010 \001(\010\022\036\n\026tschchartinfoshowtitle\030\t \001(\010\022"
+    "#\n\033tschchartinfoskiphiddendata\030\n \001(\010\022\032\n\022"
+    "tschchartinfotitle\030\013 \001(\t\022(\n tschchartinf"
+    "odatasetnamelocation\030\014 \001(\005\022)\n!tschcharti"
+    "nfomultidatacontroltype\030\r \001(\005\022#\n\033tschcha"
+    "rtinfo3dchartopacity\030\016 \001(\002\022K\n\036tschcharti"
+    "nfo3dlightingpackage\030\017 \001(\0132#.TSCH.Chart3"
+    "DLightingPackageArchive\0225\n\033tschchartinfo"
+    "backgroundfill\030\020 \001(\0132\020.TSD.FillArchive\0229"
+    "\n\035tschchartinfobackgroundstroke\030\021 \001(\0132\022."
+    "TSD.StrokeArchive\022\"\n\032tschchartinfoborder"
+    "opacity\030\022 \001(\002\0225\n\031tschchartinfobordershad"
+    "ow\030\023 \001(\0132\022.TSD.ShadowArchive\0225\n\031tschchar"
+    "tinfoborderstroke\030\024 \001(\0132\022.TSD.StrokeArch"
+    "ive\022\"\n\032tschchartinfocombinelayers\030\025 \001(\010\022"
+    "9\n\037tschchartinfogridbackgroundfill\030\026 \001(\013"
+    "2\020.TSD.FillArchive\022*\n\"tschchartinfogridb"
+    "ackgroundopacity\030\027 \001(\002\022 \n\030tschchartinfoi"
+    "nterbargap\030\030 \001(\002\022 \n\030tschchartinfointerse"
+    "tgap\030\031 \001(\002\022\037\n\027tschchartinfoshowborder\030\032 "
+    "\001(\010\022+\n\027tschchartinfotitlecolor\030\033 \001(\0132\n.T"
+    "SP.Color\022-\n%tschchartinfotitleparagraphs"
+    "tyleindex\030\034 \001(\005\0223\n+tschchartinfodatasetn"
+    "ameparagraphstyleindex\030\035 \001(\005\"\207\002\n\037LegendG"
+    "enericPropertyMapArchive\022-\n\023tschlegendmo"
+    "delfill\030\001 \001(\0132\020.TSD.FillArchive\022/\n\'tschl"
+    "egendmodellabelparagraphstyleindex\030\002 \001(\005"
+    "\022\036\n\026tschlegendmodelopacity\030\003 \001(\002\0221\n\025tsch"
+    "legendmodelshadow\030\004 \001(\0132\022.TSD.ShadowArch"
+    "ive\0221\n\025tschlegendmodelstroke\030\005 \001(\0132\022.TSD"
+    ".StrokeArchive\"\244\016\n\"ChartAxisGenericPrope"
+    "rtyMapArchive\022$\n\034tschchartaxis3dlabelpos"
+    "ition\030\001 \001(\005\022>\n\034tschchartaxis1_0numberfor"
+    "mat\030\002 \001(\0132\030.TSK.FormatStructArchive\022;\n\031t"
+    "schchartaxisnumberformat\030\003 \001(\0132\030.TSK.For"
+    "matStructArchive\022<\n\032tschchartaxis1_0date"
+    "format\030\004 \001(\0132\030.TSK.FormatStructArchive\022="
+    "\n\033tschchartaxisdurationformat\030\005 \001(\0132\030.TS"
+    "K.FormatStructArchive\0229\n\027tschchartaxisda"
+    "teformat\030\006 \001(\0132\030.TSK.FormatStructArchive"
+    "\022%\n\035tschchartaxisnumberformattype\030\007 \001(\005\022"
+    "$\n\034tschchartaxisnumberofdecades\030\010 \001(\005\022+\n"
+    "#tschchartaxisnumberofmajorgridlines\030\t \001"
+    "(\005\022+\n#tschchartaxisnumberofminorgridline"
+    "s\030\n \001(\005\022 \n\030tschchartaxisplottoedges\030\013 \001("
+    "\010\022\032\n\022tschchartaxisscale\030\014 \001(\005\022\037\n\027tschcha"
+    "rtaxisshowlabels\030\r \001(\010\022%\n\035tschchartaxiss"
+    "howserieslabels\030\016 \001(\010\022\036\n\026tschchartaxissh"
+    "owtitle\030\017 \001(\010\022\032\n\022tschchartaxistitle\030\020 \001("
+    "\t\022\?\n\024tschchartaxisusermax\030\021 \001(\0132!.TSCH.C"
+    "hartsNSNumberDoubleArchive\022\?\n\024tschcharta"
+    "xisusermin\030\022 \001(\0132!.TSCH.ChartsNSNumberDo"
+    "ubleArchive\022&\n\036tschchartaxis3dgridlineop"
+    "acity\030\023 \001(\002\0229\n\035tschchartaxis3dgridlinest"
+    "roke\030\024 \001(\0132\022.TSD.StrokeArchive\022&\n\036tschch"
+    "artaxishorizontalspacing\030\025 \001(\005\022-\n%tschch"
+    "artaxislabelparagraphstyleindex\030\026 \001(\005\022&\n"
+    "\036tschchartaxislabelsorientation\030\027 \001(\002\022)\n"
+    "!tschchartaxismajorgridlineopacity\030\030 \001(\002"
+    "\022<\n tschchartaxismajorgridlineshadow\030\031 \001"
+    "(\0132\022.TSD.ShadowArchive\022<\n tschchartaxism"
+    "ajorgridlinestroke\030\032 \001(\0132\022.TSD.StrokeArc"
+    "hive\022)\n!tschchartaxisminorgridlineopacit"
+    "y\030\033 \001(\002\022<\n tschchartaxisminorgridlinesha"
+    "dow\030\034 \001(\0132\022.TSD.ShadowArchive\022<\n tschcha"
+    "rtaxisminorgridlinestroke\030\035 \001(\0132\022.TSD.St"
+    "rokeArchive\022\035\n\025tschchartaxisshowaxis\030\036 \001"
+    "(\010\022\"\n\032tschchartaxisshowlastlabel\030\037 \001(\010\022\'"
+    "\n\037tschchartaxisshowmajorgridlines\030  \001(\010\022"
+    "\'\n\037tschchartaxisshowmajortickmarks\030! \001(\010"
+    "\022%\n\035tschchartaxisshowminimumlabel\030\" \001(\010\022"
+    "\'\n\037tschchartaxisshowminorgridlines\030# \001(\010"
+    "\022\'\n\037tschchartaxisshowminortickmarks\030$ \001("
+    "\010\022%\n\035tschchartaxistickmarklocation\030% \001(\005"
+    "\022-\n%tschchartaxistitleparagraphstyleinde"
+    "x\030& \001(\005\022$\n\034tschchartaxisverticalspacing\030"
+    "\' \001(\005\"\221\035\n$ChartSeriesGenericPropertyMapA"
+    "rchive\022&\n\036tschchartseriesadjustmentscale"
+    "\030\001 \001(\002\022]\n)tschchartserieserrorbarcustomn"
     "egativedata\030\002 \001(\0132*.TSCH.ChartsNSArrayOf"
-    "NSNumberDoubleArchive\022l\n8tschchartseries"
-    "defaulterrorbarcustomnegativedatascatter"
-    "x\030\003 \001(\0132*.TSCH.ChartsNSArrayOfNSNumberDo"
-    "ubleArchive\022d\n0tschchartseriesdefaulterr"
-    "orbarcustompositivedata\030\004 \001(\0132*.TSCH.Cha"
-    "rtsNSArrayOfNSNumberDoubleArchive\022l\n8tsc"
-    "hchartseriesdefaulterrorbarcustompositiv"
-    "edatascatterx\030\005 \001(\0132*.TSCH.ChartsNSArray"
-    "OfNSNumberDoubleArchive\0220\n(tschchartseri"
-    "esdefaulterrorbarfixedvalue\030\006 \001(\002\0228\n0tsc"
-    "hchartseriesdefaulterrorbarfixedvaluesca"
-    "tterx\030\007 \001(\002\0222\n*tschchartseriesdefaulterr"
-    "orbarpercentvalue\030\010 \001(\002\022:\n2tschchartseri"
-    "esdefaulterrorbarpercentvaluescatterx\030\t "
-    "\001(\002\022-\n%tschchartseriesdefaulterrorbarset"
-    "ting\030\n \001(\005\0225\n-tschchartseriesdefaulterro"
-    "rbarsettingscatterx\030\013 \001(\005\0221\n)tschchartse"
-    "riesdefaulterrorbarstddevvalue\030\014 \001(\002\0229\n1"
-    "tschchartseriesdefaulterrorbarstddevvalu"
-    "escatterx\030\r \001(\002\022*\n\"tschchartseriesdefaul"
-    "terrorbartype\030\016 \001(\005\0222\n*tschchartseriesde"
-    "faulterrorbartypescatterx\030\017 \001(\005\022(\n tschc"
-    "hartseriespielabelexplosion\030\020 \001(\002\022%\n\035tsc"
-    "hchartseriesbubblelinetype\030\021 \001(\005\022#\n\033tsch"
-    "chartserieslinelinetype\030\022 \001(\005\022(\n tschcha"
-    "rtseriesmixedlinelinetype\030\023 \001(\005\022&\n\036tschc"
-    "hartseriesscatterlinetype\030\024 \001(\005\022D\n\"tschc"
-    "hartseriesdefaultnumberformat\030\025 \001(\0132\030.TS"
-    "K.FormatStructArchive\022@\n\036tschchartseries"
-    "pienumberformat\030\026 \001(\0132\030.TSK.FormatStruct"
-    "Archive\022.\n&tschchartseriesdefaultnumberf"
-    "ormattype\030\027 \001(\005\022*\n\"tschchartseriespienum"
-    "berformattype\030\030 \001(\005\022K\n)tschchartseriesst"
-    "ackedpercentnumberformat\030\031 \001(\0132\030.TSK.For"
-    "matStructArchive\022(\n tschchartseriesdefau"
-    "ltseriestype\030\032 \001(\005\022*\n\"tschchartseriesdef"
-    "aultshowerrorbar\030\033 \001(\010\0222\n*tschchartserie"
-    "sdefaultshowerrorbarscatterx\030\034 \001(\010\022&\n\036ts"
-    "chchartseriesscattershowline\030\035 \001(\010\022-\n%ts"
-    "chchartseriesbubbleshownegativedata\030\036 \001("
-    "\010\022*\n\"tschchartseriespieshowserieslabels\030"
-    "\037 \001(\010\022%\n\035tschchartseriesareashowsymbol\030 "
-    " \001(\010\022%\n\035tschchartserieslineshowsymbol\030! "
-    "\001(\010\022*\n\"tschchartseriesmixedareashowsymbo"
-    "l\030\" \001(\010\022*\n\"tschchartseriesmixedlineshows"
-    "ymbol\030# \001(\010\022(\n tschchartseriesscattersho"
-    "wsymbol\030$ \001(\010\022+\n#tschchartseriesdefaults"
-    "howtrendline\030% \001(\010\022*\n\"tschchartseriesare"
-    "ashowvaluelabels\030& \001(\010\022)\n!tschchartserie"
-    "sbarshowvaluelabels\030\' \001(\010\022,\n$tschchartse"
-    "riesbubbleshowvaluelabels\030( \001(\010\022-\n%tschc"
-    "hartseriesdefaultshowvaluelabels\030) \001(\010\022*"
-    "\n\"tschchartserieslineshowvaluelabels\030* \001"
-    "(\010\022+\n#tschchartseriesmixedshowvaluelabel"
-    "s\030+ \001(\010\022)\n!tschchartseriespieshowvaluela"
-    "bels\030, \001(\010\022-\n%tschchartseriesscattershow"
-    "valuelabels\030- \001(\010\022*\n\"tschchartseriesbubb"
-    "lesizedimension\030. \001(\005\022%\n\035tschchartseries"
-    "areasymboltype\030/ \001(\005\022%\n\035tschchartseriesl"
-    "inesymboltype\0300 \001(\005\022*\n\"tschchartseriesmi"
-    "xedareasymboltype\0301 \001(\005\022*\n\"tschchartseri"
-    "esmixedlinesymboltype\0302 \001(\005\022(\n tschchart"
-    "seriesscattersymboltype\0303 \001(\005\0226\n.tschcha"
-    "rtseriesdefaulttrendlineequationoffsetx\030"
-    "4 \001(\002\0226\n.tschchartseriesdefaulttrendline"
-    "equationoffsety\0305 \001(\002\0222\n*tschchartseries"
-    "defaulttrendlinelabelstring\0306 \001(\t\022,\n$tsc"
-    "hchartseriesdefaulttrendlineorder\0307 \001(\005\022"
-    "-\n%tschchartseriesdefaulttrendlineperiod"
-    "\0308 \001(\005\0226\n.tschchartseriesdefaulttrendlin"
-    "ersquaredoffsetx\0309 \001(\002\0226\n.tschchartserie"
-    "sdefaulttrendlinersquaredoffsety\030: \001(\002\0223"
-    "\n+tschchartseriesdefaulttrendlineshowequ"
-    "ation\030; \001(\010\0220\n(tschchartseriesdefaulttre"
-    "ndlineshowlabel\030< \001(\010\0222\n*tschchartseries"
-    "defaulttrendlineshowr2value\030= \001(\010\022+\n#tsc"
-    "hchartseriesdefaulttrendlinetype\030> \001(\005\022("
-    "\n tschchartseriespiewedgeexplosion\030\? \001(\002"
-    "\022*\n\"tschchartseriesdefaultyaxisordinal\030@"
-    " \001(\005\022-\n%tschchartseriesbubbleshowseriesl"
-    "abels\030A \001(\010\022,\n$tschchartseriesbubblevalu"
-    "elabelsaxis\030B \001(\005\022.\n&tschchartseriesscat"
-    "tershowserieslabels\030C \001(\010\022-\n%tschchartse"
-    "riesscattervaluelabelsaxis\030D \001(\0052^\n\007curr"
-    "ent\022 .TSCH.ChartSeriesNonStyleArchive\030\220N"
-    " \001(\0132*.TSCH.Generated.ChartSeriesNonStyl"
-    "eArchive", 15528);
+    "NSNumberDoubleArchive\022e\n1tschchartseries"
+    "errorbarcustomnegativedatascatterx\030\003 \001(\013"
+    "2*.TSCH.ChartsNSArrayOfNSNumberDoubleArc"
+    "hive\022]\n)tschchartserieserrorbarcustompos"
+    "itivedata\030\004 \001(\0132*.TSCH.ChartsNSArrayOfNS"
+    "NumberDoubleArchive\022e\n1tschchartserieser"
+    "rorbarcustompositivedatascatterx\030\005 \001(\0132*"
+    ".TSCH.ChartsNSArrayOfNSNumberDoubleArchi"
+    "ve\022)\n!tschchartserieserrorbarfixedvalue\030"
+    "\006 \001(\002\0221\n)tschchartserieserrorbarfixedval"
+    "uescatterx\030\007 \001(\002\022+\n#tschchartserieserror"
+    "barpercentvalue\030\010 \001(\002\0223\n+tschchartseries"
+    "errorbarpercentvaluescatterx\030\t \001(\002\022&\n\036ts"
+    "chchartserieserrorbarsetting\030\n \001(\005\022.\n&ts"
+    "chchartserieserrorbarsettingscatterx\030\013 \001"
+    "(\005\022*\n\"tschchartserieserrorbarstddevvalue"
+    "\030\014 \001(\002\0222\n*tschchartserieserrorbarstddevv"
+    "aluescatterx\030\r \001(\002\022#\n\033tschchartserieserr"
+    "orbartype\030\016 \001(\005\022+\n#tschchartserieserrorb"
+    "artypescatterx\030\017 \001(\005\022%\n\035tschchartseriesl"
+    "abelexplosion\030\020 \001(\002\022\037\n\027tschchartseriesli"
+    "netype\030\021 \001(\005\022@\n\036tschchartseries1_0number"
+    "format\030\022 \001(\0132\030.TSK.FormatStructArchive\022="
+    "\n\033tschchartseriesnumberformat\030\023 \001(\0132\030.TS"
+    "K.FormatStructArchive\022>\n\034tschchartseries"
+    "1_0dateformat\030\024 \001(\0132\030.TSK.FormatStructAr"
+    "chive\022\?\n\035tschchartseriesdurationformat\030\025"
+    " \001(\0132\030.TSK.FormatStructArchive\022;\n\031tschch"
+    "artseriesdateformat\030\026 \001(\0132\030.TSK.FormatSt"
+    "ructArchive\022\'\n\037tschchartseriesnumberform"
+    "attype\030\027 \001(\005\022D\n\"tschchartseriespercentnu"
+    "mberformat\030\030 \001(\0132\030.TSK.FormatStructArchi"
+    "ve\022!\n\031tschchartseriesseriestype\030\031 \001(\005\022#\n"
+    "\033tschchartseriesshowerrorbar\030\032 \001(\010\022+\n#ts"
+    "chchartseriesshowerrorbarscatterx\030\033 \001(\010\022"
+    "\037\n\027tschchartseriesshowline\030\034 \001(\010\022\'\n\037tsch"
+    "chartseriesshownegativedata\030\035 \001(\010\022\'\n\037tsc"
+    "hchartseriesshowserieslabels\030\036 \001(\010\022!\n\031ts"
+    "chchartseriesshowsymbol\030\037 \001(\010\022$\n\034tschcha"
+    "rtseriesshowtrendline\030  \001(\010\022&\n\036tschchart"
+    "seriesshowvaluelabels\030! \001(\010\022$\n\034tschchart"
+    "seriessizedimension\030\" \001(\005\022!\n\031tschchartse"
+    "riessymboltype\030# \001(\005\022/\n\'tschchartseriest"
+    "rendlineequationoffsetx\030$ \001(\002\022/\n\'tschcha"
+    "rtseriestrendlineequationoffsety\030% \001(\002\022+"
+    "\n#tschchartseriestrendlinelabelstring\030& "
+    "\001(\t\022%\n\035tschchartseriestrendlineorder\030\' \001"
+    "(\005\022&\n\036tschchartseriestrendlineperiod\030( \001"
+    "(\005\022/\n\'tschchartseriestrendlinersquaredof"
+    "fsetx\030) \001(\002\022/\n\'tschchartseriestrendliner"
+    "squaredoffsety\030* \001(\002\022,\n$tschchartseriest"
+    "rendlineshowequation\030+ \001(\010\022)\n!tschcharts"
+    "eriestrendlineshowlabel\030, \001(\010\022+\n#tschcha"
+    "rtseriestrendlineshowr2value\030- \001(\010\022$\n\034ts"
+    "chchartseriestrendlinetype\030. \001(\005\022%\n\035tsch"
+    "chartserieswedgeexplosion\030/ \001(\002\022#\n\033tschc"
+    "hartseriesyaxisordinal\0300 \001(\005\022&\n\036tschchar"
+    "tseriesvaluelabelsaxis\0301 \001(\005\022;\n\036tschchar"
+    "tserieserrorbarlineend\0302 \001(\0132\023.TSD.LineE"
+    "ndArchive\022C\n&tschchartserieserrorbarline"
+    "endscatterx\0303 \001(\0132\023.TSD.LineEndArchive\0229"
+    "\n\035tschchartserieserrorbarshadow\0304 \001(\0132\022."
+    "TSD.ShadowArchive\0229\n\035tschchartserieserro"
+    "rbarstroke\0305 \001(\0132\022.TSD.StrokeArchive\022A\n%"
+    "tschchartserieserrorbarstrokescatterx\0306 "
+    "\001(\0132\022.TSD.StrokeArchive\022-\n\023tschchartseri"
+    "esfill\0307 \001(\0132\020.TSD.FillArchive\022/\n\'tschch"
+    "artserieslabelparagraphstyleindex\0308 \001(\005\022"
+    "\036\n\026tschchartseriesopacity\0309 \001(\002\0226\n.tschc"
+    "hartseriesoutsidelabelparagraphstyleinde"
+    "x\030: \001(\005\0221\n\025tschchartseriesshadow\030; \001(\0132\022"
+    ".TSD.ShadowArchive\0221\n\025tschchartseriesstr"
+    "oke\030< \001(\0132\022.TSD.StrokeArchive\0223\n\031tschcha"
+    "rtseriessymbolfill\030= \001(\0132\020.TSD.FillArchi"
+    "ve\022.\n&tschchartseriessymbolfilluseseries"
+    "fill\030> \001(\010\0220\n(tschchartseriessymbolfillu"
+    "seseriesstroke\030\? \001(\010\022!\n\031tschchartseriess"
+    "ymbolsize\030@ \001(\002\0227\n\033tschchartseriessymbol"
+    "stroke\030A \001(\0132\022.TSD.StrokeArchive\022/\n\'tsch"
+    "chartseriestrendlineequationopacity\030B \001("
+    "\002\022;\n3tschchartseriestrendlineequationpar"
+    "agraphstyleindex\030C \001(\005\022/\n\'tschchartserie"
+    "strendlinersquaredopacity\030D \001(\002\022;\n3tschc"
+    "hartseriestrendlinersquaredparagraphstyl"
+    "eindex\030E \001(\005\022:\n\036tschchartseriestrendline"
+    "shadow\030F \001(\0132\022.TSD.ShadowArchive\022:\n\036tsch"
+    "chartseriestrendlinestroke\030G \001(\0132\022.TSD.S"
+    "trokeArchive\022)\n!tschchartseriesvaluelabe"
+    "lposition\030H \001(\005\022(\n tschchartseriesshowla"
+    "belsinfront\030I \001(\010", 23417);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "TSCHArchives.GEN.proto", &protobuf_RegisterTypes);
   ChartStyleArchive::default_instance_ = new ChartStyleArchive();
@@ -899,6 +1337,10 @@ void protobuf_AddDesc_TSCHArchives_2eGEN_2eproto() {
   ChartAxisNonStyleArchive::default_instance_ = new ChartAxisNonStyleArchive();
   ChartSeriesStyleArchive::default_instance_ = new ChartSeriesStyleArchive();
   ChartSeriesNonStyleArchive::default_instance_ = new ChartSeriesNonStyleArchive();
+  ChartGenericPropertyMapArchive::default_instance_ = new ChartGenericPropertyMapArchive();
+  LegendGenericPropertyMapArchive::default_instance_ = new LegendGenericPropertyMapArchive();
+  ChartAxisGenericPropertyMapArchive::default_instance_ = new ChartAxisGenericPropertyMapArchive();
+  ChartSeriesGenericPropertyMapArchive::default_instance_ = new ChartSeriesGenericPropertyMapArchive();
   ChartStyleArchive::default_instance_->InitAsDefaultInstance();
   ::google::protobuf::internal::ExtensionSet::RegisterMessageExtension(
     &::TSCH::ChartStyleArchive::default_instance(),
@@ -939,6 +1381,10 @@ void protobuf_AddDesc_TSCHArchives_2eGEN_2eproto() {
     &::TSCH::ChartSeriesNonStyleArchive::default_instance(),
     10000, 11, false, false,
     &::TSCH::Generated::ChartSeriesNonStyleArchive::default_instance());
+  ChartGenericPropertyMapArchive::default_instance_->InitAsDefaultInstance();
+  LegendGenericPropertyMapArchive::default_instance_->InitAsDefaultInstance();
+  ChartAxisGenericPropertyMapArchive::default_instance_->InitAsDefaultInstance();
+  ChartSeriesGenericPropertyMapArchive::default_instance_->InitAsDefaultInstance();
   ::google::protobuf::internal::OnShutdown(&protobuf_ShutdownFile_TSCHArchives_2eGEN_2eproto);
 }
 
@@ -5477,7 +5923,11 @@ void ChartAxisStyleArchive::Swap(ChartAxisStyleArchive* other) {
 
 #ifndef _MSC_VER
 const int ChartAxisNonStyleArchive::kTschchartaxisdefault3DlabelpositionFieldNumber;
+const int ChartAxisNonStyleArchive::kTschchartaxisdefault10NumberformatFieldNumber;
 const int ChartAxisNonStyleArchive::kTschchartaxisdefaultnumberformatFieldNumber;
+const int ChartAxisNonStyleArchive::kTschchartaxisdefault10DateformatFieldNumber;
+const int ChartAxisNonStyleArchive::kTschchartaxisdefaultdurationformatFieldNumber;
+const int ChartAxisNonStyleArchive::kTschchartaxisdefaultdateformatFieldNumber;
 const int ChartAxisNonStyleArchive::kTschchartaxisdefaultnumberformattypeFieldNumber;
 const int ChartAxisNonStyleArchive::kTschchartaxisvaluenumberofdecadesFieldNumber;
 const int ChartAxisNonStyleArchive::kTschchartaxisvaluenumberofmajorgridlinesFieldNumber;
@@ -5509,7 +5959,11 @@ ChartAxisNonStyleArchive::ChartAxisNonStyleArchive()
 }
 
 void ChartAxisNonStyleArchive::InitAsDefaultInstance() {
+  tschchartaxisdefault1_0numberformat_ = const_cast< ::TSK::FormatStructArchive*>(&::TSK::FormatStructArchive::default_instance());
   tschchartaxisdefaultnumberformat_ = const_cast< ::TSK::FormatStructArchive*>(&::TSK::FormatStructArchive::default_instance());
+  tschchartaxisdefault1_0dateformat_ = const_cast< ::TSK::FormatStructArchive*>(&::TSK::FormatStructArchive::default_instance());
+  tschchartaxisdefaultdurationformat_ = const_cast< ::TSK::FormatStructArchive*>(&::TSK::FormatStructArchive::default_instance());
+  tschchartaxisdefaultdateformat_ = const_cast< ::TSK::FormatStructArchive*>(&::TSK::FormatStructArchive::default_instance());
   tschchartaxisdefaultusermax_ = const_cast< ::TSCH::ChartsNSNumberDoubleArchive*>(&::TSCH::ChartsNSNumberDoubleArchive::default_instance());
   tschchartaxisdefaultusermin_ = const_cast< ::TSCH::ChartsNSNumberDoubleArchive*>(&::TSCH::ChartsNSNumberDoubleArchive::default_instance());
 }
@@ -5523,7 +5977,11 @@ ChartAxisNonStyleArchive::ChartAxisNonStyleArchive(const ChartAxisNonStyleArchiv
 void ChartAxisNonStyleArchive::SharedCtor() {
   _cached_size_ = 0;
   tschchartaxisdefault3dlabelposition_ = 0;
+  tschchartaxisdefault1_0numberformat_ = NULL;
   tschchartaxisdefaultnumberformat_ = NULL;
+  tschchartaxisdefault1_0dateformat_ = NULL;
+  tschchartaxisdefaultdurationformat_ = NULL;
+  tschchartaxisdefaultdateformat_ = NULL;
   tschchartaxisdefaultnumberformattype_ = 0;
   tschchartaxisvaluenumberofdecades_ = 0;
   tschchartaxisvaluenumberofmajorgridlines_ = 0;
@@ -5556,7 +6014,11 @@ void ChartAxisNonStyleArchive::SharedDtor() {
     delete tschchartaxisvaluetitle_;
   }
   if (this != default_instance_) {
+    delete tschchartaxisdefault1_0numberformat_;
     delete tschchartaxisdefaultnumberformat_;
+    delete tschchartaxisdefault1_0dateformat_;
+    delete tschchartaxisdefaultdurationformat_;
+    delete tschchartaxisdefaultdateformat_;
     delete tschchartaxisdefaultusermax_;
     delete tschchartaxisdefaultusermin_;
   }
@@ -5586,21 +6048,35 @@ ChartAxisNonStyleArchive* ChartAxisNonStyleArchive::New() const {
 void ChartAxisNonStyleArchive::Clear() {
   if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
     tschchartaxisdefault3dlabelposition_ = 0;
+    if (has_tschchartaxisdefault1_0numberformat()) {
+      if (tschchartaxisdefault1_0numberformat_ != NULL) tschchartaxisdefault1_0numberformat_->::TSK::FormatStructArchive::Clear();
+    }
     if (has_tschchartaxisdefaultnumberformat()) {
       if (tschchartaxisdefaultnumberformat_ != NULL) tschchartaxisdefaultnumberformat_->::TSK::FormatStructArchive::Clear();
     }
+    if (has_tschchartaxisdefault1_0dateformat()) {
+      if (tschchartaxisdefault1_0dateformat_ != NULL) tschchartaxisdefault1_0dateformat_->::TSK::FormatStructArchive::Clear();
+    }
+    if (has_tschchartaxisdefaultdurationformat()) {
+      if (tschchartaxisdefaultdurationformat_ != NULL) tschchartaxisdefaultdurationformat_->::TSK::FormatStructArchive::Clear();
+    }
+    if (has_tschchartaxisdefaultdateformat()) {
+      if (tschchartaxisdefaultdateformat_ != NULL) tschchartaxisdefaultdateformat_->::TSK::FormatStructArchive::Clear();
+    }
     tschchartaxisdefaultnumberformattype_ = 0;
     tschchartaxisvaluenumberofdecades_ = 0;
+  }
+  if (_has_bits_[8 / 32] & (0xffu << (8 % 32))) {
     tschchartaxisvaluenumberofmajorgridlines_ = 0;
     tschchartaxisvaluenumberofminorgridlines_ = 0;
     tschchartaxiscategoryplottoedges_ = false;
     tschchartaxisvaluescale_ = 0;
-  }
-  if (_has_bits_[8 / 32] & (0xffu << (8 % 32))) {
     tschchartaxiscategoryshowlabels_ = false;
     tschchartaxisdefaultshowlabels_ = false;
     tschchartaxisvalueshowlabels_ = false;
     tschchartaxiscategoryshowserieslabels_ = false;
+  }
+  if (_has_bits_[16 / 32] & (0xffu << (16 % 32))) {
     tschchartaxismultidatashowserieslabels_ = false;
     tschchartaxiscategoryshowtitle_ = false;
     tschchartaxisvalueshowtitle_ = false;
@@ -5609,8 +6085,6 @@ void ChartAxisNonStyleArchive::Clear() {
         tschchartaxiscategorytitle_->clear();
       }
     }
-  }
-  if (_has_bits_[16 / 32] & (0xffu << (16 % 32))) {
     if (has_tschchartaxisvaluetitle()) {
       if (tschchartaxisvaluetitle_ != &::google::protobuf::internal::kEmptyString) {
         tschchartaxisvaluetitle_->clear();
@@ -5644,17 +6118,17 @@ bool ChartAxisNonStyleArchive::MergePartialFromCodedStream(
         } else {
           goto handle_uninterpreted;
         }
-        if (input->ExpectTag(18)) goto parse_tschchartaxisdefaultnumberformat;
+        if (input->ExpectTag(18)) goto parse_tschchartaxisdefault1_0numberformat;
         break;
       }
 
-      // optional .TSK.FormatStructArchive tschchartaxisdefaultnumberformat = 2;
+      // optional .TSK.FormatStructArchive tschchartaxisdefault1_0numberformat = 2;
       case 2: {
         if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
             ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
-         parse_tschchartaxisdefaultnumberformat:
+         parse_tschchartaxisdefault1_0numberformat:
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
-               input, mutable_tschchartaxisdefaultnumberformat()));
+               input, mutable_tschchartaxisdefault1_0numberformat()));
         } else {
           goto handle_uninterpreted;
         }
@@ -5928,6 +6402,62 @@ bool ChartAxisNonStyleArchive::MergePartialFromCodedStream(
         } else {
           goto handle_uninterpreted;
         }
+        if (input->ExpectTag(162)) goto parse_tschchartaxisdefault1_0dateformat;
+        break;
+      }
+
+      // optional .TSK.FormatStructArchive tschchartaxisdefault1_0dateformat = 20;
+      case 20: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_tschchartaxisdefault1_0dateformat:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_tschchartaxisdefault1_0dateformat()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(170)) goto parse_tschchartaxisdefaultdurationformat;
+        break;
+      }
+
+      // optional .TSK.FormatStructArchive tschchartaxisdefaultdurationformat = 21;
+      case 21: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_tschchartaxisdefaultdurationformat:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_tschchartaxisdefaultdurationformat()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(178)) goto parse_tschchartaxisdefaultdateformat;
+        break;
+      }
+
+      // optional .TSK.FormatStructArchive tschchartaxisdefaultdateformat = 22;
+      case 22: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_tschchartaxisdefaultdateformat:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_tschchartaxisdefaultdateformat()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(338)) goto parse_tschchartaxisdefaultnumberformat;
+        break;
+      }
+
+      // optional .TSK.FormatStructArchive tschchartaxisdefaultnumberformat = 42;
+      case 42: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_tschchartaxisdefaultnumberformat:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_tschchartaxisdefaultnumberformat()));
+        } else {
+          goto handle_uninterpreted;
+        }
         if (input->ExpectAtEnd()) return true;
         break;
       }
@@ -5955,10 +6485,10 @@ void ChartAxisNonStyleArchive::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteInt32(1, this->tschchartaxisdefault3dlabelposition(), output);
   }
 
-  // optional .TSK.FormatStructArchive tschchartaxisdefaultnumberformat = 2;
-  if (has_tschchartaxisdefaultnumberformat()) {
+  // optional .TSK.FormatStructArchive tschchartaxisdefault1_0numberformat = 2;
+  if (has_tschchartaxisdefault1_0numberformat()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      2, this->tschchartaxisdefaultnumberformat(), output);
+      2, this->tschchartaxisdefault1_0numberformat(), output);
   }
 
   // optional int32 tschchartaxisdefaultnumberformattype = 3;
@@ -6056,6 +6586,30 @@ void ChartAxisNonStyleArchive::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteBool(19, this->tschchartaxismultidatashowserieslabels(), output);
   }
 
+  // optional .TSK.FormatStructArchive tschchartaxisdefault1_0dateformat = 20;
+  if (has_tschchartaxisdefault1_0dateformat()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      20, this->tschchartaxisdefault1_0dateformat(), output);
+  }
+
+  // optional .TSK.FormatStructArchive tschchartaxisdefaultdurationformat = 21;
+  if (has_tschchartaxisdefaultdurationformat()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      21, this->tschchartaxisdefaultdurationformat(), output);
+  }
+
+  // optional .TSK.FormatStructArchive tschchartaxisdefaultdateformat = 22;
+  if (has_tschchartaxisdefaultdateformat()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      22, this->tschchartaxisdefaultdateformat(), output);
+  }
+
+  // optional .TSK.FormatStructArchive tschchartaxisdefaultnumberformat = 42;
+  if (has_tschchartaxisdefaultnumberformat()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      42, this->tschchartaxisdefaultnumberformat(), output);
+  }
+
   if (!unknown_fields().empty()) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         unknown_fields(), output);
@@ -6069,11 +6623,11 @@ void ChartAxisNonStyleArchive::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(1, this->tschchartaxisdefault3dlabelposition(), target);
   }
 
-  // optional .TSK.FormatStructArchive tschchartaxisdefaultnumberformat = 2;
-  if (has_tschchartaxisdefaultnumberformat()) {
+  // optional .TSK.FormatStructArchive tschchartaxisdefault1_0numberformat = 2;
+  if (has_tschchartaxisdefault1_0numberformat()) {
     target = ::google::protobuf::internal::WireFormatLite::
       WriteMessageNoVirtualToArray(
-        2, this->tschchartaxisdefaultnumberformat(), target);
+        2, this->tschchartaxisdefault1_0numberformat(), target);
   }
 
   // optional int32 tschchartaxisdefaultnumberformattype = 3;
@@ -6175,6 +6729,34 @@ void ChartAxisNonStyleArchive::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(19, this->tschchartaxismultidatashowserieslabels(), target);
   }
 
+  // optional .TSK.FormatStructArchive tschchartaxisdefault1_0dateformat = 20;
+  if (has_tschchartaxisdefault1_0dateformat()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        20, this->tschchartaxisdefault1_0dateformat(), target);
+  }
+
+  // optional .TSK.FormatStructArchive tschchartaxisdefaultdurationformat = 21;
+  if (has_tschchartaxisdefaultdurationformat()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        21, this->tschchartaxisdefaultdurationformat(), target);
+  }
+
+  // optional .TSK.FormatStructArchive tschchartaxisdefaultdateformat = 22;
+  if (has_tschchartaxisdefaultdateformat()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        22, this->tschchartaxisdefaultdateformat(), target);
+  }
+
+  // optional .TSK.FormatStructArchive tschchartaxisdefaultnumberformat = 42;
+  if (has_tschchartaxisdefaultnumberformat()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        42, this->tschchartaxisdefaultnumberformat(), target);
+  }
+
   if (!unknown_fields().empty()) {
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
         unknown_fields(), target);
@@ -6193,11 +6775,39 @@ int ChartAxisNonStyleArchive::ByteSize() const {
           this->tschchartaxisdefault3dlabelposition());
     }
 
-    // optional .TSK.FormatStructArchive tschchartaxisdefaultnumberformat = 2;
-    if (has_tschchartaxisdefaultnumberformat()) {
+    // optional .TSK.FormatStructArchive tschchartaxisdefault1_0numberformat = 2;
+    if (has_tschchartaxisdefault1_0numberformat()) {
       total_size += 1 +
         ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->tschchartaxisdefault1_0numberformat());
+    }
+
+    // optional .TSK.FormatStructArchive tschchartaxisdefaultnumberformat = 42;
+    if (has_tschchartaxisdefaultnumberformat()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
           this->tschchartaxisdefaultnumberformat());
+    }
+
+    // optional .TSK.FormatStructArchive tschchartaxisdefault1_0dateformat = 20;
+    if (has_tschchartaxisdefault1_0dateformat()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->tschchartaxisdefault1_0dateformat());
+    }
+
+    // optional .TSK.FormatStructArchive tschchartaxisdefaultdurationformat = 21;
+    if (has_tschchartaxisdefaultdurationformat()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->tschchartaxisdefaultdurationformat());
+    }
+
+    // optional .TSK.FormatStructArchive tschchartaxisdefaultdateformat = 22;
+    if (has_tschchartaxisdefaultdateformat()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->tschchartaxisdefaultdateformat());
     }
 
     // optional int32 tschchartaxisdefaultnumberformattype = 3;
@@ -6214,6 +6824,8 @@ int ChartAxisNonStyleArchive::ByteSize() const {
           this->tschchartaxisvaluenumberofdecades());
     }
 
+  }
+  if (_has_bits_[8 / 32] & (0xffu << (8 % 32))) {
     // optional int32 tschchartaxisvaluenumberofmajorgridlines = 5;
     if (has_tschchartaxisvaluenumberofmajorgridlines()) {
       total_size += 1 +
@@ -6240,8 +6852,6 @@ int ChartAxisNonStyleArchive::ByteSize() const {
           this->tschchartaxisvaluescale());
     }
 
-  }
-  if (_has_bits_[8 / 32] & (0xffu << (8 % 32))) {
     // optional bool tschchartaxiscategoryshowlabels = 9;
     if (has_tschchartaxiscategoryshowlabels()) {
       total_size += 1 + 1;
@@ -6262,6 +6872,8 @@ int ChartAxisNonStyleArchive::ByteSize() const {
       total_size += 1 + 1;
     }
 
+  }
+  if (_has_bits_[16 / 32] & (0xffu << (16 % 32))) {
     // optional bool tschchartaxismultidatashowserieslabels = 19;
     if (has_tschchartaxismultidatashowserieslabels()) {
       total_size += 2 + 1;
@@ -6284,8 +6896,6 @@ int ChartAxisNonStyleArchive::ByteSize() const {
           this->tschchartaxiscategorytitle());
     }
 
-  }
-  if (_has_bits_[16 / 32] & (0xffu << (16 % 32))) {
     // optional string tschchartaxisvaluetitle = 16;
     if (has_tschchartaxisvaluetitle()) {
       total_size += 2 +
@@ -6337,8 +6947,20 @@ void ChartAxisNonStyleArchive::MergeFrom(const ChartAxisNonStyleArchive& from) {
     if (from.has_tschchartaxisdefault3dlabelposition()) {
       set_tschchartaxisdefault3dlabelposition(from.tschchartaxisdefault3dlabelposition());
     }
+    if (from.has_tschchartaxisdefault1_0numberformat()) {
+      mutable_tschchartaxisdefault1_0numberformat()->::TSK::FormatStructArchive::MergeFrom(from.tschchartaxisdefault1_0numberformat());
+    }
     if (from.has_tschchartaxisdefaultnumberformat()) {
       mutable_tschchartaxisdefaultnumberformat()->::TSK::FormatStructArchive::MergeFrom(from.tschchartaxisdefaultnumberformat());
+    }
+    if (from.has_tschchartaxisdefault1_0dateformat()) {
+      mutable_tschchartaxisdefault1_0dateformat()->::TSK::FormatStructArchive::MergeFrom(from.tschchartaxisdefault1_0dateformat());
+    }
+    if (from.has_tschchartaxisdefaultdurationformat()) {
+      mutable_tschchartaxisdefaultdurationformat()->::TSK::FormatStructArchive::MergeFrom(from.tschchartaxisdefaultdurationformat());
+    }
+    if (from.has_tschchartaxisdefaultdateformat()) {
+      mutable_tschchartaxisdefaultdateformat()->::TSK::FormatStructArchive::MergeFrom(from.tschchartaxisdefaultdateformat());
     }
     if (from.has_tschchartaxisdefaultnumberformattype()) {
       set_tschchartaxisdefaultnumberformattype(from.tschchartaxisdefaultnumberformattype());
@@ -6346,6 +6968,8 @@ void ChartAxisNonStyleArchive::MergeFrom(const ChartAxisNonStyleArchive& from) {
     if (from.has_tschchartaxisvaluenumberofdecades()) {
       set_tschchartaxisvaluenumberofdecades(from.tschchartaxisvaluenumberofdecades());
     }
+  }
+  if (from._has_bits_[8 / 32] & (0xffu << (8 % 32))) {
     if (from.has_tschchartaxisvaluenumberofmajorgridlines()) {
       set_tschchartaxisvaluenumberofmajorgridlines(from.tschchartaxisvaluenumberofmajorgridlines());
     }
@@ -6358,8 +6982,6 @@ void ChartAxisNonStyleArchive::MergeFrom(const ChartAxisNonStyleArchive& from) {
     if (from.has_tschchartaxisvaluescale()) {
       set_tschchartaxisvaluescale(from.tschchartaxisvaluescale());
     }
-  }
-  if (from._has_bits_[8 / 32] & (0xffu << (8 % 32))) {
     if (from.has_tschchartaxiscategoryshowlabels()) {
       set_tschchartaxiscategoryshowlabels(from.tschchartaxiscategoryshowlabels());
     }
@@ -6372,6 +6994,8 @@ void ChartAxisNonStyleArchive::MergeFrom(const ChartAxisNonStyleArchive& from) {
     if (from.has_tschchartaxiscategoryshowserieslabels()) {
       set_tschchartaxiscategoryshowserieslabels(from.tschchartaxiscategoryshowserieslabels());
     }
+  }
+  if (from._has_bits_[16 / 32] & (0xffu << (16 % 32))) {
     if (from.has_tschchartaxismultidatashowserieslabels()) {
       set_tschchartaxismultidatashowserieslabels(from.tschchartaxismultidatashowserieslabels());
     }
@@ -6384,8 +7008,6 @@ void ChartAxisNonStyleArchive::MergeFrom(const ChartAxisNonStyleArchive& from) {
     if (from.has_tschchartaxiscategorytitle()) {
       set_tschchartaxiscategorytitle(from.tschchartaxiscategorytitle());
     }
-  }
-  if (from._has_bits_[16 / 32] & (0xffu << (16 % 32))) {
     if (from.has_tschchartaxisvaluetitle()) {
       set_tschchartaxisvaluetitle(from.tschchartaxisvaluetitle());
     }
@@ -6413,8 +7035,20 @@ void ChartAxisNonStyleArchive::CopyFrom(const ChartAxisNonStyleArchive& from) {
 
 bool ChartAxisNonStyleArchive::IsInitialized() const {
 
+  if (has_tschchartaxisdefault1_0numberformat()) {
+    if (!this->tschchartaxisdefault1_0numberformat().IsInitialized()) return false;
+  }
   if (has_tschchartaxisdefaultnumberformat()) {
     if (!this->tschchartaxisdefaultnumberformat().IsInitialized()) return false;
+  }
+  if (has_tschchartaxisdefault1_0dateformat()) {
+    if (!this->tschchartaxisdefault1_0dateformat().IsInitialized()) return false;
+  }
+  if (has_tschchartaxisdefaultdurationformat()) {
+    if (!this->tschchartaxisdefaultdurationformat().IsInitialized()) return false;
+  }
+  if (has_tschchartaxisdefaultdateformat()) {
+    if (!this->tschchartaxisdefaultdateformat().IsInitialized()) return false;
   }
   return true;
 }
@@ -6422,7 +7056,11 @@ bool ChartAxisNonStyleArchive::IsInitialized() const {
 void ChartAxisNonStyleArchive::Swap(ChartAxisNonStyleArchive* other) {
   if (other != this) {
     std::swap(tschchartaxisdefault3dlabelposition_, other->tschchartaxisdefault3dlabelposition_);
+    std::swap(tschchartaxisdefault1_0numberformat_, other->tschchartaxisdefault1_0numberformat_);
     std::swap(tschchartaxisdefaultnumberformat_, other->tschchartaxisdefaultnumberformat_);
+    std::swap(tschchartaxisdefault1_0dateformat_, other->tschchartaxisdefault1_0dateformat_);
+    std::swap(tschchartaxisdefaultdurationformat_, other->tschchartaxisdefaultdurationformat_);
+    std::swap(tschchartaxisdefaultdateformat_, other->tschchartaxisdefaultdateformat_);
     std::swap(tschchartaxisdefaultnumberformattype_, other->tschchartaxisdefaultnumberformattype_);
     std::swap(tschchartaxisvaluenumberofdecades_, other->tschchartaxisvaluenumberofdecades_);
     std::swap(tschchartaxisvaluenumberofmajorgridlines_, other->tschchartaxisvaluenumberofmajorgridlines_);
@@ -11011,7 +11649,12 @@ const int ChartSeriesNonStyleArchive::kTschchartseriesbubblelinetypeFieldNumber;
 const int ChartSeriesNonStyleArchive::kTschchartserieslinelinetypeFieldNumber;
 const int ChartSeriesNonStyleArchive::kTschchartseriesmixedlinelinetypeFieldNumber;
 const int ChartSeriesNonStyleArchive::kTschchartseriesscatterlinetypeFieldNumber;
+const int ChartSeriesNonStyleArchive::kTschchartseriesdefault10NumberformatFieldNumber;
 const int ChartSeriesNonStyleArchive::kTschchartseriesdefaultnumberformatFieldNumber;
+const int ChartSeriesNonStyleArchive::kTschchartseriesdefault10DateformatFieldNumber;
+const int ChartSeriesNonStyleArchive::kTschchartseriesdefaultdurationformatFieldNumber;
+const int ChartSeriesNonStyleArchive::kTschchartseriesdefaultdateformatFieldNumber;
+const int ChartSeriesNonStyleArchive::kTschchartseriespie10NumberformatFieldNumber;
 const int ChartSeriesNonStyleArchive::kTschchartseriespienumberformatFieldNumber;
 const int ChartSeriesNonStyleArchive::kTschchartseriesdefaultnumberformattypeFieldNumber;
 const int ChartSeriesNonStyleArchive::kTschchartseriespienumberformattypeFieldNumber;
@@ -11059,6 +11702,8 @@ const int ChartSeriesNonStyleArchive::kTschchartseriesbubbleshowserieslabelsFiel
 const int ChartSeriesNonStyleArchive::kTschchartseriesbubblevaluelabelsaxisFieldNumber;
 const int ChartSeriesNonStyleArchive::kTschchartseriesscattershowserieslabelsFieldNumber;
 const int ChartSeriesNonStyleArchive::kTschchartseriesscattervaluelabelsaxisFieldNumber;
+const int ChartSeriesNonStyleArchive::kTschchartseriesdefaultshowlabelsinfrontFieldNumber;
+const int ChartSeriesNonStyleArchive::kTschchartseriesbubbleshowlabelsinfrontFieldNumber;
 #endif  // !_MSC_VER
 
 #ifndef _MSC_VER
@@ -11077,7 +11722,12 @@ void ChartSeriesNonStyleArchive::InitAsDefaultInstance() {
   tschchartseriesdefaulterrorbarcustomnegativedatascatterx_ = const_cast< ::TSCH::ChartsNSArrayOfNSNumberDoubleArchive*>(&::TSCH::ChartsNSArrayOfNSNumberDoubleArchive::default_instance());
   tschchartseriesdefaulterrorbarcustompositivedata_ = const_cast< ::TSCH::ChartsNSArrayOfNSNumberDoubleArchive*>(&::TSCH::ChartsNSArrayOfNSNumberDoubleArchive::default_instance());
   tschchartseriesdefaulterrorbarcustompositivedatascatterx_ = const_cast< ::TSCH::ChartsNSArrayOfNSNumberDoubleArchive*>(&::TSCH::ChartsNSArrayOfNSNumberDoubleArchive::default_instance());
+  tschchartseriesdefault1_0numberformat_ = const_cast< ::TSK::FormatStructArchive*>(&::TSK::FormatStructArchive::default_instance());
   tschchartseriesdefaultnumberformat_ = const_cast< ::TSK::FormatStructArchive*>(&::TSK::FormatStructArchive::default_instance());
+  tschchartseriesdefault1_0dateformat_ = const_cast< ::TSK::FormatStructArchive*>(&::TSK::FormatStructArchive::default_instance());
+  tschchartseriesdefaultdurationformat_ = const_cast< ::TSK::FormatStructArchive*>(&::TSK::FormatStructArchive::default_instance());
+  tschchartseriesdefaultdateformat_ = const_cast< ::TSK::FormatStructArchive*>(&::TSK::FormatStructArchive::default_instance());
+  tschchartseriespie1_0numberformat_ = const_cast< ::TSK::FormatStructArchive*>(&::TSK::FormatStructArchive::default_instance());
   tschchartseriespienumberformat_ = const_cast< ::TSK::FormatStructArchive*>(&::TSK::FormatStructArchive::default_instance());
   tschchartseriesstackedpercentnumberformat_ = const_cast< ::TSK::FormatStructArchive*>(&::TSK::FormatStructArchive::default_instance());
 }
@@ -11110,7 +11760,12 @@ void ChartSeriesNonStyleArchive::SharedCtor() {
   tschchartserieslinelinetype_ = 0;
   tschchartseriesmixedlinelinetype_ = 0;
   tschchartseriesscatterlinetype_ = 0;
+  tschchartseriesdefault1_0numberformat_ = NULL;
   tschchartseriesdefaultnumberformat_ = NULL;
+  tschchartseriesdefault1_0dateformat_ = NULL;
+  tschchartseriesdefaultdurationformat_ = NULL;
+  tschchartseriesdefaultdateformat_ = NULL;
+  tschchartseriespie1_0numberformat_ = NULL;
   tschchartseriespienumberformat_ = NULL;
   tschchartseriesdefaultnumberformattype_ = 0;
   tschchartseriespienumberformattype_ = 0;
@@ -11158,6 +11813,8 @@ void ChartSeriesNonStyleArchive::SharedCtor() {
   tschchartseriesbubblevaluelabelsaxis_ = 0;
   tschchartseriesscattershowserieslabels_ = false;
   tschchartseriesscattervaluelabelsaxis_ = 0;
+  tschchartseriesdefaultshowlabelsinfront_ = false;
+  tschchartseriesbubbleshowlabelsinfront_ = false;
   ::memset(_has_bits_, 0, sizeof(_has_bits_));
 }
 
@@ -11174,7 +11831,12 @@ void ChartSeriesNonStyleArchive::SharedDtor() {
     delete tschchartseriesdefaulterrorbarcustomnegativedatascatterx_;
     delete tschchartseriesdefaulterrorbarcustompositivedata_;
     delete tschchartseriesdefaulterrorbarcustompositivedatascatterx_;
+    delete tschchartseriesdefault1_0numberformat_;
     delete tschchartseriesdefaultnumberformat_;
+    delete tschchartseriesdefault1_0dateformat_;
+    delete tschchartseriesdefaultdurationformat_;
+    delete tschchartseriesdefaultdateformat_;
+    delete tschchartseriespie1_0numberformat_;
     delete tschchartseriespienumberformat_;
     delete tschchartseriesstackedpercentnumberformat_;
   }
@@ -11235,51 +11897,68 @@ void ChartSeriesNonStyleArchive::Clear() {
     tschchartserieslinelinetype_ = 0;
     tschchartseriesmixedlinelinetype_ = 0;
     tschchartseriesscatterlinetype_ = 0;
+    if (has_tschchartseriesdefault1_0numberformat()) {
+      if (tschchartseriesdefault1_0numberformat_ != NULL) tschchartseriesdefault1_0numberformat_->::TSK::FormatStructArchive::Clear();
+    }
     if (has_tschchartseriesdefaultnumberformat()) {
       if (tschchartseriesdefaultnumberformat_ != NULL) tschchartseriesdefaultnumberformat_->::TSK::FormatStructArchive::Clear();
+    }
+    if (has_tschchartseriesdefault1_0dateformat()) {
+      if (tschchartseriesdefault1_0dateformat_ != NULL) tschchartseriesdefault1_0dateformat_->::TSK::FormatStructArchive::Clear();
+    }
+    if (has_tschchartseriesdefaultdurationformat()) {
+      if (tschchartseriesdefaultdurationformat_ != NULL) tschchartseriesdefaultdurationformat_->::TSK::FormatStructArchive::Clear();
+    }
+  }
+  if (_has_bits_[24 / 32] & (0xffu << (24 % 32))) {
+    if (has_tschchartseriesdefaultdateformat()) {
+      if (tschchartseriesdefaultdateformat_ != NULL) tschchartseriesdefaultdateformat_->::TSK::FormatStructArchive::Clear();
+    }
+    if (has_tschchartseriespie1_0numberformat()) {
+      if (tschchartseriespie1_0numberformat_ != NULL) tschchartseriespie1_0numberformat_->::TSK::FormatStructArchive::Clear();
     }
     if (has_tschchartseriespienumberformat()) {
       if (tschchartseriespienumberformat_ != NULL) tschchartseriespienumberformat_->::TSK::FormatStructArchive::Clear();
     }
     tschchartseriesdefaultnumberformattype_ = 0;
     tschchartseriespienumberformattype_ = 0;
-  }
-  if (_has_bits_[24 / 32] & (0xffu << (24 % 32))) {
     if (has_tschchartseriesstackedpercentnumberformat()) {
       if (tschchartseriesstackedpercentnumberformat_ != NULL) tschchartseriesstackedpercentnumberformat_->::TSK::FormatStructArchive::Clear();
     }
     tschchartseriesdefaultseriestype_ = 0;
     tschchartseriesdefaultshowerrorbar_ = false;
+  }
+  if (_has_bits_[32 / 32] & (0xffu << (32 % 32))) {
     tschchartseriesdefaultshowerrorbarscatterx_ = false;
     tschchartseriesscattershowline_ = false;
     tschchartseriesbubbleshownegativedata_ = false;
     tschchartseriespieshowserieslabels_ = false;
     tschchartseriesareashowsymbol_ = false;
-  }
-  if (_has_bits_[32 / 32] & (0xffu << (32 % 32))) {
     tschchartserieslineshowsymbol_ = false;
     tschchartseriesmixedareashowsymbol_ = false;
     tschchartseriesmixedlineshowsymbol_ = false;
+  }
+  if (_has_bits_[40 / 32] & (0xffu << (40 % 32))) {
     tschchartseriesscattershowsymbol_ = false;
     tschchartseriesdefaultshowtrendline_ = false;
     tschchartseriesareashowvaluelabels_ = false;
     tschchartseriesbarshowvaluelabels_ = false;
     tschchartseriesbubbleshowvaluelabels_ = false;
-  }
-  if (_has_bits_[40 / 32] & (0xffu << (40 % 32))) {
     tschchartseriesdefaultshowvaluelabels_ = false;
     tschchartserieslineshowvaluelabels_ = false;
     tschchartseriesmixedshowvaluelabels_ = false;
+  }
+  if (_has_bits_[48 / 32] & (0xffu << (48 % 32))) {
     tschchartseriespieshowvaluelabels_ = false;
     tschchartseriesscattershowvaluelabels_ = false;
     tschchartseriesbubblesizedimension_ = 0;
     tschchartseriesareasymboltype_ = 0;
     tschchartserieslinesymboltype_ = 0;
-  }
-  if (_has_bits_[48 / 32] & (0xffu << (48 % 32))) {
     tschchartseriesmixedareasymboltype_ = 0;
     tschchartseriesmixedlinesymboltype_ = 0;
     tschchartseriesscattersymboltype_ = 0;
+  }
+  if (_has_bits_[56 / 32] & (0xffu << (56 % 32))) {
     tschchartseriesdefaulttrendlineequationoffsetx_ = 0;
     tschchartseriesdefaulttrendlineequationoffsety_ = 0;
     if (has_tschchartseriesdefaulttrendlinelabelstring()) {
@@ -11289,22 +11968,24 @@ void ChartSeriesNonStyleArchive::Clear() {
     }
     tschchartseriesdefaulttrendlineorder_ = 0;
     tschchartseriesdefaulttrendlineperiod_ = 0;
-  }
-  if (_has_bits_[56 / 32] & (0xffu << (56 % 32))) {
     tschchartseriesdefaulttrendlinersquaredoffsetx_ = 0;
     tschchartseriesdefaulttrendlinersquaredoffsety_ = 0;
     tschchartseriesdefaulttrendlineshowequation_ = false;
+  }
+  if (_has_bits_[64 / 32] & (0xffu << (64 % 32))) {
     tschchartseriesdefaulttrendlineshowlabel_ = false;
     tschchartseriesdefaulttrendlineshowr2value_ = false;
     tschchartseriesdefaulttrendlinetype_ = 0;
     tschchartseriespiewedgeexplosion_ = 0;
     tschchartseriesdefaultyaxisordinal_ = 0;
-  }
-  if (_has_bits_[64 / 32] & (0xffu << (64 % 32))) {
     tschchartseriesbubbleshowserieslabels_ = false;
     tschchartseriesbubblevaluelabelsaxis_ = 0;
     tschchartseriesscattershowserieslabels_ = false;
+  }
+  if (_has_bits_[72 / 32] & (0xffu << (72 % 32))) {
     tschchartseriesscattervaluelabelsaxis_ = 0;
+    tschchartseriesdefaultshowlabelsinfront_ = false;
+    tschchartseriesbubbleshowlabelsinfront_ = false;
   }
   ::memset(_has_bits_, 0, sizeof(_has_bits_));
   mutable_unknown_fields()->Clear();
@@ -11623,31 +12304,31 @@ bool ChartSeriesNonStyleArchive::MergePartialFromCodedStream(
         } else {
           goto handle_uninterpreted;
         }
-        if (input->ExpectTag(170)) goto parse_tschchartseriesdefaultnumberformat;
+        if (input->ExpectTag(170)) goto parse_tschchartseriesdefault1_0numberformat;
         break;
       }
 
-      // optional .TSK.FormatStructArchive tschchartseriesdefaultnumberformat = 21;
+      // optional .TSK.FormatStructArchive tschchartseriesdefault1_0numberformat = 21;
       case 21: {
         if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
             ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
-         parse_tschchartseriesdefaultnumberformat:
+         parse_tschchartseriesdefault1_0numberformat:
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
-               input, mutable_tschchartseriesdefaultnumberformat()));
+               input, mutable_tschchartseriesdefault1_0numberformat()));
         } else {
           goto handle_uninterpreted;
         }
-        if (input->ExpectTag(178)) goto parse_tschchartseriespienumberformat;
+        if (input->ExpectTag(178)) goto parse_tschchartseriespie1_0numberformat;
         break;
       }
 
-      // optional .TSK.FormatStructArchive tschchartseriespienumberformat = 22;
+      // optional .TSK.FormatStructArchive tschchartseriespie1_0numberformat = 22;
       case 22: {
         if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
             ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
-         parse_tschchartseriespienumberformat:
+         parse_tschchartseriespie1_0numberformat:
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
-               input, mutable_tschchartseriespienumberformat()));
+               input, mutable_tschchartseriespie1_0numberformat()));
         } else {
           goto handle_uninterpreted;
         }
@@ -12386,6 +13067,108 @@ bool ChartSeriesNonStyleArchive::MergePartialFromCodedStream(
         } else {
           goto handle_uninterpreted;
         }
+        if (input->ExpectTag(554)) goto parse_tschchartseriesdefault1_0dateformat;
+        break;
+      }
+
+      // optional .TSK.FormatStructArchive tschchartseriesdefault1_0dateformat = 69;
+      case 69: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_tschchartseriesdefault1_0dateformat:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_tschchartseriesdefault1_0dateformat()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(562)) goto parse_tschchartseriesdefaultdurationformat;
+        break;
+      }
+
+      // optional .TSK.FormatStructArchive tschchartseriesdefaultdurationformat = 70;
+      case 70: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_tschchartseriesdefaultdurationformat:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_tschchartseriesdefaultdurationformat()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(570)) goto parse_tschchartseriesdefaultdateformat;
+        break;
+      }
+
+      // optional .TSK.FormatStructArchive tschchartseriesdefaultdateformat = 71;
+      case 71: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_tschchartseriesdefaultdateformat:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_tschchartseriesdefaultdateformat()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(786)) goto parse_tschchartseriesdefaultnumberformat;
+        break;
+      }
+
+      // optional .TSK.FormatStructArchive tschchartseriesdefaultnumberformat = 98;
+      case 98: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_tschchartseriesdefaultnumberformat:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_tschchartseriesdefaultnumberformat()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(794)) goto parse_tschchartseriespienumberformat;
+        break;
+      }
+
+      // optional .TSK.FormatStructArchive tschchartseriespienumberformat = 99;
+      case 99: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_tschchartseriespienumberformat:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_tschchartseriespienumberformat()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(800)) goto parse_tschchartseriesdefaultshowlabelsinfront;
+        break;
+      }
+
+      // optional bool tschchartseriesdefaultshowlabelsinfront = 100;
+      case 100: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_tschchartseriesdefaultshowlabelsinfront:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &tschchartseriesdefaultshowlabelsinfront_)));
+          set_has_tschchartseriesdefaultshowlabelsinfront();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(808)) goto parse_tschchartseriesbubbleshowlabelsinfront;
+        break;
+      }
+
+      // optional bool tschchartseriesbubbleshowlabelsinfront = 101;
+      case 101: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_tschchartseriesbubbleshowlabelsinfront:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &tschchartseriesbubbleshowlabelsinfront_)));
+          set_has_tschchartseriesbubbleshowlabelsinfront();
+        } else {
+          goto handle_uninterpreted;
+        }
         if (input->ExpectAtEnd()) return true;
         break;
       }
@@ -12512,16 +13295,16 @@ void ChartSeriesNonStyleArchive::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteInt32(20, this->tschchartseriesscatterlinetype(), output);
   }
 
-  // optional .TSK.FormatStructArchive tschchartseriesdefaultnumberformat = 21;
-  if (has_tschchartseriesdefaultnumberformat()) {
+  // optional .TSK.FormatStructArchive tschchartseriesdefault1_0numberformat = 21;
+  if (has_tschchartseriesdefault1_0numberformat()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      21, this->tschchartseriesdefaultnumberformat(), output);
+      21, this->tschchartseriesdefault1_0numberformat(), output);
   }
 
-  // optional .TSK.FormatStructArchive tschchartseriespienumberformat = 22;
-  if (has_tschchartseriespienumberformat()) {
+  // optional .TSK.FormatStructArchive tschchartseriespie1_0numberformat = 22;
+  if (has_tschchartseriespie1_0numberformat()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      22, this->tschchartseriespienumberformat(), output);
+      22, this->tschchartseriespie1_0numberformat(), output);
   }
 
   // optional int32 tschchartseriesdefaultnumberformattype = 23;
@@ -12759,6 +13542,46 @@ void ChartSeriesNonStyleArchive::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteInt32(68, this->tschchartseriesscattervaluelabelsaxis(), output);
   }
 
+  // optional .TSK.FormatStructArchive tschchartseriesdefault1_0dateformat = 69;
+  if (has_tschchartseriesdefault1_0dateformat()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      69, this->tschchartseriesdefault1_0dateformat(), output);
+  }
+
+  // optional .TSK.FormatStructArchive tschchartseriesdefaultdurationformat = 70;
+  if (has_tschchartseriesdefaultdurationformat()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      70, this->tschchartseriesdefaultdurationformat(), output);
+  }
+
+  // optional .TSK.FormatStructArchive tschchartseriesdefaultdateformat = 71;
+  if (has_tschchartseriesdefaultdateformat()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      71, this->tschchartseriesdefaultdateformat(), output);
+  }
+
+  // optional .TSK.FormatStructArchive tschchartseriesdefaultnumberformat = 98;
+  if (has_tschchartseriesdefaultnumberformat()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      98, this->tschchartseriesdefaultnumberformat(), output);
+  }
+
+  // optional .TSK.FormatStructArchive tschchartseriespienumberformat = 99;
+  if (has_tschchartseriespienumberformat()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      99, this->tschchartseriespienumberformat(), output);
+  }
+
+  // optional bool tschchartseriesdefaultshowlabelsinfront = 100;
+  if (has_tschchartseriesdefaultshowlabelsinfront()) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(100, this->tschchartseriesdefaultshowlabelsinfront(), output);
+  }
+
+  // optional bool tschchartseriesbubbleshowlabelsinfront = 101;
+  if (has_tschchartseriesbubbleshowlabelsinfront()) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(101, this->tschchartseriesbubbleshowlabelsinfront(), output);
+  }
+
   if (!unknown_fields().empty()) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         unknown_fields(), output);
@@ -12875,18 +13698,18 @@ void ChartSeriesNonStyleArchive::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(20, this->tschchartseriesscatterlinetype(), target);
   }
 
-  // optional .TSK.FormatStructArchive tschchartseriesdefaultnumberformat = 21;
-  if (has_tschchartseriesdefaultnumberformat()) {
+  // optional .TSK.FormatStructArchive tschchartseriesdefault1_0numberformat = 21;
+  if (has_tschchartseriesdefault1_0numberformat()) {
     target = ::google::protobuf::internal::WireFormatLite::
       WriteMessageNoVirtualToArray(
-        21, this->tschchartseriesdefaultnumberformat(), target);
+        21, this->tschchartseriesdefault1_0numberformat(), target);
   }
 
-  // optional .TSK.FormatStructArchive tschchartseriespienumberformat = 22;
-  if (has_tschchartseriespienumberformat()) {
+  // optional .TSK.FormatStructArchive tschchartseriespie1_0numberformat = 22;
+  if (has_tschchartseriespie1_0numberformat()) {
     target = ::google::protobuf::internal::WireFormatLite::
       WriteMessageNoVirtualToArray(
-        22, this->tschchartseriespienumberformat(), target);
+        22, this->tschchartseriespie1_0numberformat(), target);
   }
 
   // optional int32 tschchartseriesdefaultnumberformattype = 23;
@@ -13126,6 +13949,51 @@ void ChartSeriesNonStyleArchive::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(68, this->tschchartseriesscattervaluelabelsaxis(), target);
   }
 
+  // optional .TSK.FormatStructArchive tschchartseriesdefault1_0dateformat = 69;
+  if (has_tschchartseriesdefault1_0dateformat()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        69, this->tschchartseriesdefault1_0dateformat(), target);
+  }
+
+  // optional .TSK.FormatStructArchive tschchartseriesdefaultdurationformat = 70;
+  if (has_tschchartseriesdefaultdurationformat()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        70, this->tschchartseriesdefaultdurationformat(), target);
+  }
+
+  // optional .TSK.FormatStructArchive tschchartseriesdefaultdateformat = 71;
+  if (has_tschchartseriesdefaultdateformat()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        71, this->tschchartseriesdefaultdateformat(), target);
+  }
+
+  // optional .TSK.FormatStructArchive tschchartseriesdefaultnumberformat = 98;
+  if (has_tschchartseriesdefaultnumberformat()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        98, this->tschchartseriesdefaultnumberformat(), target);
+  }
+
+  // optional .TSK.FormatStructArchive tschchartseriespienumberformat = 99;
+  if (has_tschchartseriespienumberformat()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        99, this->tschchartseriespienumberformat(), target);
+  }
+
+  // optional bool tschchartseriesdefaultshowlabelsinfront = 100;
+  if (has_tschchartseriesdefaultshowlabelsinfront()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(100, this->tschchartseriesdefaultshowlabelsinfront(), target);
+  }
+
+  // optional bool tschchartseriesbubbleshowlabelsinfront = 101;
+  if (has_tschchartseriesbubbleshowlabelsinfront()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(101, this->tschchartseriesbubbleshowlabelsinfront(), target);
+  }
+
   if (!unknown_fields().empty()) {
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
         unknown_fields(), target);
@@ -13265,14 +14133,51 @@ int ChartSeriesNonStyleArchive::ByteSize() const {
           this->tschchartseriesscatterlinetype());
     }
 
-    // optional .TSK.FormatStructArchive tschchartseriesdefaultnumberformat = 21;
+    // optional .TSK.FormatStructArchive tschchartseriesdefault1_0numberformat = 21;
+    if (has_tschchartseriesdefault1_0numberformat()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->tschchartseriesdefault1_0numberformat());
+    }
+
+    // optional .TSK.FormatStructArchive tschchartseriesdefaultnumberformat = 98;
     if (has_tschchartseriesdefaultnumberformat()) {
       total_size += 2 +
         ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
           this->tschchartseriesdefaultnumberformat());
     }
 
-    // optional .TSK.FormatStructArchive tschchartseriespienumberformat = 22;
+    // optional .TSK.FormatStructArchive tschchartseriesdefault1_0dateformat = 69;
+    if (has_tschchartseriesdefault1_0dateformat()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->tschchartseriesdefault1_0dateformat());
+    }
+
+    // optional .TSK.FormatStructArchive tschchartseriesdefaultdurationformat = 70;
+    if (has_tschchartseriesdefaultdurationformat()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->tschchartseriesdefaultdurationformat());
+    }
+
+  }
+  if (_has_bits_[24 / 32] & (0xffu << (24 % 32))) {
+    // optional .TSK.FormatStructArchive tschchartseriesdefaultdateformat = 71;
+    if (has_tschchartseriesdefaultdateformat()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->tschchartseriesdefaultdateformat());
+    }
+
+    // optional .TSK.FormatStructArchive tschchartseriespie1_0numberformat = 22;
+    if (has_tschchartseriespie1_0numberformat()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->tschchartseriespie1_0numberformat());
+    }
+
+    // optional .TSK.FormatStructArchive tschchartseriespienumberformat = 99;
     if (has_tschchartseriespienumberformat()) {
       total_size += 2 +
         ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
@@ -13293,8 +14198,6 @@ int ChartSeriesNonStyleArchive::ByteSize() const {
           this->tschchartseriespienumberformattype());
     }
 
-  }
-  if (_has_bits_[24 / 32] & (0xffu << (24 % 32))) {
     // optional .TSK.FormatStructArchive tschchartseriesstackedpercentnumberformat = 25;
     if (has_tschchartseriesstackedpercentnumberformat()) {
       total_size += 2 +
@@ -13314,6 +14217,8 @@ int ChartSeriesNonStyleArchive::ByteSize() const {
       total_size += 2 + 1;
     }
 
+  }
+  if (_has_bits_[32 / 32] & (0xffu << (32 % 32))) {
     // optional bool tschchartseriesdefaultshowerrorbarscatterx = 28;
     if (has_tschchartseriesdefaultshowerrorbarscatterx()) {
       total_size += 2 + 1;
@@ -13339,8 +14244,6 @@ int ChartSeriesNonStyleArchive::ByteSize() const {
       total_size += 2 + 1;
     }
 
-  }
-  if (_has_bits_[32 / 32] & (0xffu << (32 % 32))) {
     // optional bool tschchartserieslineshowsymbol = 33;
     if (has_tschchartserieslineshowsymbol()) {
       total_size += 2 + 1;
@@ -13356,6 +14259,8 @@ int ChartSeriesNonStyleArchive::ByteSize() const {
       total_size += 2 + 1;
     }
 
+  }
+  if (_has_bits_[40 / 32] & (0xffu << (40 % 32))) {
     // optional bool tschchartseriesscattershowsymbol = 36;
     if (has_tschchartseriesscattershowsymbol()) {
       total_size += 2 + 1;
@@ -13381,8 +14286,6 @@ int ChartSeriesNonStyleArchive::ByteSize() const {
       total_size += 2 + 1;
     }
 
-  }
-  if (_has_bits_[40 / 32] & (0xffu << (40 % 32))) {
     // optional bool tschchartseriesdefaultshowvaluelabels = 41;
     if (has_tschchartseriesdefaultshowvaluelabels()) {
       total_size += 2 + 1;
@@ -13398,6 +14301,8 @@ int ChartSeriesNonStyleArchive::ByteSize() const {
       total_size += 2 + 1;
     }
 
+  }
+  if (_has_bits_[48 / 32] & (0xffu << (48 % 32))) {
     // optional bool tschchartseriespieshowvaluelabels = 44;
     if (has_tschchartseriespieshowvaluelabels()) {
       total_size += 2 + 1;
@@ -13429,8 +14334,6 @@ int ChartSeriesNonStyleArchive::ByteSize() const {
           this->tschchartserieslinesymboltype());
     }
 
-  }
-  if (_has_bits_[48 / 32] & (0xffu << (48 % 32))) {
     // optional int32 tschchartseriesmixedareasymboltype = 49;
     if (has_tschchartseriesmixedareasymboltype()) {
       total_size += 2 +
@@ -13452,6 +14355,8 @@ int ChartSeriesNonStyleArchive::ByteSize() const {
           this->tschchartseriesscattersymboltype());
     }
 
+  }
+  if (_has_bits_[56 / 32] & (0xffu << (56 % 32))) {
     // optional float tschchartseriesdefaulttrendlineequationoffsetx = 52;
     if (has_tschchartseriesdefaulttrendlineequationoffsetx()) {
       total_size += 2 + 4;
@@ -13483,8 +14388,6 @@ int ChartSeriesNonStyleArchive::ByteSize() const {
           this->tschchartseriesdefaulttrendlineperiod());
     }
 
-  }
-  if (_has_bits_[56 / 32] & (0xffu << (56 % 32))) {
     // optional float tschchartseriesdefaulttrendlinersquaredoffsetx = 57;
     if (has_tschchartseriesdefaulttrendlinersquaredoffsetx()) {
       total_size += 2 + 4;
@@ -13500,6 +14403,8 @@ int ChartSeriesNonStyleArchive::ByteSize() const {
       total_size += 2 + 1;
     }
 
+  }
+  if (_has_bits_[64 / 32] & (0xffu << (64 % 32))) {
     // optional bool tschchartseriesdefaulttrendlineshowlabel = 60;
     if (has_tschchartseriesdefaulttrendlineshowlabel()) {
       total_size += 2 + 1;
@@ -13529,8 +14434,6 @@ int ChartSeriesNonStyleArchive::ByteSize() const {
           this->tschchartseriesdefaultyaxisordinal());
     }
 
-  }
-  if (_has_bits_[64 / 32] & (0xffu << (64 % 32))) {
     // optional bool tschchartseriesbubbleshowserieslabels = 65;
     if (has_tschchartseriesbubbleshowserieslabels()) {
       total_size += 2 + 1;
@@ -13548,11 +14451,23 @@ int ChartSeriesNonStyleArchive::ByteSize() const {
       total_size += 2 + 1;
     }
 
+  }
+  if (_has_bits_[72 / 32] & (0xffu << (72 % 32))) {
     // optional int32 tschchartseriesscattervaluelabelsaxis = 68;
     if (has_tschchartseriesscattervaluelabelsaxis()) {
       total_size += 2 +
         ::google::protobuf::internal::WireFormatLite::Int32Size(
           this->tschchartseriesscattervaluelabelsaxis());
+    }
+
+    // optional bool tschchartseriesdefaultshowlabelsinfront = 100;
+    if (has_tschchartseriesdefaultshowlabelsinfront()) {
+      total_size += 2 + 1;
+    }
+
+    // optional bool tschchartseriesbubbleshowlabelsinfront = 101;
+    if (has_tschchartseriesbubbleshowlabelsinfront()) {
+      total_size += 2 + 1;
     }
 
   }
@@ -13646,8 +14561,25 @@ void ChartSeriesNonStyleArchive::MergeFrom(const ChartSeriesNonStyleArchive& fro
     if (from.has_tschchartseriesscatterlinetype()) {
       set_tschchartseriesscatterlinetype(from.tschchartseriesscatterlinetype());
     }
+    if (from.has_tschchartseriesdefault1_0numberformat()) {
+      mutable_tschchartseriesdefault1_0numberformat()->::TSK::FormatStructArchive::MergeFrom(from.tschchartseriesdefault1_0numberformat());
+    }
     if (from.has_tschchartseriesdefaultnumberformat()) {
       mutable_tschchartseriesdefaultnumberformat()->::TSK::FormatStructArchive::MergeFrom(from.tschchartseriesdefaultnumberformat());
+    }
+    if (from.has_tschchartseriesdefault1_0dateformat()) {
+      mutable_tschchartseriesdefault1_0dateformat()->::TSK::FormatStructArchive::MergeFrom(from.tschchartseriesdefault1_0dateformat());
+    }
+    if (from.has_tschchartseriesdefaultdurationformat()) {
+      mutable_tschchartseriesdefaultdurationformat()->::TSK::FormatStructArchive::MergeFrom(from.tschchartseriesdefaultdurationformat());
+    }
+  }
+  if (from._has_bits_[24 / 32] & (0xffu << (24 % 32))) {
+    if (from.has_tschchartseriesdefaultdateformat()) {
+      mutable_tschchartseriesdefaultdateformat()->::TSK::FormatStructArchive::MergeFrom(from.tschchartseriesdefaultdateformat());
+    }
+    if (from.has_tschchartseriespie1_0numberformat()) {
+      mutable_tschchartseriespie1_0numberformat()->::TSK::FormatStructArchive::MergeFrom(from.tschchartseriespie1_0numberformat());
     }
     if (from.has_tschchartseriespienumberformat()) {
       mutable_tschchartseriespienumberformat()->::TSK::FormatStructArchive::MergeFrom(from.tschchartseriespienumberformat());
@@ -13658,8 +14590,6 @@ void ChartSeriesNonStyleArchive::MergeFrom(const ChartSeriesNonStyleArchive& fro
     if (from.has_tschchartseriespienumberformattype()) {
       set_tschchartseriespienumberformattype(from.tschchartseriespienumberformattype());
     }
-  }
-  if (from._has_bits_[24 / 32] & (0xffu << (24 % 32))) {
     if (from.has_tschchartseriesstackedpercentnumberformat()) {
       mutable_tschchartseriesstackedpercentnumberformat()->::TSK::FormatStructArchive::MergeFrom(from.tschchartseriesstackedpercentnumberformat());
     }
@@ -13669,6 +14599,8 @@ void ChartSeriesNonStyleArchive::MergeFrom(const ChartSeriesNonStyleArchive& fro
     if (from.has_tschchartseriesdefaultshowerrorbar()) {
       set_tschchartseriesdefaultshowerrorbar(from.tschchartseriesdefaultshowerrorbar());
     }
+  }
+  if (from._has_bits_[32 / 32] & (0xffu << (32 % 32))) {
     if (from.has_tschchartseriesdefaultshowerrorbarscatterx()) {
       set_tschchartseriesdefaultshowerrorbarscatterx(from.tschchartseriesdefaultshowerrorbarscatterx());
     }
@@ -13684,8 +14616,6 @@ void ChartSeriesNonStyleArchive::MergeFrom(const ChartSeriesNonStyleArchive& fro
     if (from.has_tschchartseriesareashowsymbol()) {
       set_tschchartseriesareashowsymbol(from.tschchartseriesareashowsymbol());
     }
-  }
-  if (from._has_bits_[32 / 32] & (0xffu << (32 % 32))) {
     if (from.has_tschchartserieslineshowsymbol()) {
       set_tschchartserieslineshowsymbol(from.tschchartserieslineshowsymbol());
     }
@@ -13695,6 +14625,8 @@ void ChartSeriesNonStyleArchive::MergeFrom(const ChartSeriesNonStyleArchive& fro
     if (from.has_tschchartseriesmixedlineshowsymbol()) {
       set_tschchartseriesmixedlineshowsymbol(from.tschchartseriesmixedlineshowsymbol());
     }
+  }
+  if (from._has_bits_[40 / 32] & (0xffu << (40 % 32))) {
     if (from.has_tschchartseriesscattershowsymbol()) {
       set_tschchartseriesscattershowsymbol(from.tschchartseriesscattershowsymbol());
     }
@@ -13710,8 +14642,6 @@ void ChartSeriesNonStyleArchive::MergeFrom(const ChartSeriesNonStyleArchive& fro
     if (from.has_tschchartseriesbubbleshowvaluelabels()) {
       set_tschchartseriesbubbleshowvaluelabels(from.tschchartseriesbubbleshowvaluelabels());
     }
-  }
-  if (from._has_bits_[40 / 32] & (0xffu << (40 % 32))) {
     if (from.has_tschchartseriesdefaultshowvaluelabels()) {
       set_tschchartseriesdefaultshowvaluelabels(from.tschchartseriesdefaultshowvaluelabels());
     }
@@ -13721,6 +14651,8 @@ void ChartSeriesNonStyleArchive::MergeFrom(const ChartSeriesNonStyleArchive& fro
     if (from.has_tschchartseriesmixedshowvaluelabels()) {
       set_tschchartseriesmixedshowvaluelabels(from.tschchartseriesmixedshowvaluelabels());
     }
+  }
+  if (from._has_bits_[48 / 32] & (0xffu << (48 % 32))) {
     if (from.has_tschchartseriespieshowvaluelabels()) {
       set_tschchartseriespieshowvaluelabels(from.tschchartseriespieshowvaluelabels());
     }
@@ -13736,8 +14668,6 @@ void ChartSeriesNonStyleArchive::MergeFrom(const ChartSeriesNonStyleArchive& fro
     if (from.has_tschchartserieslinesymboltype()) {
       set_tschchartserieslinesymboltype(from.tschchartserieslinesymboltype());
     }
-  }
-  if (from._has_bits_[48 / 32] & (0xffu << (48 % 32))) {
     if (from.has_tschchartseriesmixedareasymboltype()) {
       set_tschchartseriesmixedareasymboltype(from.tschchartseriesmixedareasymboltype());
     }
@@ -13747,6 +14677,8 @@ void ChartSeriesNonStyleArchive::MergeFrom(const ChartSeriesNonStyleArchive& fro
     if (from.has_tschchartseriesscattersymboltype()) {
       set_tschchartseriesscattersymboltype(from.tschchartseriesscattersymboltype());
     }
+  }
+  if (from._has_bits_[56 / 32] & (0xffu << (56 % 32))) {
     if (from.has_tschchartseriesdefaulttrendlineequationoffsetx()) {
       set_tschchartseriesdefaulttrendlineequationoffsetx(from.tschchartseriesdefaulttrendlineequationoffsetx());
     }
@@ -13762,8 +14694,6 @@ void ChartSeriesNonStyleArchive::MergeFrom(const ChartSeriesNonStyleArchive& fro
     if (from.has_tschchartseriesdefaulttrendlineperiod()) {
       set_tschchartseriesdefaulttrendlineperiod(from.tschchartseriesdefaulttrendlineperiod());
     }
-  }
-  if (from._has_bits_[56 / 32] & (0xffu << (56 % 32))) {
     if (from.has_tschchartseriesdefaulttrendlinersquaredoffsetx()) {
       set_tschchartseriesdefaulttrendlinersquaredoffsetx(from.tschchartseriesdefaulttrendlinersquaredoffsetx());
     }
@@ -13773,6 +14703,8 @@ void ChartSeriesNonStyleArchive::MergeFrom(const ChartSeriesNonStyleArchive& fro
     if (from.has_tschchartseriesdefaulttrendlineshowequation()) {
       set_tschchartseriesdefaulttrendlineshowequation(from.tschchartseriesdefaulttrendlineshowequation());
     }
+  }
+  if (from._has_bits_[64 / 32] & (0xffu << (64 % 32))) {
     if (from.has_tschchartseriesdefaulttrendlineshowlabel()) {
       set_tschchartseriesdefaulttrendlineshowlabel(from.tschchartseriesdefaulttrendlineshowlabel());
     }
@@ -13788,8 +14720,6 @@ void ChartSeriesNonStyleArchive::MergeFrom(const ChartSeriesNonStyleArchive& fro
     if (from.has_tschchartseriesdefaultyaxisordinal()) {
       set_tschchartseriesdefaultyaxisordinal(from.tschchartseriesdefaultyaxisordinal());
     }
-  }
-  if (from._has_bits_[64 / 32] & (0xffu << (64 % 32))) {
     if (from.has_tschchartseriesbubbleshowserieslabels()) {
       set_tschchartseriesbubbleshowserieslabels(from.tschchartseriesbubbleshowserieslabels());
     }
@@ -13799,8 +14729,16 @@ void ChartSeriesNonStyleArchive::MergeFrom(const ChartSeriesNonStyleArchive& fro
     if (from.has_tschchartseriesscattershowserieslabels()) {
       set_tschchartseriesscattershowserieslabels(from.tschchartseriesscattershowserieslabels());
     }
+  }
+  if (from._has_bits_[72 / 32] & (0xffu << (72 % 32))) {
     if (from.has_tschchartseriesscattervaluelabelsaxis()) {
       set_tschchartseriesscattervaluelabelsaxis(from.tschchartseriesscattervaluelabelsaxis());
+    }
+    if (from.has_tschchartseriesdefaultshowlabelsinfront()) {
+      set_tschchartseriesdefaultshowlabelsinfront(from.tschchartseriesdefaultshowlabelsinfront());
+    }
+    if (from.has_tschchartseriesbubbleshowlabelsinfront()) {
+      set_tschchartseriesbubbleshowlabelsinfront(from.tschchartseriesbubbleshowlabelsinfront());
     }
   }
   mutable_unknown_fields()->MergeFrom(from.unknown_fields());
@@ -13820,8 +14758,23 @@ void ChartSeriesNonStyleArchive::CopyFrom(const ChartSeriesNonStyleArchive& from
 
 bool ChartSeriesNonStyleArchive::IsInitialized() const {
 
+  if (has_tschchartseriesdefault1_0numberformat()) {
+    if (!this->tschchartseriesdefault1_0numberformat().IsInitialized()) return false;
+  }
   if (has_tschchartseriesdefaultnumberformat()) {
     if (!this->tschchartseriesdefaultnumberformat().IsInitialized()) return false;
+  }
+  if (has_tschchartseriesdefault1_0dateformat()) {
+    if (!this->tschchartseriesdefault1_0dateformat().IsInitialized()) return false;
+  }
+  if (has_tschchartseriesdefaultdurationformat()) {
+    if (!this->tschchartseriesdefaultdurationformat().IsInitialized()) return false;
+  }
+  if (has_tschchartseriesdefaultdateformat()) {
+    if (!this->tschchartseriesdefaultdateformat().IsInitialized()) return false;
+  }
+  if (has_tschchartseriespie1_0numberformat()) {
+    if (!this->tschchartseriespie1_0numberformat().IsInitialized()) return false;
   }
   if (has_tschchartseriespienumberformat()) {
     if (!this->tschchartseriespienumberformat().IsInitialized()) return false;
@@ -13854,7 +14807,12 @@ void ChartSeriesNonStyleArchive::Swap(ChartSeriesNonStyleArchive* other) {
     std::swap(tschchartserieslinelinetype_, other->tschchartserieslinelinetype_);
     std::swap(tschchartseriesmixedlinelinetype_, other->tschchartseriesmixedlinelinetype_);
     std::swap(tschchartseriesscatterlinetype_, other->tschchartseriesscatterlinetype_);
+    std::swap(tschchartseriesdefault1_0numberformat_, other->tschchartseriesdefault1_0numberformat_);
     std::swap(tschchartseriesdefaultnumberformat_, other->tschchartseriesdefaultnumberformat_);
+    std::swap(tschchartseriesdefault1_0dateformat_, other->tschchartseriesdefault1_0dateformat_);
+    std::swap(tschchartseriesdefaultdurationformat_, other->tschchartseriesdefaultdurationformat_);
+    std::swap(tschchartseriesdefaultdateformat_, other->tschchartseriesdefaultdateformat_);
+    std::swap(tschchartseriespie1_0numberformat_, other->tschchartseriespie1_0numberformat_);
     std::swap(tschchartseriespienumberformat_, other->tschchartseriespienumberformat_);
     std::swap(tschchartseriesdefaultnumberformattype_, other->tschchartseriesdefaultnumberformattype_);
     std::swap(tschchartseriespienumberformattype_, other->tschchartseriespienumberformattype_);
@@ -13902,6 +14860,8 @@ void ChartSeriesNonStyleArchive::Swap(ChartSeriesNonStyleArchive* other) {
     std::swap(tschchartseriesbubblevaluelabelsaxis_, other->tschchartseriesbubblevaluelabelsaxis_);
     std::swap(tschchartseriesscattershowserieslabels_, other->tschchartseriesscattershowserieslabels_);
     std::swap(tschchartseriesscattervaluelabelsaxis_, other->tschchartseriesscattervaluelabelsaxis_);
+    std::swap(tschchartseriesdefaultshowlabelsinfront_, other->tschchartseriesdefaultshowlabelsinfront_);
+    std::swap(tschchartseriesbubbleshowlabelsinfront_, other->tschchartseriesbubbleshowlabelsinfront_);
     std::swap(_has_bits_[0], other->_has_bits_[0]);
     std::swap(_has_bits_[1], other->_has_bits_[1]);
     std::swap(_has_bits_[2], other->_has_bits_[2]);
@@ -13915,6 +14875,6906 @@ void ChartSeriesNonStyleArchive::Swap(ChartSeriesNonStyleArchive* other) {
   ::google::protobuf::Metadata metadata;
   metadata.descriptor = ChartSeriesNonStyleArchive_descriptor_;
   metadata.reflection = ChartSeriesNonStyleArchive_reflection_;
+  return metadata;
+}
+
+
+// ===================================================================
+
+#ifndef _MSC_VER
+const int ChartGenericPropertyMapArchive::kTschchartinfo3DbarshapeFieldNumber;
+const int ChartGenericPropertyMapArchive::kTschchartinfo3DbeveledgesFieldNumber;
+const int ChartGenericPropertyMapArchive::kTschchartinfo3DintersetdepthgapFieldNumber;
+const int ChartGenericPropertyMapArchive::kTschchartinfo3DrotationFieldNumber;
+const int ChartGenericPropertyMapArchive::kTschchartinfo3DscaleFieldNumber;
+const int ChartGenericPropertyMapArchive::kTschchartinfo3DviewportFieldNumber;
+const int ChartGenericPropertyMapArchive::kTschchartinfopiestartangleFieldNumber;
+const int ChartGenericPropertyMapArchive::kTschchartinfoshowlegendFieldNumber;
+const int ChartGenericPropertyMapArchive::kTschchartinfoshowtitleFieldNumber;
+const int ChartGenericPropertyMapArchive::kTschchartinfoskiphiddendataFieldNumber;
+const int ChartGenericPropertyMapArchive::kTschchartinfotitleFieldNumber;
+const int ChartGenericPropertyMapArchive::kTschchartinfodatasetnamelocationFieldNumber;
+const int ChartGenericPropertyMapArchive::kTschchartinfomultidatacontroltypeFieldNumber;
+const int ChartGenericPropertyMapArchive::kTschchartinfo3DchartopacityFieldNumber;
+const int ChartGenericPropertyMapArchive::kTschchartinfo3DlightingpackageFieldNumber;
+const int ChartGenericPropertyMapArchive::kTschchartinfobackgroundfillFieldNumber;
+const int ChartGenericPropertyMapArchive::kTschchartinfobackgroundstrokeFieldNumber;
+const int ChartGenericPropertyMapArchive::kTschchartinfoborderopacityFieldNumber;
+const int ChartGenericPropertyMapArchive::kTschchartinfobordershadowFieldNumber;
+const int ChartGenericPropertyMapArchive::kTschchartinfoborderstrokeFieldNumber;
+const int ChartGenericPropertyMapArchive::kTschchartinfocombinelayersFieldNumber;
+const int ChartGenericPropertyMapArchive::kTschchartinfogridbackgroundfillFieldNumber;
+const int ChartGenericPropertyMapArchive::kTschchartinfogridbackgroundopacityFieldNumber;
+const int ChartGenericPropertyMapArchive::kTschchartinfointerbargapFieldNumber;
+const int ChartGenericPropertyMapArchive::kTschchartinfointersetgapFieldNumber;
+const int ChartGenericPropertyMapArchive::kTschchartinfoshowborderFieldNumber;
+const int ChartGenericPropertyMapArchive::kTschchartinfotitlecolorFieldNumber;
+const int ChartGenericPropertyMapArchive::kTschchartinfotitleparagraphstyleindexFieldNumber;
+const int ChartGenericPropertyMapArchive::kTschchartinfodatasetnameparagraphstyleindexFieldNumber;
+#endif  // !_MSC_VER
+
+ChartGenericPropertyMapArchive::ChartGenericPropertyMapArchive()
+  : ::google::protobuf::Message() {
+  SharedCtor();
+}
+
+void ChartGenericPropertyMapArchive::InitAsDefaultInstance() {
+  tschchartinfo3drotation_ = const_cast< ::TSCH::Chart3DVectorArchive*>(&::TSCH::Chart3DVectorArchive::default_instance());
+  tschchartinfo3dscale_ = const_cast< ::TSCH::Chart3DVectorArchive*>(&::TSCH::Chart3DVectorArchive::default_instance());
+  tschchartinfo3dviewport_ = const_cast< ::TSCH::Chart3DVectorArchive*>(&::TSCH::Chart3DVectorArchive::default_instance());
+  tschchartinfo3dlightingpackage_ = const_cast< ::TSCH::Chart3DLightingPackageArchive*>(&::TSCH::Chart3DLightingPackageArchive::default_instance());
+  tschchartinfobackgroundfill_ = const_cast< ::TSD::FillArchive*>(&::TSD::FillArchive::default_instance());
+  tschchartinfobackgroundstroke_ = const_cast< ::TSD::StrokeArchive*>(&::TSD::StrokeArchive::default_instance());
+  tschchartinfobordershadow_ = const_cast< ::TSD::ShadowArchive*>(&::TSD::ShadowArchive::default_instance());
+  tschchartinfoborderstroke_ = const_cast< ::TSD::StrokeArchive*>(&::TSD::StrokeArchive::default_instance());
+  tschchartinfogridbackgroundfill_ = const_cast< ::TSD::FillArchive*>(&::TSD::FillArchive::default_instance());
+  tschchartinfotitlecolor_ = const_cast< ::TSP::Color*>(&::TSP::Color::default_instance());
+}
+
+ChartGenericPropertyMapArchive::ChartGenericPropertyMapArchive(const ChartGenericPropertyMapArchive& from)
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  MergeFrom(from);
+}
+
+void ChartGenericPropertyMapArchive::SharedCtor() {
+  _cached_size_ = 0;
+  tschchartinfo3dbarshape_ = 0;
+  tschchartinfo3dbeveledges_ = false;
+  tschchartinfo3dintersetdepthgap_ = 0;
+  tschchartinfo3drotation_ = NULL;
+  tschchartinfo3dscale_ = NULL;
+  tschchartinfo3dviewport_ = NULL;
+  tschchartinfopiestartangle_ = 0;
+  tschchartinfoshowlegend_ = false;
+  tschchartinfoshowtitle_ = false;
+  tschchartinfoskiphiddendata_ = false;
+  tschchartinfotitle_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+  tschchartinfodatasetnamelocation_ = 0;
+  tschchartinfomultidatacontroltype_ = 0;
+  tschchartinfo3dchartopacity_ = 0;
+  tschchartinfo3dlightingpackage_ = NULL;
+  tschchartinfobackgroundfill_ = NULL;
+  tschchartinfobackgroundstroke_ = NULL;
+  tschchartinfoborderopacity_ = 0;
+  tschchartinfobordershadow_ = NULL;
+  tschchartinfoborderstroke_ = NULL;
+  tschchartinfocombinelayers_ = false;
+  tschchartinfogridbackgroundfill_ = NULL;
+  tschchartinfogridbackgroundopacity_ = 0;
+  tschchartinfointerbargap_ = 0;
+  tschchartinfointersetgap_ = 0;
+  tschchartinfoshowborder_ = false;
+  tschchartinfotitlecolor_ = NULL;
+  tschchartinfotitleparagraphstyleindex_ = 0;
+  tschchartinfodatasetnameparagraphstyleindex_ = 0;
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+}
+
+ChartGenericPropertyMapArchive::~ChartGenericPropertyMapArchive() {
+  SharedDtor();
+}
+
+void ChartGenericPropertyMapArchive::SharedDtor() {
+  if (tschchartinfotitle_ != &::google::protobuf::internal::kEmptyString) {
+    delete tschchartinfotitle_;
+  }
+  if (this != default_instance_) {
+    delete tschchartinfo3drotation_;
+    delete tschchartinfo3dscale_;
+    delete tschchartinfo3dviewport_;
+    delete tschchartinfo3dlightingpackage_;
+    delete tschchartinfobackgroundfill_;
+    delete tschchartinfobackgroundstroke_;
+    delete tschchartinfobordershadow_;
+    delete tschchartinfoborderstroke_;
+    delete tschchartinfogridbackgroundfill_;
+    delete tschchartinfotitlecolor_;
+  }
+}
+
+void ChartGenericPropertyMapArchive::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* ChartGenericPropertyMapArchive::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return ChartGenericPropertyMapArchive_descriptor_;
+}
+
+const ChartGenericPropertyMapArchive& ChartGenericPropertyMapArchive::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_TSCHArchives_2eGEN_2eproto();
+  return *default_instance_;
+}
+
+ChartGenericPropertyMapArchive* ChartGenericPropertyMapArchive::default_instance_ = NULL;
+
+ChartGenericPropertyMapArchive* ChartGenericPropertyMapArchive::New() const {
+  return new ChartGenericPropertyMapArchive;
+}
+
+void ChartGenericPropertyMapArchive::Clear() {
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    tschchartinfo3dbarshape_ = 0;
+    tschchartinfo3dbeveledges_ = false;
+    tschchartinfo3dintersetdepthgap_ = 0;
+    if (has_tschchartinfo3drotation()) {
+      if (tschchartinfo3drotation_ != NULL) tschchartinfo3drotation_->::TSCH::Chart3DVectorArchive::Clear();
+    }
+    if (has_tschchartinfo3dscale()) {
+      if (tschchartinfo3dscale_ != NULL) tschchartinfo3dscale_->::TSCH::Chart3DVectorArchive::Clear();
+    }
+    if (has_tschchartinfo3dviewport()) {
+      if (tschchartinfo3dviewport_ != NULL) tschchartinfo3dviewport_->::TSCH::Chart3DVectorArchive::Clear();
+    }
+    tschchartinfopiestartangle_ = 0;
+    tschchartinfoshowlegend_ = false;
+  }
+  if (_has_bits_[8 / 32] & (0xffu << (8 % 32))) {
+    tschchartinfoshowtitle_ = false;
+    tschchartinfoskiphiddendata_ = false;
+    if (has_tschchartinfotitle()) {
+      if (tschchartinfotitle_ != &::google::protobuf::internal::kEmptyString) {
+        tschchartinfotitle_->clear();
+      }
+    }
+    tschchartinfodatasetnamelocation_ = 0;
+    tschchartinfomultidatacontroltype_ = 0;
+    tschchartinfo3dchartopacity_ = 0;
+    if (has_tschchartinfo3dlightingpackage()) {
+      if (tschchartinfo3dlightingpackage_ != NULL) tschchartinfo3dlightingpackage_->::TSCH::Chart3DLightingPackageArchive::Clear();
+    }
+    if (has_tschchartinfobackgroundfill()) {
+      if (tschchartinfobackgroundfill_ != NULL) tschchartinfobackgroundfill_->::TSD::FillArchive::Clear();
+    }
+  }
+  if (_has_bits_[16 / 32] & (0xffu << (16 % 32))) {
+    if (has_tschchartinfobackgroundstroke()) {
+      if (tschchartinfobackgroundstroke_ != NULL) tschchartinfobackgroundstroke_->::TSD::StrokeArchive::Clear();
+    }
+    tschchartinfoborderopacity_ = 0;
+    if (has_tschchartinfobordershadow()) {
+      if (tschchartinfobordershadow_ != NULL) tschchartinfobordershadow_->::TSD::ShadowArchive::Clear();
+    }
+    if (has_tschchartinfoborderstroke()) {
+      if (tschchartinfoborderstroke_ != NULL) tschchartinfoborderstroke_->::TSD::StrokeArchive::Clear();
+    }
+    tschchartinfocombinelayers_ = false;
+    if (has_tschchartinfogridbackgroundfill()) {
+      if (tschchartinfogridbackgroundfill_ != NULL) tschchartinfogridbackgroundfill_->::TSD::FillArchive::Clear();
+    }
+    tschchartinfogridbackgroundopacity_ = 0;
+    tschchartinfointerbargap_ = 0;
+  }
+  if (_has_bits_[24 / 32] & (0xffu << (24 % 32))) {
+    tschchartinfointersetgap_ = 0;
+    tschchartinfoshowborder_ = false;
+    if (has_tschchartinfotitlecolor()) {
+      if (tschchartinfotitlecolor_ != NULL) tschchartinfotitlecolor_->::TSP::Color::Clear();
+    }
+    tschchartinfotitleparagraphstyleindex_ = 0;
+    tschchartinfodatasetnameparagraphstyleindex_ = 0;
+  }
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+  mutable_unknown_fields()->Clear();
+}
+
+bool ChartGenericPropertyMapArchive::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!(EXPRESSION)) return false
+  ::google::protobuf::uint32 tag;
+  while ((tag = input->ReadTag()) != 0) {
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // optional int32 tschchartinfo3dbarshape = 1;
+      case 1: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &tschchartinfo3dbarshape_)));
+          set_has_tschchartinfo3dbarshape();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(16)) goto parse_tschchartinfo3dbeveledges;
+        break;
+      }
+
+      // optional bool tschchartinfo3dbeveledges = 2;
+      case 2: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_tschchartinfo3dbeveledges:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &tschchartinfo3dbeveledges_)));
+          set_has_tschchartinfo3dbeveledges();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(29)) goto parse_tschchartinfo3dintersetdepthgap;
+        break;
+      }
+
+      // optional float tschchartinfo3dintersetdepthgap = 3;
+      case 3: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_FIXED32) {
+         parse_tschchartinfo3dintersetdepthgap:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
+                 input, &tschchartinfo3dintersetdepthgap_)));
+          set_has_tschchartinfo3dintersetdepthgap();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(34)) goto parse_tschchartinfo3drotation;
+        break;
+      }
+
+      // optional .TSCH.Chart3DVectorArchive tschchartinfo3drotation = 4;
+      case 4: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_tschchartinfo3drotation:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_tschchartinfo3drotation()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(42)) goto parse_tschchartinfo3dscale;
+        break;
+      }
+
+      // optional .TSCH.Chart3DVectorArchive tschchartinfo3dscale = 5;
+      case 5: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_tschchartinfo3dscale:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_tschchartinfo3dscale()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(50)) goto parse_tschchartinfo3dviewport;
+        break;
+      }
+
+      // optional .TSCH.Chart3DVectorArchive tschchartinfo3dviewport = 6;
+      case 6: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_tschchartinfo3dviewport:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_tschchartinfo3dviewport()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(61)) goto parse_tschchartinfopiestartangle;
+        break;
+      }
+
+      // optional float tschchartinfopiestartangle = 7;
+      case 7: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_FIXED32) {
+         parse_tschchartinfopiestartangle:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
+                 input, &tschchartinfopiestartangle_)));
+          set_has_tschchartinfopiestartangle();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(64)) goto parse_tschchartinfoshowlegend;
+        break;
+      }
+
+      // optional bool tschchartinfoshowlegend = 8;
+      case 8: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_tschchartinfoshowlegend:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &tschchartinfoshowlegend_)));
+          set_has_tschchartinfoshowlegend();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(72)) goto parse_tschchartinfoshowtitle;
+        break;
+      }
+
+      // optional bool tschchartinfoshowtitle = 9;
+      case 9: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_tschchartinfoshowtitle:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &tschchartinfoshowtitle_)));
+          set_has_tschchartinfoshowtitle();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(80)) goto parse_tschchartinfoskiphiddendata;
+        break;
+      }
+
+      // optional bool tschchartinfoskiphiddendata = 10;
+      case 10: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_tschchartinfoskiphiddendata:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &tschchartinfoskiphiddendata_)));
+          set_has_tschchartinfoskiphiddendata();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(90)) goto parse_tschchartinfotitle;
+        break;
+      }
+
+      // optional string tschchartinfotitle = 11;
+      case 11: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_tschchartinfotitle:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_tschchartinfotitle()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+            this->tschchartinfotitle().data(), this->tschchartinfotitle().length(),
+            ::google::protobuf::internal::WireFormat::PARSE);
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(96)) goto parse_tschchartinfodatasetnamelocation;
+        break;
+      }
+
+      // optional int32 tschchartinfodatasetnamelocation = 12;
+      case 12: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_tschchartinfodatasetnamelocation:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &tschchartinfodatasetnamelocation_)));
+          set_has_tschchartinfodatasetnamelocation();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(104)) goto parse_tschchartinfomultidatacontroltype;
+        break;
+      }
+
+      // optional int32 tschchartinfomultidatacontroltype = 13;
+      case 13: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_tschchartinfomultidatacontroltype:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &tschchartinfomultidatacontroltype_)));
+          set_has_tschchartinfomultidatacontroltype();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(117)) goto parse_tschchartinfo3dchartopacity;
+        break;
+      }
+
+      // optional float tschchartinfo3dchartopacity = 14;
+      case 14: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_FIXED32) {
+         parse_tschchartinfo3dchartopacity:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
+                 input, &tschchartinfo3dchartopacity_)));
+          set_has_tschchartinfo3dchartopacity();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(122)) goto parse_tschchartinfo3dlightingpackage;
+        break;
+      }
+
+      // optional .TSCH.Chart3DLightingPackageArchive tschchartinfo3dlightingpackage = 15;
+      case 15: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_tschchartinfo3dlightingpackage:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_tschchartinfo3dlightingpackage()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(130)) goto parse_tschchartinfobackgroundfill;
+        break;
+      }
+
+      // optional .TSD.FillArchive tschchartinfobackgroundfill = 16;
+      case 16: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_tschchartinfobackgroundfill:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_tschchartinfobackgroundfill()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(138)) goto parse_tschchartinfobackgroundstroke;
+        break;
+      }
+
+      // optional .TSD.StrokeArchive tschchartinfobackgroundstroke = 17;
+      case 17: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_tschchartinfobackgroundstroke:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_tschchartinfobackgroundstroke()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(149)) goto parse_tschchartinfoborderopacity;
+        break;
+      }
+
+      // optional float tschchartinfoborderopacity = 18;
+      case 18: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_FIXED32) {
+         parse_tschchartinfoborderopacity:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
+                 input, &tschchartinfoborderopacity_)));
+          set_has_tschchartinfoborderopacity();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(154)) goto parse_tschchartinfobordershadow;
+        break;
+      }
+
+      // optional .TSD.ShadowArchive tschchartinfobordershadow = 19;
+      case 19: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_tschchartinfobordershadow:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_tschchartinfobordershadow()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(162)) goto parse_tschchartinfoborderstroke;
+        break;
+      }
+
+      // optional .TSD.StrokeArchive tschchartinfoborderstroke = 20;
+      case 20: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_tschchartinfoborderstroke:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_tschchartinfoborderstroke()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(168)) goto parse_tschchartinfocombinelayers;
+        break;
+      }
+
+      // optional bool tschchartinfocombinelayers = 21;
+      case 21: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_tschchartinfocombinelayers:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &tschchartinfocombinelayers_)));
+          set_has_tschchartinfocombinelayers();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(178)) goto parse_tschchartinfogridbackgroundfill;
+        break;
+      }
+
+      // optional .TSD.FillArchive tschchartinfogridbackgroundfill = 22;
+      case 22: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_tschchartinfogridbackgroundfill:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_tschchartinfogridbackgroundfill()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(189)) goto parse_tschchartinfogridbackgroundopacity;
+        break;
+      }
+
+      // optional float tschchartinfogridbackgroundopacity = 23;
+      case 23: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_FIXED32) {
+         parse_tschchartinfogridbackgroundopacity:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
+                 input, &tschchartinfogridbackgroundopacity_)));
+          set_has_tschchartinfogridbackgroundopacity();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(197)) goto parse_tschchartinfointerbargap;
+        break;
+      }
+
+      // optional float tschchartinfointerbargap = 24;
+      case 24: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_FIXED32) {
+         parse_tschchartinfointerbargap:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
+                 input, &tschchartinfointerbargap_)));
+          set_has_tschchartinfointerbargap();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(205)) goto parse_tschchartinfointersetgap;
+        break;
+      }
+
+      // optional float tschchartinfointersetgap = 25;
+      case 25: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_FIXED32) {
+         parse_tschchartinfointersetgap:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
+                 input, &tschchartinfointersetgap_)));
+          set_has_tschchartinfointersetgap();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(208)) goto parse_tschchartinfoshowborder;
+        break;
+      }
+
+      // optional bool tschchartinfoshowborder = 26;
+      case 26: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_tschchartinfoshowborder:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &tschchartinfoshowborder_)));
+          set_has_tschchartinfoshowborder();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(218)) goto parse_tschchartinfotitlecolor;
+        break;
+      }
+
+      // optional .TSP.Color tschchartinfotitlecolor = 27;
+      case 27: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_tschchartinfotitlecolor:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_tschchartinfotitlecolor()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(224)) goto parse_tschchartinfotitleparagraphstyleindex;
+        break;
+      }
+
+      // optional int32 tschchartinfotitleparagraphstyleindex = 28;
+      case 28: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_tschchartinfotitleparagraphstyleindex:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &tschchartinfotitleparagraphstyleindex_)));
+          set_has_tschchartinfotitleparagraphstyleindex();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(232)) goto parse_tschchartinfodatasetnameparagraphstyleindex;
+        break;
+      }
+
+      // optional int32 tschchartinfodatasetnameparagraphstyleindex = 29;
+      case 29: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_tschchartinfodatasetnameparagraphstyleindex:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &tschchartinfodatasetnameparagraphstyleindex_)));
+          set_has_tschchartinfodatasetnameparagraphstyleindex();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectAtEnd()) return true;
+        break;
+      }
+
+      default: {
+      handle_uninterpreted:
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          return true;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+  return true;
+#undef DO_
+}
+
+void ChartGenericPropertyMapArchive::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // optional int32 tschchartinfo3dbarshape = 1;
+  if (has_tschchartinfo3dbarshape()) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(1, this->tschchartinfo3dbarshape(), output);
+  }
+
+  // optional bool tschchartinfo3dbeveledges = 2;
+  if (has_tschchartinfo3dbeveledges()) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(2, this->tschchartinfo3dbeveledges(), output);
+  }
+
+  // optional float tschchartinfo3dintersetdepthgap = 3;
+  if (has_tschchartinfo3dintersetdepthgap()) {
+    ::google::protobuf::internal::WireFormatLite::WriteFloat(3, this->tschchartinfo3dintersetdepthgap(), output);
+  }
+
+  // optional .TSCH.Chart3DVectorArchive tschchartinfo3drotation = 4;
+  if (has_tschchartinfo3drotation()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      4, this->tschchartinfo3drotation(), output);
+  }
+
+  // optional .TSCH.Chart3DVectorArchive tschchartinfo3dscale = 5;
+  if (has_tschchartinfo3dscale()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      5, this->tschchartinfo3dscale(), output);
+  }
+
+  // optional .TSCH.Chart3DVectorArchive tschchartinfo3dviewport = 6;
+  if (has_tschchartinfo3dviewport()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      6, this->tschchartinfo3dviewport(), output);
+  }
+
+  // optional float tschchartinfopiestartangle = 7;
+  if (has_tschchartinfopiestartangle()) {
+    ::google::protobuf::internal::WireFormatLite::WriteFloat(7, this->tschchartinfopiestartangle(), output);
+  }
+
+  // optional bool tschchartinfoshowlegend = 8;
+  if (has_tschchartinfoshowlegend()) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(8, this->tschchartinfoshowlegend(), output);
+  }
+
+  // optional bool tschchartinfoshowtitle = 9;
+  if (has_tschchartinfoshowtitle()) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(9, this->tschchartinfoshowtitle(), output);
+  }
+
+  // optional bool tschchartinfoskiphiddendata = 10;
+  if (has_tschchartinfoskiphiddendata()) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(10, this->tschchartinfoskiphiddendata(), output);
+  }
+
+  // optional string tschchartinfotitle = 11;
+  if (has_tschchartinfotitle()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+      this->tschchartinfotitle().data(), this->tschchartinfotitle().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE);
+    ::google::protobuf::internal::WireFormatLite::WriteString(
+      11, this->tschchartinfotitle(), output);
+  }
+
+  // optional int32 tschchartinfodatasetnamelocation = 12;
+  if (has_tschchartinfodatasetnamelocation()) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(12, this->tschchartinfodatasetnamelocation(), output);
+  }
+
+  // optional int32 tschchartinfomultidatacontroltype = 13;
+  if (has_tschchartinfomultidatacontroltype()) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(13, this->tschchartinfomultidatacontroltype(), output);
+  }
+
+  // optional float tschchartinfo3dchartopacity = 14;
+  if (has_tschchartinfo3dchartopacity()) {
+    ::google::protobuf::internal::WireFormatLite::WriteFloat(14, this->tschchartinfo3dchartopacity(), output);
+  }
+
+  // optional .TSCH.Chart3DLightingPackageArchive tschchartinfo3dlightingpackage = 15;
+  if (has_tschchartinfo3dlightingpackage()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      15, this->tschchartinfo3dlightingpackage(), output);
+  }
+
+  // optional .TSD.FillArchive tschchartinfobackgroundfill = 16;
+  if (has_tschchartinfobackgroundfill()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      16, this->tschchartinfobackgroundfill(), output);
+  }
+
+  // optional .TSD.StrokeArchive tschchartinfobackgroundstroke = 17;
+  if (has_tschchartinfobackgroundstroke()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      17, this->tschchartinfobackgroundstroke(), output);
+  }
+
+  // optional float tschchartinfoborderopacity = 18;
+  if (has_tschchartinfoborderopacity()) {
+    ::google::protobuf::internal::WireFormatLite::WriteFloat(18, this->tschchartinfoborderopacity(), output);
+  }
+
+  // optional .TSD.ShadowArchive tschchartinfobordershadow = 19;
+  if (has_tschchartinfobordershadow()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      19, this->tschchartinfobordershadow(), output);
+  }
+
+  // optional .TSD.StrokeArchive tschchartinfoborderstroke = 20;
+  if (has_tschchartinfoborderstroke()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      20, this->tschchartinfoborderstroke(), output);
+  }
+
+  // optional bool tschchartinfocombinelayers = 21;
+  if (has_tschchartinfocombinelayers()) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(21, this->tschchartinfocombinelayers(), output);
+  }
+
+  // optional .TSD.FillArchive tschchartinfogridbackgroundfill = 22;
+  if (has_tschchartinfogridbackgroundfill()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      22, this->tschchartinfogridbackgroundfill(), output);
+  }
+
+  // optional float tschchartinfogridbackgroundopacity = 23;
+  if (has_tschchartinfogridbackgroundopacity()) {
+    ::google::protobuf::internal::WireFormatLite::WriteFloat(23, this->tschchartinfogridbackgroundopacity(), output);
+  }
+
+  // optional float tschchartinfointerbargap = 24;
+  if (has_tschchartinfointerbargap()) {
+    ::google::protobuf::internal::WireFormatLite::WriteFloat(24, this->tschchartinfointerbargap(), output);
+  }
+
+  // optional float tschchartinfointersetgap = 25;
+  if (has_tschchartinfointersetgap()) {
+    ::google::protobuf::internal::WireFormatLite::WriteFloat(25, this->tschchartinfointersetgap(), output);
+  }
+
+  // optional bool tschchartinfoshowborder = 26;
+  if (has_tschchartinfoshowborder()) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(26, this->tschchartinfoshowborder(), output);
+  }
+
+  // optional .TSP.Color tschchartinfotitlecolor = 27;
+  if (has_tschchartinfotitlecolor()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      27, this->tschchartinfotitlecolor(), output);
+  }
+
+  // optional int32 tschchartinfotitleparagraphstyleindex = 28;
+  if (has_tschchartinfotitleparagraphstyleindex()) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(28, this->tschchartinfotitleparagraphstyleindex(), output);
+  }
+
+  // optional int32 tschchartinfodatasetnameparagraphstyleindex = 29;
+  if (has_tschchartinfodatasetnameparagraphstyleindex()) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(29, this->tschchartinfodatasetnameparagraphstyleindex(), output);
+  }
+
+  if (!unknown_fields().empty()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+}
+
+::google::protobuf::uint8* ChartGenericPropertyMapArchive::SerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // optional int32 tschchartinfo3dbarshape = 1;
+  if (has_tschchartinfo3dbarshape()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(1, this->tschchartinfo3dbarshape(), target);
+  }
+
+  // optional bool tschchartinfo3dbeveledges = 2;
+  if (has_tschchartinfo3dbeveledges()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(2, this->tschchartinfo3dbeveledges(), target);
+  }
+
+  // optional float tschchartinfo3dintersetdepthgap = 3;
+  if (has_tschchartinfo3dintersetdepthgap()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(3, this->tschchartinfo3dintersetdepthgap(), target);
+  }
+
+  // optional .TSCH.Chart3DVectorArchive tschchartinfo3drotation = 4;
+  if (has_tschchartinfo3drotation()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        4, this->tschchartinfo3drotation(), target);
+  }
+
+  // optional .TSCH.Chart3DVectorArchive tschchartinfo3dscale = 5;
+  if (has_tschchartinfo3dscale()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        5, this->tschchartinfo3dscale(), target);
+  }
+
+  // optional .TSCH.Chart3DVectorArchive tschchartinfo3dviewport = 6;
+  if (has_tschchartinfo3dviewport()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        6, this->tschchartinfo3dviewport(), target);
+  }
+
+  // optional float tschchartinfopiestartangle = 7;
+  if (has_tschchartinfopiestartangle()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(7, this->tschchartinfopiestartangle(), target);
+  }
+
+  // optional bool tschchartinfoshowlegend = 8;
+  if (has_tschchartinfoshowlegend()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(8, this->tschchartinfoshowlegend(), target);
+  }
+
+  // optional bool tschchartinfoshowtitle = 9;
+  if (has_tschchartinfoshowtitle()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(9, this->tschchartinfoshowtitle(), target);
+  }
+
+  // optional bool tschchartinfoskiphiddendata = 10;
+  if (has_tschchartinfoskiphiddendata()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(10, this->tschchartinfoskiphiddendata(), target);
+  }
+
+  // optional string tschchartinfotitle = 11;
+  if (has_tschchartinfotitle()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+      this->tschchartinfotitle().data(), this->tschchartinfotitle().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE);
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        11, this->tschchartinfotitle(), target);
+  }
+
+  // optional int32 tschchartinfodatasetnamelocation = 12;
+  if (has_tschchartinfodatasetnamelocation()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(12, this->tschchartinfodatasetnamelocation(), target);
+  }
+
+  // optional int32 tschchartinfomultidatacontroltype = 13;
+  if (has_tschchartinfomultidatacontroltype()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(13, this->tschchartinfomultidatacontroltype(), target);
+  }
+
+  // optional float tschchartinfo3dchartopacity = 14;
+  if (has_tschchartinfo3dchartopacity()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(14, this->tschchartinfo3dchartopacity(), target);
+  }
+
+  // optional .TSCH.Chart3DLightingPackageArchive tschchartinfo3dlightingpackage = 15;
+  if (has_tschchartinfo3dlightingpackage()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        15, this->tschchartinfo3dlightingpackage(), target);
+  }
+
+  // optional .TSD.FillArchive tschchartinfobackgroundfill = 16;
+  if (has_tschchartinfobackgroundfill()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        16, this->tschchartinfobackgroundfill(), target);
+  }
+
+  // optional .TSD.StrokeArchive tschchartinfobackgroundstroke = 17;
+  if (has_tschchartinfobackgroundstroke()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        17, this->tschchartinfobackgroundstroke(), target);
+  }
+
+  // optional float tschchartinfoborderopacity = 18;
+  if (has_tschchartinfoborderopacity()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(18, this->tschchartinfoborderopacity(), target);
+  }
+
+  // optional .TSD.ShadowArchive tschchartinfobordershadow = 19;
+  if (has_tschchartinfobordershadow()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        19, this->tschchartinfobordershadow(), target);
+  }
+
+  // optional .TSD.StrokeArchive tschchartinfoborderstroke = 20;
+  if (has_tschchartinfoborderstroke()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        20, this->tschchartinfoborderstroke(), target);
+  }
+
+  // optional bool tschchartinfocombinelayers = 21;
+  if (has_tschchartinfocombinelayers()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(21, this->tschchartinfocombinelayers(), target);
+  }
+
+  // optional .TSD.FillArchive tschchartinfogridbackgroundfill = 22;
+  if (has_tschchartinfogridbackgroundfill()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        22, this->tschchartinfogridbackgroundfill(), target);
+  }
+
+  // optional float tschchartinfogridbackgroundopacity = 23;
+  if (has_tschchartinfogridbackgroundopacity()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(23, this->tschchartinfogridbackgroundopacity(), target);
+  }
+
+  // optional float tschchartinfointerbargap = 24;
+  if (has_tschchartinfointerbargap()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(24, this->tschchartinfointerbargap(), target);
+  }
+
+  // optional float tschchartinfointersetgap = 25;
+  if (has_tschchartinfointersetgap()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(25, this->tschchartinfointersetgap(), target);
+  }
+
+  // optional bool tschchartinfoshowborder = 26;
+  if (has_tschchartinfoshowborder()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(26, this->tschchartinfoshowborder(), target);
+  }
+
+  // optional .TSP.Color tschchartinfotitlecolor = 27;
+  if (has_tschchartinfotitlecolor()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        27, this->tschchartinfotitlecolor(), target);
+  }
+
+  // optional int32 tschchartinfotitleparagraphstyleindex = 28;
+  if (has_tschchartinfotitleparagraphstyleindex()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(28, this->tschchartinfotitleparagraphstyleindex(), target);
+  }
+
+  // optional int32 tschchartinfodatasetnameparagraphstyleindex = 29;
+  if (has_tschchartinfodatasetnameparagraphstyleindex()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(29, this->tschchartinfodatasetnameparagraphstyleindex(), target);
+  }
+
+  if (!unknown_fields().empty()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  return target;
+}
+
+int ChartGenericPropertyMapArchive::ByteSize() const {
+  int total_size = 0;
+
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    // optional int32 tschchartinfo3dbarshape = 1;
+    if (has_tschchartinfo3dbarshape()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::Int32Size(
+          this->tschchartinfo3dbarshape());
+    }
+
+    // optional bool tschchartinfo3dbeveledges = 2;
+    if (has_tschchartinfo3dbeveledges()) {
+      total_size += 1 + 1;
+    }
+
+    // optional float tschchartinfo3dintersetdepthgap = 3;
+    if (has_tschchartinfo3dintersetdepthgap()) {
+      total_size += 1 + 4;
+    }
+
+    // optional .TSCH.Chart3DVectorArchive tschchartinfo3drotation = 4;
+    if (has_tschchartinfo3drotation()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->tschchartinfo3drotation());
+    }
+
+    // optional .TSCH.Chart3DVectorArchive tschchartinfo3dscale = 5;
+    if (has_tschchartinfo3dscale()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->tschchartinfo3dscale());
+    }
+
+    // optional .TSCH.Chart3DVectorArchive tschchartinfo3dviewport = 6;
+    if (has_tschchartinfo3dviewport()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->tschchartinfo3dviewport());
+    }
+
+    // optional float tschchartinfopiestartangle = 7;
+    if (has_tschchartinfopiestartangle()) {
+      total_size += 1 + 4;
+    }
+
+    // optional bool tschchartinfoshowlegend = 8;
+    if (has_tschchartinfoshowlegend()) {
+      total_size += 1 + 1;
+    }
+
+  }
+  if (_has_bits_[8 / 32] & (0xffu << (8 % 32))) {
+    // optional bool tschchartinfoshowtitle = 9;
+    if (has_tschchartinfoshowtitle()) {
+      total_size += 1 + 1;
+    }
+
+    // optional bool tschchartinfoskiphiddendata = 10;
+    if (has_tschchartinfoskiphiddendata()) {
+      total_size += 1 + 1;
+    }
+
+    // optional string tschchartinfotitle = 11;
+    if (has_tschchartinfotitle()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->tschchartinfotitle());
+    }
+
+    // optional int32 tschchartinfodatasetnamelocation = 12;
+    if (has_tschchartinfodatasetnamelocation()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::Int32Size(
+          this->tschchartinfodatasetnamelocation());
+    }
+
+    // optional int32 tschchartinfomultidatacontroltype = 13;
+    if (has_tschchartinfomultidatacontroltype()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::Int32Size(
+          this->tschchartinfomultidatacontroltype());
+    }
+
+    // optional float tschchartinfo3dchartopacity = 14;
+    if (has_tschchartinfo3dchartopacity()) {
+      total_size += 1 + 4;
+    }
+
+    // optional .TSCH.Chart3DLightingPackageArchive tschchartinfo3dlightingpackage = 15;
+    if (has_tschchartinfo3dlightingpackage()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->tschchartinfo3dlightingpackage());
+    }
+
+    // optional .TSD.FillArchive tschchartinfobackgroundfill = 16;
+    if (has_tschchartinfobackgroundfill()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->tschchartinfobackgroundfill());
+    }
+
+  }
+  if (_has_bits_[16 / 32] & (0xffu << (16 % 32))) {
+    // optional .TSD.StrokeArchive tschchartinfobackgroundstroke = 17;
+    if (has_tschchartinfobackgroundstroke()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->tschchartinfobackgroundstroke());
+    }
+
+    // optional float tschchartinfoborderopacity = 18;
+    if (has_tschchartinfoborderopacity()) {
+      total_size += 2 + 4;
+    }
+
+    // optional .TSD.ShadowArchive tschchartinfobordershadow = 19;
+    if (has_tschchartinfobordershadow()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->tschchartinfobordershadow());
+    }
+
+    // optional .TSD.StrokeArchive tschchartinfoborderstroke = 20;
+    if (has_tschchartinfoborderstroke()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->tschchartinfoborderstroke());
+    }
+
+    // optional bool tschchartinfocombinelayers = 21;
+    if (has_tschchartinfocombinelayers()) {
+      total_size += 2 + 1;
+    }
+
+    // optional .TSD.FillArchive tschchartinfogridbackgroundfill = 22;
+    if (has_tschchartinfogridbackgroundfill()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->tschchartinfogridbackgroundfill());
+    }
+
+    // optional float tschchartinfogridbackgroundopacity = 23;
+    if (has_tschchartinfogridbackgroundopacity()) {
+      total_size += 2 + 4;
+    }
+
+    // optional float tschchartinfointerbargap = 24;
+    if (has_tschchartinfointerbargap()) {
+      total_size += 2 + 4;
+    }
+
+  }
+  if (_has_bits_[24 / 32] & (0xffu << (24 % 32))) {
+    // optional float tschchartinfointersetgap = 25;
+    if (has_tschchartinfointersetgap()) {
+      total_size += 2 + 4;
+    }
+
+    // optional bool tschchartinfoshowborder = 26;
+    if (has_tschchartinfoshowborder()) {
+      total_size += 2 + 1;
+    }
+
+    // optional .TSP.Color tschchartinfotitlecolor = 27;
+    if (has_tschchartinfotitlecolor()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->tschchartinfotitlecolor());
+    }
+
+    // optional int32 tschchartinfotitleparagraphstyleindex = 28;
+    if (has_tschchartinfotitleparagraphstyleindex()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::Int32Size(
+          this->tschchartinfotitleparagraphstyleindex());
+    }
+
+    // optional int32 tschchartinfodatasetnameparagraphstyleindex = 29;
+    if (has_tschchartinfodatasetnameparagraphstyleindex()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::Int32Size(
+          this->tschchartinfodatasetnameparagraphstyleindex());
+    }
+
+  }
+  if (!unknown_fields().empty()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = total_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void ChartGenericPropertyMapArchive::MergeFrom(const ::google::protobuf::Message& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  const ChartGenericPropertyMapArchive* source =
+    ::google::protobuf::internal::dynamic_cast_if_available<const ChartGenericPropertyMapArchive*>(
+      &from);
+  if (source == NULL) {
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+    MergeFrom(*source);
+  }
+}
+
+void ChartGenericPropertyMapArchive::MergeFrom(const ChartGenericPropertyMapArchive& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (from.has_tschchartinfo3dbarshape()) {
+      set_tschchartinfo3dbarshape(from.tschchartinfo3dbarshape());
+    }
+    if (from.has_tschchartinfo3dbeveledges()) {
+      set_tschchartinfo3dbeveledges(from.tschchartinfo3dbeveledges());
+    }
+    if (from.has_tschchartinfo3dintersetdepthgap()) {
+      set_tschchartinfo3dintersetdepthgap(from.tschchartinfo3dintersetdepthgap());
+    }
+    if (from.has_tschchartinfo3drotation()) {
+      mutable_tschchartinfo3drotation()->::TSCH::Chart3DVectorArchive::MergeFrom(from.tschchartinfo3drotation());
+    }
+    if (from.has_tschchartinfo3dscale()) {
+      mutable_tschchartinfo3dscale()->::TSCH::Chart3DVectorArchive::MergeFrom(from.tschchartinfo3dscale());
+    }
+    if (from.has_tschchartinfo3dviewport()) {
+      mutable_tschchartinfo3dviewport()->::TSCH::Chart3DVectorArchive::MergeFrom(from.tschchartinfo3dviewport());
+    }
+    if (from.has_tschchartinfopiestartangle()) {
+      set_tschchartinfopiestartangle(from.tschchartinfopiestartangle());
+    }
+    if (from.has_tschchartinfoshowlegend()) {
+      set_tschchartinfoshowlegend(from.tschchartinfoshowlegend());
+    }
+  }
+  if (from._has_bits_[8 / 32] & (0xffu << (8 % 32))) {
+    if (from.has_tschchartinfoshowtitle()) {
+      set_tschchartinfoshowtitle(from.tschchartinfoshowtitle());
+    }
+    if (from.has_tschchartinfoskiphiddendata()) {
+      set_tschchartinfoskiphiddendata(from.tschchartinfoskiphiddendata());
+    }
+    if (from.has_tschchartinfotitle()) {
+      set_tschchartinfotitle(from.tschchartinfotitle());
+    }
+    if (from.has_tschchartinfodatasetnamelocation()) {
+      set_tschchartinfodatasetnamelocation(from.tschchartinfodatasetnamelocation());
+    }
+    if (from.has_tschchartinfomultidatacontroltype()) {
+      set_tschchartinfomultidatacontroltype(from.tschchartinfomultidatacontroltype());
+    }
+    if (from.has_tschchartinfo3dchartopacity()) {
+      set_tschchartinfo3dchartopacity(from.tschchartinfo3dchartopacity());
+    }
+    if (from.has_tschchartinfo3dlightingpackage()) {
+      mutable_tschchartinfo3dlightingpackage()->::TSCH::Chart3DLightingPackageArchive::MergeFrom(from.tschchartinfo3dlightingpackage());
+    }
+    if (from.has_tschchartinfobackgroundfill()) {
+      mutable_tschchartinfobackgroundfill()->::TSD::FillArchive::MergeFrom(from.tschchartinfobackgroundfill());
+    }
+  }
+  if (from._has_bits_[16 / 32] & (0xffu << (16 % 32))) {
+    if (from.has_tschchartinfobackgroundstroke()) {
+      mutable_tschchartinfobackgroundstroke()->::TSD::StrokeArchive::MergeFrom(from.tschchartinfobackgroundstroke());
+    }
+    if (from.has_tschchartinfoborderopacity()) {
+      set_tschchartinfoborderopacity(from.tschchartinfoborderopacity());
+    }
+    if (from.has_tschchartinfobordershadow()) {
+      mutable_tschchartinfobordershadow()->::TSD::ShadowArchive::MergeFrom(from.tschchartinfobordershadow());
+    }
+    if (from.has_tschchartinfoborderstroke()) {
+      mutable_tschchartinfoborderstroke()->::TSD::StrokeArchive::MergeFrom(from.tschchartinfoborderstroke());
+    }
+    if (from.has_tschchartinfocombinelayers()) {
+      set_tschchartinfocombinelayers(from.tschchartinfocombinelayers());
+    }
+    if (from.has_tschchartinfogridbackgroundfill()) {
+      mutable_tschchartinfogridbackgroundfill()->::TSD::FillArchive::MergeFrom(from.tschchartinfogridbackgroundfill());
+    }
+    if (from.has_tschchartinfogridbackgroundopacity()) {
+      set_tschchartinfogridbackgroundopacity(from.tschchartinfogridbackgroundopacity());
+    }
+    if (from.has_tschchartinfointerbargap()) {
+      set_tschchartinfointerbargap(from.tschchartinfointerbargap());
+    }
+  }
+  if (from._has_bits_[24 / 32] & (0xffu << (24 % 32))) {
+    if (from.has_tschchartinfointersetgap()) {
+      set_tschchartinfointersetgap(from.tschchartinfointersetgap());
+    }
+    if (from.has_tschchartinfoshowborder()) {
+      set_tschchartinfoshowborder(from.tschchartinfoshowborder());
+    }
+    if (from.has_tschchartinfotitlecolor()) {
+      mutable_tschchartinfotitlecolor()->::TSP::Color::MergeFrom(from.tschchartinfotitlecolor());
+    }
+    if (from.has_tschchartinfotitleparagraphstyleindex()) {
+      set_tschchartinfotitleparagraphstyleindex(from.tschchartinfotitleparagraphstyleindex());
+    }
+    if (from.has_tschchartinfodatasetnameparagraphstyleindex()) {
+      set_tschchartinfodatasetnameparagraphstyleindex(from.tschchartinfodatasetnameparagraphstyleindex());
+    }
+  }
+  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
+}
+
+void ChartGenericPropertyMapArchive::CopyFrom(const ::google::protobuf::Message& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void ChartGenericPropertyMapArchive::CopyFrom(const ChartGenericPropertyMapArchive& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool ChartGenericPropertyMapArchive::IsInitialized() const {
+
+  if (has_tschchartinfo3drotation()) {
+    if (!this->tschchartinfo3drotation().IsInitialized()) return false;
+  }
+  if (has_tschchartinfo3dscale()) {
+    if (!this->tschchartinfo3dscale().IsInitialized()) return false;
+  }
+  if (has_tschchartinfo3dviewport()) {
+    if (!this->tschchartinfo3dviewport().IsInitialized()) return false;
+  }
+  if (has_tschchartinfo3dlightingpackage()) {
+    if (!this->tschchartinfo3dlightingpackage().IsInitialized()) return false;
+  }
+  if (has_tschchartinfobackgroundfill()) {
+    if (!this->tschchartinfobackgroundfill().IsInitialized()) return false;
+  }
+  if (has_tschchartinfobackgroundstroke()) {
+    if (!this->tschchartinfobackgroundstroke().IsInitialized()) return false;
+  }
+  if (has_tschchartinfobordershadow()) {
+    if (!this->tschchartinfobordershadow().IsInitialized()) return false;
+  }
+  if (has_tschchartinfoborderstroke()) {
+    if (!this->tschchartinfoborderstroke().IsInitialized()) return false;
+  }
+  if (has_tschchartinfogridbackgroundfill()) {
+    if (!this->tschchartinfogridbackgroundfill().IsInitialized()) return false;
+  }
+  if (has_tschchartinfotitlecolor()) {
+    if (!this->tschchartinfotitlecolor().IsInitialized()) return false;
+  }
+  return true;
+}
+
+void ChartGenericPropertyMapArchive::Swap(ChartGenericPropertyMapArchive* other) {
+  if (other != this) {
+    std::swap(tschchartinfo3dbarshape_, other->tschchartinfo3dbarshape_);
+    std::swap(tschchartinfo3dbeveledges_, other->tschchartinfo3dbeveledges_);
+    std::swap(tschchartinfo3dintersetdepthgap_, other->tschchartinfo3dintersetdepthgap_);
+    std::swap(tschchartinfo3drotation_, other->tschchartinfo3drotation_);
+    std::swap(tschchartinfo3dscale_, other->tschchartinfo3dscale_);
+    std::swap(tschchartinfo3dviewport_, other->tschchartinfo3dviewport_);
+    std::swap(tschchartinfopiestartangle_, other->tschchartinfopiestartangle_);
+    std::swap(tschchartinfoshowlegend_, other->tschchartinfoshowlegend_);
+    std::swap(tschchartinfoshowtitle_, other->tschchartinfoshowtitle_);
+    std::swap(tschchartinfoskiphiddendata_, other->tschchartinfoskiphiddendata_);
+    std::swap(tschchartinfotitle_, other->tschchartinfotitle_);
+    std::swap(tschchartinfodatasetnamelocation_, other->tschchartinfodatasetnamelocation_);
+    std::swap(tschchartinfomultidatacontroltype_, other->tschchartinfomultidatacontroltype_);
+    std::swap(tschchartinfo3dchartopacity_, other->tschchartinfo3dchartopacity_);
+    std::swap(tschchartinfo3dlightingpackage_, other->tschchartinfo3dlightingpackage_);
+    std::swap(tschchartinfobackgroundfill_, other->tschchartinfobackgroundfill_);
+    std::swap(tschchartinfobackgroundstroke_, other->tschchartinfobackgroundstroke_);
+    std::swap(tschchartinfoborderopacity_, other->tschchartinfoborderopacity_);
+    std::swap(tschchartinfobordershadow_, other->tschchartinfobordershadow_);
+    std::swap(tschchartinfoborderstroke_, other->tschchartinfoborderstroke_);
+    std::swap(tschchartinfocombinelayers_, other->tschchartinfocombinelayers_);
+    std::swap(tschchartinfogridbackgroundfill_, other->tschchartinfogridbackgroundfill_);
+    std::swap(tschchartinfogridbackgroundopacity_, other->tschchartinfogridbackgroundopacity_);
+    std::swap(tschchartinfointerbargap_, other->tschchartinfointerbargap_);
+    std::swap(tschchartinfointersetgap_, other->tschchartinfointersetgap_);
+    std::swap(tschchartinfoshowborder_, other->tschchartinfoshowborder_);
+    std::swap(tschchartinfotitlecolor_, other->tschchartinfotitlecolor_);
+    std::swap(tschchartinfotitleparagraphstyleindex_, other->tschchartinfotitleparagraphstyleindex_);
+    std::swap(tschchartinfodatasetnameparagraphstyleindex_, other->tschchartinfodatasetnameparagraphstyleindex_);
+    std::swap(_has_bits_[0], other->_has_bits_[0]);
+    _unknown_fields_.Swap(&other->_unknown_fields_);
+    std::swap(_cached_size_, other->_cached_size_);
+  }
+}
+
+::google::protobuf::Metadata ChartGenericPropertyMapArchive::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = ChartGenericPropertyMapArchive_descriptor_;
+  metadata.reflection = ChartGenericPropertyMapArchive_reflection_;
+  return metadata;
+}
+
+
+// ===================================================================
+
+#ifndef _MSC_VER
+const int LegendGenericPropertyMapArchive::kTschlegendmodelfillFieldNumber;
+const int LegendGenericPropertyMapArchive::kTschlegendmodellabelparagraphstyleindexFieldNumber;
+const int LegendGenericPropertyMapArchive::kTschlegendmodelopacityFieldNumber;
+const int LegendGenericPropertyMapArchive::kTschlegendmodelshadowFieldNumber;
+const int LegendGenericPropertyMapArchive::kTschlegendmodelstrokeFieldNumber;
+#endif  // !_MSC_VER
+
+LegendGenericPropertyMapArchive::LegendGenericPropertyMapArchive()
+  : ::google::protobuf::Message() {
+  SharedCtor();
+}
+
+void LegendGenericPropertyMapArchive::InitAsDefaultInstance() {
+  tschlegendmodelfill_ = const_cast< ::TSD::FillArchive*>(&::TSD::FillArchive::default_instance());
+  tschlegendmodelshadow_ = const_cast< ::TSD::ShadowArchive*>(&::TSD::ShadowArchive::default_instance());
+  tschlegendmodelstroke_ = const_cast< ::TSD::StrokeArchive*>(&::TSD::StrokeArchive::default_instance());
+}
+
+LegendGenericPropertyMapArchive::LegendGenericPropertyMapArchive(const LegendGenericPropertyMapArchive& from)
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  MergeFrom(from);
+}
+
+void LegendGenericPropertyMapArchive::SharedCtor() {
+  _cached_size_ = 0;
+  tschlegendmodelfill_ = NULL;
+  tschlegendmodellabelparagraphstyleindex_ = 0;
+  tschlegendmodelopacity_ = 0;
+  tschlegendmodelshadow_ = NULL;
+  tschlegendmodelstroke_ = NULL;
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+}
+
+LegendGenericPropertyMapArchive::~LegendGenericPropertyMapArchive() {
+  SharedDtor();
+}
+
+void LegendGenericPropertyMapArchive::SharedDtor() {
+  if (this != default_instance_) {
+    delete tschlegendmodelfill_;
+    delete tschlegendmodelshadow_;
+    delete tschlegendmodelstroke_;
+  }
+}
+
+void LegendGenericPropertyMapArchive::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* LegendGenericPropertyMapArchive::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return LegendGenericPropertyMapArchive_descriptor_;
+}
+
+const LegendGenericPropertyMapArchive& LegendGenericPropertyMapArchive::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_TSCHArchives_2eGEN_2eproto();
+  return *default_instance_;
+}
+
+LegendGenericPropertyMapArchive* LegendGenericPropertyMapArchive::default_instance_ = NULL;
+
+LegendGenericPropertyMapArchive* LegendGenericPropertyMapArchive::New() const {
+  return new LegendGenericPropertyMapArchive;
+}
+
+void LegendGenericPropertyMapArchive::Clear() {
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (has_tschlegendmodelfill()) {
+      if (tschlegendmodelfill_ != NULL) tschlegendmodelfill_->::TSD::FillArchive::Clear();
+    }
+    tschlegendmodellabelparagraphstyleindex_ = 0;
+    tschlegendmodelopacity_ = 0;
+    if (has_tschlegendmodelshadow()) {
+      if (tschlegendmodelshadow_ != NULL) tschlegendmodelshadow_->::TSD::ShadowArchive::Clear();
+    }
+    if (has_tschlegendmodelstroke()) {
+      if (tschlegendmodelstroke_ != NULL) tschlegendmodelstroke_->::TSD::StrokeArchive::Clear();
+    }
+  }
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+  mutable_unknown_fields()->Clear();
+}
+
+bool LegendGenericPropertyMapArchive::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!(EXPRESSION)) return false
+  ::google::protobuf::uint32 tag;
+  while ((tag = input->ReadTag()) != 0) {
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // optional .TSD.FillArchive tschlegendmodelfill = 1;
+      case 1: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_tschlegendmodelfill()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(16)) goto parse_tschlegendmodellabelparagraphstyleindex;
+        break;
+      }
+
+      // optional int32 tschlegendmodellabelparagraphstyleindex = 2;
+      case 2: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_tschlegendmodellabelparagraphstyleindex:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &tschlegendmodellabelparagraphstyleindex_)));
+          set_has_tschlegendmodellabelparagraphstyleindex();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(29)) goto parse_tschlegendmodelopacity;
+        break;
+      }
+
+      // optional float tschlegendmodelopacity = 3;
+      case 3: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_FIXED32) {
+         parse_tschlegendmodelopacity:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
+                 input, &tschlegendmodelopacity_)));
+          set_has_tschlegendmodelopacity();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(34)) goto parse_tschlegendmodelshadow;
+        break;
+      }
+
+      // optional .TSD.ShadowArchive tschlegendmodelshadow = 4;
+      case 4: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_tschlegendmodelshadow:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_tschlegendmodelshadow()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(42)) goto parse_tschlegendmodelstroke;
+        break;
+      }
+
+      // optional .TSD.StrokeArchive tschlegendmodelstroke = 5;
+      case 5: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_tschlegendmodelstroke:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_tschlegendmodelstroke()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectAtEnd()) return true;
+        break;
+      }
+
+      default: {
+      handle_uninterpreted:
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          return true;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+  return true;
+#undef DO_
+}
+
+void LegendGenericPropertyMapArchive::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // optional .TSD.FillArchive tschlegendmodelfill = 1;
+  if (has_tschlegendmodelfill()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, this->tschlegendmodelfill(), output);
+  }
+
+  // optional int32 tschlegendmodellabelparagraphstyleindex = 2;
+  if (has_tschlegendmodellabelparagraphstyleindex()) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(2, this->tschlegendmodellabelparagraphstyleindex(), output);
+  }
+
+  // optional float tschlegendmodelopacity = 3;
+  if (has_tschlegendmodelopacity()) {
+    ::google::protobuf::internal::WireFormatLite::WriteFloat(3, this->tschlegendmodelopacity(), output);
+  }
+
+  // optional .TSD.ShadowArchive tschlegendmodelshadow = 4;
+  if (has_tschlegendmodelshadow()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      4, this->tschlegendmodelshadow(), output);
+  }
+
+  // optional .TSD.StrokeArchive tschlegendmodelstroke = 5;
+  if (has_tschlegendmodelstroke()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      5, this->tschlegendmodelstroke(), output);
+  }
+
+  if (!unknown_fields().empty()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+}
+
+::google::protobuf::uint8* LegendGenericPropertyMapArchive::SerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // optional .TSD.FillArchive tschlegendmodelfill = 1;
+  if (has_tschlegendmodelfill()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        1, this->tschlegendmodelfill(), target);
+  }
+
+  // optional int32 tschlegendmodellabelparagraphstyleindex = 2;
+  if (has_tschlegendmodellabelparagraphstyleindex()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(2, this->tschlegendmodellabelparagraphstyleindex(), target);
+  }
+
+  // optional float tschlegendmodelopacity = 3;
+  if (has_tschlegendmodelopacity()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(3, this->tschlegendmodelopacity(), target);
+  }
+
+  // optional .TSD.ShadowArchive tschlegendmodelshadow = 4;
+  if (has_tschlegendmodelshadow()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        4, this->tschlegendmodelshadow(), target);
+  }
+
+  // optional .TSD.StrokeArchive tschlegendmodelstroke = 5;
+  if (has_tschlegendmodelstroke()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        5, this->tschlegendmodelstroke(), target);
+  }
+
+  if (!unknown_fields().empty()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  return target;
+}
+
+int LegendGenericPropertyMapArchive::ByteSize() const {
+  int total_size = 0;
+
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    // optional .TSD.FillArchive tschlegendmodelfill = 1;
+    if (has_tschlegendmodelfill()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->tschlegendmodelfill());
+    }
+
+    // optional int32 tschlegendmodellabelparagraphstyleindex = 2;
+    if (has_tschlegendmodellabelparagraphstyleindex()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::Int32Size(
+          this->tschlegendmodellabelparagraphstyleindex());
+    }
+
+    // optional float tschlegendmodelopacity = 3;
+    if (has_tschlegendmodelopacity()) {
+      total_size += 1 + 4;
+    }
+
+    // optional .TSD.ShadowArchive tschlegendmodelshadow = 4;
+    if (has_tschlegendmodelshadow()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->tschlegendmodelshadow());
+    }
+
+    // optional .TSD.StrokeArchive tschlegendmodelstroke = 5;
+    if (has_tschlegendmodelstroke()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->tschlegendmodelstroke());
+    }
+
+  }
+  if (!unknown_fields().empty()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = total_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void LegendGenericPropertyMapArchive::MergeFrom(const ::google::protobuf::Message& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  const LegendGenericPropertyMapArchive* source =
+    ::google::protobuf::internal::dynamic_cast_if_available<const LegendGenericPropertyMapArchive*>(
+      &from);
+  if (source == NULL) {
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+    MergeFrom(*source);
+  }
+}
+
+void LegendGenericPropertyMapArchive::MergeFrom(const LegendGenericPropertyMapArchive& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (from.has_tschlegendmodelfill()) {
+      mutable_tschlegendmodelfill()->::TSD::FillArchive::MergeFrom(from.tschlegendmodelfill());
+    }
+    if (from.has_tschlegendmodellabelparagraphstyleindex()) {
+      set_tschlegendmodellabelparagraphstyleindex(from.tschlegendmodellabelparagraphstyleindex());
+    }
+    if (from.has_tschlegendmodelopacity()) {
+      set_tschlegendmodelopacity(from.tschlegendmodelopacity());
+    }
+    if (from.has_tschlegendmodelshadow()) {
+      mutable_tschlegendmodelshadow()->::TSD::ShadowArchive::MergeFrom(from.tschlegendmodelshadow());
+    }
+    if (from.has_tschlegendmodelstroke()) {
+      mutable_tschlegendmodelstroke()->::TSD::StrokeArchive::MergeFrom(from.tschlegendmodelstroke());
+    }
+  }
+  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
+}
+
+void LegendGenericPropertyMapArchive::CopyFrom(const ::google::protobuf::Message& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void LegendGenericPropertyMapArchive::CopyFrom(const LegendGenericPropertyMapArchive& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool LegendGenericPropertyMapArchive::IsInitialized() const {
+
+  if (has_tschlegendmodelfill()) {
+    if (!this->tschlegendmodelfill().IsInitialized()) return false;
+  }
+  if (has_tschlegendmodelshadow()) {
+    if (!this->tschlegendmodelshadow().IsInitialized()) return false;
+  }
+  if (has_tschlegendmodelstroke()) {
+    if (!this->tschlegendmodelstroke().IsInitialized()) return false;
+  }
+  return true;
+}
+
+void LegendGenericPropertyMapArchive::Swap(LegendGenericPropertyMapArchive* other) {
+  if (other != this) {
+    std::swap(tschlegendmodelfill_, other->tschlegendmodelfill_);
+    std::swap(tschlegendmodellabelparagraphstyleindex_, other->tschlegendmodellabelparagraphstyleindex_);
+    std::swap(tschlegendmodelopacity_, other->tschlegendmodelopacity_);
+    std::swap(tschlegendmodelshadow_, other->tschlegendmodelshadow_);
+    std::swap(tschlegendmodelstroke_, other->tschlegendmodelstroke_);
+    std::swap(_has_bits_[0], other->_has_bits_[0]);
+    _unknown_fields_.Swap(&other->_unknown_fields_);
+    std::swap(_cached_size_, other->_cached_size_);
+  }
+}
+
+::google::protobuf::Metadata LegendGenericPropertyMapArchive::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = LegendGenericPropertyMapArchive_descriptor_;
+  metadata.reflection = LegendGenericPropertyMapArchive_reflection_;
+  return metadata;
+}
+
+
+// ===================================================================
+
+#ifndef _MSC_VER
+const int ChartAxisGenericPropertyMapArchive::kTschchartaxis3DlabelpositionFieldNumber;
+const int ChartAxisGenericPropertyMapArchive::kTschchartaxis10NumberformatFieldNumber;
+const int ChartAxisGenericPropertyMapArchive::kTschchartaxisnumberformatFieldNumber;
+const int ChartAxisGenericPropertyMapArchive::kTschchartaxis10DateformatFieldNumber;
+const int ChartAxisGenericPropertyMapArchive::kTschchartaxisdurationformatFieldNumber;
+const int ChartAxisGenericPropertyMapArchive::kTschchartaxisdateformatFieldNumber;
+const int ChartAxisGenericPropertyMapArchive::kTschchartaxisnumberformattypeFieldNumber;
+const int ChartAxisGenericPropertyMapArchive::kTschchartaxisnumberofdecadesFieldNumber;
+const int ChartAxisGenericPropertyMapArchive::kTschchartaxisnumberofmajorgridlinesFieldNumber;
+const int ChartAxisGenericPropertyMapArchive::kTschchartaxisnumberofminorgridlinesFieldNumber;
+const int ChartAxisGenericPropertyMapArchive::kTschchartaxisplottoedgesFieldNumber;
+const int ChartAxisGenericPropertyMapArchive::kTschchartaxisscaleFieldNumber;
+const int ChartAxisGenericPropertyMapArchive::kTschchartaxisshowlabelsFieldNumber;
+const int ChartAxisGenericPropertyMapArchive::kTschchartaxisshowserieslabelsFieldNumber;
+const int ChartAxisGenericPropertyMapArchive::kTschchartaxisshowtitleFieldNumber;
+const int ChartAxisGenericPropertyMapArchive::kTschchartaxistitleFieldNumber;
+const int ChartAxisGenericPropertyMapArchive::kTschchartaxisusermaxFieldNumber;
+const int ChartAxisGenericPropertyMapArchive::kTschchartaxisuserminFieldNumber;
+const int ChartAxisGenericPropertyMapArchive::kTschchartaxis3DgridlineopacityFieldNumber;
+const int ChartAxisGenericPropertyMapArchive::kTschchartaxis3DgridlinestrokeFieldNumber;
+const int ChartAxisGenericPropertyMapArchive::kTschchartaxishorizontalspacingFieldNumber;
+const int ChartAxisGenericPropertyMapArchive::kTschchartaxislabelparagraphstyleindexFieldNumber;
+const int ChartAxisGenericPropertyMapArchive::kTschchartaxislabelsorientationFieldNumber;
+const int ChartAxisGenericPropertyMapArchive::kTschchartaxismajorgridlineopacityFieldNumber;
+const int ChartAxisGenericPropertyMapArchive::kTschchartaxismajorgridlineshadowFieldNumber;
+const int ChartAxisGenericPropertyMapArchive::kTschchartaxismajorgridlinestrokeFieldNumber;
+const int ChartAxisGenericPropertyMapArchive::kTschchartaxisminorgridlineopacityFieldNumber;
+const int ChartAxisGenericPropertyMapArchive::kTschchartaxisminorgridlineshadowFieldNumber;
+const int ChartAxisGenericPropertyMapArchive::kTschchartaxisminorgridlinestrokeFieldNumber;
+const int ChartAxisGenericPropertyMapArchive::kTschchartaxisshowaxisFieldNumber;
+const int ChartAxisGenericPropertyMapArchive::kTschchartaxisshowlastlabelFieldNumber;
+const int ChartAxisGenericPropertyMapArchive::kTschchartaxisshowmajorgridlinesFieldNumber;
+const int ChartAxisGenericPropertyMapArchive::kTschchartaxisshowmajortickmarksFieldNumber;
+const int ChartAxisGenericPropertyMapArchive::kTschchartaxisshowminimumlabelFieldNumber;
+const int ChartAxisGenericPropertyMapArchive::kTschchartaxisshowminorgridlinesFieldNumber;
+const int ChartAxisGenericPropertyMapArchive::kTschchartaxisshowminortickmarksFieldNumber;
+const int ChartAxisGenericPropertyMapArchive::kTschchartaxistickmarklocationFieldNumber;
+const int ChartAxisGenericPropertyMapArchive::kTschchartaxistitleparagraphstyleindexFieldNumber;
+const int ChartAxisGenericPropertyMapArchive::kTschchartaxisverticalspacingFieldNumber;
+#endif  // !_MSC_VER
+
+ChartAxisGenericPropertyMapArchive::ChartAxisGenericPropertyMapArchive()
+  : ::google::protobuf::Message() {
+  SharedCtor();
+}
+
+void ChartAxisGenericPropertyMapArchive::InitAsDefaultInstance() {
+  tschchartaxis1_0numberformat_ = const_cast< ::TSK::FormatStructArchive*>(&::TSK::FormatStructArchive::default_instance());
+  tschchartaxisnumberformat_ = const_cast< ::TSK::FormatStructArchive*>(&::TSK::FormatStructArchive::default_instance());
+  tschchartaxis1_0dateformat_ = const_cast< ::TSK::FormatStructArchive*>(&::TSK::FormatStructArchive::default_instance());
+  tschchartaxisdurationformat_ = const_cast< ::TSK::FormatStructArchive*>(&::TSK::FormatStructArchive::default_instance());
+  tschchartaxisdateformat_ = const_cast< ::TSK::FormatStructArchive*>(&::TSK::FormatStructArchive::default_instance());
+  tschchartaxisusermax_ = const_cast< ::TSCH::ChartsNSNumberDoubleArchive*>(&::TSCH::ChartsNSNumberDoubleArchive::default_instance());
+  tschchartaxisusermin_ = const_cast< ::TSCH::ChartsNSNumberDoubleArchive*>(&::TSCH::ChartsNSNumberDoubleArchive::default_instance());
+  tschchartaxis3dgridlinestroke_ = const_cast< ::TSD::StrokeArchive*>(&::TSD::StrokeArchive::default_instance());
+  tschchartaxismajorgridlineshadow_ = const_cast< ::TSD::ShadowArchive*>(&::TSD::ShadowArchive::default_instance());
+  tschchartaxismajorgridlinestroke_ = const_cast< ::TSD::StrokeArchive*>(&::TSD::StrokeArchive::default_instance());
+  tschchartaxisminorgridlineshadow_ = const_cast< ::TSD::ShadowArchive*>(&::TSD::ShadowArchive::default_instance());
+  tschchartaxisminorgridlinestroke_ = const_cast< ::TSD::StrokeArchive*>(&::TSD::StrokeArchive::default_instance());
+}
+
+ChartAxisGenericPropertyMapArchive::ChartAxisGenericPropertyMapArchive(const ChartAxisGenericPropertyMapArchive& from)
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  MergeFrom(from);
+}
+
+void ChartAxisGenericPropertyMapArchive::SharedCtor() {
+  _cached_size_ = 0;
+  tschchartaxis3dlabelposition_ = 0;
+  tschchartaxis1_0numberformat_ = NULL;
+  tschchartaxisnumberformat_ = NULL;
+  tschchartaxis1_0dateformat_ = NULL;
+  tschchartaxisdurationformat_ = NULL;
+  tschchartaxisdateformat_ = NULL;
+  tschchartaxisnumberformattype_ = 0;
+  tschchartaxisnumberofdecades_ = 0;
+  tschchartaxisnumberofmajorgridlines_ = 0;
+  tschchartaxisnumberofminorgridlines_ = 0;
+  tschchartaxisplottoedges_ = false;
+  tschchartaxisscale_ = 0;
+  tschchartaxisshowlabels_ = false;
+  tschchartaxisshowserieslabels_ = false;
+  tschchartaxisshowtitle_ = false;
+  tschchartaxistitle_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+  tschchartaxisusermax_ = NULL;
+  tschchartaxisusermin_ = NULL;
+  tschchartaxis3dgridlineopacity_ = 0;
+  tschchartaxis3dgridlinestroke_ = NULL;
+  tschchartaxishorizontalspacing_ = 0;
+  tschchartaxislabelparagraphstyleindex_ = 0;
+  tschchartaxislabelsorientation_ = 0;
+  tschchartaxismajorgridlineopacity_ = 0;
+  tschchartaxismajorgridlineshadow_ = NULL;
+  tschchartaxismajorgridlinestroke_ = NULL;
+  tschchartaxisminorgridlineopacity_ = 0;
+  tschchartaxisminorgridlineshadow_ = NULL;
+  tschchartaxisminorgridlinestroke_ = NULL;
+  tschchartaxisshowaxis_ = false;
+  tschchartaxisshowlastlabel_ = false;
+  tschchartaxisshowmajorgridlines_ = false;
+  tschchartaxisshowmajortickmarks_ = false;
+  tschchartaxisshowminimumlabel_ = false;
+  tschchartaxisshowminorgridlines_ = false;
+  tschchartaxisshowminortickmarks_ = false;
+  tschchartaxistickmarklocation_ = 0;
+  tschchartaxistitleparagraphstyleindex_ = 0;
+  tschchartaxisverticalspacing_ = 0;
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+}
+
+ChartAxisGenericPropertyMapArchive::~ChartAxisGenericPropertyMapArchive() {
+  SharedDtor();
+}
+
+void ChartAxisGenericPropertyMapArchive::SharedDtor() {
+  if (tschchartaxistitle_ != &::google::protobuf::internal::kEmptyString) {
+    delete tschchartaxistitle_;
+  }
+  if (this != default_instance_) {
+    delete tschchartaxis1_0numberformat_;
+    delete tschchartaxisnumberformat_;
+    delete tschchartaxis1_0dateformat_;
+    delete tschchartaxisdurationformat_;
+    delete tschchartaxisdateformat_;
+    delete tschchartaxisusermax_;
+    delete tschchartaxisusermin_;
+    delete tschchartaxis3dgridlinestroke_;
+    delete tschchartaxismajorgridlineshadow_;
+    delete tschchartaxismajorgridlinestroke_;
+    delete tschchartaxisminorgridlineshadow_;
+    delete tschchartaxisminorgridlinestroke_;
+  }
+}
+
+void ChartAxisGenericPropertyMapArchive::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* ChartAxisGenericPropertyMapArchive::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return ChartAxisGenericPropertyMapArchive_descriptor_;
+}
+
+const ChartAxisGenericPropertyMapArchive& ChartAxisGenericPropertyMapArchive::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_TSCHArchives_2eGEN_2eproto();
+  return *default_instance_;
+}
+
+ChartAxisGenericPropertyMapArchive* ChartAxisGenericPropertyMapArchive::default_instance_ = NULL;
+
+ChartAxisGenericPropertyMapArchive* ChartAxisGenericPropertyMapArchive::New() const {
+  return new ChartAxisGenericPropertyMapArchive;
+}
+
+void ChartAxisGenericPropertyMapArchive::Clear() {
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    tschchartaxis3dlabelposition_ = 0;
+    if (has_tschchartaxis1_0numberformat()) {
+      if (tschchartaxis1_0numberformat_ != NULL) tschchartaxis1_0numberformat_->::TSK::FormatStructArchive::Clear();
+    }
+    if (has_tschchartaxisnumberformat()) {
+      if (tschchartaxisnumberformat_ != NULL) tschchartaxisnumberformat_->::TSK::FormatStructArchive::Clear();
+    }
+    if (has_tschchartaxis1_0dateformat()) {
+      if (tschchartaxis1_0dateformat_ != NULL) tschchartaxis1_0dateformat_->::TSK::FormatStructArchive::Clear();
+    }
+    if (has_tschchartaxisdurationformat()) {
+      if (tschchartaxisdurationformat_ != NULL) tschchartaxisdurationformat_->::TSK::FormatStructArchive::Clear();
+    }
+    if (has_tschchartaxisdateformat()) {
+      if (tschchartaxisdateformat_ != NULL) tschchartaxisdateformat_->::TSK::FormatStructArchive::Clear();
+    }
+    tschchartaxisnumberformattype_ = 0;
+    tschchartaxisnumberofdecades_ = 0;
+  }
+  if (_has_bits_[8 / 32] & (0xffu << (8 % 32))) {
+    tschchartaxisnumberofmajorgridlines_ = 0;
+    tschchartaxisnumberofminorgridlines_ = 0;
+    tschchartaxisplottoedges_ = false;
+    tschchartaxisscale_ = 0;
+    tschchartaxisshowlabels_ = false;
+    tschchartaxisshowserieslabels_ = false;
+    tschchartaxisshowtitle_ = false;
+    if (has_tschchartaxistitle()) {
+      if (tschchartaxistitle_ != &::google::protobuf::internal::kEmptyString) {
+        tschchartaxistitle_->clear();
+      }
+    }
+  }
+  if (_has_bits_[16 / 32] & (0xffu << (16 % 32))) {
+    if (has_tschchartaxisusermax()) {
+      if (tschchartaxisusermax_ != NULL) tschchartaxisusermax_->::TSCH::ChartsNSNumberDoubleArchive::Clear();
+    }
+    if (has_tschchartaxisusermin()) {
+      if (tschchartaxisusermin_ != NULL) tschchartaxisusermin_->::TSCH::ChartsNSNumberDoubleArchive::Clear();
+    }
+    tschchartaxis3dgridlineopacity_ = 0;
+    if (has_tschchartaxis3dgridlinestroke()) {
+      if (tschchartaxis3dgridlinestroke_ != NULL) tschchartaxis3dgridlinestroke_->::TSD::StrokeArchive::Clear();
+    }
+    tschchartaxishorizontalspacing_ = 0;
+    tschchartaxislabelparagraphstyleindex_ = 0;
+    tschchartaxislabelsorientation_ = 0;
+    tschchartaxismajorgridlineopacity_ = 0;
+  }
+  if (_has_bits_[24 / 32] & (0xffu << (24 % 32))) {
+    if (has_tschchartaxismajorgridlineshadow()) {
+      if (tschchartaxismajorgridlineshadow_ != NULL) tschchartaxismajorgridlineshadow_->::TSD::ShadowArchive::Clear();
+    }
+    if (has_tschchartaxismajorgridlinestroke()) {
+      if (tschchartaxismajorgridlinestroke_ != NULL) tschchartaxismajorgridlinestroke_->::TSD::StrokeArchive::Clear();
+    }
+    tschchartaxisminorgridlineopacity_ = 0;
+    if (has_tschchartaxisminorgridlineshadow()) {
+      if (tschchartaxisminorgridlineshadow_ != NULL) tschchartaxisminorgridlineshadow_->::TSD::ShadowArchive::Clear();
+    }
+    if (has_tschchartaxisminorgridlinestroke()) {
+      if (tschchartaxisminorgridlinestroke_ != NULL) tschchartaxisminorgridlinestroke_->::TSD::StrokeArchive::Clear();
+    }
+    tschchartaxisshowaxis_ = false;
+    tschchartaxisshowlastlabel_ = false;
+    tschchartaxisshowmajorgridlines_ = false;
+  }
+  if (_has_bits_[32 / 32] & (0xffu << (32 % 32))) {
+    tschchartaxisshowmajortickmarks_ = false;
+    tschchartaxisshowminimumlabel_ = false;
+    tschchartaxisshowminorgridlines_ = false;
+    tschchartaxisshowminortickmarks_ = false;
+    tschchartaxistickmarklocation_ = 0;
+    tschchartaxistitleparagraphstyleindex_ = 0;
+    tschchartaxisverticalspacing_ = 0;
+  }
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+  mutable_unknown_fields()->Clear();
+}
+
+bool ChartAxisGenericPropertyMapArchive::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!(EXPRESSION)) return false
+  ::google::protobuf::uint32 tag;
+  while ((tag = input->ReadTag()) != 0) {
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // optional int32 tschchartaxis3dlabelposition = 1;
+      case 1: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &tschchartaxis3dlabelposition_)));
+          set_has_tschchartaxis3dlabelposition();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(18)) goto parse_tschchartaxis1_0numberformat;
+        break;
+      }
+
+      // optional .TSK.FormatStructArchive tschchartaxis1_0numberformat = 2;
+      case 2: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_tschchartaxis1_0numberformat:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_tschchartaxis1_0numberformat()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(26)) goto parse_tschchartaxisnumberformat;
+        break;
+      }
+
+      // optional .TSK.FormatStructArchive tschchartaxisnumberformat = 3;
+      case 3: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_tschchartaxisnumberformat:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_tschchartaxisnumberformat()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(34)) goto parse_tschchartaxis1_0dateformat;
+        break;
+      }
+
+      // optional .TSK.FormatStructArchive tschchartaxis1_0dateformat = 4;
+      case 4: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_tschchartaxis1_0dateformat:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_tschchartaxis1_0dateformat()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(42)) goto parse_tschchartaxisdurationformat;
+        break;
+      }
+
+      // optional .TSK.FormatStructArchive tschchartaxisdurationformat = 5;
+      case 5: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_tschchartaxisdurationformat:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_tschchartaxisdurationformat()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(50)) goto parse_tschchartaxisdateformat;
+        break;
+      }
+
+      // optional .TSK.FormatStructArchive tschchartaxisdateformat = 6;
+      case 6: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_tschchartaxisdateformat:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_tschchartaxisdateformat()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(56)) goto parse_tschchartaxisnumberformattype;
+        break;
+      }
+
+      // optional int32 tschchartaxisnumberformattype = 7;
+      case 7: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_tschchartaxisnumberformattype:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &tschchartaxisnumberformattype_)));
+          set_has_tschchartaxisnumberformattype();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(64)) goto parse_tschchartaxisnumberofdecades;
+        break;
+      }
+
+      // optional int32 tschchartaxisnumberofdecades = 8;
+      case 8: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_tschchartaxisnumberofdecades:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &tschchartaxisnumberofdecades_)));
+          set_has_tschchartaxisnumberofdecades();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(72)) goto parse_tschchartaxisnumberofmajorgridlines;
+        break;
+      }
+
+      // optional int32 tschchartaxisnumberofmajorgridlines = 9;
+      case 9: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_tschchartaxisnumberofmajorgridlines:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &tschchartaxisnumberofmajorgridlines_)));
+          set_has_tschchartaxisnumberofmajorgridlines();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(80)) goto parse_tschchartaxisnumberofminorgridlines;
+        break;
+      }
+
+      // optional int32 tschchartaxisnumberofminorgridlines = 10;
+      case 10: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_tschchartaxisnumberofminorgridlines:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &tschchartaxisnumberofminorgridlines_)));
+          set_has_tschchartaxisnumberofminorgridlines();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(88)) goto parse_tschchartaxisplottoedges;
+        break;
+      }
+
+      // optional bool tschchartaxisplottoedges = 11;
+      case 11: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_tschchartaxisplottoedges:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &tschchartaxisplottoedges_)));
+          set_has_tschchartaxisplottoedges();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(96)) goto parse_tschchartaxisscale;
+        break;
+      }
+
+      // optional int32 tschchartaxisscale = 12;
+      case 12: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_tschchartaxisscale:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &tschchartaxisscale_)));
+          set_has_tschchartaxisscale();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(104)) goto parse_tschchartaxisshowlabels;
+        break;
+      }
+
+      // optional bool tschchartaxisshowlabels = 13;
+      case 13: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_tschchartaxisshowlabels:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &tschchartaxisshowlabels_)));
+          set_has_tschchartaxisshowlabels();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(112)) goto parse_tschchartaxisshowserieslabels;
+        break;
+      }
+
+      // optional bool tschchartaxisshowserieslabels = 14;
+      case 14: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_tschchartaxisshowserieslabels:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &tschchartaxisshowserieslabels_)));
+          set_has_tschchartaxisshowserieslabels();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(120)) goto parse_tschchartaxisshowtitle;
+        break;
+      }
+
+      // optional bool tschchartaxisshowtitle = 15;
+      case 15: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_tschchartaxisshowtitle:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &tschchartaxisshowtitle_)));
+          set_has_tschchartaxisshowtitle();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(130)) goto parse_tschchartaxistitle;
+        break;
+      }
+
+      // optional string tschchartaxistitle = 16;
+      case 16: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_tschchartaxistitle:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_tschchartaxistitle()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+            this->tschchartaxistitle().data(), this->tschchartaxistitle().length(),
+            ::google::protobuf::internal::WireFormat::PARSE);
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(138)) goto parse_tschchartaxisusermax;
+        break;
+      }
+
+      // optional .TSCH.ChartsNSNumberDoubleArchive tschchartaxisusermax = 17;
+      case 17: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_tschchartaxisusermax:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_tschchartaxisusermax()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(146)) goto parse_tschchartaxisusermin;
+        break;
+      }
+
+      // optional .TSCH.ChartsNSNumberDoubleArchive tschchartaxisusermin = 18;
+      case 18: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_tschchartaxisusermin:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_tschchartaxisusermin()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(157)) goto parse_tschchartaxis3dgridlineopacity;
+        break;
+      }
+
+      // optional float tschchartaxis3dgridlineopacity = 19;
+      case 19: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_FIXED32) {
+         parse_tschchartaxis3dgridlineopacity:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
+                 input, &tschchartaxis3dgridlineopacity_)));
+          set_has_tschchartaxis3dgridlineopacity();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(162)) goto parse_tschchartaxis3dgridlinestroke;
+        break;
+      }
+
+      // optional .TSD.StrokeArchive tschchartaxis3dgridlinestroke = 20;
+      case 20: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_tschchartaxis3dgridlinestroke:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_tschchartaxis3dgridlinestroke()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(168)) goto parse_tschchartaxishorizontalspacing;
+        break;
+      }
+
+      // optional int32 tschchartaxishorizontalspacing = 21;
+      case 21: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_tschchartaxishorizontalspacing:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &tschchartaxishorizontalspacing_)));
+          set_has_tschchartaxishorizontalspacing();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(176)) goto parse_tschchartaxislabelparagraphstyleindex;
+        break;
+      }
+
+      // optional int32 tschchartaxislabelparagraphstyleindex = 22;
+      case 22: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_tschchartaxislabelparagraphstyleindex:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &tschchartaxislabelparagraphstyleindex_)));
+          set_has_tschchartaxislabelparagraphstyleindex();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(189)) goto parse_tschchartaxislabelsorientation;
+        break;
+      }
+
+      // optional float tschchartaxislabelsorientation = 23;
+      case 23: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_FIXED32) {
+         parse_tschchartaxislabelsorientation:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
+                 input, &tschchartaxislabelsorientation_)));
+          set_has_tschchartaxislabelsorientation();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(197)) goto parse_tschchartaxismajorgridlineopacity;
+        break;
+      }
+
+      // optional float tschchartaxismajorgridlineopacity = 24;
+      case 24: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_FIXED32) {
+         parse_tschchartaxismajorgridlineopacity:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
+                 input, &tschchartaxismajorgridlineopacity_)));
+          set_has_tschchartaxismajorgridlineopacity();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(202)) goto parse_tschchartaxismajorgridlineshadow;
+        break;
+      }
+
+      // optional .TSD.ShadowArchive tschchartaxismajorgridlineshadow = 25;
+      case 25: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_tschchartaxismajorgridlineshadow:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_tschchartaxismajorgridlineshadow()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(210)) goto parse_tschchartaxismajorgridlinestroke;
+        break;
+      }
+
+      // optional .TSD.StrokeArchive tschchartaxismajorgridlinestroke = 26;
+      case 26: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_tschchartaxismajorgridlinestroke:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_tschchartaxismajorgridlinestroke()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(221)) goto parse_tschchartaxisminorgridlineopacity;
+        break;
+      }
+
+      // optional float tschchartaxisminorgridlineopacity = 27;
+      case 27: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_FIXED32) {
+         parse_tschchartaxisminorgridlineopacity:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
+                 input, &tschchartaxisminorgridlineopacity_)));
+          set_has_tschchartaxisminorgridlineopacity();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(226)) goto parse_tschchartaxisminorgridlineshadow;
+        break;
+      }
+
+      // optional .TSD.ShadowArchive tschchartaxisminorgridlineshadow = 28;
+      case 28: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_tschchartaxisminorgridlineshadow:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_tschchartaxisminorgridlineshadow()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(234)) goto parse_tschchartaxisminorgridlinestroke;
+        break;
+      }
+
+      // optional .TSD.StrokeArchive tschchartaxisminorgridlinestroke = 29;
+      case 29: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_tschchartaxisminorgridlinestroke:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_tschchartaxisminorgridlinestroke()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(240)) goto parse_tschchartaxisshowaxis;
+        break;
+      }
+
+      // optional bool tschchartaxisshowaxis = 30;
+      case 30: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_tschchartaxisshowaxis:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &tschchartaxisshowaxis_)));
+          set_has_tschchartaxisshowaxis();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(248)) goto parse_tschchartaxisshowlastlabel;
+        break;
+      }
+
+      // optional bool tschchartaxisshowlastlabel = 31;
+      case 31: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_tschchartaxisshowlastlabel:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &tschchartaxisshowlastlabel_)));
+          set_has_tschchartaxisshowlastlabel();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(256)) goto parse_tschchartaxisshowmajorgridlines;
+        break;
+      }
+
+      // optional bool tschchartaxisshowmajorgridlines = 32;
+      case 32: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_tschchartaxisshowmajorgridlines:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &tschchartaxisshowmajorgridlines_)));
+          set_has_tschchartaxisshowmajorgridlines();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(264)) goto parse_tschchartaxisshowmajortickmarks;
+        break;
+      }
+
+      // optional bool tschchartaxisshowmajortickmarks = 33;
+      case 33: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_tschchartaxisshowmajortickmarks:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &tschchartaxisshowmajortickmarks_)));
+          set_has_tschchartaxisshowmajortickmarks();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(272)) goto parse_tschchartaxisshowminimumlabel;
+        break;
+      }
+
+      // optional bool tschchartaxisshowminimumlabel = 34;
+      case 34: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_tschchartaxisshowminimumlabel:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &tschchartaxisshowminimumlabel_)));
+          set_has_tschchartaxisshowminimumlabel();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(280)) goto parse_tschchartaxisshowminorgridlines;
+        break;
+      }
+
+      // optional bool tschchartaxisshowminorgridlines = 35;
+      case 35: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_tschchartaxisshowminorgridlines:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &tschchartaxisshowminorgridlines_)));
+          set_has_tschchartaxisshowminorgridlines();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(288)) goto parse_tschchartaxisshowminortickmarks;
+        break;
+      }
+
+      // optional bool tschchartaxisshowminortickmarks = 36;
+      case 36: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_tschchartaxisshowminortickmarks:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &tschchartaxisshowminortickmarks_)));
+          set_has_tschchartaxisshowminortickmarks();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(296)) goto parse_tschchartaxistickmarklocation;
+        break;
+      }
+
+      // optional int32 tschchartaxistickmarklocation = 37;
+      case 37: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_tschchartaxistickmarklocation:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &tschchartaxistickmarklocation_)));
+          set_has_tschchartaxistickmarklocation();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(304)) goto parse_tschchartaxistitleparagraphstyleindex;
+        break;
+      }
+
+      // optional int32 tschchartaxistitleparagraphstyleindex = 38;
+      case 38: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_tschchartaxistitleparagraphstyleindex:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &tschchartaxistitleparagraphstyleindex_)));
+          set_has_tschchartaxistitleparagraphstyleindex();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(312)) goto parse_tschchartaxisverticalspacing;
+        break;
+      }
+
+      // optional int32 tschchartaxisverticalspacing = 39;
+      case 39: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_tschchartaxisverticalspacing:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &tschchartaxisverticalspacing_)));
+          set_has_tschchartaxisverticalspacing();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectAtEnd()) return true;
+        break;
+      }
+
+      default: {
+      handle_uninterpreted:
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          return true;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+  return true;
+#undef DO_
+}
+
+void ChartAxisGenericPropertyMapArchive::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // optional int32 tschchartaxis3dlabelposition = 1;
+  if (has_tschchartaxis3dlabelposition()) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(1, this->tschchartaxis3dlabelposition(), output);
+  }
+
+  // optional .TSK.FormatStructArchive tschchartaxis1_0numberformat = 2;
+  if (has_tschchartaxis1_0numberformat()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      2, this->tschchartaxis1_0numberformat(), output);
+  }
+
+  // optional .TSK.FormatStructArchive tschchartaxisnumberformat = 3;
+  if (has_tschchartaxisnumberformat()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      3, this->tschchartaxisnumberformat(), output);
+  }
+
+  // optional .TSK.FormatStructArchive tschchartaxis1_0dateformat = 4;
+  if (has_tschchartaxis1_0dateformat()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      4, this->tschchartaxis1_0dateformat(), output);
+  }
+
+  // optional .TSK.FormatStructArchive tschchartaxisdurationformat = 5;
+  if (has_tschchartaxisdurationformat()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      5, this->tschchartaxisdurationformat(), output);
+  }
+
+  // optional .TSK.FormatStructArchive tschchartaxisdateformat = 6;
+  if (has_tschchartaxisdateformat()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      6, this->tschchartaxisdateformat(), output);
+  }
+
+  // optional int32 tschchartaxisnumberformattype = 7;
+  if (has_tschchartaxisnumberformattype()) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(7, this->tschchartaxisnumberformattype(), output);
+  }
+
+  // optional int32 tschchartaxisnumberofdecades = 8;
+  if (has_tschchartaxisnumberofdecades()) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(8, this->tschchartaxisnumberofdecades(), output);
+  }
+
+  // optional int32 tschchartaxisnumberofmajorgridlines = 9;
+  if (has_tschchartaxisnumberofmajorgridlines()) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(9, this->tschchartaxisnumberofmajorgridlines(), output);
+  }
+
+  // optional int32 tschchartaxisnumberofminorgridlines = 10;
+  if (has_tschchartaxisnumberofminorgridlines()) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(10, this->tschchartaxisnumberofminorgridlines(), output);
+  }
+
+  // optional bool tschchartaxisplottoedges = 11;
+  if (has_tschchartaxisplottoedges()) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(11, this->tschchartaxisplottoedges(), output);
+  }
+
+  // optional int32 tschchartaxisscale = 12;
+  if (has_tschchartaxisscale()) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(12, this->tschchartaxisscale(), output);
+  }
+
+  // optional bool tschchartaxisshowlabels = 13;
+  if (has_tschchartaxisshowlabels()) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(13, this->tschchartaxisshowlabels(), output);
+  }
+
+  // optional bool tschchartaxisshowserieslabels = 14;
+  if (has_tschchartaxisshowserieslabels()) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(14, this->tschchartaxisshowserieslabels(), output);
+  }
+
+  // optional bool tschchartaxisshowtitle = 15;
+  if (has_tschchartaxisshowtitle()) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(15, this->tschchartaxisshowtitle(), output);
+  }
+
+  // optional string tschchartaxistitle = 16;
+  if (has_tschchartaxistitle()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+      this->tschchartaxistitle().data(), this->tschchartaxistitle().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE);
+    ::google::protobuf::internal::WireFormatLite::WriteString(
+      16, this->tschchartaxistitle(), output);
+  }
+
+  // optional .TSCH.ChartsNSNumberDoubleArchive tschchartaxisusermax = 17;
+  if (has_tschchartaxisusermax()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      17, this->tschchartaxisusermax(), output);
+  }
+
+  // optional .TSCH.ChartsNSNumberDoubleArchive tschchartaxisusermin = 18;
+  if (has_tschchartaxisusermin()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      18, this->tschchartaxisusermin(), output);
+  }
+
+  // optional float tschchartaxis3dgridlineopacity = 19;
+  if (has_tschchartaxis3dgridlineopacity()) {
+    ::google::protobuf::internal::WireFormatLite::WriteFloat(19, this->tschchartaxis3dgridlineopacity(), output);
+  }
+
+  // optional .TSD.StrokeArchive tschchartaxis3dgridlinestroke = 20;
+  if (has_tschchartaxis3dgridlinestroke()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      20, this->tschchartaxis3dgridlinestroke(), output);
+  }
+
+  // optional int32 tschchartaxishorizontalspacing = 21;
+  if (has_tschchartaxishorizontalspacing()) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(21, this->tschchartaxishorizontalspacing(), output);
+  }
+
+  // optional int32 tschchartaxislabelparagraphstyleindex = 22;
+  if (has_tschchartaxislabelparagraphstyleindex()) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(22, this->tschchartaxislabelparagraphstyleindex(), output);
+  }
+
+  // optional float tschchartaxislabelsorientation = 23;
+  if (has_tschchartaxislabelsorientation()) {
+    ::google::protobuf::internal::WireFormatLite::WriteFloat(23, this->tschchartaxislabelsorientation(), output);
+  }
+
+  // optional float tschchartaxismajorgridlineopacity = 24;
+  if (has_tschchartaxismajorgridlineopacity()) {
+    ::google::protobuf::internal::WireFormatLite::WriteFloat(24, this->tschchartaxismajorgridlineopacity(), output);
+  }
+
+  // optional .TSD.ShadowArchive tschchartaxismajorgridlineshadow = 25;
+  if (has_tschchartaxismajorgridlineshadow()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      25, this->tschchartaxismajorgridlineshadow(), output);
+  }
+
+  // optional .TSD.StrokeArchive tschchartaxismajorgridlinestroke = 26;
+  if (has_tschchartaxismajorgridlinestroke()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      26, this->tschchartaxismajorgridlinestroke(), output);
+  }
+
+  // optional float tschchartaxisminorgridlineopacity = 27;
+  if (has_tschchartaxisminorgridlineopacity()) {
+    ::google::protobuf::internal::WireFormatLite::WriteFloat(27, this->tschchartaxisminorgridlineopacity(), output);
+  }
+
+  // optional .TSD.ShadowArchive tschchartaxisminorgridlineshadow = 28;
+  if (has_tschchartaxisminorgridlineshadow()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      28, this->tschchartaxisminorgridlineshadow(), output);
+  }
+
+  // optional .TSD.StrokeArchive tschchartaxisminorgridlinestroke = 29;
+  if (has_tschchartaxisminorgridlinestroke()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      29, this->tschchartaxisminorgridlinestroke(), output);
+  }
+
+  // optional bool tschchartaxisshowaxis = 30;
+  if (has_tschchartaxisshowaxis()) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(30, this->tschchartaxisshowaxis(), output);
+  }
+
+  // optional bool tschchartaxisshowlastlabel = 31;
+  if (has_tschchartaxisshowlastlabel()) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(31, this->tschchartaxisshowlastlabel(), output);
+  }
+
+  // optional bool tschchartaxisshowmajorgridlines = 32;
+  if (has_tschchartaxisshowmajorgridlines()) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(32, this->tschchartaxisshowmajorgridlines(), output);
+  }
+
+  // optional bool tschchartaxisshowmajortickmarks = 33;
+  if (has_tschchartaxisshowmajortickmarks()) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(33, this->tschchartaxisshowmajortickmarks(), output);
+  }
+
+  // optional bool tschchartaxisshowminimumlabel = 34;
+  if (has_tschchartaxisshowminimumlabel()) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(34, this->tschchartaxisshowminimumlabel(), output);
+  }
+
+  // optional bool tschchartaxisshowminorgridlines = 35;
+  if (has_tschchartaxisshowminorgridlines()) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(35, this->tschchartaxisshowminorgridlines(), output);
+  }
+
+  // optional bool tschchartaxisshowminortickmarks = 36;
+  if (has_tschchartaxisshowminortickmarks()) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(36, this->tschchartaxisshowminortickmarks(), output);
+  }
+
+  // optional int32 tschchartaxistickmarklocation = 37;
+  if (has_tschchartaxistickmarklocation()) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(37, this->tschchartaxistickmarklocation(), output);
+  }
+
+  // optional int32 tschchartaxistitleparagraphstyleindex = 38;
+  if (has_tschchartaxistitleparagraphstyleindex()) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(38, this->tschchartaxistitleparagraphstyleindex(), output);
+  }
+
+  // optional int32 tschchartaxisverticalspacing = 39;
+  if (has_tschchartaxisverticalspacing()) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(39, this->tschchartaxisverticalspacing(), output);
+  }
+
+  if (!unknown_fields().empty()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+}
+
+::google::protobuf::uint8* ChartAxisGenericPropertyMapArchive::SerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // optional int32 tschchartaxis3dlabelposition = 1;
+  if (has_tschchartaxis3dlabelposition()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(1, this->tschchartaxis3dlabelposition(), target);
+  }
+
+  // optional .TSK.FormatStructArchive tschchartaxis1_0numberformat = 2;
+  if (has_tschchartaxis1_0numberformat()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        2, this->tschchartaxis1_0numberformat(), target);
+  }
+
+  // optional .TSK.FormatStructArchive tschchartaxisnumberformat = 3;
+  if (has_tschchartaxisnumberformat()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        3, this->tschchartaxisnumberformat(), target);
+  }
+
+  // optional .TSK.FormatStructArchive tschchartaxis1_0dateformat = 4;
+  if (has_tschchartaxis1_0dateformat()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        4, this->tschchartaxis1_0dateformat(), target);
+  }
+
+  // optional .TSK.FormatStructArchive tschchartaxisdurationformat = 5;
+  if (has_tschchartaxisdurationformat()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        5, this->tschchartaxisdurationformat(), target);
+  }
+
+  // optional .TSK.FormatStructArchive tschchartaxisdateformat = 6;
+  if (has_tschchartaxisdateformat()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        6, this->tschchartaxisdateformat(), target);
+  }
+
+  // optional int32 tschchartaxisnumberformattype = 7;
+  if (has_tschchartaxisnumberformattype()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(7, this->tschchartaxisnumberformattype(), target);
+  }
+
+  // optional int32 tschchartaxisnumberofdecades = 8;
+  if (has_tschchartaxisnumberofdecades()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(8, this->tschchartaxisnumberofdecades(), target);
+  }
+
+  // optional int32 tschchartaxisnumberofmajorgridlines = 9;
+  if (has_tschchartaxisnumberofmajorgridlines()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(9, this->tschchartaxisnumberofmajorgridlines(), target);
+  }
+
+  // optional int32 tschchartaxisnumberofminorgridlines = 10;
+  if (has_tschchartaxisnumberofminorgridlines()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(10, this->tschchartaxisnumberofminorgridlines(), target);
+  }
+
+  // optional bool tschchartaxisplottoedges = 11;
+  if (has_tschchartaxisplottoedges()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(11, this->tschchartaxisplottoedges(), target);
+  }
+
+  // optional int32 tschchartaxisscale = 12;
+  if (has_tschchartaxisscale()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(12, this->tschchartaxisscale(), target);
+  }
+
+  // optional bool tschchartaxisshowlabels = 13;
+  if (has_tschchartaxisshowlabels()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(13, this->tschchartaxisshowlabels(), target);
+  }
+
+  // optional bool tschchartaxisshowserieslabels = 14;
+  if (has_tschchartaxisshowserieslabels()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(14, this->tschchartaxisshowserieslabels(), target);
+  }
+
+  // optional bool tschchartaxisshowtitle = 15;
+  if (has_tschchartaxisshowtitle()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(15, this->tschchartaxisshowtitle(), target);
+  }
+
+  // optional string tschchartaxistitle = 16;
+  if (has_tschchartaxistitle()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+      this->tschchartaxistitle().data(), this->tschchartaxistitle().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE);
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        16, this->tschchartaxistitle(), target);
+  }
+
+  // optional .TSCH.ChartsNSNumberDoubleArchive tschchartaxisusermax = 17;
+  if (has_tschchartaxisusermax()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        17, this->tschchartaxisusermax(), target);
+  }
+
+  // optional .TSCH.ChartsNSNumberDoubleArchive tschchartaxisusermin = 18;
+  if (has_tschchartaxisusermin()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        18, this->tschchartaxisusermin(), target);
+  }
+
+  // optional float tschchartaxis3dgridlineopacity = 19;
+  if (has_tschchartaxis3dgridlineopacity()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(19, this->tschchartaxis3dgridlineopacity(), target);
+  }
+
+  // optional .TSD.StrokeArchive tschchartaxis3dgridlinestroke = 20;
+  if (has_tschchartaxis3dgridlinestroke()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        20, this->tschchartaxis3dgridlinestroke(), target);
+  }
+
+  // optional int32 tschchartaxishorizontalspacing = 21;
+  if (has_tschchartaxishorizontalspacing()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(21, this->tschchartaxishorizontalspacing(), target);
+  }
+
+  // optional int32 tschchartaxislabelparagraphstyleindex = 22;
+  if (has_tschchartaxislabelparagraphstyleindex()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(22, this->tschchartaxislabelparagraphstyleindex(), target);
+  }
+
+  // optional float tschchartaxislabelsorientation = 23;
+  if (has_tschchartaxislabelsorientation()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(23, this->tschchartaxislabelsorientation(), target);
+  }
+
+  // optional float tschchartaxismajorgridlineopacity = 24;
+  if (has_tschchartaxismajorgridlineopacity()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(24, this->tschchartaxismajorgridlineopacity(), target);
+  }
+
+  // optional .TSD.ShadowArchive tschchartaxismajorgridlineshadow = 25;
+  if (has_tschchartaxismajorgridlineshadow()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        25, this->tschchartaxismajorgridlineshadow(), target);
+  }
+
+  // optional .TSD.StrokeArchive tschchartaxismajorgridlinestroke = 26;
+  if (has_tschchartaxismajorgridlinestroke()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        26, this->tschchartaxismajorgridlinestroke(), target);
+  }
+
+  // optional float tschchartaxisminorgridlineopacity = 27;
+  if (has_tschchartaxisminorgridlineopacity()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(27, this->tschchartaxisminorgridlineopacity(), target);
+  }
+
+  // optional .TSD.ShadowArchive tschchartaxisminorgridlineshadow = 28;
+  if (has_tschchartaxisminorgridlineshadow()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        28, this->tschchartaxisminorgridlineshadow(), target);
+  }
+
+  // optional .TSD.StrokeArchive tschchartaxisminorgridlinestroke = 29;
+  if (has_tschchartaxisminorgridlinestroke()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        29, this->tschchartaxisminorgridlinestroke(), target);
+  }
+
+  // optional bool tschchartaxisshowaxis = 30;
+  if (has_tschchartaxisshowaxis()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(30, this->tschchartaxisshowaxis(), target);
+  }
+
+  // optional bool tschchartaxisshowlastlabel = 31;
+  if (has_tschchartaxisshowlastlabel()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(31, this->tschchartaxisshowlastlabel(), target);
+  }
+
+  // optional bool tschchartaxisshowmajorgridlines = 32;
+  if (has_tschchartaxisshowmajorgridlines()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(32, this->tschchartaxisshowmajorgridlines(), target);
+  }
+
+  // optional bool tschchartaxisshowmajortickmarks = 33;
+  if (has_tschchartaxisshowmajortickmarks()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(33, this->tschchartaxisshowmajortickmarks(), target);
+  }
+
+  // optional bool tschchartaxisshowminimumlabel = 34;
+  if (has_tschchartaxisshowminimumlabel()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(34, this->tschchartaxisshowminimumlabel(), target);
+  }
+
+  // optional bool tschchartaxisshowminorgridlines = 35;
+  if (has_tschchartaxisshowminorgridlines()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(35, this->tschchartaxisshowminorgridlines(), target);
+  }
+
+  // optional bool tschchartaxisshowminortickmarks = 36;
+  if (has_tschchartaxisshowminortickmarks()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(36, this->tschchartaxisshowminortickmarks(), target);
+  }
+
+  // optional int32 tschchartaxistickmarklocation = 37;
+  if (has_tschchartaxistickmarklocation()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(37, this->tschchartaxistickmarklocation(), target);
+  }
+
+  // optional int32 tschchartaxistitleparagraphstyleindex = 38;
+  if (has_tschchartaxistitleparagraphstyleindex()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(38, this->tschchartaxistitleparagraphstyleindex(), target);
+  }
+
+  // optional int32 tschchartaxisverticalspacing = 39;
+  if (has_tschchartaxisverticalspacing()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(39, this->tschchartaxisverticalspacing(), target);
+  }
+
+  if (!unknown_fields().empty()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  return target;
+}
+
+int ChartAxisGenericPropertyMapArchive::ByteSize() const {
+  int total_size = 0;
+
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    // optional int32 tschchartaxis3dlabelposition = 1;
+    if (has_tschchartaxis3dlabelposition()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::Int32Size(
+          this->tschchartaxis3dlabelposition());
+    }
+
+    // optional .TSK.FormatStructArchive tschchartaxis1_0numberformat = 2;
+    if (has_tschchartaxis1_0numberformat()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->tschchartaxis1_0numberformat());
+    }
+
+    // optional .TSK.FormatStructArchive tschchartaxisnumberformat = 3;
+    if (has_tschchartaxisnumberformat()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->tschchartaxisnumberformat());
+    }
+
+    // optional .TSK.FormatStructArchive tschchartaxis1_0dateformat = 4;
+    if (has_tschchartaxis1_0dateformat()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->tschchartaxis1_0dateformat());
+    }
+
+    // optional .TSK.FormatStructArchive tschchartaxisdurationformat = 5;
+    if (has_tschchartaxisdurationformat()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->tschchartaxisdurationformat());
+    }
+
+    // optional .TSK.FormatStructArchive tschchartaxisdateformat = 6;
+    if (has_tschchartaxisdateformat()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->tschchartaxisdateformat());
+    }
+
+    // optional int32 tschchartaxisnumberformattype = 7;
+    if (has_tschchartaxisnumberformattype()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::Int32Size(
+          this->tschchartaxisnumberformattype());
+    }
+
+    // optional int32 tschchartaxisnumberofdecades = 8;
+    if (has_tschchartaxisnumberofdecades()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::Int32Size(
+          this->tschchartaxisnumberofdecades());
+    }
+
+  }
+  if (_has_bits_[8 / 32] & (0xffu << (8 % 32))) {
+    // optional int32 tschchartaxisnumberofmajorgridlines = 9;
+    if (has_tschchartaxisnumberofmajorgridlines()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::Int32Size(
+          this->tschchartaxisnumberofmajorgridlines());
+    }
+
+    // optional int32 tschchartaxisnumberofminorgridlines = 10;
+    if (has_tschchartaxisnumberofminorgridlines()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::Int32Size(
+          this->tschchartaxisnumberofminorgridlines());
+    }
+
+    // optional bool tschchartaxisplottoedges = 11;
+    if (has_tschchartaxisplottoedges()) {
+      total_size += 1 + 1;
+    }
+
+    // optional int32 tschchartaxisscale = 12;
+    if (has_tschchartaxisscale()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::Int32Size(
+          this->tschchartaxisscale());
+    }
+
+    // optional bool tschchartaxisshowlabels = 13;
+    if (has_tschchartaxisshowlabels()) {
+      total_size += 1 + 1;
+    }
+
+    // optional bool tschchartaxisshowserieslabels = 14;
+    if (has_tschchartaxisshowserieslabels()) {
+      total_size += 1 + 1;
+    }
+
+    // optional bool tschchartaxisshowtitle = 15;
+    if (has_tschchartaxisshowtitle()) {
+      total_size += 1 + 1;
+    }
+
+    // optional string tschchartaxistitle = 16;
+    if (has_tschchartaxistitle()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->tschchartaxistitle());
+    }
+
+  }
+  if (_has_bits_[16 / 32] & (0xffu << (16 % 32))) {
+    // optional .TSCH.ChartsNSNumberDoubleArchive tschchartaxisusermax = 17;
+    if (has_tschchartaxisusermax()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->tschchartaxisusermax());
+    }
+
+    // optional .TSCH.ChartsNSNumberDoubleArchive tschchartaxisusermin = 18;
+    if (has_tschchartaxisusermin()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->tschchartaxisusermin());
+    }
+
+    // optional float tschchartaxis3dgridlineopacity = 19;
+    if (has_tschchartaxis3dgridlineopacity()) {
+      total_size += 2 + 4;
+    }
+
+    // optional .TSD.StrokeArchive tschchartaxis3dgridlinestroke = 20;
+    if (has_tschchartaxis3dgridlinestroke()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->tschchartaxis3dgridlinestroke());
+    }
+
+    // optional int32 tschchartaxishorizontalspacing = 21;
+    if (has_tschchartaxishorizontalspacing()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::Int32Size(
+          this->tschchartaxishorizontalspacing());
+    }
+
+    // optional int32 tschchartaxislabelparagraphstyleindex = 22;
+    if (has_tschchartaxislabelparagraphstyleindex()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::Int32Size(
+          this->tschchartaxislabelparagraphstyleindex());
+    }
+
+    // optional float tschchartaxislabelsorientation = 23;
+    if (has_tschchartaxislabelsorientation()) {
+      total_size += 2 + 4;
+    }
+
+    // optional float tschchartaxismajorgridlineopacity = 24;
+    if (has_tschchartaxismajorgridlineopacity()) {
+      total_size += 2 + 4;
+    }
+
+  }
+  if (_has_bits_[24 / 32] & (0xffu << (24 % 32))) {
+    // optional .TSD.ShadowArchive tschchartaxismajorgridlineshadow = 25;
+    if (has_tschchartaxismajorgridlineshadow()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->tschchartaxismajorgridlineshadow());
+    }
+
+    // optional .TSD.StrokeArchive tschchartaxismajorgridlinestroke = 26;
+    if (has_tschchartaxismajorgridlinestroke()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->tschchartaxismajorgridlinestroke());
+    }
+
+    // optional float tschchartaxisminorgridlineopacity = 27;
+    if (has_tschchartaxisminorgridlineopacity()) {
+      total_size += 2 + 4;
+    }
+
+    // optional .TSD.ShadowArchive tschchartaxisminorgridlineshadow = 28;
+    if (has_tschchartaxisminorgridlineshadow()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->tschchartaxisminorgridlineshadow());
+    }
+
+    // optional .TSD.StrokeArchive tschchartaxisminorgridlinestroke = 29;
+    if (has_tschchartaxisminorgridlinestroke()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->tschchartaxisminorgridlinestroke());
+    }
+
+    // optional bool tschchartaxisshowaxis = 30;
+    if (has_tschchartaxisshowaxis()) {
+      total_size += 2 + 1;
+    }
+
+    // optional bool tschchartaxisshowlastlabel = 31;
+    if (has_tschchartaxisshowlastlabel()) {
+      total_size += 2 + 1;
+    }
+
+    // optional bool tschchartaxisshowmajorgridlines = 32;
+    if (has_tschchartaxisshowmajorgridlines()) {
+      total_size += 2 + 1;
+    }
+
+  }
+  if (_has_bits_[32 / 32] & (0xffu << (32 % 32))) {
+    // optional bool tschchartaxisshowmajortickmarks = 33;
+    if (has_tschchartaxisshowmajortickmarks()) {
+      total_size += 2 + 1;
+    }
+
+    // optional bool tschchartaxisshowminimumlabel = 34;
+    if (has_tschchartaxisshowminimumlabel()) {
+      total_size += 2 + 1;
+    }
+
+    // optional bool tschchartaxisshowminorgridlines = 35;
+    if (has_tschchartaxisshowminorgridlines()) {
+      total_size += 2 + 1;
+    }
+
+    // optional bool tschchartaxisshowminortickmarks = 36;
+    if (has_tschchartaxisshowminortickmarks()) {
+      total_size += 2 + 1;
+    }
+
+    // optional int32 tschchartaxistickmarklocation = 37;
+    if (has_tschchartaxistickmarklocation()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::Int32Size(
+          this->tschchartaxistickmarklocation());
+    }
+
+    // optional int32 tschchartaxistitleparagraphstyleindex = 38;
+    if (has_tschchartaxistitleparagraphstyleindex()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::Int32Size(
+          this->tschchartaxistitleparagraphstyleindex());
+    }
+
+    // optional int32 tschchartaxisverticalspacing = 39;
+    if (has_tschchartaxisverticalspacing()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::Int32Size(
+          this->tschchartaxisverticalspacing());
+    }
+
+  }
+  if (!unknown_fields().empty()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = total_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void ChartAxisGenericPropertyMapArchive::MergeFrom(const ::google::protobuf::Message& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  const ChartAxisGenericPropertyMapArchive* source =
+    ::google::protobuf::internal::dynamic_cast_if_available<const ChartAxisGenericPropertyMapArchive*>(
+      &from);
+  if (source == NULL) {
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+    MergeFrom(*source);
+  }
+}
+
+void ChartAxisGenericPropertyMapArchive::MergeFrom(const ChartAxisGenericPropertyMapArchive& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (from.has_tschchartaxis3dlabelposition()) {
+      set_tschchartaxis3dlabelposition(from.tschchartaxis3dlabelposition());
+    }
+    if (from.has_tschchartaxis1_0numberformat()) {
+      mutable_tschchartaxis1_0numberformat()->::TSK::FormatStructArchive::MergeFrom(from.tschchartaxis1_0numberformat());
+    }
+    if (from.has_tschchartaxisnumberformat()) {
+      mutable_tschchartaxisnumberformat()->::TSK::FormatStructArchive::MergeFrom(from.tschchartaxisnumberformat());
+    }
+    if (from.has_tschchartaxis1_0dateformat()) {
+      mutable_tschchartaxis1_0dateformat()->::TSK::FormatStructArchive::MergeFrom(from.tschchartaxis1_0dateformat());
+    }
+    if (from.has_tschchartaxisdurationformat()) {
+      mutable_tschchartaxisdurationformat()->::TSK::FormatStructArchive::MergeFrom(from.tschchartaxisdurationformat());
+    }
+    if (from.has_tschchartaxisdateformat()) {
+      mutable_tschchartaxisdateformat()->::TSK::FormatStructArchive::MergeFrom(from.tschchartaxisdateformat());
+    }
+    if (from.has_tschchartaxisnumberformattype()) {
+      set_tschchartaxisnumberformattype(from.tschchartaxisnumberformattype());
+    }
+    if (from.has_tschchartaxisnumberofdecades()) {
+      set_tschchartaxisnumberofdecades(from.tschchartaxisnumberofdecades());
+    }
+  }
+  if (from._has_bits_[8 / 32] & (0xffu << (8 % 32))) {
+    if (from.has_tschchartaxisnumberofmajorgridlines()) {
+      set_tschchartaxisnumberofmajorgridlines(from.tschchartaxisnumberofmajorgridlines());
+    }
+    if (from.has_tschchartaxisnumberofminorgridlines()) {
+      set_tschchartaxisnumberofminorgridlines(from.tschchartaxisnumberofminorgridlines());
+    }
+    if (from.has_tschchartaxisplottoedges()) {
+      set_tschchartaxisplottoedges(from.tschchartaxisplottoedges());
+    }
+    if (from.has_tschchartaxisscale()) {
+      set_tschchartaxisscale(from.tschchartaxisscale());
+    }
+    if (from.has_tschchartaxisshowlabels()) {
+      set_tschchartaxisshowlabels(from.tschchartaxisshowlabels());
+    }
+    if (from.has_tschchartaxisshowserieslabels()) {
+      set_tschchartaxisshowserieslabels(from.tschchartaxisshowserieslabels());
+    }
+    if (from.has_tschchartaxisshowtitle()) {
+      set_tschchartaxisshowtitle(from.tschchartaxisshowtitle());
+    }
+    if (from.has_tschchartaxistitle()) {
+      set_tschchartaxistitle(from.tschchartaxistitle());
+    }
+  }
+  if (from._has_bits_[16 / 32] & (0xffu << (16 % 32))) {
+    if (from.has_tschchartaxisusermax()) {
+      mutable_tschchartaxisusermax()->::TSCH::ChartsNSNumberDoubleArchive::MergeFrom(from.tschchartaxisusermax());
+    }
+    if (from.has_tschchartaxisusermin()) {
+      mutable_tschchartaxisusermin()->::TSCH::ChartsNSNumberDoubleArchive::MergeFrom(from.tschchartaxisusermin());
+    }
+    if (from.has_tschchartaxis3dgridlineopacity()) {
+      set_tschchartaxis3dgridlineopacity(from.tschchartaxis3dgridlineopacity());
+    }
+    if (from.has_tschchartaxis3dgridlinestroke()) {
+      mutable_tschchartaxis3dgridlinestroke()->::TSD::StrokeArchive::MergeFrom(from.tschchartaxis3dgridlinestroke());
+    }
+    if (from.has_tschchartaxishorizontalspacing()) {
+      set_tschchartaxishorizontalspacing(from.tschchartaxishorizontalspacing());
+    }
+    if (from.has_tschchartaxislabelparagraphstyleindex()) {
+      set_tschchartaxislabelparagraphstyleindex(from.tschchartaxislabelparagraphstyleindex());
+    }
+    if (from.has_tschchartaxislabelsorientation()) {
+      set_tschchartaxislabelsorientation(from.tschchartaxislabelsorientation());
+    }
+    if (from.has_tschchartaxismajorgridlineopacity()) {
+      set_tschchartaxismajorgridlineopacity(from.tschchartaxismajorgridlineopacity());
+    }
+  }
+  if (from._has_bits_[24 / 32] & (0xffu << (24 % 32))) {
+    if (from.has_tschchartaxismajorgridlineshadow()) {
+      mutable_tschchartaxismajorgridlineshadow()->::TSD::ShadowArchive::MergeFrom(from.tschchartaxismajorgridlineshadow());
+    }
+    if (from.has_tschchartaxismajorgridlinestroke()) {
+      mutable_tschchartaxismajorgridlinestroke()->::TSD::StrokeArchive::MergeFrom(from.tschchartaxismajorgridlinestroke());
+    }
+    if (from.has_tschchartaxisminorgridlineopacity()) {
+      set_tschchartaxisminorgridlineopacity(from.tschchartaxisminorgridlineopacity());
+    }
+    if (from.has_tschchartaxisminorgridlineshadow()) {
+      mutable_tschchartaxisminorgridlineshadow()->::TSD::ShadowArchive::MergeFrom(from.tschchartaxisminorgridlineshadow());
+    }
+    if (from.has_tschchartaxisminorgridlinestroke()) {
+      mutable_tschchartaxisminorgridlinestroke()->::TSD::StrokeArchive::MergeFrom(from.tschchartaxisminorgridlinestroke());
+    }
+    if (from.has_tschchartaxisshowaxis()) {
+      set_tschchartaxisshowaxis(from.tschchartaxisshowaxis());
+    }
+    if (from.has_tschchartaxisshowlastlabel()) {
+      set_tschchartaxisshowlastlabel(from.tschchartaxisshowlastlabel());
+    }
+    if (from.has_tschchartaxisshowmajorgridlines()) {
+      set_tschchartaxisshowmajorgridlines(from.tschchartaxisshowmajorgridlines());
+    }
+  }
+  if (from._has_bits_[32 / 32] & (0xffu << (32 % 32))) {
+    if (from.has_tschchartaxisshowmajortickmarks()) {
+      set_tschchartaxisshowmajortickmarks(from.tschchartaxisshowmajortickmarks());
+    }
+    if (from.has_tschchartaxisshowminimumlabel()) {
+      set_tschchartaxisshowminimumlabel(from.tschchartaxisshowminimumlabel());
+    }
+    if (from.has_tschchartaxisshowminorgridlines()) {
+      set_tschchartaxisshowminorgridlines(from.tschchartaxisshowminorgridlines());
+    }
+    if (from.has_tschchartaxisshowminortickmarks()) {
+      set_tschchartaxisshowminortickmarks(from.tschchartaxisshowminortickmarks());
+    }
+    if (from.has_tschchartaxistickmarklocation()) {
+      set_tschchartaxistickmarklocation(from.tschchartaxistickmarklocation());
+    }
+    if (from.has_tschchartaxistitleparagraphstyleindex()) {
+      set_tschchartaxistitleparagraphstyleindex(from.tschchartaxistitleparagraphstyleindex());
+    }
+    if (from.has_tschchartaxisverticalspacing()) {
+      set_tschchartaxisverticalspacing(from.tschchartaxisverticalspacing());
+    }
+  }
+  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
+}
+
+void ChartAxisGenericPropertyMapArchive::CopyFrom(const ::google::protobuf::Message& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void ChartAxisGenericPropertyMapArchive::CopyFrom(const ChartAxisGenericPropertyMapArchive& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool ChartAxisGenericPropertyMapArchive::IsInitialized() const {
+
+  if (has_tschchartaxis1_0numberformat()) {
+    if (!this->tschchartaxis1_0numberformat().IsInitialized()) return false;
+  }
+  if (has_tschchartaxisnumberformat()) {
+    if (!this->tschchartaxisnumberformat().IsInitialized()) return false;
+  }
+  if (has_tschchartaxis1_0dateformat()) {
+    if (!this->tschchartaxis1_0dateformat().IsInitialized()) return false;
+  }
+  if (has_tschchartaxisdurationformat()) {
+    if (!this->tschchartaxisdurationformat().IsInitialized()) return false;
+  }
+  if (has_tschchartaxisdateformat()) {
+    if (!this->tschchartaxisdateformat().IsInitialized()) return false;
+  }
+  if (has_tschchartaxis3dgridlinestroke()) {
+    if (!this->tschchartaxis3dgridlinestroke().IsInitialized()) return false;
+  }
+  if (has_tschchartaxismajorgridlineshadow()) {
+    if (!this->tschchartaxismajorgridlineshadow().IsInitialized()) return false;
+  }
+  if (has_tschchartaxismajorgridlinestroke()) {
+    if (!this->tschchartaxismajorgridlinestroke().IsInitialized()) return false;
+  }
+  if (has_tschchartaxisminorgridlineshadow()) {
+    if (!this->tschchartaxisminorgridlineshadow().IsInitialized()) return false;
+  }
+  if (has_tschchartaxisminorgridlinestroke()) {
+    if (!this->tschchartaxisminorgridlinestroke().IsInitialized()) return false;
+  }
+  return true;
+}
+
+void ChartAxisGenericPropertyMapArchive::Swap(ChartAxisGenericPropertyMapArchive* other) {
+  if (other != this) {
+    std::swap(tschchartaxis3dlabelposition_, other->tschchartaxis3dlabelposition_);
+    std::swap(tschchartaxis1_0numberformat_, other->tschchartaxis1_0numberformat_);
+    std::swap(tschchartaxisnumberformat_, other->tschchartaxisnumberformat_);
+    std::swap(tschchartaxis1_0dateformat_, other->tschchartaxis1_0dateformat_);
+    std::swap(tschchartaxisdurationformat_, other->tschchartaxisdurationformat_);
+    std::swap(tschchartaxisdateformat_, other->tschchartaxisdateformat_);
+    std::swap(tschchartaxisnumberformattype_, other->tschchartaxisnumberformattype_);
+    std::swap(tschchartaxisnumberofdecades_, other->tschchartaxisnumberofdecades_);
+    std::swap(tschchartaxisnumberofmajorgridlines_, other->tschchartaxisnumberofmajorgridlines_);
+    std::swap(tschchartaxisnumberofminorgridlines_, other->tschchartaxisnumberofminorgridlines_);
+    std::swap(tschchartaxisplottoedges_, other->tschchartaxisplottoedges_);
+    std::swap(tschchartaxisscale_, other->tschchartaxisscale_);
+    std::swap(tschchartaxisshowlabels_, other->tschchartaxisshowlabels_);
+    std::swap(tschchartaxisshowserieslabels_, other->tschchartaxisshowserieslabels_);
+    std::swap(tschchartaxisshowtitle_, other->tschchartaxisshowtitle_);
+    std::swap(tschchartaxistitle_, other->tschchartaxistitle_);
+    std::swap(tschchartaxisusermax_, other->tschchartaxisusermax_);
+    std::swap(tschchartaxisusermin_, other->tschchartaxisusermin_);
+    std::swap(tschchartaxis3dgridlineopacity_, other->tschchartaxis3dgridlineopacity_);
+    std::swap(tschchartaxis3dgridlinestroke_, other->tschchartaxis3dgridlinestroke_);
+    std::swap(tschchartaxishorizontalspacing_, other->tschchartaxishorizontalspacing_);
+    std::swap(tschchartaxislabelparagraphstyleindex_, other->tschchartaxislabelparagraphstyleindex_);
+    std::swap(tschchartaxislabelsorientation_, other->tschchartaxislabelsorientation_);
+    std::swap(tschchartaxismajorgridlineopacity_, other->tschchartaxismajorgridlineopacity_);
+    std::swap(tschchartaxismajorgridlineshadow_, other->tschchartaxismajorgridlineshadow_);
+    std::swap(tschchartaxismajorgridlinestroke_, other->tschchartaxismajorgridlinestroke_);
+    std::swap(tschchartaxisminorgridlineopacity_, other->tschchartaxisminorgridlineopacity_);
+    std::swap(tschchartaxisminorgridlineshadow_, other->tschchartaxisminorgridlineshadow_);
+    std::swap(tschchartaxisminorgridlinestroke_, other->tschchartaxisminorgridlinestroke_);
+    std::swap(tschchartaxisshowaxis_, other->tschchartaxisshowaxis_);
+    std::swap(tschchartaxisshowlastlabel_, other->tschchartaxisshowlastlabel_);
+    std::swap(tschchartaxisshowmajorgridlines_, other->tschchartaxisshowmajorgridlines_);
+    std::swap(tschchartaxisshowmajortickmarks_, other->tschchartaxisshowmajortickmarks_);
+    std::swap(tschchartaxisshowminimumlabel_, other->tschchartaxisshowminimumlabel_);
+    std::swap(tschchartaxisshowminorgridlines_, other->tschchartaxisshowminorgridlines_);
+    std::swap(tschchartaxisshowminortickmarks_, other->tschchartaxisshowminortickmarks_);
+    std::swap(tschchartaxistickmarklocation_, other->tschchartaxistickmarklocation_);
+    std::swap(tschchartaxistitleparagraphstyleindex_, other->tschchartaxistitleparagraphstyleindex_);
+    std::swap(tschchartaxisverticalspacing_, other->tschchartaxisverticalspacing_);
+    std::swap(_has_bits_[0], other->_has_bits_[0]);
+    std::swap(_has_bits_[1], other->_has_bits_[1]);
+    _unknown_fields_.Swap(&other->_unknown_fields_);
+    std::swap(_cached_size_, other->_cached_size_);
+  }
+}
+
+::google::protobuf::Metadata ChartAxisGenericPropertyMapArchive::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = ChartAxisGenericPropertyMapArchive_descriptor_;
+  metadata.reflection = ChartAxisGenericPropertyMapArchive_reflection_;
+  return metadata;
+}
+
+
+// ===================================================================
+
+#ifndef _MSC_VER
+const int ChartSeriesGenericPropertyMapArchive::kTschchartseriesadjustmentscaleFieldNumber;
+const int ChartSeriesGenericPropertyMapArchive::kTschchartserieserrorbarcustomnegativedataFieldNumber;
+const int ChartSeriesGenericPropertyMapArchive::kTschchartserieserrorbarcustomnegativedatascatterxFieldNumber;
+const int ChartSeriesGenericPropertyMapArchive::kTschchartserieserrorbarcustompositivedataFieldNumber;
+const int ChartSeriesGenericPropertyMapArchive::kTschchartserieserrorbarcustompositivedatascatterxFieldNumber;
+const int ChartSeriesGenericPropertyMapArchive::kTschchartserieserrorbarfixedvalueFieldNumber;
+const int ChartSeriesGenericPropertyMapArchive::kTschchartserieserrorbarfixedvaluescatterxFieldNumber;
+const int ChartSeriesGenericPropertyMapArchive::kTschchartserieserrorbarpercentvalueFieldNumber;
+const int ChartSeriesGenericPropertyMapArchive::kTschchartserieserrorbarpercentvaluescatterxFieldNumber;
+const int ChartSeriesGenericPropertyMapArchive::kTschchartserieserrorbarsettingFieldNumber;
+const int ChartSeriesGenericPropertyMapArchive::kTschchartserieserrorbarsettingscatterxFieldNumber;
+const int ChartSeriesGenericPropertyMapArchive::kTschchartserieserrorbarstddevvalueFieldNumber;
+const int ChartSeriesGenericPropertyMapArchive::kTschchartserieserrorbarstddevvaluescatterxFieldNumber;
+const int ChartSeriesGenericPropertyMapArchive::kTschchartserieserrorbartypeFieldNumber;
+const int ChartSeriesGenericPropertyMapArchive::kTschchartserieserrorbartypescatterxFieldNumber;
+const int ChartSeriesGenericPropertyMapArchive::kTschchartserieslabelexplosionFieldNumber;
+const int ChartSeriesGenericPropertyMapArchive::kTschchartserieslinetypeFieldNumber;
+const int ChartSeriesGenericPropertyMapArchive::kTschchartseries10NumberformatFieldNumber;
+const int ChartSeriesGenericPropertyMapArchive::kTschchartseriesnumberformatFieldNumber;
+const int ChartSeriesGenericPropertyMapArchive::kTschchartseries10DateformatFieldNumber;
+const int ChartSeriesGenericPropertyMapArchive::kTschchartseriesdurationformatFieldNumber;
+const int ChartSeriesGenericPropertyMapArchive::kTschchartseriesdateformatFieldNumber;
+const int ChartSeriesGenericPropertyMapArchive::kTschchartseriesnumberformattypeFieldNumber;
+const int ChartSeriesGenericPropertyMapArchive::kTschchartseriespercentnumberformatFieldNumber;
+const int ChartSeriesGenericPropertyMapArchive::kTschchartseriesseriestypeFieldNumber;
+const int ChartSeriesGenericPropertyMapArchive::kTschchartseriesshowerrorbarFieldNumber;
+const int ChartSeriesGenericPropertyMapArchive::kTschchartseriesshowerrorbarscatterxFieldNumber;
+const int ChartSeriesGenericPropertyMapArchive::kTschchartseriesshowlineFieldNumber;
+const int ChartSeriesGenericPropertyMapArchive::kTschchartseriesshownegativedataFieldNumber;
+const int ChartSeriesGenericPropertyMapArchive::kTschchartseriesshowserieslabelsFieldNumber;
+const int ChartSeriesGenericPropertyMapArchive::kTschchartseriesshowsymbolFieldNumber;
+const int ChartSeriesGenericPropertyMapArchive::kTschchartseriesshowtrendlineFieldNumber;
+const int ChartSeriesGenericPropertyMapArchive::kTschchartseriesshowvaluelabelsFieldNumber;
+const int ChartSeriesGenericPropertyMapArchive::kTschchartseriessizedimensionFieldNumber;
+const int ChartSeriesGenericPropertyMapArchive::kTschchartseriessymboltypeFieldNumber;
+const int ChartSeriesGenericPropertyMapArchive::kTschchartseriestrendlineequationoffsetxFieldNumber;
+const int ChartSeriesGenericPropertyMapArchive::kTschchartseriestrendlineequationoffsetyFieldNumber;
+const int ChartSeriesGenericPropertyMapArchive::kTschchartseriestrendlinelabelstringFieldNumber;
+const int ChartSeriesGenericPropertyMapArchive::kTschchartseriestrendlineorderFieldNumber;
+const int ChartSeriesGenericPropertyMapArchive::kTschchartseriestrendlineperiodFieldNumber;
+const int ChartSeriesGenericPropertyMapArchive::kTschchartseriestrendlinersquaredoffsetxFieldNumber;
+const int ChartSeriesGenericPropertyMapArchive::kTschchartseriestrendlinersquaredoffsetyFieldNumber;
+const int ChartSeriesGenericPropertyMapArchive::kTschchartseriestrendlineshowequationFieldNumber;
+const int ChartSeriesGenericPropertyMapArchive::kTschchartseriestrendlineshowlabelFieldNumber;
+const int ChartSeriesGenericPropertyMapArchive::kTschchartseriestrendlineshowr2ValueFieldNumber;
+const int ChartSeriesGenericPropertyMapArchive::kTschchartseriestrendlinetypeFieldNumber;
+const int ChartSeriesGenericPropertyMapArchive::kTschchartserieswedgeexplosionFieldNumber;
+const int ChartSeriesGenericPropertyMapArchive::kTschchartseriesyaxisordinalFieldNumber;
+const int ChartSeriesGenericPropertyMapArchive::kTschchartseriesvaluelabelsaxisFieldNumber;
+const int ChartSeriesGenericPropertyMapArchive::kTschchartserieserrorbarlineendFieldNumber;
+const int ChartSeriesGenericPropertyMapArchive::kTschchartserieserrorbarlineendscatterxFieldNumber;
+const int ChartSeriesGenericPropertyMapArchive::kTschchartserieserrorbarshadowFieldNumber;
+const int ChartSeriesGenericPropertyMapArchive::kTschchartserieserrorbarstrokeFieldNumber;
+const int ChartSeriesGenericPropertyMapArchive::kTschchartserieserrorbarstrokescatterxFieldNumber;
+const int ChartSeriesGenericPropertyMapArchive::kTschchartseriesfillFieldNumber;
+const int ChartSeriesGenericPropertyMapArchive::kTschchartserieslabelparagraphstyleindexFieldNumber;
+const int ChartSeriesGenericPropertyMapArchive::kTschchartseriesopacityFieldNumber;
+const int ChartSeriesGenericPropertyMapArchive::kTschchartseriesoutsidelabelparagraphstyleindexFieldNumber;
+const int ChartSeriesGenericPropertyMapArchive::kTschchartseriesshadowFieldNumber;
+const int ChartSeriesGenericPropertyMapArchive::kTschchartseriesstrokeFieldNumber;
+const int ChartSeriesGenericPropertyMapArchive::kTschchartseriessymbolfillFieldNumber;
+const int ChartSeriesGenericPropertyMapArchive::kTschchartseriessymbolfilluseseriesfillFieldNumber;
+const int ChartSeriesGenericPropertyMapArchive::kTschchartseriessymbolfilluseseriesstrokeFieldNumber;
+const int ChartSeriesGenericPropertyMapArchive::kTschchartseriessymbolsizeFieldNumber;
+const int ChartSeriesGenericPropertyMapArchive::kTschchartseriessymbolstrokeFieldNumber;
+const int ChartSeriesGenericPropertyMapArchive::kTschchartseriestrendlineequationopacityFieldNumber;
+const int ChartSeriesGenericPropertyMapArchive::kTschchartseriestrendlineequationparagraphstyleindexFieldNumber;
+const int ChartSeriesGenericPropertyMapArchive::kTschchartseriestrendlinersquaredopacityFieldNumber;
+const int ChartSeriesGenericPropertyMapArchive::kTschchartseriestrendlinersquaredparagraphstyleindexFieldNumber;
+const int ChartSeriesGenericPropertyMapArchive::kTschchartseriestrendlineshadowFieldNumber;
+const int ChartSeriesGenericPropertyMapArchive::kTschchartseriestrendlinestrokeFieldNumber;
+const int ChartSeriesGenericPropertyMapArchive::kTschchartseriesvaluelabelpositionFieldNumber;
+const int ChartSeriesGenericPropertyMapArchive::kTschchartseriesshowlabelsinfrontFieldNumber;
+#endif  // !_MSC_VER
+
+ChartSeriesGenericPropertyMapArchive::ChartSeriesGenericPropertyMapArchive()
+  : ::google::protobuf::Message() {
+  SharedCtor();
+}
+
+void ChartSeriesGenericPropertyMapArchive::InitAsDefaultInstance() {
+  tschchartserieserrorbarcustomnegativedata_ = const_cast< ::TSCH::ChartsNSArrayOfNSNumberDoubleArchive*>(&::TSCH::ChartsNSArrayOfNSNumberDoubleArchive::default_instance());
+  tschchartserieserrorbarcustomnegativedatascatterx_ = const_cast< ::TSCH::ChartsNSArrayOfNSNumberDoubleArchive*>(&::TSCH::ChartsNSArrayOfNSNumberDoubleArchive::default_instance());
+  tschchartserieserrorbarcustompositivedata_ = const_cast< ::TSCH::ChartsNSArrayOfNSNumberDoubleArchive*>(&::TSCH::ChartsNSArrayOfNSNumberDoubleArchive::default_instance());
+  tschchartserieserrorbarcustompositivedatascatterx_ = const_cast< ::TSCH::ChartsNSArrayOfNSNumberDoubleArchive*>(&::TSCH::ChartsNSArrayOfNSNumberDoubleArchive::default_instance());
+  tschchartseries1_0numberformat_ = const_cast< ::TSK::FormatStructArchive*>(&::TSK::FormatStructArchive::default_instance());
+  tschchartseriesnumberformat_ = const_cast< ::TSK::FormatStructArchive*>(&::TSK::FormatStructArchive::default_instance());
+  tschchartseries1_0dateformat_ = const_cast< ::TSK::FormatStructArchive*>(&::TSK::FormatStructArchive::default_instance());
+  tschchartseriesdurationformat_ = const_cast< ::TSK::FormatStructArchive*>(&::TSK::FormatStructArchive::default_instance());
+  tschchartseriesdateformat_ = const_cast< ::TSK::FormatStructArchive*>(&::TSK::FormatStructArchive::default_instance());
+  tschchartseriespercentnumberformat_ = const_cast< ::TSK::FormatStructArchive*>(&::TSK::FormatStructArchive::default_instance());
+  tschchartserieserrorbarlineend_ = const_cast< ::TSD::LineEndArchive*>(&::TSD::LineEndArchive::default_instance());
+  tschchartserieserrorbarlineendscatterx_ = const_cast< ::TSD::LineEndArchive*>(&::TSD::LineEndArchive::default_instance());
+  tschchartserieserrorbarshadow_ = const_cast< ::TSD::ShadowArchive*>(&::TSD::ShadowArchive::default_instance());
+  tschchartserieserrorbarstroke_ = const_cast< ::TSD::StrokeArchive*>(&::TSD::StrokeArchive::default_instance());
+  tschchartserieserrorbarstrokescatterx_ = const_cast< ::TSD::StrokeArchive*>(&::TSD::StrokeArchive::default_instance());
+  tschchartseriesfill_ = const_cast< ::TSD::FillArchive*>(&::TSD::FillArchive::default_instance());
+  tschchartseriesshadow_ = const_cast< ::TSD::ShadowArchive*>(&::TSD::ShadowArchive::default_instance());
+  tschchartseriesstroke_ = const_cast< ::TSD::StrokeArchive*>(&::TSD::StrokeArchive::default_instance());
+  tschchartseriessymbolfill_ = const_cast< ::TSD::FillArchive*>(&::TSD::FillArchive::default_instance());
+  tschchartseriessymbolstroke_ = const_cast< ::TSD::StrokeArchive*>(&::TSD::StrokeArchive::default_instance());
+  tschchartseriestrendlineshadow_ = const_cast< ::TSD::ShadowArchive*>(&::TSD::ShadowArchive::default_instance());
+  tschchartseriestrendlinestroke_ = const_cast< ::TSD::StrokeArchive*>(&::TSD::StrokeArchive::default_instance());
+}
+
+ChartSeriesGenericPropertyMapArchive::ChartSeriesGenericPropertyMapArchive(const ChartSeriesGenericPropertyMapArchive& from)
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  MergeFrom(from);
+}
+
+void ChartSeriesGenericPropertyMapArchive::SharedCtor() {
+  _cached_size_ = 0;
+  tschchartseriesadjustmentscale_ = 0;
+  tschchartserieserrorbarcustomnegativedata_ = NULL;
+  tschchartserieserrorbarcustomnegativedatascatterx_ = NULL;
+  tschchartserieserrorbarcustompositivedata_ = NULL;
+  tschchartserieserrorbarcustompositivedatascatterx_ = NULL;
+  tschchartserieserrorbarfixedvalue_ = 0;
+  tschchartserieserrorbarfixedvaluescatterx_ = 0;
+  tschchartserieserrorbarpercentvalue_ = 0;
+  tschchartserieserrorbarpercentvaluescatterx_ = 0;
+  tschchartserieserrorbarsetting_ = 0;
+  tschchartserieserrorbarsettingscatterx_ = 0;
+  tschchartserieserrorbarstddevvalue_ = 0;
+  tschchartserieserrorbarstddevvaluescatterx_ = 0;
+  tschchartserieserrorbartype_ = 0;
+  tschchartserieserrorbartypescatterx_ = 0;
+  tschchartserieslabelexplosion_ = 0;
+  tschchartserieslinetype_ = 0;
+  tschchartseries1_0numberformat_ = NULL;
+  tschchartseriesnumberformat_ = NULL;
+  tschchartseries1_0dateformat_ = NULL;
+  tschchartseriesdurationformat_ = NULL;
+  tschchartseriesdateformat_ = NULL;
+  tschchartseriesnumberformattype_ = 0;
+  tschchartseriespercentnumberformat_ = NULL;
+  tschchartseriesseriestype_ = 0;
+  tschchartseriesshowerrorbar_ = false;
+  tschchartseriesshowerrorbarscatterx_ = false;
+  tschchartseriesshowline_ = false;
+  tschchartseriesshownegativedata_ = false;
+  tschchartseriesshowserieslabels_ = false;
+  tschchartseriesshowsymbol_ = false;
+  tschchartseriesshowtrendline_ = false;
+  tschchartseriesshowvaluelabels_ = false;
+  tschchartseriessizedimension_ = 0;
+  tschchartseriessymboltype_ = 0;
+  tschchartseriestrendlineequationoffsetx_ = 0;
+  tschchartseriestrendlineequationoffsety_ = 0;
+  tschchartseriestrendlinelabelstring_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+  tschchartseriestrendlineorder_ = 0;
+  tschchartseriestrendlineperiod_ = 0;
+  tschchartseriestrendlinersquaredoffsetx_ = 0;
+  tschchartseriestrendlinersquaredoffsety_ = 0;
+  tschchartseriestrendlineshowequation_ = false;
+  tschchartseriestrendlineshowlabel_ = false;
+  tschchartseriestrendlineshowr2value_ = false;
+  tschchartseriestrendlinetype_ = 0;
+  tschchartserieswedgeexplosion_ = 0;
+  tschchartseriesyaxisordinal_ = 0;
+  tschchartseriesvaluelabelsaxis_ = 0;
+  tschchartserieserrorbarlineend_ = NULL;
+  tschchartserieserrorbarlineendscatterx_ = NULL;
+  tschchartserieserrorbarshadow_ = NULL;
+  tschchartserieserrorbarstroke_ = NULL;
+  tschchartserieserrorbarstrokescatterx_ = NULL;
+  tschchartseriesfill_ = NULL;
+  tschchartserieslabelparagraphstyleindex_ = 0;
+  tschchartseriesopacity_ = 0;
+  tschchartseriesoutsidelabelparagraphstyleindex_ = 0;
+  tschchartseriesshadow_ = NULL;
+  tschchartseriesstroke_ = NULL;
+  tschchartseriessymbolfill_ = NULL;
+  tschchartseriessymbolfilluseseriesfill_ = false;
+  tschchartseriessymbolfilluseseriesstroke_ = false;
+  tschchartseriessymbolsize_ = 0;
+  tschchartseriessymbolstroke_ = NULL;
+  tschchartseriestrendlineequationopacity_ = 0;
+  tschchartseriestrendlineequationparagraphstyleindex_ = 0;
+  tschchartseriestrendlinersquaredopacity_ = 0;
+  tschchartseriestrendlinersquaredparagraphstyleindex_ = 0;
+  tschchartseriestrendlineshadow_ = NULL;
+  tschchartseriestrendlinestroke_ = NULL;
+  tschchartseriesvaluelabelposition_ = 0;
+  tschchartseriesshowlabelsinfront_ = false;
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+}
+
+ChartSeriesGenericPropertyMapArchive::~ChartSeriesGenericPropertyMapArchive() {
+  SharedDtor();
+}
+
+void ChartSeriesGenericPropertyMapArchive::SharedDtor() {
+  if (tschchartseriestrendlinelabelstring_ != &::google::protobuf::internal::kEmptyString) {
+    delete tschchartseriestrendlinelabelstring_;
+  }
+  if (this != default_instance_) {
+    delete tschchartserieserrorbarcustomnegativedata_;
+    delete tschchartserieserrorbarcustomnegativedatascatterx_;
+    delete tschchartserieserrorbarcustompositivedata_;
+    delete tschchartserieserrorbarcustompositivedatascatterx_;
+    delete tschchartseries1_0numberformat_;
+    delete tschchartseriesnumberformat_;
+    delete tschchartseries1_0dateformat_;
+    delete tschchartseriesdurationformat_;
+    delete tschchartseriesdateformat_;
+    delete tschchartseriespercentnumberformat_;
+    delete tschchartserieserrorbarlineend_;
+    delete tschchartserieserrorbarlineendscatterx_;
+    delete tschchartserieserrorbarshadow_;
+    delete tschchartserieserrorbarstroke_;
+    delete tschchartserieserrorbarstrokescatterx_;
+    delete tschchartseriesfill_;
+    delete tschchartseriesshadow_;
+    delete tschchartseriesstroke_;
+    delete tschchartseriessymbolfill_;
+    delete tschchartseriessymbolstroke_;
+    delete tschchartseriestrendlineshadow_;
+    delete tschchartseriestrendlinestroke_;
+  }
+}
+
+void ChartSeriesGenericPropertyMapArchive::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* ChartSeriesGenericPropertyMapArchive::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return ChartSeriesGenericPropertyMapArchive_descriptor_;
+}
+
+const ChartSeriesGenericPropertyMapArchive& ChartSeriesGenericPropertyMapArchive::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_TSCHArchives_2eGEN_2eproto();
+  return *default_instance_;
+}
+
+ChartSeriesGenericPropertyMapArchive* ChartSeriesGenericPropertyMapArchive::default_instance_ = NULL;
+
+ChartSeriesGenericPropertyMapArchive* ChartSeriesGenericPropertyMapArchive::New() const {
+  return new ChartSeriesGenericPropertyMapArchive;
+}
+
+void ChartSeriesGenericPropertyMapArchive::Clear() {
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    tschchartseriesadjustmentscale_ = 0;
+    if (has_tschchartserieserrorbarcustomnegativedata()) {
+      if (tschchartserieserrorbarcustomnegativedata_ != NULL) tschchartserieserrorbarcustomnegativedata_->::TSCH::ChartsNSArrayOfNSNumberDoubleArchive::Clear();
+    }
+    if (has_tschchartserieserrorbarcustomnegativedatascatterx()) {
+      if (tschchartserieserrorbarcustomnegativedatascatterx_ != NULL) tschchartserieserrorbarcustomnegativedatascatterx_->::TSCH::ChartsNSArrayOfNSNumberDoubleArchive::Clear();
+    }
+    if (has_tschchartserieserrorbarcustompositivedata()) {
+      if (tschchartserieserrorbarcustompositivedata_ != NULL) tschchartserieserrorbarcustompositivedata_->::TSCH::ChartsNSArrayOfNSNumberDoubleArchive::Clear();
+    }
+    if (has_tschchartserieserrorbarcustompositivedatascatterx()) {
+      if (tschchartserieserrorbarcustompositivedatascatterx_ != NULL) tschchartserieserrorbarcustompositivedatascatterx_->::TSCH::ChartsNSArrayOfNSNumberDoubleArchive::Clear();
+    }
+    tschchartserieserrorbarfixedvalue_ = 0;
+    tschchartserieserrorbarfixedvaluescatterx_ = 0;
+    tschchartserieserrorbarpercentvalue_ = 0;
+  }
+  if (_has_bits_[8 / 32] & (0xffu << (8 % 32))) {
+    tschchartserieserrorbarpercentvaluescatterx_ = 0;
+    tschchartserieserrorbarsetting_ = 0;
+    tschchartserieserrorbarsettingscatterx_ = 0;
+    tschchartserieserrorbarstddevvalue_ = 0;
+    tschchartserieserrorbarstddevvaluescatterx_ = 0;
+    tschchartserieserrorbartype_ = 0;
+    tschchartserieserrorbartypescatterx_ = 0;
+    tschchartserieslabelexplosion_ = 0;
+  }
+  if (_has_bits_[16 / 32] & (0xffu << (16 % 32))) {
+    tschchartserieslinetype_ = 0;
+    if (has_tschchartseries1_0numberformat()) {
+      if (tschchartseries1_0numberformat_ != NULL) tschchartseries1_0numberformat_->::TSK::FormatStructArchive::Clear();
+    }
+    if (has_tschchartseriesnumberformat()) {
+      if (tschchartseriesnumberformat_ != NULL) tschchartseriesnumberformat_->::TSK::FormatStructArchive::Clear();
+    }
+    if (has_tschchartseries1_0dateformat()) {
+      if (tschchartseries1_0dateformat_ != NULL) tschchartseries1_0dateformat_->::TSK::FormatStructArchive::Clear();
+    }
+    if (has_tschchartseriesdurationformat()) {
+      if (tschchartseriesdurationformat_ != NULL) tschchartseriesdurationformat_->::TSK::FormatStructArchive::Clear();
+    }
+    if (has_tschchartseriesdateformat()) {
+      if (tschchartseriesdateformat_ != NULL) tschchartseriesdateformat_->::TSK::FormatStructArchive::Clear();
+    }
+    tschchartseriesnumberformattype_ = 0;
+    if (has_tschchartseriespercentnumberformat()) {
+      if (tschchartseriespercentnumberformat_ != NULL) tschchartseriespercentnumberformat_->::TSK::FormatStructArchive::Clear();
+    }
+  }
+  if (_has_bits_[24 / 32] & (0xffu << (24 % 32))) {
+    tschchartseriesseriestype_ = 0;
+    tschchartseriesshowerrorbar_ = false;
+    tschchartseriesshowerrorbarscatterx_ = false;
+    tschchartseriesshowline_ = false;
+    tschchartseriesshownegativedata_ = false;
+    tschchartseriesshowserieslabels_ = false;
+    tschchartseriesshowsymbol_ = false;
+    tschchartseriesshowtrendline_ = false;
+  }
+  if (_has_bits_[32 / 32] & (0xffu << (32 % 32))) {
+    tschchartseriesshowvaluelabels_ = false;
+    tschchartseriessizedimension_ = 0;
+    tschchartseriessymboltype_ = 0;
+    tschchartseriestrendlineequationoffsetx_ = 0;
+    tschchartseriestrendlineequationoffsety_ = 0;
+    if (has_tschchartseriestrendlinelabelstring()) {
+      if (tschchartseriestrendlinelabelstring_ != &::google::protobuf::internal::kEmptyString) {
+        tschchartseriestrendlinelabelstring_->clear();
+      }
+    }
+    tschchartseriestrendlineorder_ = 0;
+    tschchartseriestrendlineperiod_ = 0;
+  }
+  if (_has_bits_[40 / 32] & (0xffu << (40 % 32))) {
+    tschchartseriestrendlinersquaredoffsetx_ = 0;
+    tschchartseriestrendlinersquaredoffsety_ = 0;
+    tschchartseriestrendlineshowequation_ = false;
+    tschchartseriestrendlineshowlabel_ = false;
+    tschchartseriestrendlineshowr2value_ = false;
+    tschchartseriestrendlinetype_ = 0;
+    tschchartserieswedgeexplosion_ = 0;
+    tschchartseriesyaxisordinal_ = 0;
+  }
+  if (_has_bits_[48 / 32] & (0xffu << (48 % 32))) {
+    tschchartseriesvaluelabelsaxis_ = 0;
+    if (has_tschchartserieserrorbarlineend()) {
+      if (tschchartserieserrorbarlineend_ != NULL) tschchartserieserrorbarlineend_->::TSD::LineEndArchive::Clear();
+    }
+    if (has_tschchartserieserrorbarlineendscatterx()) {
+      if (tschchartserieserrorbarlineendscatterx_ != NULL) tschchartserieserrorbarlineendscatterx_->::TSD::LineEndArchive::Clear();
+    }
+    if (has_tschchartserieserrorbarshadow()) {
+      if (tschchartserieserrorbarshadow_ != NULL) tschchartserieserrorbarshadow_->::TSD::ShadowArchive::Clear();
+    }
+    if (has_tschchartserieserrorbarstroke()) {
+      if (tschchartserieserrorbarstroke_ != NULL) tschchartserieserrorbarstroke_->::TSD::StrokeArchive::Clear();
+    }
+    if (has_tschchartserieserrorbarstrokescatterx()) {
+      if (tschchartserieserrorbarstrokescatterx_ != NULL) tschchartserieserrorbarstrokescatterx_->::TSD::StrokeArchive::Clear();
+    }
+    if (has_tschchartseriesfill()) {
+      if (tschchartseriesfill_ != NULL) tschchartseriesfill_->::TSD::FillArchive::Clear();
+    }
+    tschchartserieslabelparagraphstyleindex_ = 0;
+  }
+  if (_has_bits_[56 / 32] & (0xffu << (56 % 32))) {
+    tschchartseriesopacity_ = 0;
+    tschchartseriesoutsidelabelparagraphstyleindex_ = 0;
+    if (has_tschchartseriesshadow()) {
+      if (tschchartseriesshadow_ != NULL) tschchartseriesshadow_->::TSD::ShadowArchive::Clear();
+    }
+    if (has_tschchartseriesstroke()) {
+      if (tschchartseriesstroke_ != NULL) tschchartseriesstroke_->::TSD::StrokeArchive::Clear();
+    }
+    if (has_tschchartseriessymbolfill()) {
+      if (tschchartseriessymbolfill_ != NULL) tschchartseriessymbolfill_->::TSD::FillArchive::Clear();
+    }
+    tschchartseriessymbolfilluseseriesfill_ = false;
+    tschchartseriessymbolfilluseseriesstroke_ = false;
+    tschchartseriessymbolsize_ = 0;
+  }
+  if (_has_bits_[64 / 32] & (0xffu << (64 % 32))) {
+    if (has_tschchartseriessymbolstroke()) {
+      if (tschchartseriessymbolstroke_ != NULL) tschchartseriessymbolstroke_->::TSD::StrokeArchive::Clear();
+    }
+    tschchartseriestrendlineequationopacity_ = 0;
+    tschchartseriestrendlineequationparagraphstyleindex_ = 0;
+    tschchartseriestrendlinersquaredopacity_ = 0;
+    tschchartseriestrendlinersquaredparagraphstyleindex_ = 0;
+    if (has_tschchartseriestrendlineshadow()) {
+      if (tschchartseriestrendlineshadow_ != NULL) tschchartseriestrendlineshadow_->::TSD::ShadowArchive::Clear();
+    }
+    if (has_tschchartseriestrendlinestroke()) {
+      if (tschchartseriestrendlinestroke_ != NULL) tschchartseriestrendlinestroke_->::TSD::StrokeArchive::Clear();
+    }
+    tschchartseriesvaluelabelposition_ = 0;
+  }
+  if (_has_bits_[72 / 32] & (0xffu << (72 % 32))) {
+    tschchartseriesshowlabelsinfront_ = false;
+  }
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+  mutable_unknown_fields()->Clear();
+}
+
+bool ChartSeriesGenericPropertyMapArchive::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!(EXPRESSION)) return false
+  ::google::protobuf::uint32 tag;
+  while ((tag = input->ReadTag()) != 0) {
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // optional float tschchartseriesadjustmentscale = 1;
+      case 1: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_FIXED32) {
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
+                 input, &tschchartseriesadjustmentscale_)));
+          set_has_tschchartseriesadjustmentscale();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(18)) goto parse_tschchartserieserrorbarcustomnegativedata;
+        break;
+      }
+
+      // optional .TSCH.ChartsNSArrayOfNSNumberDoubleArchive tschchartserieserrorbarcustomnegativedata = 2;
+      case 2: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_tschchartserieserrorbarcustomnegativedata:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_tschchartserieserrorbarcustomnegativedata()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(26)) goto parse_tschchartserieserrorbarcustomnegativedatascatterx;
+        break;
+      }
+
+      // optional .TSCH.ChartsNSArrayOfNSNumberDoubleArchive tschchartserieserrorbarcustomnegativedatascatterx = 3;
+      case 3: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_tschchartserieserrorbarcustomnegativedatascatterx:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_tschchartserieserrorbarcustomnegativedatascatterx()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(34)) goto parse_tschchartserieserrorbarcustompositivedata;
+        break;
+      }
+
+      // optional .TSCH.ChartsNSArrayOfNSNumberDoubleArchive tschchartserieserrorbarcustompositivedata = 4;
+      case 4: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_tschchartserieserrorbarcustompositivedata:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_tschchartserieserrorbarcustompositivedata()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(42)) goto parse_tschchartserieserrorbarcustompositivedatascatterx;
+        break;
+      }
+
+      // optional .TSCH.ChartsNSArrayOfNSNumberDoubleArchive tschchartserieserrorbarcustompositivedatascatterx = 5;
+      case 5: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_tschchartserieserrorbarcustompositivedatascatterx:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_tschchartserieserrorbarcustompositivedatascatterx()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(53)) goto parse_tschchartserieserrorbarfixedvalue;
+        break;
+      }
+
+      // optional float tschchartserieserrorbarfixedvalue = 6;
+      case 6: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_FIXED32) {
+         parse_tschchartserieserrorbarfixedvalue:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
+                 input, &tschchartserieserrorbarfixedvalue_)));
+          set_has_tschchartserieserrorbarfixedvalue();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(61)) goto parse_tschchartserieserrorbarfixedvaluescatterx;
+        break;
+      }
+
+      // optional float tschchartserieserrorbarfixedvaluescatterx = 7;
+      case 7: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_FIXED32) {
+         parse_tschchartserieserrorbarfixedvaluescatterx:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
+                 input, &tschchartserieserrorbarfixedvaluescatterx_)));
+          set_has_tschchartserieserrorbarfixedvaluescatterx();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(69)) goto parse_tschchartserieserrorbarpercentvalue;
+        break;
+      }
+
+      // optional float tschchartserieserrorbarpercentvalue = 8;
+      case 8: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_FIXED32) {
+         parse_tschchartserieserrorbarpercentvalue:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
+                 input, &tschchartserieserrorbarpercentvalue_)));
+          set_has_tschchartserieserrorbarpercentvalue();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(77)) goto parse_tschchartserieserrorbarpercentvaluescatterx;
+        break;
+      }
+
+      // optional float tschchartserieserrorbarpercentvaluescatterx = 9;
+      case 9: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_FIXED32) {
+         parse_tschchartserieserrorbarpercentvaluescatterx:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
+                 input, &tschchartserieserrorbarpercentvaluescatterx_)));
+          set_has_tschchartserieserrorbarpercentvaluescatterx();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(80)) goto parse_tschchartserieserrorbarsetting;
+        break;
+      }
+
+      // optional int32 tschchartserieserrorbarsetting = 10;
+      case 10: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_tschchartserieserrorbarsetting:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &tschchartserieserrorbarsetting_)));
+          set_has_tschchartserieserrorbarsetting();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(88)) goto parse_tschchartserieserrorbarsettingscatterx;
+        break;
+      }
+
+      // optional int32 tschchartserieserrorbarsettingscatterx = 11;
+      case 11: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_tschchartserieserrorbarsettingscatterx:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &tschchartserieserrorbarsettingscatterx_)));
+          set_has_tschchartserieserrorbarsettingscatterx();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(101)) goto parse_tschchartserieserrorbarstddevvalue;
+        break;
+      }
+
+      // optional float tschchartserieserrorbarstddevvalue = 12;
+      case 12: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_FIXED32) {
+         parse_tschchartserieserrorbarstddevvalue:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
+                 input, &tschchartserieserrorbarstddevvalue_)));
+          set_has_tschchartserieserrorbarstddevvalue();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(109)) goto parse_tschchartserieserrorbarstddevvaluescatterx;
+        break;
+      }
+
+      // optional float tschchartserieserrorbarstddevvaluescatterx = 13;
+      case 13: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_FIXED32) {
+         parse_tschchartserieserrorbarstddevvaluescatterx:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
+                 input, &tschchartserieserrorbarstddevvaluescatterx_)));
+          set_has_tschchartserieserrorbarstddevvaluescatterx();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(112)) goto parse_tschchartserieserrorbartype;
+        break;
+      }
+
+      // optional int32 tschchartserieserrorbartype = 14;
+      case 14: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_tschchartserieserrorbartype:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &tschchartserieserrorbartype_)));
+          set_has_tschchartserieserrorbartype();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(120)) goto parse_tschchartserieserrorbartypescatterx;
+        break;
+      }
+
+      // optional int32 tschchartserieserrorbartypescatterx = 15;
+      case 15: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_tschchartserieserrorbartypescatterx:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &tschchartserieserrorbartypescatterx_)));
+          set_has_tschchartserieserrorbartypescatterx();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(133)) goto parse_tschchartserieslabelexplosion;
+        break;
+      }
+
+      // optional float tschchartserieslabelexplosion = 16;
+      case 16: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_FIXED32) {
+         parse_tschchartserieslabelexplosion:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
+                 input, &tschchartserieslabelexplosion_)));
+          set_has_tschchartserieslabelexplosion();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(136)) goto parse_tschchartserieslinetype;
+        break;
+      }
+
+      // optional int32 tschchartserieslinetype = 17;
+      case 17: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_tschchartserieslinetype:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &tschchartserieslinetype_)));
+          set_has_tschchartserieslinetype();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(146)) goto parse_tschchartseries1_0numberformat;
+        break;
+      }
+
+      // optional .TSK.FormatStructArchive tschchartseries1_0numberformat = 18;
+      case 18: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_tschchartseries1_0numberformat:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_tschchartseries1_0numberformat()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(154)) goto parse_tschchartseriesnumberformat;
+        break;
+      }
+
+      // optional .TSK.FormatStructArchive tschchartseriesnumberformat = 19;
+      case 19: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_tschchartseriesnumberformat:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_tschchartseriesnumberformat()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(162)) goto parse_tschchartseries1_0dateformat;
+        break;
+      }
+
+      // optional .TSK.FormatStructArchive tschchartseries1_0dateformat = 20;
+      case 20: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_tschchartseries1_0dateformat:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_tschchartseries1_0dateformat()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(170)) goto parse_tschchartseriesdurationformat;
+        break;
+      }
+
+      // optional .TSK.FormatStructArchive tschchartseriesdurationformat = 21;
+      case 21: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_tschchartseriesdurationformat:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_tschchartseriesdurationformat()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(178)) goto parse_tschchartseriesdateformat;
+        break;
+      }
+
+      // optional .TSK.FormatStructArchive tschchartseriesdateformat = 22;
+      case 22: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_tschchartseriesdateformat:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_tschchartseriesdateformat()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(184)) goto parse_tschchartseriesnumberformattype;
+        break;
+      }
+
+      // optional int32 tschchartseriesnumberformattype = 23;
+      case 23: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_tschchartseriesnumberformattype:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &tschchartseriesnumberformattype_)));
+          set_has_tschchartseriesnumberformattype();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(194)) goto parse_tschchartseriespercentnumberformat;
+        break;
+      }
+
+      // optional .TSK.FormatStructArchive tschchartseriespercentnumberformat = 24;
+      case 24: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_tschchartseriespercentnumberformat:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_tschchartseriespercentnumberformat()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(200)) goto parse_tschchartseriesseriestype;
+        break;
+      }
+
+      // optional int32 tschchartseriesseriestype = 25;
+      case 25: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_tschchartseriesseriestype:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &tschchartseriesseriestype_)));
+          set_has_tschchartseriesseriestype();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(208)) goto parse_tschchartseriesshowerrorbar;
+        break;
+      }
+
+      // optional bool tschchartseriesshowerrorbar = 26;
+      case 26: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_tschchartseriesshowerrorbar:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &tschchartseriesshowerrorbar_)));
+          set_has_tschchartseriesshowerrorbar();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(216)) goto parse_tschchartseriesshowerrorbarscatterx;
+        break;
+      }
+
+      // optional bool tschchartseriesshowerrorbarscatterx = 27;
+      case 27: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_tschchartseriesshowerrorbarscatterx:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &tschchartseriesshowerrorbarscatterx_)));
+          set_has_tschchartseriesshowerrorbarscatterx();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(224)) goto parse_tschchartseriesshowline;
+        break;
+      }
+
+      // optional bool tschchartseriesshowline = 28;
+      case 28: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_tschchartseriesshowline:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &tschchartseriesshowline_)));
+          set_has_tschchartseriesshowline();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(232)) goto parse_tschchartseriesshownegativedata;
+        break;
+      }
+
+      // optional bool tschchartseriesshownegativedata = 29;
+      case 29: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_tschchartseriesshownegativedata:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &tschchartseriesshownegativedata_)));
+          set_has_tschchartseriesshownegativedata();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(240)) goto parse_tschchartseriesshowserieslabels;
+        break;
+      }
+
+      // optional bool tschchartseriesshowserieslabels = 30;
+      case 30: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_tschchartseriesshowserieslabels:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &tschchartseriesshowserieslabels_)));
+          set_has_tschchartseriesshowserieslabels();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(248)) goto parse_tschchartseriesshowsymbol;
+        break;
+      }
+
+      // optional bool tschchartseriesshowsymbol = 31;
+      case 31: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_tschchartseriesshowsymbol:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &tschchartseriesshowsymbol_)));
+          set_has_tschchartseriesshowsymbol();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(256)) goto parse_tschchartseriesshowtrendline;
+        break;
+      }
+
+      // optional bool tschchartseriesshowtrendline = 32;
+      case 32: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_tschchartseriesshowtrendline:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &tschchartseriesshowtrendline_)));
+          set_has_tschchartseriesshowtrendline();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(264)) goto parse_tschchartseriesshowvaluelabels;
+        break;
+      }
+
+      // optional bool tschchartseriesshowvaluelabels = 33;
+      case 33: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_tschchartseriesshowvaluelabels:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &tschchartseriesshowvaluelabels_)));
+          set_has_tschchartseriesshowvaluelabels();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(272)) goto parse_tschchartseriessizedimension;
+        break;
+      }
+
+      // optional int32 tschchartseriessizedimension = 34;
+      case 34: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_tschchartseriessizedimension:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &tschchartseriessizedimension_)));
+          set_has_tschchartseriessizedimension();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(280)) goto parse_tschchartseriessymboltype;
+        break;
+      }
+
+      // optional int32 tschchartseriessymboltype = 35;
+      case 35: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_tschchartseriessymboltype:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &tschchartseriessymboltype_)));
+          set_has_tschchartseriessymboltype();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(293)) goto parse_tschchartseriestrendlineequationoffsetx;
+        break;
+      }
+
+      // optional float tschchartseriestrendlineequationoffsetx = 36;
+      case 36: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_FIXED32) {
+         parse_tschchartseriestrendlineequationoffsetx:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
+                 input, &tschchartseriestrendlineequationoffsetx_)));
+          set_has_tschchartseriestrendlineequationoffsetx();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(301)) goto parse_tschchartseriestrendlineequationoffsety;
+        break;
+      }
+
+      // optional float tschchartseriestrendlineequationoffsety = 37;
+      case 37: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_FIXED32) {
+         parse_tschchartseriestrendlineequationoffsety:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
+                 input, &tschchartseriestrendlineequationoffsety_)));
+          set_has_tschchartseriestrendlineequationoffsety();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(306)) goto parse_tschchartseriestrendlinelabelstring;
+        break;
+      }
+
+      // optional string tschchartseriestrendlinelabelstring = 38;
+      case 38: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_tschchartseriestrendlinelabelstring:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_tschchartseriestrendlinelabelstring()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+            this->tschchartseriestrendlinelabelstring().data(), this->tschchartseriestrendlinelabelstring().length(),
+            ::google::protobuf::internal::WireFormat::PARSE);
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(312)) goto parse_tschchartseriestrendlineorder;
+        break;
+      }
+
+      // optional int32 tschchartseriestrendlineorder = 39;
+      case 39: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_tschchartseriestrendlineorder:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &tschchartseriestrendlineorder_)));
+          set_has_tschchartseriestrendlineorder();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(320)) goto parse_tschchartseriestrendlineperiod;
+        break;
+      }
+
+      // optional int32 tschchartseriestrendlineperiod = 40;
+      case 40: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_tschchartseriestrendlineperiod:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &tschchartseriestrendlineperiod_)));
+          set_has_tschchartseriestrendlineperiod();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(333)) goto parse_tschchartseriestrendlinersquaredoffsetx;
+        break;
+      }
+
+      // optional float tschchartseriestrendlinersquaredoffsetx = 41;
+      case 41: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_FIXED32) {
+         parse_tschchartseriestrendlinersquaredoffsetx:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
+                 input, &tschchartseriestrendlinersquaredoffsetx_)));
+          set_has_tschchartseriestrendlinersquaredoffsetx();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(341)) goto parse_tschchartseriestrendlinersquaredoffsety;
+        break;
+      }
+
+      // optional float tschchartseriestrendlinersquaredoffsety = 42;
+      case 42: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_FIXED32) {
+         parse_tschchartseriestrendlinersquaredoffsety:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
+                 input, &tschchartseriestrendlinersquaredoffsety_)));
+          set_has_tschchartseriestrendlinersquaredoffsety();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(344)) goto parse_tschchartseriestrendlineshowequation;
+        break;
+      }
+
+      // optional bool tschchartseriestrendlineshowequation = 43;
+      case 43: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_tschchartseriestrendlineshowequation:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &tschchartseriestrendlineshowequation_)));
+          set_has_tschchartseriestrendlineshowequation();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(352)) goto parse_tschchartseriestrendlineshowlabel;
+        break;
+      }
+
+      // optional bool tschchartseriestrendlineshowlabel = 44;
+      case 44: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_tschchartseriestrendlineshowlabel:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &tschchartseriestrendlineshowlabel_)));
+          set_has_tschchartseriestrendlineshowlabel();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(360)) goto parse_tschchartseriestrendlineshowr2value;
+        break;
+      }
+
+      // optional bool tschchartseriestrendlineshowr2value = 45;
+      case 45: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_tschchartseriestrendlineshowr2value:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &tschchartseriestrendlineshowr2value_)));
+          set_has_tschchartseriestrendlineshowr2value();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(368)) goto parse_tschchartseriestrendlinetype;
+        break;
+      }
+
+      // optional int32 tschchartseriestrendlinetype = 46;
+      case 46: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_tschchartseriestrendlinetype:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &tschchartseriestrendlinetype_)));
+          set_has_tschchartseriestrendlinetype();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(381)) goto parse_tschchartserieswedgeexplosion;
+        break;
+      }
+
+      // optional float tschchartserieswedgeexplosion = 47;
+      case 47: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_FIXED32) {
+         parse_tschchartserieswedgeexplosion:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
+                 input, &tschchartserieswedgeexplosion_)));
+          set_has_tschchartserieswedgeexplosion();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(384)) goto parse_tschchartseriesyaxisordinal;
+        break;
+      }
+
+      // optional int32 tschchartseriesyaxisordinal = 48;
+      case 48: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_tschchartseriesyaxisordinal:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &tschchartseriesyaxisordinal_)));
+          set_has_tschchartseriesyaxisordinal();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(392)) goto parse_tschchartseriesvaluelabelsaxis;
+        break;
+      }
+
+      // optional int32 tschchartseriesvaluelabelsaxis = 49;
+      case 49: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_tschchartseriesvaluelabelsaxis:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &tschchartseriesvaluelabelsaxis_)));
+          set_has_tschchartseriesvaluelabelsaxis();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(402)) goto parse_tschchartserieserrorbarlineend;
+        break;
+      }
+
+      // optional .TSD.LineEndArchive tschchartserieserrorbarlineend = 50;
+      case 50: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_tschchartserieserrorbarlineend:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_tschchartserieserrorbarlineend()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(410)) goto parse_tschchartserieserrorbarlineendscatterx;
+        break;
+      }
+
+      // optional .TSD.LineEndArchive tschchartserieserrorbarlineendscatterx = 51;
+      case 51: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_tschchartserieserrorbarlineendscatterx:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_tschchartserieserrorbarlineendscatterx()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(418)) goto parse_tschchartserieserrorbarshadow;
+        break;
+      }
+
+      // optional .TSD.ShadowArchive tschchartserieserrorbarshadow = 52;
+      case 52: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_tschchartserieserrorbarshadow:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_tschchartserieserrorbarshadow()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(426)) goto parse_tschchartserieserrorbarstroke;
+        break;
+      }
+
+      // optional .TSD.StrokeArchive tschchartserieserrorbarstroke = 53;
+      case 53: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_tschchartserieserrorbarstroke:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_tschchartserieserrorbarstroke()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(434)) goto parse_tschchartserieserrorbarstrokescatterx;
+        break;
+      }
+
+      // optional .TSD.StrokeArchive tschchartserieserrorbarstrokescatterx = 54;
+      case 54: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_tschchartserieserrorbarstrokescatterx:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_tschchartserieserrorbarstrokescatterx()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(442)) goto parse_tschchartseriesfill;
+        break;
+      }
+
+      // optional .TSD.FillArchive tschchartseriesfill = 55;
+      case 55: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_tschchartseriesfill:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_tschchartseriesfill()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(448)) goto parse_tschchartserieslabelparagraphstyleindex;
+        break;
+      }
+
+      // optional int32 tschchartserieslabelparagraphstyleindex = 56;
+      case 56: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_tschchartserieslabelparagraphstyleindex:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &tschchartserieslabelparagraphstyleindex_)));
+          set_has_tschchartserieslabelparagraphstyleindex();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(461)) goto parse_tschchartseriesopacity;
+        break;
+      }
+
+      // optional float tschchartseriesopacity = 57;
+      case 57: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_FIXED32) {
+         parse_tschchartseriesopacity:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
+                 input, &tschchartseriesopacity_)));
+          set_has_tschchartseriesopacity();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(464)) goto parse_tschchartseriesoutsidelabelparagraphstyleindex;
+        break;
+      }
+
+      // optional int32 tschchartseriesoutsidelabelparagraphstyleindex = 58;
+      case 58: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_tschchartseriesoutsidelabelparagraphstyleindex:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &tschchartseriesoutsidelabelparagraphstyleindex_)));
+          set_has_tschchartseriesoutsidelabelparagraphstyleindex();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(474)) goto parse_tschchartseriesshadow;
+        break;
+      }
+
+      // optional .TSD.ShadowArchive tschchartseriesshadow = 59;
+      case 59: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_tschchartseriesshadow:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_tschchartseriesshadow()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(482)) goto parse_tschchartseriesstroke;
+        break;
+      }
+
+      // optional .TSD.StrokeArchive tschchartseriesstroke = 60;
+      case 60: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_tschchartseriesstroke:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_tschchartseriesstroke()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(490)) goto parse_tschchartseriessymbolfill;
+        break;
+      }
+
+      // optional .TSD.FillArchive tschchartseriessymbolfill = 61;
+      case 61: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_tschchartseriessymbolfill:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_tschchartseriessymbolfill()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(496)) goto parse_tschchartseriessymbolfilluseseriesfill;
+        break;
+      }
+
+      // optional bool tschchartseriessymbolfilluseseriesfill = 62;
+      case 62: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_tschchartseriessymbolfilluseseriesfill:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &tschchartseriessymbolfilluseseriesfill_)));
+          set_has_tschchartseriessymbolfilluseseriesfill();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(504)) goto parse_tschchartseriessymbolfilluseseriesstroke;
+        break;
+      }
+
+      // optional bool tschchartseriessymbolfilluseseriesstroke = 63;
+      case 63: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_tschchartseriessymbolfilluseseriesstroke:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &tschchartseriessymbolfilluseseriesstroke_)));
+          set_has_tschchartseriessymbolfilluseseriesstroke();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(517)) goto parse_tschchartseriessymbolsize;
+        break;
+      }
+
+      // optional float tschchartseriessymbolsize = 64;
+      case 64: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_FIXED32) {
+         parse_tschchartseriessymbolsize:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
+                 input, &tschchartseriessymbolsize_)));
+          set_has_tschchartseriessymbolsize();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(522)) goto parse_tschchartseriessymbolstroke;
+        break;
+      }
+
+      // optional .TSD.StrokeArchive tschchartseriessymbolstroke = 65;
+      case 65: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_tschchartseriessymbolstroke:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_tschchartseriessymbolstroke()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(533)) goto parse_tschchartseriestrendlineequationopacity;
+        break;
+      }
+
+      // optional float tschchartseriestrendlineequationopacity = 66;
+      case 66: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_FIXED32) {
+         parse_tschchartseriestrendlineequationopacity:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
+                 input, &tschchartseriestrendlineequationopacity_)));
+          set_has_tschchartseriestrendlineequationopacity();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(536)) goto parse_tschchartseriestrendlineequationparagraphstyleindex;
+        break;
+      }
+
+      // optional int32 tschchartseriestrendlineequationparagraphstyleindex = 67;
+      case 67: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_tschchartseriestrendlineequationparagraphstyleindex:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &tschchartseriestrendlineequationparagraphstyleindex_)));
+          set_has_tschchartseriestrendlineequationparagraphstyleindex();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(549)) goto parse_tschchartseriestrendlinersquaredopacity;
+        break;
+      }
+
+      // optional float tschchartseriestrendlinersquaredopacity = 68;
+      case 68: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_FIXED32) {
+         parse_tschchartseriestrendlinersquaredopacity:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
+                 input, &tschchartseriestrendlinersquaredopacity_)));
+          set_has_tschchartseriestrendlinersquaredopacity();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(552)) goto parse_tschchartseriestrendlinersquaredparagraphstyleindex;
+        break;
+      }
+
+      // optional int32 tschchartseriestrendlinersquaredparagraphstyleindex = 69;
+      case 69: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_tschchartseriestrendlinersquaredparagraphstyleindex:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &tschchartseriestrendlinersquaredparagraphstyleindex_)));
+          set_has_tschchartseriestrendlinersquaredparagraphstyleindex();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(562)) goto parse_tschchartseriestrendlineshadow;
+        break;
+      }
+
+      // optional .TSD.ShadowArchive tschchartseriestrendlineshadow = 70;
+      case 70: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_tschchartseriestrendlineshadow:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_tschchartseriestrendlineshadow()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(570)) goto parse_tschchartseriestrendlinestroke;
+        break;
+      }
+
+      // optional .TSD.StrokeArchive tschchartseriestrendlinestroke = 71;
+      case 71: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_tschchartseriestrendlinestroke:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_tschchartseriestrendlinestroke()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(576)) goto parse_tschchartseriesvaluelabelposition;
+        break;
+      }
+
+      // optional int32 tschchartseriesvaluelabelposition = 72;
+      case 72: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_tschchartseriesvaluelabelposition:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &tschchartseriesvaluelabelposition_)));
+          set_has_tschchartseriesvaluelabelposition();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(584)) goto parse_tschchartseriesshowlabelsinfront;
+        break;
+      }
+
+      // optional bool tschchartseriesshowlabelsinfront = 73;
+      case 73: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_tschchartseriesshowlabelsinfront:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &tschchartseriesshowlabelsinfront_)));
+          set_has_tschchartseriesshowlabelsinfront();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectAtEnd()) return true;
+        break;
+      }
+
+      default: {
+      handle_uninterpreted:
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          return true;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+  return true;
+#undef DO_
+}
+
+void ChartSeriesGenericPropertyMapArchive::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // optional float tschchartseriesadjustmentscale = 1;
+  if (has_tschchartseriesadjustmentscale()) {
+    ::google::protobuf::internal::WireFormatLite::WriteFloat(1, this->tschchartseriesadjustmentscale(), output);
+  }
+
+  // optional .TSCH.ChartsNSArrayOfNSNumberDoubleArchive tschchartserieserrorbarcustomnegativedata = 2;
+  if (has_tschchartserieserrorbarcustomnegativedata()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      2, this->tschchartserieserrorbarcustomnegativedata(), output);
+  }
+
+  // optional .TSCH.ChartsNSArrayOfNSNumberDoubleArchive tschchartserieserrorbarcustomnegativedatascatterx = 3;
+  if (has_tschchartserieserrorbarcustomnegativedatascatterx()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      3, this->tschchartserieserrorbarcustomnegativedatascatterx(), output);
+  }
+
+  // optional .TSCH.ChartsNSArrayOfNSNumberDoubleArchive tschchartserieserrorbarcustompositivedata = 4;
+  if (has_tschchartserieserrorbarcustompositivedata()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      4, this->tschchartserieserrorbarcustompositivedata(), output);
+  }
+
+  // optional .TSCH.ChartsNSArrayOfNSNumberDoubleArchive tschchartserieserrorbarcustompositivedatascatterx = 5;
+  if (has_tschchartserieserrorbarcustompositivedatascatterx()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      5, this->tschchartserieserrorbarcustompositivedatascatterx(), output);
+  }
+
+  // optional float tschchartserieserrorbarfixedvalue = 6;
+  if (has_tschchartserieserrorbarfixedvalue()) {
+    ::google::protobuf::internal::WireFormatLite::WriteFloat(6, this->tschchartserieserrorbarfixedvalue(), output);
+  }
+
+  // optional float tschchartserieserrorbarfixedvaluescatterx = 7;
+  if (has_tschchartserieserrorbarfixedvaluescatterx()) {
+    ::google::protobuf::internal::WireFormatLite::WriteFloat(7, this->tschchartserieserrorbarfixedvaluescatterx(), output);
+  }
+
+  // optional float tschchartserieserrorbarpercentvalue = 8;
+  if (has_tschchartserieserrorbarpercentvalue()) {
+    ::google::protobuf::internal::WireFormatLite::WriteFloat(8, this->tschchartserieserrorbarpercentvalue(), output);
+  }
+
+  // optional float tschchartserieserrorbarpercentvaluescatterx = 9;
+  if (has_tschchartserieserrorbarpercentvaluescatterx()) {
+    ::google::protobuf::internal::WireFormatLite::WriteFloat(9, this->tschchartserieserrorbarpercentvaluescatterx(), output);
+  }
+
+  // optional int32 tschchartserieserrorbarsetting = 10;
+  if (has_tschchartserieserrorbarsetting()) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(10, this->tschchartserieserrorbarsetting(), output);
+  }
+
+  // optional int32 tschchartserieserrorbarsettingscatterx = 11;
+  if (has_tschchartserieserrorbarsettingscatterx()) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(11, this->tschchartserieserrorbarsettingscatterx(), output);
+  }
+
+  // optional float tschchartserieserrorbarstddevvalue = 12;
+  if (has_tschchartserieserrorbarstddevvalue()) {
+    ::google::protobuf::internal::WireFormatLite::WriteFloat(12, this->tschchartserieserrorbarstddevvalue(), output);
+  }
+
+  // optional float tschchartserieserrorbarstddevvaluescatterx = 13;
+  if (has_tschchartserieserrorbarstddevvaluescatterx()) {
+    ::google::protobuf::internal::WireFormatLite::WriteFloat(13, this->tschchartserieserrorbarstddevvaluescatterx(), output);
+  }
+
+  // optional int32 tschchartserieserrorbartype = 14;
+  if (has_tschchartserieserrorbartype()) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(14, this->tschchartserieserrorbartype(), output);
+  }
+
+  // optional int32 tschchartserieserrorbartypescatterx = 15;
+  if (has_tschchartserieserrorbartypescatterx()) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(15, this->tschchartserieserrorbartypescatterx(), output);
+  }
+
+  // optional float tschchartserieslabelexplosion = 16;
+  if (has_tschchartserieslabelexplosion()) {
+    ::google::protobuf::internal::WireFormatLite::WriteFloat(16, this->tschchartserieslabelexplosion(), output);
+  }
+
+  // optional int32 tschchartserieslinetype = 17;
+  if (has_tschchartserieslinetype()) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(17, this->tschchartserieslinetype(), output);
+  }
+
+  // optional .TSK.FormatStructArchive tschchartseries1_0numberformat = 18;
+  if (has_tschchartseries1_0numberformat()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      18, this->tschchartseries1_0numberformat(), output);
+  }
+
+  // optional .TSK.FormatStructArchive tschchartseriesnumberformat = 19;
+  if (has_tschchartseriesnumberformat()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      19, this->tschchartseriesnumberformat(), output);
+  }
+
+  // optional .TSK.FormatStructArchive tschchartseries1_0dateformat = 20;
+  if (has_tschchartseries1_0dateformat()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      20, this->tschchartseries1_0dateformat(), output);
+  }
+
+  // optional .TSK.FormatStructArchive tschchartseriesdurationformat = 21;
+  if (has_tschchartseriesdurationformat()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      21, this->tschchartseriesdurationformat(), output);
+  }
+
+  // optional .TSK.FormatStructArchive tschchartseriesdateformat = 22;
+  if (has_tschchartseriesdateformat()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      22, this->tschchartseriesdateformat(), output);
+  }
+
+  // optional int32 tschchartseriesnumberformattype = 23;
+  if (has_tschchartseriesnumberformattype()) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(23, this->tschchartseriesnumberformattype(), output);
+  }
+
+  // optional .TSK.FormatStructArchive tschchartseriespercentnumberformat = 24;
+  if (has_tschchartseriespercentnumberformat()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      24, this->tschchartseriespercentnumberformat(), output);
+  }
+
+  // optional int32 tschchartseriesseriestype = 25;
+  if (has_tschchartseriesseriestype()) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(25, this->tschchartseriesseriestype(), output);
+  }
+
+  // optional bool tschchartseriesshowerrorbar = 26;
+  if (has_tschchartseriesshowerrorbar()) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(26, this->tschchartseriesshowerrorbar(), output);
+  }
+
+  // optional bool tschchartseriesshowerrorbarscatterx = 27;
+  if (has_tschchartseriesshowerrorbarscatterx()) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(27, this->tschchartseriesshowerrorbarscatterx(), output);
+  }
+
+  // optional bool tschchartseriesshowline = 28;
+  if (has_tschchartseriesshowline()) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(28, this->tschchartseriesshowline(), output);
+  }
+
+  // optional bool tschchartseriesshownegativedata = 29;
+  if (has_tschchartseriesshownegativedata()) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(29, this->tschchartseriesshownegativedata(), output);
+  }
+
+  // optional bool tschchartseriesshowserieslabels = 30;
+  if (has_tschchartseriesshowserieslabels()) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(30, this->tschchartseriesshowserieslabels(), output);
+  }
+
+  // optional bool tschchartseriesshowsymbol = 31;
+  if (has_tschchartseriesshowsymbol()) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(31, this->tschchartseriesshowsymbol(), output);
+  }
+
+  // optional bool tschchartseriesshowtrendline = 32;
+  if (has_tschchartseriesshowtrendline()) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(32, this->tschchartseriesshowtrendline(), output);
+  }
+
+  // optional bool tschchartseriesshowvaluelabels = 33;
+  if (has_tschchartseriesshowvaluelabels()) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(33, this->tschchartseriesshowvaluelabels(), output);
+  }
+
+  // optional int32 tschchartseriessizedimension = 34;
+  if (has_tschchartseriessizedimension()) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(34, this->tschchartseriessizedimension(), output);
+  }
+
+  // optional int32 tschchartseriessymboltype = 35;
+  if (has_tschchartseriessymboltype()) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(35, this->tschchartseriessymboltype(), output);
+  }
+
+  // optional float tschchartseriestrendlineequationoffsetx = 36;
+  if (has_tschchartseriestrendlineequationoffsetx()) {
+    ::google::protobuf::internal::WireFormatLite::WriteFloat(36, this->tschchartseriestrendlineequationoffsetx(), output);
+  }
+
+  // optional float tschchartseriestrendlineequationoffsety = 37;
+  if (has_tschchartseriestrendlineequationoffsety()) {
+    ::google::protobuf::internal::WireFormatLite::WriteFloat(37, this->tschchartseriestrendlineequationoffsety(), output);
+  }
+
+  // optional string tschchartseriestrendlinelabelstring = 38;
+  if (has_tschchartseriestrendlinelabelstring()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+      this->tschchartseriestrendlinelabelstring().data(), this->tschchartseriestrendlinelabelstring().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE);
+    ::google::protobuf::internal::WireFormatLite::WriteString(
+      38, this->tschchartseriestrendlinelabelstring(), output);
+  }
+
+  // optional int32 tschchartseriestrendlineorder = 39;
+  if (has_tschchartseriestrendlineorder()) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(39, this->tschchartseriestrendlineorder(), output);
+  }
+
+  // optional int32 tschchartseriestrendlineperiod = 40;
+  if (has_tschchartseriestrendlineperiod()) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(40, this->tschchartseriestrendlineperiod(), output);
+  }
+
+  // optional float tschchartseriestrendlinersquaredoffsetx = 41;
+  if (has_tschchartseriestrendlinersquaredoffsetx()) {
+    ::google::protobuf::internal::WireFormatLite::WriteFloat(41, this->tschchartseriestrendlinersquaredoffsetx(), output);
+  }
+
+  // optional float tschchartseriestrendlinersquaredoffsety = 42;
+  if (has_tschchartseriestrendlinersquaredoffsety()) {
+    ::google::protobuf::internal::WireFormatLite::WriteFloat(42, this->tschchartseriestrendlinersquaredoffsety(), output);
+  }
+
+  // optional bool tschchartseriestrendlineshowequation = 43;
+  if (has_tschchartseriestrendlineshowequation()) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(43, this->tschchartseriestrendlineshowequation(), output);
+  }
+
+  // optional bool tschchartseriestrendlineshowlabel = 44;
+  if (has_tschchartseriestrendlineshowlabel()) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(44, this->tschchartseriestrendlineshowlabel(), output);
+  }
+
+  // optional bool tschchartseriestrendlineshowr2value = 45;
+  if (has_tschchartseriestrendlineshowr2value()) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(45, this->tschchartseriestrendlineshowr2value(), output);
+  }
+
+  // optional int32 tschchartseriestrendlinetype = 46;
+  if (has_tschchartseriestrendlinetype()) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(46, this->tschchartseriestrendlinetype(), output);
+  }
+
+  // optional float tschchartserieswedgeexplosion = 47;
+  if (has_tschchartserieswedgeexplosion()) {
+    ::google::protobuf::internal::WireFormatLite::WriteFloat(47, this->tschchartserieswedgeexplosion(), output);
+  }
+
+  // optional int32 tschchartseriesyaxisordinal = 48;
+  if (has_tschchartseriesyaxisordinal()) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(48, this->tschchartseriesyaxisordinal(), output);
+  }
+
+  // optional int32 tschchartseriesvaluelabelsaxis = 49;
+  if (has_tschchartseriesvaluelabelsaxis()) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(49, this->tschchartseriesvaluelabelsaxis(), output);
+  }
+
+  // optional .TSD.LineEndArchive tschchartserieserrorbarlineend = 50;
+  if (has_tschchartserieserrorbarlineend()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      50, this->tschchartserieserrorbarlineend(), output);
+  }
+
+  // optional .TSD.LineEndArchive tschchartserieserrorbarlineendscatterx = 51;
+  if (has_tschchartserieserrorbarlineendscatterx()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      51, this->tschchartserieserrorbarlineendscatterx(), output);
+  }
+
+  // optional .TSD.ShadowArchive tschchartserieserrorbarshadow = 52;
+  if (has_tschchartserieserrorbarshadow()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      52, this->tschchartserieserrorbarshadow(), output);
+  }
+
+  // optional .TSD.StrokeArchive tschchartserieserrorbarstroke = 53;
+  if (has_tschchartserieserrorbarstroke()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      53, this->tschchartserieserrorbarstroke(), output);
+  }
+
+  // optional .TSD.StrokeArchive tschchartserieserrorbarstrokescatterx = 54;
+  if (has_tschchartserieserrorbarstrokescatterx()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      54, this->tschchartserieserrorbarstrokescatterx(), output);
+  }
+
+  // optional .TSD.FillArchive tschchartseriesfill = 55;
+  if (has_tschchartseriesfill()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      55, this->tschchartseriesfill(), output);
+  }
+
+  // optional int32 tschchartserieslabelparagraphstyleindex = 56;
+  if (has_tschchartserieslabelparagraphstyleindex()) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(56, this->tschchartserieslabelparagraphstyleindex(), output);
+  }
+
+  // optional float tschchartseriesopacity = 57;
+  if (has_tschchartseriesopacity()) {
+    ::google::protobuf::internal::WireFormatLite::WriteFloat(57, this->tschchartseriesopacity(), output);
+  }
+
+  // optional int32 tschchartseriesoutsidelabelparagraphstyleindex = 58;
+  if (has_tschchartseriesoutsidelabelparagraphstyleindex()) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(58, this->tschchartseriesoutsidelabelparagraphstyleindex(), output);
+  }
+
+  // optional .TSD.ShadowArchive tschchartseriesshadow = 59;
+  if (has_tschchartseriesshadow()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      59, this->tschchartseriesshadow(), output);
+  }
+
+  // optional .TSD.StrokeArchive tschchartseriesstroke = 60;
+  if (has_tschchartseriesstroke()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      60, this->tschchartseriesstroke(), output);
+  }
+
+  // optional .TSD.FillArchive tschchartseriessymbolfill = 61;
+  if (has_tschchartseriessymbolfill()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      61, this->tschchartseriessymbolfill(), output);
+  }
+
+  // optional bool tschchartseriessymbolfilluseseriesfill = 62;
+  if (has_tschchartseriessymbolfilluseseriesfill()) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(62, this->tschchartseriessymbolfilluseseriesfill(), output);
+  }
+
+  // optional bool tschchartseriessymbolfilluseseriesstroke = 63;
+  if (has_tschchartseriessymbolfilluseseriesstroke()) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(63, this->tschchartseriessymbolfilluseseriesstroke(), output);
+  }
+
+  // optional float tschchartseriessymbolsize = 64;
+  if (has_tschchartseriessymbolsize()) {
+    ::google::protobuf::internal::WireFormatLite::WriteFloat(64, this->tschchartseriessymbolsize(), output);
+  }
+
+  // optional .TSD.StrokeArchive tschchartseriessymbolstroke = 65;
+  if (has_tschchartseriessymbolstroke()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      65, this->tschchartseriessymbolstroke(), output);
+  }
+
+  // optional float tschchartseriestrendlineequationopacity = 66;
+  if (has_tschchartseriestrendlineequationopacity()) {
+    ::google::protobuf::internal::WireFormatLite::WriteFloat(66, this->tschchartseriestrendlineequationopacity(), output);
+  }
+
+  // optional int32 tschchartseriestrendlineequationparagraphstyleindex = 67;
+  if (has_tschchartseriestrendlineequationparagraphstyleindex()) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(67, this->tschchartseriestrendlineequationparagraphstyleindex(), output);
+  }
+
+  // optional float tschchartseriestrendlinersquaredopacity = 68;
+  if (has_tschchartseriestrendlinersquaredopacity()) {
+    ::google::protobuf::internal::WireFormatLite::WriteFloat(68, this->tschchartseriestrendlinersquaredopacity(), output);
+  }
+
+  // optional int32 tschchartseriestrendlinersquaredparagraphstyleindex = 69;
+  if (has_tschchartseriestrendlinersquaredparagraphstyleindex()) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(69, this->tschchartseriestrendlinersquaredparagraphstyleindex(), output);
+  }
+
+  // optional .TSD.ShadowArchive tschchartseriestrendlineshadow = 70;
+  if (has_tschchartseriestrendlineshadow()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      70, this->tschchartseriestrendlineshadow(), output);
+  }
+
+  // optional .TSD.StrokeArchive tschchartseriestrendlinestroke = 71;
+  if (has_tschchartseriestrendlinestroke()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      71, this->tschchartseriestrendlinestroke(), output);
+  }
+
+  // optional int32 tschchartseriesvaluelabelposition = 72;
+  if (has_tschchartseriesvaluelabelposition()) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(72, this->tschchartseriesvaluelabelposition(), output);
+  }
+
+  // optional bool tschchartseriesshowlabelsinfront = 73;
+  if (has_tschchartseriesshowlabelsinfront()) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(73, this->tschchartseriesshowlabelsinfront(), output);
+  }
+
+  if (!unknown_fields().empty()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+}
+
+::google::protobuf::uint8* ChartSeriesGenericPropertyMapArchive::SerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // optional float tschchartseriesadjustmentscale = 1;
+  if (has_tschchartseriesadjustmentscale()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(1, this->tschchartseriesadjustmentscale(), target);
+  }
+
+  // optional .TSCH.ChartsNSArrayOfNSNumberDoubleArchive tschchartserieserrorbarcustomnegativedata = 2;
+  if (has_tschchartserieserrorbarcustomnegativedata()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        2, this->tschchartserieserrorbarcustomnegativedata(), target);
+  }
+
+  // optional .TSCH.ChartsNSArrayOfNSNumberDoubleArchive tschchartserieserrorbarcustomnegativedatascatterx = 3;
+  if (has_tschchartserieserrorbarcustomnegativedatascatterx()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        3, this->tschchartserieserrorbarcustomnegativedatascatterx(), target);
+  }
+
+  // optional .TSCH.ChartsNSArrayOfNSNumberDoubleArchive tschchartserieserrorbarcustompositivedata = 4;
+  if (has_tschchartserieserrorbarcustompositivedata()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        4, this->tschchartserieserrorbarcustompositivedata(), target);
+  }
+
+  // optional .TSCH.ChartsNSArrayOfNSNumberDoubleArchive tschchartserieserrorbarcustompositivedatascatterx = 5;
+  if (has_tschchartserieserrorbarcustompositivedatascatterx()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        5, this->tschchartserieserrorbarcustompositivedatascatterx(), target);
+  }
+
+  // optional float tschchartserieserrorbarfixedvalue = 6;
+  if (has_tschchartserieserrorbarfixedvalue()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(6, this->tschchartserieserrorbarfixedvalue(), target);
+  }
+
+  // optional float tschchartserieserrorbarfixedvaluescatterx = 7;
+  if (has_tschchartserieserrorbarfixedvaluescatterx()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(7, this->tschchartserieserrorbarfixedvaluescatterx(), target);
+  }
+
+  // optional float tschchartserieserrorbarpercentvalue = 8;
+  if (has_tschchartserieserrorbarpercentvalue()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(8, this->tschchartserieserrorbarpercentvalue(), target);
+  }
+
+  // optional float tschchartserieserrorbarpercentvaluescatterx = 9;
+  if (has_tschchartserieserrorbarpercentvaluescatterx()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(9, this->tschchartserieserrorbarpercentvaluescatterx(), target);
+  }
+
+  // optional int32 tschchartserieserrorbarsetting = 10;
+  if (has_tschchartserieserrorbarsetting()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(10, this->tschchartserieserrorbarsetting(), target);
+  }
+
+  // optional int32 tschchartserieserrorbarsettingscatterx = 11;
+  if (has_tschchartserieserrorbarsettingscatterx()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(11, this->tschchartserieserrorbarsettingscatterx(), target);
+  }
+
+  // optional float tschchartserieserrorbarstddevvalue = 12;
+  if (has_tschchartserieserrorbarstddevvalue()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(12, this->tschchartserieserrorbarstddevvalue(), target);
+  }
+
+  // optional float tschchartserieserrorbarstddevvaluescatterx = 13;
+  if (has_tschchartserieserrorbarstddevvaluescatterx()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(13, this->tschchartserieserrorbarstddevvaluescatterx(), target);
+  }
+
+  // optional int32 tschchartserieserrorbartype = 14;
+  if (has_tschchartserieserrorbartype()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(14, this->tschchartserieserrorbartype(), target);
+  }
+
+  // optional int32 tschchartserieserrorbartypescatterx = 15;
+  if (has_tschchartserieserrorbartypescatterx()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(15, this->tschchartserieserrorbartypescatterx(), target);
+  }
+
+  // optional float tschchartserieslabelexplosion = 16;
+  if (has_tschchartserieslabelexplosion()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(16, this->tschchartserieslabelexplosion(), target);
+  }
+
+  // optional int32 tschchartserieslinetype = 17;
+  if (has_tschchartserieslinetype()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(17, this->tschchartserieslinetype(), target);
+  }
+
+  // optional .TSK.FormatStructArchive tschchartseries1_0numberformat = 18;
+  if (has_tschchartseries1_0numberformat()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        18, this->tschchartseries1_0numberformat(), target);
+  }
+
+  // optional .TSK.FormatStructArchive tschchartseriesnumberformat = 19;
+  if (has_tschchartseriesnumberformat()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        19, this->tschchartseriesnumberformat(), target);
+  }
+
+  // optional .TSK.FormatStructArchive tschchartseries1_0dateformat = 20;
+  if (has_tschchartseries1_0dateformat()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        20, this->tschchartseries1_0dateformat(), target);
+  }
+
+  // optional .TSK.FormatStructArchive tschchartseriesdurationformat = 21;
+  if (has_tschchartseriesdurationformat()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        21, this->tschchartseriesdurationformat(), target);
+  }
+
+  // optional .TSK.FormatStructArchive tschchartseriesdateformat = 22;
+  if (has_tschchartseriesdateformat()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        22, this->tschchartseriesdateformat(), target);
+  }
+
+  // optional int32 tschchartseriesnumberformattype = 23;
+  if (has_tschchartseriesnumberformattype()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(23, this->tschchartseriesnumberformattype(), target);
+  }
+
+  // optional .TSK.FormatStructArchive tschchartseriespercentnumberformat = 24;
+  if (has_tschchartseriespercentnumberformat()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        24, this->tschchartseriespercentnumberformat(), target);
+  }
+
+  // optional int32 tschchartseriesseriestype = 25;
+  if (has_tschchartseriesseriestype()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(25, this->tschchartseriesseriestype(), target);
+  }
+
+  // optional bool tschchartseriesshowerrorbar = 26;
+  if (has_tschchartseriesshowerrorbar()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(26, this->tschchartseriesshowerrorbar(), target);
+  }
+
+  // optional bool tschchartseriesshowerrorbarscatterx = 27;
+  if (has_tschchartseriesshowerrorbarscatterx()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(27, this->tschchartseriesshowerrorbarscatterx(), target);
+  }
+
+  // optional bool tschchartseriesshowline = 28;
+  if (has_tschchartseriesshowline()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(28, this->tschchartseriesshowline(), target);
+  }
+
+  // optional bool tschchartseriesshownegativedata = 29;
+  if (has_tschchartseriesshownegativedata()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(29, this->tschchartseriesshownegativedata(), target);
+  }
+
+  // optional bool tschchartseriesshowserieslabels = 30;
+  if (has_tschchartseriesshowserieslabels()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(30, this->tschchartseriesshowserieslabels(), target);
+  }
+
+  // optional bool tschchartseriesshowsymbol = 31;
+  if (has_tschchartseriesshowsymbol()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(31, this->tschchartseriesshowsymbol(), target);
+  }
+
+  // optional bool tschchartseriesshowtrendline = 32;
+  if (has_tschchartseriesshowtrendline()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(32, this->tschchartseriesshowtrendline(), target);
+  }
+
+  // optional bool tschchartseriesshowvaluelabels = 33;
+  if (has_tschchartseriesshowvaluelabels()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(33, this->tschchartseriesshowvaluelabels(), target);
+  }
+
+  // optional int32 tschchartseriessizedimension = 34;
+  if (has_tschchartseriessizedimension()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(34, this->tschchartseriessizedimension(), target);
+  }
+
+  // optional int32 tschchartseriessymboltype = 35;
+  if (has_tschchartseriessymboltype()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(35, this->tschchartseriessymboltype(), target);
+  }
+
+  // optional float tschchartseriestrendlineequationoffsetx = 36;
+  if (has_tschchartseriestrendlineequationoffsetx()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(36, this->tschchartseriestrendlineequationoffsetx(), target);
+  }
+
+  // optional float tschchartseriestrendlineequationoffsety = 37;
+  if (has_tschchartseriestrendlineequationoffsety()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(37, this->tschchartseriestrendlineequationoffsety(), target);
+  }
+
+  // optional string tschchartseriestrendlinelabelstring = 38;
+  if (has_tschchartseriestrendlinelabelstring()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+      this->tschchartseriestrendlinelabelstring().data(), this->tschchartseriestrendlinelabelstring().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE);
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        38, this->tschchartseriestrendlinelabelstring(), target);
+  }
+
+  // optional int32 tschchartseriestrendlineorder = 39;
+  if (has_tschchartseriestrendlineorder()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(39, this->tschchartseriestrendlineorder(), target);
+  }
+
+  // optional int32 tschchartseriestrendlineperiod = 40;
+  if (has_tschchartseriestrendlineperiod()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(40, this->tschchartseriestrendlineperiod(), target);
+  }
+
+  // optional float tschchartseriestrendlinersquaredoffsetx = 41;
+  if (has_tschchartseriestrendlinersquaredoffsetx()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(41, this->tschchartseriestrendlinersquaredoffsetx(), target);
+  }
+
+  // optional float tschchartseriestrendlinersquaredoffsety = 42;
+  if (has_tschchartseriestrendlinersquaredoffsety()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(42, this->tschchartseriestrendlinersquaredoffsety(), target);
+  }
+
+  // optional bool tschchartseriestrendlineshowequation = 43;
+  if (has_tschchartseriestrendlineshowequation()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(43, this->tschchartseriestrendlineshowequation(), target);
+  }
+
+  // optional bool tschchartseriestrendlineshowlabel = 44;
+  if (has_tschchartseriestrendlineshowlabel()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(44, this->tschchartseriestrendlineshowlabel(), target);
+  }
+
+  // optional bool tschchartseriestrendlineshowr2value = 45;
+  if (has_tschchartseriestrendlineshowr2value()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(45, this->tschchartseriestrendlineshowr2value(), target);
+  }
+
+  // optional int32 tschchartseriestrendlinetype = 46;
+  if (has_tschchartseriestrendlinetype()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(46, this->tschchartseriestrendlinetype(), target);
+  }
+
+  // optional float tschchartserieswedgeexplosion = 47;
+  if (has_tschchartserieswedgeexplosion()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(47, this->tschchartserieswedgeexplosion(), target);
+  }
+
+  // optional int32 tschchartseriesyaxisordinal = 48;
+  if (has_tschchartseriesyaxisordinal()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(48, this->tschchartseriesyaxisordinal(), target);
+  }
+
+  // optional int32 tschchartseriesvaluelabelsaxis = 49;
+  if (has_tschchartseriesvaluelabelsaxis()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(49, this->tschchartseriesvaluelabelsaxis(), target);
+  }
+
+  // optional .TSD.LineEndArchive tschchartserieserrorbarlineend = 50;
+  if (has_tschchartserieserrorbarlineend()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        50, this->tschchartserieserrorbarlineend(), target);
+  }
+
+  // optional .TSD.LineEndArchive tschchartserieserrorbarlineendscatterx = 51;
+  if (has_tschchartserieserrorbarlineendscatterx()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        51, this->tschchartserieserrorbarlineendscatterx(), target);
+  }
+
+  // optional .TSD.ShadowArchive tschchartserieserrorbarshadow = 52;
+  if (has_tschchartserieserrorbarshadow()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        52, this->tschchartserieserrorbarshadow(), target);
+  }
+
+  // optional .TSD.StrokeArchive tschchartserieserrorbarstroke = 53;
+  if (has_tschchartserieserrorbarstroke()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        53, this->tschchartserieserrorbarstroke(), target);
+  }
+
+  // optional .TSD.StrokeArchive tschchartserieserrorbarstrokescatterx = 54;
+  if (has_tschchartserieserrorbarstrokescatterx()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        54, this->tschchartserieserrorbarstrokescatterx(), target);
+  }
+
+  // optional .TSD.FillArchive tschchartseriesfill = 55;
+  if (has_tschchartseriesfill()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        55, this->tschchartseriesfill(), target);
+  }
+
+  // optional int32 tschchartserieslabelparagraphstyleindex = 56;
+  if (has_tschchartserieslabelparagraphstyleindex()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(56, this->tschchartserieslabelparagraphstyleindex(), target);
+  }
+
+  // optional float tschchartseriesopacity = 57;
+  if (has_tschchartseriesopacity()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(57, this->tschchartseriesopacity(), target);
+  }
+
+  // optional int32 tschchartseriesoutsidelabelparagraphstyleindex = 58;
+  if (has_tschchartseriesoutsidelabelparagraphstyleindex()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(58, this->tschchartseriesoutsidelabelparagraphstyleindex(), target);
+  }
+
+  // optional .TSD.ShadowArchive tschchartseriesshadow = 59;
+  if (has_tschchartseriesshadow()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        59, this->tschchartseriesshadow(), target);
+  }
+
+  // optional .TSD.StrokeArchive tschchartseriesstroke = 60;
+  if (has_tschchartseriesstroke()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        60, this->tschchartseriesstroke(), target);
+  }
+
+  // optional .TSD.FillArchive tschchartseriessymbolfill = 61;
+  if (has_tschchartseriessymbolfill()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        61, this->tschchartseriessymbolfill(), target);
+  }
+
+  // optional bool tschchartseriessymbolfilluseseriesfill = 62;
+  if (has_tschchartseriessymbolfilluseseriesfill()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(62, this->tschchartseriessymbolfilluseseriesfill(), target);
+  }
+
+  // optional bool tschchartseriessymbolfilluseseriesstroke = 63;
+  if (has_tschchartseriessymbolfilluseseriesstroke()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(63, this->tschchartseriessymbolfilluseseriesstroke(), target);
+  }
+
+  // optional float tschchartseriessymbolsize = 64;
+  if (has_tschchartseriessymbolsize()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(64, this->tschchartseriessymbolsize(), target);
+  }
+
+  // optional .TSD.StrokeArchive tschchartseriessymbolstroke = 65;
+  if (has_tschchartseriessymbolstroke()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        65, this->tschchartseriessymbolstroke(), target);
+  }
+
+  // optional float tschchartseriestrendlineequationopacity = 66;
+  if (has_tschchartseriestrendlineequationopacity()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(66, this->tschchartseriestrendlineequationopacity(), target);
+  }
+
+  // optional int32 tschchartseriestrendlineequationparagraphstyleindex = 67;
+  if (has_tschchartseriestrendlineequationparagraphstyleindex()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(67, this->tschchartseriestrendlineequationparagraphstyleindex(), target);
+  }
+
+  // optional float tschchartseriestrendlinersquaredopacity = 68;
+  if (has_tschchartseriestrendlinersquaredopacity()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(68, this->tschchartseriestrendlinersquaredopacity(), target);
+  }
+
+  // optional int32 tschchartseriestrendlinersquaredparagraphstyleindex = 69;
+  if (has_tschchartseriestrendlinersquaredparagraphstyleindex()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(69, this->tschchartseriestrendlinersquaredparagraphstyleindex(), target);
+  }
+
+  // optional .TSD.ShadowArchive tschchartseriestrendlineshadow = 70;
+  if (has_tschchartseriestrendlineshadow()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        70, this->tschchartseriestrendlineshadow(), target);
+  }
+
+  // optional .TSD.StrokeArchive tschchartseriestrendlinestroke = 71;
+  if (has_tschchartseriestrendlinestroke()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        71, this->tschchartseriestrendlinestroke(), target);
+  }
+
+  // optional int32 tschchartseriesvaluelabelposition = 72;
+  if (has_tschchartseriesvaluelabelposition()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(72, this->tschchartseriesvaluelabelposition(), target);
+  }
+
+  // optional bool tschchartseriesshowlabelsinfront = 73;
+  if (has_tschchartseriesshowlabelsinfront()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(73, this->tschchartseriesshowlabelsinfront(), target);
+  }
+
+  if (!unknown_fields().empty()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  return target;
+}
+
+int ChartSeriesGenericPropertyMapArchive::ByteSize() const {
+  int total_size = 0;
+
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    // optional float tschchartseriesadjustmentscale = 1;
+    if (has_tschchartseriesadjustmentscale()) {
+      total_size += 1 + 4;
+    }
+
+    // optional .TSCH.ChartsNSArrayOfNSNumberDoubleArchive tschchartserieserrorbarcustomnegativedata = 2;
+    if (has_tschchartserieserrorbarcustomnegativedata()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->tschchartserieserrorbarcustomnegativedata());
+    }
+
+    // optional .TSCH.ChartsNSArrayOfNSNumberDoubleArchive tschchartserieserrorbarcustomnegativedatascatterx = 3;
+    if (has_tschchartserieserrorbarcustomnegativedatascatterx()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->tschchartserieserrorbarcustomnegativedatascatterx());
+    }
+
+    // optional .TSCH.ChartsNSArrayOfNSNumberDoubleArchive tschchartserieserrorbarcustompositivedata = 4;
+    if (has_tschchartserieserrorbarcustompositivedata()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->tschchartserieserrorbarcustompositivedata());
+    }
+
+    // optional .TSCH.ChartsNSArrayOfNSNumberDoubleArchive tschchartserieserrorbarcustompositivedatascatterx = 5;
+    if (has_tschchartserieserrorbarcustompositivedatascatterx()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->tschchartserieserrorbarcustompositivedatascatterx());
+    }
+
+    // optional float tschchartserieserrorbarfixedvalue = 6;
+    if (has_tschchartserieserrorbarfixedvalue()) {
+      total_size += 1 + 4;
+    }
+
+    // optional float tschchartserieserrorbarfixedvaluescatterx = 7;
+    if (has_tschchartserieserrorbarfixedvaluescatterx()) {
+      total_size += 1 + 4;
+    }
+
+    // optional float tschchartserieserrorbarpercentvalue = 8;
+    if (has_tschchartserieserrorbarpercentvalue()) {
+      total_size += 1 + 4;
+    }
+
+  }
+  if (_has_bits_[8 / 32] & (0xffu << (8 % 32))) {
+    // optional float tschchartserieserrorbarpercentvaluescatterx = 9;
+    if (has_tschchartserieserrorbarpercentvaluescatterx()) {
+      total_size += 1 + 4;
+    }
+
+    // optional int32 tschchartserieserrorbarsetting = 10;
+    if (has_tschchartserieserrorbarsetting()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::Int32Size(
+          this->tschchartserieserrorbarsetting());
+    }
+
+    // optional int32 tschchartserieserrorbarsettingscatterx = 11;
+    if (has_tschchartserieserrorbarsettingscatterx()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::Int32Size(
+          this->tschchartserieserrorbarsettingscatterx());
+    }
+
+    // optional float tschchartserieserrorbarstddevvalue = 12;
+    if (has_tschchartserieserrorbarstddevvalue()) {
+      total_size += 1 + 4;
+    }
+
+    // optional float tschchartserieserrorbarstddevvaluescatterx = 13;
+    if (has_tschchartserieserrorbarstddevvaluescatterx()) {
+      total_size += 1 + 4;
+    }
+
+    // optional int32 tschchartserieserrorbartype = 14;
+    if (has_tschchartserieserrorbartype()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::Int32Size(
+          this->tschchartserieserrorbartype());
+    }
+
+    // optional int32 tschchartserieserrorbartypescatterx = 15;
+    if (has_tschchartserieserrorbartypescatterx()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::Int32Size(
+          this->tschchartserieserrorbartypescatterx());
+    }
+
+    // optional float tschchartserieslabelexplosion = 16;
+    if (has_tschchartserieslabelexplosion()) {
+      total_size += 2 + 4;
+    }
+
+  }
+  if (_has_bits_[16 / 32] & (0xffu << (16 % 32))) {
+    // optional int32 tschchartserieslinetype = 17;
+    if (has_tschchartserieslinetype()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::Int32Size(
+          this->tschchartserieslinetype());
+    }
+
+    // optional .TSK.FormatStructArchive tschchartseries1_0numberformat = 18;
+    if (has_tschchartseries1_0numberformat()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->tschchartseries1_0numberformat());
+    }
+
+    // optional .TSK.FormatStructArchive tschchartseriesnumberformat = 19;
+    if (has_tschchartseriesnumberformat()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->tschchartseriesnumberformat());
+    }
+
+    // optional .TSK.FormatStructArchive tschchartseries1_0dateformat = 20;
+    if (has_tschchartseries1_0dateformat()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->tschchartseries1_0dateformat());
+    }
+
+    // optional .TSK.FormatStructArchive tschchartseriesdurationformat = 21;
+    if (has_tschchartseriesdurationformat()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->tschchartseriesdurationformat());
+    }
+
+    // optional .TSK.FormatStructArchive tschchartseriesdateformat = 22;
+    if (has_tschchartseriesdateformat()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->tschchartseriesdateformat());
+    }
+
+    // optional int32 tschchartseriesnumberformattype = 23;
+    if (has_tschchartseriesnumberformattype()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::Int32Size(
+          this->tschchartseriesnumberformattype());
+    }
+
+    // optional .TSK.FormatStructArchive tschchartseriespercentnumberformat = 24;
+    if (has_tschchartseriespercentnumberformat()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->tschchartseriespercentnumberformat());
+    }
+
+  }
+  if (_has_bits_[24 / 32] & (0xffu << (24 % 32))) {
+    // optional int32 tschchartseriesseriestype = 25;
+    if (has_tschchartseriesseriestype()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::Int32Size(
+          this->tschchartseriesseriestype());
+    }
+
+    // optional bool tschchartseriesshowerrorbar = 26;
+    if (has_tschchartseriesshowerrorbar()) {
+      total_size += 2 + 1;
+    }
+
+    // optional bool tschchartseriesshowerrorbarscatterx = 27;
+    if (has_tschchartseriesshowerrorbarscatterx()) {
+      total_size += 2 + 1;
+    }
+
+    // optional bool tschchartseriesshowline = 28;
+    if (has_tschchartseriesshowline()) {
+      total_size += 2 + 1;
+    }
+
+    // optional bool tschchartseriesshownegativedata = 29;
+    if (has_tschchartseriesshownegativedata()) {
+      total_size += 2 + 1;
+    }
+
+    // optional bool tschchartseriesshowserieslabels = 30;
+    if (has_tschchartseriesshowserieslabels()) {
+      total_size += 2 + 1;
+    }
+
+    // optional bool tschchartseriesshowsymbol = 31;
+    if (has_tschchartseriesshowsymbol()) {
+      total_size += 2 + 1;
+    }
+
+    // optional bool tschchartseriesshowtrendline = 32;
+    if (has_tschchartseriesshowtrendline()) {
+      total_size += 2 + 1;
+    }
+
+  }
+  if (_has_bits_[32 / 32] & (0xffu << (32 % 32))) {
+    // optional bool tschchartseriesshowvaluelabels = 33;
+    if (has_tschchartseriesshowvaluelabels()) {
+      total_size += 2 + 1;
+    }
+
+    // optional int32 tschchartseriessizedimension = 34;
+    if (has_tschchartseriessizedimension()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::Int32Size(
+          this->tschchartseriessizedimension());
+    }
+
+    // optional int32 tschchartseriessymboltype = 35;
+    if (has_tschchartseriessymboltype()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::Int32Size(
+          this->tschchartseriessymboltype());
+    }
+
+    // optional float tschchartseriestrendlineequationoffsetx = 36;
+    if (has_tschchartseriestrendlineequationoffsetx()) {
+      total_size += 2 + 4;
+    }
+
+    // optional float tschchartseriestrendlineequationoffsety = 37;
+    if (has_tschchartseriestrendlineequationoffsety()) {
+      total_size += 2 + 4;
+    }
+
+    // optional string tschchartseriestrendlinelabelstring = 38;
+    if (has_tschchartseriestrendlinelabelstring()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->tschchartseriestrendlinelabelstring());
+    }
+
+    // optional int32 tschchartseriestrendlineorder = 39;
+    if (has_tschchartseriestrendlineorder()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::Int32Size(
+          this->tschchartseriestrendlineorder());
+    }
+
+    // optional int32 tschchartseriestrendlineperiod = 40;
+    if (has_tschchartseriestrendlineperiod()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::Int32Size(
+          this->tschchartseriestrendlineperiod());
+    }
+
+  }
+  if (_has_bits_[40 / 32] & (0xffu << (40 % 32))) {
+    // optional float tschchartseriestrendlinersquaredoffsetx = 41;
+    if (has_tschchartseriestrendlinersquaredoffsetx()) {
+      total_size += 2 + 4;
+    }
+
+    // optional float tschchartseriestrendlinersquaredoffsety = 42;
+    if (has_tschchartseriestrendlinersquaredoffsety()) {
+      total_size += 2 + 4;
+    }
+
+    // optional bool tschchartseriestrendlineshowequation = 43;
+    if (has_tschchartseriestrendlineshowequation()) {
+      total_size += 2 + 1;
+    }
+
+    // optional bool tschchartseriestrendlineshowlabel = 44;
+    if (has_tschchartseriestrendlineshowlabel()) {
+      total_size += 2 + 1;
+    }
+
+    // optional bool tschchartseriestrendlineshowr2value = 45;
+    if (has_tschchartseriestrendlineshowr2value()) {
+      total_size += 2 + 1;
+    }
+
+    // optional int32 tschchartseriestrendlinetype = 46;
+    if (has_tschchartseriestrendlinetype()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::Int32Size(
+          this->tschchartseriestrendlinetype());
+    }
+
+    // optional float tschchartserieswedgeexplosion = 47;
+    if (has_tschchartserieswedgeexplosion()) {
+      total_size += 2 + 4;
+    }
+
+    // optional int32 tschchartseriesyaxisordinal = 48;
+    if (has_tschchartseriesyaxisordinal()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::Int32Size(
+          this->tschchartseriesyaxisordinal());
+    }
+
+  }
+  if (_has_bits_[48 / 32] & (0xffu << (48 % 32))) {
+    // optional int32 tschchartseriesvaluelabelsaxis = 49;
+    if (has_tschchartseriesvaluelabelsaxis()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::Int32Size(
+          this->tschchartseriesvaluelabelsaxis());
+    }
+
+    // optional .TSD.LineEndArchive tschchartserieserrorbarlineend = 50;
+    if (has_tschchartserieserrorbarlineend()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->tschchartserieserrorbarlineend());
+    }
+
+    // optional .TSD.LineEndArchive tschchartserieserrorbarlineendscatterx = 51;
+    if (has_tschchartserieserrorbarlineendscatterx()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->tschchartserieserrorbarlineendscatterx());
+    }
+
+    // optional .TSD.ShadowArchive tschchartserieserrorbarshadow = 52;
+    if (has_tschchartserieserrorbarshadow()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->tschchartserieserrorbarshadow());
+    }
+
+    // optional .TSD.StrokeArchive tschchartserieserrorbarstroke = 53;
+    if (has_tschchartserieserrorbarstroke()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->tschchartserieserrorbarstroke());
+    }
+
+    // optional .TSD.StrokeArchive tschchartserieserrorbarstrokescatterx = 54;
+    if (has_tschchartserieserrorbarstrokescatterx()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->tschchartserieserrorbarstrokescatterx());
+    }
+
+    // optional .TSD.FillArchive tschchartseriesfill = 55;
+    if (has_tschchartseriesfill()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->tschchartseriesfill());
+    }
+
+    // optional int32 tschchartserieslabelparagraphstyleindex = 56;
+    if (has_tschchartserieslabelparagraphstyleindex()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::Int32Size(
+          this->tschchartserieslabelparagraphstyleindex());
+    }
+
+  }
+  if (_has_bits_[56 / 32] & (0xffu << (56 % 32))) {
+    // optional float tschchartseriesopacity = 57;
+    if (has_tschchartseriesopacity()) {
+      total_size += 2 + 4;
+    }
+
+    // optional int32 tschchartseriesoutsidelabelparagraphstyleindex = 58;
+    if (has_tschchartseriesoutsidelabelparagraphstyleindex()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::Int32Size(
+          this->tschchartseriesoutsidelabelparagraphstyleindex());
+    }
+
+    // optional .TSD.ShadowArchive tschchartseriesshadow = 59;
+    if (has_tschchartseriesshadow()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->tschchartseriesshadow());
+    }
+
+    // optional .TSD.StrokeArchive tschchartseriesstroke = 60;
+    if (has_tschchartseriesstroke()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->tschchartseriesstroke());
+    }
+
+    // optional .TSD.FillArchive tschchartseriessymbolfill = 61;
+    if (has_tschchartseriessymbolfill()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->tschchartseriessymbolfill());
+    }
+
+    // optional bool tschchartseriessymbolfilluseseriesfill = 62;
+    if (has_tschchartseriessymbolfilluseseriesfill()) {
+      total_size += 2 + 1;
+    }
+
+    // optional bool tschchartseriessymbolfilluseseriesstroke = 63;
+    if (has_tschchartseriessymbolfilluseseriesstroke()) {
+      total_size += 2 + 1;
+    }
+
+    // optional float tschchartseriessymbolsize = 64;
+    if (has_tschchartseriessymbolsize()) {
+      total_size += 2 + 4;
+    }
+
+  }
+  if (_has_bits_[64 / 32] & (0xffu << (64 % 32))) {
+    // optional .TSD.StrokeArchive tschchartseriessymbolstroke = 65;
+    if (has_tschchartseriessymbolstroke()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->tschchartseriessymbolstroke());
+    }
+
+    // optional float tschchartseriestrendlineequationopacity = 66;
+    if (has_tschchartseriestrendlineequationopacity()) {
+      total_size += 2 + 4;
+    }
+
+    // optional int32 tschchartseriestrendlineequationparagraphstyleindex = 67;
+    if (has_tschchartseriestrendlineequationparagraphstyleindex()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::Int32Size(
+          this->tschchartseriestrendlineequationparagraphstyleindex());
+    }
+
+    // optional float tschchartseriestrendlinersquaredopacity = 68;
+    if (has_tschchartseriestrendlinersquaredopacity()) {
+      total_size += 2 + 4;
+    }
+
+    // optional int32 tschchartseriestrendlinersquaredparagraphstyleindex = 69;
+    if (has_tschchartseriestrendlinersquaredparagraphstyleindex()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::Int32Size(
+          this->tschchartseriestrendlinersquaredparagraphstyleindex());
+    }
+
+    // optional .TSD.ShadowArchive tschchartseriestrendlineshadow = 70;
+    if (has_tschchartseriestrendlineshadow()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->tschchartseriestrendlineshadow());
+    }
+
+    // optional .TSD.StrokeArchive tschchartseriestrendlinestroke = 71;
+    if (has_tschchartseriestrendlinestroke()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->tschchartseriestrendlinestroke());
+    }
+
+    // optional int32 tschchartseriesvaluelabelposition = 72;
+    if (has_tschchartseriesvaluelabelposition()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::Int32Size(
+          this->tschchartseriesvaluelabelposition());
+    }
+
+  }
+  if (_has_bits_[72 / 32] & (0xffu << (72 % 32))) {
+    // optional bool tschchartseriesshowlabelsinfront = 73;
+    if (has_tschchartseriesshowlabelsinfront()) {
+      total_size += 2 + 1;
+    }
+
+  }
+  if (!unknown_fields().empty()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = total_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void ChartSeriesGenericPropertyMapArchive::MergeFrom(const ::google::protobuf::Message& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  const ChartSeriesGenericPropertyMapArchive* source =
+    ::google::protobuf::internal::dynamic_cast_if_available<const ChartSeriesGenericPropertyMapArchive*>(
+      &from);
+  if (source == NULL) {
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+    MergeFrom(*source);
+  }
+}
+
+void ChartSeriesGenericPropertyMapArchive::MergeFrom(const ChartSeriesGenericPropertyMapArchive& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (from.has_tschchartseriesadjustmentscale()) {
+      set_tschchartseriesadjustmentscale(from.tschchartseriesadjustmentscale());
+    }
+    if (from.has_tschchartserieserrorbarcustomnegativedata()) {
+      mutable_tschchartserieserrorbarcustomnegativedata()->::TSCH::ChartsNSArrayOfNSNumberDoubleArchive::MergeFrom(from.tschchartserieserrorbarcustomnegativedata());
+    }
+    if (from.has_tschchartserieserrorbarcustomnegativedatascatterx()) {
+      mutable_tschchartserieserrorbarcustomnegativedatascatterx()->::TSCH::ChartsNSArrayOfNSNumberDoubleArchive::MergeFrom(from.tschchartserieserrorbarcustomnegativedatascatterx());
+    }
+    if (from.has_tschchartserieserrorbarcustompositivedata()) {
+      mutable_tschchartserieserrorbarcustompositivedata()->::TSCH::ChartsNSArrayOfNSNumberDoubleArchive::MergeFrom(from.tschchartserieserrorbarcustompositivedata());
+    }
+    if (from.has_tschchartserieserrorbarcustompositivedatascatterx()) {
+      mutable_tschchartserieserrorbarcustompositivedatascatterx()->::TSCH::ChartsNSArrayOfNSNumberDoubleArchive::MergeFrom(from.tschchartserieserrorbarcustompositivedatascatterx());
+    }
+    if (from.has_tschchartserieserrorbarfixedvalue()) {
+      set_tschchartserieserrorbarfixedvalue(from.tschchartserieserrorbarfixedvalue());
+    }
+    if (from.has_tschchartserieserrorbarfixedvaluescatterx()) {
+      set_tschchartserieserrorbarfixedvaluescatterx(from.tschchartserieserrorbarfixedvaluescatterx());
+    }
+    if (from.has_tschchartserieserrorbarpercentvalue()) {
+      set_tschchartserieserrorbarpercentvalue(from.tschchartserieserrorbarpercentvalue());
+    }
+  }
+  if (from._has_bits_[8 / 32] & (0xffu << (8 % 32))) {
+    if (from.has_tschchartserieserrorbarpercentvaluescatterx()) {
+      set_tschchartserieserrorbarpercentvaluescatterx(from.tschchartserieserrorbarpercentvaluescatterx());
+    }
+    if (from.has_tschchartserieserrorbarsetting()) {
+      set_tschchartserieserrorbarsetting(from.tschchartserieserrorbarsetting());
+    }
+    if (from.has_tschchartserieserrorbarsettingscatterx()) {
+      set_tschchartserieserrorbarsettingscatterx(from.tschchartserieserrorbarsettingscatterx());
+    }
+    if (from.has_tschchartserieserrorbarstddevvalue()) {
+      set_tschchartserieserrorbarstddevvalue(from.tschchartserieserrorbarstddevvalue());
+    }
+    if (from.has_tschchartserieserrorbarstddevvaluescatterx()) {
+      set_tschchartserieserrorbarstddevvaluescatterx(from.tschchartserieserrorbarstddevvaluescatterx());
+    }
+    if (from.has_tschchartserieserrorbartype()) {
+      set_tschchartserieserrorbartype(from.tschchartserieserrorbartype());
+    }
+    if (from.has_tschchartserieserrorbartypescatterx()) {
+      set_tschchartserieserrorbartypescatterx(from.tschchartserieserrorbartypescatterx());
+    }
+    if (from.has_tschchartserieslabelexplosion()) {
+      set_tschchartserieslabelexplosion(from.tschchartserieslabelexplosion());
+    }
+  }
+  if (from._has_bits_[16 / 32] & (0xffu << (16 % 32))) {
+    if (from.has_tschchartserieslinetype()) {
+      set_tschchartserieslinetype(from.tschchartserieslinetype());
+    }
+    if (from.has_tschchartseries1_0numberformat()) {
+      mutable_tschchartseries1_0numberformat()->::TSK::FormatStructArchive::MergeFrom(from.tschchartseries1_0numberformat());
+    }
+    if (from.has_tschchartseriesnumberformat()) {
+      mutable_tschchartseriesnumberformat()->::TSK::FormatStructArchive::MergeFrom(from.tschchartseriesnumberformat());
+    }
+    if (from.has_tschchartseries1_0dateformat()) {
+      mutable_tschchartseries1_0dateformat()->::TSK::FormatStructArchive::MergeFrom(from.tschchartseries1_0dateformat());
+    }
+    if (from.has_tschchartseriesdurationformat()) {
+      mutable_tschchartseriesdurationformat()->::TSK::FormatStructArchive::MergeFrom(from.tschchartseriesdurationformat());
+    }
+    if (from.has_tschchartseriesdateformat()) {
+      mutable_tschchartseriesdateformat()->::TSK::FormatStructArchive::MergeFrom(from.tschchartseriesdateformat());
+    }
+    if (from.has_tschchartseriesnumberformattype()) {
+      set_tschchartseriesnumberformattype(from.tschchartseriesnumberformattype());
+    }
+    if (from.has_tschchartseriespercentnumberformat()) {
+      mutable_tschchartseriespercentnumberformat()->::TSK::FormatStructArchive::MergeFrom(from.tschchartseriespercentnumberformat());
+    }
+  }
+  if (from._has_bits_[24 / 32] & (0xffu << (24 % 32))) {
+    if (from.has_tschchartseriesseriestype()) {
+      set_tschchartseriesseriestype(from.tschchartseriesseriestype());
+    }
+    if (from.has_tschchartseriesshowerrorbar()) {
+      set_tschchartseriesshowerrorbar(from.tschchartseriesshowerrorbar());
+    }
+    if (from.has_tschchartseriesshowerrorbarscatterx()) {
+      set_tschchartseriesshowerrorbarscatterx(from.tschchartseriesshowerrorbarscatterx());
+    }
+    if (from.has_tschchartseriesshowline()) {
+      set_tschchartseriesshowline(from.tschchartseriesshowline());
+    }
+    if (from.has_tschchartseriesshownegativedata()) {
+      set_tschchartseriesshownegativedata(from.tschchartseriesshownegativedata());
+    }
+    if (from.has_tschchartseriesshowserieslabels()) {
+      set_tschchartseriesshowserieslabels(from.tschchartseriesshowserieslabels());
+    }
+    if (from.has_tschchartseriesshowsymbol()) {
+      set_tschchartseriesshowsymbol(from.tschchartseriesshowsymbol());
+    }
+    if (from.has_tschchartseriesshowtrendline()) {
+      set_tschchartseriesshowtrendline(from.tschchartseriesshowtrendline());
+    }
+  }
+  if (from._has_bits_[32 / 32] & (0xffu << (32 % 32))) {
+    if (from.has_tschchartseriesshowvaluelabels()) {
+      set_tschchartseriesshowvaluelabels(from.tschchartseriesshowvaluelabels());
+    }
+    if (from.has_tschchartseriessizedimension()) {
+      set_tschchartseriessizedimension(from.tschchartseriessizedimension());
+    }
+    if (from.has_tschchartseriessymboltype()) {
+      set_tschchartseriessymboltype(from.tschchartseriessymboltype());
+    }
+    if (from.has_tschchartseriestrendlineequationoffsetx()) {
+      set_tschchartseriestrendlineequationoffsetx(from.tschchartseriestrendlineequationoffsetx());
+    }
+    if (from.has_tschchartseriestrendlineequationoffsety()) {
+      set_tschchartseriestrendlineequationoffsety(from.tschchartseriestrendlineequationoffsety());
+    }
+    if (from.has_tschchartseriestrendlinelabelstring()) {
+      set_tschchartseriestrendlinelabelstring(from.tschchartseriestrendlinelabelstring());
+    }
+    if (from.has_tschchartseriestrendlineorder()) {
+      set_tschchartseriestrendlineorder(from.tschchartseriestrendlineorder());
+    }
+    if (from.has_tschchartseriestrendlineperiod()) {
+      set_tschchartseriestrendlineperiod(from.tschchartseriestrendlineperiod());
+    }
+  }
+  if (from._has_bits_[40 / 32] & (0xffu << (40 % 32))) {
+    if (from.has_tschchartseriestrendlinersquaredoffsetx()) {
+      set_tschchartseriestrendlinersquaredoffsetx(from.tschchartseriestrendlinersquaredoffsetx());
+    }
+    if (from.has_tschchartseriestrendlinersquaredoffsety()) {
+      set_tschchartseriestrendlinersquaredoffsety(from.tschchartseriestrendlinersquaredoffsety());
+    }
+    if (from.has_tschchartseriestrendlineshowequation()) {
+      set_tschchartseriestrendlineshowequation(from.tschchartseriestrendlineshowequation());
+    }
+    if (from.has_tschchartseriestrendlineshowlabel()) {
+      set_tschchartseriestrendlineshowlabel(from.tschchartseriestrendlineshowlabel());
+    }
+    if (from.has_tschchartseriestrendlineshowr2value()) {
+      set_tschchartseriestrendlineshowr2value(from.tschchartseriestrendlineshowr2value());
+    }
+    if (from.has_tschchartseriestrendlinetype()) {
+      set_tschchartseriestrendlinetype(from.tschchartseriestrendlinetype());
+    }
+    if (from.has_tschchartserieswedgeexplosion()) {
+      set_tschchartserieswedgeexplosion(from.tschchartserieswedgeexplosion());
+    }
+    if (from.has_tschchartseriesyaxisordinal()) {
+      set_tschchartseriesyaxisordinal(from.tschchartseriesyaxisordinal());
+    }
+  }
+  if (from._has_bits_[48 / 32] & (0xffu << (48 % 32))) {
+    if (from.has_tschchartseriesvaluelabelsaxis()) {
+      set_tschchartseriesvaluelabelsaxis(from.tschchartseriesvaluelabelsaxis());
+    }
+    if (from.has_tschchartserieserrorbarlineend()) {
+      mutable_tschchartserieserrorbarlineend()->::TSD::LineEndArchive::MergeFrom(from.tschchartserieserrorbarlineend());
+    }
+    if (from.has_tschchartserieserrorbarlineendscatterx()) {
+      mutable_tschchartserieserrorbarlineendscatterx()->::TSD::LineEndArchive::MergeFrom(from.tschchartserieserrorbarlineendscatterx());
+    }
+    if (from.has_tschchartserieserrorbarshadow()) {
+      mutable_tschchartserieserrorbarshadow()->::TSD::ShadowArchive::MergeFrom(from.tschchartserieserrorbarshadow());
+    }
+    if (from.has_tschchartserieserrorbarstroke()) {
+      mutable_tschchartserieserrorbarstroke()->::TSD::StrokeArchive::MergeFrom(from.tschchartserieserrorbarstroke());
+    }
+    if (from.has_tschchartserieserrorbarstrokescatterx()) {
+      mutable_tschchartserieserrorbarstrokescatterx()->::TSD::StrokeArchive::MergeFrom(from.tschchartserieserrorbarstrokescatterx());
+    }
+    if (from.has_tschchartseriesfill()) {
+      mutable_tschchartseriesfill()->::TSD::FillArchive::MergeFrom(from.tschchartseriesfill());
+    }
+    if (from.has_tschchartserieslabelparagraphstyleindex()) {
+      set_tschchartserieslabelparagraphstyleindex(from.tschchartserieslabelparagraphstyleindex());
+    }
+  }
+  if (from._has_bits_[56 / 32] & (0xffu << (56 % 32))) {
+    if (from.has_tschchartseriesopacity()) {
+      set_tschchartseriesopacity(from.tschchartseriesopacity());
+    }
+    if (from.has_tschchartseriesoutsidelabelparagraphstyleindex()) {
+      set_tschchartseriesoutsidelabelparagraphstyleindex(from.tschchartseriesoutsidelabelparagraphstyleindex());
+    }
+    if (from.has_tschchartseriesshadow()) {
+      mutable_tschchartseriesshadow()->::TSD::ShadowArchive::MergeFrom(from.tschchartseriesshadow());
+    }
+    if (from.has_tschchartseriesstroke()) {
+      mutable_tschchartseriesstroke()->::TSD::StrokeArchive::MergeFrom(from.tschchartseriesstroke());
+    }
+    if (from.has_tschchartseriessymbolfill()) {
+      mutable_tschchartseriessymbolfill()->::TSD::FillArchive::MergeFrom(from.tschchartseriessymbolfill());
+    }
+    if (from.has_tschchartseriessymbolfilluseseriesfill()) {
+      set_tschchartseriessymbolfilluseseriesfill(from.tschchartseriessymbolfilluseseriesfill());
+    }
+    if (from.has_tschchartseriessymbolfilluseseriesstroke()) {
+      set_tschchartseriessymbolfilluseseriesstroke(from.tschchartseriessymbolfilluseseriesstroke());
+    }
+    if (from.has_tschchartseriessymbolsize()) {
+      set_tschchartseriessymbolsize(from.tschchartseriessymbolsize());
+    }
+  }
+  if (from._has_bits_[64 / 32] & (0xffu << (64 % 32))) {
+    if (from.has_tschchartseriessymbolstroke()) {
+      mutable_tschchartseriessymbolstroke()->::TSD::StrokeArchive::MergeFrom(from.tschchartseriessymbolstroke());
+    }
+    if (from.has_tschchartseriestrendlineequationopacity()) {
+      set_tschchartseriestrendlineequationopacity(from.tschchartseriestrendlineequationopacity());
+    }
+    if (from.has_tschchartseriestrendlineequationparagraphstyleindex()) {
+      set_tschchartseriestrendlineequationparagraphstyleindex(from.tschchartseriestrendlineequationparagraphstyleindex());
+    }
+    if (from.has_tschchartseriestrendlinersquaredopacity()) {
+      set_tschchartseriestrendlinersquaredopacity(from.tschchartseriestrendlinersquaredopacity());
+    }
+    if (from.has_tschchartseriestrendlinersquaredparagraphstyleindex()) {
+      set_tschchartseriestrendlinersquaredparagraphstyleindex(from.tschchartseriestrendlinersquaredparagraphstyleindex());
+    }
+    if (from.has_tschchartseriestrendlineshadow()) {
+      mutable_tschchartseriestrendlineshadow()->::TSD::ShadowArchive::MergeFrom(from.tschchartseriestrendlineshadow());
+    }
+    if (from.has_tschchartseriestrendlinestroke()) {
+      mutable_tschchartseriestrendlinestroke()->::TSD::StrokeArchive::MergeFrom(from.tschchartseriestrendlinestroke());
+    }
+    if (from.has_tschchartseriesvaluelabelposition()) {
+      set_tschchartseriesvaluelabelposition(from.tschchartseriesvaluelabelposition());
+    }
+  }
+  if (from._has_bits_[72 / 32] & (0xffu << (72 % 32))) {
+    if (from.has_tschchartseriesshowlabelsinfront()) {
+      set_tschchartseriesshowlabelsinfront(from.tschchartseriesshowlabelsinfront());
+    }
+  }
+  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
+}
+
+void ChartSeriesGenericPropertyMapArchive::CopyFrom(const ::google::protobuf::Message& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void ChartSeriesGenericPropertyMapArchive::CopyFrom(const ChartSeriesGenericPropertyMapArchive& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool ChartSeriesGenericPropertyMapArchive::IsInitialized() const {
+
+  if (has_tschchartseries1_0numberformat()) {
+    if (!this->tschchartseries1_0numberformat().IsInitialized()) return false;
+  }
+  if (has_tschchartseriesnumberformat()) {
+    if (!this->tschchartseriesnumberformat().IsInitialized()) return false;
+  }
+  if (has_tschchartseries1_0dateformat()) {
+    if (!this->tschchartseries1_0dateformat().IsInitialized()) return false;
+  }
+  if (has_tschchartseriesdurationformat()) {
+    if (!this->tschchartseriesdurationformat().IsInitialized()) return false;
+  }
+  if (has_tschchartseriesdateformat()) {
+    if (!this->tschchartseriesdateformat().IsInitialized()) return false;
+  }
+  if (has_tschchartseriespercentnumberformat()) {
+    if (!this->tschchartseriespercentnumberformat().IsInitialized()) return false;
+  }
+  if (has_tschchartserieserrorbarlineend()) {
+    if (!this->tschchartserieserrorbarlineend().IsInitialized()) return false;
+  }
+  if (has_tschchartserieserrorbarlineendscatterx()) {
+    if (!this->tschchartserieserrorbarlineendscatterx().IsInitialized()) return false;
+  }
+  if (has_tschchartserieserrorbarshadow()) {
+    if (!this->tschchartserieserrorbarshadow().IsInitialized()) return false;
+  }
+  if (has_tschchartserieserrorbarstroke()) {
+    if (!this->tschchartserieserrorbarstroke().IsInitialized()) return false;
+  }
+  if (has_tschchartserieserrorbarstrokescatterx()) {
+    if (!this->tschchartserieserrorbarstrokescatterx().IsInitialized()) return false;
+  }
+  if (has_tschchartseriesfill()) {
+    if (!this->tschchartseriesfill().IsInitialized()) return false;
+  }
+  if (has_tschchartseriesshadow()) {
+    if (!this->tschchartseriesshadow().IsInitialized()) return false;
+  }
+  if (has_tschchartseriesstroke()) {
+    if (!this->tschchartseriesstroke().IsInitialized()) return false;
+  }
+  if (has_tschchartseriessymbolfill()) {
+    if (!this->tschchartseriessymbolfill().IsInitialized()) return false;
+  }
+  if (has_tschchartseriessymbolstroke()) {
+    if (!this->tschchartseriessymbolstroke().IsInitialized()) return false;
+  }
+  if (has_tschchartseriestrendlineshadow()) {
+    if (!this->tschchartseriestrendlineshadow().IsInitialized()) return false;
+  }
+  if (has_tschchartseriestrendlinestroke()) {
+    if (!this->tschchartseriestrendlinestroke().IsInitialized()) return false;
+  }
+  return true;
+}
+
+void ChartSeriesGenericPropertyMapArchive::Swap(ChartSeriesGenericPropertyMapArchive* other) {
+  if (other != this) {
+    std::swap(tschchartseriesadjustmentscale_, other->tschchartseriesadjustmentscale_);
+    std::swap(tschchartserieserrorbarcustomnegativedata_, other->tschchartserieserrorbarcustomnegativedata_);
+    std::swap(tschchartserieserrorbarcustomnegativedatascatterx_, other->tschchartserieserrorbarcustomnegativedatascatterx_);
+    std::swap(tschchartserieserrorbarcustompositivedata_, other->tschchartserieserrorbarcustompositivedata_);
+    std::swap(tschchartserieserrorbarcustompositivedatascatterx_, other->tschchartserieserrorbarcustompositivedatascatterx_);
+    std::swap(tschchartserieserrorbarfixedvalue_, other->tschchartserieserrorbarfixedvalue_);
+    std::swap(tschchartserieserrorbarfixedvaluescatterx_, other->tschchartserieserrorbarfixedvaluescatterx_);
+    std::swap(tschchartserieserrorbarpercentvalue_, other->tschchartserieserrorbarpercentvalue_);
+    std::swap(tschchartserieserrorbarpercentvaluescatterx_, other->tschchartserieserrorbarpercentvaluescatterx_);
+    std::swap(tschchartserieserrorbarsetting_, other->tschchartserieserrorbarsetting_);
+    std::swap(tschchartserieserrorbarsettingscatterx_, other->tschchartserieserrorbarsettingscatterx_);
+    std::swap(tschchartserieserrorbarstddevvalue_, other->tschchartserieserrorbarstddevvalue_);
+    std::swap(tschchartserieserrorbarstddevvaluescatterx_, other->tschchartserieserrorbarstddevvaluescatterx_);
+    std::swap(tschchartserieserrorbartype_, other->tschchartserieserrorbartype_);
+    std::swap(tschchartserieserrorbartypescatterx_, other->tschchartserieserrorbartypescatterx_);
+    std::swap(tschchartserieslabelexplosion_, other->tschchartserieslabelexplosion_);
+    std::swap(tschchartserieslinetype_, other->tschchartserieslinetype_);
+    std::swap(tschchartseries1_0numberformat_, other->tschchartseries1_0numberformat_);
+    std::swap(tschchartseriesnumberformat_, other->tschchartseriesnumberformat_);
+    std::swap(tschchartseries1_0dateformat_, other->tschchartseries1_0dateformat_);
+    std::swap(tschchartseriesdurationformat_, other->tschchartseriesdurationformat_);
+    std::swap(tschchartseriesdateformat_, other->tschchartseriesdateformat_);
+    std::swap(tschchartseriesnumberformattype_, other->tschchartseriesnumberformattype_);
+    std::swap(tschchartseriespercentnumberformat_, other->tschchartseriespercentnumberformat_);
+    std::swap(tschchartseriesseriestype_, other->tschchartseriesseriestype_);
+    std::swap(tschchartseriesshowerrorbar_, other->tschchartseriesshowerrorbar_);
+    std::swap(tschchartseriesshowerrorbarscatterx_, other->tschchartseriesshowerrorbarscatterx_);
+    std::swap(tschchartseriesshowline_, other->tschchartseriesshowline_);
+    std::swap(tschchartseriesshownegativedata_, other->tschchartseriesshownegativedata_);
+    std::swap(tschchartseriesshowserieslabels_, other->tschchartseriesshowserieslabels_);
+    std::swap(tschchartseriesshowsymbol_, other->tschchartseriesshowsymbol_);
+    std::swap(tschchartseriesshowtrendline_, other->tschchartseriesshowtrendline_);
+    std::swap(tschchartseriesshowvaluelabels_, other->tschchartseriesshowvaluelabels_);
+    std::swap(tschchartseriessizedimension_, other->tschchartseriessizedimension_);
+    std::swap(tschchartseriessymboltype_, other->tschchartseriessymboltype_);
+    std::swap(tschchartseriestrendlineequationoffsetx_, other->tschchartseriestrendlineequationoffsetx_);
+    std::swap(tschchartseriestrendlineequationoffsety_, other->tschchartseriestrendlineequationoffsety_);
+    std::swap(tschchartseriestrendlinelabelstring_, other->tschchartseriestrendlinelabelstring_);
+    std::swap(tschchartseriestrendlineorder_, other->tschchartseriestrendlineorder_);
+    std::swap(tschchartseriestrendlineperiod_, other->tschchartseriestrendlineperiod_);
+    std::swap(tschchartseriestrendlinersquaredoffsetx_, other->tschchartseriestrendlinersquaredoffsetx_);
+    std::swap(tschchartseriestrendlinersquaredoffsety_, other->tschchartseriestrendlinersquaredoffsety_);
+    std::swap(tschchartseriestrendlineshowequation_, other->tschchartseriestrendlineshowequation_);
+    std::swap(tschchartseriestrendlineshowlabel_, other->tschchartseriestrendlineshowlabel_);
+    std::swap(tschchartseriestrendlineshowr2value_, other->tschchartseriestrendlineshowr2value_);
+    std::swap(tschchartseriestrendlinetype_, other->tschchartseriestrendlinetype_);
+    std::swap(tschchartserieswedgeexplosion_, other->tschchartserieswedgeexplosion_);
+    std::swap(tschchartseriesyaxisordinal_, other->tschchartseriesyaxisordinal_);
+    std::swap(tschchartseriesvaluelabelsaxis_, other->tschchartseriesvaluelabelsaxis_);
+    std::swap(tschchartserieserrorbarlineend_, other->tschchartserieserrorbarlineend_);
+    std::swap(tschchartserieserrorbarlineendscatterx_, other->tschchartserieserrorbarlineendscatterx_);
+    std::swap(tschchartserieserrorbarshadow_, other->tschchartserieserrorbarshadow_);
+    std::swap(tschchartserieserrorbarstroke_, other->tschchartserieserrorbarstroke_);
+    std::swap(tschchartserieserrorbarstrokescatterx_, other->tschchartserieserrorbarstrokescatterx_);
+    std::swap(tschchartseriesfill_, other->tschchartseriesfill_);
+    std::swap(tschchartserieslabelparagraphstyleindex_, other->tschchartserieslabelparagraphstyleindex_);
+    std::swap(tschchartseriesopacity_, other->tschchartseriesopacity_);
+    std::swap(tschchartseriesoutsidelabelparagraphstyleindex_, other->tschchartseriesoutsidelabelparagraphstyleindex_);
+    std::swap(tschchartseriesshadow_, other->tschchartseriesshadow_);
+    std::swap(tschchartseriesstroke_, other->tschchartseriesstroke_);
+    std::swap(tschchartseriessymbolfill_, other->tschchartseriessymbolfill_);
+    std::swap(tschchartseriessymbolfilluseseriesfill_, other->tschchartseriessymbolfilluseseriesfill_);
+    std::swap(tschchartseriessymbolfilluseseriesstroke_, other->tschchartseriessymbolfilluseseriesstroke_);
+    std::swap(tschchartseriessymbolsize_, other->tschchartseriessymbolsize_);
+    std::swap(tschchartseriessymbolstroke_, other->tschchartseriessymbolstroke_);
+    std::swap(tschchartseriestrendlineequationopacity_, other->tschchartseriestrendlineequationopacity_);
+    std::swap(tschchartseriestrendlineequationparagraphstyleindex_, other->tschchartseriestrendlineequationparagraphstyleindex_);
+    std::swap(tschchartseriestrendlinersquaredopacity_, other->tschchartseriestrendlinersquaredopacity_);
+    std::swap(tschchartseriestrendlinersquaredparagraphstyleindex_, other->tschchartseriestrendlinersquaredparagraphstyleindex_);
+    std::swap(tschchartseriestrendlineshadow_, other->tschchartseriestrendlineshadow_);
+    std::swap(tschchartseriestrendlinestroke_, other->tschchartseriestrendlinestroke_);
+    std::swap(tschchartseriesvaluelabelposition_, other->tschchartseriesvaluelabelposition_);
+    std::swap(tschchartseriesshowlabelsinfront_, other->tschchartseriesshowlabelsinfront_);
+    std::swap(_has_bits_[0], other->_has_bits_[0]);
+    std::swap(_has_bits_[1], other->_has_bits_[1]);
+    std::swap(_has_bits_[2], other->_has_bits_[2]);
+    _unknown_fields_.Swap(&other->_unknown_fields_);
+    std::swap(_cached_size_, other->_cached_size_);
+  }
+}
+
+::google::protobuf::Metadata ChartSeriesGenericPropertyMapArchive::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = ChartSeriesGenericPropertyMapArchive_descriptor_;
+  metadata.reflection = ChartSeriesGenericPropertyMapArchive_reflection_;
   return metadata;
 }
 

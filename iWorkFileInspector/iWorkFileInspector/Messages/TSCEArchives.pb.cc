@@ -407,7 +407,7 @@ void protobuf_AssignDesc_TSCEArchives_2eproto() {
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CellDependenciesArchive));
   VolatileDependenciesArchive_descriptor_ = file->message_type(10);
-  static const int VolatileDependenciesArchive_offsets_[14] = {
+  static const int VolatileDependenciesArchive_offsets_[16] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(VolatileDependenciesArchive, volatile_time_cell_column_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(VolatileDependenciesArchive, volatile_time_cell_row_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(VolatileDependenciesArchive, volatile_random_cell_column_),
@@ -418,6 +418,8 @@ void protobuf_AssignDesc_TSCEArchives_2eproto() {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(VolatileDependenciesArchive, volatile_location_cell_row_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(VolatileDependenciesArchive, volatile_compass_cell_column_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(VolatileDependenciesArchive, volatile_compass_cell_row_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(VolatileDependenciesArchive, volatile_sheet_table_name_cell_column_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(VolatileDependenciesArchive, volatile_sheet_table_name_cell_row_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(VolatileDependenciesArchive, calculated_dependency_cell_column_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(VolatileDependenciesArchive, calculated_dependency_cell_row_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(VolatileDependenciesArchive, volatile_geometry_cell_reference_),
@@ -1332,9 +1334,10 @@ void protobuf_AssignDesc_TSCEArchives_2eproto() {
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(DateCellValueArchive));
   NumberCellValueArchive_descriptor_ = file->message_type(51);
-  static const int NumberCellValueArchive_offsets_[4] = {
+  static const int NumberCellValueArchive_offsets_[5] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(NumberCellValueArchive, value_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(NumberCellValueArchive, unit_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(NumberCellValueArchive, unit_index_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(NumberCellValueArchive, currency_code_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(NumberCellValueArchive, format_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(NumberCellValueArchive, format_is_implicit_),
   };
@@ -1707,7 +1710,7 @@ void protobuf_AddDesc_TSCEArchives_2eproto() {
     "\005edges\030\t \001(\0132\022.TSCE.EdgesArchive\"`\n\027Cell"
     "DependenciesArchive\022,\n\013cell_record\030\001 \003(\013"
     "2\027.TSCE.CellRecordArchive\022\027\n\017num_dirty_c"
-    "ells\030\002 \001(\r\"\330\004\n\033VolatileDependenciesArchi"
+    "ells\030\002 \001(\r\"\263\005\n\033VolatileDependenciesArchi"
     "ve\022!\n\031volatile_time_cell_column\030\001 \003(\r\022\036\n"
     "\026volatile_time_cell_row\030\002 \003(\r\022#\n\033volatil"
     "e_random_cell_column\030\003 \003(\r\022 \n\030volatile_r"
@@ -1717,313 +1720,316 @@ void protobuf_AddDesc_TSCEArchives_2eproto() {
     "lumn\030\005 \003(\r\022\"\n\032volatile_location_cell_row"
     "\030\006 \003(\r\022$\n\034volatile_compass_cell_column\030\007"
     " \003(\r\022!\n\031volatile_compass_cell_row\030\010 \003(\r\022"
-    ")\n!calculated_dependency_cell_column\030\t \003"
-    "(\r\022&\n\036calculated_dependency_cell_row\030\n \003"
-    "(\r\022D\n volatile_geometry_cell_reference\030\r"
-    " \003(\0132\032.TSCE.CellReferenceArchive\022;\n\026vola"
-    "tile_geometry_cell\030\013 \003(\0132\033.TSCE.CellCoor"
-    "dinateArchive\"\314\001\n\032RangeBackDependencyArc"
-    "hive\022\026\n\016cell_coord_row\030\001 \002(\r\022\031\n\021cell_coo"
-    "rd_column\030\002 \002(\r\0224\n\017range_reference\030\003 \001(\013"
-    "2\033.TSCE.RangeReferenceArchive\022E\n\030interna"
-    "l_range_reference\030\004 \001(\0132#.TSCE.InternalR"
-    "angeReferenceArchive\"c\n RTreeInternalNod"
-    "eContentsArchive\022\013\n\003min\030\001 \003(\r\022\013\n\003max\030\002 \003"
-    "(\r\022%\n\005child\030\003 \002(\0132\026.TSCE.RTreeNodeArchiv"
-    "e\"l\n\034RTreeLeafNodeContentsArchive\022\013\n\003min"
-    "\030\001 \003(\r\022\013\n\003max\030\002 \003(\r\0222\n\016cell_reference\030\003 "
-    "\002(\0132\032.TSCE.CellReferenceArchive\"\270\001\n\020RTre"
-    "eNodeArchive\022\r\n\005level\030\001 \002(\r\022\r\n\005count\030\002 \002"
-    "(\r\022F\n\026internal_node_contents\030\003 \003(\0132&.TSC"
-    "E.RTreeInternalNodeContentsArchive\022>\n\022le"
-    "af_node_contents\030\004 \003(\0132\".TSCE.RTreeLeafN"
-    "odeContentsArchive\"\331\001\n\014RTreeArchive\022\024\n\014d"
-    "ata_file_id\030\001 \002(\r\022\021\n\tdata_size\030\002 \002(\r\022\025\n\r"
-    "data_num_dims\030\003 \002(\r\022\026\n\016data_elem_size\030\004 "
-    "\002(\r\022\033\n\023data_elem_real_size\030\005 \002(\r\022\026\n\016data"
-    "_max_nodes\030\006 \002(\r\022\026\n\016data_min_nodes\030\007 \002(\r"
-    "\022$\n\004root\030\010 \002(\0132\026.TSCE.RTreeNodeArchive\"y"
-    "\n\030RangeDependenciesArchive\022\"\n\006r_tree\030\001 \001"
-    "(\0132\022.TSCE.RTreeArchive\0229\n\017back_dependenc"
-    "y\030\002 \003(\0132 .TSCE.RangeBackDependencyArchiv"
-    "e\"\225\007\n\033SpanningDependenciesArchive\022\016\n\006col"
-    "umn\030\001 \003(\r\022E\n\rrange_context\030\002 \003(\0162..TSCE."
-    "SpanningDependenciesArchive.RangeContext"
-    "\022(\n\004cell\030\003 \003(\0132\032.TSCE.CellReferenceArchi"
-    "ve\022C\n\035total_range_for_deleted_table\030\004 \001("
-    "\0132\034.TSCE.RangeCoordinateArchive\022B\n\034body_"
-    "range_for_deleted_table\030\005 \001(\0132\034.TSCE.Ran"
-    "geCoordinateArchive\022f\n\037referring_column_"
-    "to_local_cells\030\006 \003(\0132=.TSCE.SpanningDepe"
-    "ndenciesArchive.ReferringColumnToLocalCe"
-    "lls\022h\n referring_column_to_remote_cells\030"
-    "\007 \003(\0132>.TSCE.SpanningDependenciesArchive"
-    ".ReferringColumnToRemoteCells\032\252\001\n\033Referr"
-    "ingColumnToLocalCells\022\016\n\006column\030\001 \002(\r\022E\n"
-    "\rrange_context\030\002 \002(\0162..TSCE.SpanningDepe"
-    "ndenciesArchive.RangeContext\0224\n\017cell_coo"
-    "rdinate\030\003 \003(\0132\033.TSCE.CellCoordinateArchi"
-    "ve\032\272\001\n\034ReferringColumnToRemoteCells\022\016\n\006c"
-    "olumn\030\001 \002(\r\022E\n\rrange_context\030\002 \002(\0162..TSC"
-    "E.SpanningDependenciesArchive.RangeConte"
-    "xt\022C\n\027internal_cell_reference\030\003 \003(\0132\".TS"
-    "CE.InternalCellReferenceArchive\"0\n\014Range"
-    "Context\022\013\n\007DEFAULT\020\000\022\023\n\017INCLUDE_HEADERS\020"
-    "\001\"[\n\035WholeOwnerDependenciesArchive\022:\n\016de"
-    "pendent_cell\030\001 \003(\0132\".TSCE.InternalCellRe"
-    "ferenceArchive\"\375\003\n\027FormulaOwnerInfoArchi"
-    "ve\022-\n\020formula_owner_id\030\001 \002(\0132\023.TSCE.CFUU"
-    "IDArchive\0228\n\021cell_dependencies\030\002 \001(\0132\035.T"
-    "SCE.CellDependenciesArchive\022:\n\022range_dep"
-    "endencies\030\003 \001(\0132\036.TSCE.RangeDependencies"
-    "Archive\022@\n\025volatile_dependencies\030\004 \001(\0132!"
-    ".TSCE.VolatileDependenciesArchive\022G\n\034spa"
-    "nning_column_dependencies\030\005 \001(\0132!.TSCE.S"
-    "panningDependenciesArchive\022D\n\031spanning_r"
-    "ow_dependencies\030\006 \001(\0132!.TSCE.SpanningDep"
-    "endenciesArchive\022E\n\030whole_owner_dependen"
-    "cies\030\010 \001(\0132#.TSCE.WholeOwnerDependencies"
-    "Archive\022%\n\rformula_owner\030\007 \001(\0132\016.TSP.Ref"
-    "erence\"\262\001\n\021OwnerIDMapArchive\022A\n\tmap_entr"
-    "y\030\001 \003(\0132..TSCE.OwnerIDMapArchive.OwnerID"
-    "MapArchiveEntry\032Z\n\026OwnerIDMapArchiveEntr"
-    "y\022\031\n\021internal_owner_id\030\001 \002(\r\022%\n\010owner_id"
-    "\030\002 \002(\0132\023.TSCE.CFUUIDArchive\"\365\001\n\030Dependen"
-    "cyTrackerArchive\0229\n\022formula_owner_info\030\001"
-    " \003(\0132\035.TSCE.FormulaOwnerInfoArchive\022.\n\nd"
-    "irty_leaf\030\002 \003(\0132\032.TSCE.CellReferenceArch"
-    "ive\022\?\n\023internal_dirty_leaf\030\004 \003(\0132\".TSCE."
-    "InternalCellReferenceArchive\022-\n\014owner_id"
-    "_map\030\003 \001(\0132\027.TSCE.OwnerIDMapArchive\"q\n\030N"
-    "ameTrackedReferencePair\022\014\n\004name\030\001 \002(\t\022)\n"
-    "\021tracked_reference\030\002 \001(\0132\016.TSP.Reference"
-    "\022\034\n\024tracked_reference_id\030\003 \001(\r\"\214\001\n\036Names"
-    "ByTrackedReferenceArchive\022%\n\010table_id\030\001 "
-    "\002(\0132\023.TSCE.CFUUIDArchive\022C\n\033name_tracked"
-    "_reference_pair\030\002 \003(\0132\036.TSCE.NameTracked"
-    "ReferencePair\"\240\001\n\034NamedReferenceManagerA"
-    "rchive\022)\n\021reference_tracker\030\001 \002(\0132\016.TSP."
-    "Reference\022U\n#names_by_tracked_reference_"
-    "by_table\030\002 \003(\0132$.TSCE.NamesByTrackedRefe"
-    "renceArchiveB\002\030\001\"\205\003\n\030CalculationEngineAr"
-    "chive\022\026\n\016base_date_1904\030\001 \001(\010\022:\n\022depende"
-    "ncy_tracker\030\002 \002(\0132\036.TSCE.DependencyTrack"
-    "erArchive\022/\n\027named_reference_manager\030\003 \001"
-    "(\0132\016.TSP.Reference\022b\n\026excel_import_date_"
-    "mode\030\004 \001(\01622.TSCE.CalculationEngineArchi"
-    "ve.ExcelImportDateMode:\016DATE_MODE_1900\022\037"
-    "\n\027saved_locale_identifier\030\005 \001(\t\"_\n\023Excel"
-    "ImportDateMode\022\022\n\016DATE_MODE_1900\020\001\022\031\n\025DA"
-    "TE_MODE_1900_LEGACY\020\002\022\031\n\025DATE_MODE_1904_"
-    "LEGACY\020\003\"\256\031\n\023ASTNodeArrayArchive\022:\n\010AST_"
-    "node\030\001 \003(\0132(.TSCE.ASTNodeArrayArchive.AS"
-    "TNodeArchive\032~\n ASTLocalCellReferenceNod"
-    "eArchive\022\022\n\nrow_handle\030\001 \002(\r\022\025\n\rcolumn_h"
-    "andle\030\002 \002(\r\022\025\n\rrow_is_sticky\030\003 \002(\r\022\030\n\020co"
-    "lumn_is_sticky\030\004 \002(\r\032\372\002\n%ASTCrossTableCe"
-    "llReferenceNodeArchive\022\022\n\nrow_handle\030\001 \002"
-    "(\r\022\025\n\rcolumn_handle\030\002 \002(\r\022\025\n\rrow_is_stic"
-    "ky\030\003 \002(\r\022\030\n\020column_is_sticky\030\004 \002(\r\022%\n\010ta"
-    "ble_id\030\005 \002(\0132\023.TSCE.CFUUIDArchive\0221\n)AST"
-    "_reference_whitespace_after_sheet_name\030\006"
-    " \001(\t\0222\n*AST_reference_whitespace_before_"
-    "table_name\030\007 \001(\t\0221\n)AST_reference_whites"
-    "pace_after_table_name\030\010 \001(\t\0224\n,AST_refer"
-    "ence_whitespace_before_cell_address\030\t \001("
-    "\t\032E\n\032ASTColumnCoordinateArchive\022\016\n\006colum"
-    "n\030\001 \002(\021\022\027\n\010absolute\030\002 \001(\010:\005false\032\?\n\027ASTR"
-    "owCoordinateArchive\022\013\n\003row\030\001 \002(\021\022\027\n\010abso"
-    "lute\030\002 \001(\010:\005false\032\237\002\n&ASTCrossTableRefer"
-    "enceExtraInfoArchive\022%\n\010table_id\030\001 \002(\0132\023"
-    ".TSCE.CFUUIDArchive\0221\n)AST_reference_whi"
-    "tespace_after_sheet_name\030\002 \001(\t\0222\n*AST_re"
-    "ference_whitespace_before_table_name\030\003 \001"
-    "(\t\0221\n)AST_reference_whitespace_after_tab"
-    "le_name\030\004 \001(\t\0224\n,AST_reference_whitespac"
-    "e_before_cell_address\030\005 \001(\t\032\217\013\n\016ASTNodeA"
-    "rchive\022<\n\rAST_node_type\030\001 \002(\0162%.TSCE.AST"
-    "NodeArrayArchive.ASTNodeType\022\037\n\027AST_func"
-    "tion_node_index\030\002 \001(\r\022!\n\031AST_function_no"
-    "de_numArgs\030\003 \001(\r\022\036\n\026AST_number_node_numb"
-    "er\030\004 \001(\001\022 \n\030AST_boolean_node_boolean\030\005 \001"
-    "(\010\022\036\n\026AST_string_node_string\030\006 \001(\t\022\035\n\025AS"
-    "T_date_node_dateNum\030\007 \001(\001\022*\n\"AST_date_no"
-    "de_suppress_date_format\030\023 \001(\010\022*\n\"AST_dat"
-    "e_node_suppress_time_format\030\024 \001(\010\022&\n\036AST"
-    "_date_node_date_time_format\030\025 \001(\t\022!\n\031AST"
-    "_duration_node_unitNum\030\010 \001(\001\022\036\n\026AST_dura"
-    "tion_node_unit\030\t \001(\005\022\037\n\027AST_duration_nod"
-    "e_style\030\026 \001(\r\022/\n\'AST_duration_node_durat"
-    "ion_unit_largest\030\027 \001(\r\0220\n(AST_duration_n"
-    "ode_duration_unit_smallest\030\030 \001(\r\022-\n%AST_"
-    "duration_node_use_automatic_units\030\035 \001(\010\022"
-    "\036\n\026AST_token_node_boolean\030\n \001(\010\022\035\n\025AST_a"
-    "rray_node_numCol\030\013 \001(\r\022\035\n\025AST_array_node"
-    "_numRow\030\014 \001(\r\022\035\n\025AST_list_node_numArgs\030\r"
-    " \001(\r\0227\n\024AST_thunk_node_array\030\016 \001(\0132\031.TSC"
-    "E.ASTNodeArrayArchive\022k\n\'AST_local_cell_"
-    "reference_node_reference\030\017 \001(\0132:.TSCE.AS"
-    "TNodeArrayArchive.ASTLocalCellReferenceN"
-    "odeArchive\022v\n-AST_cross_table_cell_refer"
-    "ence_node_reference\030\020 \001(\0132\?.TSCE.ASTNode"
-    "ArrayArchive.ASTCrossTableCellReferenceN"
-    "odeArchive\022(\n AST_unknown_function_node_"
-    "string\030\021 \001(\t\022)\n!AST_unknown_function_nod"
-    "e_numArgs\030\022 \001(\r\022\026\n\016AST_whitespace\030\031 \001(\t\022"
-    "H\n\nAST_column\030\032 \001(\01324.TSCE.ASTNodeArrayA"
-    "rchive.ASTColumnCoordinateArchive\022B\n\007AST"
-    "_row\030\033 \001(\01321.TSCE.ASTNodeArrayArchive.AS"
-    "TRowCoordinateArchive\022n\n$AST_cross_table"
-    "_reference_extra_info\030\034 \001(\0132@.TSCE.ASTNo"
-    "deArrayArchive.ASTCrossTableReferenceExt"
-    "raInfoArchive\"\241\006\n\013ASTNodeType\022\021\n\rADDITIO"
-    "N_NODE\020\001\022\024\n\020SUBTRACTION_NODE\020\002\022\027\n\023MULTIP"
-    "LICATION_NODE\020\003\022\021\n\rDIVISION_NODE\020\004\022\016\n\nPO"
-    "WER_NODE\020\005\022\026\n\022CONCATENATION_NODE\020\006\022\025\n\021GR"
-    "EATER_THAN_NODE\020\007\022!\n\035GREATER_THAN_OR_EQU"
-    "AL_TO_NODE\020\010\022\022\n\016LESS_THAN_NODE\020\t\022\036\n\032LESS"
-    "_THAN_OR_EQUAL_TO_NODE\020\n\022\021\n\rEQUAL_TO_NOD"
-    "E\020\013\022\025\n\021NOT_EQUAL_TO_NODE\020\014\022\021\n\rNEGATION_N"
-    "ODE\020\r\022\022\n\016PLUS_SIGN_NODE\020\016\022\020\n\014PERCENT_NOD"
-    "E\020\017\022\021\n\rFUNCTION_NODE\020\020\022\017\n\013NUMBER_NODE\020\021\022"
-    "\020\n\014BOOLEAN_NODE\020\022\022\017\n\013STRING_NODE\020\023\022\r\n\tDA"
-    "TE_NODE\020\024\022\021\n\rDURATION_NODE\020\025\022\027\n\023EMPTY_AR"
-    "GUMENT_NODE\020\026\022\016\n\nTOKEN_NODE\020\027\022\016\n\nARRAY_N"
-    "ODE\020\030\022\r\n\tLIST_NODE\020\031\022\016\n\nTHUNK_NODE\020\032\022\035\n\031"
-    "LOCAL_CELL_REFERENCE_NODE\020\033\022#\n\037CROSS_TAB"
-    "LE_CELL_REFERENCE_NODE\020\034\022\016\n\nCOLON_NODE\020\035"
-    "\022\030\n\024REFERENCE_ERROR_NODE\020\036\022\031\n\025UNKNOWN_FU"
-    "NCTION_NODE\020\037\022\032\n\026APPEND_WHITESPACE_NODE\020"
-    " \022\033\n\027PREPEND_WHITESPACE_NODE\020!\022\024\n\020BEGIN_"
-    "THUNK_NODE\020\"\022\022\n\016END_THUNK_NODE\020#\022\027\n\023CELL"
-    "_REFERENCE_NODE\020$\"\205\001\n\036FormulaTranslation"
-    "FlagsArchive\022\'\n\030excel_import_translation"
-    "\030\001 \001(\010:\005false\022:\n+number_to_date_coercion"
-    "_removal_translation\030\002 \001(\010:\005false\"\370\001\n\016Fo"
-    "rmulaArchive\0221\n\016AST_node_array\030\001 \002(\0132\031.T"
-    "SCE.ASTNodeArrayArchive\022\023\n\013host_column\030\002"
-    " \001(\r\022\020\n\010host_row\030\003 \001(\r\022&\n\027host_column_is"
-    "_negative\030\004 \001(\010:\005false\022#\n\024host_row_is_ne"
-    "gative\030\005 \001(\010:\005false\022\?\n\021translation_flags"
-    "\030\006 \001(\0132$.TSCE.FormulaTranslationFlagsArc"
-    "hive\"\271\003\n\023FormatStructArchive\022\023\n\013format_t"
-    "ype\030\001 \002(\r\022\026\n\016decimal_places\030\002 \001(\r\022\025\n\rcur"
-    "rency_code\030\003 \001(\t\022\026\n\016negative_style\030\004 \001(\r"
-    "\022 \n\030show_thousands_separator\030\005 \001(\010\022\034\n\024us"
-    "e_accounting_style\030\006 \001(\010\022\026\n\016duration_sty"
-    "le\030\007 \001(\r\022\014\n\004base\030\010 \001(\r\022\023\n\013base_places\030\t "
-    "\001(\r\022\033\n\023base_use_minus_sign\030\n \001(\010\022\031\n\021frac"
-    "tion_accuracy\030\013 \001(\r\022\034\n\024suppress_date_for"
-    "mat\030\014 \001(\010\022\034\n\024suppress_time_format\030\r \001(\010\022"
-    "\030\n\020date_time_format\030\016 \001(\t\022\035\n\025duration_un"
-    "it_largest\030\017 \001(\r\022\036\n\026duration_unit_smalle"
-    "st\030\020 \001(\r\"~\n\026RangeCoordinateArchive\022\027\n\017to"
-    "p_left_column\030\001 \002(\r\022\024\n\014top_left_row\030\002 \002("
-    "\r\022\033\n\023bottom_right_column\030\003 \002(\r\022\030\n\020bottom"
-    "_right_row\030\004 \002(\r\"\207\004\n\024TectonicShiftArchiv"
-    "e\022 \n\030grid_coordinate_offset_x\030\001 \002(\r\022 \n\030g"
-    "rid_coordinate_offset_y\030\002 \002(\r\022,\n$grid_co"
-    "ordinate_offset_x_is_negative\030\003 \002(\010\022,\n$g"
-    "rid_coordinate_offset_y_is_negative\030\004 \002("
-    "\010\0225\n\017range_for_shift\030\005 \001(\0132\034.TSCE.RangeC"
-    "oordinateArchive\0228\n\022range_for_deletion\030\006"
-    " \001(\0132\034.TSCE.RangeCoordinateArchive\0224\n\016in"
-    "serted_range\030\007 \001(\0132\034.TSCE.RangeCoordinat"
-    "eArchive\022\031\n\021apply_to_absolute\030\010 \002(\010\022\027\n\017i"
-    "nserting_after\030\t \002(\010\022\032\n\022ignore_sticky_bi"
-    "ts\030\n \002(\010\0221\n\013table_range\030\013 \001(\0132\034.TSCE.Ran"
-    "geCoordinateArchive\022%\n\010table_id\030\014 \001(\0132\023."
-    "TSCE.CFUUIDArchive\"\217\001\n\031RewriteSortMappin"
-    "gArchive\022%\n\010table_id\030\001 \002(\0132\023.TSCE.CFUUID"
-    "Archive\0223\n\017shuffle_mapping\030\002 \002(\0132\032.TSK.S"
-    "huffleMappingArchive\022\026\n\016explode_ranges\030\003"
-    " \002(\010\"\224\002\n\025RangeMovedInfoArchive\022%\n\010table_"
-    "id\030\001 \001(\0132\023.TSCE.CFUUIDArchive\0220\n\nfrom_ra"
-    "nge\030\002 \001(\0132\034.TSCE.RangeCoordinateArchive\022"
-    ".\n\010to_range\030\003 \001(\0132\034.TSCE.RangeCoordinate"
-    "Archive\0229\n\024from_range_reference\030\004 \001(\0132\033."
-    "TSCE.RangeReferenceArchive\0227\n\022to_range_r"
-    "eference\030\005 \001(\0132\033.TSCE.RangeReferenceArch"
-    "ive\"\254\001\n\027TableResizedInfoArchive\022%\n\010table"
-    "_id\030\001 \002(\0132\023.TSCE.CFUUIDArchive\0224\n\016new_ta"
-    "ble_size\030\002 \002(\0132\034.TSCE.RangeCoordinateArc"
-    "hive\0224\n\016old_table_size\030\003 \001(\0132\034.TSCE.Rang"
-    "eCoordinateArchive\"q\n\024CellMergeInfoArchi"
-    "ve\022%\n\010table_id\030\001 \002(\0132\023.TSCE.CFUUIDArchiv"
-    "e\0222\n\014merged_range\030\002 \002(\0132\034.TSCE.RangeCoor"
-    "dinateArchive\"\244\004\n\031FormulaRewriteSpecArch"
-    "ive\022A\n\014rewrite_type\030\001 \002(\0162+.TSCE.Formula"
-    "RewriteSpecArchive.RewriteType\0222\n\016tecton"
-    "ic_shift\030\002 \001(\0132\032.TSCE.TectonicShiftArchi"
-    "ve\0225\n\014sort_mapping\030\003 \001(\0132\037.TSCE.RewriteS"
-    "ortMappingArchive\0225\n\020range_moved_info\030\004 "
-    "\001(\0132\033.TSCE.RangeMovedInfoArchive\022-\n\020dele"
-    "ted_owner_id\030\005 \001(\0132\023.TSCE.CFUUIDArchive\022"
-    "9\n\022table_resized_info\030\006 \001(\0132\035.TSCE.Table"
-    "ResizedInfoArchive\0223\n\017cell_merge_info\030\007 "
-    "\001(\0132\032.TSCE.CellMergeInfoArchive\"\202\001\n\013Rewr"
-    "iteType\022\022\n\016TECTONIC_SHIFT\020\001\022\033\n\027REMAP_WIT"
-    "H_SORT_MAPPING\020\002\022\016\n\nMOVE_RANGE\020\003\022\020\n\014DELE"
-    "TE_OWNER\020\004\022\020\n\014TABLE_RESIZE\020\005\022\016\n\nCELL_MER"
-    "GE\020\006\"f\n CellCoordinateFormulaPairArchive"
-    "\022\016\n\006column\030\001 \002(\r\022\013\n\003row\030\002 \002(\r\022%\n\007formula"
-    "\030\003 \001(\0132\024.TSCE.FormulaArchive\"H\n\025CellCoor"
-    "dinateArchive\022\022\n\npackedData\030\001 \001(\007\022\016\n\006col"
-    "umn\030\002 \001(\r\022\013\n\003row\030\003 \001(\r\"S\n\033CellCoordinate"
-    "VectorArchive\0224\n\017cell_coordinate\030\001 \003(\0132\033"
-    ".TSCE.CellCoordinateArchive\"w\n\037CellCoord"
-    "inateObjectPairArchive\0224\n\017cell_coordinat"
-    "e\030\001 \002(\0132\033.TSCE.CellCoordinateArchive\022\036\n\006"
-    "object\030\002 \002(\0132\016.TSP.Reference\"l\n\036CellCoor"
-    "dinateObjectMapArchive\022J\n\033cell_coordinat"
-    "e_object_pair\030\001 \003(\0132%.TSCE.CellCoordinat"
-    "eObjectPairArchive\"a\n\026OwnerFormulaMapArc"
-    "hive\022G\n\027coordinate_formula_pair\030\001 \003(\0132&."
-    "TSCE.CellCoordinateFormulaPairArchive\"q\n"
-    "\034FormulaRewriteCommandArchive\022-\n\025table_r"
-    "ewrite_command\030\001 \001(\0132\016.TSP.Reference\022\"\n\005"
-    "super\030\002 \001(\0132\023.TSK.CommandArchive\"^\n!Numb"
-    "erTrackedReferencePairArchive\022\016\n\006number\030"
-    "\001 \002(\r\022)\n\021tracked_reference\030\002 \001(\0132\016.TSP.R"
-    "eference\"t\n\"NumberToTrackedReferenceMapA"
-    "rchive\022N\n\035number_tracked_reference_pair\030"
-    "\001 \003(\0132\'.TSCE.NumberTrackedReferencePairA"
-    "rchive\"\336\002\n&TrackedReferencesRewriteComma"
-    "ndArchive\022U\n\037references_in_reference_tra"
-    "cker\030\001 \001(\0132(.TSCE.NumberToTrackedReferen"
-    "ceMapArchiveB\002\030\001\022W\n!original_tracked_ref"
-    "erence_copies\030\002 \001(\0132(.TSCE.NumberToTrack"
-    "edReferenceMapArchiveB\002\030\001\0225\n\014rewrite_spe"
-    "c\030\003 \001(\0132\037.TSCE.FormulaRewriteSpecArchive"
-    "\022)\n\021reference_tracker\030\004 \002(\0132\016.TSP.Refere"
-    "nce\022\"\n\005super\030\005 \002(\0132\023.TSK.CommandArchive\""
-    "U\n\027TrackedReferenceArchive\022&\n\003ast\030\001 \002(\0132"
-    "\031.TSCE.ASTNodeArrayArchive\022\022\n\nformula_id"
-    "\030\002 \002(\r\"\257\001\n\027ReferenceTrackerArchive\022!\n\004uu"
-    "id\030\001 \002(\0132\023.TSCE.CFUUIDArchive\022-\n\021tracked"
-    "_reference\030\002 \003(\0132\016.TSP.ReferenceB\002\030\001\022B\n\033"
-    "contained_tracked_reference\030\003 \003(\0132\035.TSCE"
-    ".TrackedReferenceArchive\"(\n\027BooleanCellV"
-    "alueArchive\022\r\n\005value\030\001 \002(\010\"q\n\024DateCellVa"
-    "lueArchive\022\r\n\005value\030\001 \002(\001\022(\n\006format\030\002 \002("
-    "\0132\030.TSK.FormatStructArchive\022 \n\022format_is"
-    "_implicit\030\003 \001(\010:\004true\"\201\001\n\026NumberCellValu"
-    "eArchive\022\r\n\005value\030\001 \002(\001\022\014\n\004unit\030\002 \002(\005\022(\n"
-    "\006format\030\003 \002(\0132\030.TSK.FormatStructArchive\022"
-    " \n\022format_is_implicit\030\004 \001(\010:\004true\"s\n\026Str"
-    "ingCellValueArchive\022\r\n\005value\030\001 \002(\t\022(\n\006fo"
-    "rmat\030\002 \002(\0132\030.TSK.FormatStructArchive\022 \n\022"
-    "format_is_implicit\030\003 \001(\010:\004true\"\201\003\n\020CellV"
-    "alueArchive\022=\n\017cell_value_type\030\001 \002(\0162$.T"
-    "SCE.CellValueArchive.CellValueType\0224\n\rbo"
-    "olean_value\030\002 \001(\0132\035.TSCE.BooleanCellValu"
-    "eArchive\022.\n\ndate_value\030\003 \001(\0132\032.TSCE.Date"
-    "CellValueArchive\0222\n\014number_value\030\004 \001(\0132\034"
-    ".TSCE.NumberCellValueArchive\0222\n\014string_v"
-    "alue\030\005 \001(\0132\034.TSCE.StringCellValueArchive"
-    "\"`\n\rCellValueType\022\014\n\010NIL_TYPE\020\001\022\020\n\014BOOLE"
-    "AN_TYPE\020\002\022\r\n\tDATE_TYPE\020\003\022\017\n\013NUMBER_TYPE\020"
-    "\004\022\017\n\013STRING_TYPE\020\005", 14298);
+    "-\n%volatile_sheet_table_name_cell_column"
+    "\030\021 \003(\r\022*\n\"volatile_sheet_table_name_cell"
+    "_row\030\022 \003(\r\022)\n!calculated_dependency_cell"
+    "_column\030\t \003(\r\022&\n\036calculated_dependency_c"
+    "ell_row\030\n \003(\r\022D\n volatile_geometry_cell_"
+    "reference\030\r \003(\0132\032.TSCE.CellReferenceArch"
+    "ive\022;\n\026volatile_geometry_cell\030\013 \003(\0132\033.TS"
+    "CE.CellCoordinateArchive\"\314\001\n\032RangeBackDe"
+    "pendencyArchive\022\026\n\016cell_coord_row\030\001 \002(\r\022"
+    "\031\n\021cell_coord_column\030\002 \002(\r\0224\n\017range_refe"
+    "rence\030\003 \001(\0132\033.TSCE.RangeReferenceArchive"
+    "\022E\n\030internal_range_reference\030\004 \001(\0132#.TSC"
+    "E.InternalRangeReferenceArchive\"c\n RTree"
+    "InternalNodeContentsArchive\022\013\n\003min\030\001 \003(\r"
+    "\022\013\n\003max\030\002 \003(\r\022%\n\005child\030\003 \002(\0132\026.TSCE.RTre"
+    "eNodeArchive\"l\n\034RTreeLeafNodeContentsArc"
+    "hive\022\013\n\003min\030\001 \003(\r\022\013\n\003max\030\002 \003(\r\0222\n\016cell_r"
+    "eference\030\003 \002(\0132\032.TSCE.CellReferenceArchi"
+    "ve\"\270\001\n\020RTreeNodeArchive\022\r\n\005level\030\001 \002(\r\022\r"
+    "\n\005count\030\002 \002(\r\022F\n\026internal_node_contents\030"
+    "\003 \003(\0132&.TSCE.RTreeInternalNodeContentsAr"
+    "chive\022>\n\022leaf_node_contents\030\004 \003(\0132\".TSCE"
+    ".RTreeLeafNodeContentsArchive\"\331\001\n\014RTreeA"
+    "rchive\022\024\n\014data_file_id\030\001 \002(\r\022\021\n\tdata_siz"
+    "e\030\002 \002(\r\022\025\n\rdata_num_dims\030\003 \002(\r\022\026\n\016data_e"
+    "lem_size\030\004 \002(\r\022\033\n\023data_elem_real_size\030\005 "
+    "\002(\r\022\026\n\016data_max_nodes\030\006 \002(\r\022\026\n\016data_min_"
+    "nodes\030\007 \002(\r\022$\n\004root\030\010 \002(\0132\026.TSCE.RTreeNo"
+    "deArchive\"y\n\030RangeDependenciesArchive\022\"\n"
+    "\006r_tree\030\001 \001(\0132\022.TSCE.RTreeArchive\0229\n\017bac"
+    "k_dependency\030\002 \003(\0132 .TSCE.RangeBackDepen"
+    "dencyArchive\"\225\007\n\033SpanningDependenciesArc"
+    "hive\022\016\n\006column\030\001 \003(\r\022E\n\rrange_context\030\002 "
+    "\003(\0162..TSCE.SpanningDependenciesArchive.R"
+    "angeContext\022(\n\004cell\030\003 \003(\0132\032.TSCE.CellRef"
+    "erenceArchive\022C\n\035total_range_for_deleted"
+    "_table\030\004 \001(\0132\034.TSCE.RangeCoordinateArchi"
+    "ve\022B\n\034body_range_for_deleted_table\030\005 \001(\013"
+    "2\034.TSCE.RangeCoordinateArchive\022f\n\037referr"
+    "ing_column_to_local_cells\030\006 \003(\0132=.TSCE.S"
+    "panningDependenciesArchive.ReferringColu"
+    "mnToLocalCells\022h\n referring_column_to_re"
+    "mote_cells\030\007 \003(\0132>.TSCE.SpanningDependen"
+    "ciesArchive.ReferringColumnToRemoteCells"
+    "\032\252\001\n\033ReferringColumnToLocalCells\022\016\n\006colu"
+    "mn\030\001 \002(\r\022E\n\rrange_context\030\002 \002(\0162..TSCE.S"
+    "panningDependenciesArchive.RangeContext\022"
+    "4\n\017cell_coordinate\030\003 \003(\0132\033.TSCE.CellCoor"
+    "dinateArchive\032\272\001\n\034ReferringColumnToRemot"
+    "eCells\022\016\n\006column\030\001 \002(\r\022E\n\rrange_context\030"
+    "\002 \002(\0162..TSCE.SpanningDependenciesArchive"
+    ".RangeContext\022C\n\027internal_cell_reference"
+    "\030\003 \003(\0132\".TSCE.InternalCellReferenceArchi"
+    "ve\"0\n\014RangeContext\022\013\n\007DEFAULT\020\000\022\023\n\017INCLU"
+    "DE_HEADERS\020\001\"[\n\035WholeOwnerDependenciesAr"
+    "chive\022:\n\016dependent_cell\030\001 \003(\0132\".TSCE.Int"
+    "ernalCellReferenceArchive\"\375\003\n\027FormulaOwn"
+    "erInfoArchive\022-\n\020formula_owner_id\030\001 \002(\0132"
+    "\023.TSCE.CFUUIDArchive\0228\n\021cell_dependencie"
+    "s\030\002 \001(\0132\035.TSCE.CellDependenciesArchive\022:"
+    "\n\022range_dependencies\030\003 \001(\0132\036.TSCE.RangeD"
+    "ependenciesArchive\022@\n\025volatile_dependenc"
+    "ies\030\004 \001(\0132!.TSCE.VolatileDependenciesArc"
+    "hive\022G\n\034spanning_column_dependencies\030\005 \001"
+    "(\0132!.TSCE.SpanningDependenciesArchive\022D\n"
+    "\031spanning_row_dependencies\030\006 \001(\0132!.TSCE."
+    "SpanningDependenciesArchive\022E\n\030whole_own"
+    "er_dependencies\030\010 \001(\0132#.TSCE.WholeOwnerD"
+    "ependenciesArchive\022%\n\rformula_owner\030\007 \001("
+    "\0132\016.TSP.Reference\"\262\001\n\021OwnerIDMapArchive\022"
+    "A\n\tmap_entry\030\001 \003(\0132..TSCE.OwnerIDMapArch"
+    "ive.OwnerIDMapArchiveEntry\032Z\n\026OwnerIDMap"
+    "ArchiveEntry\022\031\n\021internal_owner_id\030\001 \002(\r\022"
+    "%\n\010owner_id\030\002 \002(\0132\023.TSCE.CFUUIDArchive\"\375"
+    "\001\n\030DependencyTrackerArchive\0229\n\022formula_o"
+    "wner_info\030\001 \003(\0132\035.TSCE.FormulaOwnerInfoA"
+    "rchive\0222\n\ndirty_leaf\030\002 \003(\0132\032.TSCE.CellRe"
+    "ferenceArchiveB\002\030\001\022C\n\023internal_dirty_lea"
+    "f\030\004 \003(\0132\".TSCE.InternalCellReferenceArch"
+    "iveB\002\030\001\022-\n\014owner_id_map\030\003 \001(\0132\027.TSCE.Own"
+    "erIDMapArchive\"q\n\030NameTrackedReferencePa"
+    "ir\022\014\n\004name\030\001 \002(\t\022)\n\021tracked_reference\030\002 "
+    "\001(\0132\016.TSP.Reference\022\034\n\024tracked_reference"
+    "_id\030\003 \001(\r\"\214\001\n\036NamesByTrackedReferenceArc"
+    "hive\022%\n\010table_id\030\001 \002(\0132\023.TSCE.CFUUIDArch"
+    "ive\022C\n\033name_tracked_reference_pair\030\002 \003(\013"
+    "2\036.TSCE.NameTrackedReferencePair\"\240\001\n\034Nam"
+    "edReferenceManagerArchive\022)\n\021reference_t"
+    "racker\030\001 \002(\0132\016.TSP.Reference\022U\n#names_by"
+    "_tracked_reference_by_table\030\002 \003(\0132$.TSCE"
+    ".NamesByTrackedReferenceArchiveB\002\030\001\"\205\003\n\030"
+    "CalculationEngineArchive\022\026\n\016base_date_19"
+    "04\030\001 \001(\010\022:\n\022dependency_tracker\030\002 \002(\0132\036.T"
+    "SCE.DependencyTrackerArchive\022/\n\027named_re"
+    "ference_manager\030\003 \001(\0132\016.TSP.Reference\022b\n"
+    "\026excel_import_date_mode\030\004 \001(\01622.TSCE.Cal"
+    "culationEngineArchive.ExcelImportDateMod"
+    "e:\016DATE_MODE_1900\022\037\n\027saved_locale_identi"
+    "fier\030\005 \001(\t\"_\n\023ExcelImportDateMode\022\022\n\016DAT"
+    "E_MODE_1900\020\001\022\031\n\025DATE_MODE_1900_LEGACY\020\002"
+    "\022\031\n\025DATE_MODE_1904_LEGACY\020\003\"\256\031\n\023ASTNodeA"
+    "rrayArchive\022:\n\010AST_node\030\001 \003(\0132(.TSCE.AST"
+    "NodeArrayArchive.ASTNodeArchive\032~\n ASTLo"
+    "calCellReferenceNodeArchive\022\022\n\nrow_handl"
+    "e\030\001 \002(\r\022\025\n\rcolumn_handle\030\002 \002(\r\022\025\n\rrow_is"
+    "_sticky\030\003 \002(\r\022\030\n\020column_is_sticky\030\004 \002(\r\032"
+    "\372\002\n%ASTCrossTableCellReferenceNodeArchiv"
+    "e\022\022\n\nrow_handle\030\001 \002(\r\022\025\n\rcolumn_handle\030\002"
+    " \002(\r\022\025\n\rrow_is_sticky\030\003 \002(\r\022\030\n\020column_is"
+    "_sticky\030\004 \002(\r\022%\n\010table_id\030\005 \002(\0132\023.TSCE.C"
+    "FUUIDArchive\0221\n)AST_reference_whitespace"
+    "_after_sheet_name\030\006 \001(\t\0222\n*AST_reference"
+    "_whitespace_before_table_name\030\007 \001(\t\0221\n)A"
+    "ST_reference_whitespace_after_table_name"
+    "\030\010 \001(\t\0224\n,AST_reference_whitespace_befor"
+    "e_cell_address\030\t \001(\t\032E\n\032ASTColumnCoordin"
+    "ateArchive\022\016\n\006column\030\001 \002(\021\022\027\n\010absolute\030\002"
+    " \001(\010:\005false\032\?\n\027ASTRowCoordinateArchive\022\013"
+    "\n\003row\030\001 \002(\021\022\027\n\010absolute\030\002 \001(\010:\005false\032\237\002\n"
+    "&ASTCrossTableReferenceExtraInfoArchive\022"
+    "%\n\010table_id\030\001 \002(\0132\023.TSCE.CFUUIDArchive\0221"
+    "\n)AST_reference_whitespace_after_sheet_n"
+    "ame\030\002 \001(\t\0222\n*AST_reference_whitespace_be"
+    "fore_table_name\030\003 \001(\t\0221\n)AST_reference_w"
+    "hitespace_after_table_name\030\004 \001(\t\0224\n,AST_"
+    "reference_whitespace_before_cell_address"
+    "\030\005 \001(\t\032\217\013\n\016ASTNodeArchive\022<\n\rAST_node_ty"
+    "pe\030\001 \002(\0162%.TSCE.ASTNodeArrayArchive.ASTN"
+    "odeType\022\037\n\027AST_function_node_index\030\002 \001(\r"
+    "\022!\n\031AST_function_node_numArgs\030\003 \001(\r\022\036\n\026A"
+    "ST_number_node_number\030\004 \001(\001\022 \n\030AST_boole"
+    "an_node_boolean\030\005 \001(\010\022\036\n\026AST_string_node"
+    "_string\030\006 \001(\t\022\035\n\025AST_date_node_dateNum\030\007"
+    " \001(\001\022*\n\"AST_date_node_suppress_date_form"
+    "at\030\023 \001(\010\022*\n\"AST_date_node_suppress_time_"
+    "format\030\024 \001(\010\022&\n\036AST_date_node_date_time_"
+    "format\030\025 \001(\t\022!\n\031AST_duration_node_unitNu"
+    "m\030\010 \001(\001\022\036\n\026AST_duration_node_unit\030\t \001(\005\022"
+    "\037\n\027AST_duration_node_style\030\026 \001(\r\022/\n\'AST_"
+    "duration_node_duration_unit_largest\030\027 \001("
+    "\r\0220\n(AST_duration_node_duration_unit_sma"
+    "llest\030\030 \001(\r\022-\n%AST_duration_node_use_aut"
+    "omatic_units\030\035 \001(\010\022\036\n\026AST_token_node_boo"
+    "lean\030\n \001(\010\022\035\n\025AST_array_node_numCol\030\013 \001("
+    "\r\022\035\n\025AST_array_node_numRow\030\014 \001(\r\022\035\n\025AST_"
+    "list_node_numArgs\030\r \001(\r\0227\n\024AST_thunk_nod"
+    "e_array\030\016 \001(\0132\031.TSCE.ASTNodeArrayArchive"
+    "\022k\n\'AST_local_cell_reference_node_refere"
+    "nce\030\017 \001(\0132:.TSCE.ASTNodeArrayArchive.AST"
+    "LocalCellReferenceNodeArchive\022v\n-AST_cro"
+    "ss_table_cell_reference_node_reference\030\020"
+    " \001(\0132\?.TSCE.ASTNodeArrayArchive.ASTCross"
+    "TableCellReferenceNodeArchive\022(\n AST_unk"
+    "nown_function_node_string\030\021 \001(\t\022)\n!AST_u"
+    "nknown_function_node_numArgs\030\022 \001(\r\022\026\n\016AS"
+    "T_whitespace\030\031 \001(\t\022H\n\nAST_column\030\032 \001(\01324"
+    ".TSCE.ASTNodeArrayArchive.ASTColumnCoord"
+    "inateArchive\022B\n\007AST_row\030\033 \001(\01321.TSCE.AST"
+    "NodeArrayArchive.ASTRowCoordinateArchive"
+    "\022n\n$AST_cross_table_reference_extra_info"
+    "\030\034 \001(\0132@.TSCE.ASTNodeArrayArchive.ASTCro"
+    "ssTableReferenceExtraInfoArchive\"\241\006\n\013AST"
+    "NodeType\022\021\n\rADDITION_NODE\020\001\022\024\n\020SUBTRACTI"
+    "ON_NODE\020\002\022\027\n\023MULTIPLICATION_NODE\020\003\022\021\n\rDI"
+    "VISION_NODE\020\004\022\016\n\nPOWER_NODE\020\005\022\026\n\022CONCATE"
+    "NATION_NODE\020\006\022\025\n\021GREATER_THAN_NODE\020\007\022!\n\035"
+    "GREATER_THAN_OR_EQUAL_TO_NODE\020\010\022\022\n\016LESS_"
+    "THAN_NODE\020\t\022\036\n\032LESS_THAN_OR_EQUAL_TO_NOD"
+    "E\020\n\022\021\n\rEQUAL_TO_NODE\020\013\022\025\n\021NOT_EQUAL_TO_N"
+    "ODE\020\014\022\021\n\rNEGATION_NODE\020\r\022\022\n\016PLUS_SIGN_NO"
+    "DE\020\016\022\020\n\014PERCENT_NODE\020\017\022\021\n\rFUNCTION_NODE\020"
+    "\020\022\017\n\013NUMBER_NODE\020\021\022\020\n\014BOOLEAN_NODE\020\022\022\017\n\013"
+    "STRING_NODE\020\023\022\r\n\tDATE_NODE\020\024\022\021\n\rDURATION"
+    "_NODE\020\025\022\027\n\023EMPTY_ARGUMENT_NODE\020\026\022\016\n\nTOKE"
+    "N_NODE\020\027\022\016\n\nARRAY_NODE\020\030\022\r\n\tLIST_NODE\020\031\022"
+    "\016\n\nTHUNK_NODE\020\032\022\035\n\031LOCAL_CELL_REFERENCE_"
+    "NODE\020\033\022#\n\037CROSS_TABLE_CELL_REFERENCE_NOD"
+    "E\020\034\022\016\n\nCOLON_NODE\020\035\022\030\n\024REFERENCE_ERROR_N"
+    "ODE\020\036\022\031\n\025UNKNOWN_FUNCTION_NODE\020\037\022\032\n\026APPE"
+    "ND_WHITESPACE_NODE\020 \022\033\n\027PREPEND_WHITESPA"
+    "CE_NODE\020!\022\024\n\020BEGIN_THUNK_NODE\020\"\022\022\n\016END_T"
+    "HUNK_NODE\020#\022\027\n\023CELL_REFERENCE_NODE\020$\"\205\001\n"
+    "\036FormulaTranslationFlagsArchive\022\'\n\030excel"
+    "_import_translation\030\001 \001(\010:\005false\022:\n+numb"
+    "er_to_date_coercion_removal_translation\030"
+    "\002 \001(\010:\005false\"\370\001\n\016FormulaArchive\0221\n\016AST_n"
+    "ode_array\030\001 \002(\0132\031.TSCE.ASTNodeArrayArchi"
+    "ve\022\023\n\013host_column\030\002 \001(\r\022\020\n\010host_row\030\003 \001("
+    "\r\022&\n\027host_column_is_negative\030\004 \001(\010:\005fals"
+    "e\022#\n\024host_row_is_negative\030\005 \001(\010:\005false\022\?"
+    "\n\021translation_flags\030\006 \001(\0132$.TSCE.Formula"
+    "TranslationFlagsArchive\"\271\003\n\023FormatStruct"
+    "Archive\022\023\n\013format_type\030\001 \002(\r\022\026\n\016decimal_"
+    "places\030\002 \001(\r\022\025\n\rcurrency_code\030\003 \001(\t\022\026\n\016n"
+    "egative_style\030\004 \001(\r\022 \n\030show_thousands_se"
+    "parator\030\005 \001(\010\022\034\n\024use_accounting_style\030\006 "
+    "\001(\010\022\026\n\016duration_style\030\007 \001(\r\022\014\n\004base\030\010 \001("
+    "\r\022\023\n\013base_places\030\t \001(\r\022\033\n\023base_use_minus"
+    "_sign\030\n \001(\010\022\031\n\021fraction_accuracy\030\013 \001(\r\022\034"
+    "\n\024suppress_date_format\030\014 \001(\010\022\034\n\024suppress"
+    "_time_format\030\r \001(\010\022\030\n\020date_time_format\030\016"
+    " \001(\t\022\035\n\025duration_unit_largest\030\017 \001(\r\022\036\n\026d"
+    "uration_unit_smallest\030\020 \001(\r\"~\n\026RangeCoor"
+    "dinateArchive\022\027\n\017top_left_column\030\001 \002(\r\022\024"
+    "\n\014top_left_row\030\002 \002(\r\022\033\n\023bottom_right_col"
+    "umn\030\003 \002(\r\022\030\n\020bottom_right_row\030\004 \002(\r\"\207\004\n\024"
+    "TectonicShiftArchive\022 \n\030grid_coordinate_"
+    "offset_x\030\001 \002(\r\022 \n\030grid_coordinate_offset"
+    "_y\030\002 \002(\r\022,\n$grid_coordinate_offset_x_is_"
+    "negative\030\003 \002(\010\022,\n$grid_coordinate_offset"
+    "_y_is_negative\030\004 \002(\010\0225\n\017range_for_shift\030"
+    "\005 \001(\0132\034.TSCE.RangeCoordinateArchive\0228\n\022r"
+    "ange_for_deletion\030\006 \001(\0132\034.TSCE.RangeCoor"
+    "dinateArchive\0224\n\016inserted_range\030\007 \001(\0132\034."
+    "TSCE.RangeCoordinateArchive\022\031\n\021apply_to_"
+    "absolute\030\010 \002(\010\022\027\n\017inserting_after\030\t \002(\010\022"
+    "\032\n\022ignore_sticky_bits\030\n \002(\010\0221\n\013table_ran"
+    "ge\030\013 \001(\0132\034.TSCE.RangeCoordinateArchive\022%"
+    "\n\010table_id\030\014 \001(\0132\023.TSCE.CFUUIDArchive\"\217\001"
+    "\n\031RewriteSortMappingArchive\022%\n\010table_id\030"
+    "\001 \002(\0132\023.TSCE.CFUUIDArchive\0223\n\017shuffle_ma"
+    "pping\030\002 \002(\0132\032.TSK.ShuffleMappingArchive\022"
+    "\026\n\016explode_ranges\030\003 \002(\010\"\224\002\n\025RangeMovedIn"
+    "foArchive\022%\n\010table_id\030\001 \001(\0132\023.TSCE.CFUUI"
+    "DArchive\0220\n\nfrom_range\030\002 \001(\0132\034.TSCE.Rang"
+    "eCoordinateArchive\022.\n\010to_range\030\003 \001(\0132\034.T"
+    "SCE.RangeCoordinateArchive\0229\n\024from_range"
+    "_reference\030\004 \001(\0132\033.TSCE.RangeReferenceAr"
+    "chive\0227\n\022to_range_reference\030\005 \001(\0132\033.TSCE"
+    ".RangeReferenceArchive\"\254\001\n\027TableResizedI"
+    "nfoArchive\022%\n\010table_id\030\001 \002(\0132\023.TSCE.CFUU"
+    "IDArchive\0224\n\016new_table_size\030\002 \002(\0132\034.TSCE"
+    ".RangeCoordinateArchive\0224\n\016old_table_siz"
+    "e\030\003 \001(\0132\034.TSCE.RangeCoordinateArchive\"q\n"
+    "\024CellMergeInfoArchive\022%\n\010table_id\030\001 \002(\0132"
+    "\023.TSCE.CFUUIDArchive\0222\n\014merged_range\030\002 \002"
+    "(\0132\034.TSCE.RangeCoordinateArchive\"\244\004\n\031For"
+    "mulaRewriteSpecArchive\022A\n\014rewrite_type\030\001"
+    " \002(\0162+.TSCE.FormulaRewriteSpecArchive.Re"
+    "writeType\0222\n\016tectonic_shift\030\002 \001(\0132\032.TSCE"
+    ".TectonicShiftArchive\0225\n\014sort_mapping\030\003 "
+    "\001(\0132\037.TSCE.RewriteSortMappingArchive\0225\n\020"
+    "range_moved_info\030\004 \001(\0132\033.TSCE.RangeMoved"
+    "InfoArchive\022-\n\020deleted_owner_id\030\005 \001(\0132\023."
+    "TSCE.CFUUIDArchive\0229\n\022table_resized_info"
+    "\030\006 \001(\0132\035.TSCE.TableResizedInfoArchive\0223\n"
+    "\017cell_merge_info\030\007 \001(\0132\032.TSCE.CellMergeI"
+    "nfoArchive\"\202\001\n\013RewriteType\022\022\n\016TECTONIC_S"
+    "HIFT\020\001\022\033\n\027REMAP_WITH_SORT_MAPPING\020\002\022\016\n\nM"
+    "OVE_RANGE\020\003\022\020\n\014DELETE_OWNER\020\004\022\020\n\014TABLE_R"
+    "ESIZE\020\005\022\016\n\nCELL_MERGE\020\006\"f\n CellCoordinat"
+    "eFormulaPairArchive\022\016\n\006column\030\001 \002(\r\022\013\n\003r"
+    "ow\030\002 \002(\r\022%\n\007formula\030\003 \001(\0132\024.TSCE.Formula"
+    "Archive\"H\n\025CellCoordinateArchive\022\022\n\npack"
+    "edData\030\001 \001(\007\022\016\n\006column\030\002 \001(\r\022\013\n\003row\030\003 \001("
+    "\r\"S\n\033CellCoordinateVectorArchive\0224\n\017cell"
+    "_coordinate\030\001 \003(\0132\033.TSCE.CellCoordinateA"
+    "rchive\"w\n\037CellCoordinateObjectPairArchiv"
+    "e\0224\n\017cell_coordinate\030\001 \002(\0132\033.TSCE.CellCo"
+    "ordinateArchive\022\036\n\006object\030\002 \002(\0132\016.TSP.Re"
+    "ference\"l\n\036CellCoordinateObjectMapArchiv"
+    "e\022J\n\033cell_coordinate_object_pair\030\001 \003(\0132%"
+    ".TSCE.CellCoordinateObjectPairArchive\"a\n"
+    "\026OwnerFormulaMapArchive\022G\n\027coordinate_fo"
+    "rmula_pair\030\001 \003(\0132&.TSCE.CellCoordinateFo"
+    "rmulaPairArchive\"q\n\034FormulaRewriteComman"
+    "dArchive\022-\n\025table_rewrite_command\030\001 \001(\0132"
+    "\016.TSP.Reference\022\"\n\005super\030\002 \001(\0132\023.TSK.Com"
+    "mandArchive\"^\n!NumberTrackedReferencePai"
+    "rArchive\022\016\n\006number\030\001 \002(\r\022)\n\021tracked_refe"
+    "rence\030\002 \001(\0132\016.TSP.Reference\"t\n\"NumberToT"
+    "rackedReferenceMapArchive\022N\n\035number_trac"
+    "ked_reference_pair\030\001 \003(\0132\'.TSCE.NumberTr"
+    "ackedReferencePairArchive\"\336\002\n&TrackedRef"
+    "erencesRewriteCommandArchive\022U\n\037referenc"
+    "es_in_reference_tracker\030\001 \001(\0132(.TSCE.Num"
+    "berToTrackedReferenceMapArchiveB\002\030\001\022W\n!o"
+    "riginal_tracked_reference_copies\030\002 \001(\0132("
+    ".TSCE.NumberToTrackedReferenceMapArchive"
+    "B\002\030\001\0225\n\014rewrite_spec\030\003 \001(\0132\037.TSCE.Formul"
+    "aRewriteSpecArchive\022)\n\021reference_tracker"
+    "\030\004 \002(\0132\016.TSP.Reference\022\"\n\005super\030\005 \002(\0132\023."
+    "TSK.CommandArchive\"U\n\027TrackedReferenceAr"
+    "chive\022&\n\003ast\030\001 \002(\0132\031.TSCE.ASTNodeArrayAr"
+    "chive\022\022\n\nformula_id\030\002 \002(\r\"\257\001\n\027ReferenceT"
+    "rackerArchive\022!\n\004uuid\030\001 \002(\0132\023.TSCE.CFUUI"
+    "DArchive\022-\n\021tracked_reference\030\002 \003(\0132\016.TS"
+    "P.ReferenceB\002\030\001\022B\n\033contained_tracked_ref"
+    "erence\030\003 \003(\0132\035.TSCE.TrackedReferenceArch"
+    "ive\"(\n\027BooleanCellValueArchive\022\r\n\005value\030"
+    "\001 \002(\010\"q\n\024DateCellValueArchive\022\r\n\005value\030\001"
+    " \002(\001\022(\n\006format\030\002 \002(\0132\030.TSK.FormatStructA"
+    "rchive\022 \n\022format_is_implicit\030\003 \001(\010:\004true"
+    "\"\236\001\n\026NumberCellValueArchive\022\r\n\005value\030\001 \002"
+    "(\001\022\022\n\nunit_index\030\002 \001(\005\022\025\n\rcurrency_code\030"
+    "\005 \001(\t\022(\n\006format\030\003 \002(\0132\030.TSK.FormatStruct"
+    "Archive\022 \n\022format_is_implicit\030\004 \001(\010:\004tru"
+    "e\"s\n\026StringCellValueArchive\022\r\n\005value\030\001 \002"
+    "(\t\022(\n\006format\030\002 \002(\0132\030.TSK.FormatStructArc"
+    "hive\022 \n\022format_is_implicit\030\003 \001(\010:\004true\"\201"
+    "\003\n\020CellValueArchive\022=\n\017cell_value_type\030\001"
+    " \002(\0162$.TSCE.CellValueArchive.CellValueTy"
+    "pe\0224\n\rboolean_value\030\002 \001(\0132\035.TSCE.Boolean"
+    "CellValueArchive\022.\n\ndate_value\030\003 \001(\0132\032.T"
+    "SCE.DateCellValueArchive\0222\n\014number_value"
+    "\030\004 \001(\0132\034.TSCE.NumberCellValueArchive\0222\n\014"
+    "string_value\030\005 \001(\0132\034.TSCE.StringCellValu"
+    "eArchive\"`\n\rCellValueType\022\014\n\010NIL_TYPE\020\001\022"
+    "\020\n\014BOOLEAN_TYPE\020\002\022\r\n\tDATE_TYPE\020\003\022\017\n\013NUMB"
+    "ER_TYPE\020\004\022\017\n\013STRING_TYPE\020\005", 14426);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "TSCEArchives.proto", &protobuf_RegisterTypes);
   CFUUIDArchive::default_instance_ = new CFUUIDArchive();
@@ -5568,6 +5574,8 @@ const int VolatileDependenciesArchive::kVolatileLocationCellColumnFieldNumber;
 const int VolatileDependenciesArchive::kVolatileLocationCellRowFieldNumber;
 const int VolatileDependenciesArchive::kVolatileCompassCellColumnFieldNumber;
 const int VolatileDependenciesArchive::kVolatileCompassCellRowFieldNumber;
+const int VolatileDependenciesArchive::kVolatileSheetTableNameCellColumnFieldNumber;
+const int VolatileDependenciesArchive::kVolatileSheetTableNameCellRowFieldNumber;
 const int VolatileDependenciesArchive::kCalculatedDependencyCellColumnFieldNumber;
 const int VolatileDependenciesArchive::kCalculatedDependencyCellRowFieldNumber;
 const int VolatileDependenciesArchive::kVolatileGeometryCellReferenceFieldNumber;
@@ -5634,6 +5642,8 @@ void VolatileDependenciesArchive::Clear() {
   volatile_location_cell_row_.Clear();
   volatile_compass_cell_column_.Clear();
   volatile_compass_cell_row_.Clear();
+  volatile_sheet_table_name_cell_column_.Clear();
+  volatile_sheet_table_name_cell_row_.Clear();
   calculated_dependency_cell_column_.Clear();
   calculated_dependency_cell_row_.Clear();
   volatile_geometry_cell_reference_.Clear();
@@ -5938,6 +5948,50 @@ bool VolatileDependenciesArchive::MergePartialFromCodedStream(
           goto handle_uninterpreted;
         }
         if (input->ExpectTag(128)) goto parse_volatile_locale_cell_row;
+        if (input->ExpectTag(136)) goto parse_volatile_sheet_table_name_cell_column;
+        break;
+      }
+
+      // repeated uint32 volatile_sheet_table_name_cell_column = 17;
+      case 17: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_volatile_sheet_table_name_cell_column:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadRepeatedPrimitive<
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                 2, 136, input, this->mutable_volatile_sheet_table_name_cell_column())));
+        } else if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag)
+                   == ::google::protobuf::internal::WireFormatLite::
+                      WIRETYPE_LENGTH_DELIMITED) {
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPackedPrimitiveNoInline<
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                 input, this->mutable_volatile_sheet_table_name_cell_column())));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(136)) goto parse_volatile_sheet_table_name_cell_column;
+        if (input->ExpectTag(144)) goto parse_volatile_sheet_table_name_cell_row;
+        break;
+      }
+
+      // repeated uint32 volatile_sheet_table_name_cell_row = 18;
+      case 18: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_volatile_sheet_table_name_cell_row:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadRepeatedPrimitive<
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                 2, 144, input, this->mutable_volatile_sheet_table_name_cell_row())));
+        } else if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag)
+                   == ::google::protobuf::internal::WireFormatLite::
+                      WIRETYPE_LENGTH_DELIMITED) {
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPackedPrimitiveNoInline<
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                 input, this->mutable_volatile_sheet_table_name_cell_row())));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(144)) goto parse_volatile_sheet_table_name_cell_row;
         if (input->ExpectAtEnd()) return true;
         break;
       }
@@ -6044,6 +6098,18 @@ void VolatileDependenciesArchive::SerializeWithCachedSizes(
       16, this->volatile_locale_cell_row(i), output);
   }
 
+  // repeated uint32 volatile_sheet_table_name_cell_column = 17;
+  for (int i = 0; i < this->volatile_sheet_table_name_cell_column_size(); i++) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(
+      17, this->volatile_sheet_table_name_cell_column(i), output);
+  }
+
+  // repeated uint32 volatile_sheet_table_name_cell_row = 18;
+  for (int i = 0; i < this->volatile_sheet_table_name_cell_row_size(); i++) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(
+      18, this->volatile_sheet_table_name_cell_row(i), output);
+  }
+
   if (!unknown_fields().empty()) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         unknown_fields(), output);
@@ -6136,6 +6202,18 @@ void VolatileDependenciesArchive::SerializeWithCachedSizes(
   for (int i = 0; i < this->volatile_locale_cell_row_size(); i++) {
     target = ::google::protobuf::internal::WireFormatLite::
       WriteUInt32ToArray(16, this->volatile_locale_cell_row(i), target);
+  }
+
+  // repeated uint32 volatile_sheet_table_name_cell_column = 17;
+  for (int i = 0; i < this->volatile_sheet_table_name_cell_column_size(); i++) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteUInt32ToArray(17, this->volatile_sheet_table_name_cell_column(i), target);
+  }
+
+  // repeated uint32 volatile_sheet_table_name_cell_row = 18;
+  for (int i = 0; i < this->volatile_sheet_table_name_cell_row_size(); i++) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteUInt32ToArray(18, this->volatile_sheet_table_name_cell_row(i), target);
   }
 
   if (!unknown_fields().empty()) {
@@ -6248,6 +6326,26 @@ int VolatileDependenciesArchive::ByteSize() const {
     total_size += 1 * this->volatile_compass_cell_row_size() + data_size;
   }
 
+  // repeated uint32 volatile_sheet_table_name_cell_column = 17;
+  {
+    int data_size = 0;
+    for (int i = 0; i < this->volatile_sheet_table_name_cell_column_size(); i++) {
+      data_size += ::google::protobuf::internal::WireFormatLite::
+        UInt32Size(this->volatile_sheet_table_name_cell_column(i));
+    }
+    total_size += 2 * this->volatile_sheet_table_name_cell_column_size() + data_size;
+  }
+
+  // repeated uint32 volatile_sheet_table_name_cell_row = 18;
+  {
+    int data_size = 0;
+    for (int i = 0; i < this->volatile_sheet_table_name_cell_row_size(); i++) {
+      data_size += ::google::protobuf::internal::WireFormatLite::
+        UInt32Size(this->volatile_sheet_table_name_cell_row(i));
+    }
+    total_size += 2 * this->volatile_sheet_table_name_cell_row_size() + data_size;
+  }
+
   // repeated uint32 calculated_dependency_cell_column = 9;
   {
     int data_size = 0;
@@ -6319,6 +6417,8 @@ void VolatileDependenciesArchive::MergeFrom(const VolatileDependenciesArchive& f
   volatile_location_cell_row_.MergeFrom(from.volatile_location_cell_row_);
   volatile_compass_cell_column_.MergeFrom(from.volatile_compass_cell_column_);
   volatile_compass_cell_row_.MergeFrom(from.volatile_compass_cell_row_);
+  volatile_sheet_table_name_cell_column_.MergeFrom(from.volatile_sheet_table_name_cell_column_);
+  volatile_sheet_table_name_cell_row_.MergeFrom(from.volatile_sheet_table_name_cell_row_);
   calculated_dependency_cell_column_.MergeFrom(from.calculated_dependency_cell_column_);
   calculated_dependency_cell_row_.MergeFrom(from.calculated_dependency_cell_row_);
   volatile_geometry_cell_reference_.MergeFrom(from.volatile_geometry_cell_reference_);
@@ -6358,6 +6458,8 @@ void VolatileDependenciesArchive::Swap(VolatileDependenciesArchive* other) {
     volatile_location_cell_row_.Swap(&other->volatile_location_cell_row_);
     volatile_compass_cell_column_.Swap(&other->volatile_compass_cell_column_);
     volatile_compass_cell_row_.Swap(&other->volatile_compass_cell_row_);
+    volatile_sheet_table_name_cell_column_.Swap(&other->volatile_sheet_table_name_cell_column_);
+    volatile_sheet_table_name_cell_row_.Swap(&other->volatile_sheet_table_name_cell_row_);
     calculated_dependency_cell_column_.Swap(&other->calculated_dependency_cell_column_);
     calculated_dependency_cell_row_.Swap(&other->calculated_dependency_cell_row_);
     volatile_geometry_cell_reference_.Swap(&other->volatile_geometry_cell_reference_);
@@ -10863,7 +10965,7 @@ bool DependencyTrackerArchive::MergePartialFromCodedStream(
         break;
       }
 
-      // repeated .TSCE.CellReferenceArchive dirty_leaf = 2;
+      // repeated .TSCE.CellReferenceArchive dirty_leaf = 2 [deprecated = true];
       case 2: {
         if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
             ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
@@ -10892,7 +10994,7 @@ bool DependencyTrackerArchive::MergePartialFromCodedStream(
         break;
       }
 
-      // repeated .TSCE.InternalCellReferenceArchive internal_dirty_leaf = 4;
+      // repeated .TSCE.InternalCellReferenceArchive internal_dirty_leaf = 4 [deprecated = true];
       case 4: {
         if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
             ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
@@ -10931,7 +11033,7 @@ void DependencyTrackerArchive::SerializeWithCachedSizes(
       1, this->formula_owner_info(i), output);
   }
 
-  // repeated .TSCE.CellReferenceArchive dirty_leaf = 2;
+  // repeated .TSCE.CellReferenceArchive dirty_leaf = 2 [deprecated = true];
   for (int i = 0; i < this->dirty_leaf_size(); i++) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
       2, this->dirty_leaf(i), output);
@@ -10943,7 +11045,7 @@ void DependencyTrackerArchive::SerializeWithCachedSizes(
       3, this->owner_id_map(), output);
   }
 
-  // repeated .TSCE.InternalCellReferenceArchive internal_dirty_leaf = 4;
+  // repeated .TSCE.InternalCellReferenceArchive internal_dirty_leaf = 4 [deprecated = true];
   for (int i = 0; i < this->internal_dirty_leaf_size(); i++) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
       4, this->internal_dirty_leaf(i), output);
@@ -10964,7 +11066,7 @@ void DependencyTrackerArchive::SerializeWithCachedSizes(
         1, this->formula_owner_info(i), target);
   }
 
-  // repeated .TSCE.CellReferenceArchive dirty_leaf = 2;
+  // repeated .TSCE.CellReferenceArchive dirty_leaf = 2 [deprecated = true];
   for (int i = 0; i < this->dirty_leaf_size(); i++) {
     target = ::google::protobuf::internal::WireFormatLite::
       WriteMessageNoVirtualToArray(
@@ -10978,7 +11080,7 @@ void DependencyTrackerArchive::SerializeWithCachedSizes(
         3, this->owner_id_map(), target);
   }
 
-  // repeated .TSCE.InternalCellReferenceArchive internal_dirty_leaf = 4;
+  // repeated .TSCE.InternalCellReferenceArchive internal_dirty_leaf = 4 [deprecated = true];
   for (int i = 0; i < this->internal_dirty_leaf_size(); i++) {
     target = ::google::protobuf::internal::WireFormatLite::
       WriteMessageNoVirtualToArray(
@@ -11012,7 +11114,7 @@ int DependencyTrackerArchive::ByteSize() const {
         this->formula_owner_info(i));
   }
 
-  // repeated .TSCE.CellReferenceArchive dirty_leaf = 2;
+  // repeated .TSCE.CellReferenceArchive dirty_leaf = 2 [deprecated = true];
   total_size += 1 * this->dirty_leaf_size();
   for (int i = 0; i < this->dirty_leaf_size(); i++) {
     total_size +=
@@ -11020,7 +11122,7 @@ int DependencyTrackerArchive::ByteSize() const {
         this->dirty_leaf(i));
   }
 
-  // repeated .TSCE.InternalCellReferenceArchive internal_dirty_leaf = 4;
+  // repeated .TSCE.InternalCellReferenceArchive internal_dirty_leaf = 4 [deprecated = true];
   total_size += 1 * this->internal_dirty_leaf_size();
   for (int i = 0; i < this->internal_dirty_leaf_size(); i++) {
     total_size +=
@@ -23970,7 +24072,8 @@ void DateCellValueArchive::Swap(DateCellValueArchive* other) {
 
 #ifndef _MSC_VER
 const int NumberCellValueArchive::kValueFieldNumber;
-const int NumberCellValueArchive::kUnitFieldNumber;
+const int NumberCellValueArchive::kUnitIndexFieldNumber;
+const int NumberCellValueArchive::kCurrencyCodeFieldNumber;
 const int NumberCellValueArchive::kFormatFieldNumber;
 const int NumberCellValueArchive::kFormatIsImplicitFieldNumber;
 #endif  // !_MSC_VER
@@ -23993,7 +24096,8 @@ NumberCellValueArchive::NumberCellValueArchive(const NumberCellValueArchive& fro
 void NumberCellValueArchive::SharedCtor() {
   _cached_size_ = 0;
   value_ = 0;
-  unit_ = 0;
+  unit_index_ = 0;
+  currency_code_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
   format_ = NULL;
   format_is_implicit_ = true;
   ::memset(_has_bits_, 0, sizeof(_has_bits_));
@@ -24004,6 +24108,9 @@ NumberCellValueArchive::~NumberCellValueArchive() {
 }
 
 void NumberCellValueArchive::SharedDtor() {
+  if (currency_code_ != &::google::protobuf::internal::kEmptyString) {
+    delete currency_code_;
+  }
   if (this != default_instance_) {
     delete format_;
   }
@@ -24033,7 +24140,12 @@ NumberCellValueArchive* NumberCellValueArchive::New() const {
 void NumberCellValueArchive::Clear() {
   if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
     value_ = 0;
-    unit_ = 0;
+    unit_index_ = 0;
+    if (has_currency_code()) {
+      if (currency_code_ != &::google::protobuf::internal::kEmptyString) {
+        currency_code_->clear();
+      }
+    }
     if (has_format()) {
       if (format_ != NULL) format_->::TSK::FormatStructArchive::Clear();
     }
@@ -24060,19 +24172,19 @@ bool NumberCellValueArchive::MergePartialFromCodedStream(
         } else {
           goto handle_uninterpreted;
         }
-        if (input->ExpectTag(16)) goto parse_unit;
+        if (input->ExpectTag(16)) goto parse_unit_index;
         break;
       }
 
-      // required int32 unit = 2;
+      // optional int32 unit_index = 2;
       case 2: {
         if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
             ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
-         parse_unit:
+         parse_unit_index:
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
-                 input, &unit_)));
-          set_has_unit();
+                 input, &unit_index_)));
+          set_has_unit_index();
         } else {
           goto handle_uninterpreted;
         }
@@ -24106,6 +24218,23 @@ bool NumberCellValueArchive::MergePartialFromCodedStream(
         } else {
           goto handle_uninterpreted;
         }
+        if (input->ExpectTag(42)) goto parse_currency_code;
+        break;
+      }
+
+      // optional string currency_code = 5;
+      case 5: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_currency_code:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_currency_code()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+            this->currency_code().data(), this->currency_code().length(),
+            ::google::protobuf::internal::WireFormat::PARSE);
+        } else {
+          goto handle_uninterpreted;
+        }
         if (input->ExpectAtEnd()) return true;
         break;
       }
@@ -24133,9 +24262,9 @@ void NumberCellValueArchive::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteDouble(1, this->value(), output);
   }
 
-  // required int32 unit = 2;
-  if (has_unit()) {
-    ::google::protobuf::internal::WireFormatLite::WriteInt32(2, this->unit(), output);
+  // optional int32 unit_index = 2;
+  if (has_unit_index()) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(2, this->unit_index(), output);
   }
 
   // required .TSK.FormatStructArchive format = 3;
@@ -24147,6 +24276,15 @@ void NumberCellValueArchive::SerializeWithCachedSizes(
   // optional bool format_is_implicit = 4 [default = true];
   if (has_format_is_implicit()) {
     ::google::protobuf::internal::WireFormatLite::WriteBool(4, this->format_is_implicit(), output);
+  }
+
+  // optional string currency_code = 5;
+  if (has_currency_code()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+      this->currency_code().data(), this->currency_code().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE);
+    ::google::protobuf::internal::WireFormatLite::WriteString(
+      5, this->currency_code(), output);
   }
 
   if (!unknown_fields().empty()) {
@@ -24162,9 +24300,9 @@ void NumberCellValueArchive::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(1, this->value(), target);
   }
 
-  // required int32 unit = 2;
-  if (has_unit()) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(2, this->unit(), target);
+  // optional int32 unit_index = 2;
+  if (has_unit_index()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(2, this->unit_index(), target);
   }
 
   // required .TSK.FormatStructArchive format = 3;
@@ -24177,6 +24315,16 @@ void NumberCellValueArchive::SerializeWithCachedSizes(
   // optional bool format_is_implicit = 4 [default = true];
   if (has_format_is_implicit()) {
     target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(4, this->format_is_implicit(), target);
+  }
+
+  // optional string currency_code = 5;
+  if (has_currency_code()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+      this->currency_code().data(), this->currency_code().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE);
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        5, this->currency_code(), target);
   }
 
   if (!unknown_fields().empty()) {
@@ -24195,11 +24343,18 @@ int NumberCellValueArchive::ByteSize() const {
       total_size += 1 + 8;
     }
 
-    // required int32 unit = 2;
-    if (has_unit()) {
+    // optional int32 unit_index = 2;
+    if (has_unit_index()) {
       total_size += 1 +
         ::google::protobuf::internal::WireFormatLite::Int32Size(
-          this->unit());
+          this->unit_index());
+    }
+
+    // optional string currency_code = 5;
+    if (has_currency_code()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->currency_code());
     }
 
     // required .TSK.FormatStructArchive format = 3;
@@ -24244,8 +24399,11 @@ void NumberCellValueArchive::MergeFrom(const NumberCellValueArchive& from) {
     if (from.has_value()) {
       set_value(from.value());
     }
-    if (from.has_unit()) {
-      set_unit(from.unit());
+    if (from.has_unit_index()) {
+      set_unit_index(from.unit_index());
+    }
+    if (from.has_currency_code()) {
+      set_currency_code(from.currency_code());
     }
     if (from.has_format()) {
       mutable_format()->::TSK::FormatStructArchive::MergeFrom(from.format());
@@ -24270,7 +24428,7 @@ void NumberCellValueArchive::CopyFrom(const NumberCellValueArchive& from) {
 }
 
 bool NumberCellValueArchive::IsInitialized() const {
-  if ((_has_bits_[0] & 0x00000007) != 0x00000007) return false;
+  if ((_has_bits_[0] & 0x00000009) != 0x00000009) return false;
 
   if (has_format()) {
     if (!this->format().IsInitialized()) return false;
@@ -24281,7 +24439,8 @@ bool NumberCellValueArchive::IsInitialized() const {
 void NumberCellValueArchive::Swap(NumberCellValueArchive* other) {
   if (other != this) {
     std::swap(value_, other->value_);
-    std::swap(unit_, other->unit_);
+    std::swap(unit_index_, other->unit_index_);
+    std::swap(currency_code_, other->currency_code_);
     std::swap(format_, other->format_);
     std::swap(format_is_implicit_, other->format_is_implicit_);
     std::swap(_has_bits_[0], other->_has_bits_[0]);

@@ -1069,12 +1069,15 @@ void protobuf_AssignDesc_TSWPArchives_2eproto() {
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(TOCSettingsArchive_TOCEntryData));
   TOCEntryInstanceArchive_descriptor_ = file->message_type(28);
-  static const int TOCEntryInstanceArchive_offsets_[5] = {
+  static const int TOCEntryInstanceArchive_offsets_[8] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(TOCEntryInstanceArchive, paragraph_index_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(TOCEntryInstanceArchive, page_number_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(TOCEntryInstanceArchive, number_format_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(TOCEntryInstanceArchive, heading_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(TOCEntryInstanceArchive, indexed_style_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(TOCEntryInstanceArchive, indexed_list_style_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(TOCEntryInstanceArchive, indexed_list_start_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(TOCEntryInstanceArchive, indexed_paragraph_level_),
   };
   TOCEntryInstanceArchive_reflection_ =
     new ::google::protobuf::internal::GeneratedMessageReflection(
@@ -2339,7 +2342,7 @@ void protobuf_AddDesc_TSWPArchives_2eproto() {
     "e_count\030\n \001(\r:\0010\022>\n\017char_properties\030\013 \001("
     "\0132%.TSWP.CharacterStylePropertiesArchive"
     "\022>\n\017para_properties\030\014 \001(\0132%.TSWP.Paragra"
-    "phStylePropertiesArchive\"\211\030\n\020ListStyleAr"
+    "phStylePropertiesArchive\"\360\030\n\020ListStyleAr"
     "chive\022 \n\005super\030\001 \002(\0132\021.TSS.StyleArchive\022"
     "\031\n\016override_count\030\n \001(\r:\0010\0225\n\013label_type"
     "s\030\013 \003(\0162 .TSWP.ListStyleArchive.LabelTyp"
@@ -2361,7 +2364,7 @@ void protobuf_AddDesc_TSWPArchives_2eproto() {
     "ge\030\003 \001(\0132\022.TSP.DataReference\022\022\n\nimage_nu"
     "ll\030\002 \001(\010\022&\n\016database_image\030\001 \001(\0132\016.TSP.R"
     "eference\"<\n\tLabelType\022\t\n\005kNone\020\000\022\n\n\006kIma"
-    "ge\020\001\022\013\n\007kString\020\002\022\013\n\007kNumber\020\003\"\223\021\n\nNumbe"
+    "ge\020\001\022\013\n\007kString\020\002\022\013\n\007kNumber\020\003\"\372\021\n\nNumbe"
     "rType\022\023\n\017kNumericDecimal\020\000\022\027\n\023kNumericDo"
     "ubleParen\020\001\022\026\n\022kNumericRightParen\020\002\022\026\n\022k"
     "RomanUpperDecimal\020\003\022\032\n\026kRomanUpperDouble"
@@ -2416,256 +2419,261 @@ void protobuf_AddDesc_TSWPArchives_2eproto() {
     "AbjadRightParenKind\0209\022\033\n\027kHebrewAlphaDec"
     "imalKind\020:\022\037\n\033kHebrewAlphaDoubleParenKin"
     "d\020;\022\036\n\032kHebrewAlphaRightParenKind\020<\022\037\n\033k"
-    "HebrewBiblicalStandardKind\020=\"\200\001\n\026TextSty"
-    "lePresetArchive\022\031\n\021preset_identifier\030\001 \001"
-    "(\t\022\'\n\017paragraph_style\030\002 \001(\0132\016.TSP.Refere"
-    "nce\022\"\n\nlist_style\030\003 \001(\0132\016.TSP.Reference\""
-    "\365\002\n\016ColumnsArchive\022\?\n\requal_columns\030\001 \001("
-    "\0132(.TSWP.ColumnsArchive.EqualColumnsArch"
-    "ive\022F\n\021non_equal_columns\030\002 \001(\0132+.TSWP.Co"
-    "lumnsArchive.NonEqualColumnsArchive\0321\n\023E"
-    "qualColumnsArchive\022\r\n\005count\030\001 \001(\r\022\013\n\003gap"
-    "\030\002 \001(\002\032\246\001\n\026NonEqualColumnsArchive\022\r\n\005fir"
-    "st\030\001 \002(\002\022N\n\tfollowing\030\002 \003(\0132;.TSWP.Colum"
-    "nsArchive.NonEqualColumnsArchive.GapWidt"
-    "hArchive\032-\n\017GapWidthArchive\022\013\n\003gap\030\001 \002(\002"
-    "\022\r\n\005width\030\002 \002(\002\"J\n\016PaddingArchive\022\014\n\004lef"
-    "t\030\001 \001(\002\022\013\n\003top\030\002 \001(\002\022\r\n\005right\030\003 \001(\002\022\016\n\006b"
-    "ottom\030\004 \001(\002\"\317\004\n\034ColumnStylePropertiesArc"
-    "hive\022\022\n\ncontinuous\030\001 \001(\010\022\025\n\rshrink_to_fi"
-    "t\030\002 \001(\010\022\025\n\rvertical_text\030\003 \001(\010\022\034\n\024min_ho"
-    "rizontal_inset\030\004 \001(\002\022T\n\022vertical_alignme"
-    "nt\030\005 \001(\01628.TSWP.ColumnStylePropertiesArc"
-    "hive.VerticalAlignmentType\022\024\n\014columns_nu"
-    "ll\030\006 \001(\010\022%\n\007columns\030\007 \001(\0132\024.TSWP.Columns"
-    "Archive\022\024\n\014margins_null\030\010 \001(\010\022%\n\007margins"
-    "\030\t \001(\0132\024.TSWP.PaddingArchive\022\024\n\014padding_"
-    "null\030\n \001(\010\022%\n\007padding\030\013 \001(\0132\024.TSWP.Paddi"
-    "ngArchive\022O\n\021writing_direction\030\014 \001(\0162\032.T"
-    "SWP.WritingDirectionType:\030kWritingDirect"
-    "ionNatural\"q\n\025VerticalAlignmentType\022\022\n\016k"
-    "FrameAlignTop\020\000\022\025\n\021kFrameAlignMiddle\020\001\022\025"
-    "\n\021kFrameAlignBottom\020\002\022\026\n\022kFrameAlignJust"
-    "ify\020\003\"\220\001\n\022ColumnStyleArchive\022 \n\005super\030\001 "
-    "\002(\0132\021.TSS.StyleArchive\022\031\n\016override_count"
-    "\030\n \001(\r:\0010\022=\n\021column_properties\030\013 \001(\0132\".T"
-    "SWP.ColumnStylePropertiesArchive\"\367\003\n\033Sha"
-    "peStylePropertiesArchive\022\025\n\rshrink_to_fi"
-    "t\030\001 \001(\010\022S\n\022vertical_alignment\030\002 \001(\01627.TS"
-    "WP.ShapeStylePropertiesArchive.VerticalA"
-    "lignmentType\022\024\n\014columns_null\030\003 \001(\010\022%\n\007co"
-    "lumns\030\004 \001(\0132\024.TSWP.ColumnsArchive\022\024\n\014pad"
-    "ding_null\030\005 \001(\010\022%\n\007padding\030\006 \001(\0132\024.TSWP."
-    "PaddingArchive\022!\n\031default_text_preset_in"
-    "dex\030\007 \001(\r\022\025\n\rvertical_text\030\010 \001(\010\022\034\n\024para"
-    "graph_style_null\030\t \001(\010\022\'\n\017paragraph_styl"
-    "e\030\n \001(\0132\016.TSP.Reference\"q\n\025VerticalAlign"
-    "mentType\022\022\n\016kFrameAlignTop\020\000\022\025\n\021kFrameAl"
-    "ignMiddle\020\001\022\025\n\021kFrameAlignBottom\020\002\022\026\n\022kF"
-    "rameAlignJustify\020\003\"\222\001\n\021ShapeStyleArchive"
-    "\022%\n\005super\030\001 \002(\0132\026.TSD.ShapeStyleArchive\022"
-    "\031\n\016override_count\030\n \001(\r:\0010\022;\n\020shape_prop"
-    "erties\030\013 \001(\0132!.TSWP.ShapeStyleProperties"
-    "Archive\"\244\003\n\023ThemePresetsArchive\022*\n\022list_"
-    "style_presets\030\001 \003(\0132\016.TSP.Reference\022*\n\022t"
-    "ext_style_presets\030\002 \003(\0132\016.TSP.Reference\022"
-    "3\n\033imported_text_style_presets\030\003 \003(\0132\016.T"
-    "SP.Reference\022/\n\027toc_entry_style_presets\030"
-    "\004 \003(\0132\016.TSP.Reference\022,\n\024toc_settings_pr"
-    "esets\030\005 \003(\0132\016.TSP.Reference\022/\n\027character"
-    "_style_presets\030\006 \003(\0132\016.TSP.Reference\022/\n\027"
-    "paragraph_style_presets\030\007 \003(\0132\016.TSP.Refe"
-    "rence2\?\n\textension\022\021.TSS.ThemeArchive\030n "
-    "\002(\0132\031.TSWP.ThemePresetsArchive\"T\n\034TextPr"
-    "esetDisplayItemArchive\022\036\n\006preset\030\001 \002(\0132\016"
-    ".TSP.Reference\022\024\n\014display_name\030\002 \002(\t\"\205\001\n"
-    "\036TOCEntryStylePropertiesArchive\022\036\n\026page_"
-    "number_style_null\030\001 \001(\010\022)\n\021page_number_s"
-    "tyle\030\002 \001(\0132\016.TSP.Reference\022\030\n\020show_page_"
-    "number\030\003 \001(\010\"\200\001\n\024TOCEntryStyleArchive\022*\n"
-    "\005super\030\001 \002(\0132\033.TSWP.ParagraphStyleArchiv"
-    "e\022<\n\016toc_properties\030\002 \001(\0132$.TSWP.TOCEntr"
-    "yStylePropertiesArchive\"\350\001\n\022TOCSettingsA"
-    "rchive\022\020\n\010toc_name\030\001 \001(\t\022\021\n\ttoc_scope\030\002 "
-    "\001(\r\0226\n\007entries\030\003 \003(\0132%.TSWP.TOCSettingsA"
-    "rchive.TOCEntryData\032u\n\014TOCEntryData\022\'\n\017p"
-    "aragraph_style\030\001 \001(\0132\016.TSP.Reference\022\'\n\017"
-    "toc_entry_style\030\002 \001(\0132\016.TSP.Reference\022\023\n"
-    "\013show_in_toc\030\003 \001(\010\"\226\001\n\027TOCEntryInstanceA"
-    "rchive\022\027\n\017paragraph_index\030\001 \002(\r\022\023\n\013page_"
-    "number\030\002 \002(\r\022\025\n\rnumber_format\030\003 \002(\r\022\017\n\007h"
-    "eading\030\004 \002(\t\022%\n\rindexed_style\030\005 \002(\0132\016.TS"
-    "P.Reference\"\274\020\n\017UndoTransaction\0227\n\007entri"
-    "es\030\001 \003(\0132&.TSWP.UndoTransaction.UnionTra"
-    "nsaction\032D\n\022GenericTransaction\022\016\n\006value1"
-    "\030\001 \002(\r\022\016\n\006value2\030\002 \002(\r\022\016\n\006value3\030\003 \002(\r\032["
-    "\n\017TextTransaction\022\027\n\017insert_location\030\001 \002"
-    "(\r\022\025\n\rinsert_length\030\002 \002(\r\022\030\n\020string_to_d"
-    "elete\030\003 \001(\t\032Y\n\024CharIndexTransaction\022\022\n\nc"
-    "har_index\030\001 \002(\r\022\r\n\005count\030\002 \002(\r\022\036\n\006object"
-    "\030\003 \001(\0132\016.TSP.Reference\032J\n\033ReplaceCharInd"
-    "exTransaction\022\027\n\017attribute_index\030\001 \002(\r\022\022"
-    "\n\nchar_index\030\002 \002(\r\032x\n\031AttributeIndexTran"
-    "saction\022\027\n\017attribute_index\030\001 \002(\r\022\022\n\nchar"
-    "_index\030\002 \002(\r\022\036\n\006object\030\003 \001(\0132\016.TSP.Refer"
-    "ence\022\016\n\006string\030\004 \001(\t\032~\n\032InsertAttributeT"
-    "ransaction\022\027\n\017attribute_index\030\001 \002(\r\022\027\n\017a"
-    "ttribute_count\030\002 \002(\r\022\036\n\006object\030\003 \001(\0132\016.T"
-    "SP.Reference\022\016\n\006string\030\004 \001(\t\032H\n\024InsertNi"
-    "lTransaction\022\027\n\017attribute_index\030\001 \002(\r\022\027\n"
-    "\017attribute_count\030\002 \002(\r\032W\n\024CharDeltaTrans"
-    "action\022\022\n\nchar_index\030\001 \002(\r\022\027\n\017attribute_"
-    "index\030\002 \002(\r\022\022\n\nchar_delta\030\003 \002(\021\032f\n\030Parag"
-    "raphDataTransaction\022\027\n\017attribute_index\030\001"
-    " \002(\r\022\r\n\005first\030\002 \002(\r\022\016\n\006second\030\003 \002(\r\022\022\n\nc"
-    "har_index\030\004 \002(\r\032F\n\025ObjectDOLCTransaction"
-    "\022\r\n\005flags\030\001 \002(\r\022\036\n\006object\030\002 \001(\0132\016.TSP.Re"
-    "ference\032E\n\021CTDateTransaction\022\027\n\017attribut"
-    "e_index\030\001 \002(\r\022\027\n\004date\030\002 \001(\0132\t.TSP.Date\032\250"
-    "\006\n\020UnionTransaction\022,\n\004kind\030\001 \002(\0162\036.TSWP"
-    ".UndoTransaction.UndoKind\022\r\n\005table\030\002 \001(\r"
-    "\0229\n\007generic\030\005 \001(\0132(.TSWP.UndoTransaction"
-    ".GenericTransaction\0223\n\004text\030\006 \001(\0132%.TSWP"
-    ".UndoTransaction.TextTransaction\022>\n\nchar"
-    "_index\030\007 \001(\0132*.TSWP.UndoTransaction.Char"
-    "IndexTransaction\022M\n\022replace_char_index\030\010"
-    " \001(\01321.TSWP.UndoTransaction.ReplaceCharI"
-    "ndexTransaction\022H\n\017attribute_index\030\t \001(\013"
-    "2/.TSWP.UndoTransaction.AttributeIndexTr"
-    "ansaction\022>\n\ninsert_nil\030\n \001(\0132*.TSWP.Und"
-    "oTransaction.InsertNilTransaction\022J\n\020ins"
-    "ert_attribute\030\013 \001(\01320.TSWP.UndoTransacti"
-    "on.InsertAttributeTransaction\022>\n\nchar_de"
-    "lta\030\014 \001(\0132*.TSWP.UndoTransaction.CharDel"
-    "taTransaction\022F\n\016paragraph_data\030\r \001(\0132.."
-    "TSWP.UndoTransaction.ParagraphDataTransa"
-    "ction\022@\n\013object_dolc\030\016 \001(\0132+.TSWP.UndoTr"
-    "ansaction.ObjectDOLCTransaction\0228\n\007ct_da"
-    "te\030\017 \001(\0132\'.TSWP.UndoTransaction.CTDateTr"
-    "ansaction\"\346\001\n\010UndoKind\022\020\n\014REPLACE_TEXT\020\001"
-    "\022\024\n\020INSERT_ATTRIBUTE\020\002\022\024\n\020DELETE_ATTRIBU"
-    "TE\020\003\022\027\n\023ADJUST_CHAR_INDEXES\020\004\022\035\n\031COMPR_A"
-    "DJUST_CHAR_INDEXES\020\005\022\026\n\022REPLACE_CHAR_IND"
-    "EX\020\006\022\022\n\016REPLACE_OBJECT\020\007\022\032\n\026REPLACE_PARA"
-    "GRAPH_DATA\020\010\022\017\n\013OBJECT_DOLC\020\t\022\013\n\007CT_DATE"
-    "\020\n\"P\n\035UndoTransactionWrapperArchive\022/\n\020u"
-    "ndo_transaction\030\001 \002(\0132\025.TSWP.UndoTransac"
-    "tion\"^\n\020ShapeInfoArchive\022 \n\005super\030\001 \002(\0132"
-    "\021.TSD.ShapeArchive\022(\n\020containedStorage\030\002"
-    " \001(\0132\016.TSP.Reference\"d\n\022CommentInfoArchi"
-    "ve\022%\n\005super\030\001 \002(\0132\026.TSWP.ShapeInfoArchiv"
-    "e\022\'\n\017comment_storage\030\002 \001(\0132\016.TSP.Referen"
-    "ce\"\255\001\n\016TOCInfoArchive\022%\n\005super\030\001 \002(\0132\026.T"
-    "SWP.ShapeInfoArchive\022$\n\014toc_settings\030\002 \001"
-    "(\0132\016.TSP.Reference\022&\n\016toc_entry_data\030\003 \003"
-    "(\0132\016.TSP.Reference\022&\n\022page_number_ranges"
-    "\030\004 \003(\0132\n.TSP.Range\"5\n\024TOCLayoutHintArchi"
-    "ve\022\035\n\tcharRange\030\001 \002(\0132\n.TSP.Range\"\260\001\n\030Te"
-    "xtualAttachmentArchive\022\031\n\021string_equival"
-    "ent\030\001 \001(\t\0221\n\004kind\030\002 \001(\0162#.TSWP.TextualAt"
-    "tachmentArchive.Kind\"F\n\004Kind\022\023\n\017kKindPag"
-    "eNumber\020\000\022\022\n\016kKindPageCount\020\001\022\025\n\021kKindFo"
-    "otnoteMark\020\002\"\177\n\"TSWPTOCPageNumberAttachm"
-    "entArchive\022-\n\005super\030\001 \001(\0132\036.TSWP.Textual"
-    "AttachmentArchive\022\023\n\013page_number\030\002 \001(\t\022\025"
-    "\n\rbookmark_name\030\003 \001(\t\"\027\n\025UIGraphicalAtta"
-    "chment\"\217\001\n\031DrawableAttachmentArchive\022 \n\010"
-    "drawable\030\001 \001(\0132\016.TSP.Reference\022\025\n\rh_offs"
-    "et_type\030\002 \001(\r\022\020\n\010h_offset\030\003 \001(\002\022\025\n\rv_off"
-    "set_type\030\004 \001(\r\022\020\n\010v_offset\030\005 \001(\002\"F\n\024TOCA"
-    "ttachmentArchive\022.\n\005super\030\001 \002(\0132\037.TSWP.D"
-    "rawableAttachmentArchive\"\232\001\n\"FootnoteRef"
-    "erenceAttachmentArchive\022-\n\005super\030\001 \001(\0132\036"
-    ".TSWP.TextualAttachmentArchive\022)\n\021contai"
-    "ned_storage\030\002 \001(\0132\016.TSP.Reference\022\032\n\022cus"
-    "tom_mark_string\030\003 \001(\t\"u\n\027NumberAttachmen"
-    "tArchive\022-\n\005super\030\001 \001(\0132\036.TSWP.TextualAt"
-    "tachmentArchive\022\025\n\rnumber_format\030\002 \001(\r\022\024"
-    "\n\014string_value\030\003 \001(\t\"\023\n\021SmartFieldArchiv"
-    "e\"P\n\025HyperlinkFieldArchive\022&\n\005super\030\001 \001("
-    "\0132\027.TSWP.SmartFieldArchive\022\017\n\007url_ref\030\002 "
-    "\001(\t\"[\n\034PlaceholderSmartFieldArchive\022&\n\005s"
-    "uper\030\001 \001(\0132\027.TSWP.SmartFieldArchive\022\023\n\013l"
-    "ocalizable\030\002 \001(\010\"f\n UnsupportedHyperlink"
-    "FieldArchive\0221\n\005super\030\001 \001(\0132\".TSWP.Place"
-    "holderSmartFieldArchive\022\017\n\007url_ref\030\002 \001(\t"
-    "\"\275\001\n\035BibliographySmartFieldArchive\022&\n\005su"
-    "per\030\003 \001(\0132\027.TSWP.SmartFieldArchive\022(\n\020ci"
-    "tation_records\030\002 \003(\0132\016.TSP.Reference\022\023\n\013"
-    "localizable\030\004 \001(\010\0225\n\told_super\030\001 \001(\0132\".T"
-    "SWP.PlaceholderSmartFieldArchive\"\321\001\n\025Cit"
-    "ationRecordArchive\022\023\n\013endnote_xml\030\001 \001(\t\022"
-    "\031\n\021hide_author_names\030\002 \001(\010\022\021\n\thide_year\030"
-    "\003 \001(\010\022\022\n\npage_range\030\004 \001(\t\022\016\n\006prefix\030\005 \001("
-    "\t\022\016\n\006suffix\030\006 \001(\t\022\026\n\016authors_string\030\007 \001("
-    "\t\022\r\n\005title\030\010 \001(\t\022\014\n\004year\030\t \001(\t\022\014\n\004type\030\n"
-    " \001(\t\"\271\001\n\031CitationSmartFieldArchive\022&\n\005su"
-    "per\030\003 \001(\0132\027.TSWP.SmartFieldArchive\022(\n\020ci"
-    "tation_records\030\002 \003(\0132\016.TSP.Reference\022\023\n\013"
-    "localizable\030\004 \001(\010\0225\n\told_super\030\001 \001(\0132\".T"
-    "SWP.PlaceholderSmartFieldArchive\"\257\005\n\031Dat"
-    "eTimeSmartFieldArchive\022&\n\005super\030\001 \001(\0132\027."
-    "TSWP.SmartFieldArchive\022\016\n\006format\030\002 \001(\t\022\031"
-    "\n\021locale_identifier\030\003 \001(\t\022J\n\ndate_style\030"
-    "\004 \001(\01626.TSWP.DateTimeSmartFieldArchive.D"
-    "ateTimeFormatterStyle\022J\n\ntime_style\030\005 \001("
-    "\01626.TSWP.DateTimeSmartFieldArchive.DateT"
-    "imeFormatterStyle\022G\n\013update_plan\030\006 \001(\01622"
-    ".TSWP.DateTimeSmartFieldArchive.DateTime"
-    "UpdatePlan\022\024\n\014needs_update\030\007 \001(\010\022\027\n\004date"
-    "\030\010 \001(\0132\t.TSP.Date\"l\n\022DateTimeUpdatePlan\022"
-    "\034\n\030kDateTimeUpdatePlanNever\020\000\022\033\n\027kDateTi"
-    "meUpdatePlanAuto\020\001\022\033\n\027kDateTimeUpdatePla"
-    "nOnce\020\002\"\300\001\n\026DateTimeFormatterStyle\022\037\n\033kD"
-    "ateTimeFormatterStyleNone\020\000\022 \n\034kDateTime"
-    "FormatterStyleShort\020\001\022!\n\035kDateTimeFormat"
-    "terStyleMedium\020\002\022\037\n\033kDateTimeFormatterSt"
-    "yleLong\020\003\022\037\n\033kDateTimeFormatterStyleFull"
-    "\020\004\"l\n\024BookmarkFieldArchive\022&\n\005super\030\001 \001("
-    "\0132\027.TSWP.SmartFieldArchive\022\014\n\004name\030\002 \001(\t"
-    "\022\016\n\006ranged\030\003 \001(\r\022\016\n\006hidden\030\004 \001(\r\"e\n\031File"
-    "nameSmartFieldArchive\0221\n\005super\030\001 \001(\0132\".T"
-    "SWP.PlaceholderSmartFieldArchive\022\025\n\rdisp"
-    "lay_flags\030\002 \001(\r\"\324\002\n\026MergeSmartFieldArchi"
-    "ve\0221\n\005super\030\001 \001(\0132\".TSWP.PlaceholderSmar"
-    "tFieldArchive\022\020\n\010property\030\002 \001(\t\022\r\n\005label"
-    "\030\003 \001(\t\022\013\n\003key\030\004 \001(\t\022<\n\010category\030\005 \001(\0162*."
-    "TSWP.MergeSmartFieldArchive.MergeCategor"
-    "y\022%\n\035requires_following_whitespace\030\006 \001(\010"
-    "\022\022\n\nwhitespace\030\007 \001(\t\022\014\n\004guid\030\010 \001(\t\022\023\n\013ta"
-    "ble_field\030\t \001(\t\"=\n\rMergeCategory\022\024\n\020kMer"
-    "geCategoryTo\020\000\022\026\n\022kMergeCategoryFrom\020\001\"\347"
-    "\001\n\024TOCSmartFieldArchive\0221\n\005super\030\001 \001(\0132\""
-    ".TSWP.PlaceholderSmartFieldArchive\0228\n\013to"
-    "c_entries\030\002 \003(\0132#.TSWP.TOCSmartFieldArch"
-    "ive.TOCEntry\032b\n\010TOCEntry\022\025\n\rbookmark_nam"
-    "e\030\001 \001(\t\022$\n\014target_style\030\002 \001(\0132\016.TSP.Refe"
-    "rence\022\031\n\005range\030\003 \001(\0132\n.TSP.Range\"M\n\020Ruby"
-    "FieldArchive\022&\n\005super\030\001 \001(\0132\027.TSWP.Smart"
-    "FieldArchive\022\021\n\truby_text\030\002 \001(\t\"\310\001\n\rChan"
-    "geArchive\022,\n\004kind\030\001 \001(\0162\036.TSWP.ChangeArc"
-    "hive.ChangeKind\022\037\n\007session\030\002 \001(\0132\016.TSP.R"
-    "eference\022\027\n\004date\030\003 \001(\0132\t.TSP.Date\022\016\n\006hid"
-    "den\030\004 \001(\010\"\?\n\nChangeKind\022\030\n\024kChangeKindIn"
-    "sertion\020\001\022\027\n\023kChangeKindDeletion\020\002\"d\n\024Ch"
-    "angeSessionArchive\022\023\n\013session_uid\030\001 \001(\r\022"
-    "\036\n\006author\030\002 \001(\0132\016.TSP.Reference\022\027\n\004date\030"
-    "\003 \001(\0132\t.TSP.Date\"\033\n\031SectionPlaceholderAr"
-    "chive*\364\001\n\rSelectionType\022\030\n\024SelectionType"
-    "_Normal\020\000\022\033\n\027SelectionType_ListLabel\020\001\022\033"
-    "\n\027SelectionType_ListTopic\020\002\022\031\n\025Selection"
-    "Type_Replace\020\003\022 \n\034SelectionType_CopyPast"
-    "eStyle\020\004\022\032\n\026SelectionType_Replace2\020\005\022\034\n\030"
-    "SelectionType_SmartField\020\006\022\030\n\024SelectionT"
-    "ype_Visual\020\007*\206\001\n\026StyleInsertionBehavior\022"
-    "!\n\035StyleInsertionBehavior_NoGrow\020\000\022#\n\037St"
-    "yleInsertionBehavior_GrowLeft\020\001\022$\n Style"
-    "InsertionBehavior_GrowRight\020\002*\?\n\rCaretAf"
-    "finity\022\027\n\023CaretAffinity_Start\020\000\022\025\n\021Caret"
-    "Affinity_End\020\001*\201\001\n\024WritingDirectionType\022"
-    "%\n\030kWritingDirectionNatural\020\377\377\377\377\377\377\377\377\377\001\022 "
-    "\n\034kWritingDirectionLeftToRight\020\000\022 \n\034kWri"
-    "tingDirectionRightToLeft\020\001", 19706);
+    "HebrewBiblicalStandardKind\020=\022\036\n\032kHebrewB"
+    "iblicalDecimalKind\020>\022\"\n\036kHebrewBiblicalD"
+    "oubleParenKind\020\?\022!\n\035kHebrewBiblicalRight"
+    "ParenKind\020@\"\200\001\n\026TextStylePresetArchive\022\031"
+    "\n\021preset_identifier\030\001 \001(\t\022\'\n\017paragraph_s"
+    "tyle\030\002 \001(\0132\016.TSP.Reference\022\"\n\nlist_style"
+    "\030\003 \001(\0132\016.TSP.Reference\"\365\002\n\016ColumnsArchiv"
+    "e\022\?\n\requal_columns\030\001 \001(\0132(.TSWP.ColumnsA"
+    "rchive.EqualColumnsArchive\022F\n\021non_equal_"
+    "columns\030\002 \001(\0132+.TSWP.ColumnsArchive.NonE"
+    "qualColumnsArchive\0321\n\023EqualColumnsArchiv"
+    "e\022\r\n\005count\030\001 \001(\r\022\013\n\003gap\030\002 \001(\002\032\246\001\n\026NonEqu"
+    "alColumnsArchive\022\r\n\005first\030\001 \002(\002\022N\n\tfollo"
+    "wing\030\002 \003(\0132;.TSWP.ColumnsArchive.NonEqua"
+    "lColumnsArchive.GapWidthArchive\032-\n\017GapWi"
+    "dthArchive\022\013\n\003gap\030\001 \002(\002\022\r\n\005width\030\002 \002(\002\"J"
+    "\n\016PaddingArchive\022\014\n\004left\030\001 \001(\002\022\013\n\003top\030\002 "
+    "\001(\002\022\r\n\005right\030\003 \001(\002\022\016\n\006bottom\030\004 \001(\002\"\317\004\n\034C"
+    "olumnStylePropertiesArchive\022\022\n\ncontinuou"
+    "s\030\001 \001(\010\022\025\n\rshrink_to_fit\030\002 \001(\010\022\025\n\rvertic"
+    "al_text\030\003 \001(\010\022\034\n\024min_horizontal_inset\030\004 "
+    "\001(\002\022T\n\022vertical_alignment\030\005 \001(\01628.TSWP.C"
+    "olumnStylePropertiesArchive.VerticalAlig"
+    "nmentType\022\024\n\014columns_null\030\006 \001(\010\022%\n\007colum"
+    "ns\030\007 \001(\0132\024.TSWP.ColumnsArchive\022\024\n\014margin"
+    "s_null\030\010 \001(\010\022%\n\007margins\030\t \001(\0132\024.TSWP.Pad"
+    "dingArchive\022\024\n\014padding_null\030\n \001(\010\022%\n\007pad"
+    "ding\030\013 \001(\0132\024.TSWP.PaddingArchive\022O\n\021writ"
+    "ing_direction\030\014 \001(\0162\032.TSWP.WritingDirect"
+    "ionType:\030kWritingDirectionNatural\"q\n\025Ver"
+    "ticalAlignmentType\022\022\n\016kFrameAlignTop\020\000\022\025"
+    "\n\021kFrameAlignMiddle\020\001\022\025\n\021kFrameAlignBott"
+    "om\020\002\022\026\n\022kFrameAlignJustify\020\003\"\220\001\n\022ColumnS"
+    "tyleArchive\022 \n\005super\030\001 \002(\0132\021.TSS.StyleAr"
+    "chive\022\031\n\016override_count\030\n \001(\r:\0010\022=\n\021colu"
+    "mn_properties\030\013 \001(\0132\".TSWP.ColumnStylePr"
+    "opertiesArchive\"\367\003\n\033ShapeStyleProperties"
+    "Archive\022\025\n\rshrink_to_fit\030\001 \001(\010\022S\n\022vertic"
+    "al_alignment\030\002 \001(\01627.TSWP.ShapeStyleProp"
+    "ertiesArchive.VerticalAlignmentType\022\024\n\014c"
+    "olumns_null\030\003 \001(\010\022%\n\007columns\030\004 \001(\0132\024.TSW"
+    "P.ColumnsArchive\022\024\n\014padding_null\030\005 \001(\010\022%"
+    "\n\007padding\030\006 \001(\0132\024.TSWP.PaddingArchive\022!\n"
+    "\031default_text_preset_index\030\007 \001(\r\022\025\n\rvert"
+    "ical_text\030\010 \001(\010\022\034\n\024paragraph_style_null\030"
+    "\t \001(\010\022\'\n\017paragraph_style\030\n \001(\0132\016.TSP.Ref"
+    "erence\"q\n\025VerticalAlignmentType\022\022\n\016kFram"
+    "eAlignTop\020\000\022\025\n\021kFrameAlignMiddle\020\001\022\025\n\021kF"
+    "rameAlignBottom\020\002\022\026\n\022kFrameAlignJustify\020"
+    "\003\"\222\001\n\021ShapeStyleArchive\022%\n\005super\030\001 \002(\0132\026"
+    ".TSD.ShapeStyleArchive\022\031\n\016override_count"
+    "\030\n \001(\r:\0010\022;\n\020shape_properties\030\013 \001(\0132!.TS"
+    "WP.ShapeStylePropertiesArchive\"\244\003\n\023Theme"
+    "PresetsArchive\022*\n\022list_style_presets\030\001 \003"
+    "(\0132\016.TSP.Reference\022*\n\022text_style_presets"
+    "\030\002 \003(\0132\016.TSP.Reference\0223\n\033imported_text_"
+    "style_presets\030\003 \003(\0132\016.TSP.Reference\022/\n\027t"
+    "oc_entry_style_presets\030\004 \003(\0132\016.TSP.Refer"
+    "ence\022,\n\024toc_settings_presets\030\005 \003(\0132\016.TSP"
+    ".Reference\022/\n\027character_style_presets\030\006 "
+    "\003(\0132\016.TSP.Reference\022/\n\027paragraph_style_p"
+    "resets\030\007 \003(\0132\016.TSP.Reference2\?\n\textensio"
+    "n\022\021.TSS.ThemeArchive\030n \002(\0132\031.TSWP.ThemeP"
+    "resetsArchive\"T\n\034TextPresetDisplayItemAr"
+    "chive\022\036\n\006preset\030\001 \002(\0132\016.TSP.Reference\022\024\n"
+    "\014display_name\030\002 \002(\t\"\205\001\n\036TOCEntryStylePro"
+    "pertiesArchive\022\036\n\026page_number_style_null"
+    "\030\001 \001(\010\022)\n\021page_number_style\030\002 \001(\0132\016.TSP."
+    "Reference\022\030\n\020show_page_number\030\003 \001(\010\"\200\001\n\024"
+    "TOCEntryStyleArchive\022*\n\005super\030\001 \002(\0132\033.TS"
+    "WP.ParagraphStyleArchive\022<\n\016toc_properti"
+    "es\030\002 \001(\0132$.TSWP.TOCEntryStylePropertiesA"
+    "rchive\"\350\001\n\022TOCSettingsArchive\022\020\n\010toc_nam"
+    "e\030\001 \001(\t\022\021\n\ttoc_scope\030\002 \001(\r\0226\n\007entries\030\003 "
+    "\003(\0132%.TSWP.TOCSettingsArchive.TOCEntryDa"
+    "ta\032u\n\014TOCEntryData\022\'\n\017paragraph_style\030\001 "
+    "\001(\0132\016.TSP.Reference\022\'\n\017toc_entry_style\030\002"
+    " \001(\0132\016.TSP.Reference\022\023\n\013show_in_toc\030\003 \001("
+    "\010\"\377\001\n\027TOCEntryInstanceArchive\022\027\n\017paragra"
+    "ph_index\030\001 \002(\r\022\023\n\013page_number\030\002 \002(\r\022\025\n\rn"
+    "umber_format\030\003 \002(\r\022\017\n\007heading\030\004 \002(\t\022%\n\ri"
+    "ndexed_style\030\005 \002(\0132\016.TSP.Reference\022*\n\022in"
+    "dexed_list_style\030\006 \001(\0132\016.TSP.Reference\022\032"
+    "\n\022indexed_list_start\030\007 \001(\r\022\037\n\027indexed_pa"
+    "ragraph_level\030\010 \001(\r\"\274\020\n\017UndoTransaction\022"
+    "7\n\007entries\030\001 \003(\0132&.TSWP.UndoTransaction."
+    "UnionTransaction\032D\n\022GenericTransaction\022\016"
+    "\n\006value1\030\001 \002(\r\022\016\n\006value2\030\002 \002(\r\022\016\n\006value3"
+    "\030\003 \002(\r\032[\n\017TextTransaction\022\027\n\017insert_loca"
+    "tion\030\001 \002(\r\022\025\n\rinsert_length\030\002 \002(\r\022\030\n\020str"
+    "ing_to_delete\030\003 \001(\t\032Y\n\024CharIndexTransact"
+    "ion\022\022\n\nchar_index\030\001 \002(\r\022\r\n\005count\030\002 \002(\r\022\036"
+    "\n\006object\030\003 \001(\0132\016.TSP.Reference\032J\n\033Replac"
+    "eCharIndexTransaction\022\027\n\017attribute_index"
+    "\030\001 \002(\r\022\022\n\nchar_index\030\002 \002(\r\032x\n\031AttributeI"
+    "ndexTransaction\022\027\n\017attribute_index\030\001 \002(\r"
+    "\022\022\n\nchar_index\030\002 \002(\r\022\036\n\006object\030\003 \001(\0132\016.T"
+    "SP.Reference\022\016\n\006string\030\004 \001(\t\032~\n\032InsertAt"
+    "tributeTransaction\022\027\n\017attribute_index\030\001 "
+    "\002(\r\022\027\n\017attribute_count\030\002 \002(\r\022\036\n\006object\030\003"
+    " \001(\0132\016.TSP.Reference\022\016\n\006string\030\004 \001(\t\032H\n\024"
+    "InsertNilTransaction\022\027\n\017attribute_index\030"
+    "\001 \002(\r\022\027\n\017attribute_count\030\002 \002(\r\032W\n\024CharDe"
+    "ltaTransaction\022\022\n\nchar_index\030\001 \002(\r\022\027\n\017at"
+    "tribute_index\030\002 \002(\r\022\022\n\nchar_delta\030\003 \002(\021\032"
+    "f\n\030ParagraphDataTransaction\022\027\n\017attribute"
+    "_index\030\001 \002(\r\022\r\n\005first\030\002 \002(\r\022\016\n\006second\030\003 "
+    "\002(\r\022\022\n\nchar_index\030\004 \002(\r\032F\n\025ObjectDOLCTra"
+    "nsaction\022\r\n\005flags\030\001 \002(\r\022\036\n\006object\030\002 \001(\0132"
+    "\016.TSP.Reference\032E\n\021CTDateTransaction\022\027\n\017"
+    "attribute_index\030\001 \002(\r\022\027\n\004date\030\002 \001(\0132\t.TS"
+    "P.Date\032\250\006\n\020UnionTransaction\022,\n\004kind\030\001 \002("
+    "\0162\036.TSWP.UndoTransaction.UndoKind\022\r\n\005tab"
+    "le\030\002 \001(\r\0229\n\007generic\030\005 \001(\0132(.TSWP.UndoTra"
+    "nsaction.GenericTransaction\0223\n\004text\030\006 \001("
+    "\0132%.TSWP.UndoTransaction.TextTransaction"
+    "\022>\n\nchar_index\030\007 \001(\0132*.TSWP.UndoTransact"
+    "ion.CharIndexTransaction\022M\n\022replace_char"
+    "_index\030\010 \001(\01321.TSWP.UndoTransaction.Repl"
+    "aceCharIndexTransaction\022H\n\017attribute_ind"
+    "ex\030\t \001(\0132/.TSWP.UndoTransaction.Attribut"
+    "eIndexTransaction\022>\n\ninsert_nil\030\n \001(\0132*."
+    "TSWP.UndoTransaction.InsertNilTransactio"
+    "n\022J\n\020insert_attribute\030\013 \001(\01320.TSWP.UndoT"
+    "ransaction.InsertAttributeTransaction\022>\n"
+    "\nchar_delta\030\014 \001(\0132*.TSWP.UndoTransaction"
+    ".CharDeltaTransaction\022F\n\016paragraph_data\030"
+    "\r \001(\0132..TSWP.UndoTransaction.ParagraphDa"
+    "taTransaction\022@\n\013object_dolc\030\016 \001(\0132+.TSW"
+    "P.UndoTransaction.ObjectDOLCTransaction\022"
+    "8\n\007ct_date\030\017 \001(\0132\'.TSWP.UndoTransaction."
+    "CTDateTransaction\"\346\001\n\010UndoKind\022\020\n\014REPLAC"
+    "E_TEXT\020\001\022\024\n\020INSERT_ATTRIBUTE\020\002\022\024\n\020DELETE"
+    "_ATTRIBUTE\020\003\022\027\n\023ADJUST_CHAR_INDEXES\020\004\022\035\n"
+    "\031COMPR_ADJUST_CHAR_INDEXES\020\005\022\026\n\022REPLACE_"
+    "CHAR_INDEX\020\006\022\022\n\016REPLACE_OBJECT\020\007\022\032\n\026REPL"
+    "ACE_PARAGRAPH_DATA\020\010\022\017\n\013OBJECT_DOLC\020\t\022\013\n"
+    "\007CT_DATE\020\n\"P\n\035UndoTransactionWrapperArch"
+    "ive\022/\n\020undo_transaction\030\001 \002(\0132\025.TSWP.Und"
+    "oTransaction\"^\n\020ShapeInfoArchive\022 \n\005supe"
+    "r\030\001 \002(\0132\021.TSD.ShapeArchive\022(\n\020containedS"
+    "torage\030\002 \001(\0132\016.TSP.Reference\"d\n\022CommentI"
+    "nfoArchive\022%\n\005super\030\001 \002(\0132\026.TSWP.ShapeIn"
+    "foArchive\022\'\n\017comment_storage\030\002 \001(\0132\016.TSP"
+    ".Reference\"\255\001\n\016TOCInfoArchive\022%\n\005super\030\001"
+    " \002(\0132\026.TSWP.ShapeInfoArchive\022$\n\014toc_sett"
+    "ings\030\002 \001(\0132\016.TSP.Reference\022&\n\016toc_entry_"
+    "data\030\003 \003(\0132\016.TSP.Reference\022&\n\022page_numbe"
+    "r_ranges\030\004 \003(\0132\n.TSP.Range\"5\n\024TOCLayoutH"
+    "intArchive\022\035\n\tcharRange\030\001 \002(\0132\n.TSP.Rang"
+    "e\"\260\001\n\030TextualAttachmentArchive\022\031\n\021string"
+    "_equivalent\030\001 \001(\t\0221\n\004kind\030\002 \001(\0162#.TSWP.T"
+    "extualAttachmentArchive.Kind\"F\n\004Kind\022\023\n\017"
+    "kKindPageNumber\020\000\022\022\n\016kKindPageCount\020\001\022\025\n"
+    "\021kKindFootnoteMark\020\002\"\177\n\"TSWPTOCPageNumbe"
+    "rAttachmentArchive\022-\n\005super\030\001 \001(\0132\036.TSWP"
+    ".TextualAttachmentArchive\022\023\n\013page_number"
+    "\030\002 \001(\t\022\025\n\rbookmark_name\030\003 \001(\t\"\027\n\025UIGraph"
+    "icalAttachment\"\217\001\n\031DrawableAttachmentArc"
+    "hive\022 \n\010drawable\030\001 \001(\0132\016.TSP.Reference\022\025"
+    "\n\rh_offset_type\030\002 \001(\r\022\020\n\010h_offset\030\003 \001(\002\022"
+    "\025\n\rv_offset_type\030\004 \001(\r\022\020\n\010v_offset\030\005 \001(\002"
+    "\"F\n\024TOCAttachmentArchive\022.\n\005super\030\001 \002(\0132"
+    "\037.TSWP.DrawableAttachmentArchive\"\232\001\n\"Foo"
+    "tnoteReferenceAttachmentArchive\022-\n\005super"
+    "\030\001 \001(\0132\036.TSWP.TextualAttachmentArchive\022)"
+    "\n\021contained_storage\030\002 \001(\0132\016.TSP.Referenc"
+    "e\022\032\n\022custom_mark_string\030\003 \001(\t\"u\n\027NumberA"
+    "ttachmentArchive\022-\n\005super\030\001 \001(\0132\036.TSWP.T"
+    "extualAttachmentArchive\022\025\n\rnumber_format"
+    "\030\002 \001(\r\022\024\n\014string_value\030\003 \001(\t\"\023\n\021SmartFie"
+    "ldArchive\"P\n\025HyperlinkFieldArchive\022&\n\005su"
+    "per\030\001 \001(\0132\027.TSWP.SmartFieldArchive\022\017\n\007ur"
+    "l_ref\030\002 \001(\t\"[\n\034PlaceholderSmartFieldArch"
+    "ive\022&\n\005super\030\001 \001(\0132\027.TSWP.SmartFieldArch"
+    "ive\022\023\n\013localizable\030\002 \001(\010\"f\n UnsupportedH"
+    "yperlinkFieldArchive\0221\n\005super\030\001 \001(\0132\".TS"
+    "WP.PlaceholderSmartFieldArchive\022\017\n\007url_r"
+    "ef\030\002 \001(\t\"\275\001\n\035BibliographySmartFieldArchi"
+    "ve\022&\n\005super\030\003 \001(\0132\027.TSWP.SmartFieldArchi"
+    "ve\022(\n\020citation_records\030\002 \003(\0132\016.TSP.Refer"
+    "ence\022\023\n\013localizable\030\004 \001(\010\0225\n\told_super\030\001"
+    " \001(\0132\".TSWP.PlaceholderSmartFieldArchive"
+    "\"\321\001\n\025CitationRecordArchive\022\023\n\013endnote_xm"
+    "l\030\001 \001(\t\022\031\n\021hide_author_names\030\002 \001(\010\022\021\n\thi"
+    "de_year\030\003 \001(\010\022\022\n\npage_range\030\004 \001(\t\022\016\n\006pre"
+    "fix\030\005 \001(\t\022\016\n\006suffix\030\006 \001(\t\022\026\n\016authors_str"
+    "ing\030\007 \001(\t\022\r\n\005title\030\010 \001(\t\022\014\n\004year\030\t \001(\t\022\014"
+    "\n\004type\030\n \001(\t\"\271\001\n\031CitationSmartFieldArchi"
+    "ve\022&\n\005super\030\003 \001(\0132\027.TSWP.SmartFieldArchi"
+    "ve\022(\n\020citation_records\030\002 \003(\0132\016.TSP.Refer"
+    "ence\022\023\n\013localizable\030\004 \001(\010\0225\n\told_super\030\001"
+    " \001(\0132\".TSWP.PlaceholderSmartFieldArchive"
+    "\"\257\005\n\031DateTimeSmartFieldArchive\022&\n\005super\030"
+    "\001 \001(\0132\027.TSWP.SmartFieldArchive\022\016\n\006format"
+    "\030\002 \001(\t\022\031\n\021locale_identifier\030\003 \001(\t\022J\n\ndat"
+    "e_style\030\004 \001(\01626.TSWP.DateTimeSmartFieldA"
+    "rchive.DateTimeFormatterStyle\022J\n\ntime_st"
+    "yle\030\005 \001(\01626.TSWP.DateTimeSmartFieldArchi"
+    "ve.DateTimeFormatterStyle\022G\n\013update_plan"
+    "\030\006 \001(\01622.TSWP.DateTimeSmartFieldArchive."
+    "DateTimeUpdatePlan\022\024\n\014needs_update\030\007 \001(\010"
+    "\022\027\n\004date\030\010 \001(\0132\t.TSP.Date\"l\n\022DateTimeUpd"
+    "atePlan\022\034\n\030kDateTimeUpdatePlanNever\020\000\022\033\n"
+    "\027kDateTimeUpdatePlanAuto\020\001\022\033\n\027kDateTimeU"
+    "pdatePlanOnce\020\002\"\300\001\n\026DateTimeFormatterSty"
+    "le\022\037\n\033kDateTimeFormatterStyleNone\020\000\022 \n\034k"
+    "DateTimeFormatterStyleShort\020\001\022!\n\035kDateTi"
+    "meFormatterStyleMedium\020\002\022\037\n\033kDateTimeFor"
+    "matterStyleLong\020\003\022\037\n\033kDateTimeFormatterS"
+    "tyleFull\020\004\"l\n\024BookmarkFieldArchive\022&\n\005su"
+    "per\030\001 \001(\0132\027.TSWP.SmartFieldArchive\022\014\n\004na"
+    "me\030\002 \001(\t\022\016\n\006ranged\030\003 \001(\r\022\016\n\006hidden\030\004 \001(\r"
+    "\"e\n\031FilenameSmartFieldArchive\0221\n\005super\030\001"
+    " \001(\0132\".TSWP.PlaceholderSmartFieldArchive"
+    "\022\025\n\rdisplay_flags\030\002 \001(\r\"\324\002\n\026MergeSmartFi"
+    "eldArchive\0221\n\005super\030\001 \001(\0132\".TSWP.Placeho"
+    "lderSmartFieldArchive\022\020\n\010property\030\002 \001(\t\022"
+    "\r\n\005label\030\003 \001(\t\022\013\n\003key\030\004 \001(\t\022<\n\010category\030"
+    "\005 \001(\0162*.TSWP.MergeSmartFieldArchive.Merg"
+    "eCategory\022%\n\035requires_following_whitespa"
+    "ce\030\006 \001(\010\022\022\n\nwhitespace\030\007 \001(\t\022\014\n\004guid\030\010 \001"
+    "(\t\022\023\n\013table_field\030\t \001(\t\"=\n\rMergeCategory"
+    "\022\024\n\020kMergeCategoryTo\020\000\022\026\n\022kMergeCategory"
+    "From\020\001\"\347\001\n\024TOCSmartFieldArchive\0221\n\005super"
+    "\030\001 \001(\0132\".TSWP.PlaceholderSmartFieldArchi"
+    "ve\0228\n\013toc_entries\030\002 \003(\0132#.TSWP.TOCSmartF"
+    "ieldArchive.TOCEntry\032b\n\010TOCEntry\022\025\n\rbook"
+    "mark_name\030\001 \001(\t\022$\n\014target_style\030\002 \001(\0132\016."
+    "TSP.Reference\022\031\n\005range\030\003 \001(\0132\n.TSP.Range"
+    "\"M\n\020RubyFieldArchive\022&\n\005super\030\001 \001(\0132\027.TS"
+    "WP.SmartFieldArchive\022\021\n\truby_text\030\002 \001(\t\""
+    "\310\001\n\rChangeArchive\022,\n\004kind\030\001 \001(\0162\036.TSWP.C"
+    "hangeArchive.ChangeKind\022\037\n\007session\030\002 \001(\013"
+    "2\016.TSP.Reference\022\027\n\004date\030\003 \001(\0132\t.TSP.Dat"
+    "e\022\016\n\006hidden\030\004 \001(\010\"\?\n\nChangeKind\022\030\n\024kChan"
+    "geKindInsertion\020\001\022\027\n\023kChangeKindDeletion"
+    "\020\002\"d\n\024ChangeSessionArchive\022\023\n\013session_ui"
+    "d\030\001 \001(\r\022\036\n\006author\030\002 \001(\0132\016.TSP.Reference\022"
+    "\027\n\004date\030\003 \001(\0132\t.TSP.Date\"\033\n\031SectionPlace"
+    "holderArchive*\364\001\n\rSelectionType\022\030\n\024Selec"
+    "tionType_Normal\020\000\022\033\n\027SelectionType_ListL"
+    "abel\020\001\022\033\n\027SelectionType_ListTopic\020\002\022\031\n\025S"
+    "electionType_Replace\020\003\022 \n\034SelectionType_"
+    "CopyPasteStyle\020\004\022\032\n\026SelectionType_Replac"
+    "e2\020\005\022\034\n\030SelectionType_SmartField\020\006\022\030\n\024Se"
+    "lectionType_Visual\020\007*\206\001\n\026StyleInsertionB"
+    "ehavior\022!\n\035StyleInsertionBehavior_NoGrow"
+    "\020\000\022#\n\037StyleInsertionBehavior_GrowLeft\020\001\022"
+    "$\n StyleInsertionBehavior_GrowRight\020\002*\?\n"
+    "\rCaretAffinity\022\027\n\023CaretAffinity_Start\020\000\022"
+    "\025\n\021CaretAffinity_End\020\001*\201\001\n\024WritingDirect"
+    "ionType\022%\n\030kWritingDirectionNatural\020\377\377\377\377"
+    "\377\377\377\377\377\001\022 \n\034kWritingDirectionLeftToRight\020\000"
+    "\022 \n\034kWritingDirectionRightToLeft\020\001", 19914);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "TSWPArchives.proto", &protobuf_RegisterTypes);
   SelectionArchive::default_instance_ = new SelectionArchive();
@@ -12511,6 +12519,9 @@ bool ListStyleArchive_NumberType_IsValid(int value) {
     case 59:
     case 60:
     case 61:
+    case 62:
+    case 63:
+    case 64:
       return true;
     default:
       return false;
@@ -12580,6 +12591,9 @@ const ListStyleArchive_NumberType ListStyleArchive::kHebrewAlphaDecimalKind;
 const ListStyleArchive_NumberType ListStyleArchive::kHebrewAlphaDoubleParenKind;
 const ListStyleArchive_NumberType ListStyleArchive::kHebrewAlphaRightParenKind;
 const ListStyleArchive_NumberType ListStyleArchive::kHebrewBiblicalStandardKind;
+const ListStyleArchive_NumberType ListStyleArchive::kHebrewBiblicalDecimalKind;
+const ListStyleArchive_NumberType ListStyleArchive::kHebrewBiblicalDoubleParenKind;
+const ListStyleArchive_NumberType ListStyleArchive::kHebrewBiblicalRightParenKind;
 const ListStyleArchive_NumberType ListStyleArchive::NumberType_MIN;
 const ListStyleArchive_NumberType ListStyleArchive::NumberType_MAX;
 const int ListStyleArchive::NumberType_ARRAYSIZE;
@@ -19601,6 +19615,9 @@ const int TOCEntryInstanceArchive::kPageNumberFieldNumber;
 const int TOCEntryInstanceArchive::kNumberFormatFieldNumber;
 const int TOCEntryInstanceArchive::kHeadingFieldNumber;
 const int TOCEntryInstanceArchive::kIndexedStyleFieldNumber;
+const int TOCEntryInstanceArchive::kIndexedListStyleFieldNumber;
+const int TOCEntryInstanceArchive::kIndexedListStartFieldNumber;
+const int TOCEntryInstanceArchive::kIndexedParagraphLevelFieldNumber;
 #endif  // !_MSC_VER
 
 TOCEntryInstanceArchive::TOCEntryInstanceArchive()
@@ -19610,6 +19627,7 @@ TOCEntryInstanceArchive::TOCEntryInstanceArchive()
 
 void TOCEntryInstanceArchive::InitAsDefaultInstance() {
   indexed_style_ = const_cast< ::TSP::Reference*>(&::TSP::Reference::default_instance());
+  indexed_list_style_ = const_cast< ::TSP::Reference*>(&::TSP::Reference::default_instance());
 }
 
 TOCEntryInstanceArchive::TOCEntryInstanceArchive(const TOCEntryInstanceArchive& from)
@@ -19625,6 +19643,9 @@ void TOCEntryInstanceArchive::SharedCtor() {
   number_format_ = 0u;
   heading_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
   indexed_style_ = NULL;
+  indexed_list_style_ = NULL;
+  indexed_list_start_ = 0u;
+  indexed_paragraph_level_ = 0u;
   ::memset(_has_bits_, 0, sizeof(_has_bits_));
 }
 
@@ -19638,6 +19659,7 @@ void TOCEntryInstanceArchive::SharedDtor() {
   }
   if (this != default_instance_) {
     delete indexed_style_;
+    delete indexed_list_style_;
   }
 }
 
@@ -19675,6 +19697,11 @@ void TOCEntryInstanceArchive::Clear() {
     if (has_indexed_style()) {
       if (indexed_style_ != NULL) indexed_style_->::TSP::Reference::Clear();
     }
+    if (has_indexed_list_style()) {
+      if (indexed_list_style_ != NULL) indexed_list_style_->::TSP::Reference::Clear();
+    }
+    indexed_list_start_ = 0u;
+    indexed_paragraph_level_ = 0u;
   }
   ::memset(_has_bits_, 0, sizeof(_has_bits_));
   mutable_unknown_fields()->Clear();
@@ -19760,6 +19787,52 @@ bool TOCEntryInstanceArchive::MergePartialFromCodedStream(
         } else {
           goto handle_uninterpreted;
         }
+        if (input->ExpectTag(50)) goto parse_indexed_list_style;
+        break;
+      }
+
+      // optional .TSP.Reference indexed_list_style = 6;
+      case 6: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_indexed_list_style:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_indexed_list_style()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(56)) goto parse_indexed_list_start;
+        break;
+      }
+
+      // optional uint32 indexed_list_start = 7;
+      case 7: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_indexed_list_start:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                 input, &indexed_list_start_)));
+          set_has_indexed_list_start();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(64)) goto parse_indexed_paragraph_level;
+        break;
+      }
+
+      // optional uint32 indexed_paragraph_level = 8;
+      case 8: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_indexed_paragraph_level:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                 input, &indexed_paragraph_level_)));
+          set_has_indexed_paragraph_level();
+        } else {
+          goto handle_uninterpreted;
+        }
         if (input->ExpectAtEnd()) return true;
         break;
       }
@@ -19812,6 +19885,22 @@ void TOCEntryInstanceArchive::SerializeWithCachedSizes(
       5, this->indexed_style(), output);
   }
 
+  // optional .TSP.Reference indexed_list_style = 6;
+  if (has_indexed_list_style()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      6, this->indexed_list_style(), output);
+  }
+
+  // optional uint32 indexed_list_start = 7;
+  if (has_indexed_list_start()) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(7, this->indexed_list_start(), output);
+  }
+
+  // optional uint32 indexed_paragraph_level = 8;
+  if (has_indexed_paragraph_level()) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(8, this->indexed_paragraph_level(), output);
+  }
+
   if (!unknown_fields().empty()) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         unknown_fields(), output);
@@ -19850,6 +19939,23 @@ void TOCEntryInstanceArchive::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormatLite::
       WriteMessageNoVirtualToArray(
         5, this->indexed_style(), target);
+  }
+
+  // optional .TSP.Reference indexed_list_style = 6;
+  if (has_indexed_list_style()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        6, this->indexed_list_style(), target);
+  }
+
+  // optional uint32 indexed_list_start = 7;
+  if (has_indexed_list_start()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(7, this->indexed_list_start(), target);
+  }
+
+  // optional uint32 indexed_paragraph_level = 8;
+  if (has_indexed_paragraph_level()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(8, this->indexed_paragraph_level(), target);
   }
 
   if (!unknown_fields().empty()) {
@@ -19898,6 +20004,27 @@ int TOCEntryInstanceArchive::ByteSize() const {
           this->indexed_style());
     }
 
+    // optional .TSP.Reference indexed_list_style = 6;
+    if (has_indexed_list_style()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->indexed_list_style());
+    }
+
+    // optional uint32 indexed_list_start = 7;
+    if (has_indexed_list_start()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::UInt32Size(
+          this->indexed_list_start());
+    }
+
+    // optional uint32 indexed_paragraph_level = 8;
+    if (has_indexed_paragraph_level()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::UInt32Size(
+          this->indexed_paragraph_level());
+    }
+
   }
   if (!unknown_fields().empty()) {
     total_size +=
@@ -19940,6 +20067,15 @@ void TOCEntryInstanceArchive::MergeFrom(const TOCEntryInstanceArchive& from) {
     if (from.has_indexed_style()) {
       mutable_indexed_style()->::TSP::Reference::MergeFrom(from.indexed_style());
     }
+    if (from.has_indexed_list_style()) {
+      mutable_indexed_list_style()->::TSP::Reference::MergeFrom(from.indexed_list_style());
+    }
+    if (from.has_indexed_list_start()) {
+      set_indexed_list_start(from.indexed_list_start());
+    }
+    if (from.has_indexed_paragraph_level()) {
+      set_indexed_paragraph_level(from.indexed_paragraph_level());
+    }
   }
   mutable_unknown_fields()->MergeFrom(from.unknown_fields());
 }
@@ -19962,6 +20098,9 @@ bool TOCEntryInstanceArchive::IsInitialized() const {
   if (has_indexed_style()) {
     if (!this->indexed_style().IsInitialized()) return false;
   }
+  if (has_indexed_list_style()) {
+    if (!this->indexed_list_style().IsInitialized()) return false;
+  }
   return true;
 }
 
@@ -19972,6 +20111,9 @@ void TOCEntryInstanceArchive::Swap(TOCEntryInstanceArchive* other) {
     std::swap(number_format_, other->number_format_);
     std::swap(heading_, other->heading_);
     std::swap(indexed_style_, other->indexed_style_);
+    std::swap(indexed_list_style_, other->indexed_list_style_);
+    std::swap(indexed_list_start_, other->indexed_list_start_);
+    std::swap(indexed_paragraph_level_, other->indexed_paragraph_level_);
     std::swap(_has_bits_[0], other->_has_bits_[0]);
     _unknown_fields_.Swap(&other->_unknown_fields_);
     std::swap(_cached_size_, other->_cached_size_);

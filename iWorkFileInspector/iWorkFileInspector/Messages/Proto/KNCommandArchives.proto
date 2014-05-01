@@ -194,6 +194,7 @@ message CommandRemoveMasterArchive {
   required .TSP.Reference master_slide_node = 3;
   required uint32 previous_index = 4;
   optional .TSP.Reference master_change_commands = 5;
+  optional bool default_master_slide_node_was_replaced = 6;
 }
 
 message CommandRenameMasterArchive {
@@ -262,15 +263,17 @@ message CommandBuildSetValueArchive {
   required .TSK.CommandArchive super = 1;
   required .TSP.Reference build = 2;
   required string property = 3;
-  repeated string effects = 4;
-  repeated string types = 5;
+  repeated string effects = 4 [deprecated = true];
+  repeated string types = 5 [deprecated = true];
   repeated string deliveries = 6;
-  repeated uint32 directions = 7;
-  repeated double durations = 8;
-  repeated double delays = 9;
-  repeated double delayAutomaticAfters = 10;
-  repeated double delayAutomaticWiths = 11;
-  repeated bool eventTriggers = 12;
+  repeated uint32 directions = 7 [deprecated = true];
+  repeated double durations = 8 [deprecated = true];
+  repeated double delays = 9 [deprecated = true];
+  repeated double delayAutomaticAfters = 10 [deprecated = true];
+  repeated double delayAutomaticWiths = 11 [deprecated = true];
+  repeated bool eventTriggers = 12 [deprecated = true];
+  optional .KN.BuildAttributesArchive oldAttributes = 13;
+  optional .KN.BuildAttributesArchive currentAttributes = 14;
 }
 
 message CommandBuildChunkSetValueArchive {
@@ -281,21 +284,23 @@ message CommandBuildChunkSetValueArchive {
   repeated bool automatics = 5;
   repeated double durations = 6;
   repeated double delays = 7;
-  optional bool oldOwnsValue = 8;
+  optional bool oldOwnsValue = 8 [deprecated = true];
 }
 
 message CommandTransitionSetValueArchive {
   required .TSK.CommandArchive super = 1;
   required .TSP.Reference slideNode = 2;
   required string property = 3;
-  repeated string effects = 4;
-  repeated string unused = 5;
-  repeated string unused2 = 6;
-  repeated string unused3 = 7;
-  repeated double durations = 8;
-  repeated uint32 directions = 9;
-  repeated bool isAutomatics = 10;
-  repeated double delays = 11;
+  repeated string effects = 4 [deprecated = true];
+  repeated string unused = 5 [deprecated = true];
+  repeated string unused2 = 6 [deprecated = true];
+  repeated string unused3 = 7 [deprecated = true];
+  repeated double durations = 8 [deprecated = true];
+  repeated uint32 directions = 9 [deprecated = true];
+  repeated bool isAutomatics = 10 [deprecated = true];
+  repeated double delays = 11 [deprecated = true];
+  optional .KN.TransitionAttributesArchive oldAttributes = 12;
+  optional .KN.TransitionAttributesArchive currentAttributes = 13;
 }
 
 message CommandShowSetSlideNumberVisibilityArchive {
@@ -325,6 +330,13 @@ message CommandMasterSetBodyStylesArchive {
   repeated .TSP.Reference new_list_styles = 4;
   repeated .TSP.Reference old_paragraph_styles = 5;
   repeated .TSP.Reference old_list_styles = 6;
+}
+
+message CommandMasterSetSlideObjectsLayerWithMasterArchive {
+  required .TSK.CommandArchive super = 1;
+  required .TSP.Reference master = 2;
+  required bool new_value = 3;
+  required bool old_value = 4;
 }
 
 message CommandSlideApplyThemeArchive {
@@ -369,6 +381,14 @@ message CommandSoundtrackSetValue {
   optional string property = 3;
   optional .KN.CommandSoundtrackSetValue.PropertyValue old_value = 4;
   optional .KN.CommandSoundtrackSetValue.PropertyValue new_value = 5;
+}
+
+message CommandSlideUpdateMasterDrawables {
+  required .TSK.CommandArchive super = 1;
+  required .TSP.Reference slide = 2;
+  repeated .TSP.Reference drawables_to_insert = 3;
+  repeated .TSP.Reference sorted_drawables_to_remove = 4;
+  required .TSP.IndexSet indexes_of_removed_drawables = 5;
 }
 
 message SlideCollectionCommandSelectionBehaviorArchive {

@@ -42,6 +42,7 @@ void protobuf_AssignDesc_TSTCommandArchives_2eproto();
 void protobuf_ShutdownFile_TSTCommandArchives_2eproto();
 
 class TableCommandArchive;
+class CommandApplyCellDiffArchive;
 class CommandChangeFreezeHeaderStateArchive;
 class CommandDeleteCellsArchive;
 class CommandDeleteCellContentsArchive;
@@ -52,6 +53,7 @@ class CommandCoerceMultipleCellsArchive;
 class CommandSetControlCellsDisplayNumberFormatArchive;
 class CommandSetAutomaticFormatArchive;
 class CommandSetAutomaticDurationUnitsArchive;
+class CommandReplaceCustomFormatArchive;
 class CommandInsertColumnsOrRowsArchive;
 class CommandInsertColumnsOrRowsArchive_StyleIndexPair;
 class CommandPasteArchive;
@@ -69,6 +71,7 @@ class CommandSetTableFontSizeArchive;
 class CommandSetTableFontNameArchive;
 class CommandSetTableNameHeightArchive;
 class CommandStyleCellsArchive;
+class CommandSetFillPropertyArchive;
 class CommandStyleTableArchive;
 class CommandFillCellsArchive;
 class CommandReplaceTextArchive;
@@ -79,6 +82,9 @@ class CommandAddQuickFilterRulesArchive;
 class CommandDeleteFilterRulesArchive;
 class CommandModifyFilterRuleArchive;
 class CommandApplyStrokePresetArchive;
+class CommandAddTableStylePresetArchive;
+class CommandRemoveTableStylePresetArchive;
+class CommandReplaceTableStylePresetArchive;
 class CommandApplyTableStylePresetArchive;
 class CommandApplyTableStylePresetArchive_StyleIndexTuple;
 class CommandSetStyleApplyClearsAllFlagArchive;
@@ -139,6 +145,10 @@ class CommandDisableFilterRulesForColumnArchive;
 class CommandSetTextStyleArchive;
 class CommandNotifyForTransformingArchive;
 class CommandSetStorageLanguageArchive;
+class CommandSetSortOrderArchive;
+class CommandRewriteSortOrderForTectonicShiftArchive;
+class CommandRewriteSortOrderForSortArchive;
+class CommandRewriteSortOrderForTableResizeArchive;
 
 enum CommandDirectionArchive {
   directionRow = 0,
@@ -300,6 +310,126 @@ class TableCommandArchive : public ::google::protobuf::Message {
 
   void InitAsDefaultInstance();
   static TableCommandArchive* default_instance_;
+};
+// -------------------------------------------------------------------
+
+class CommandApplyCellDiffArchive : public ::google::protobuf::Message {
+ public:
+  CommandApplyCellDiffArchive();
+  virtual ~CommandApplyCellDiffArchive();
+
+  CommandApplyCellDiffArchive(const CommandApplyCellDiffArchive& from);
+
+  inline CommandApplyCellDiffArchive& operator=(const CommandApplyCellDiffArchive& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _unknown_fields_;
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return &_unknown_fields_;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const CommandApplyCellDiffArchive& default_instance();
+
+  void Swap(CommandApplyCellDiffArchive* other);
+
+  // implements Message ----------------------------------------------
+
+  CommandApplyCellDiffArchive* New() const;
+  void CopyFrom(const ::google::protobuf::Message& from);
+  void MergeFrom(const ::google::protobuf::Message& from);
+  void CopyFrom(const CommandApplyCellDiffArchive& from);
+  void MergeFrom(const CommandApplyCellDiffArchive& from);
+  void Clear();
+  bool IsInitialized() const;
+
+  int ByteSize() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // required .TST.TableCommandArchive super = 1;
+  inline bool has_super() const;
+  inline void clear_super();
+  static const int kSuperFieldNumber = 1;
+  inline const ::TST::TableCommandArchive& super() const;
+  inline ::TST::TableCommandArchive* mutable_super();
+  inline ::TST::TableCommandArchive* release_super();
+  inline void set_allocated_super(::TST::TableCommandArchive* super);
+
+  // required .TST.CellRegion cell_region = 2;
+  inline bool has_cell_region() const;
+  inline void clear_cell_region();
+  static const int kCellRegionFieldNumber = 2;
+  inline const ::TST::CellRegion& cell_region() const;
+  inline ::TST::CellRegion* mutable_cell_region();
+  inline ::TST::CellRegion* release_cell_region();
+  inline void set_allocated_cell_region(::TST::CellRegion* cell_region);
+
+  // required .TSP.Reference cell_diff = 3;
+  inline bool has_cell_diff() const;
+  inline void clear_cell_diff();
+  static const int kCellDiffFieldNumber = 3;
+  inline const ::TSP::Reference& cell_diff() const;
+  inline ::TSP::Reference* mutable_cell_diff();
+  inline ::TSP::Reference* release_cell_diff();
+  inline void set_allocated_cell_diff(::TSP::Reference* cell_diff);
+
+  // required .TSP.Reference inverse_cell_diff_map = 4;
+  inline bool has_inverse_cell_diff_map() const;
+  inline void clear_inverse_cell_diff_map();
+  static const int kInverseCellDiffMapFieldNumber = 4;
+  inline const ::TSP::Reference& inverse_cell_diff_map() const;
+  inline ::TSP::Reference* mutable_inverse_cell_diff_map();
+  inline ::TSP::Reference* release_inverse_cell_diff_map();
+  inline void set_allocated_inverse_cell_diff_map(::TSP::Reference* inverse_cell_diff_map);
+
+  // @@protoc_insertion_point(class_scope:TST.CommandApplyCellDiffArchive)
+ private:
+  inline void set_has_super();
+  inline void clear_has_super();
+  inline void set_has_cell_region();
+  inline void clear_has_cell_region();
+  inline void set_has_cell_diff();
+  inline void clear_has_cell_diff();
+  inline void set_has_inverse_cell_diff_map();
+  inline void clear_has_inverse_cell_diff_map();
+
+  ::google::protobuf::UnknownFieldSet _unknown_fields_;
+
+  ::TST::TableCommandArchive* super_;
+  ::TST::CellRegion* cell_region_;
+  ::TSP::Reference* cell_diff_;
+  ::TSP::Reference* inverse_cell_diff_map_;
+
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 _has_bits_[(4 + 31) / 32];
+
+  friend void  protobuf_AddDesc_TSTCommandArchives_2eproto();
+  friend void protobuf_AssignDesc_TSTCommandArchives_2eproto();
+  friend void protobuf_ShutdownFile_TSTCommandArchives_2eproto();
+
+  void InitAsDefaultInstance();
+  static CommandApplyCellDiffArchive* default_instance_;
 };
 // -------------------------------------------------------------------
 
@@ -1561,6 +1691,114 @@ class CommandSetAutomaticDurationUnitsArchive : public ::google::protobuf::Messa
 };
 // -------------------------------------------------------------------
 
+class CommandReplaceCustomFormatArchive : public ::google::protobuf::Message {
+ public:
+  CommandReplaceCustomFormatArchive();
+  virtual ~CommandReplaceCustomFormatArchive();
+
+  CommandReplaceCustomFormatArchive(const CommandReplaceCustomFormatArchive& from);
+
+  inline CommandReplaceCustomFormatArchive& operator=(const CommandReplaceCustomFormatArchive& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _unknown_fields_;
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return &_unknown_fields_;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const CommandReplaceCustomFormatArchive& default_instance();
+
+  void Swap(CommandReplaceCustomFormatArchive* other);
+
+  // implements Message ----------------------------------------------
+
+  CommandReplaceCustomFormatArchive* New() const;
+  void CopyFrom(const ::google::protobuf::Message& from);
+  void MergeFrom(const ::google::protobuf::Message& from);
+  void CopyFrom(const CommandReplaceCustomFormatArchive& from);
+  void MergeFrom(const CommandReplaceCustomFormatArchive& from);
+  void Clear();
+  bool IsInitialized() const;
+
+  int ByteSize() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // required .TST.CellMapArchive undo_map = 1;
+  inline bool has_undo_map() const;
+  inline void clear_undo_map();
+  static const int kUndoMapFieldNumber = 1;
+  inline const ::TST::CellMapArchive& undo_map() const;
+  inline ::TST::CellMapArchive* mutable_undo_map();
+  inline ::TST::CellMapArchive* release_undo_map();
+  inline void set_allocated_undo_map(::TST::CellMapArchive* undo_map);
+
+  // required .TST.CellMapArchive redo_map = 2;
+  inline bool has_redo_map() const;
+  inline void clear_redo_map();
+  static const int kRedoMapFieldNumber = 2;
+  inline const ::TST::CellMapArchive& redo_map() const;
+  inline ::TST::CellMapArchive* mutable_redo_map();
+  inline ::TST::CellMapArchive* release_redo_map();
+  inline void set_allocated_redo_map(::TST::CellMapArchive* redo_map);
+
+  // required .TST.TableCommandArchive super = 6;
+  inline bool has_super() const;
+  inline void clear_super();
+  static const int kSuperFieldNumber = 6;
+  inline const ::TST::TableCommandArchive& super() const;
+  inline ::TST::TableCommandArchive* mutable_super();
+  inline ::TST::TableCommandArchive* release_super();
+  inline void set_allocated_super(::TST::TableCommandArchive* super);
+
+  // @@protoc_insertion_point(class_scope:TST.CommandReplaceCustomFormatArchive)
+ private:
+  inline void set_has_undo_map();
+  inline void clear_has_undo_map();
+  inline void set_has_redo_map();
+  inline void clear_has_redo_map();
+  inline void set_has_super();
+  inline void clear_has_super();
+
+  ::google::protobuf::UnknownFieldSet _unknown_fields_;
+
+  ::TST::CellMapArchive* undo_map_;
+  ::TST::CellMapArchive* redo_map_;
+  ::TST::TableCommandArchive* super_;
+
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 _has_bits_[(3 + 31) / 32];
+
+  friend void  protobuf_AddDesc_TSTCommandArchives_2eproto();
+  friend void protobuf_AssignDesc_TSTCommandArchives_2eproto();
+  friend void protobuf_ShutdownFile_TSTCommandArchives_2eproto();
+
+  void InitAsDefaultInstance();
+  static CommandReplaceCustomFormatArchive* default_instance_;
+};
+// -------------------------------------------------------------------
+
 class CommandInsertColumnsOrRowsArchive_StyleIndexPair : public ::google::protobuf::Message {
  public:
   CommandInsertColumnsOrRowsArchive_StyleIndexPair();
@@ -2038,23 +2276,23 @@ class CommandPasteArchive : public ::google::protobuf::Message {
   inline ::TST::SelectionArchive* release_final_selection();
   inline void set_allocated_final_selection(::TST::SelectionArchive* final_selection);
 
-  // required .TST.CellMapArchive undo_cell_map = 3;
+  // required .TST.TiledCellMapArchive undo_cell_map = 3;
   inline bool has_undo_cell_map() const;
   inline void clear_undo_cell_map();
   static const int kUndoCellMapFieldNumber = 3;
-  inline const ::TST::CellMapArchive& undo_cell_map() const;
-  inline ::TST::CellMapArchive* mutable_undo_cell_map();
-  inline ::TST::CellMapArchive* release_undo_cell_map();
-  inline void set_allocated_undo_cell_map(::TST::CellMapArchive* undo_cell_map);
+  inline const ::TST::TiledCellMapArchive& undo_cell_map() const;
+  inline ::TST::TiledCellMapArchive* mutable_undo_cell_map();
+  inline ::TST::TiledCellMapArchive* release_undo_cell_map();
+  inline void set_allocated_undo_cell_map(::TST::TiledCellMapArchive* undo_cell_map);
 
-  // required .TST.CellMapArchive redo_cell_map = 4;
+  // required .TST.TiledCellMapArchive redo_cell_map = 4;
   inline bool has_redo_cell_map() const;
   inline void clear_redo_cell_map();
   static const int kRedoCellMapFieldNumber = 4;
-  inline const ::TST::CellMapArchive& redo_cell_map() const;
-  inline ::TST::CellMapArchive* mutable_redo_cell_map();
-  inline ::TST::CellMapArchive* release_redo_cell_map();
-  inline void set_allocated_redo_cell_map(::TST::CellMapArchive* redo_cell_map);
+  inline const ::TST::TiledCellMapArchive& redo_cell_map() const;
+  inline ::TST::TiledCellMapArchive* mutable_redo_cell_map();
+  inline ::TST::TiledCellMapArchive* release_redo_cell_map();
+  inline void set_allocated_redo_cell_map(::TST::TiledCellMapArchive* redo_cell_map);
 
   // optional .TSP.Reference command_undo = 6;
   inline bool has_command_undo() const;
@@ -2114,8 +2352,8 @@ class CommandPasteArchive : public ::google::protobuf::Message {
 
   ::TST::SelectionArchive* user_selection_;
   ::TST::SelectionArchive* final_selection_;
-  ::TST::CellMapArchive* undo_cell_map_;
-  ::TST::CellMapArchive* redo_cell_map_;
+  ::TST::TiledCellMapArchive* undo_cell_map_;
+  ::TST::TiledCellMapArchive* redo_cell_map_;
   ::TSP::Reference* command_undo_;
   ::TST::TableCommandArchive* super_;
   ::google::protobuf::RepeatedPtrField< ::TSP::Reference > formula_rewrite_commands_;
@@ -4277,6 +4515,150 @@ class CommandStyleCellsArchive : public ::google::protobuf::Message {
 };
 // -------------------------------------------------------------------
 
+class CommandSetFillPropertyArchive : public ::google::protobuf::Message {
+ public:
+  CommandSetFillPropertyArchive();
+  virtual ~CommandSetFillPropertyArchive();
+
+  CommandSetFillPropertyArchive(const CommandSetFillPropertyArchive& from);
+
+  inline CommandSetFillPropertyArchive& operator=(const CommandSetFillPropertyArchive& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _unknown_fields_;
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return &_unknown_fields_;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const CommandSetFillPropertyArchive& default_instance();
+
+  void Swap(CommandSetFillPropertyArchive* other);
+
+  // implements Message ----------------------------------------------
+
+  CommandSetFillPropertyArchive* New() const;
+  void CopyFrom(const ::google::protobuf::Message& from);
+  void MergeFrom(const ::google::protobuf::Message& from);
+  void CopyFrom(const CommandSetFillPropertyArchive& from);
+  void MergeFrom(const CommandSetFillPropertyArchive& from);
+  void Clear();
+  bool IsInitialized() const;
+
+  int ByteSize() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // required .TST.TableCommandArchive super = 1;
+  inline bool has_super() const;
+  inline void clear_super();
+  static const int kSuperFieldNumber = 1;
+  inline const ::TST::TableCommandArchive& super() const;
+  inline ::TST::TableCommandArchive* mutable_super();
+  inline ::TST::TableCommandArchive* release_super();
+  inline void set_allocated_super(::TST::TableCommandArchive* super);
+
+  // optional .TSD.FillArchive fill = 2;
+  inline bool has_fill() const;
+  inline void clear_fill();
+  static const int kFillFieldNumber = 2;
+  inline const ::TSD::FillArchive& fill() const;
+  inline ::TSD::FillArchive* mutable_fill();
+  inline ::TSD::FillArchive* release_fill();
+  inline void set_allocated_fill(::TSD::FillArchive* fill);
+
+  // optional .TST.CellFillStandIn cell_fill_stand_in = 3;
+  inline bool has_cell_fill_stand_in() const;
+  inline void clear_cell_fill_stand_in();
+  static const int kCellFillStandInFieldNumber = 3;
+  inline const ::TST::CellFillStandIn& cell_fill_stand_in() const;
+  inline ::TST::CellFillStandIn* mutable_cell_fill_stand_in();
+  inline ::TST::CellFillStandIn* release_cell_fill_stand_in();
+  inline void set_allocated_cell_fill_stand_in(::TST::CellFillStandIn* cell_fill_stand_in);
+
+  // required .TST.SelectionArchive selection = 4;
+  inline bool has_selection() const;
+  inline void clear_selection();
+  static const int kSelectionFieldNumber = 4;
+  inline const ::TST::SelectionArchive& selection() const;
+  inline ::TST::SelectionArchive* mutable_selection();
+  inline ::TST::SelectionArchive* release_selection();
+  inline void set_allocated_selection(::TST::SelectionArchive* selection);
+
+  // required .TST.CellMapArchive undo_cell_map = 5;
+  inline bool has_undo_cell_map() const;
+  inline void clear_undo_cell_map();
+  static const int kUndoCellMapFieldNumber = 5;
+  inline const ::TST::CellMapArchive& undo_cell_map() const;
+  inline ::TST::CellMapArchive* mutable_undo_cell_map();
+  inline ::TST::CellMapArchive* release_undo_cell_map();
+  inline void set_allocated_undo_cell_map(::TST::CellMapArchive* undo_cell_map);
+
+  // required .TST.CellMapArchive redo_cell_map = 6;
+  inline bool has_redo_cell_map() const;
+  inline void clear_redo_cell_map();
+  static const int kRedoCellMapFieldNumber = 6;
+  inline const ::TST::CellMapArchive& redo_cell_map() const;
+  inline ::TST::CellMapArchive* mutable_redo_cell_map();
+  inline ::TST::CellMapArchive* release_redo_cell_map();
+  inline void set_allocated_redo_cell_map(::TST::CellMapArchive* redo_cell_map);
+
+  // @@protoc_insertion_point(class_scope:TST.CommandSetFillPropertyArchive)
+ private:
+  inline void set_has_super();
+  inline void clear_has_super();
+  inline void set_has_fill();
+  inline void clear_has_fill();
+  inline void set_has_cell_fill_stand_in();
+  inline void clear_has_cell_fill_stand_in();
+  inline void set_has_selection();
+  inline void clear_has_selection();
+  inline void set_has_undo_cell_map();
+  inline void clear_has_undo_cell_map();
+  inline void set_has_redo_cell_map();
+  inline void clear_has_redo_cell_map();
+
+  ::google::protobuf::UnknownFieldSet _unknown_fields_;
+
+  ::TST::TableCommandArchive* super_;
+  ::TSD::FillArchive* fill_;
+  ::TST::CellFillStandIn* cell_fill_stand_in_;
+  ::TST::SelectionArchive* selection_;
+  ::TST::CellMapArchive* undo_cell_map_;
+  ::TST::CellMapArchive* redo_cell_map_;
+
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 _has_bits_[(6 + 31) / 32];
+
+  friend void  protobuf_AddDesc_TSTCommandArchives_2eproto();
+  friend void protobuf_AssignDesc_TSTCommandArchives_2eproto();
+  friend void protobuf_ShutdownFile_TSTCommandArchives_2eproto();
+
+  void InitAsDefaultInstance();
+  static CommandSetFillPropertyArchive* default_instance_;
+};
+// -------------------------------------------------------------------
+
 class CommandStyleTableArchive : public ::google::protobuf::Message {
  public:
   CommandStyleTableArchive();
@@ -5541,6 +5923,370 @@ class CommandApplyStrokePresetArchive : public ::google::protobuf::Message {
 };
 // -------------------------------------------------------------------
 
+class CommandAddTableStylePresetArchive : public ::google::protobuf::Message {
+ public:
+  CommandAddTableStylePresetArchive();
+  virtual ~CommandAddTableStylePresetArchive();
+
+  CommandAddTableStylePresetArchive(const CommandAddTableStylePresetArchive& from);
+
+  inline CommandAddTableStylePresetArchive& operator=(const CommandAddTableStylePresetArchive& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _unknown_fields_;
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return &_unknown_fields_;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const CommandAddTableStylePresetArchive& default_instance();
+
+  void Swap(CommandAddTableStylePresetArchive* other);
+
+  // implements Message ----------------------------------------------
+
+  CommandAddTableStylePresetArchive* New() const;
+  void CopyFrom(const ::google::protobuf::Message& from);
+  void MergeFrom(const ::google::protobuf::Message& from);
+  void CopyFrom(const CommandAddTableStylePresetArchive& from);
+  void MergeFrom(const CommandAddTableStylePresetArchive& from);
+  void Clear();
+  bool IsInitialized() const;
+
+  int ByteSize() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // required .TST.TableCommandArchive super = 1;
+  inline bool has_super() const;
+  inline void clear_super();
+  static const int kSuperFieldNumber = 1;
+  inline const ::TST::TableCommandArchive& super() const;
+  inline ::TST::TableCommandArchive* mutable_super();
+  inline ::TST::TableCommandArchive* release_super();
+  inline void set_allocated_super(::TST::TableCommandArchive* super);
+
+  // required int32 preset_index = 2;
+  inline bool has_preset_index() const;
+  inline void clear_preset_index();
+  static const int kPresetIndexFieldNumber = 2;
+  inline ::google::protobuf::int32 preset_index() const;
+  inline void set_preset_index(::google::protobuf::int32 value);
+
+  // required .TST.TableStyleNetworkArchive table_styles = 3;
+  inline bool has_table_styles() const;
+  inline void clear_table_styles();
+  static const int kTableStylesFieldNumber = 3;
+  inline const ::TST::TableStyleNetworkArchive& table_styles() const;
+  inline ::TST::TableStyleNetworkArchive* mutable_table_styles();
+  inline ::TST::TableStyleNetworkArchive* release_table_styles();
+  inline void set_allocated_table_styles(::TST::TableStyleNetworkArchive* table_styles);
+
+  // required bool send_notification = 4;
+  inline bool has_send_notification() const;
+  inline void clear_send_notification();
+  static const int kSendNotificationFieldNumber = 4;
+  inline bool send_notification() const;
+  inline void set_send_notification(bool value);
+
+  // @@protoc_insertion_point(class_scope:TST.CommandAddTableStylePresetArchive)
+ private:
+  inline void set_has_super();
+  inline void clear_has_super();
+  inline void set_has_preset_index();
+  inline void clear_has_preset_index();
+  inline void set_has_table_styles();
+  inline void clear_has_table_styles();
+  inline void set_has_send_notification();
+  inline void clear_has_send_notification();
+
+  ::google::protobuf::UnknownFieldSet _unknown_fields_;
+
+  ::TST::TableCommandArchive* super_;
+  ::TST::TableStyleNetworkArchive* table_styles_;
+  ::google::protobuf::int32 preset_index_;
+  bool send_notification_;
+
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 _has_bits_[(4 + 31) / 32];
+
+  friend void  protobuf_AddDesc_TSTCommandArchives_2eproto();
+  friend void protobuf_AssignDesc_TSTCommandArchives_2eproto();
+  friend void protobuf_ShutdownFile_TSTCommandArchives_2eproto();
+
+  void InitAsDefaultInstance();
+  static CommandAddTableStylePresetArchive* default_instance_;
+};
+// -------------------------------------------------------------------
+
+class CommandRemoveTableStylePresetArchive : public ::google::protobuf::Message {
+ public:
+  CommandRemoveTableStylePresetArchive();
+  virtual ~CommandRemoveTableStylePresetArchive();
+
+  CommandRemoveTableStylePresetArchive(const CommandRemoveTableStylePresetArchive& from);
+
+  inline CommandRemoveTableStylePresetArchive& operator=(const CommandRemoveTableStylePresetArchive& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _unknown_fields_;
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return &_unknown_fields_;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const CommandRemoveTableStylePresetArchive& default_instance();
+
+  void Swap(CommandRemoveTableStylePresetArchive* other);
+
+  // implements Message ----------------------------------------------
+
+  CommandRemoveTableStylePresetArchive* New() const;
+  void CopyFrom(const ::google::protobuf::Message& from);
+  void MergeFrom(const ::google::protobuf::Message& from);
+  void CopyFrom(const CommandRemoveTableStylePresetArchive& from);
+  void MergeFrom(const CommandRemoveTableStylePresetArchive& from);
+  void Clear();
+  bool IsInitialized() const;
+
+  int ByteSize() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // required .TSK.CommandArchive super = 1;
+  inline bool has_super() const;
+  inline void clear_super();
+  static const int kSuperFieldNumber = 1;
+  inline const ::TSK::CommandArchive& super() const;
+  inline ::TSK::CommandArchive* mutable_super();
+  inline ::TSK::CommandArchive* release_super();
+  inline void set_allocated_super(::TSK::CommandArchive* super);
+
+  // required .TSP.Reference theme = 2;
+  inline bool has_theme() const;
+  inline void clear_theme();
+  static const int kThemeFieldNumber = 2;
+  inline const ::TSP::Reference& theme() const;
+  inline ::TSP::Reference* mutable_theme();
+  inline ::TSP::Reference* release_theme();
+  inline void set_allocated_theme(::TSP::Reference* theme);
+
+  // required .TST.TableStyleNetworkArchive removed_table_styles = 3;
+  inline bool has_removed_table_styles() const;
+  inline void clear_removed_table_styles();
+  static const int kRemovedTableStylesFieldNumber = 3;
+  inline const ::TST::TableStyleNetworkArchive& removed_table_styles() const;
+  inline ::TST::TableStyleNetworkArchive* mutable_removed_table_styles();
+  inline ::TST::TableStyleNetworkArchive* release_removed_table_styles();
+  inline void set_allocated_removed_table_styles(::TST::TableStyleNetworkArchive* removed_table_styles);
+
+  // required int32 preset_id = 4;
+  inline bool has_preset_id() const;
+  inline void clear_preset_id();
+  static const int kPresetIdFieldNumber = 4;
+  inline ::google::protobuf::int32 preset_id() const;
+  inline void set_preset_id(::google::protobuf::int32 value);
+
+  // required int32 preset_index_in_theme = 5;
+  inline bool has_preset_index_in_theme() const;
+  inline void clear_preset_index_in_theme();
+  static const int kPresetIndexInThemeFieldNumber = 5;
+  inline ::google::protobuf::int32 preset_index_in_theme() const;
+  inline void set_preset_index_in_theme(::google::protobuf::int32 value);
+
+  // @@protoc_insertion_point(class_scope:TST.CommandRemoveTableStylePresetArchive)
+ private:
+  inline void set_has_super();
+  inline void clear_has_super();
+  inline void set_has_theme();
+  inline void clear_has_theme();
+  inline void set_has_removed_table_styles();
+  inline void clear_has_removed_table_styles();
+  inline void set_has_preset_id();
+  inline void clear_has_preset_id();
+  inline void set_has_preset_index_in_theme();
+  inline void clear_has_preset_index_in_theme();
+
+  ::google::protobuf::UnknownFieldSet _unknown_fields_;
+
+  ::TSK::CommandArchive* super_;
+  ::TSP::Reference* theme_;
+  ::TST::TableStyleNetworkArchive* removed_table_styles_;
+  ::google::protobuf::int32 preset_id_;
+  ::google::protobuf::int32 preset_index_in_theme_;
+
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 _has_bits_[(5 + 31) / 32];
+
+  friend void  protobuf_AddDesc_TSTCommandArchives_2eproto();
+  friend void protobuf_AssignDesc_TSTCommandArchives_2eproto();
+  friend void protobuf_ShutdownFile_TSTCommandArchives_2eproto();
+
+  void InitAsDefaultInstance();
+  static CommandRemoveTableStylePresetArchive* default_instance_;
+};
+// -------------------------------------------------------------------
+
+class CommandReplaceTableStylePresetArchive : public ::google::protobuf::Message {
+ public:
+  CommandReplaceTableStylePresetArchive();
+  virtual ~CommandReplaceTableStylePresetArchive();
+
+  CommandReplaceTableStylePresetArchive(const CommandReplaceTableStylePresetArchive& from);
+
+  inline CommandReplaceTableStylePresetArchive& operator=(const CommandReplaceTableStylePresetArchive& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _unknown_fields_;
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return &_unknown_fields_;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const CommandReplaceTableStylePresetArchive& default_instance();
+
+  void Swap(CommandReplaceTableStylePresetArchive* other);
+
+  // implements Message ----------------------------------------------
+
+  CommandReplaceTableStylePresetArchive* New() const;
+  void CopyFrom(const ::google::protobuf::Message& from);
+  void MergeFrom(const ::google::protobuf::Message& from);
+  void CopyFrom(const CommandReplaceTableStylePresetArchive& from);
+  void MergeFrom(const CommandReplaceTableStylePresetArchive& from);
+  void Clear();
+  bool IsInitialized() const;
+
+  int ByteSize() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // required .TSK.CommandArchive super = 1;
+  inline bool has_super() const;
+  inline void clear_super();
+  static const int kSuperFieldNumber = 1;
+  inline const ::TSK::CommandArchive& super() const;
+  inline ::TSK::CommandArchive* mutable_super();
+  inline ::TSK::CommandArchive* release_super();
+  inline void set_allocated_super(::TSK::CommandArchive* super);
+
+  // required .TSP.Reference theme = 2;
+  inline bool has_theme() const;
+  inline void clear_theme();
+  static const int kThemeFieldNumber = 2;
+  inline const ::TSP::Reference& theme() const;
+  inline ::TSP::Reference* mutable_theme();
+  inline ::TSP::Reference* release_theme();
+  inline void set_allocated_theme(::TSP::Reference* theme);
+
+  // required .TST.TableStyleNetworkArchive old_table_styles = 3;
+  inline bool has_old_table_styles() const;
+  inline void clear_old_table_styles();
+  static const int kOldTableStylesFieldNumber = 3;
+  inline const ::TST::TableStyleNetworkArchive& old_table_styles() const;
+  inline ::TST::TableStyleNetworkArchive* mutable_old_table_styles();
+  inline ::TST::TableStyleNetworkArchive* release_old_table_styles();
+  inline void set_allocated_old_table_styles(::TST::TableStyleNetworkArchive* old_table_styles);
+
+  // required .TST.TableStyleNetworkArchive new_table_styles = 4;
+  inline bool has_new_table_styles() const;
+  inline void clear_new_table_styles();
+  static const int kNewTableStylesFieldNumber = 4;
+  inline const ::TST::TableStyleNetworkArchive& new_table_styles() const;
+  inline ::TST::TableStyleNetworkArchive* mutable_new_table_styles();
+  inline ::TST::TableStyleNetworkArchive* release_new_table_styles();
+  inline void set_allocated_new_table_styles(::TST::TableStyleNetworkArchive* new_table_styles);
+
+  // @@protoc_insertion_point(class_scope:TST.CommandReplaceTableStylePresetArchive)
+ private:
+  inline void set_has_super();
+  inline void clear_has_super();
+  inline void set_has_theme();
+  inline void clear_has_theme();
+  inline void set_has_old_table_styles();
+  inline void clear_has_old_table_styles();
+  inline void set_has_new_table_styles();
+  inline void clear_has_new_table_styles();
+
+  ::google::protobuf::UnknownFieldSet _unknown_fields_;
+
+  ::TSK::CommandArchive* super_;
+  ::TSP::Reference* theme_;
+  ::TST::TableStyleNetworkArchive* old_table_styles_;
+  ::TST::TableStyleNetworkArchive* new_table_styles_;
+
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 _has_bits_[(4 + 31) / 32];
+
+  friend void  protobuf_AddDesc_TSTCommandArchives_2eproto();
+  friend void protobuf_AssignDesc_TSTCommandArchives_2eproto();
+  friend void protobuf_ShutdownFile_TSTCommandArchives_2eproto();
+
+  void InitAsDefaultInstance();
+  static CommandReplaceTableStylePresetArchive* default_instance_;
+};
+// -------------------------------------------------------------------
+
 class CommandApplyTableStylePresetArchive_StyleIndexTuple : public ::google::protobuf::Message {
  public:
   CommandApplyTableStylePresetArchive_StyleIndexTuple();
@@ -5746,14 +6492,14 @@ class CommandApplyTableStylePresetArchive : public ::google::protobuf::Message {
   inline ::TST::TableStyleNetworkArchive* release_old_table_styles();
   inline void set_allocated_old_table_styles(::TST::TableStyleNetworkArchive* old_table_styles);
 
-  // required .TST.TableStyleNetworkArchive new_table_styles = 8;
-  inline bool has_new_table_styles() const;
-  inline void clear_new_table_styles();
+  // optional .TST.TableStyleNetworkArchive new_table_styles = 8 [deprecated = true];
+  inline bool has_new_table_styles() const PROTOBUF_DEPRECATED;
+  inline void clear_new_table_styles() PROTOBUF_DEPRECATED;
   static const int kNewTableStylesFieldNumber = 8;
-  inline const ::TST::TableStyleNetworkArchive& new_table_styles() const;
-  inline ::TST::TableStyleNetworkArchive* mutable_new_table_styles();
-  inline ::TST::TableStyleNetworkArchive* release_new_table_styles();
-  inline void set_allocated_new_table_styles(::TST::TableStyleNetworkArchive* new_table_styles);
+  inline const ::TST::TableStyleNetworkArchive& new_table_styles() const PROTOBUF_DEPRECATED;
+  inline ::TST::TableStyleNetworkArchive* mutable_new_table_styles() PROTOBUF_DEPRECATED;
+  inline ::TST::TableStyleNetworkArchive* release_new_table_styles() PROTOBUF_DEPRECATED;
+  inline void set_allocated_new_table_styles(::TST::TableStyleNetworkArchive* new_table_styles) PROTOBUF_DEPRECATED;
 
   // optional bool apply_clears_all = 10;
   inline bool has_apply_clears_all() const;
@@ -12509,6 +13255,462 @@ class CommandSetStorageLanguageArchive : public ::google::protobuf::Message {
   void InitAsDefaultInstance();
   static CommandSetStorageLanguageArchive* default_instance_;
 };
+// -------------------------------------------------------------------
+
+class CommandSetSortOrderArchive : public ::google::protobuf::Message {
+ public:
+  CommandSetSortOrderArchive();
+  virtual ~CommandSetSortOrderArchive();
+
+  CommandSetSortOrderArchive(const CommandSetSortOrderArchive& from);
+
+  inline CommandSetSortOrderArchive& operator=(const CommandSetSortOrderArchive& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _unknown_fields_;
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return &_unknown_fields_;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const CommandSetSortOrderArchive& default_instance();
+
+  void Swap(CommandSetSortOrderArchive* other);
+
+  // implements Message ----------------------------------------------
+
+  CommandSetSortOrderArchive* New() const;
+  void CopyFrom(const ::google::protobuf::Message& from);
+  void MergeFrom(const ::google::protobuf::Message& from);
+  void CopyFrom(const CommandSetSortOrderArchive& from);
+  void MergeFrom(const CommandSetSortOrderArchive& from);
+  void Clear();
+  bool IsInitialized() const;
+
+  int ByteSize() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // required .TST.TableCommandArchive super = 1;
+  inline bool has_super() const;
+  inline void clear_super();
+  static const int kSuperFieldNumber = 1;
+  inline const ::TST::TableCommandArchive& super() const;
+  inline ::TST::TableCommandArchive* mutable_super();
+  inline ::TST::TableCommandArchive* release_super();
+  inline void set_allocated_super(::TST::TableCommandArchive* super);
+
+  // optional .TST.TableSortOrderArchive old_sort_order = 2;
+  inline bool has_old_sort_order() const;
+  inline void clear_old_sort_order();
+  static const int kOldSortOrderFieldNumber = 2;
+  inline const ::TST::TableSortOrderArchive& old_sort_order() const;
+  inline ::TST::TableSortOrderArchive* mutable_old_sort_order();
+  inline ::TST::TableSortOrderArchive* release_old_sort_order();
+  inline void set_allocated_old_sort_order(::TST::TableSortOrderArchive* old_sort_order);
+
+  // optional .TST.TableSortOrderArchive new_sort_order = 3;
+  inline bool has_new_sort_order() const;
+  inline void clear_new_sort_order();
+  static const int kNewSortOrderFieldNumber = 3;
+  inline const ::TST::TableSortOrderArchive& new_sort_order() const;
+  inline ::TST::TableSortOrderArchive* mutable_new_sort_order();
+  inline ::TST::TableSortOrderArchive* release_new_sort_order();
+  inline void set_allocated_new_sort_order(::TST::TableSortOrderArchive* new_sort_order);
+
+  // @@protoc_insertion_point(class_scope:TST.CommandSetSortOrderArchive)
+ private:
+  inline void set_has_super();
+  inline void clear_has_super();
+  inline void set_has_old_sort_order();
+  inline void clear_has_old_sort_order();
+  inline void set_has_new_sort_order();
+  inline void clear_has_new_sort_order();
+
+  ::google::protobuf::UnknownFieldSet _unknown_fields_;
+
+  ::TST::TableCommandArchive* super_;
+  ::TST::TableSortOrderArchive* old_sort_order_;
+  ::TST::TableSortOrderArchive* new_sort_order_;
+
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 _has_bits_[(3 + 31) / 32];
+
+  friend void  protobuf_AddDesc_TSTCommandArchives_2eproto();
+  friend void protobuf_AssignDesc_TSTCommandArchives_2eproto();
+  friend void protobuf_ShutdownFile_TSTCommandArchives_2eproto();
+
+  void InitAsDefaultInstance();
+  static CommandSetSortOrderArchive* default_instance_;
+};
+// -------------------------------------------------------------------
+
+class CommandRewriteSortOrderForTectonicShiftArchive : public ::google::protobuf::Message {
+ public:
+  CommandRewriteSortOrderForTectonicShiftArchive();
+  virtual ~CommandRewriteSortOrderForTectonicShiftArchive();
+
+  CommandRewriteSortOrderForTectonicShiftArchive(const CommandRewriteSortOrderForTectonicShiftArchive& from);
+
+  inline CommandRewriteSortOrderForTectonicShiftArchive& operator=(const CommandRewriteSortOrderForTectonicShiftArchive& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _unknown_fields_;
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return &_unknown_fields_;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const CommandRewriteSortOrderForTectonicShiftArchive& default_instance();
+
+  void Swap(CommandRewriteSortOrderForTectonicShiftArchive* other);
+
+  // implements Message ----------------------------------------------
+
+  CommandRewriteSortOrderForTectonicShiftArchive* New() const;
+  void CopyFrom(const ::google::protobuf::Message& from);
+  void MergeFrom(const ::google::protobuf::Message& from);
+  void CopyFrom(const CommandRewriteSortOrderForTectonicShiftArchive& from);
+  void MergeFrom(const CommandRewriteSortOrderForTectonicShiftArchive& from);
+  void Clear();
+  bool IsInitialized() const;
+
+  int ByteSize() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // required .TST.TableCommandArchive super = 1;
+  inline bool has_super() const;
+  inline void clear_super();
+  static const int kSuperFieldNumber = 1;
+  inline const ::TST::TableCommandArchive& super() const;
+  inline ::TST::TableCommandArchive* mutable_super();
+  inline ::TST::TableCommandArchive* release_super();
+  inline void set_allocated_super(::TST::TableCommandArchive* super);
+
+  // required .TSCE.TectonicShiftArchive tectonic_shift = 2;
+  inline bool has_tectonic_shift() const;
+  inline void clear_tectonic_shift();
+  static const int kTectonicShiftFieldNumber = 2;
+  inline const ::TSCE::TectonicShiftArchive& tectonic_shift() const;
+  inline ::TSCE::TectonicShiftArchive* mutable_tectonic_shift();
+  inline ::TSCE::TectonicShiftArchive* release_tectonic_shift();
+  inline void set_allocated_tectonic_shift(::TSCE::TectonicShiftArchive* tectonic_shift);
+
+  // optional .TST.TableSortOrderArchive old_sort_order = 3;
+  inline bool has_old_sort_order() const;
+  inline void clear_old_sort_order();
+  static const int kOldSortOrderFieldNumber = 3;
+  inline const ::TST::TableSortOrderArchive& old_sort_order() const;
+  inline ::TST::TableSortOrderArchive* mutable_old_sort_order();
+  inline ::TST::TableSortOrderArchive* release_old_sort_order();
+  inline void set_allocated_old_sort_order(::TST::TableSortOrderArchive* old_sort_order);
+
+  // optional .TST.TableSortOrderArchive new_sort_order = 4;
+  inline bool has_new_sort_order() const;
+  inline void clear_new_sort_order();
+  static const int kNewSortOrderFieldNumber = 4;
+  inline const ::TST::TableSortOrderArchive& new_sort_order() const;
+  inline ::TST::TableSortOrderArchive* mutable_new_sort_order();
+  inline ::TST::TableSortOrderArchive* release_new_sort_order();
+  inline void set_allocated_new_sort_order(::TST::TableSortOrderArchive* new_sort_order);
+
+  // @@protoc_insertion_point(class_scope:TST.CommandRewriteSortOrderForTectonicShiftArchive)
+ private:
+  inline void set_has_super();
+  inline void clear_has_super();
+  inline void set_has_tectonic_shift();
+  inline void clear_has_tectonic_shift();
+  inline void set_has_old_sort_order();
+  inline void clear_has_old_sort_order();
+  inline void set_has_new_sort_order();
+  inline void clear_has_new_sort_order();
+
+  ::google::protobuf::UnknownFieldSet _unknown_fields_;
+
+  ::TST::TableCommandArchive* super_;
+  ::TSCE::TectonicShiftArchive* tectonic_shift_;
+  ::TST::TableSortOrderArchive* old_sort_order_;
+  ::TST::TableSortOrderArchive* new_sort_order_;
+
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 _has_bits_[(4 + 31) / 32];
+
+  friend void  protobuf_AddDesc_TSTCommandArchives_2eproto();
+  friend void protobuf_AssignDesc_TSTCommandArchives_2eproto();
+  friend void protobuf_ShutdownFile_TSTCommandArchives_2eproto();
+
+  void InitAsDefaultInstance();
+  static CommandRewriteSortOrderForTectonicShiftArchive* default_instance_;
+};
+// -------------------------------------------------------------------
+
+class CommandRewriteSortOrderForSortArchive : public ::google::protobuf::Message {
+ public:
+  CommandRewriteSortOrderForSortArchive();
+  virtual ~CommandRewriteSortOrderForSortArchive();
+
+  CommandRewriteSortOrderForSortArchive(const CommandRewriteSortOrderForSortArchive& from);
+
+  inline CommandRewriteSortOrderForSortArchive& operator=(const CommandRewriteSortOrderForSortArchive& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _unknown_fields_;
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return &_unknown_fields_;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const CommandRewriteSortOrderForSortArchive& default_instance();
+
+  void Swap(CommandRewriteSortOrderForSortArchive* other);
+
+  // implements Message ----------------------------------------------
+
+  CommandRewriteSortOrderForSortArchive* New() const;
+  void CopyFrom(const ::google::protobuf::Message& from);
+  void MergeFrom(const ::google::protobuf::Message& from);
+  void CopyFrom(const CommandRewriteSortOrderForSortArchive& from);
+  void MergeFrom(const CommandRewriteSortOrderForSortArchive& from);
+  void Clear();
+  bool IsInitialized() const;
+
+  int ByteSize() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // required .TST.TableCommandArchive super = 1;
+  inline bool has_super() const;
+  inline void clear_super();
+  static const int kSuperFieldNumber = 1;
+  inline const ::TST::TableCommandArchive& super() const;
+  inline ::TST::TableCommandArchive* mutable_super();
+  inline ::TST::TableCommandArchive* release_super();
+  inline void set_allocated_super(::TST::TableCommandArchive* super);
+
+  // required .TSK.ShuffleMappingArchive sort_mapping = 2;
+  inline bool has_sort_mapping() const;
+  inline void clear_sort_mapping();
+  static const int kSortMappingFieldNumber = 2;
+  inline const ::TSK::ShuffleMappingArchive& sort_mapping() const;
+  inline ::TSK::ShuffleMappingArchive* mutable_sort_mapping();
+  inline ::TSK::ShuffleMappingArchive* release_sort_mapping();
+  inline void set_allocated_sort_mapping(::TSK::ShuffleMappingArchive* sort_mapping);
+
+  // optional .TST.TableSortOrderArchive old_sort_order = 3;
+  inline bool has_old_sort_order() const;
+  inline void clear_old_sort_order();
+  static const int kOldSortOrderFieldNumber = 3;
+  inline const ::TST::TableSortOrderArchive& old_sort_order() const;
+  inline ::TST::TableSortOrderArchive* mutable_old_sort_order();
+  inline ::TST::TableSortOrderArchive* release_old_sort_order();
+  inline void set_allocated_old_sort_order(::TST::TableSortOrderArchive* old_sort_order);
+
+  // optional .TST.TableSortOrderArchive new_sort_order = 4;
+  inline bool has_new_sort_order() const;
+  inline void clear_new_sort_order();
+  static const int kNewSortOrderFieldNumber = 4;
+  inline const ::TST::TableSortOrderArchive& new_sort_order() const;
+  inline ::TST::TableSortOrderArchive* mutable_new_sort_order();
+  inline ::TST::TableSortOrderArchive* release_new_sort_order();
+  inline void set_allocated_new_sort_order(::TST::TableSortOrderArchive* new_sort_order);
+
+  // @@protoc_insertion_point(class_scope:TST.CommandRewriteSortOrderForSortArchive)
+ private:
+  inline void set_has_super();
+  inline void clear_has_super();
+  inline void set_has_sort_mapping();
+  inline void clear_has_sort_mapping();
+  inline void set_has_old_sort_order();
+  inline void clear_has_old_sort_order();
+  inline void set_has_new_sort_order();
+  inline void clear_has_new_sort_order();
+
+  ::google::protobuf::UnknownFieldSet _unknown_fields_;
+
+  ::TST::TableCommandArchive* super_;
+  ::TSK::ShuffleMappingArchive* sort_mapping_;
+  ::TST::TableSortOrderArchive* old_sort_order_;
+  ::TST::TableSortOrderArchive* new_sort_order_;
+
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 _has_bits_[(4 + 31) / 32];
+
+  friend void  protobuf_AddDesc_TSTCommandArchives_2eproto();
+  friend void protobuf_AssignDesc_TSTCommandArchives_2eproto();
+  friend void protobuf_ShutdownFile_TSTCommandArchives_2eproto();
+
+  void InitAsDefaultInstance();
+  static CommandRewriteSortOrderForSortArchive* default_instance_;
+};
+// -------------------------------------------------------------------
+
+class CommandRewriteSortOrderForTableResizeArchive : public ::google::protobuf::Message {
+ public:
+  CommandRewriteSortOrderForTableResizeArchive();
+  virtual ~CommandRewriteSortOrderForTableResizeArchive();
+
+  CommandRewriteSortOrderForTableResizeArchive(const CommandRewriteSortOrderForTableResizeArchive& from);
+
+  inline CommandRewriteSortOrderForTableResizeArchive& operator=(const CommandRewriteSortOrderForTableResizeArchive& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _unknown_fields_;
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return &_unknown_fields_;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const CommandRewriteSortOrderForTableResizeArchive& default_instance();
+
+  void Swap(CommandRewriteSortOrderForTableResizeArchive* other);
+
+  // implements Message ----------------------------------------------
+
+  CommandRewriteSortOrderForTableResizeArchive* New() const;
+  void CopyFrom(const ::google::protobuf::Message& from);
+  void MergeFrom(const ::google::protobuf::Message& from);
+  void CopyFrom(const CommandRewriteSortOrderForTableResizeArchive& from);
+  void MergeFrom(const CommandRewriteSortOrderForTableResizeArchive& from);
+  void Clear();
+  bool IsInitialized() const;
+
+  int ByteSize() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // required .TST.TableCommandArchive super = 1;
+  inline bool has_super() const;
+  inline void clear_super();
+  static const int kSuperFieldNumber = 1;
+  inline const ::TST::TableCommandArchive& super() const;
+  inline ::TST::TableCommandArchive* mutable_super();
+  inline ::TST::TableCommandArchive* release_super();
+  inline void set_allocated_super(::TST::TableCommandArchive* super);
+
+  // optional .TST.TableSortOrderArchive old_sort_order = 2;
+  inline bool has_old_sort_order() const;
+  inline void clear_old_sort_order();
+  static const int kOldSortOrderFieldNumber = 2;
+  inline const ::TST::TableSortOrderArchive& old_sort_order() const;
+  inline ::TST::TableSortOrderArchive* mutable_old_sort_order();
+  inline ::TST::TableSortOrderArchive* release_old_sort_order();
+  inline void set_allocated_old_sort_order(::TST::TableSortOrderArchive* old_sort_order);
+
+  // optional .TST.TableSortOrderArchive new_sort_order = 3;
+  inline bool has_new_sort_order() const;
+  inline void clear_new_sort_order();
+  static const int kNewSortOrderFieldNumber = 3;
+  inline const ::TST::TableSortOrderArchive& new_sort_order() const;
+  inline ::TST::TableSortOrderArchive* mutable_new_sort_order();
+  inline ::TST::TableSortOrderArchive* release_new_sort_order();
+  inline void set_allocated_new_sort_order(::TST::TableSortOrderArchive* new_sort_order);
+
+  // @@protoc_insertion_point(class_scope:TST.CommandRewriteSortOrderForTableResizeArchive)
+ private:
+  inline void set_has_super();
+  inline void clear_has_super();
+  inline void set_has_old_sort_order();
+  inline void clear_has_old_sort_order();
+  inline void set_has_new_sort_order();
+  inline void clear_has_new_sort_order();
+
+  ::google::protobuf::UnknownFieldSet _unknown_fields_;
+
+  ::TST::TableCommandArchive* super_;
+  ::TST::TableSortOrderArchive* old_sort_order_;
+  ::TST::TableSortOrderArchive* new_sort_order_;
+
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 _has_bits_[(3 + 31) / 32];
+
+  friend void  protobuf_AddDesc_TSTCommandArchives_2eproto();
+  friend void protobuf_AssignDesc_TSTCommandArchives_2eproto();
+  friend void protobuf_ShutdownFile_TSTCommandArchives_2eproto();
+
+  void InitAsDefaultInstance();
+  static CommandRewriteSortOrderForTableResizeArchive* default_instance_;
+};
 // ===================================================================
 
 
@@ -12682,6 +13884,162 @@ inline ::google::protobuf::uint32 TableCommandArchive::editing_mode_at_start() c
 inline void TableCommandArchive::set_editing_mode_at_start(::google::protobuf::uint32 value) {
   set_has_editing_mode_at_start();
   editing_mode_at_start_ = value;
+}
+
+// -------------------------------------------------------------------
+
+// CommandApplyCellDiffArchive
+
+// required .TST.TableCommandArchive super = 1;
+inline bool CommandApplyCellDiffArchive::has_super() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void CommandApplyCellDiffArchive::set_has_super() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void CommandApplyCellDiffArchive::clear_has_super() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void CommandApplyCellDiffArchive::clear_super() {
+  if (super_ != NULL) super_->::TST::TableCommandArchive::Clear();
+  clear_has_super();
+}
+inline const ::TST::TableCommandArchive& CommandApplyCellDiffArchive::super() const {
+  return super_ != NULL ? *super_ : *default_instance_->super_;
+}
+inline ::TST::TableCommandArchive* CommandApplyCellDiffArchive::mutable_super() {
+  set_has_super();
+  if (super_ == NULL) super_ = new ::TST::TableCommandArchive;
+  return super_;
+}
+inline ::TST::TableCommandArchive* CommandApplyCellDiffArchive::release_super() {
+  clear_has_super();
+  ::TST::TableCommandArchive* temp = super_;
+  super_ = NULL;
+  return temp;
+}
+inline void CommandApplyCellDiffArchive::set_allocated_super(::TST::TableCommandArchive* super) {
+  delete super_;
+  super_ = super;
+  if (super) {
+    set_has_super();
+  } else {
+    clear_has_super();
+  }
+}
+
+// required .TST.CellRegion cell_region = 2;
+inline bool CommandApplyCellDiffArchive::has_cell_region() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void CommandApplyCellDiffArchive::set_has_cell_region() {
+  _has_bits_[0] |= 0x00000002u;
+}
+inline void CommandApplyCellDiffArchive::clear_has_cell_region() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline void CommandApplyCellDiffArchive::clear_cell_region() {
+  if (cell_region_ != NULL) cell_region_->::TST::CellRegion::Clear();
+  clear_has_cell_region();
+}
+inline const ::TST::CellRegion& CommandApplyCellDiffArchive::cell_region() const {
+  return cell_region_ != NULL ? *cell_region_ : *default_instance_->cell_region_;
+}
+inline ::TST::CellRegion* CommandApplyCellDiffArchive::mutable_cell_region() {
+  set_has_cell_region();
+  if (cell_region_ == NULL) cell_region_ = new ::TST::CellRegion;
+  return cell_region_;
+}
+inline ::TST::CellRegion* CommandApplyCellDiffArchive::release_cell_region() {
+  clear_has_cell_region();
+  ::TST::CellRegion* temp = cell_region_;
+  cell_region_ = NULL;
+  return temp;
+}
+inline void CommandApplyCellDiffArchive::set_allocated_cell_region(::TST::CellRegion* cell_region) {
+  delete cell_region_;
+  cell_region_ = cell_region;
+  if (cell_region) {
+    set_has_cell_region();
+  } else {
+    clear_has_cell_region();
+  }
+}
+
+// required .TSP.Reference cell_diff = 3;
+inline bool CommandApplyCellDiffArchive::has_cell_diff() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void CommandApplyCellDiffArchive::set_has_cell_diff() {
+  _has_bits_[0] |= 0x00000004u;
+}
+inline void CommandApplyCellDiffArchive::clear_has_cell_diff() {
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline void CommandApplyCellDiffArchive::clear_cell_diff() {
+  if (cell_diff_ != NULL) cell_diff_->::TSP::Reference::Clear();
+  clear_has_cell_diff();
+}
+inline const ::TSP::Reference& CommandApplyCellDiffArchive::cell_diff() const {
+  return cell_diff_ != NULL ? *cell_diff_ : *default_instance_->cell_diff_;
+}
+inline ::TSP::Reference* CommandApplyCellDiffArchive::mutable_cell_diff() {
+  set_has_cell_diff();
+  if (cell_diff_ == NULL) cell_diff_ = new ::TSP::Reference;
+  return cell_diff_;
+}
+inline ::TSP::Reference* CommandApplyCellDiffArchive::release_cell_diff() {
+  clear_has_cell_diff();
+  ::TSP::Reference* temp = cell_diff_;
+  cell_diff_ = NULL;
+  return temp;
+}
+inline void CommandApplyCellDiffArchive::set_allocated_cell_diff(::TSP::Reference* cell_diff) {
+  delete cell_diff_;
+  cell_diff_ = cell_diff;
+  if (cell_diff) {
+    set_has_cell_diff();
+  } else {
+    clear_has_cell_diff();
+  }
+}
+
+// required .TSP.Reference inverse_cell_diff_map = 4;
+inline bool CommandApplyCellDiffArchive::has_inverse_cell_diff_map() const {
+  return (_has_bits_[0] & 0x00000008u) != 0;
+}
+inline void CommandApplyCellDiffArchive::set_has_inverse_cell_diff_map() {
+  _has_bits_[0] |= 0x00000008u;
+}
+inline void CommandApplyCellDiffArchive::clear_has_inverse_cell_diff_map() {
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline void CommandApplyCellDiffArchive::clear_inverse_cell_diff_map() {
+  if (inverse_cell_diff_map_ != NULL) inverse_cell_diff_map_->::TSP::Reference::Clear();
+  clear_has_inverse_cell_diff_map();
+}
+inline const ::TSP::Reference& CommandApplyCellDiffArchive::inverse_cell_diff_map() const {
+  return inverse_cell_diff_map_ != NULL ? *inverse_cell_diff_map_ : *default_instance_->inverse_cell_diff_map_;
+}
+inline ::TSP::Reference* CommandApplyCellDiffArchive::mutable_inverse_cell_diff_map() {
+  set_has_inverse_cell_diff_map();
+  if (inverse_cell_diff_map_ == NULL) inverse_cell_diff_map_ = new ::TSP::Reference;
+  return inverse_cell_diff_map_;
+}
+inline ::TSP::Reference* CommandApplyCellDiffArchive::release_inverse_cell_diff_map() {
+  clear_has_inverse_cell_diff_map();
+  ::TSP::Reference* temp = inverse_cell_diff_map_;
+  inverse_cell_diff_map_ = NULL;
+  return temp;
+}
+inline void CommandApplyCellDiffArchive::set_allocated_inverse_cell_diff_map(::TSP::Reference* inverse_cell_diff_map) {
+  delete inverse_cell_diff_map_;
+  inverse_cell_diff_map_ = inverse_cell_diff_map;
+  if (inverse_cell_diff_map) {
+    set_has_inverse_cell_diff_map();
+  } else {
+    clear_has_inverse_cell_diff_map();
+  }
 }
 
 // -------------------------------------------------------------------
@@ -14363,6 +15721,124 @@ inline void CommandSetAutomaticDurationUnitsArchive::set_allocated_super(::TST::
 
 // -------------------------------------------------------------------
 
+// CommandReplaceCustomFormatArchive
+
+// required .TST.CellMapArchive undo_map = 1;
+inline bool CommandReplaceCustomFormatArchive::has_undo_map() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void CommandReplaceCustomFormatArchive::set_has_undo_map() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void CommandReplaceCustomFormatArchive::clear_has_undo_map() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void CommandReplaceCustomFormatArchive::clear_undo_map() {
+  if (undo_map_ != NULL) undo_map_->::TST::CellMapArchive::Clear();
+  clear_has_undo_map();
+}
+inline const ::TST::CellMapArchive& CommandReplaceCustomFormatArchive::undo_map() const {
+  return undo_map_ != NULL ? *undo_map_ : *default_instance_->undo_map_;
+}
+inline ::TST::CellMapArchive* CommandReplaceCustomFormatArchive::mutable_undo_map() {
+  set_has_undo_map();
+  if (undo_map_ == NULL) undo_map_ = new ::TST::CellMapArchive;
+  return undo_map_;
+}
+inline ::TST::CellMapArchive* CommandReplaceCustomFormatArchive::release_undo_map() {
+  clear_has_undo_map();
+  ::TST::CellMapArchive* temp = undo_map_;
+  undo_map_ = NULL;
+  return temp;
+}
+inline void CommandReplaceCustomFormatArchive::set_allocated_undo_map(::TST::CellMapArchive* undo_map) {
+  delete undo_map_;
+  undo_map_ = undo_map;
+  if (undo_map) {
+    set_has_undo_map();
+  } else {
+    clear_has_undo_map();
+  }
+}
+
+// required .TST.CellMapArchive redo_map = 2;
+inline bool CommandReplaceCustomFormatArchive::has_redo_map() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void CommandReplaceCustomFormatArchive::set_has_redo_map() {
+  _has_bits_[0] |= 0x00000002u;
+}
+inline void CommandReplaceCustomFormatArchive::clear_has_redo_map() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline void CommandReplaceCustomFormatArchive::clear_redo_map() {
+  if (redo_map_ != NULL) redo_map_->::TST::CellMapArchive::Clear();
+  clear_has_redo_map();
+}
+inline const ::TST::CellMapArchive& CommandReplaceCustomFormatArchive::redo_map() const {
+  return redo_map_ != NULL ? *redo_map_ : *default_instance_->redo_map_;
+}
+inline ::TST::CellMapArchive* CommandReplaceCustomFormatArchive::mutable_redo_map() {
+  set_has_redo_map();
+  if (redo_map_ == NULL) redo_map_ = new ::TST::CellMapArchive;
+  return redo_map_;
+}
+inline ::TST::CellMapArchive* CommandReplaceCustomFormatArchive::release_redo_map() {
+  clear_has_redo_map();
+  ::TST::CellMapArchive* temp = redo_map_;
+  redo_map_ = NULL;
+  return temp;
+}
+inline void CommandReplaceCustomFormatArchive::set_allocated_redo_map(::TST::CellMapArchive* redo_map) {
+  delete redo_map_;
+  redo_map_ = redo_map;
+  if (redo_map) {
+    set_has_redo_map();
+  } else {
+    clear_has_redo_map();
+  }
+}
+
+// required .TST.TableCommandArchive super = 6;
+inline bool CommandReplaceCustomFormatArchive::has_super() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void CommandReplaceCustomFormatArchive::set_has_super() {
+  _has_bits_[0] |= 0x00000004u;
+}
+inline void CommandReplaceCustomFormatArchive::clear_has_super() {
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline void CommandReplaceCustomFormatArchive::clear_super() {
+  if (super_ != NULL) super_->::TST::TableCommandArchive::Clear();
+  clear_has_super();
+}
+inline const ::TST::TableCommandArchive& CommandReplaceCustomFormatArchive::super() const {
+  return super_ != NULL ? *super_ : *default_instance_->super_;
+}
+inline ::TST::TableCommandArchive* CommandReplaceCustomFormatArchive::mutable_super() {
+  set_has_super();
+  if (super_ == NULL) super_ = new ::TST::TableCommandArchive;
+  return super_;
+}
+inline ::TST::TableCommandArchive* CommandReplaceCustomFormatArchive::release_super() {
+  clear_has_super();
+  ::TST::TableCommandArchive* temp = super_;
+  super_ = NULL;
+  return temp;
+}
+inline void CommandReplaceCustomFormatArchive::set_allocated_super(::TST::TableCommandArchive* super) {
+  delete super_;
+  super_ = super;
+  if (super) {
+    set_has_super();
+  } else {
+    clear_has_super();
+  }
+}
+
+// -------------------------------------------------------------------
+
 // CommandInsertColumnsOrRowsArchive_StyleIndexPair
 
 // required .TSP.Reference style = 1;
@@ -15067,7 +16543,7 @@ inline void CommandPasteArchive::set_allocated_final_selection(::TST::SelectionA
   }
 }
 
-// required .TST.CellMapArchive undo_cell_map = 3;
+// required .TST.TiledCellMapArchive undo_cell_map = 3;
 inline bool CommandPasteArchive::has_undo_cell_map() const {
   return (_has_bits_[0] & 0x00000004u) != 0;
 }
@@ -15078,24 +16554,24 @@ inline void CommandPasteArchive::clear_has_undo_cell_map() {
   _has_bits_[0] &= ~0x00000004u;
 }
 inline void CommandPasteArchive::clear_undo_cell_map() {
-  if (undo_cell_map_ != NULL) undo_cell_map_->::TST::CellMapArchive::Clear();
+  if (undo_cell_map_ != NULL) undo_cell_map_->::TST::TiledCellMapArchive::Clear();
   clear_has_undo_cell_map();
 }
-inline const ::TST::CellMapArchive& CommandPasteArchive::undo_cell_map() const {
+inline const ::TST::TiledCellMapArchive& CommandPasteArchive::undo_cell_map() const {
   return undo_cell_map_ != NULL ? *undo_cell_map_ : *default_instance_->undo_cell_map_;
 }
-inline ::TST::CellMapArchive* CommandPasteArchive::mutable_undo_cell_map() {
+inline ::TST::TiledCellMapArchive* CommandPasteArchive::mutable_undo_cell_map() {
   set_has_undo_cell_map();
-  if (undo_cell_map_ == NULL) undo_cell_map_ = new ::TST::CellMapArchive;
+  if (undo_cell_map_ == NULL) undo_cell_map_ = new ::TST::TiledCellMapArchive;
   return undo_cell_map_;
 }
-inline ::TST::CellMapArchive* CommandPasteArchive::release_undo_cell_map() {
+inline ::TST::TiledCellMapArchive* CommandPasteArchive::release_undo_cell_map() {
   clear_has_undo_cell_map();
-  ::TST::CellMapArchive* temp = undo_cell_map_;
+  ::TST::TiledCellMapArchive* temp = undo_cell_map_;
   undo_cell_map_ = NULL;
   return temp;
 }
-inline void CommandPasteArchive::set_allocated_undo_cell_map(::TST::CellMapArchive* undo_cell_map) {
+inline void CommandPasteArchive::set_allocated_undo_cell_map(::TST::TiledCellMapArchive* undo_cell_map) {
   delete undo_cell_map_;
   undo_cell_map_ = undo_cell_map;
   if (undo_cell_map) {
@@ -15105,7 +16581,7 @@ inline void CommandPasteArchive::set_allocated_undo_cell_map(::TST::CellMapArchi
   }
 }
 
-// required .TST.CellMapArchive redo_cell_map = 4;
+// required .TST.TiledCellMapArchive redo_cell_map = 4;
 inline bool CommandPasteArchive::has_redo_cell_map() const {
   return (_has_bits_[0] & 0x00000008u) != 0;
 }
@@ -15116,24 +16592,24 @@ inline void CommandPasteArchive::clear_has_redo_cell_map() {
   _has_bits_[0] &= ~0x00000008u;
 }
 inline void CommandPasteArchive::clear_redo_cell_map() {
-  if (redo_cell_map_ != NULL) redo_cell_map_->::TST::CellMapArchive::Clear();
+  if (redo_cell_map_ != NULL) redo_cell_map_->::TST::TiledCellMapArchive::Clear();
   clear_has_redo_cell_map();
 }
-inline const ::TST::CellMapArchive& CommandPasteArchive::redo_cell_map() const {
+inline const ::TST::TiledCellMapArchive& CommandPasteArchive::redo_cell_map() const {
   return redo_cell_map_ != NULL ? *redo_cell_map_ : *default_instance_->redo_cell_map_;
 }
-inline ::TST::CellMapArchive* CommandPasteArchive::mutable_redo_cell_map() {
+inline ::TST::TiledCellMapArchive* CommandPasteArchive::mutable_redo_cell_map() {
   set_has_redo_cell_map();
-  if (redo_cell_map_ == NULL) redo_cell_map_ = new ::TST::CellMapArchive;
+  if (redo_cell_map_ == NULL) redo_cell_map_ = new ::TST::TiledCellMapArchive;
   return redo_cell_map_;
 }
-inline ::TST::CellMapArchive* CommandPasteArchive::release_redo_cell_map() {
+inline ::TST::TiledCellMapArchive* CommandPasteArchive::release_redo_cell_map() {
   clear_has_redo_cell_map();
-  ::TST::CellMapArchive* temp = redo_cell_map_;
+  ::TST::TiledCellMapArchive* temp = redo_cell_map_;
   redo_cell_map_ = NULL;
   return temp;
 }
-inline void CommandPasteArchive::set_allocated_redo_cell_map(::TST::CellMapArchive* redo_cell_map) {
+inline void CommandPasteArchive::set_allocated_redo_cell_map(::TST::TiledCellMapArchive* redo_cell_map) {
   delete redo_cell_map_;
   redo_cell_map_ = redo_cell_map;
   if (redo_cell_map) {
@@ -18623,6 +20099,238 @@ inline void CommandStyleCellsArchive::set_allocated_text_undo(::TSP::Reference* 
 
 // -------------------------------------------------------------------
 
+// CommandSetFillPropertyArchive
+
+// required .TST.TableCommandArchive super = 1;
+inline bool CommandSetFillPropertyArchive::has_super() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void CommandSetFillPropertyArchive::set_has_super() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void CommandSetFillPropertyArchive::clear_has_super() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void CommandSetFillPropertyArchive::clear_super() {
+  if (super_ != NULL) super_->::TST::TableCommandArchive::Clear();
+  clear_has_super();
+}
+inline const ::TST::TableCommandArchive& CommandSetFillPropertyArchive::super() const {
+  return super_ != NULL ? *super_ : *default_instance_->super_;
+}
+inline ::TST::TableCommandArchive* CommandSetFillPropertyArchive::mutable_super() {
+  set_has_super();
+  if (super_ == NULL) super_ = new ::TST::TableCommandArchive;
+  return super_;
+}
+inline ::TST::TableCommandArchive* CommandSetFillPropertyArchive::release_super() {
+  clear_has_super();
+  ::TST::TableCommandArchive* temp = super_;
+  super_ = NULL;
+  return temp;
+}
+inline void CommandSetFillPropertyArchive::set_allocated_super(::TST::TableCommandArchive* super) {
+  delete super_;
+  super_ = super;
+  if (super) {
+    set_has_super();
+  } else {
+    clear_has_super();
+  }
+}
+
+// optional .TSD.FillArchive fill = 2;
+inline bool CommandSetFillPropertyArchive::has_fill() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void CommandSetFillPropertyArchive::set_has_fill() {
+  _has_bits_[0] |= 0x00000002u;
+}
+inline void CommandSetFillPropertyArchive::clear_has_fill() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline void CommandSetFillPropertyArchive::clear_fill() {
+  if (fill_ != NULL) fill_->::TSD::FillArchive::Clear();
+  clear_has_fill();
+}
+inline const ::TSD::FillArchive& CommandSetFillPropertyArchive::fill() const {
+  return fill_ != NULL ? *fill_ : *default_instance_->fill_;
+}
+inline ::TSD::FillArchive* CommandSetFillPropertyArchive::mutable_fill() {
+  set_has_fill();
+  if (fill_ == NULL) fill_ = new ::TSD::FillArchive;
+  return fill_;
+}
+inline ::TSD::FillArchive* CommandSetFillPropertyArchive::release_fill() {
+  clear_has_fill();
+  ::TSD::FillArchive* temp = fill_;
+  fill_ = NULL;
+  return temp;
+}
+inline void CommandSetFillPropertyArchive::set_allocated_fill(::TSD::FillArchive* fill) {
+  delete fill_;
+  fill_ = fill;
+  if (fill) {
+    set_has_fill();
+  } else {
+    clear_has_fill();
+  }
+}
+
+// optional .TST.CellFillStandIn cell_fill_stand_in = 3;
+inline bool CommandSetFillPropertyArchive::has_cell_fill_stand_in() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void CommandSetFillPropertyArchive::set_has_cell_fill_stand_in() {
+  _has_bits_[0] |= 0x00000004u;
+}
+inline void CommandSetFillPropertyArchive::clear_has_cell_fill_stand_in() {
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline void CommandSetFillPropertyArchive::clear_cell_fill_stand_in() {
+  if (cell_fill_stand_in_ != NULL) cell_fill_stand_in_->::TST::CellFillStandIn::Clear();
+  clear_has_cell_fill_stand_in();
+}
+inline const ::TST::CellFillStandIn& CommandSetFillPropertyArchive::cell_fill_stand_in() const {
+  return cell_fill_stand_in_ != NULL ? *cell_fill_stand_in_ : *default_instance_->cell_fill_stand_in_;
+}
+inline ::TST::CellFillStandIn* CommandSetFillPropertyArchive::mutable_cell_fill_stand_in() {
+  set_has_cell_fill_stand_in();
+  if (cell_fill_stand_in_ == NULL) cell_fill_stand_in_ = new ::TST::CellFillStandIn;
+  return cell_fill_stand_in_;
+}
+inline ::TST::CellFillStandIn* CommandSetFillPropertyArchive::release_cell_fill_stand_in() {
+  clear_has_cell_fill_stand_in();
+  ::TST::CellFillStandIn* temp = cell_fill_stand_in_;
+  cell_fill_stand_in_ = NULL;
+  return temp;
+}
+inline void CommandSetFillPropertyArchive::set_allocated_cell_fill_stand_in(::TST::CellFillStandIn* cell_fill_stand_in) {
+  delete cell_fill_stand_in_;
+  cell_fill_stand_in_ = cell_fill_stand_in;
+  if (cell_fill_stand_in) {
+    set_has_cell_fill_stand_in();
+  } else {
+    clear_has_cell_fill_stand_in();
+  }
+}
+
+// required .TST.SelectionArchive selection = 4;
+inline bool CommandSetFillPropertyArchive::has_selection() const {
+  return (_has_bits_[0] & 0x00000008u) != 0;
+}
+inline void CommandSetFillPropertyArchive::set_has_selection() {
+  _has_bits_[0] |= 0x00000008u;
+}
+inline void CommandSetFillPropertyArchive::clear_has_selection() {
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline void CommandSetFillPropertyArchive::clear_selection() {
+  if (selection_ != NULL) selection_->::TST::SelectionArchive::Clear();
+  clear_has_selection();
+}
+inline const ::TST::SelectionArchive& CommandSetFillPropertyArchive::selection() const {
+  return selection_ != NULL ? *selection_ : *default_instance_->selection_;
+}
+inline ::TST::SelectionArchive* CommandSetFillPropertyArchive::mutable_selection() {
+  set_has_selection();
+  if (selection_ == NULL) selection_ = new ::TST::SelectionArchive;
+  return selection_;
+}
+inline ::TST::SelectionArchive* CommandSetFillPropertyArchive::release_selection() {
+  clear_has_selection();
+  ::TST::SelectionArchive* temp = selection_;
+  selection_ = NULL;
+  return temp;
+}
+inline void CommandSetFillPropertyArchive::set_allocated_selection(::TST::SelectionArchive* selection) {
+  delete selection_;
+  selection_ = selection;
+  if (selection) {
+    set_has_selection();
+  } else {
+    clear_has_selection();
+  }
+}
+
+// required .TST.CellMapArchive undo_cell_map = 5;
+inline bool CommandSetFillPropertyArchive::has_undo_cell_map() const {
+  return (_has_bits_[0] & 0x00000010u) != 0;
+}
+inline void CommandSetFillPropertyArchive::set_has_undo_cell_map() {
+  _has_bits_[0] |= 0x00000010u;
+}
+inline void CommandSetFillPropertyArchive::clear_has_undo_cell_map() {
+  _has_bits_[0] &= ~0x00000010u;
+}
+inline void CommandSetFillPropertyArchive::clear_undo_cell_map() {
+  if (undo_cell_map_ != NULL) undo_cell_map_->::TST::CellMapArchive::Clear();
+  clear_has_undo_cell_map();
+}
+inline const ::TST::CellMapArchive& CommandSetFillPropertyArchive::undo_cell_map() const {
+  return undo_cell_map_ != NULL ? *undo_cell_map_ : *default_instance_->undo_cell_map_;
+}
+inline ::TST::CellMapArchive* CommandSetFillPropertyArchive::mutable_undo_cell_map() {
+  set_has_undo_cell_map();
+  if (undo_cell_map_ == NULL) undo_cell_map_ = new ::TST::CellMapArchive;
+  return undo_cell_map_;
+}
+inline ::TST::CellMapArchive* CommandSetFillPropertyArchive::release_undo_cell_map() {
+  clear_has_undo_cell_map();
+  ::TST::CellMapArchive* temp = undo_cell_map_;
+  undo_cell_map_ = NULL;
+  return temp;
+}
+inline void CommandSetFillPropertyArchive::set_allocated_undo_cell_map(::TST::CellMapArchive* undo_cell_map) {
+  delete undo_cell_map_;
+  undo_cell_map_ = undo_cell_map;
+  if (undo_cell_map) {
+    set_has_undo_cell_map();
+  } else {
+    clear_has_undo_cell_map();
+  }
+}
+
+// required .TST.CellMapArchive redo_cell_map = 6;
+inline bool CommandSetFillPropertyArchive::has_redo_cell_map() const {
+  return (_has_bits_[0] & 0x00000020u) != 0;
+}
+inline void CommandSetFillPropertyArchive::set_has_redo_cell_map() {
+  _has_bits_[0] |= 0x00000020u;
+}
+inline void CommandSetFillPropertyArchive::clear_has_redo_cell_map() {
+  _has_bits_[0] &= ~0x00000020u;
+}
+inline void CommandSetFillPropertyArchive::clear_redo_cell_map() {
+  if (redo_cell_map_ != NULL) redo_cell_map_->::TST::CellMapArchive::Clear();
+  clear_has_redo_cell_map();
+}
+inline const ::TST::CellMapArchive& CommandSetFillPropertyArchive::redo_cell_map() const {
+  return redo_cell_map_ != NULL ? *redo_cell_map_ : *default_instance_->redo_cell_map_;
+}
+inline ::TST::CellMapArchive* CommandSetFillPropertyArchive::mutable_redo_cell_map() {
+  set_has_redo_cell_map();
+  if (redo_cell_map_ == NULL) redo_cell_map_ = new ::TST::CellMapArchive;
+  return redo_cell_map_;
+}
+inline ::TST::CellMapArchive* CommandSetFillPropertyArchive::release_redo_cell_map() {
+  clear_has_redo_cell_map();
+  ::TST::CellMapArchive* temp = redo_cell_map_;
+  redo_cell_map_ = NULL;
+  return temp;
+}
+inline void CommandSetFillPropertyArchive::set_allocated_redo_cell_map(::TST::CellMapArchive* redo_cell_map) {
+  delete redo_cell_map_;
+  redo_cell_map_ = redo_cell_map;
+  if (redo_cell_map) {
+    set_has_redo_cell_map();
+  } else {
+    clear_has_redo_cell_map();
+  }
+}
+
+// -------------------------------------------------------------------
+
 // CommandStyleTableArchive
 
 // required .TST.TableCommandArchive super = 1;
@@ -20207,6 +21915,448 @@ inline void CommandApplyStrokePresetArchive::set_preset_index(::google::protobuf
 
 // -------------------------------------------------------------------
 
+// CommandAddTableStylePresetArchive
+
+// required .TST.TableCommandArchive super = 1;
+inline bool CommandAddTableStylePresetArchive::has_super() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void CommandAddTableStylePresetArchive::set_has_super() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void CommandAddTableStylePresetArchive::clear_has_super() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void CommandAddTableStylePresetArchive::clear_super() {
+  if (super_ != NULL) super_->::TST::TableCommandArchive::Clear();
+  clear_has_super();
+}
+inline const ::TST::TableCommandArchive& CommandAddTableStylePresetArchive::super() const {
+  return super_ != NULL ? *super_ : *default_instance_->super_;
+}
+inline ::TST::TableCommandArchive* CommandAddTableStylePresetArchive::mutable_super() {
+  set_has_super();
+  if (super_ == NULL) super_ = new ::TST::TableCommandArchive;
+  return super_;
+}
+inline ::TST::TableCommandArchive* CommandAddTableStylePresetArchive::release_super() {
+  clear_has_super();
+  ::TST::TableCommandArchive* temp = super_;
+  super_ = NULL;
+  return temp;
+}
+inline void CommandAddTableStylePresetArchive::set_allocated_super(::TST::TableCommandArchive* super) {
+  delete super_;
+  super_ = super;
+  if (super) {
+    set_has_super();
+  } else {
+    clear_has_super();
+  }
+}
+
+// required int32 preset_index = 2;
+inline bool CommandAddTableStylePresetArchive::has_preset_index() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void CommandAddTableStylePresetArchive::set_has_preset_index() {
+  _has_bits_[0] |= 0x00000002u;
+}
+inline void CommandAddTableStylePresetArchive::clear_has_preset_index() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline void CommandAddTableStylePresetArchive::clear_preset_index() {
+  preset_index_ = 0;
+  clear_has_preset_index();
+}
+inline ::google::protobuf::int32 CommandAddTableStylePresetArchive::preset_index() const {
+  return preset_index_;
+}
+inline void CommandAddTableStylePresetArchive::set_preset_index(::google::protobuf::int32 value) {
+  set_has_preset_index();
+  preset_index_ = value;
+}
+
+// required .TST.TableStyleNetworkArchive table_styles = 3;
+inline bool CommandAddTableStylePresetArchive::has_table_styles() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void CommandAddTableStylePresetArchive::set_has_table_styles() {
+  _has_bits_[0] |= 0x00000004u;
+}
+inline void CommandAddTableStylePresetArchive::clear_has_table_styles() {
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline void CommandAddTableStylePresetArchive::clear_table_styles() {
+  if (table_styles_ != NULL) table_styles_->::TST::TableStyleNetworkArchive::Clear();
+  clear_has_table_styles();
+}
+inline const ::TST::TableStyleNetworkArchive& CommandAddTableStylePresetArchive::table_styles() const {
+  return table_styles_ != NULL ? *table_styles_ : *default_instance_->table_styles_;
+}
+inline ::TST::TableStyleNetworkArchive* CommandAddTableStylePresetArchive::mutable_table_styles() {
+  set_has_table_styles();
+  if (table_styles_ == NULL) table_styles_ = new ::TST::TableStyleNetworkArchive;
+  return table_styles_;
+}
+inline ::TST::TableStyleNetworkArchive* CommandAddTableStylePresetArchive::release_table_styles() {
+  clear_has_table_styles();
+  ::TST::TableStyleNetworkArchive* temp = table_styles_;
+  table_styles_ = NULL;
+  return temp;
+}
+inline void CommandAddTableStylePresetArchive::set_allocated_table_styles(::TST::TableStyleNetworkArchive* table_styles) {
+  delete table_styles_;
+  table_styles_ = table_styles;
+  if (table_styles) {
+    set_has_table_styles();
+  } else {
+    clear_has_table_styles();
+  }
+}
+
+// required bool send_notification = 4;
+inline bool CommandAddTableStylePresetArchive::has_send_notification() const {
+  return (_has_bits_[0] & 0x00000008u) != 0;
+}
+inline void CommandAddTableStylePresetArchive::set_has_send_notification() {
+  _has_bits_[0] |= 0x00000008u;
+}
+inline void CommandAddTableStylePresetArchive::clear_has_send_notification() {
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline void CommandAddTableStylePresetArchive::clear_send_notification() {
+  send_notification_ = false;
+  clear_has_send_notification();
+}
+inline bool CommandAddTableStylePresetArchive::send_notification() const {
+  return send_notification_;
+}
+inline void CommandAddTableStylePresetArchive::set_send_notification(bool value) {
+  set_has_send_notification();
+  send_notification_ = value;
+}
+
+// -------------------------------------------------------------------
+
+// CommandRemoveTableStylePresetArchive
+
+// required .TSK.CommandArchive super = 1;
+inline bool CommandRemoveTableStylePresetArchive::has_super() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void CommandRemoveTableStylePresetArchive::set_has_super() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void CommandRemoveTableStylePresetArchive::clear_has_super() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void CommandRemoveTableStylePresetArchive::clear_super() {
+  if (super_ != NULL) super_->::TSK::CommandArchive::Clear();
+  clear_has_super();
+}
+inline const ::TSK::CommandArchive& CommandRemoveTableStylePresetArchive::super() const {
+  return super_ != NULL ? *super_ : *default_instance_->super_;
+}
+inline ::TSK::CommandArchive* CommandRemoveTableStylePresetArchive::mutable_super() {
+  set_has_super();
+  if (super_ == NULL) super_ = new ::TSK::CommandArchive;
+  return super_;
+}
+inline ::TSK::CommandArchive* CommandRemoveTableStylePresetArchive::release_super() {
+  clear_has_super();
+  ::TSK::CommandArchive* temp = super_;
+  super_ = NULL;
+  return temp;
+}
+inline void CommandRemoveTableStylePresetArchive::set_allocated_super(::TSK::CommandArchive* super) {
+  delete super_;
+  super_ = super;
+  if (super) {
+    set_has_super();
+  } else {
+    clear_has_super();
+  }
+}
+
+// required .TSP.Reference theme = 2;
+inline bool CommandRemoveTableStylePresetArchive::has_theme() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void CommandRemoveTableStylePresetArchive::set_has_theme() {
+  _has_bits_[0] |= 0x00000002u;
+}
+inline void CommandRemoveTableStylePresetArchive::clear_has_theme() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline void CommandRemoveTableStylePresetArchive::clear_theme() {
+  if (theme_ != NULL) theme_->::TSP::Reference::Clear();
+  clear_has_theme();
+}
+inline const ::TSP::Reference& CommandRemoveTableStylePresetArchive::theme() const {
+  return theme_ != NULL ? *theme_ : *default_instance_->theme_;
+}
+inline ::TSP::Reference* CommandRemoveTableStylePresetArchive::mutable_theme() {
+  set_has_theme();
+  if (theme_ == NULL) theme_ = new ::TSP::Reference;
+  return theme_;
+}
+inline ::TSP::Reference* CommandRemoveTableStylePresetArchive::release_theme() {
+  clear_has_theme();
+  ::TSP::Reference* temp = theme_;
+  theme_ = NULL;
+  return temp;
+}
+inline void CommandRemoveTableStylePresetArchive::set_allocated_theme(::TSP::Reference* theme) {
+  delete theme_;
+  theme_ = theme;
+  if (theme) {
+    set_has_theme();
+  } else {
+    clear_has_theme();
+  }
+}
+
+// required .TST.TableStyleNetworkArchive removed_table_styles = 3;
+inline bool CommandRemoveTableStylePresetArchive::has_removed_table_styles() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void CommandRemoveTableStylePresetArchive::set_has_removed_table_styles() {
+  _has_bits_[0] |= 0x00000004u;
+}
+inline void CommandRemoveTableStylePresetArchive::clear_has_removed_table_styles() {
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline void CommandRemoveTableStylePresetArchive::clear_removed_table_styles() {
+  if (removed_table_styles_ != NULL) removed_table_styles_->::TST::TableStyleNetworkArchive::Clear();
+  clear_has_removed_table_styles();
+}
+inline const ::TST::TableStyleNetworkArchive& CommandRemoveTableStylePresetArchive::removed_table_styles() const {
+  return removed_table_styles_ != NULL ? *removed_table_styles_ : *default_instance_->removed_table_styles_;
+}
+inline ::TST::TableStyleNetworkArchive* CommandRemoveTableStylePresetArchive::mutable_removed_table_styles() {
+  set_has_removed_table_styles();
+  if (removed_table_styles_ == NULL) removed_table_styles_ = new ::TST::TableStyleNetworkArchive;
+  return removed_table_styles_;
+}
+inline ::TST::TableStyleNetworkArchive* CommandRemoveTableStylePresetArchive::release_removed_table_styles() {
+  clear_has_removed_table_styles();
+  ::TST::TableStyleNetworkArchive* temp = removed_table_styles_;
+  removed_table_styles_ = NULL;
+  return temp;
+}
+inline void CommandRemoveTableStylePresetArchive::set_allocated_removed_table_styles(::TST::TableStyleNetworkArchive* removed_table_styles) {
+  delete removed_table_styles_;
+  removed_table_styles_ = removed_table_styles;
+  if (removed_table_styles) {
+    set_has_removed_table_styles();
+  } else {
+    clear_has_removed_table_styles();
+  }
+}
+
+// required int32 preset_id = 4;
+inline bool CommandRemoveTableStylePresetArchive::has_preset_id() const {
+  return (_has_bits_[0] & 0x00000008u) != 0;
+}
+inline void CommandRemoveTableStylePresetArchive::set_has_preset_id() {
+  _has_bits_[0] |= 0x00000008u;
+}
+inline void CommandRemoveTableStylePresetArchive::clear_has_preset_id() {
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline void CommandRemoveTableStylePresetArchive::clear_preset_id() {
+  preset_id_ = 0;
+  clear_has_preset_id();
+}
+inline ::google::protobuf::int32 CommandRemoveTableStylePresetArchive::preset_id() const {
+  return preset_id_;
+}
+inline void CommandRemoveTableStylePresetArchive::set_preset_id(::google::protobuf::int32 value) {
+  set_has_preset_id();
+  preset_id_ = value;
+}
+
+// required int32 preset_index_in_theme = 5;
+inline bool CommandRemoveTableStylePresetArchive::has_preset_index_in_theme() const {
+  return (_has_bits_[0] & 0x00000010u) != 0;
+}
+inline void CommandRemoveTableStylePresetArchive::set_has_preset_index_in_theme() {
+  _has_bits_[0] |= 0x00000010u;
+}
+inline void CommandRemoveTableStylePresetArchive::clear_has_preset_index_in_theme() {
+  _has_bits_[0] &= ~0x00000010u;
+}
+inline void CommandRemoveTableStylePresetArchive::clear_preset_index_in_theme() {
+  preset_index_in_theme_ = 0;
+  clear_has_preset_index_in_theme();
+}
+inline ::google::protobuf::int32 CommandRemoveTableStylePresetArchive::preset_index_in_theme() const {
+  return preset_index_in_theme_;
+}
+inline void CommandRemoveTableStylePresetArchive::set_preset_index_in_theme(::google::protobuf::int32 value) {
+  set_has_preset_index_in_theme();
+  preset_index_in_theme_ = value;
+}
+
+// -------------------------------------------------------------------
+
+// CommandReplaceTableStylePresetArchive
+
+// required .TSK.CommandArchive super = 1;
+inline bool CommandReplaceTableStylePresetArchive::has_super() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void CommandReplaceTableStylePresetArchive::set_has_super() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void CommandReplaceTableStylePresetArchive::clear_has_super() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void CommandReplaceTableStylePresetArchive::clear_super() {
+  if (super_ != NULL) super_->::TSK::CommandArchive::Clear();
+  clear_has_super();
+}
+inline const ::TSK::CommandArchive& CommandReplaceTableStylePresetArchive::super() const {
+  return super_ != NULL ? *super_ : *default_instance_->super_;
+}
+inline ::TSK::CommandArchive* CommandReplaceTableStylePresetArchive::mutable_super() {
+  set_has_super();
+  if (super_ == NULL) super_ = new ::TSK::CommandArchive;
+  return super_;
+}
+inline ::TSK::CommandArchive* CommandReplaceTableStylePresetArchive::release_super() {
+  clear_has_super();
+  ::TSK::CommandArchive* temp = super_;
+  super_ = NULL;
+  return temp;
+}
+inline void CommandReplaceTableStylePresetArchive::set_allocated_super(::TSK::CommandArchive* super) {
+  delete super_;
+  super_ = super;
+  if (super) {
+    set_has_super();
+  } else {
+    clear_has_super();
+  }
+}
+
+// required .TSP.Reference theme = 2;
+inline bool CommandReplaceTableStylePresetArchive::has_theme() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void CommandReplaceTableStylePresetArchive::set_has_theme() {
+  _has_bits_[0] |= 0x00000002u;
+}
+inline void CommandReplaceTableStylePresetArchive::clear_has_theme() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline void CommandReplaceTableStylePresetArchive::clear_theme() {
+  if (theme_ != NULL) theme_->::TSP::Reference::Clear();
+  clear_has_theme();
+}
+inline const ::TSP::Reference& CommandReplaceTableStylePresetArchive::theme() const {
+  return theme_ != NULL ? *theme_ : *default_instance_->theme_;
+}
+inline ::TSP::Reference* CommandReplaceTableStylePresetArchive::mutable_theme() {
+  set_has_theme();
+  if (theme_ == NULL) theme_ = new ::TSP::Reference;
+  return theme_;
+}
+inline ::TSP::Reference* CommandReplaceTableStylePresetArchive::release_theme() {
+  clear_has_theme();
+  ::TSP::Reference* temp = theme_;
+  theme_ = NULL;
+  return temp;
+}
+inline void CommandReplaceTableStylePresetArchive::set_allocated_theme(::TSP::Reference* theme) {
+  delete theme_;
+  theme_ = theme;
+  if (theme) {
+    set_has_theme();
+  } else {
+    clear_has_theme();
+  }
+}
+
+// required .TST.TableStyleNetworkArchive old_table_styles = 3;
+inline bool CommandReplaceTableStylePresetArchive::has_old_table_styles() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void CommandReplaceTableStylePresetArchive::set_has_old_table_styles() {
+  _has_bits_[0] |= 0x00000004u;
+}
+inline void CommandReplaceTableStylePresetArchive::clear_has_old_table_styles() {
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline void CommandReplaceTableStylePresetArchive::clear_old_table_styles() {
+  if (old_table_styles_ != NULL) old_table_styles_->::TST::TableStyleNetworkArchive::Clear();
+  clear_has_old_table_styles();
+}
+inline const ::TST::TableStyleNetworkArchive& CommandReplaceTableStylePresetArchive::old_table_styles() const {
+  return old_table_styles_ != NULL ? *old_table_styles_ : *default_instance_->old_table_styles_;
+}
+inline ::TST::TableStyleNetworkArchive* CommandReplaceTableStylePresetArchive::mutable_old_table_styles() {
+  set_has_old_table_styles();
+  if (old_table_styles_ == NULL) old_table_styles_ = new ::TST::TableStyleNetworkArchive;
+  return old_table_styles_;
+}
+inline ::TST::TableStyleNetworkArchive* CommandReplaceTableStylePresetArchive::release_old_table_styles() {
+  clear_has_old_table_styles();
+  ::TST::TableStyleNetworkArchive* temp = old_table_styles_;
+  old_table_styles_ = NULL;
+  return temp;
+}
+inline void CommandReplaceTableStylePresetArchive::set_allocated_old_table_styles(::TST::TableStyleNetworkArchive* old_table_styles) {
+  delete old_table_styles_;
+  old_table_styles_ = old_table_styles;
+  if (old_table_styles) {
+    set_has_old_table_styles();
+  } else {
+    clear_has_old_table_styles();
+  }
+}
+
+// required .TST.TableStyleNetworkArchive new_table_styles = 4;
+inline bool CommandReplaceTableStylePresetArchive::has_new_table_styles() const {
+  return (_has_bits_[0] & 0x00000008u) != 0;
+}
+inline void CommandReplaceTableStylePresetArchive::set_has_new_table_styles() {
+  _has_bits_[0] |= 0x00000008u;
+}
+inline void CommandReplaceTableStylePresetArchive::clear_has_new_table_styles() {
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline void CommandReplaceTableStylePresetArchive::clear_new_table_styles() {
+  if (new_table_styles_ != NULL) new_table_styles_->::TST::TableStyleNetworkArchive::Clear();
+  clear_has_new_table_styles();
+}
+inline const ::TST::TableStyleNetworkArchive& CommandReplaceTableStylePresetArchive::new_table_styles() const {
+  return new_table_styles_ != NULL ? *new_table_styles_ : *default_instance_->new_table_styles_;
+}
+inline ::TST::TableStyleNetworkArchive* CommandReplaceTableStylePresetArchive::mutable_new_table_styles() {
+  set_has_new_table_styles();
+  if (new_table_styles_ == NULL) new_table_styles_ = new ::TST::TableStyleNetworkArchive;
+  return new_table_styles_;
+}
+inline ::TST::TableStyleNetworkArchive* CommandReplaceTableStylePresetArchive::release_new_table_styles() {
+  clear_has_new_table_styles();
+  ::TST::TableStyleNetworkArchive* temp = new_table_styles_;
+  new_table_styles_ = NULL;
+  return temp;
+}
+inline void CommandReplaceTableStylePresetArchive::set_allocated_new_table_styles(::TST::TableStyleNetworkArchive* new_table_styles) {
+  delete new_table_styles_;
+  new_table_styles_ = new_table_styles;
+  if (new_table_styles) {
+    set_has_new_table_styles();
+  } else {
+    clear_has_new_table_styles();
+  }
+}
+
+// -------------------------------------------------------------------
+
 // CommandApplyTableStylePresetArchive_StyleIndexTuple
 
 // required uint32 index = 1;
@@ -20485,7 +22635,7 @@ inline void CommandApplyTableStylePresetArchive::set_allocated_old_table_styles(
   }
 }
 
-// required .TST.TableStyleNetworkArchive new_table_styles = 8;
+// optional .TST.TableStyleNetworkArchive new_table_styles = 8 [deprecated = true];
 inline bool CommandApplyTableStylePresetArchive::has_new_table_styles() const {
   return (_has_bits_[0] & 0x00000020u) != 0;
 }
@@ -28223,6 +30373,554 @@ inline void CommandSetStorageLanguageArchive::set_allocated_undo_transaction(::T
     set_has_undo_transaction();
   } else {
     clear_has_undo_transaction();
+  }
+}
+
+// -------------------------------------------------------------------
+
+// CommandSetSortOrderArchive
+
+// required .TST.TableCommandArchive super = 1;
+inline bool CommandSetSortOrderArchive::has_super() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void CommandSetSortOrderArchive::set_has_super() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void CommandSetSortOrderArchive::clear_has_super() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void CommandSetSortOrderArchive::clear_super() {
+  if (super_ != NULL) super_->::TST::TableCommandArchive::Clear();
+  clear_has_super();
+}
+inline const ::TST::TableCommandArchive& CommandSetSortOrderArchive::super() const {
+  return super_ != NULL ? *super_ : *default_instance_->super_;
+}
+inline ::TST::TableCommandArchive* CommandSetSortOrderArchive::mutable_super() {
+  set_has_super();
+  if (super_ == NULL) super_ = new ::TST::TableCommandArchive;
+  return super_;
+}
+inline ::TST::TableCommandArchive* CommandSetSortOrderArchive::release_super() {
+  clear_has_super();
+  ::TST::TableCommandArchive* temp = super_;
+  super_ = NULL;
+  return temp;
+}
+inline void CommandSetSortOrderArchive::set_allocated_super(::TST::TableCommandArchive* super) {
+  delete super_;
+  super_ = super;
+  if (super) {
+    set_has_super();
+  } else {
+    clear_has_super();
+  }
+}
+
+// optional .TST.TableSortOrderArchive old_sort_order = 2;
+inline bool CommandSetSortOrderArchive::has_old_sort_order() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void CommandSetSortOrderArchive::set_has_old_sort_order() {
+  _has_bits_[0] |= 0x00000002u;
+}
+inline void CommandSetSortOrderArchive::clear_has_old_sort_order() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline void CommandSetSortOrderArchive::clear_old_sort_order() {
+  if (old_sort_order_ != NULL) old_sort_order_->::TST::TableSortOrderArchive::Clear();
+  clear_has_old_sort_order();
+}
+inline const ::TST::TableSortOrderArchive& CommandSetSortOrderArchive::old_sort_order() const {
+  return old_sort_order_ != NULL ? *old_sort_order_ : *default_instance_->old_sort_order_;
+}
+inline ::TST::TableSortOrderArchive* CommandSetSortOrderArchive::mutable_old_sort_order() {
+  set_has_old_sort_order();
+  if (old_sort_order_ == NULL) old_sort_order_ = new ::TST::TableSortOrderArchive;
+  return old_sort_order_;
+}
+inline ::TST::TableSortOrderArchive* CommandSetSortOrderArchive::release_old_sort_order() {
+  clear_has_old_sort_order();
+  ::TST::TableSortOrderArchive* temp = old_sort_order_;
+  old_sort_order_ = NULL;
+  return temp;
+}
+inline void CommandSetSortOrderArchive::set_allocated_old_sort_order(::TST::TableSortOrderArchive* old_sort_order) {
+  delete old_sort_order_;
+  old_sort_order_ = old_sort_order;
+  if (old_sort_order) {
+    set_has_old_sort_order();
+  } else {
+    clear_has_old_sort_order();
+  }
+}
+
+// optional .TST.TableSortOrderArchive new_sort_order = 3;
+inline bool CommandSetSortOrderArchive::has_new_sort_order() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void CommandSetSortOrderArchive::set_has_new_sort_order() {
+  _has_bits_[0] |= 0x00000004u;
+}
+inline void CommandSetSortOrderArchive::clear_has_new_sort_order() {
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline void CommandSetSortOrderArchive::clear_new_sort_order() {
+  if (new_sort_order_ != NULL) new_sort_order_->::TST::TableSortOrderArchive::Clear();
+  clear_has_new_sort_order();
+}
+inline const ::TST::TableSortOrderArchive& CommandSetSortOrderArchive::new_sort_order() const {
+  return new_sort_order_ != NULL ? *new_sort_order_ : *default_instance_->new_sort_order_;
+}
+inline ::TST::TableSortOrderArchive* CommandSetSortOrderArchive::mutable_new_sort_order() {
+  set_has_new_sort_order();
+  if (new_sort_order_ == NULL) new_sort_order_ = new ::TST::TableSortOrderArchive;
+  return new_sort_order_;
+}
+inline ::TST::TableSortOrderArchive* CommandSetSortOrderArchive::release_new_sort_order() {
+  clear_has_new_sort_order();
+  ::TST::TableSortOrderArchive* temp = new_sort_order_;
+  new_sort_order_ = NULL;
+  return temp;
+}
+inline void CommandSetSortOrderArchive::set_allocated_new_sort_order(::TST::TableSortOrderArchive* new_sort_order) {
+  delete new_sort_order_;
+  new_sort_order_ = new_sort_order;
+  if (new_sort_order) {
+    set_has_new_sort_order();
+  } else {
+    clear_has_new_sort_order();
+  }
+}
+
+// -------------------------------------------------------------------
+
+// CommandRewriteSortOrderForTectonicShiftArchive
+
+// required .TST.TableCommandArchive super = 1;
+inline bool CommandRewriteSortOrderForTectonicShiftArchive::has_super() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void CommandRewriteSortOrderForTectonicShiftArchive::set_has_super() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void CommandRewriteSortOrderForTectonicShiftArchive::clear_has_super() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void CommandRewriteSortOrderForTectonicShiftArchive::clear_super() {
+  if (super_ != NULL) super_->::TST::TableCommandArchive::Clear();
+  clear_has_super();
+}
+inline const ::TST::TableCommandArchive& CommandRewriteSortOrderForTectonicShiftArchive::super() const {
+  return super_ != NULL ? *super_ : *default_instance_->super_;
+}
+inline ::TST::TableCommandArchive* CommandRewriteSortOrderForTectonicShiftArchive::mutable_super() {
+  set_has_super();
+  if (super_ == NULL) super_ = new ::TST::TableCommandArchive;
+  return super_;
+}
+inline ::TST::TableCommandArchive* CommandRewriteSortOrderForTectonicShiftArchive::release_super() {
+  clear_has_super();
+  ::TST::TableCommandArchive* temp = super_;
+  super_ = NULL;
+  return temp;
+}
+inline void CommandRewriteSortOrderForTectonicShiftArchive::set_allocated_super(::TST::TableCommandArchive* super) {
+  delete super_;
+  super_ = super;
+  if (super) {
+    set_has_super();
+  } else {
+    clear_has_super();
+  }
+}
+
+// required .TSCE.TectonicShiftArchive tectonic_shift = 2;
+inline bool CommandRewriteSortOrderForTectonicShiftArchive::has_tectonic_shift() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void CommandRewriteSortOrderForTectonicShiftArchive::set_has_tectonic_shift() {
+  _has_bits_[0] |= 0x00000002u;
+}
+inline void CommandRewriteSortOrderForTectonicShiftArchive::clear_has_tectonic_shift() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline void CommandRewriteSortOrderForTectonicShiftArchive::clear_tectonic_shift() {
+  if (tectonic_shift_ != NULL) tectonic_shift_->::TSCE::TectonicShiftArchive::Clear();
+  clear_has_tectonic_shift();
+}
+inline const ::TSCE::TectonicShiftArchive& CommandRewriteSortOrderForTectonicShiftArchive::tectonic_shift() const {
+  return tectonic_shift_ != NULL ? *tectonic_shift_ : *default_instance_->tectonic_shift_;
+}
+inline ::TSCE::TectonicShiftArchive* CommandRewriteSortOrderForTectonicShiftArchive::mutable_tectonic_shift() {
+  set_has_tectonic_shift();
+  if (tectonic_shift_ == NULL) tectonic_shift_ = new ::TSCE::TectonicShiftArchive;
+  return tectonic_shift_;
+}
+inline ::TSCE::TectonicShiftArchive* CommandRewriteSortOrderForTectonicShiftArchive::release_tectonic_shift() {
+  clear_has_tectonic_shift();
+  ::TSCE::TectonicShiftArchive* temp = tectonic_shift_;
+  tectonic_shift_ = NULL;
+  return temp;
+}
+inline void CommandRewriteSortOrderForTectonicShiftArchive::set_allocated_tectonic_shift(::TSCE::TectonicShiftArchive* tectonic_shift) {
+  delete tectonic_shift_;
+  tectonic_shift_ = tectonic_shift;
+  if (tectonic_shift) {
+    set_has_tectonic_shift();
+  } else {
+    clear_has_tectonic_shift();
+  }
+}
+
+// optional .TST.TableSortOrderArchive old_sort_order = 3;
+inline bool CommandRewriteSortOrderForTectonicShiftArchive::has_old_sort_order() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void CommandRewriteSortOrderForTectonicShiftArchive::set_has_old_sort_order() {
+  _has_bits_[0] |= 0x00000004u;
+}
+inline void CommandRewriteSortOrderForTectonicShiftArchive::clear_has_old_sort_order() {
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline void CommandRewriteSortOrderForTectonicShiftArchive::clear_old_sort_order() {
+  if (old_sort_order_ != NULL) old_sort_order_->::TST::TableSortOrderArchive::Clear();
+  clear_has_old_sort_order();
+}
+inline const ::TST::TableSortOrderArchive& CommandRewriteSortOrderForTectonicShiftArchive::old_sort_order() const {
+  return old_sort_order_ != NULL ? *old_sort_order_ : *default_instance_->old_sort_order_;
+}
+inline ::TST::TableSortOrderArchive* CommandRewriteSortOrderForTectonicShiftArchive::mutable_old_sort_order() {
+  set_has_old_sort_order();
+  if (old_sort_order_ == NULL) old_sort_order_ = new ::TST::TableSortOrderArchive;
+  return old_sort_order_;
+}
+inline ::TST::TableSortOrderArchive* CommandRewriteSortOrderForTectonicShiftArchive::release_old_sort_order() {
+  clear_has_old_sort_order();
+  ::TST::TableSortOrderArchive* temp = old_sort_order_;
+  old_sort_order_ = NULL;
+  return temp;
+}
+inline void CommandRewriteSortOrderForTectonicShiftArchive::set_allocated_old_sort_order(::TST::TableSortOrderArchive* old_sort_order) {
+  delete old_sort_order_;
+  old_sort_order_ = old_sort_order;
+  if (old_sort_order) {
+    set_has_old_sort_order();
+  } else {
+    clear_has_old_sort_order();
+  }
+}
+
+// optional .TST.TableSortOrderArchive new_sort_order = 4;
+inline bool CommandRewriteSortOrderForTectonicShiftArchive::has_new_sort_order() const {
+  return (_has_bits_[0] & 0x00000008u) != 0;
+}
+inline void CommandRewriteSortOrderForTectonicShiftArchive::set_has_new_sort_order() {
+  _has_bits_[0] |= 0x00000008u;
+}
+inline void CommandRewriteSortOrderForTectonicShiftArchive::clear_has_new_sort_order() {
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline void CommandRewriteSortOrderForTectonicShiftArchive::clear_new_sort_order() {
+  if (new_sort_order_ != NULL) new_sort_order_->::TST::TableSortOrderArchive::Clear();
+  clear_has_new_sort_order();
+}
+inline const ::TST::TableSortOrderArchive& CommandRewriteSortOrderForTectonicShiftArchive::new_sort_order() const {
+  return new_sort_order_ != NULL ? *new_sort_order_ : *default_instance_->new_sort_order_;
+}
+inline ::TST::TableSortOrderArchive* CommandRewriteSortOrderForTectonicShiftArchive::mutable_new_sort_order() {
+  set_has_new_sort_order();
+  if (new_sort_order_ == NULL) new_sort_order_ = new ::TST::TableSortOrderArchive;
+  return new_sort_order_;
+}
+inline ::TST::TableSortOrderArchive* CommandRewriteSortOrderForTectonicShiftArchive::release_new_sort_order() {
+  clear_has_new_sort_order();
+  ::TST::TableSortOrderArchive* temp = new_sort_order_;
+  new_sort_order_ = NULL;
+  return temp;
+}
+inline void CommandRewriteSortOrderForTectonicShiftArchive::set_allocated_new_sort_order(::TST::TableSortOrderArchive* new_sort_order) {
+  delete new_sort_order_;
+  new_sort_order_ = new_sort_order;
+  if (new_sort_order) {
+    set_has_new_sort_order();
+  } else {
+    clear_has_new_sort_order();
+  }
+}
+
+// -------------------------------------------------------------------
+
+// CommandRewriteSortOrderForSortArchive
+
+// required .TST.TableCommandArchive super = 1;
+inline bool CommandRewriteSortOrderForSortArchive::has_super() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void CommandRewriteSortOrderForSortArchive::set_has_super() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void CommandRewriteSortOrderForSortArchive::clear_has_super() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void CommandRewriteSortOrderForSortArchive::clear_super() {
+  if (super_ != NULL) super_->::TST::TableCommandArchive::Clear();
+  clear_has_super();
+}
+inline const ::TST::TableCommandArchive& CommandRewriteSortOrderForSortArchive::super() const {
+  return super_ != NULL ? *super_ : *default_instance_->super_;
+}
+inline ::TST::TableCommandArchive* CommandRewriteSortOrderForSortArchive::mutable_super() {
+  set_has_super();
+  if (super_ == NULL) super_ = new ::TST::TableCommandArchive;
+  return super_;
+}
+inline ::TST::TableCommandArchive* CommandRewriteSortOrderForSortArchive::release_super() {
+  clear_has_super();
+  ::TST::TableCommandArchive* temp = super_;
+  super_ = NULL;
+  return temp;
+}
+inline void CommandRewriteSortOrderForSortArchive::set_allocated_super(::TST::TableCommandArchive* super) {
+  delete super_;
+  super_ = super;
+  if (super) {
+    set_has_super();
+  } else {
+    clear_has_super();
+  }
+}
+
+// required .TSK.ShuffleMappingArchive sort_mapping = 2;
+inline bool CommandRewriteSortOrderForSortArchive::has_sort_mapping() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void CommandRewriteSortOrderForSortArchive::set_has_sort_mapping() {
+  _has_bits_[0] |= 0x00000002u;
+}
+inline void CommandRewriteSortOrderForSortArchive::clear_has_sort_mapping() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline void CommandRewriteSortOrderForSortArchive::clear_sort_mapping() {
+  if (sort_mapping_ != NULL) sort_mapping_->::TSK::ShuffleMappingArchive::Clear();
+  clear_has_sort_mapping();
+}
+inline const ::TSK::ShuffleMappingArchive& CommandRewriteSortOrderForSortArchive::sort_mapping() const {
+  return sort_mapping_ != NULL ? *sort_mapping_ : *default_instance_->sort_mapping_;
+}
+inline ::TSK::ShuffleMappingArchive* CommandRewriteSortOrderForSortArchive::mutable_sort_mapping() {
+  set_has_sort_mapping();
+  if (sort_mapping_ == NULL) sort_mapping_ = new ::TSK::ShuffleMappingArchive;
+  return sort_mapping_;
+}
+inline ::TSK::ShuffleMappingArchive* CommandRewriteSortOrderForSortArchive::release_sort_mapping() {
+  clear_has_sort_mapping();
+  ::TSK::ShuffleMappingArchive* temp = sort_mapping_;
+  sort_mapping_ = NULL;
+  return temp;
+}
+inline void CommandRewriteSortOrderForSortArchive::set_allocated_sort_mapping(::TSK::ShuffleMappingArchive* sort_mapping) {
+  delete sort_mapping_;
+  sort_mapping_ = sort_mapping;
+  if (sort_mapping) {
+    set_has_sort_mapping();
+  } else {
+    clear_has_sort_mapping();
+  }
+}
+
+// optional .TST.TableSortOrderArchive old_sort_order = 3;
+inline bool CommandRewriteSortOrderForSortArchive::has_old_sort_order() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void CommandRewriteSortOrderForSortArchive::set_has_old_sort_order() {
+  _has_bits_[0] |= 0x00000004u;
+}
+inline void CommandRewriteSortOrderForSortArchive::clear_has_old_sort_order() {
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline void CommandRewriteSortOrderForSortArchive::clear_old_sort_order() {
+  if (old_sort_order_ != NULL) old_sort_order_->::TST::TableSortOrderArchive::Clear();
+  clear_has_old_sort_order();
+}
+inline const ::TST::TableSortOrderArchive& CommandRewriteSortOrderForSortArchive::old_sort_order() const {
+  return old_sort_order_ != NULL ? *old_sort_order_ : *default_instance_->old_sort_order_;
+}
+inline ::TST::TableSortOrderArchive* CommandRewriteSortOrderForSortArchive::mutable_old_sort_order() {
+  set_has_old_sort_order();
+  if (old_sort_order_ == NULL) old_sort_order_ = new ::TST::TableSortOrderArchive;
+  return old_sort_order_;
+}
+inline ::TST::TableSortOrderArchive* CommandRewriteSortOrderForSortArchive::release_old_sort_order() {
+  clear_has_old_sort_order();
+  ::TST::TableSortOrderArchive* temp = old_sort_order_;
+  old_sort_order_ = NULL;
+  return temp;
+}
+inline void CommandRewriteSortOrderForSortArchive::set_allocated_old_sort_order(::TST::TableSortOrderArchive* old_sort_order) {
+  delete old_sort_order_;
+  old_sort_order_ = old_sort_order;
+  if (old_sort_order) {
+    set_has_old_sort_order();
+  } else {
+    clear_has_old_sort_order();
+  }
+}
+
+// optional .TST.TableSortOrderArchive new_sort_order = 4;
+inline bool CommandRewriteSortOrderForSortArchive::has_new_sort_order() const {
+  return (_has_bits_[0] & 0x00000008u) != 0;
+}
+inline void CommandRewriteSortOrderForSortArchive::set_has_new_sort_order() {
+  _has_bits_[0] |= 0x00000008u;
+}
+inline void CommandRewriteSortOrderForSortArchive::clear_has_new_sort_order() {
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline void CommandRewriteSortOrderForSortArchive::clear_new_sort_order() {
+  if (new_sort_order_ != NULL) new_sort_order_->::TST::TableSortOrderArchive::Clear();
+  clear_has_new_sort_order();
+}
+inline const ::TST::TableSortOrderArchive& CommandRewriteSortOrderForSortArchive::new_sort_order() const {
+  return new_sort_order_ != NULL ? *new_sort_order_ : *default_instance_->new_sort_order_;
+}
+inline ::TST::TableSortOrderArchive* CommandRewriteSortOrderForSortArchive::mutable_new_sort_order() {
+  set_has_new_sort_order();
+  if (new_sort_order_ == NULL) new_sort_order_ = new ::TST::TableSortOrderArchive;
+  return new_sort_order_;
+}
+inline ::TST::TableSortOrderArchive* CommandRewriteSortOrderForSortArchive::release_new_sort_order() {
+  clear_has_new_sort_order();
+  ::TST::TableSortOrderArchive* temp = new_sort_order_;
+  new_sort_order_ = NULL;
+  return temp;
+}
+inline void CommandRewriteSortOrderForSortArchive::set_allocated_new_sort_order(::TST::TableSortOrderArchive* new_sort_order) {
+  delete new_sort_order_;
+  new_sort_order_ = new_sort_order;
+  if (new_sort_order) {
+    set_has_new_sort_order();
+  } else {
+    clear_has_new_sort_order();
+  }
+}
+
+// -------------------------------------------------------------------
+
+// CommandRewriteSortOrderForTableResizeArchive
+
+// required .TST.TableCommandArchive super = 1;
+inline bool CommandRewriteSortOrderForTableResizeArchive::has_super() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void CommandRewriteSortOrderForTableResizeArchive::set_has_super() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void CommandRewriteSortOrderForTableResizeArchive::clear_has_super() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void CommandRewriteSortOrderForTableResizeArchive::clear_super() {
+  if (super_ != NULL) super_->::TST::TableCommandArchive::Clear();
+  clear_has_super();
+}
+inline const ::TST::TableCommandArchive& CommandRewriteSortOrderForTableResizeArchive::super() const {
+  return super_ != NULL ? *super_ : *default_instance_->super_;
+}
+inline ::TST::TableCommandArchive* CommandRewriteSortOrderForTableResizeArchive::mutable_super() {
+  set_has_super();
+  if (super_ == NULL) super_ = new ::TST::TableCommandArchive;
+  return super_;
+}
+inline ::TST::TableCommandArchive* CommandRewriteSortOrderForTableResizeArchive::release_super() {
+  clear_has_super();
+  ::TST::TableCommandArchive* temp = super_;
+  super_ = NULL;
+  return temp;
+}
+inline void CommandRewriteSortOrderForTableResizeArchive::set_allocated_super(::TST::TableCommandArchive* super) {
+  delete super_;
+  super_ = super;
+  if (super) {
+    set_has_super();
+  } else {
+    clear_has_super();
+  }
+}
+
+// optional .TST.TableSortOrderArchive old_sort_order = 2;
+inline bool CommandRewriteSortOrderForTableResizeArchive::has_old_sort_order() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void CommandRewriteSortOrderForTableResizeArchive::set_has_old_sort_order() {
+  _has_bits_[0] |= 0x00000002u;
+}
+inline void CommandRewriteSortOrderForTableResizeArchive::clear_has_old_sort_order() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline void CommandRewriteSortOrderForTableResizeArchive::clear_old_sort_order() {
+  if (old_sort_order_ != NULL) old_sort_order_->::TST::TableSortOrderArchive::Clear();
+  clear_has_old_sort_order();
+}
+inline const ::TST::TableSortOrderArchive& CommandRewriteSortOrderForTableResizeArchive::old_sort_order() const {
+  return old_sort_order_ != NULL ? *old_sort_order_ : *default_instance_->old_sort_order_;
+}
+inline ::TST::TableSortOrderArchive* CommandRewriteSortOrderForTableResizeArchive::mutable_old_sort_order() {
+  set_has_old_sort_order();
+  if (old_sort_order_ == NULL) old_sort_order_ = new ::TST::TableSortOrderArchive;
+  return old_sort_order_;
+}
+inline ::TST::TableSortOrderArchive* CommandRewriteSortOrderForTableResizeArchive::release_old_sort_order() {
+  clear_has_old_sort_order();
+  ::TST::TableSortOrderArchive* temp = old_sort_order_;
+  old_sort_order_ = NULL;
+  return temp;
+}
+inline void CommandRewriteSortOrderForTableResizeArchive::set_allocated_old_sort_order(::TST::TableSortOrderArchive* old_sort_order) {
+  delete old_sort_order_;
+  old_sort_order_ = old_sort_order;
+  if (old_sort_order) {
+    set_has_old_sort_order();
+  } else {
+    clear_has_old_sort_order();
+  }
+}
+
+// optional .TST.TableSortOrderArchive new_sort_order = 3;
+inline bool CommandRewriteSortOrderForTableResizeArchive::has_new_sort_order() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void CommandRewriteSortOrderForTableResizeArchive::set_has_new_sort_order() {
+  _has_bits_[0] |= 0x00000004u;
+}
+inline void CommandRewriteSortOrderForTableResizeArchive::clear_has_new_sort_order() {
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline void CommandRewriteSortOrderForTableResizeArchive::clear_new_sort_order() {
+  if (new_sort_order_ != NULL) new_sort_order_->::TST::TableSortOrderArchive::Clear();
+  clear_has_new_sort_order();
+}
+inline const ::TST::TableSortOrderArchive& CommandRewriteSortOrderForTableResizeArchive::new_sort_order() const {
+  return new_sort_order_ != NULL ? *new_sort_order_ : *default_instance_->new_sort_order_;
+}
+inline ::TST::TableSortOrderArchive* CommandRewriteSortOrderForTableResizeArchive::mutable_new_sort_order() {
+  set_has_new_sort_order();
+  if (new_sort_order_ == NULL) new_sort_order_ = new ::TST::TableSortOrderArchive;
+  return new_sort_order_;
+}
+inline ::TST::TableSortOrderArchive* CommandRewriteSortOrderForTableResizeArchive::release_new_sort_order() {
+  clear_has_new_sort_order();
+  ::TST::TableSortOrderArchive* temp = new_sort_order_;
+  new_sort_order_ = NULL;
+  return temp;
+}
+inline void CommandRewriteSortOrderForTableResizeArchive::set_allocated_new_sort_order(::TST::TableSortOrderArchive* new_sort_order) {
+  delete new_sort_order_;
+  new_sort_order_ = new_sort_order;
+  if (new_sort_order) {
+    set_has_new_sort_order();
+  } else {
+    clear_has_new_sort_order();
   }
 }
 

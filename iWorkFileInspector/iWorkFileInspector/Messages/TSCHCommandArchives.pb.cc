@@ -23,15 +23,39 @@ namespace {
 const ::google::protobuf::Descriptor* CommandSetChartTypeArchive_descriptor_ = NULL;
 const ::google::protobuf::internal::GeneratedMessageReflection*
   CommandSetChartTypeArchive_reflection_ = NULL;
-const ::google::protobuf::Descriptor* PropertyMutationUndoTupleArchive_descriptor_ = NULL;
-const ::google::protobuf::internal::GeneratedMessageReflection*
-  PropertyMutationUndoTupleArchive_reflection_ = NULL;
 const ::google::protobuf::Descriptor* StyleSwapUndoTupleArchive_descriptor_ = NULL;
 const ::google::protobuf::internal::GeneratedMessageReflection*
   StyleSwapUndoTupleArchive_reflection_ = NULL;
 const ::google::protobuf::Descriptor* CommandStyleSwapArchive_descriptor_ = NULL;
 const ::google::protobuf::internal::GeneratedMessageReflection*
   CommandStyleSwapArchive_reflection_ = NULL;
+const ::google::protobuf::Descriptor* CommandMutatePropertiesArchive_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  CommandMutatePropertiesArchive_reflection_ = NULL;
+const ::google::protobuf::Descriptor* CommandMutatePropertiesArchive_GenericPropertyDeltaMap_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  CommandMutatePropertiesArchive_GenericPropertyDeltaMap_reflection_ = NULL;
+const ::google::protobuf::Descriptor* CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion_reflection_ = NULL;
+const ::google::protobuf::Descriptor* CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_reflection_ = NULL;
+const ::google::protobuf::Descriptor* CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive_reflection_ = NULL;
+const ::google::protobuf::Descriptor* CommandScaleAllTextArchive_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  CommandScaleAllTextArchive_reflection_ = NULL;
+const ::google::protobuf::Descriptor* CommandSetFontFamilyArchive_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  CommandSetFontFamilyArchive_reflection_ = NULL;
+const ::google::protobuf::Descriptor* CommandApplyFillSetArchive_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  CommandApplyFillSetArchive_reflection_ = NULL;
+const ::google::protobuf::Descriptor* CommandApplyFillSetArchive_CapturedFillSetArchive_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  CommandApplyFillSetArchive_CapturedFillSetArchive_reflection_ = NULL;
 const ::google::protobuf::Descriptor* CommandSetSeriesNameArchive_descriptor_ = NULL;
 const ::google::protobuf::internal::GeneratedMessageReflection*
   CommandSetSeriesNameArchive_reflection_ = NULL;
@@ -119,6 +143,18 @@ const ::google::protobuf::internal::GeneratedMessageReflection*
 const ::google::protobuf::Descriptor* CommandInvalidateWPCaches_descriptor_ = NULL;
 const ::google::protobuf::internal::GeneratedMessageReflection*
   CommandInvalidateWPCaches_reflection_ = NULL;
+const ::google::protobuf::Descriptor* CommandSetGridColumnNameArchive_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  CommandSetGridColumnNameArchive_reflection_ = NULL;
+const ::google::protobuf::Descriptor* CommandSetGridRowNameArchive_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  CommandSetGridRowNameArchive_reflection_ = NULL;
+const ::google::protobuf::Descriptor* CommandReplaceCustomFormatArchive_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  CommandReplaceCustomFormatArchive_reflection_ = NULL;
+const ::google::protobuf::Descriptor* CommandReplaceCustomFormatArchive_FormatObjectMutation_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  CommandReplaceCustomFormatArchive_FormatObjectMutation_reflection_ = NULL;
 const ::google::protobuf::EnumDescriptor* StyleOwnerType_descriptor_ = NULL;
 const ::google::protobuf::EnumDescriptor* StyleSwapType_descriptor_ = NULL;
 const ::google::protobuf::EnumDescriptor* ApplyPresetBehavior_descriptor_ = NULL;
@@ -152,28 +188,7 @@ void protobuf_AssignDesc_TSCHCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandSetChartTypeArchive));
-  PropertyMutationUndoTupleArchive_descriptor_ = file->message_type(1);
-  static const int PropertyMutationUndoTupleArchive_offsets_[7] = {
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PropertyMutationUndoTupleArchive, chart_info_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PropertyMutationUndoTupleArchive, style_owner_type_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PropertyMutationUndoTupleArchive, index_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PropertyMutationUndoTupleArchive, old_style_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PropertyMutationUndoTupleArchive, new_style_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PropertyMutationUndoTupleArchive, old_non_style_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PropertyMutationUndoTupleArchive, new_non_style_),
-  };
-  PropertyMutationUndoTupleArchive_reflection_ =
-    new ::google::protobuf::internal::GeneratedMessageReflection(
-      PropertyMutationUndoTupleArchive_descriptor_,
-      PropertyMutationUndoTupleArchive::default_instance_,
-      PropertyMutationUndoTupleArchive_offsets_,
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PropertyMutationUndoTupleArchive, _has_bits_[0]),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PropertyMutationUndoTupleArchive, _unknown_fields_),
-      -1,
-      ::google::protobuf::DescriptorPool::generated_pool(),
-      ::google::protobuf::MessageFactory::generated_factory(),
-      sizeof(PropertyMutationUndoTupleArchive));
-  StyleSwapUndoTupleArchive_descriptor_ = file->message_type(2);
+  StyleSwapUndoTupleArchive_descriptor_ = file->message_type(1);
   static const int StyleSwapUndoTupleArchive_offsets_[5] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(StyleSwapUndoTupleArchive, chart_info_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(StyleSwapUndoTupleArchive, swap_type_),
@@ -192,7 +207,7 @@ void protobuf_AssignDesc_TSCHCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(StyleSwapUndoTupleArchive));
-  CommandStyleSwapArchive_descriptor_ = file->message_type(3);
+  CommandStyleSwapArchive_descriptor_ = file->message_type(2);
   static const int CommandStyleSwapArchive_offsets_[2] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandStyleSwapArchive, super_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandStyleSwapArchive, undo_tuples_),
@@ -208,7 +223,170 @@ void protobuf_AssignDesc_TSCHCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandStyleSwapArchive));
-  CommandSetSeriesNameArchive_descriptor_ = file->message_type(4);
+  CommandMutatePropertiesArchive_descriptor_ = file->message_type(3);
+  static const int CommandMutatePropertiesArchive_offsets_[4] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandMutatePropertiesArchive, super_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandMutatePropertiesArchive, rollback_cmd_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandMutatePropertiesArchive, generic_property_delta_maps_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandMutatePropertiesArchive, paragraph_style_delta_maps_),
+  };
+  CommandMutatePropertiesArchive_reflection_ =
+    new ::google::protobuf::internal::GeneratedMessageReflection(
+      CommandMutatePropertiesArchive_descriptor_,
+      CommandMutatePropertiesArchive::default_instance_,
+      CommandMutatePropertiesArchive_offsets_,
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandMutatePropertiesArchive, _has_bits_[0]),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandMutatePropertiesArchive, _unknown_fields_),
+      -1,
+      ::google::protobuf::DescriptorPool::generated_pool(),
+      ::google::protobuf::MessageFactory::generated_factory(),
+      sizeof(CommandMutatePropertiesArchive));
+  CommandMutatePropertiesArchive_GenericPropertyDeltaMap_descriptor_ = CommandMutatePropertiesArchive_descriptor_->nested_type(0);
+  static const int CommandMutatePropertiesArchive_GenericPropertyDeltaMap_offsets_[4] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandMutatePropertiesArchive_GenericPropertyDeltaMap, style_owner_type_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandMutatePropertiesArchive_GenericPropertyDeltaMap, style_owner_index_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandMutatePropertiesArchive_GenericPropertyDeltaMap, forward_map_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandMutatePropertiesArchive_GenericPropertyDeltaMap, reverse_map_),
+  };
+  CommandMutatePropertiesArchive_GenericPropertyDeltaMap_reflection_ =
+    new ::google::protobuf::internal::GeneratedMessageReflection(
+      CommandMutatePropertiesArchive_GenericPropertyDeltaMap_descriptor_,
+      CommandMutatePropertiesArchive_GenericPropertyDeltaMap::default_instance_,
+      CommandMutatePropertiesArchive_GenericPropertyDeltaMap_offsets_,
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandMutatePropertiesArchive_GenericPropertyDeltaMap, _has_bits_[0]),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandMutatePropertiesArchive_GenericPropertyDeltaMap, _unknown_fields_),
+      -1,
+      ::google::protobuf::DescriptorPool::generated_pool(),
+      ::google::protobuf::MessageFactory::generated_factory(),
+      sizeof(CommandMutatePropertiesArchive_GenericPropertyDeltaMap));
+  CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion_descriptor_ = CommandMutatePropertiesArchive_GenericPropertyDeltaMap_descriptor_->nested_type(0);
+  static const int CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion_offsets_[4] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion, chart_map_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion, legend_map_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion, axis_map_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion, series_map_),
+  };
+  CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion_reflection_ =
+    new ::google::protobuf::internal::GeneratedMessageReflection(
+      CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion_descriptor_,
+      CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion::default_instance_,
+      CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion_offsets_,
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion, _has_bits_[0]),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion, _unknown_fields_),
+      -1,
+      ::google::protobuf::DescriptorPool::generated_pool(),
+      ::google::protobuf::MessageFactory::generated_factory(),
+      sizeof(CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion));
+  CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_descriptor_ = CommandMutatePropertiesArchive_descriptor_->nested_type(1);
+  static const int CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_offsets_[5] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandMutatePropertiesArchive_ParagraphStyleDeltaMap, style_owner_type_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandMutatePropertiesArchive_ParagraphStyleDeltaMap, style_owner_index_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandMutatePropertiesArchive_ParagraphStyleDeltaMap, paragraph_style_index_property_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandMutatePropertiesArchive_ParagraphStyleDeltaMap, forward_map_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandMutatePropertiesArchive_ParagraphStyleDeltaMap, reverse_map_),
+  };
+  CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_reflection_ =
+    new ::google::protobuf::internal::GeneratedMessageReflection(
+      CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_descriptor_,
+      CommandMutatePropertiesArchive_ParagraphStyleDeltaMap::default_instance_,
+      CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_offsets_,
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandMutatePropertiesArchive_ParagraphStyleDeltaMap, _has_bits_[0]),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandMutatePropertiesArchive_ParagraphStyleDeltaMap, _unknown_fields_),
+      -1,
+      ::google::protobuf::DescriptorPool::generated_pool(),
+      ::google::protobuf::MessageFactory::generated_factory(),
+      sizeof(CommandMutatePropertiesArchive_ParagraphStyleDeltaMap));
+  CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive_descriptor_ = CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_descriptor_->nested_type(0);
+  static const int CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive_offsets_[2] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive, char_properties_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive, para_properties_),
+  };
+  CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive_reflection_ =
+    new ::google::protobuf::internal::GeneratedMessageReflection(
+      CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive_descriptor_,
+      CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive::default_instance_,
+      CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive_offsets_,
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive, _has_bits_[0]),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive, _unknown_fields_),
+      -1,
+      ::google::protobuf::DescriptorPool::generated_pool(),
+      ::google::protobuf::MessageFactory::generated_factory(),
+      sizeof(CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive));
+  CommandScaleAllTextArchive_descriptor_ = file->message_type(4);
+  static const int CommandScaleAllTextArchive_offsets_[3] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandScaleAllTextArchive, super_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandScaleAllTextArchive, rollback_cmd_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandScaleAllTextArchive, scale_factor_),
+  };
+  CommandScaleAllTextArchive_reflection_ =
+    new ::google::protobuf::internal::GeneratedMessageReflection(
+      CommandScaleAllTextArchive_descriptor_,
+      CommandScaleAllTextArchive::default_instance_,
+      CommandScaleAllTextArchive_offsets_,
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandScaleAllTextArchive, _has_bits_[0]),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandScaleAllTextArchive, _unknown_fields_),
+      -1,
+      ::google::protobuf::DescriptorPool::generated_pool(),
+      ::google::protobuf::MessageFactory::generated_factory(),
+      sizeof(CommandScaleAllTextArchive));
+  CommandSetFontFamilyArchive_descriptor_ = file->message_type(5);
+  static const int CommandSetFontFamilyArchive_offsets_[5] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetFontFamilyArchive, super_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetFontFamilyArchive, rollback_cmd_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetFontFamilyArchive, new_font_family_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetFontFamilyArchive, old_font_family_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetFontFamilyArchive, paragraph_style_delta_maps_),
+  };
+  CommandSetFontFamilyArchive_reflection_ =
+    new ::google::protobuf::internal::GeneratedMessageReflection(
+      CommandSetFontFamilyArchive_descriptor_,
+      CommandSetFontFamilyArchive::default_instance_,
+      CommandSetFontFamilyArchive_offsets_,
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetFontFamilyArchive, _has_bits_[0]),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetFontFamilyArchive, _unknown_fields_),
+      -1,
+      ::google::protobuf::DescriptorPool::generated_pool(),
+      ::google::protobuf::MessageFactory::generated_factory(),
+      sizeof(CommandSetFontFamilyArchive));
+  CommandApplyFillSetArchive_descriptor_ = file->message_type(6);
+  static const int CommandApplyFillSetArchive_offsets_[7] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandApplyFillSetArchive, super_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandApplyFillSetArchive, rollback_cmd_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandApplyFillSetArchive, fwd_fill_set_lookup_string_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandApplyFillSetArchive, rev_fill_set_lookup_string_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandApplyFillSetArchive, fwd_captured_fill_set_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandApplyFillSetArchive, rev_captured_fill_set_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandApplyFillSetArchive, rev_last_applied_fill_set_lookup_string_),
+  };
+  CommandApplyFillSetArchive_reflection_ =
+    new ::google::protobuf::internal::GeneratedMessageReflection(
+      CommandApplyFillSetArchive_descriptor_,
+      CommandApplyFillSetArchive::default_instance_,
+      CommandApplyFillSetArchive_offsets_,
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandApplyFillSetArchive, _has_bits_[0]),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandApplyFillSetArchive, _unknown_fields_),
+      -1,
+      ::google::protobuf::DescriptorPool::generated_pool(),
+      ::google::protobuf::MessageFactory::generated_factory(),
+      sizeof(CommandApplyFillSetArchive));
+  CommandApplyFillSetArchive_CapturedFillSetArchive_descriptor_ = CommandApplyFillSetArchive_descriptor_->nested_type(0);
+  static const int CommandApplyFillSetArchive_CapturedFillSetArchive_offsets_[3] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandApplyFillSetArchive_CapturedFillSetArchive, identifier_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandApplyFillSetArchive_CapturedFillSetArchive, number_of_theme_series_styles_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandApplyFillSetArchive_CapturedFillSetArchive, property_maps_),
+  };
+  CommandApplyFillSetArchive_CapturedFillSetArchive_reflection_ =
+    new ::google::protobuf::internal::GeneratedMessageReflection(
+      CommandApplyFillSetArchive_CapturedFillSetArchive_descriptor_,
+      CommandApplyFillSetArchive_CapturedFillSetArchive::default_instance_,
+      CommandApplyFillSetArchive_CapturedFillSetArchive_offsets_,
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandApplyFillSetArchive_CapturedFillSetArchive, _has_bits_[0]),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandApplyFillSetArchive_CapturedFillSetArchive, _unknown_fields_),
+      -1,
+      ::google::protobuf::DescriptorPool::generated_pool(),
+      ::google::protobuf::MessageFactory::generated_factory(),
+      sizeof(CommandApplyFillSetArchive_CapturedFillSetArchive));
+  CommandSetSeriesNameArchive_descriptor_ = file->message_type(7);
   static const int CommandSetSeriesNameArchive_offsets_[4] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetSeriesNameArchive, super_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetSeriesNameArchive, seriesindex_),
@@ -226,7 +404,7 @@ void protobuf_AssignDesc_TSCHCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandSetSeriesNameArchive));
-  CommandSetCategoryNameArchive_descriptor_ = file->message_type(5);
+  CommandSetCategoryNameArchive_descriptor_ = file->message_type(8);
   static const int CommandSetCategoryNameArchive_offsets_[5] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetCategoryNameArchive, super_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetCategoryNameArchive, categoryindex_),
@@ -245,12 +423,13 @@ void protobuf_AssignDesc_TSCHCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandSetCategoryNameArchive));
-  CommandAddGridRowsArchive_descriptor_ = file->message_type(6);
-  static const int CommandAddGridRowsArchive_offsets_[4] = {
+  CommandAddGridRowsArchive_descriptor_ = file->message_type(9);
+  static const int CommandAddGridRowsArchive_offsets_[5] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandAddGridRowsArchive, super_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandAddGridRowsArchive, location_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandAddGridRowsArchive, length_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandAddGridRowsArchive, name_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandAddGridRowsArchive, ids_),
   };
   CommandAddGridRowsArchive_reflection_ =
     new ::google::protobuf::internal::GeneratedMessageReflection(
@@ -263,12 +442,13 @@ void protobuf_AssignDesc_TSCHCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandAddGridRowsArchive));
-  CommandAddGridColumnsArchive_descriptor_ = file->message_type(7);
-  static const int CommandAddGridColumnsArchive_offsets_[4] = {
+  CommandAddGridColumnsArchive_descriptor_ = file->message_type(10);
+  static const int CommandAddGridColumnsArchive_offsets_[5] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandAddGridColumnsArchive, super_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandAddGridColumnsArchive, location_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandAddGridColumnsArchive, length_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandAddGridColumnsArchive, name_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandAddGridColumnsArchive, ids_),
   };
   CommandAddGridColumnsArchive_reflection_ =
     new ::google::protobuf::internal::GeneratedMessageReflection(
@@ -281,7 +461,7 @@ void protobuf_AssignDesc_TSCHCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandAddGridColumnsArchive));
-  CommandMoveGridRowsArchive_descriptor_ = file->message_type(8);
+  CommandMoveGridRowsArchive_descriptor_ = file->message_type(11);
   static const int CommandMoveGridRowsArchive_offsets_[4] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandMoveGridRowsArchive, super_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandMoveGridRowsArchive, location_),
@@ -299,7 +479,7 @@ void protobuf_AssignDesc_TSCHCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandMoveGridRowsArchive));
-  CommandMoveGridColumnsArchive_descriptor_ = file->message_type(9);
+  CommandMoveGridColumnsArchive_descriptor_ = file->message_type(12);
   static const int CommandMoveGridColumnsArchive_offsets_[4] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandMoveGridColumnsArchive, super_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandMoveGridColumnsArchive, location_),
@@ -317,8 +497,8 @@ void protobuf_AssignDesc_TSCHCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandMoveGridColumnsArchive));
-  CommandDeleteGridRowsArchive_descriptor_ = file->message_type(10);
-  static const int CommandDeleteGridRowsArchive_offsets_[7] = {
+  CommandDeleteGridRowsArchive_descriptor_ = file->message_type(13);
+  static const int CommandDeleteGridRowsArchive_offsets_[10] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandDeleteGridRowsArchive, super_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandDeleteGridRowsArchive, location_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandDeleteGridRowsArchive, length_),
@@ -326,6 +506,9 @@ void protobuf_AssignDesc_TSCHCommandArchives_2eproto() {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandDeleteGridRowsArchive, value_row_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandDeleteGridRowsArchive, removed_all_rows_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandDeleteGridRowsArchive, column_names_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandDeleteGridRowsArchive, row_ids_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandDeleteGridRowsArchive, column_ids_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandDeleteGridRowsArchive, add_dummy_data_on_delete_all_),
   };
   CommandDeleteGridRowsArchive_reflection_ =
     new ::google::protobuf::internal::GeneratedMessageReflection(
@@ -353,8 +536,8 @@ void protobuf_AssignDesc_TSCHCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandDeleteGridRowsArchive_ValueRow));
-  CommandDeleteGridColumnsArchive_descriptor_ = file->message_type(11);
-  static const int CommandDeleteGridColumnsArchive_offsets_[7] = {
+  CommandDeleteGridColumnsArchive_descriptor_ = file->message_type(14);
+  static const int CommandDeleteGridColumnsArchive_offsets_[10] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandDeleteGridColumnsArchive, super_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandDeleteGridColumnsArchive, location_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandDeleteGridColumnsArchive, length_),
@@ -362,6 +545,9 @@ void protobuf_AssignDesc_TSCHCommandArchives_2eproto() {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandDeleteGridColumnsArchive, value_row_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandDeleteGridColumnsArchive, removed_all_columns_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandDeleteGridColumnsArchive, row_names_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandDeleteGridColumnsArchive, row_ids_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandDeleteGridColumnsArchive, column_ids_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandDeleteGridColumnsArchive, add_dummy_data_on_delete_all_),
   };
   CommandDeleteGridColumnsArchive_reflection_ =
     new ::google::protobuf::internal::GeneratedMessageReflection(
@@ -389,7 +575,7 @@ void protobuf_AssignDesc_TSCHCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandDeleteGridColumnsArchive_ValueRow));
-  CommandSetPreviewLocArchive_descriptor_ = file->message_type(12);
+  CommandSetPreviewLocArchive_descriptor_ = file->message_type(15);
   static const int CommandSetPreviewLocArchive_offsets_[3] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetPreviewLocArchive, super_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetPreviewLocArchive, old_loc_),
@@ -406,7 +592,7 @@ void protobuf_AssignDesc_TSCHCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandSetPreviewLocArchive));
-  CommandSetGridValueArchive_descriptor_ = file->message_type(13);
+  CommandSetGridValueArchive_descriptor_ = file->message_type(16);
   static const int CommandSetGridValueArchive_offsets_[5] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetGridValueArchive, super_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetGridValueArchive, rowindex_),
@@ -425,7 +611,7 @@ void protobuf_AssignDesc_TSCHCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandSetGridValueArchive));
-  CommandSetGridDirectionArchive_descriptor_ = file->message_type(14);
+  CommandSetGridDirectionArchive_descriptor_ = file->message_type(17);
   static const int CommandSetGridDirectionArchive_offsets_[3] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetGridDirectionArchive, super_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetGridDirectionArchive, old_direction_),
@@ -442,7 +628,7 @@ void protobuf_AssignDesc_TSCHCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandSetGridDirectionArchive));
-  CommandSetSeriesTypeArchive_descriptor_ = file->message_type(15);
+  CommandSetSeriesTypeArchive_descriptor_ = file->message_type(18);
   static const int CommandSetSeriesTypeArchive_offsets_[4] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetSeriesTypeArchive, super_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetSeriesTypeArchive, seriesindex_),
@@ -460,7 +646,7 @@ void protobuf_AssignDesc_TSCHCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandSetSeriesTypeArchive));
-  CommandSetScatterFormatArchive_descriptor_ = file->message_type(16);
+  CommandSetScatterFormatArchive_descriptor_ = file->message_type(19);
   static const int CommandSetScatterFormatArchive_offsets_[3] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetScatterFormatArchive, super_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetScatterFormatArchive, oldformat_),
@@ -477,7 +663,7 @@ void protobuf_AssignDesc_TSCHCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandSetScatterFormatArchive));
-  CommandSetMultiDataSetIndexArchive_descriptor_ = file->message_type(17);
+  CommandSetMultiDataSetIndexArchive_descriptor_ = file->message_type(20);
   static const int CommandSetMultiDataSetIndexArchive_offsets_[3] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetMultiDataSetIndexArchive, super_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetMultiDataSetIndexArchive, oldindex_),
@@ -494,7 +680,7 @@ void protobuf_AssignDesc_TSCHCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandSetMultiDataSetIndexArchive));
-  CommandSetLegendFrameArchive_descriptor_ = file->message_type(18);
+  CommandSetLegendFrameArchive_descriptor_ = file->message_type(21);
   static const int CommandSetLegendFrameArchive_offsets_[3] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetLegendFrameArchive, super_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetLegendFrameArchive, old_legend_frame_),
@@ -511,7 +697,7 @@ void protobuf_AssignDesc_TSCHCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandSetLegendFrameArchive));
-  CommandSetPieWedgeExplosion_descriptor_ = file->message_type(19);
+  CommandSetPieWedgeExplosion_descriptor_ = file->message_type(22);
   static const int CommandSetPieWedgeExplosion_offsets_[4] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetPieWedgeExplosion, super_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetPieWedgeExplosion, info_geometry_command_),
@@ -529,7 +715,7 @@ void protobuf_AssignDesc_TSCHCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandSetPieWedgeExplosion));
-  SynchronousCommandArchive_descriptor_ = file->message_type(20);
+  SynchronousCommandArchive_descriptor_ = file->message_type(23);
   static const int SynchronousCommandArchive_offsets_[2] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SynchronousCommandArchive, super_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SynchronousCommandArchive, command_),
@@ -545,7 +731,7 @@ void protobuf_AssignDesc_TSCHCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(SynchronousCommandArchive));
-  CommandReplaceAllArchive_descriptor_ = file->message_type(21);
+  CommandReplaceAllArchive_descriptor_ = file->message_type(24);
   static const int CommandReplaceAllArchive_offsets_[3] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandReplaceAllArchive, super_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandReplaceAllArchive, info_),
@@ -562,7 +748,7 @@ void protobuf_AssignDesc_TSCHCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandReplaceAllArchive));
-  CommandChartApplyTheme_descriptor_ = file->message_type(22);
+  CommandChartApplyTheme_descriptor_ = file->message_type(25);
   static const int CommandChartApplyTheme_offsets_[4] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandChartApplyTheme, super_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandChartApplyTheme, info_),
@@ -580,7 +766,7 @@ void protobuf_AssignDesc_TSCHCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandChartApplyTheme));
-  CommandChartApplyPreset_descriptor_ = file->message_type(23);
+  CommandChartApplyPreset_descriptor_ = file->message_type(26);
   static const int CommandChartApplyPreset_offsets_[4] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandChartApplyPreset, super_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandChartApplyPreset, swap_command_),
@@ -598,7 +784,7 @@ void protobuf_AssignDesc_TSCHCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandChartApplyPreset));
-  CommandCleanupGeometryArchive_descriptor_ = file->message_type(24);
+  CommandCleanupGeometryArchive_descriptor_ = file->message_type(27);
   static const int CommandCleanupGeometryArchive_offsets_[4] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandCleanupGeometryArchive, super_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandCleanupGeometryArchive, info_geometry_command_),
@@ -616,7 +802,7 @@ void protobuf_AssignDesc_TSCHCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandCleanupGeometryArchive));
-  ChartCommandArchive_descriptor_ = file->message_type(25);
+  ChartCommandArchive_descriptor_ = file->message_type(28);
   static const int ChartCommandArchive_offsets_[3] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartCommandArchive, super_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ChartCommandArchive, info_),
@@ -633,8 +819,8 @@ void protobuf_AssignDesc_TSCHCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(ChartCommandArchive));
-  CommandReplaceGridValuesArchive_descriptor_ = file->message_type(26);
-  static const int CommandReplaceGridValuesArchive_offsets_[11] = {
+  CommandReplaceGridValuesArchive_descriptor_ = file->message_type(29);
+  static const int CommandReplaceGridValuesArchive_offsets_[13] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandReplaceGridValuesArchive, super_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandReplaceGridValuesArchive, rowindex_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandReplaceGridValuesArchive, columnindex_),
@@ -646,6 +832,8 @@ void protobuf_AssignDesc_TSCHCommandArchives_2eproto() {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandReplaceGridValuesArchive, new_col_names_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandReplaceGridValuesArchive, rows_to_add_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandReplaceGridValuesArchive, cols_to_add_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandReplaceGridValuesArchive, row_ids_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandReplaceGridValuesArchive, column_ids_),
   };
   CommandReplaceGridValuesArchive_reflection_ =
     new ::google::protobuf::internal::GeneratedMessageReflection(
@@ -673,7 +861,7 @@ void protobuf_AssignDesc_TSCHCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandReplaceGridValuesArchive_ValueRow));
-  CommandReplaceThemePresetArchive_descriptor_ = file->message_type(27);
+  CommandReplaceThemePresetArchive_descriptor_ = file->message_type(30);
   static const int CommandReplaceThemePresetArchive_offsets_[6] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandReplaceThemePresetArchive, super_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandReplaceThemePresetArchive, theme_),
@@ -709,7 +897,7 @@ void protobuf_AssignDesc_TSCHCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandReplaceThemePresetArchive_StyleAndIdentifierPair));
-  CommandInvalidateWPCaches_descriptor_ = file->message_type(28);
+  CommandInvalidateWPCaches_descriptor_ = file->message_type(31);
   static const int CommandInvalidateWPCaches_offsets_[1] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandInvalidateWPCaches, super_),
   };
@@ -724,6 +912,80 @@ void protobuf_AssignDesc_TSCHCommandArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommandInvalidateWPCaches));
+  CommandSetGridColumnNameArchive_descriptor_ = file->message_type(32);
+  static const int CommandSetGridColumnNameArchive_offsets_[4] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetGridColumnNameArchive, super_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetGridColumnNameArchive, columnindex_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetGridColumnNameArchive, oldvalue_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetGridColumnNameArchive, newvalue_),
+  };
+  CommandSetGridColumnNameArchive_reflection_ =
+    new ::google::protobuf::internal::GeneratedMessageReflection(
+      CommandSetGridColumnNameArchive_descriptor_,
+      CommandSetGridColumnNameArchive::default_instance_,
+      CommandSetGridColumnNameArchive_offsets_,
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetGridColumnNameArchive, _has_bits_[0]),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetGridColumnNameArchive, _unknown_fields_),
+      -1,
+      ::google::protobuf::DescriptorPool::generated_pool(),
+      ::google::protobuf::MessageFactory::generated_factory(),
+      sizeof(CommandSetGridColumnNameArchive));
+  CommandSetGridRowNameArchive_descriptor_ = file->message_type(33);
+  static const int CommandSetGridRowNameArchive_offsets_[4] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetGridRowNameArchive, super_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetGridRowNameArchive, rowindex_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetGridRowNameArchive, oldvalue_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetGridRowNameArchive, newvalue_),
+  };
+  CommandSetGridRowNameArchive_reflection_ =
+    new ::google::protobuf::internal::GeneratedMessageReflection(
+      CommandSetGridRowNameArchive_descriptor_,
+      CommandSetGridRowNameArchive::default_instance_,
+      CommandSetGridRowNameArchive_offsets_,
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetGridRowNameArchive, _has_bits_[0]),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSetGridRowNameArchive, _unknown_fields_),
+      -1,
+      ::google::protobuf::DescriptorPool::generated_pool(),
+      ::google::protobuf::MessageFactory::generated_factory(),
+      sizeof(CommandSetGridRowNameArchive));
+  CommandReplaceCustomFormatArchive_descriptor_ = file->message_type(34);
+  static const int CommandReplaceCustomFormatArchive_offsets_[6] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandReplaceCustomFormatArchive, super_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandReplaceCustomFormatArchive, rollback_cmd_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandReplaceCustomFormatArchive, old_format_object_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandReplaceCustomFormatArchive, new_format_object_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandReplaceCustomFormatArchive, forward_mutations_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandReplaceCustomFormatArchive, reverse_mutations_),
+  };
+  CommandReplaceCustomFormatArchive_reflection_ =
+    new ::google::protobuf::internal::GeneratedMessageReflection(
+      CommandReplaceCustomFormatArchive_descriptor_,
+      CommandReplaceCustomFormatArchive::default_instance_,
+      CommandReplaceCustomFormatArchive_offsets_,
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandReplaceCustomFormatArchive, _has_bits_[0]),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandReplaceCustomFormatArchive, _unknown_fields_),
+      -1,
+      ::google::protobuf::DescriptorPool::generated_pool(),
+      ::google::protobuf::MessageFactory::generated_factory(),
+      sizeof(CommandReplaceCustomFormatArchive));
+  CommandReplaceCustomFormatArchive_FormatObjectMutation_descriptor_ = CommandReplaceCustomFormatArchive_descriptor_->nested_type(0);
+  static const int CommandReplaceCustomFormatArchive_FormatObjectMutation_offsets_[4] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandReplaceCustomFormatArchive_FormatObjectMutation, style_owner_type_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandReplaceCustomFormatArchive_FormatObjectMutation, style_owner_index_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandReplaceCustomFormatArchive_FormatObjectMutation, format_object_property_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandReplaceCustomFormatArchive_FormatObjectMutation, format_object_),
+  };
+  CommandReplaceCustomFormatArchive_FormatObjectMutation_reflection_ =
+    new ::google::protobuf::internal::GeneratedMessageReflection(
+      CommandReplaceCustomFormatArchive_FormatObjectMutation_descriptor_,
+      CommandReplaceCustomFormatArchive_FormatObjectMutation::default_instance_,
+      CommandReplaceCustomFormatArchive_FormatObjectMutation_offsets_,
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandReplaceCustomFormatArchive_FormatObjectMutation, _has_bits_[0]),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandReplaceCustomFormatArchive_FormatObjectMutation, _unknown_fields_),
+      -1,
+      ::google::protobuf::DescriptorPool::generated_pool(),
+      ::google::protobuf::MessageFactory::generated_factory(),
+      sizeof(CommandReplaceCustomFormatArchive_FormatObjectMutation));
   StyleOwnerType_descriptor_ = file->enum_type(0);
   StyleSwapType_descriptor_ = file->enum_type(1);
   ApplyPresetBehavior_descriptor_ = file->enum_type(2);
@@ -742,11 +1004,27 @@ void protobuf_RegisterTypes(const ::std::string&) {
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
     CommandSetChartTypeArchive_descriptor_, &CommandSetChartTypeArchive::default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-    PropertyMutationUndoTupleArchive_descriptor_, &PropertyMutationUndoTupleArchive::default_instance());
-  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
     StyleSwapUndoTupleArchive_descriptor_, &StyleSwapUndoTupleArchive::default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
     CommandStyleSwapArchive_descriptor_, &CommandStyleSwapArchive::default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+    CommandMutatePropertiesArchive_descriptor_, &CommandMutatePropertiesArchive::default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+    CommandMutatePropertiesArchive_GenericPropertyDeltaMap_descriptor_, &CommandMutatePropertiesArchive_GenericPropertyDeltaMap::default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+    CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion_descriptor_, &CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion::default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+    CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_descriptor_, &CommandMutatePropertiesArchive_ParagraphStyleDeltaMap::default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+    CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive_descriptor_, &CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive::default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+    CommandScaleAllTextArchive_descriptor_, &CommandScaleAllTextArchive::default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+    CommandSetFontFamilyArchive_descriptor_, &CommandSetFontFamilyArchive::default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+    CommandApplyFillSetArchive_descriptor_, &CommandApplyFillSetArchive::default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+    CommandApplyFillSetArchive_CapturedFillSetArchive_descriptor_, &CommandApplyFillSetArchive_CapturedFillSetArchive::default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
     CommandSetSeriesNameArchive_descriptor_, &CommandSetSeriesNameArchive::default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
@@ -805,6 +1083,14 @@ void protobuf_RegisterTypes(const ::std::string&) {
     CommandReplaceThemePresetArchive_StyleAndIdentifierPair_descriptor_, &CommandReplaceThemePresetArchive_StyleAndIdentifierPair::default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
     CommandInvalidateWPCaches_descriptor_, &CommandInvalidateWPCaches::default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+    CommandSetGridColumnNameArchive_descriptor_, &CommandSetGridColumnNameArchive::default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+    CommandSetGridRowNameArchive_descriptor_, &CommandSetGridRowNameArchive::default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+    CommandReplaceCustomFormatArchive_descriptor_, &CommandReplaceCustomFormatArchive::default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+    CommandReplaceCustomFormatArchive_FormatObjectMutation_descriptor_, &CommandReplaceCustomFormatArchive_FormatObjectMutation::default_instance());
 }
 
 }  // namespace
@@ -812,12 +1098,28 @@ void protobuf_RegisterTypes(const ::std::string&) {
 void protobuf_ShutdownFile_TSCHCommandArchives_2eproto() {
   delete CommandSetChartTypeArchive::default_instance_;
   delete CommandSetChartTypeArchive_reflection_;
-  delete PropertyMutationUndoTupleArchive::default_instance_;
-  delete PropertyMutationUndoTupleArchive_reflection_;
   delete StyleSwapUndoTupleArchive::default_instance_;
   delete StyleSwapUndoTupleArchive_reflection_;
   delete CommandStyleSwapArchive::default_instance_;
   delete CommandStyleSwapArchive_reflection_;
+  delete CommandMutatePropertiesArchive::default_instance_;
+  delete CommandMutatePropertiesArchive_reflection_;
+  delete CommandMutatePropertiesArchive_GenericPropertyDeltaMap::default_instance_;
+  delete CommandMutatePropertiesArchive_GenericPropertyDeltaMap_reflection_;
+  delete CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion::default_instance_;
+  delete CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion_reflection_;
+  delete CommandMutatePropertiesArchive_ParagraphStyleDeltaMap::default_instance_;
+  delete CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_reflection_;
+  delete CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive::default_instance_;
+  delete CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive_reflection_;
+  delete CommandScaleAllTextArchive::default_instance_;
+  delete CommandScaleAllTextArchive_reflection_;
+  delete CommandSetFontFamilyArchive::default_instance_;
+  delete CommandSetFontFamilyArchive_reflection_;
+  delete CommandApplyFillSetArchive::default_instance_;
+  delete CommandApplyFillSetArchive_reflection_;
+  delete CommandApplyFillSetArchive_CapturedFillSetArchive::default_instance_;
+  delete CommandApplyFillSetArchive_CapturedFillSetArchive_reflection_;
   delete CommandSetSeriesNameArchive::default_instance_;
   delete CommandSetSeriesNameArchive_reflection_;
   delete CommandSetCategoryNameArchive::default_instance_;
@@ -876,6 +1178,14 @@ void protobuf_ShutdownFile_TSCHCommandArchives_2eproto() {
   delete CommandReplaceThemePresetArchive_StyleAndIdentifierPair_reflection_;
   delete CommandInvalidateWPCaches::default_instance_;
   delete CommandInvalidateWPCaches_reflection_;
+  delete CommandSetGridColumnNameArchive::default_instance_;
+  delete CommandSetGridColumnNameArchive_reflection_;
+  delete CommandSetGridRowNameArchive::default_instance_;
+  delete CommandSetGridRowNameArchive_reflection_;
+  delete CommandReplaceCustomFormatArchive::default_instance_;
+  delete CommandReplaceCustomFormatArchive_reflection_;
+  delete CommandReplaceCustomFormatArchive_FormatObjectMutation::default_instance_;
+  delete CommandReplaceCustomFormatArchive_FormatObjectMutation_reflection_;
 }
 
 void protobuf_AddDesc_TSCHCommandArchives_2eproto() {
@@ -892,160 +1202,248 @@ void protobuf_AddDesc_TSCHCommandArchives_2eproto() {
   ::TSCH::Generated::protobuf_AddDesc_TSCHArchives_2eGEN_2eproto();
   ::TSCH::protobuf_AddDesc_TSCH3DArchives_2eproto();
   ::TSCH::protobuf_AddDesc_TSCHArchives_2eproto();
+  ::TSWP::protobuf_AddDesc_TSWPArchives_2eproto();
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
     "\n\031TSCHCommandArchives.proto\022\004TSCH\032\021TSPMe"
     "ssages.proto\032\021TSKArchives.proto\032\021TSSArch"
     "ives.proto\032\021TSDArchives.proto\032\031TSCHArchi"
     "ves.Common.proto\032\026TSCHArchives.GEN.proto"
     "\032\024TSCH3DArchives.proto\032\022TSCHArchives.pro"
-    "to\"\247\002\n\032CommandSetChartTypeArchive\022(\n\005sup"
-    "er\030\001 \002(\0132\031.TSCH.ChartCommandArchive\022%\n\014o"
-    "ldChartType\030\002 \002(\0162\017.TSCH.ChartType\022%\n\014ne"
-    "wChartType\030\003 \002(\0162\017.TSCH.ChartType\022-\n\025inf"
-    "o_geometry_command\030\005 \001(\0132\016.TSP.Reference"
-    "\0221\n\031anchor_attachment_command\030\006 \001(\0132\016.TS"
-    "P.Reference\022/\n\024original_legend_rect\030\007 \001("
-    "\0132\021.TSCH.RectArchive\"\231\002\n PropertyMutatio"
-    "nUndoTupleArchive\022\"\n\nchart_info\030\001 \001(\0132\016."
-    "TSP.Reference\022.\n\020style_owner_type\030\002 \001(\0162"
-    "\024.TSCH.StyleOwnerType\022\r\n\005index\030\003 \001(\r\022!\n\t"
-    "old_style\030\004 \001(\0132\016.TSP.Reference\022!\n\tnew_s"
-    "tyle\030\005 \001(\0132\016.TSP.Reference\022%\n\rold_non_st"
-    "yle\030\006 \001(\0132\016.TSP.Reference\022%\n\rnew_non_sty"
-    "le\030\007 \001(\0132\016.TSP.Reference\"\274\001\n\031StyleSwapUn"
-    "doTupleArchive\022\"\n\nchart_info\030\001 \001(\0132\016.TSP"
-    ".Reference\022&\n\tswap_type\030\002 \001(\0162\023.TSCH.Sty"
-    "leSwapType\022\r\n\005index\030\003 \001(\r\022!\n\told_value\030\004"
-    " \001(\0132\016.TSP.Reference\022!\n\tnew_value\030\005 \001(\0132"
-    "\016.TSP.Reference\"y\n\027CommandStyleSwapArchi"
-    "ve\022(\n\005super\030\001 \002(\0132\031.TSCH.ChartCommandArc"
-    "hive\0224\n\013undo_tuples\030\002 \003(\0132\037.TSCH.StyleSw"
-    "apUndoTupleArchive\"~\n\033CommandSetSeriesNa"
-    "meArchive\022(\n\005super\030\001 \002(\0132\031.TSCH.ChartCom"
-    "mandArchive\022\023\n\013seriesIndex\030\002 \002(\r\022\017\n\007oldN"
-    "ame\030\003 \002(\t\022\017\n\007newName\030\004 \002(\t\"\234\001\n\035CommandSe"
-    "tCategoryNameArchive\022(\n\005super\030\001 \002(\0132\031.TS"
-    "CH.ChartCommandArchive\022\025\n\rcategoryIndex\030"
-    "\002 \002(\r\022\017\n\007oldName\030\003 \002(\t\022\017\n\007newName\030\004 \002(\t\022"
-    "\030\n\020isMultiDataIndex\030\005 \001(\010\"u\n\031CommandAddG"
-    "ridRowsArchive\022(\n\005super\030\001 \002(\0132\031.TSCH.Cha"
-    "rtCommandArchive\022\020\n\010location\030\002 \002(\r\022\016\n\006le"
-    "ngth\030\003 \001(\r\022\014\n\004name\030\004 \003(\t\"x\n\034CommandAddGr"
-    "idColumnsArchive\022(\n\005super\030\001 \002(\0132\031.TSCH.C"
-    "hartCommandArchive\022\020\n\010location\030\002 \002(\r\022\016\n\006"
-    "length\030\003 \001(\r\022\014\n\004name\030\004 \003(\t\"z\n\032CommandMov"
-    "eGridRowsArchive\022(\n\005super\030\001 \002(\0132\031.TSCH.C"
-    "hartCommandArchive\022\020\n\010location\030\002 \002(\r\022\016\n\006"
-    "length\030\003 \002(\r\022\020\n\010afterrow\030\004 \002(\005\"\200\001\n\035Comma"
-    "ndMoveGridColumnsArchive\022(\n\005super\030\001 \002(\0132"
-    "\031.TSCH.ChartCommandArchive\022\020\n\010location\030\002"
-    " \002(\r\022\016\n\006length\030\003 \002(\r\022\023\n\013aftercolumn\030\004 \002("
-    "\005\"\204\002\n\034CommandDeleteGridRowsArchive\022(\n\005su"
-    "per\030\001 \002(\0132\031.TSCH.ChartCommandArchive\022\020\n\010"
-    "location\030\002 \002(\r\022\016\n\006length\030\003 \002(\r\022\r\n\005names\030"
-    "\004 \003(\t\022>\n\tvalue_row\030\006 \003(\0132+.TSCH.CommandD"
-    "eleteGridRowsArchive.ValueRow\022\030\n\020removed"
-    "_all_rows\030\007 \001(\010\022\024\n\014column_names\030\010 \003(\t\032\031\n"
-    "\010ValueRow\022\r\n\005value\030\005 \003(\001\"\212\002\n\037CommandDele"
-    "teGridColumnsArchive\022(\n\005super\030\001 \002(\0132\031.TS"
+    "to\032\022TSWPArchives.proto\"\247\002\n\032CommandSetCha"
+    "rtTypeArchive\022(\n\005super\030\001 \002(\0132\031.TSCH.Char"
+    "tCommandArchive\022%\n\014oldChartType\030\002 \002(\0162\017."
+    "TSCH.ChartType\022%\n\014newChartType\030\003 \002(\0162\017.T"
+    "SCH.ChartType\022-\n\025info_geometry_command\030\005"
+    " \001(\0132\016.TSP.Reference\0221\n\031anchor_attachmen"
+    "t_command\030\006 \001(\0132\016.TSP.Reference\022/\n\024origi"
+    "nal_legend_rect\030\007 \001(\0132\021.TSCH.RectArchive"
+    "\"\274\001\n\031StyleSwapUndoTupleArchive\022\"\n\nchart_"
+    "info\030\001 \001(\0132\016.TSP.Reference\022&\n\tswap_type\030"
+    "\002 \001(\0162\023.TSCH.StyleSwapType\022\r\n\005index\030\003 \001("
+    "\r\022!\n\told_value\030\004 \001(\0132\016.TSP.Reference\022!\n\t"
+    "new_value\030\005 \001(\0132\016.TSP.Reference\"y\n\027Comma"
+    "ndStyleSwapArchive\022(\n\005super\030\001 \002(\0132\031.TSCH"
+    ".ChartCommandArchive\0224\n\013undo_tuples\030\002 \003("
+    "\0132\037.TSCH.StyleSwapUndoTupleArchive\"\246\013\n\036C"
+    "ommandMutatePropertiesArchive\022(\n\005super\030\001"
+    " \002(\0132\031.TSCH.ChartCommandArchive\022$\n\014rollb"
+    "ack_cmd\030\002 \001(\0132\016.TSP.Reference\022a\n\033generic"
+    "_property_delta_maps\030\003 \003(\0132<.TSCH.Comman"
+    "dMutatePropertiesArchive.GenericProperty"
+    "DeltaMap\022_\n\032paragraph_style_delta_maps\030\004"
+    " \003(\0132;.TSCH.CommandMutatePropertiesArchi"
+    "ve.ParagraphStyleDeltaMap\032\326\004\n\027GenericPro"
+    "pertyDeltaMap\022.\n\020style_owner_type\030\001 \001(\0162"
+    "\024.TSCH.StyleOwnerType\022\031\n\021style_owner_ind"
+    "ex\030\002 \001(\r\022a\n\013forward_map\030\003 \001(\0132L.TSCH.Com"
+    "mandMutatePropertiesArchive.GenericPrope"
+    "rtyDeltaMap.GenericMapUnion\022a\n\013reverse_m"
+    "ap\030\004 \001(\0132L.TSCH.CommandMutatePropertiesA"
+    "rchive.GenericPropertyDeltaMap.GenericMa"
+    "pUnion\032\251\002\n\017GenericMapUnion\022A\n\tchart_map\030"
+    "\002 \001(\0132..TSCH.Generated.ChartGenericPrope"
+    "rtyMapArchive\022C\n\nlegend_map\030\003 \001(\0132/.TSCH"
+    ".Generated.LegendGenericPropertyMapArchi"
+    "ve\022D\n\010axis_map\030\004 \001(\01322.TSCH.Generated.Ch"
+    "artAxisGenericPropertyMapArchive\022H\n\nseri"
+    "es_map\030\005 \001(\01324.TSCH.Generated.ChartSerie"
+    "sGenericPropertyMapArchive\032\226\004\n\026Paragraph"
+    "StyleDeltaMap\022.\n\020style_owner_type\030\001 \001(\0162"
+    "\024.TSCH.StyleOwnerType\022\031\n\021style_owner_ind"
+    "ex\030\002 \001(\r\022&\n\036paragraph_style_index_proper"
+    "ty\030\003 \001(\r\022q\n\013forward_map\030\004 \001(\0132\\.TSCH.Com"
+    "mandMutatePropertiesArchive.ParagraphSty"
+    "leDeltaMap.ParagraphStylePropertyMapArch"
+    "ive\022q\n\013reverse_map\030\005 \001(\0132\\.TSCH.CommandM"
+    "utatePropertiesArchive.ParagraphStyleDel"
+    "taMap.ParagraphStylePropertyMapArchive\032\242"
+    "\001\n ParagraphStylePropertyMapArchive\022>\n\017c"
+    "har_properties\030\001 \001(\0132%.TSWP.CharacterSty"
+    "lePropertiesArchive\022>\n\017para_properties\030\002"
+    " \001(\0132%.TSWP.ParagraphStylePropertiesArch"
+    "ive\"\202\001\n\032CommandScaleAllTextArchive\022(\n\005su"
+    "per\030\001 \002(\0132\031.TSCH.ChartCommandArchive\022$\n\014"
+    "rollback_cmd\030\002 \001(\0132\016.TSP.Reference\022\024\n\014sc"
+    "ale_factor\030\003 \001(\001\"\200\002\n\033CommandSetFontFamil"
+    "yArchive\022(\n\005super\030\001 \002(\0132\031.TSCH.ChartComm"
+    "andArchive\022$\n\014rollback_cmd\030\002 \001(\0132\016.TSP.R"
+    "eference\022\027\n\017new_font_family\030\003 \001(\t\022\027\n\017old"
+    "_font_family\030\004 \001(\t\022_\n\032paragraph_style_de"
+    "lta_maps\030\005 \003(\0132;.TSCH.CommandMutatePrope"
+    "rtiesArchive.ParagraphStyleDeltaMap\"\241\004\n\032"
+    "CommandApplyFillSetArchive\022(\n\005super\030\001 \002("
+    "\0132\031.TSCH.ChartCommandArchive\022$\n\014rollback"
+    "_cmd\030\002 \001(\0132\016.TSP.Reference\022\"\n\032fwd_fill_s"
+    "et_lookup_string\030\003 \001(\t\022\"\n\032rev_fill_set_l"
+    "ookup_string\030\004 \001(\t\022V\n\025fwd_captured_fill_"
+    "set\030\005 \001(\01327.TSCH.CommandApplyFillSetArch"
+    "ive.CapturedFillSetArchive\022V\n\025rev_captur"
+    "ed_fill_set\030\006 \001(\01327.TSCH.CommandApplyFil"
+    "lSetArchive.CapturedFillSetArchive\022/\n\'re"
+    "v_last_applied_fill_set_lookup_string\030\007 "
+    "\001(\t\032\211\001\n\026CapturedFillSetArchive\022\022\n\nidenti"
+    "fier\030\001 \001(\t\022%\n\035number_of_theme_series_sty"
+    "les\030\002 \001(\r\0224\n\rproperty_maps\030\003 \003(\0132\035.TSCH."
+    "ChartSeriesStyleArchive\"~\n\033CommandSetSer"
+    "iesNameArchive\022(\n\005super\030\001 \002(\0132\031.TSCH.Cha"
+    "rtCommandArchive\022\023\n\013seriesIndex\030\002 \002(\r\022\017\n"
+    "\007oldName\030\003 \002(\t\022\017\n\007newName\030\004 \002(\t\"\234\001\n\035Comm"
+    "andSetCategoryNameArchive\022(\n\005super\030\001 \002(\013"
+    "2\031.TSCH.ChartCommandArchive\022\025\n\rcategoryI"
+    "ndex\030\002 \002(\r\022\017\n\007oldName\030\003 \002(\t\022\017\n\007newName\030\004"
+    " \002(\t\022\030\n\020isMultiDataIndex\030\005 \001(\010\"\202\001\n\031Comma"
+    "ndAddGridRowsArchive\022(\n\005super\030\001 \002(\0132\031.TS"
     "CH.ChartCommandArchive\022\020\n\010location\030\002 \002(\r"
-    "\022\016\n\006length\030\003 \002(\r\022\r\n\005names\030\004 \003(\t\022A\n\tvalue"
-    "_row\030\006 \003(\0132..TSCH.CommandDeleteGridColum"
-    "nsArchive.ValueRow\022\033\n\023removed_all_column"
-    "s\030\007 \001(\010\022\021\n\trow_names\030\010 \003(\t\032\031\n\010ValueRow\022\r"
-    "\n\005value\030\005 \003(\001\"\201\001\n\033CommandSetPreviewLocAr"
-    "chive\022(\n\005super\030\001 \002(\0132\031.TSCH.ChartCommand"
-    "Archive\022\033\n\007old_loc\030\002 \002(\0132\n.TSP.Point\022\033\n\007"
-    "new_loc\030\003 \002(\0132\n.TSP.Point\"\221\001\n\032CommandSet"
-    "GridValueArchive\022(\n\005super\030\001 \002(\0132\031.TSCH.C"
-    "hartCommandArchive\022\020\n\010rowindex\030\002 \002(\r\022\023\n\013"
-    "columnindex\030\003 \002(\r\022\020\n\010oldvalue\030\004 \002(\001\022\020\n\010n"
-    "ewvalue\030\005 \002(\001\"x\n\036CommandSetGridDirection"
-    "Archive\022(\n\005super\030\001 \002(\0132\031.TSCH.ChartComma"
-    "ndArchive\022\025\n\rold_direction\030\002 \002(\r\022\025\n\rnew_"
-    "direction\030\003 \002(\r\"~\n\033CommandSetSeriesTypeA"
-    "rchive\022(\n\005super\030\001 \002(\0132\031.TSCH.ChartComman"
-    "dArchive\022\023\n\013seriesindex\030\002 \002(\r\022\017\n\007oldtype"
-    "\030\003 \002(\r\022\017\n\007newtype\030\004 \002(\r\"p\n\036CommandSetSca"
-    "tterFormatArchive\022(\n\005super\030\001 \002(\0132\031.TSCH."
-    "ChartCommandArchive\022\021\n\toldformat\030\003 \002(\r\022\021"
-    "\n\tnewformat\030\004 \002(\r\"r\n\"CommandSetMultiData"
-    "SetIndexArchive\022(\n\005super\030\001 \002(\0132\031.TSCH.Ch"
-    "artCommandArchive\022\020\n\010oldindex\030\002 \002(\r\022\020\n\010n"
-    "ewindex\030\003 \002(\r\"\242\001\n\034CommandSetLegendFrameA"
-    "rchive\022(\n\005super\030\001 \002(\0132\031.TSCH.ChartComman"
-    "dArchive\022+\n\020old_legend_frame\030\002 \002(\0132\021.TSC"
-    "H.RectArchive\022+\n\020new_legend_frame\030\003 \002(\0132"
-    "\021.TSCH.RectArchive\"\331\001\n\033CommandSetPieWedg"
-    "eExplosion\022(\n\005super\030\001 \002(\0132\031.TSCH.ChartCo"
-    "mmandArchive\022-\n\025info_geometry_command\030\002 "
-    "\001(\0132\016.TSP.Reference\022.\n\026style_mutation_co"
-    "mmand\030\003 \001(\0132\016.TSP.Reference\0221\n\031anchor_at"
-    "tachment_command\030\004 \001(\0132\016.TSP.Reference\"`"
-    "\n\031SynchronousCommandArchive\022\"\n\005super\030\001 \002"
-    "(\0132\023.TSK.CommandArchive\022\037\n\007command\030\002 \002(\013"
-    "2\016.TSP.Reference\"\215\001\n\030CommandReplaceAllAr"
-    "chive\0221\n\005super\030\001 \002(\0132\".TSK.ReplaceAllChi"
-    "ldCommandArchive\022\034\n\004info\030\002 \002(\0132\016.TSP.Ref"
-    "erence\022 \n\010commands\030\003 \003(\0132\016.TSP.Reference"
-    "\"\257\001\n\026CommandChartApplyTheme\0221\n\005super\030\001 \002"
-    "(\0132\".TSS.ApplyThemeChildCommandArchive\022\034"
-    "\n\004info\030\002 \002(\0132\016.TSP.Reference\022$\n\014swap_com"
-    "mand\030\003 \001(\0132\016.TSP.Reference\022\036\n\006preset\030\004 \001"
-    "(\0132\016.TSP.Reference\"\310\001\n\027CommandChartApply"
-    "Preset\022(\n\005super\030\001 \002(\0132\031.TSCH.ChartComman"
-    "dArchive\022$\n\014swap_command\030\002 \001(\0132\016.TSP.Ref"
-    "erence\022\036\n\006preset\030\003 \001(\0132\016.TSP.Reference\022="
-    "\n\010behavior\030\004 \001(\0162\031.TSCH.ApplyPresetBehav"
-    "ior:\020remove_overrides\"\334\001\n\035CommandCleanup"
-    "GeometryArchive\022(\n\005super\030\001 \002(\0132\031.TSCH.Ch"
-    "artCommandArchive\022-\n\025info_geometry_comma"
-    "nd\030\002 \001(\0132\016.TSP.Reference\0221\n\031anchor_attac"
-    "hment_command\030\003 \001(\0132\016.TSP.Reference\022/\n\024o"
-    "riginal_legend_rect\030\004 \001(\0132\021.TSCH.RectArc"
-    "hive\"u\n\023ChartCommandArchive\022\"\n\005super\030\001 \002"
-    "(\0132\023.TSK.CommandArchive\022\034\n\004info\030\002 \002(\0132\016."
-    "TSP.Reference\022\034\n\024original_dirty_state\030\003 "
-    "\001(\010\"\241\003\n\037CommandReplaceGridValuesArchive\022"
+    "\022\016\n\006length\030\003 \001(\r\022\014\n\004name\030\004 \003(\t\022\013\n\003ids\030\005 "
+    "\003(\t\"\205\001\n\034CommandAddGridColumnsArchive\022(\n\005"
+    "super\030\001 \002(\0132\031.TSCH.ChartCommandArchive\022\020"
+    "\n\010location\030\002 \002(\r\022\016\n\006length\030\003 \001(\r\022\014\n\004name"
+    "\030\004 \003(\t\022\013\n\003ids\030\005 \003(\t\"z\n\032CommandMoveGridRo"
+    "wsArchive\022(\n\005super\030\001 \002(\0132\031.TSCH.ChartCom"
+    "mandArchive\022\020\n\010location\030\002 \002(\r\022\016\n\006length\030"
+    "\003 \002(\r\022\020\n\010afterrow\030\004 \002(\005\"\200\001\n\035CommandMoveG"
+    "ridColumnsArchive\022(\n\005super\030\001 \002(\0132\031.TSCH."
+    "ChartCommandArchive\022\020\n\010location\030\002 \002(\r\022\016\n"
+    "\006length\030\003 \002(\r\022\023\n\013aftercolumn\030\004 \002(\005\"\317\002\n\034C"
+    "ommandDeleteGridRowsArchive\022(\n\005super\030\001 \002"
+    "(\0132\031.TSCH.ChartCommandArchive\022\020\n\010locatio"
+    "n\030\002 \002(\r\022\016\n\006length\030\003 \002(\r\022\r\n\005names\030\004 \003(\t\022>"
+    "\n\tvalue_row\030\006 \003(\0132+.TSCH.CommandDeleteGr"
+    "idRowsArchive.ValueRow\022\030\n\020removed_all_ro"
+    "ws\030\007 \001(\010\022\024\n\014column_names\030\010 \003(\t\022\017\n\007row_id"
+    "s\030\t \003(\t\022\022\n\ncolumn_ids\030\n \003(\t\022$\n\034add_dummy"
+    "_data_on_delete_all\030\013 \002(\010\032\031\n\010ValueRow\022\r\n"
+    "\005value\030\005 \003(\001\"\325\002\n\037CommandDeleteGridColumn"
+    "sArchive\022(\n\005super\030\001 \002(\0132\031.TSCH.ChartComm"
+    "andArchive\022\020\n\010location\030\002 \002(\r\022\016\n\006length\030\003"
+    " \002(\r\022\r\n\005names\030\004 \003(\t\022A\n\tvalue_row\030\006 \003(\0132."
+    ".TSCH.CommandDeleteGridColumnsArchive.Va"
+    "lueRow\022\033\n\023removed_all_columns\030\007 \001(\010\022\021\n\tr"
+    "ow_names\030\010 \003(\t\022\017\n\007row_ids\030\t \003(\t\022\022\n\ncolum"
+    "n_ids\030\n \003(\t\022$\n\034add_dummy_data_on_delete_"
+    "all\030\013 \002(\010\032\031\n\010ValueRow\022\r\n\005value\030\005 \003(\001\"\201\001\n"
+    "\033CommandSetPreviewLocArchive\022(\n\005super\030\001 "
+    "\002(\0132\031.TSCH.ChartCommandArchive\022\033\n\007old_lo"
+    "c\030\002 \002(\0132\n.TSP.Point\022\033\n\007new_loc\030\003 \002(\0132\n.T"
+    "SP.Point\"\221\001\n\032CommandSetGridValueArchive\022"
     "(\n\005super\030\001 \002(\0132\031.TSCH.ChartCommandArchiv"
     "e\022\020\n\010rowindex\030\002 \002(\r\022\023\n\013columnindex\030\003 \002(\r"
-    "\022E\n\rold_data_rows\030\004 \003(\0132..TSCH.CommandRe"
-    "placeGridValuesArchive.ValueRow\022E\n\rnew_d"
-    "ata_rows\030\005 \003(\0132..TSCH.CommandReplaceGrid"
-    "ValuesArchive.ValueRow\022\025\n\rold_row_names\030"
-    "\006 \003(\t\022\025\n\rnew_row_names\030\007 \003(\t\022\025\n\rold_col_"
-    "names\030\010 \003(\t\022\025\n\rnew_col_names\030\t \003(\t\022\023\n\013ro"
-    "ws_to_add\030\n \001(\r\022\023\n\013cols_to_add\030\013 \001(\r\032\031\n\010"
-    "ValueRow\022\r\n\005value\030\001 \003(\001\"\350\002\n CommandRepla"
-    "ceThemePresetArchive\022\"\n\005super\030\001 \002(\0132\023.TS"
-    "K.CommandArchive\022\035\n\005theme\030\002 \002(\0132\016.TSP.Re"
-    "ference\022\"\n\nold_preset\030\003 \001(\0132\016.TSP.Refere"
-    "nce\022\"\n\nnew_preset\030\004 \001(\0132\016.TSP.Reference\022"
-    "R\n\013identifiers\030\005 \003(\0132=.TSCH.CommandRepla"
-    "ceThemePresetArchive.StyleAndIdentifierP"
-    "air\022\030\n\020old_preset_index\030\006 \001(\004\032K\n\026StyleAn"
-    "dIdentifierPair\022\035\n\005style\030\001 \002(\0132\016.TSP.Ref"
-    "erence\022\022\n\nidentifier\030\002 \002(\t\"\?\n\031CommandInv"
-    "alidateWPCaches\022\"\n\005super\030\001 \002(\0132\023.TSK.Com"
-    "mandArchive*T\n\016StyleOwnerType\022\016\n\nchart_i"
-    "nfo\020\001\022\020\n\014legend_model\020\002\022\016\n\nchart_axis\020\003\022"
-    "\020\n\014chart_series\020\004*\240\002\n\rStyleSwapType\022\017\n\013c"
-    "hart_style\020\001\022\023\n\017chart_non_style\020\002\022\020\n\014leg"
-    "end_style\020\003\022\024\n\020legend_non_style\020\004\022\024\n\020val"
-    "ue_axis_style\020\005\022\030\n\024value_axis_non_style\020"
-    "\006\022\027\n\023category_axis_style\020\007\022\033\n\027category_a"
-    "xis_non_style\020\010\022\026\n\022series_theme_style\020\t\022"
-    "\030\n\024series_private_style\020\n\022\024\n\020series_non_"
-    "style\020\013\022\023\n\017paragraph_style\020\014*\\\n\023ApplyPre"
-    "setBehavior\022\024\n\020remove_overrides\020\001\022\026\n\022pre"
-    "serve_overrides\020\002\022\027\n\023preserve_appearance"
-    "\020\003", 5842);
+    "\022\020\n\010oldvalue\030\004 \002(\001\022\020\n\010newvalue\030\005 \002(\001\"x\n\036"
+    "CommandSetGridDirectionArchive\022(\n\005super\030"
+    "\001 \002(\0132\031.TSCH.ChartCommandArchive\022\025\n\rold_"
+    "direction\030\002 \002(\r\022\025\n\rnew_direction\030\003 \002(\r\"~"
+    "\n\033CommandSetSeriesTypeArchive\022(\n\005super\030\001"
+    " \002(\0132\031.TSCH.ChartCommandArchive\022\023\n\013serie"
+    "sindex\030\002 \002(\r\022\017\n\007oldtype\030\003 \002(\r\022\017\n\007newtype"
+    "\030\004 \002(\r\"p\n\036CommandSetScatterFormatArchive"
+    "\022(\n\005super\030\001 \002(\0132\031.TSCH.ChartCommandArchi"
+    "ve\022\021\n\toldformat\030\003 \002(\r\022\021\n\tnewformat\030\004 \002(\r"
+    "\"r\n\"CommandSetMultiDataSetIndexArchive\022("
+    "\n\005super\030\001 \002(\0132\031.TSCH.ChartCommandArchive"
+    "\022\020\n\010oldindex\030\002 \002(\r\022\020\n\010newindex\030\003 \002(\r\"\242\001\n"
+    "\034CommandSetLegendFrameArchive\022(\n\005super\030\001"
+    " \002(\0132\031.TSCH.ChartCommandArchive\022+\n\020old_l"
+    "egend_frame\030\002 \002(\0132\021.TSCH.RectArchive\022+\n\020"
+    "new_legend_frame\030\003 \002(\0132\021.TSCH.RectArchiv"
+    "e\"\331\001\n\033CommandSetPieWedgeExplosion\022(\n\005sup"
+    "er\030\001 \002(\0132\031.TSCH.ChartCommandArchive\022-\n\025i"
+    "nfo_geometry_command\030\002 \001(\0132\016.TSP.Referen"
+    "ce\022.\n\026style_mutation_command\030\003 \001(\0132\016.TSP"
+    ".Reference\0221\n\031anchor_attachment_command\030"
+    "\004 \001(\0132\016.TSP.Reference\"`\n\031SynchronousComm"
+    "andArchive\022\"\n\005super\030\001 \002(\0132\023.TSK.CommandA"
+    "rchive\022\037\n\007command\030\002 \002(\0132\016.TSP.Reference\""
+    "\215\001\n\030CommandReplaceAllArchive\0221\n\005super\030\001 "
+    "\002(\0132\".TSK.ReplaceAllChildCommandArchive\022"
+    "\034\n\004info\030\002 \002(\0132\016.TSP.Reference\022 \n\010command"
+    "s\030\003 \003(\0132\016.TSP.Reference\"\257\001\n\026CommandChart"
+    "ApplyTheme\0221\n\005super\030\001 \002(\0132\".TSS.ApplyThe"
+    "meChildCommandArchive\022\034\n\004info\030\002 \002(\0132\016.TS"
+    "P.Reference\022$\n\014swap_command\030\003 \001(\0132\016.TSP."
+    "Reference\022\036\n\006preset\030\004 \001(\0132\016.TSP.Referenc"
+    "e\"\310\001\n\027CommandChartApplyPreset\022(\n\005super\030\001"
+    " \002(\0132\031.TSCH.ChartCommandArchive\022$\n\014swap_"
+    "command\030\002 \001(\0132\016.TSP.Reference\022\036\n\006preset\030"
+    "\003 \001(\0132\016.TSP.Reference\022=\n\010behavior\030\004 \001(\0162"
+    "\031.TSCH.ApplyPresetBehavior:\020remove_overr"
+    "ides\"\334\001\n\035CommandCleanupGeometryArchive\022("
+    "\n\005super\030\001 \002(\0132\031.TSCH.ChartCommandArchive"
+    "\022-\n\025info_geometry_command\030\002 \001(\0132\016.TSP.Re"
+    "ference\0221\n\031anchor_attachment_command\030\003 \001"
+    "(\0132\016.TSP.Reference\022/\n\024original_legend_re"
+    "ct\030\004 \001(\0132\021.TSCH.RectArchive\"u\n\023ChartComm"
+    "andArchive\022\"\n\005super\030\001 \002(\0132\023.TSK.CommandA"
+    "rchive\022\034\n\004info\030\002 \002(\0132\016.TSP.Reference\022\034\n\024"
+    "original_dirty_state\030\003 \001(\010\"\306\003\n\037CommandRe"
+    "placeGridValuesArchive\022(\n\005super\030\001 \002(\0132\031."
+    "TSCH.ChartCommandArchive\022\020\n\010rowindex\030\002 \002"
+    "(\r\022\023\n\013columnindex\030\003 \002(\r\022E\n\rold_data_rows"
+    "\030\004 \003(\0132..TSCH.CommandReplaceGridValuesAr"
+    "chive.ValueRow\022E\n\rnew_data_rows\030\005 \003(\0132.."
+    "TSCH.CommandReplaceGridValuesArchive.Val"
+    "ueRow\022\025\n\rold_row_names\030\006 \003(\t\022\025\n\rnew_row_"
+    "names\030\007 \003(\t\022\025\n\rold_col_names\030\010 \003(\t\022\025\n\rne"
+    "w_col_names\030\t \003(\t\022\023\n\013rows_to_add\030\n \001(\r\022\023"
+    "\n\013cols_to_add\030\013 \001(\r\022\017\n\007row_ids\030\014 \003(\t\022\022\n\n"
+    "column_ids\030\r \003(\t\032\031\n\010ValueRow\022\r\n\005value\030\001 "
+    "\003(\001\"\350\002\n CommandReplaceThemePresetArchive"
+    "\022\"\n\005super\030\001 \002(\0132\023.TSK.CommandArchive\022\035\n\005"
+    "theme\030\002 \002(\0132\016.TSP.Reference\022\"\n\nold_prese"
+    "t\030\003 \001(\0132\016.TSP.Reference\022\"\n\nnew_preset\030\004 "
+    "\001(\0132\016.TSP.Reference\022R\n\013identifiers\030\005 \003(\013"
+    "2=.TSCH.CommandReplaceThemePresetArchive"
+    ".StyleAndIdentifierPair\022\030\n\020old_preset_in"
+    "dex\030\006 \001(\004\032K\n\026StyleAndIdentifierPair\022\035\n\005s"
+    "tyle\030\001 \002(\0132\016.TSP.Reference\022\022\n\nidentifier"
+    "\030\002 \002(\t\"\?\n\031CommandInvalidateWPCaches\022\"\n\005s"
+    "uper\030\001 \002(\0132\023.TSK.CommandArchive\"\204\001\n\037Comm"
+    "andSetGridColumnNameArchive\022(\n\005super\030\001 \002"
+    "(\0132\031.TSCH.ChartCommandArchive\022\023\n\013columni"
+    "ndex\030\002 \002(\r\022\020\n\010oldvalue\030\003 \002(\t\022\020\n\010newvalue"
+    "\030\004 \002(\t\"~\n\034CommandSetGridRowNameArchive\022("
+    "\n\005super\030\001 \002(\0132\031.TSCH.ChartCommandArchive"
+    "\022\020\n\010rowindex\030\002 \002(\r\022\020\n\010oldvalue\030\003 \002(\t\022\020\n\010"
+    "newvalue\030\004 \002(\t\"\304\004\n!CommandReplaceCustomF"
+    "ormatArchive\022(\n\005super\030\001 \002(\0132\031.TSCH.Chart"
+    "CommandArchive\022$\n\014rollback_cmd\030\002 \001(\0132\016.T"
+    "SP.Reference\0223\n\021old_format_object\030\003 \001(\0132"
+    "\030.TSK.FormatStructArchive\0223\n\021new_format_"
+    "object\030\004 \001(\0132\030.TSK.FormatStructArchive\022W"
+    "\n\021forward_mutations\030\005 \003(\0132<.TSCH.Command"
+    "ReplaceCustomFormatArchive.FormatObjectM"
+    "utation\022W\n\021reverse_mutations\030\006 \003(\0132<.TSC"
+    "H.CommandReplaceCustomFormatArchive.Form"
+    "atObjectMutation\032\262\001\n\024FormatObjectMutatio"
+    "n\022.\n\020style_owner_type\030\001 \001(\0162\024.TSCH.Style"
+    "OwnerType\022\031\n\021style_owner_index\030\002 \001(\r\022\036\n\026"
+    "format_object_property\030\003 \001(\r\022/\n\rformat_o"
+    "bject\030\004 \001(\0132\030.TSK.FormatStructArchive*T\n"
+    "\016StyleOwnerType\022\016\n\nchart_info\020\001\022\020\n\014legen"
+    "d_model\020\002\022\016\n\nchart_axis\020\003\022\020\n\014chart_serie"
+    "s\020\004*\240\002\n\rStyleSwapType\022\017\n\013chart_style\020\001\022\023"
+    "\n\017chart_non_style\020\002\022\020\n\014legend_style\020\003\022\024\n"
+    "\020legend_non_style\020\004\022\024\n\020value_axis_style\020"
+    "\005\022\030\n\024value_axis_non_style\020\006\022\027\n\023category_"
+    "axis_style\020\007\022\033\n\027category_axis_non_style\020"
+    "\010\022\026\n\022series_theme_style\020\t\022\030\n\024series_priv"
+    "ate_style\020\n\022\024\n\020series_non_style\020\013\022\023\n\017par"
+    "agraph_style\020\014*\\\n\023ApplyPresetBehavior\022\024\n"
+    "\020remove_overrides\020\001\022\026\n\022preserve_override"
+    "s\020\002\022\027\n\023preserve_appearance\020\003", 9028);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "TSCHCommandArchives.proto", &protobuf_RegisterTypes);
   CommandSetChartTypeArchive::default_instance_ = new CommandSetChartTypeArchive();
-  PropertyMutationUndoTupleArchive::default_instance_ = new PropertyMutationUndoTupleArchive();
   StyleSwapUndoTupleArchive::default_instance_ = new StyleSwapUndoTupleArchive();
   CommandStyleSwapArchive::default_instance_ = new CommandStyleSwapArchive();
+  CommandMutatePropertiesArchive::default_instance_ = new CommandMutatePropertiesArchive();
+  CommandMutatePropertiesArchive_GenericPropertyDeltaMap::default_instance_ = new CommandMutatePropertiesArchive_GenericPropertyDeltaMap();
+  CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion::default_instance_ = new CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion();
+  CommandMutatePropertiesArchive_ParagraphStyleDeltaMap::default_instance_ = new CommandMutatePropertiesArchive_ParagraphStyleDeltaMap();
+  CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive::default_instance_ = new CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive();
+  CommandScaleAllTextArchive::default_instance_ = new CommandScaleAllTextArchive();
+  CommandSetFontFamilyArchive::default_instance_ = new CommandSetFontFamilyArchive();
+  CommandApplyFillSetArchive::default_instance_ = new CommandApplyFillSetArchive();
+  CommandApplyFillSetArchive_CapturedFillSetArchive::default_instance_ = new CommandApplyFillSetArchive_CapturedFillSetArchive();
   CommandSetSeriesNameArchive::default_instance_ = new CommandSetSeriesNameArchive();
   CommandSetCategoryNameArchive::default_instance_ = new CommandSetCategoryNameArchive();
   CommandAddGridRowsArchive::default_instance_ = new CommandAddGridRowsArchive();
@@ -1075,10 +1473,22 @@ void protobuf_AddDesc_TSCHCommandArchives_2eproto() {
   CommandReplaceThemePresetArchive::default_instance_ = new CommandReplaceThemePresetArchive();
   CommandReplaceThemePresetArchive_StyleAndIdentifierPair::default_instance_ = new CommandReplaceThemePresetArchive_StyleAndIdentifierPair();
   CommandInvalidateWPCaches::default_instance_ = new CommandInvalidateWPCaches();
+  CommandSetGridColumnNameArchive::default_instance_ = new CommandSetGridColumnNameArchive();
+  CommandSetGridRowNameArchive::default_instance_ = new CommandSetGridRowNameArchive();
+  CommandReplaceCustomFormatArchive::default_instance_ = new CommandReplaceCustomFormatArchive();
+  CommandReplaceCustomFormatArchive_FormatObjectMutation::default_instance_ = new CommandReplaceCustomFormatArchive_FormatObjectMutation();
   CommandSetChartTypeArchive::default_instance_->InitAsDefaultInstance();
-  PropertyMutationUndoTupleArchive::default_instance_->InitAsDefaultInstance();
   StyleSwapUndoTupleArchive::default_instance_->InitAsDefaultInstance();
   CommandStyleSwapArchive::default_instance_->InitAsDefaultInstance();
+  CommandMutatePropertiesArchive::default_instance_->InitAsDefaultInstance();
+  CommandMutatePropertiesArchive_GenericPropertyDeltaMap::default_instance_->InitAsDefaultInstance();
+  CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion::default_instance_->InitAsDefaultInstance();
+  CommandMutatePropertiesArchive_ParagraphStyleDeltaMap::default_instance_->InitAsDefaultInstance();
+  CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive::default_instance_->InitAsDefaultInstance();
+  CommandScaleAllTextArchive::default_instance_->InitAsDefaultInstance();
+  CommandSetFontFamilyArchive::default_instance_->InitAsDefaultInstance();
+  CommandApplyFillSetArchive::default_instance_->InitAsDefaultInstance();
+  CommandApplyFillSetArchive_CapturedFillSetArchive::default_instance_->InitAsDefaultInstance();
   CommandSetSeriesNameArchive::default_instance_->InitAsDefaultInstance();
   CommandSetCategoryNameArchive::default_instance_->InitAsDefaultInstance();
   CommandAddGridRowsArchive::default_instance_->InitAsDefaultInstance();
@@ -1108,6 +1518,10 @@ void protobuf_AddDesc_TSCHCommandArchives_2eproto() {
   CommandReplaceThemePresetArchive::default_instance_->InitAsDefaultInstance();
   CommandReplaceThemePresetArchive_StyleAndIdentifierPair::default_instance_->InitAsDefaultInstance();
   CommandInvalidateWPCaches::default_instance_->InitAsDefaultInstance();
+  CommandSetGridColumnNameArchive::default_instance_->InitAsDefaultInstance();
+  CommandSetGridRowNameArchive::default_instance_->InitAsDefaultInstance();
+  CommandReplaceCustomFormatArchive::default_instance_->InitAsDefaultInstance();
+  CommandReplaceCustomFormatArchive_FormatObjectMutation::default_instance_->InitAsDefaultInstance();
   ::google::protobuf::internal::OnShutdown(&protobuf_ShutdownFile_TSCHCommandArchives_2eproto);
 }
 
@@ -1622,500 +2036,6 @@ void CommandSetChartTypeArchive::Swap(CommandSetChartTypeArchive* other) {
   ::google::protobuf::Metadata metadata;
   metadata.descriptor = CommandSetChartTypeArchive_descriptor_;
   metadata.reflection = CommandSetChartTypeArchive_reflection_;
-  return metadata;
-}
-
-
-// ===================================================================
-
-#ifndef _MSC_VER
-const int PropertyMutationUndoTupleArchive::kChartInfoFieldNumber;
-const int PropertyMutationUndoTupleArchive::kStyleOwnerTypeFieldNumber;
-const int PropertyMutationUndoTupleArchive::kIndexFieldNumber;
-const int PropertyMutationUndoTupleArchive::kOldStyleFieldNumber;
-const int PropertyMutationUndoTupleArchive::kNewStyleFieldNumber;
-const int PropertyMutationUndoTupleArchive::kOldNonStyleFieldNumber;
-const int PropertyMutationUndoTupleArchive::kNewNonStyleFieldNumber;
-#endif  // !_MSC_VER
-
-PropertyMutationUndoTupleArchive::PropertyMutationUndoTupleArchive()
-  : ::google::protobuf::Message() {
-  SharedCtor();
-}
-
-void PropertyMutationUndoTupleArchive::InitAsDefaultInstance() {
-  chart_info_ = const_cast< ::TSP::Reference*>(&::TSP::Reference::default_instance());
-  old_style_ = const_cast< ::TSP::Reference*>(&::TSP::Reference::default_instance());
-  new_style_ = const_cast< ::TSP::Reference*>(&::TSP::Reference::default_instance());
-  old_non_style_ = const_cast< ::TSP::Reference*>(&::TSP::Reference::default_instance());
-  new_non_style_ = const_cast< ::TSP::Reference*>(&::TSP::Reference::default_instance());
-}
-
-PropertyMutationUndoTupleArchive::PropertyMutationUndoTupleArchive(const PropertyMutationUndoTupleArchive& from)
-  : ::google::protobuf::Message() {
-  SharedCtor();
-  MergeFrom(from);
-}
-
-void PropertyMutationUndoTupleArchive::SharedCtor() {
-  _cached_size_ = 0;
-  chart_info_ = NULL;
-  style_owner_type_ = 1;
-  index_ = 0u;
-  old_style_ = NULL;
-  new_style_ = NULL;
-  old_non_style_ = NULL;
-  new_non_style_ = NULL;
-  ::memset(_has_bits_, 0, sizeof(_has_bits_));
-}
-
-PropertyMutationUndoTupleArchive::~PropertyMutationUndoTupleArchive() {
-  SharedDtor();
-}
-
-void PropertyMutationUndoTupleArchive::SharedDtor() {
-  if (this != default_instance_) {
-    delete chart_info_;
-    delete old_style_;
-    delete new_style_;
-    delete old_non_style_;
-    delete new_non_style_;
-  }
-}
-
-void PropertyMutationUndoTupleArchive::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
-}
-const ::google::protobuf::Descriptor* PropertyMutationUndoTupleArchive::descriptor() {
-  protobuf_AssignDescriptorsOnce();
-  return PropertyMutationUndoTupleArchive_descriptor_;
-}
-
-const PropertyMutationUndoTupleArchive& PropertyMutationUndoTupleArchive::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_TSCHCommandArchives_2eproto();
-  return *default_instance_;
-}
-
-PropertyMutationUndoTupleArchive* PropertyMutationUndoTupleArchive::default_instance_ = NULL;
-
-PropertyMutationUndoTupleArchive* PropertyMutationUndoTupleArchive::New() const {
-  return new PropertyMutationUndoTupleArchive;
-}
-
-void PropertyMutationUndoTupleArchive::Clear() {
-  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
-    if (has_chart_info()) {
-      if (chart_info_ != NULL) chart_info_->::TSP::Reference::Clear();
-    }
-    style_owner_type_ = 1;
-    index_ = 0u;
-    if (has_old_style()) {
-      if (old_style_ != NULL) old_style_->::TSP::Reference::Clear();
-    }
-    if (has_new_style()) {
-      if (new_style_ != NULL) new_style_->::TSP::Reference::Clear();
-    }
-    if (has_old_non_style()) {
-      if (old_non_style_ != NULL) old_non_style_->::TSP::Reference::Clear();
-    }
-    if (has_new_non_style()) {
-      if (new_non_style_ != NULL) new_non_style_->::TSP::Reference::Clear();
-    }
-  }
-  ::memset(_has_bits_, 0, sizeof(_has_bits_));
-  mutable_unknown_fields()->Clear();
-}
-
-bool PropertyMutationUndoTupleArchive::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!(EXPRESSION)) return false
-  ::google::protobuf::uint32 tag;
-  while ((tag = input->ReadTag()) != 0) {
-    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // optional .TSP.Reference chart_info = 1;
-      case 1: {
-        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
-               input, mutable_chart_info()));
-        } else {
-          goto handle_uninterpreted;
-        }
-        if (input->ExpectTag(16)) goto parse_style_owner_type;
-        break;
-      }
-
-      // optional .TSCH.StyleOwnerType style_owner_type = 2;
-      case 2: {
-        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
-         parse_style_owner_type:
-          int value;
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
-                 input, &value)));
-          if (::TSCH::StyleOwnerType_IsValid(value)) {
-            set_style_owner_type(static_cast< ::TSCH::StyleOwnerType >(value));
-          } else {
-            mutable_unknown_fields()->AddVarint(2, value);
-          }
-        } else {
-          goto handle_uninterpreted;
-        }
-        if (input->ExpectTag(24)) goto parse_index;
-        break;
-      }
-
-      // optional uint32 index = 3;
-      case 3: {
-        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
-         parse_index:
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
-                 input, &index_)));
-          set_has_index();
-        } else {
-          goto handle_uninterpreted;
-        }
-        if (input->ExpectTag(34)) goto parse_old_style;
-        break;
-      }
-
-      // optional .TSP.Reference old_style = 4;
-      case 4: {
-        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
-         parse_old_style:
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
-               input, mutable_old_style()));
-        } else {
-          goto handle_uninterpreted;
-        }
-        if (input->ExpectTag(42)) goto parse_new_style;
-        break;
-      }
-
-      // optional .TSP.Reference new_style = 5;
-      case 5: {
-        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
-         parse_new_style:
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
-               input, mutable_new_style()));
-        } else {
-          goto handle_uninterpreted;
-        }
-        if (input->ExpectTag(50)) goto parse_old_non_style;
-        break;
-      }
-
-      // optional .TSP.Reference old_non_style = 6;
-      case 6: {
-        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
-         parse_old_non_style:
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
-               input, mutable_old_non_style()));
-        } else {
-          goto handle_uninterpreted;
-        }
-        if (input->ExpectTag(58)) goto parse_new_non_style;
-        break;
-      }
-
-      // optional .TSP.Reference new_non_style = 7;
-      case 7: {
-        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
-         parse_new_non_style:
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
-               input, mutable_new_non_style()));
-        } else {
-          goto handle_uninterpreted;
-        }
-        if (input->ExpectAtEnd()) return true;
-        break;
-      }
-
-      default: {
-      handle_uninterpreted:
-        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
-          return true;
-        }
-        DO_(::google::protobuf::internal::WireFormat::SkipField(
-              input, tag, mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-  return true;
-#undef DO_
-}
-
-void PropertyMutationUndoTupleArchive::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const {
-  // optional .TSP.Reference chart_info = 1;
-  if (has_chart_info()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, this->chart_info(), output);
-  }
-
-  // optional .TSCH.StyleOwnerType style_owner_type = 2;
-  if (has_style_owner_type()) {
-    ::google::protobuf::internal::WireFormatLite::WriteEnum(
-      2, this->style_owner_type(), output);
-  }
-
-  // optional uint32 index = 3;
-  if (has_index()) {
-    ::google::protobuf::internal::WireFormatLite::WriteUInt32(3, this->index(), output);
-  }
-
-  // optional .TSP.Reference old_style = 4;
-  if (has_old_style()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      4, this->old_style(), output);
-  }
-
-  // optional .TSP.Reference new_style = 5;
-  if (has_new_style()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      5, this->new_style(), output);
-  }
-
-  // optional .TSP.Reference old_non_style = 6;
-  if (has_old_non_style()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      6, this->old_non_style(), output);
-  }
-
-  // optional .TSP.Reference new_non_style = 7;
-  if (has_new_non_style()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      7, this->new_non_style(), output);
-  }
-
-  if (!unknown_fields().empty()) {
-    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        unknown_fields(), output);
-  }
-}
-
-::google::protobuf::uint8* PropertyMutationUndoTupleArchive::SerializeWithCachedSizesToArray(
-    ::google::protobuf::uint8* target) const {
-  // optional .TSP.Reference chart_info = 1;
-  if (has_chart_info()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      WriteMessageNoVirtualToArray(
-        1, this->chart_info(), target);
-  }
-
-  // optional .TSCH.StyleOwnerType style_owner_type = 2;
-  if (has_style_owner_type()) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
-      2, this->style_owner_type(), target);
-  }
-
-  // optional uint32 index = 3;
-  if (has_index()) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(3, this->index(), target);
-  }
-
-  // optional .TSP.Reference old_style = 4;
-  if (has_old_style()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      WriteMessageNoVirtualToArray(
-        4, this->old_style(), target);
-  }
-
-  // optional .TSP.Reference new_style = 5;
-  if (has_new_style()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      WriteMessageNoVirtualToArray(
-        5, this->new_style(), target);
-  }
-
-  // optional .TSP.Reference old_non_style = 6;
-  if (has_old_non_style()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      WriteMessageNoVirtualToArray(
-        6, this->old_non_style(), target);
-  }
-
-  // optional .TSP.Reference new_non_style = 7;
-  if (has_new_non_style()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      WriteMessageNoVirtualToArray(
-        7, this->new_non_style(), target);
-  }
-
-  if (!unknown_fields().empty()) {
-    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        unknown_fields(), target);
-  }
-  return target;
-}
-
-int PropertyMutationUndoTupleArchive::ByteSize() const {
-  int total_size = 0;
-
-  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
-    // optional .TSP.Reference chart_info = 1;
-    if (has_chart_info()) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
-          this->chart_info());
-    }
-
-    // optional .TSCH.StyleOwnerType style_owner_type = 2;
-    if (has_style_owner_type()) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::EnumSize(this->style_owner_type());
-    }
-
-    // optional uint32 index = 3;
-    if (has_index()) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::UInt32Size(
-          this->index());
-    }
-
-    // optional .TSP.Reference old_style = 4;
-    if (has_old_style()) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
-          this->old_style());
-    }
-
-    // optional .TSP.Reference new_style = 5;
-    if (has_new_style()) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
-          this->new_style());
-    }
-
-    // optional .TSP.Reference old_non_style = 6;
-    if (has_old_non_style()) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
-          this->old_non_style());
-    }
-
-    // optional .TSP.Reference new_non_style = 7;
-    if (has_new_non_style()) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
-          this->new_non_style());
-    }
-
-  }
-  if (!unknown_fields().empty()) {
-    total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        unknown_fields());
-  }
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = total_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
-  return total_size;
-}
-
-void PropertyMutationUndoTupleArchive::MergeFrom(const ::google::protobuf::Message& from) {
-  GOOGLE_CHECK_NE(&from, this);
-  const PropertyMutationUndoTupleArchive* source =
-    ::google::protobuf::internal::dynamic_cast_if_available<const PropertyMutationUndoTupleArchive*>(
-      &from);
-  if (source == NULL) {
-    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
-  } else {
-    MergeFrom(*source);
-  }
-}
-
-void PropertyMutationUndoTupleArchive::MergeFrom(const PropertyMutationUndoTupleArchive& from) {
-  GOOGLE_CHECK_NE(&from, this);
-  if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
-    if (from.has_chart_info()) {
-      mutable_chart_info()->::TSP::Reference::MergeFrom(from.chart_info());
-    }
-    if (from.has_style_owner_type()) {
-      set_style_owner_type(from.style_owner_type());
-    }
-    if (from.has_index()) {
-      set_index(from.index());
-    }
-    if (from.has_old_style()) {
-      mutable_old_style()->::TSP::Reference::MergeFrom(from.old_style());
-    }
-    if (from.has_new_style()) {
-      mutable_new_style()->::TSP::Reference::MergeFrom(from.new_style());
-    }
-    if (from.has_old_non_style()) {
-      mutable_old_non_style()->::TSP::Reference::MergeFrom(from.old_non_style());
-    }
-    if (from.has_new_non_style()) {
-      mutable_new_non_style()->::TSP::Reference::MergeFrom(from.new_non_style());
-    }
-  }
-  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
-}
-
-void PropertyMutationUndoTupleArchive::CopyFrom(const ::google::protobuf::Message& from) {
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-void PropertyMutationUndoTupleArchive::CopyFrom(const PropertyMutationUndoTupleArchive& from) {
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool PropertyMutationUndoTupleArchive::IsInitialized() const {
-
-  if (has_chart_info()) {
-    if (!this->chart_info().IsInitialized()) return false;
-  }
-  if (has_old_style()) {
-    if (!this->old_style().IsInitialized()) return false;
-  }
-  if (has_new_style()) {
-    if (!this->new_style().IsInitialized()) return false;
-  }
-  if (has_old_non_style()) {
-    if (!this->old_non_style().IsInitialized()) return false;
-  }
-  if (has_new_non_style()) {
-    if (!this->new_non_style().IsInitialized()) return false;
-  }
-  return true;
-}
-
-void PropertyMutationUndoTupleArchive::Swap(PropertyMutationUndoTupleArchive* other) {
-  if (other != this) {
-    std::swap(chart_info_, other->chart_info_);
-    std::swap(style_owner_type_, other->style_owner_type_);
-    std::swap(index_, other->index_);
-    std::swap(old_style_, other->old_style_);
-    std::swap(new_style_, other->new_style_);
-    std::swap(old_non_style_, other->old_non_style_);
-    std::swap(new_non_style_, other->new_non_style_);
-    std::swap(_has_bits_[0], other->_has_bits_[0]);
-    _unknown_fields_.Swap(&other->_unknown_fields_);
-    std::swap(_cached_size_, other->_cached_size_);
-  }
-}
-
-::google::protobuf::Metadata PropertyMutationUndoTupleArchive::GetMetadata() const {
-  protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::Metadata metadata;
-  metadata.descriptor = PropertyMutationUndoTupleArchive_descriptor_;
-  metadata.reflection = PropertyMutationUndoTupleArchive_reflection_;
   return metadata;
 }
 
@@ -2774,6 +2694,3286 @@ void CommandStyleSwapArchive::Swap(CommandStyleSwapArchive* other) {
   ::google::protobuf::Metadata metadata;
   metadata.descriptor = CommandStyleSwapArchive_descriptor_;
   metadata.reflection = CommandStyleSwapArchive_reflection_;
+  return metadata;
+}
+
+
+// ===================================================================
+
+#ifndef _MSC_VER
+const int CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion::kChartMapFieldNumber;
+const int CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion::kLegendMapFieldNumber;
+const int CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion::kAxisMapFieldNumber;
+const int CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion::kSeriesMapFieldNumber;
+#endif  // !_MSC_VER
+
+CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion::CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion()
+  : ::google::protobuf::Message() {
+  SharedCtor();
+}
+
+void CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion::InitAsDefaultInstance() {
+  chart_map_ = const_cast< ::TSCH::Generated::ChartGenericPropertyMapArchive*>(&::TSCH::Generated::ChartGenericPropertyMapArchive::default_instance());
+  legend_map_ = const_cast< ::TSCH::Generated::LegendGenericPropertyMapArchive*>(&::TSCH::Generated::LegendGenericPropertyMapArchive::default_instance());
+  axis_map_ = const_cast< ::TSCH::Generated::ChartAxisGenericPropertyMapArchive*>(&::TSCH::Generated::ChartAxisGenericPropertyMapArchive::default_instance());
+  series_map_ = const_cast< ::TSCH::Generated::ChartSeriesGenericPropertyMapArchive*>(&::TSCH::Generated::ChartSeriesGenericPropertyMapArchive::default_instance());
+}
+
+CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion::CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion(const CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion& from)
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  MergeFrom(from);
+}
+
+void CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion::SharedCtor() {
+  _cached_size_ = 0;
+  chart_map_ = NULL;
+  legend_map_ = NULL;
+  axis_map_ = NULL;
+  series_map_ = NULL;
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+}
+
+CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion::~CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion() {
+  SharedDtor();
+}
+
+void CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion::SharedDtor() {
+  if (this != default_instance_) {
+    delete chart_map_;
+    delete legend_map_;
+    delete axis_map_;
+    delete series_map_;
+  }
+}
+
+void CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion_descriptor_;
+}
+
+const CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion& CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_TSCHCommandArchives_2eproto();
+  return *default_instance_;
+}
+
+CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion* CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion::default_instance_ = NULL;
+
+CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion* CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion::New() const {
+  return new CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion;
+}
+
+void CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion::Clear() {
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (has_chart_map()) {
+      if (chart_map_ != NULL) chart_map_->::TSCH::Generated::ChartGenericPropertyMapArchive::Clear();
+    }
+    if (has_legend_map()) {
+      if (legend_map_ != NULL) legend_map_->::TSCH::Generated::LegendGenericPropertyMapArchive::Clear();
+    }
+    if (has_axis_map()) {
+      if (axis_map_ != NULL) axis_map_->::TSCH::Generated::ChartAxisGenericPropertyMapArchive::Clear();
+    }
+    if (has_series_map()) {
+      if (series_map_ != NULL) series_map_->::TSCH::Generated::ChartSeriesGenericPropertyMapArchive::Clear();
+    }
+  }
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+  mutable_unknown_fields()->Clear();
+}
+
+bool CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!(EXPRESSION)) return false
+  ::google::protobuf::uint32 tag;
+  while ((tag = input->ReadTag()) != 0) {
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // optional .TSCH.Generated.ChartGenericPropertyMapArchive chart_map = 2;
+      case 2: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_chart_map()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(26)) goto parse_legend_map;
+        break;
+      }
+
+      // optional .TSCH.Generated.LegendGenericPropertyMapArchive legend_map = 3;
+      case 3: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_legend_map:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_legend_map()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(34)) goto parse_axis_map;
+        break;
+      }
+
+      // optional .TSCH.Generated.ChartAxisGenericPropertyMapArchive axis_map = 4;
+      case 4: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_axis_map:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_axis_map()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(42)) goto parse_series_map;
+        break;
+      }
+
+      // optional .TSCH.Generated.ChartSeriesGenericPropertyMapArchive series_map = 5;
+      case 5: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_series_map:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_series_map()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectAtEnd()) return true;
+        break;
+      }
+
+      default: {
+      handle_uninterpreted:
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          return true;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+  return true;
+#undef DO_
+}
+
+void CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // optional .TSCH.Generated.ChartGenericPropertyMapArchive chart_map = 2;
+  if (has_chart_map()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      2, this->chart_map(), output);
+  }
+
+  // optional .TSCH.Generated.LegendGenericPropertyMapArchive legend_map = 3;
+  if (has_legend_map()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      3, this->legend_map(), output);
+  }
+
+  // optional .TSCH.Generated.ChartAxisGenericPropertyMapArchive axis_map = 4;
+  if (has_axis_map()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      4, this->axis_map(), output);
+  }
+
+  // optional .TSCH.Generated.ChartSeriesGenericPropertyMapArchive series_map = 5;
+  if (has_series_map()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      5, this->series_map(), output);
+  }
+
+  if (!unknown_fields().empty()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+}
+
+::google::protobuf::uint8* CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion::SerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // optional .TSCH.Generated.ChartGenericPropertyMapArchive chart_map = 2;
+  if (has_chart_map()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        2, this->chart_map(), target);
+  }
+
+  // optional .TSCH.Generated.LegendGenericPropertyMapArchive legend_map = 3;
+  if (has_legend_map()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        3, this->legend_map(), target);
+  }
+
+  // optional .TSCH.Generated.ChartAxisGenericPropertyMapArchive axis_map = 4;
+  if (has_axis_map()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        4, this->axis_map(), target);
+  }
+
+  // optional .TSCH.Generated.ChartSeriesGenericPropertyMapArchive series_map = 5;
+  if (has_series_map()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        5, this->series_map(), target);
+  }
+
+  if (!unknown_fields().empty()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  return target;
+}
+
+int CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion::ByteSize() const {
+  int total_size = 0;
+
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    // optional .TSCH.Generated.ChartGenericPropertyMapArchive chart_map = 2;
+    if (has_chart_map()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->chart_map());
+    }
+
+    // optional .TSCH.Generated.LegendGenericPropertyMapArchive legend_map = 3;
+    if (has_legend_map()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->legend_map());
+    }
+
+    // optional .TSCH.Generated.ChartAxisGenericPropertyMapArchive axis_map = 4;
+    if (has_axis_map()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->axis_map());
+    }
+
+    // optional .TSCH.Generated.ChartSeriesGenericPropertyMapArchive series_map = 5;
+    if (has_series_map()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->series_map());
+    }
+
+  }
+  if (!unknown_fields().empty()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = total_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion::MergeFrom(const ::google::protobuf::Message& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  const CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion* source =
+    ::google::protobuf::internal::dynamic_cast_if_available<const CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion*>(
+      &from);
+  if (source == NULL) {
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+    MergeFrom(*source);
+  }
+}
+
+void CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion::MergeFrom(const CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (from.has_chart_map()) {
+      mutable_chart_map()->::TSCH::Generated::ChartGenericPropertyMapArchive::MergeFrom(from.chart_map());
+    }
+    if (from.has_legend_map()) {
+      mutable_legend_map()->::TSCH::Generated::LegendGenericPropertyMapArchive::MergeFrom(from.legend_map());
+    }
+    if (from.has_axis_map()) {
+      mutable_axis_map()->::TSCH::Generated::ChartAxisGenericPropertyMapArchive::MergeFrom(from.axis_map());
+    }
+    if (from.has_series_map()) {
+      mutable_series_map()->::TSCH::Generated::ChartSeriesGenericPropertyMapArchive::MergeFrom(from.series_map());
+    }
+  }
+  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
+}
+
+void CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion::CopyFrom(const ::google::protobuf::Message& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion::CopyFrom(const CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion::IsInitialized() const {
+
+  if (has_chart_map()) {
+    if (!this->chart_map().IsInitialized()) return false;
+  }
+  if (has_legend_map()) {
+    if (!this->legend_map().IsInitialized()) return false;
+  }
+  if (has_axis_map()) {
+    if (!this->axis_map().IsInitialized()) return false;
+  }
+  if (has_series_map()) {
+    if (!this->series_map().IsInitialized()) return false;
+  }
+  return true;
+}
+
+void CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion::Swap(CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion* other) {
+  if (other != this) {
+    std::swap(chart_map_, other->chart_map_);
+    std::swap(legend_map_, other->legend_map_);
+    std::swap(axis_map_, other->axis_map_);
+    std::swap(series_map_, other->series_map_);
+    std::swap(_has_bits_[0], other->_has_bits_[0]);
+    _unknown_fields_.Swap(&other->_unknown_fields_);
+    std::swap(_cached_size_, other->_cached_size_);
+  }
+}
+
+::google::protobuf::Metadata CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion_descriptor_;
+  metadata.reflection = CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion_reflection_;
+  return metadata;
+}
+
+
+// -------------------------------------------------------------------
+
+#ifndef _MSC_VER
+const int CommandMutatePropertiesArchive_GenericPropertyDeltaMap::kStyleOwnerTypeFieldNumber;
+const int CommandMutatePropertiesArchive_GenericPropertyDeltaMap::kStyleOwnerIndexFieldNumber;
+const int CommandMutatePropertiesArchive_GenericPropertyDeltaMap::kForwardMapFieldNumber;
+const int CommandMutatePropertiesArchive_GenericPropertyDeltaMap::kReverseMapFieldNumber;
+#endif  // !_MSC_VER
+
+CommandMutatePropertiesArchive_GenericPropertyDeltaMap::CommandMutatePropertiesArchive_GenericPropertyDeltaMap()
+  : ::google::protobuf::Message() {
+  SharedCtor();
+}
+
+void CommandMutatePropertiesArchive_GenericPropertyDeltaMap::InitAsDefaultInstance() {
+  forward_map_ = const_cast< ::TSCH::CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion*>(&::TSCH::CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion::default_instance());
+  reverse_map_ = const_cast< ::TSCH::CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion*>(&::TSCH::CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion::default_instance());
+}
+
+CommandMutatePropertiesArchive_GenericPropertyDeltaMap::CommandMutatePropertiesArchive_GenericPropertyDeltaMap(const CommandMutatePropertiesArchive_GenericPropertyDeltaMap& from)
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  MergeFrom(from);
+}
+
+void CommandMutatePropertiesArchive_GenericPropertyDeltaMap::SharedCtor() {
+  _cached_size_ = 0;
+  style_owner_type_ = 1;
+  style_owner_index_ = 0u;
+  forward_map_ = NULL;
+  reverse_map_ = NULL;
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+}
+
+CommandMutatePropertiesArchive_GenericPropertyDeltaMap::~CommandMutatePropertiesArchive_GenericPropertyDeltaMap() {
+  SharedDtor();
+}
+
+void CommandMutatePropertiesArchive_GenericPropertyDeltaMap::SharedDtor() {
+  if (this != default_instance_) {
+    delete forward_map_;
+    delete reverse_map_;
+  }
+}
+
+void CommandMutatePropertiesArchive_GenericPropertyDeltaMap::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* CommandMutatePropertiesArchive_GenericPropertyDeltaMap::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return CommandMutatePropertiesArchive_GenericPropertyDeltaMap_descriptor_;
+}
+
+const CommandMutatePropertiesArchive_GenericPropertyDeltaMap& CommandMutatePropertiesArchive_GenericPropertyDeltaMap::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_TSCHCommandArchives_2eproto();
+  return *default_instance_;
+}
+
+CommandMutatePropertiesArchive_GenericPropertyDeltaMap* CommandMutatePropertiesArchive_GenericPropertyDeltaMap::default_instance_ = NULL;
+
+CommandMutatePropertiesArchive_GenericPropertyDeltaMap* CommandMutatePropertiesArchive_GenericPropertyDeltaMap::New() const {
+  return new CommandMutatePropertiesArchive_GenericPropertyDeltaMap;
+}
+
+void CommandMutatePropertiesArchive_GenericPropertyDeltaMap::Clear() {
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    style_owner_type_ = 1;
+    style_owner_index_ = 0u;
+    if (has_forward_map()) {
+      if (forward_map_ != NULL) forward_map_->::TSCH::CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion::Clear();
+    }
+    if (has_reverse_map()) {
+      if (reverse_map_ != NULL) reverse_map_->::TSCH::CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion::Clear();
+    }
+  }
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+  mutable_unknown_fields()->Clear();
+}
+
+bool CommandMutatePropertiesArchive_GenericPropertyDeltaMap::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!(EXPRESSION)) return false
+  ::google::protobuf::uint32 tag;
+  while ((tag = input->ReadTag()) != 0) {
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // optional .TSCH.StyleOwnerType style_owner_type = 1;
+      case 1: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+          int value;
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
+                 input, &value)));
+          if (::TSCH::StyleOwnerType_IsValid(value)) {
+            set_style_owner_type(static_cast< ::TSCH::StyleOwnerType >(value));
+          } else {
+            mutable_unknown_fields()->AddVarint(1, value);
+          }
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(16)) goto parse_style_owner_index;
+        break;
+      }
+
+      // optional uint32 style_owner_index = 2;
+      case 2: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_style_owner_index:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                 input, &style_owner_index_)));
+          set_has_style_owner_index();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(26)) goto parse_forward_map;
+        break;
+      }
+
+      // optional .TSCH.CommandMutatePropertiesArchive.GenericPropertyDeltaMap.GenericMapUnion forward_map = 3;
+      case 3: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_forward_map:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_forward_map()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(34)) goto parse_reverse_map;
+        break;
+      }
+
+      // optional .TSCH.CommandMutatePropertiesArchive.GenericPropertyDeltaMap.GenericMapUnion reverse_map = 4;
+      case 4: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_reverse_map:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_reverse_map()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectAtEnd()) return true;
+        break;
+      }
+
+      default: {
+      handle_uninterpreted:
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          return true;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+  return true;
+#undef DO_
+}
+
+void CommandMutatePropertiesArchive_GenericPropertyDeltaMap::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // optional .TSCH.StyleOwnerType style_owner_type = 1;
+  if (has_style_owner_type()) {
+    ::google::protobuf::internal::WireFormatLite::WriteEnum(
+      1, this->style_owner_type(), output);
+  }
+
+  // optional uint32 style_owner_index = 2;
+  if (has_style_owner_index()) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(2, this->style_owner_index(), output);
+  }
+
+  // optional .TSCH.CommandMutatePropertiesArchive.GenericPropertyDeltaMap.GenericMapUnion forward_map = 3;
+  if (has_forward_map()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      3, this->forward_map(), output);
+  }
+
+  // optional .TSCH.CommandMutatePropertiesArchive.GenericPropertyDeltaMap.GenericMapUnion reverse_map = 4;
+  if (has_reverse_map()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      4, this->reverse_map(), output);
+  }
+
+  if (!unknown_fields().empty()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+}
+
+::google::protobuf::uint8* CommandMutatePropertiesArchive_GenericPropertyDeltaMap::SerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // optional .TSCH.StyleOwnerType style_owner_type = 1;
+  if (has_style_owner_type()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
+      1, this->style_owner_type(), target);
+  }
+
+  // optional uint32 style_owner_index = 2;
+  if (has_style_owner_index()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(2, this->style_owner_index(), target);
+  }
+
+  // optional .TSCH.CommandMutatePropertiesArchive.GenericPropertyDeltaMap.GenericMapUnion forward_map = 3;
+  if (has_forward_map()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        3, this->forward_map(), target);
+  }
+
+  // optional .TSCH.CommandMutatePropertiesArchive.GenericPropertyDeltaMap.GenericMapUnion reverse_map = 4;
+  if (has_reverse_map()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        4, this->reverse_map(), target);
+  }
+
+  if (!unknown_fields().empty()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  return target;
+}
+
+int CommandMutatePropertiesArchive_GenericPropertyDeltaMap::ByteSize() const {
+  int total_size = 0;
+
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    // optional .TSCH.StyleOwnerType style_owner_type = 1;
+    if (has_style_owner_type()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::EnumSize(this->style_owner_type());
+    }
+
+    // optional uint32 style_owner_index = 2;
+    if (has_style_owner_index()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::UInt32Size(
+          this->style_owner_index());
+    }
+
+    // optional .TSCH.CommandMutatePropertiesArchive.GenericPropertyDeltaMap.GenericMapUnion forward_map = 3;
+    if (has_forward_map()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->forward_map());
+    }
+
+    // optional .TSCH.CommandMutatePropertiesArchive.GenericPropertyDeltaMap.GenericMapUnion reverse_map = 4;
+    if (has_reverse_map()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->reverse_map());
+    }
+
+  }
+  if (!unknown_fields().empty()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = total_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void CommandMutatePropertiesArchive_GenericPropertyDeltaMap::MergeFrom(const ::google::protobuf::Message& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  const CommandMutatePropertiesArchive_GenericPropertyDeltaMap* source =
+    ::google::protobuf::internal::dynamic_cast_if_available<const CommandMutatePropertiesArchive_GenericPropertyDeltaMap*>(
+      &from);
+  if (source == NULL) {
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+    MergeFrom(*source);
+  }
+}
+
+void CommandMutatePropertiesArchive_GenericPropertyDeltaMap::MergeFrom(const CommandMutatePropertiesArchive_GenericPropertyDeltaMap& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (from.has_style_owner_type()) {
+      set_style_owner_type(from.style_owner_type());
+    }
+    if (from.has_style_owner_index()) {
+      set_style_owner_index(from.style_owner_index());
+    }
+    if (from.has_forward_map()) {
+      mutable_forward_map()->::TSCH::CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion::MergeFrom(from.forward_map());
+    }
+    if (from.has_reverse_map()) {
+      mutable_reverse_map()->::TSCH::CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion::MergeFrom(from.reverse_map());
+    }
+  }
+  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
+}
+
+void CommandMutatePropertiesArchive_GenericPropertyDeltaMap::CopyFrom(const ::google::protobuf::Message& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void CommandMutatePropertiesArchive_GenericPropertyDeltaMap::CopyFrom(const CommandMutatePropertiesArchive_GenericPropertyDeltaMap& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool CommandMutatePropertiesArchive_GenericPropertyDeltaMap::IsInitialized() const {
+
+  if (has_forward_map()) {
+    if (!this->forward_map().IsInitialized()) return false;
+  }
+  if (has_reverse_map()) {
+    if (!this->reverse_map().IsInitialized()) return false;
+  }
+  return true;
+}
+
+void CommandMutatePropertiesArchive_GenericPropertyDeltaMap::Swap(CommandMutatePropertiesArchive_GenericPropertyDeltaMap* other) {
+  if (other != this) {
+    std::swap(style_owner_type_, other->style_owner_type_);
+    std::swap(style_owner_index_, other->style_owner_index_);
+    std::swap(forward_map_, other->forward_map_);
+    std::swap(reverse_map_, other->reverse_map_);
+    std::swap(_has_bits_[0], other->_has_bits_[0]);
+    _unknown_fields_.Swap(&other->_unknown_fields_);
+    std::swap(_cached_size_, other->_cached_size_);
+  }
+}
+
+::google::protobuf::Metadata CommandMutatePropertiesArchive_GenericPropertyDeltaMap::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = CommandMutatePropertiesArchive_GenericPropertyDeltaMap_descriptor_;
+  metadata.reflection = CommandMutatePropertiesArchive_GenericPropertyDeltaMap_reflection_;
+  return metadata;
+}
+
+
+// -------------------------------------------------------------------
+
+#ifndef _MSC_VER
+const int CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive::kCharPropertiesFieldNumber;
+const int CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive::kParaPropertiesFieldNumber;
+#endif  // !_MSC_VER
+
+CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive::CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive()
+  : ::google::protobuf::Message() {
+  SharedCtor();
+}
+
+void CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive::InitAsDefaultInstance() {
+  char_properties_ = const_cast< ::TSWP::CharacterStylePropertiesArchive*>(&::TSWP::CharacterStylePropertiesArchive::default_instance());
+  para_properties_ = const_cast< ::TSWP::ParagraphStylePropertiesArchive*>(&::TSWP::ParagraphStylePropertiesArchive::default_instance());
+}
+
+CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive::CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive(const CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive& from)
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  MergeFrom(from);
+}
+
+void CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive::SharedCtor() {
+  _cached_size_ = 0;
+  char_properties_ = NULL;
+  para_properties_ = NULL;
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+}
+
+CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive::~CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive() {
+  SharedDtor();
+}
+
+void CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive::SharedDtor() {
+  if (this != default_instance_) {
+    delete char_properties_;
+    delete para_properties_;
+  }
+}
+
+void CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive_descriptor_;
+}
+
+const CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive& CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_TSCHCommandArchives_2eproto();
+  return *default_instance_;
+}
+
+CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive* CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive::default_instance_ = NULL;
+
+CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive* CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive::New() const {
+  return new CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive;
+}
+
+void CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive::Clear() {
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (has_char_properties()) {
+      if (char_properties_ != NULL) char_properties_->::TSWP::CharacterStylePropertiesArchive::Clear();
+    }
+    if (has_para_properties()) {
+      if (para_properties_ != NULL) para_properties_->::TSWP::ParagraphStylePropertiesArchive::Clear();
+    }
+  }
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+  mutable_unknown_fields()->Clear();
+}
+
+bool CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!(EXPRESSION)) return false
+  ::google::protobuf::uint32 tag;
+  while ((tag = input->ReadTag()) != 0) {
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // optional .TSWP.CharacterStylePropertiesArchive char_properties = 1;
+      case 1: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_char_properties()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(18)) goto parse_para_properties;
+        break;
+      }
+
+      // optional .TSWP.ParagraphStylePropertiesArchive para_properties = 2;
+      case 2: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_para_properties:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_para_properties()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectAtEnd()) return true;
+        break;
+      }
+
+      default: {
+      handle_uninterpreted:
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          return true;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+  return true;
+#undef DO_
+}
+
+void CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // optional .TSWP.CharacterStylePropertiesArchive char_properties = 1;
+  if (has_char_properties()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, this->char_properties(), output);
+  }
+
+  // optional .TSWP.ParagraphStylePropertiesArchive para_properties = 2;
+  if (has_para_properties()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      2, this->para_properties(), output);
+  }
+
+  if (!unknown_fields().empty()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+}
+
+::google::protobuf::uint8* CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive::SerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // optional .TSWP.CharacterStylePropertiesArchive char_properties = 1;
+  if (has_char_properties()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        1, this->char_properties(), target);
+  }
+
+  // optional .TSWP.ParagraphStylePropertiesArchive para_properties = 2;
+  if (has_para_properties()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        2, this->para_properties(), target);
+  }
+
+  if (!unknown_fields().empty()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  return target;
+}
+
+int CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive::ByteSize() const {
+  int total_size = 0;
+
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    // optional .TSWP.CharacterStylePropertiesArchive char_properties = 1;
+    if (has_char_properties()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->char_properties());
+    }
+
+    // optional .TSWP.ParagraphStylePropertiesArchive para_properties = 2;
+    if (has_para_properties()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->para_properties());
+    }
+
+  }
+  if (!unknown_fields().empty()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = total_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive::MergeFrom(const ::google::protobuf::Message& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  const CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive* source =
+    ::google::protobuf::internal::dynamic_cast_if_available<const CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive*>(
+      &from);
+  if (source == NULL) {
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+    MergeFrom(*source);
+  }
+}
+
+void CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive::MergeFrom(const CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (from.has_char_properties()) {
+      mutable_char_properties()->::TSWP::CharacterStylePropertiesArchive::MergeFrom(from.char_properties());
+    }
+    if (from.has_para_properties()) {
+      mutable_para_properties()->::TSWP::ParagraphStylePropertiesArchive::MergeFrom(from.para_properties());
+    }
+  }
+  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
+}
+
+void CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive::CopyFrom(const ::google::protobuf::Message& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive::CopyFrom(const CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive::IsInitialized() const {
+
+  if (has_char_properties()) {
+    if (!this->char_properties().IsInitialized()) return false;
+  }
+  if (has_para_properties()) {
+    if (!this->para_properties().IsInitialized()) return false;
+  }
+  return true;
+}
+
+void CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive::Swap(CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive* other) {
+  if (other != this) {
+    std::swap(char_properties_, other->char_properties_);
+    std::swap(para_properties_, other->para_properties_);
+    std::swap(_has_bits_[0], other->_has_bits_[0]);
+    _unknown_fields_.Swap(&other->_unknown_fields_);
+    std::swap(_cached_size_, other->_cached_size_);
+  }
+}
+
+::google::protobuf::Metadata CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive_descriptor_;
+  metadata.reflection = CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive_reflection_;
+  return metadata;
+}
+
+
+// -------------------------------------------------------------------
+
+#ifndef _MSC_VER
+const int CommandMutatePropertiesArchive_ParagraphStyleDeltaMap::kStyleOwnerTypeFieldNumber;
+const int CommandMutatePropertiesArchive_ParagraphStyleDeltaMap::kStyleOwnerIndexFieldNumber;
+const int CommandMutatePropertiesArchive_ParagraphStyleDeltaMap::kParagraphStyleIndexPropertyFieldNumber;
+const int CommandMutatePropertiesArchive_ParagraphStyleDeltaMap::kForwardMapFieldNumber;
+const int CommandMutatePropertiesArchive_ParagraphStyleDeltaMap::kReverseMapFieldNumber;
+#endif  // !_MSC_VER
+
+CommandMutatePropertiesArchive_ParagraphStyleDeltaMap::CommandMutatePropertiesArchive_ParagraphStyleDeltaMap()
+  : ::google::protobuf::Message() {
+  SharedCtor();
+}
+
+void CommandMutatePropertiesArchive_ParagraphStyleDeltaMap::InitAsDefaultInstance() {
+  forward_map_ = const_cast< ::TSCH::CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive*>(&::TSCH::CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive::default_instance());
+  reverse_map_ = const_cast< ::TSCH::CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive*>(&::TSCH::CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive::default_instance());
+}
+
+CommandMutatePropertiesArchive_ParagraphStyleDeltaMap::CommandMutatePropertiesArchive_ParagraphStyleDeltaMap(const CommandMutatePropertiesArchive_ParagraphStyleDeltaMap& from)
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  MergeFrom(from);
+}
+
+void CommandMutatePropertiesArchive_ParagraphStyleDeltaMap::SharedCtor() {
+  _cached_size_ = 0;
+  style_owner_type_ = 1;
+  style_owner_index_ = 0u;
+  paragraph_style_index_property_ = 0u;
+  forward_map_ = NULL;
+  reverse_map_ = NULL;
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+}
+
+CommandMutatePropertiesArchive_ParagraphStyleDeltaMap::~CommandMutatePropertiesArchive_ParagraphStyleDeltaMap() {
+  SharedDtor();
+}
+
+void CommandMutatePropertiesArchive_ParagraphStyleDeltaMap::SharedDtor() {
+  if (this != default_instance_) {
+    delete forward_map_;
+    delete reverse_map_;
+  }
+}
+
+void CommandMutatePropertiesArchive_ParagraphStyleDeltaMap::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* CommandMutatePropertiesArchive_ParagraphStyleDeltaMap::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_descriptor_;
+}
+
+const CommandMutatePropertiesArchive_ParagraphStyleDeltaMap& CommandMutatePropertiesArchive_ParagraphStyleDeltaMap::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_TSCHCommandArchives_2eproto();
+  return *default_instance_;
+}
+
+CommandMutatePropertiesArchive_ParagraphStyleDeltaMap* CommandMutatePropertiesArchive_ParagraphStyleDeltaMap::default_instance_ = NULL;
+
+CommandMutatePropertiesArchive_ParagraphStyleDeltaMap* CommandMutatePropertiesArchive_ParagraphStyleDeltaMap::New() const {
+  return new CommandMutatePropertiesArchive_ParagraphStyleDeltaMap;
+}
+
+void CommandMutatePropertiesArchive_ParagraphStyleDeltaMap::Clear() {
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    style_owner_type_ = 1;
+    style_owner_index_ = 0u;
+    paragraph_style_index_property_ = 0u;
+    if (has_forward_map()) {
+      if (forward_map_ != NULL) forward_map_->::TSCH::CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive::Clear();
+    }
+    if (has_reverse_map()) {
+      if (reverse_map_ != NULL) reverse_map_->::TSCH::CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive::Clear();
+    }
+  }
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+  mutable_unknown_fields()->Clear();
+}
+
+bool CommandMutatePropertiesArchive_ParagraphStyleDeltaMap::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!(EXPRESSION)) return false
+  ::google::protobuf::uint32 tag;
+  while ((tag = input->ReadTag()) != 0) {
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // optional .TSCH.StyleOwnerType style_owner_type = 1;
+      case 1: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+          int value;
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
+                 input, &value)));
+          if (::TSCH::StyleOwnerType_IsValid(value)) {
+            set_style_owner_type(static_cast< ::TSCH::StyleOwnerType >(value));
+          } else {
+            mutable_unknown_fields()->AddVarint(1, value);
+          }
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(16)) goto parse_style_owner_index;
+        break;
+      }
+
+      // optional uint32 style_owner_index = 2;
+      case 2: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_style_owner_index:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                 input, &style_owner_index_)));
+          set_has_style_owner_index();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(24)) goto parse_paragraph_style_index_property;
+        break;
+      }
+
+      // optional uint32 paragraph_style_index_property = 3;
+      case 3: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_paragraph_style_index_property:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                 input, &paragraph_style_index_property_)));
+          set_has_paragraph_style_index_property();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(34)) goto parse_forward_map;
+        break;
+      }
+
+      // optional .TSCH.CommandMutatePropertiesArchive.ParagraphStyleDeltaMap.ParagraphStylePropertyMapArchive forward_map = 4;
+      case 4: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_forward_map:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_forward_map()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(42)) goto parse_reverse_map;
+        break;
+      }
+
+      // optional .TSCH.CommandMutatePropertiesArchive.ParagraphStyleDeltaMap.ParagraphStylePropertyMapArchive reverse_map = 5;
+      case 5: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_reverse_map:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_reverse_map()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectAtEnd()) return true;
+        break;
+      }
+
+      default: {
+      handle_uninterpreted:
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          return true;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+  return true;
+#undef DO_
+}
+
+void CommandMutatePropertiesArchive_ParagraphStyleDeltaMap::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // optional .TSCH.StyleOwnerType style_owner_type = 1;
+  if (has_style_owner_type()) {
+    ::google::protobuf::internal::WireFormatLite::WriteEnum(
+      1, this->style_owner_type(), output);
+  }
+
+  // optional uint32 style_owner_index = 2;
+  if (has_style_owner_index()) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(2, this->style_owner_index(), output);
+  }
+
+  // optional uint32 paragraph_style_index_property = 3;
+  if (has_paragraph_style_index_property()) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(3, this->paragraph_style_index_property(), output);
+  }
+
+  // optional .TSCH.CommandMutatePropertiesArchive.ParagraphStyleDeltaMap.ParagraphStylePropertyMapArchive forward_map = 4;
+  if (has_forward_map()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      4, this->forward_map(), output);
+  }
+
+  // optional .TSCH.CommandMutatePropertiesArchive.ParagraphStyleDeltaMap.ParagraphStylePropertyMapArchive reverse_map = 5;
+  if (has_reverse_map()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      5, this->reverse_map(), output);
+  }
+
+  if (!unknown_fields().empty()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+}
+
+::google::protobuf::uint8* CommandMutatePropertiesArchive_ParagraphStyleDeltaMap::SerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // optional .TSCH.StyleOwnerType style_owner_type = 1;
+  if (has_style_owner_type()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
+      1, this->style_owner_type(), target);
+  }
+
+  // optional uint32 style_owner_index = 2;
+  if (has_style_owner_index()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(2, this->style_owner_index(), target);
+  }
+
+  // optional uint32 paragraph_style_index_property = 3;
+  if (has_paragraph_style_index_property()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(3, this->paragraph_style_index_property(), target);
+  }
+
+  // optional .TSCH.CommandMutatePropertiesArchive.ParagraphStyleDeltaMap.ParagraphStylePropertyMapArchive forward_map = 4;
+  if (has_forward_map()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        4, this->forward_map(), target);
+  }
+
+  // optional .TSCH.CommandMutatePropertiesArchive.ParagraphStyleDeltaMap.ParagraphStylePropertyMapArchive reverse_map = 5;
+  if (has_reverse_map()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        5, this->reverse_map(), target);
+  }
+
+  if (!unknown_fields().empty()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  return target;
+}
+
+int CommandMutatePropertiesArchive_ParagraphStyleDeltaMap::ByteSize() const {
+  int total_size = 0;
+
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    // optional .TSCH.StyleOwnerType style_owner_type = 1;
+    if (has_style_owner_type()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::EnumSize(this->style_owner_type());
+    }
+
+    // optional uint32 style_owner_index = 2;
+    if (has_style_owner_index()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::UInt32Size(
+          this->style_owner_index());
+    }
+
+    // optional uint32 paragraph_style_index_property = 3;
+    if (has_paragraph_style_index_property()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::UInt32Size(
+          this->paragraph_style_index_property());
+    }
+
+    // optional .TSCH.CommandMutatePropertiesArchive.ParagraphStyleDeltaMap.ParagraphStylePropertyMapArchive forward_map = 4;
+    if (has_forward_map()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->forward_map());
+    }
+
+    // optional .TSCH.CommandMutatePropertiesArchive.ParagraphStyleDeltaMap.ParagraphStylePropertyMapArchive reverse_map = 5;
+    if (has_reverse_map()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->reverse_map());
+    }
+
+  }
+  if (!unknown_fields().empty()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = total_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void CommandMutatePropertiesArchive_ParagraphStyleDeltaMap::MergeFrom(const ::google::protobuf::Message& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  const CommandMutatePropertiesArchive_ParagraphStyleDeltaMap* source =
+    ::google::protobuf::internal::dynamic_cast_if_available<const CommandMutatePropertiesArchive_ParagraphStyleDeltaMap*>(
+      &from);
+  if (source == NULL) {
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+    MergeFrom(*source);
+  }
+}
+
+void CommandMutatePropertiesArchive_ParagraphStyleDeltaMap::MergeFrom(const CommandMutatePropertiesArchive_ParagraphStyleDeltaMap& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (from.has_style_owner_type()) {
+      set_style_owner_type(from.style_owner_type());
+    }
+    if (from.has_style_owner_index()) {
+      set_style_owner_index(from.style_owner_index());
+    }
+    if (from.has_paragraph_style_index_property()) {
+      set_paragraph_style_index_property(from.paragraph_style_index_property());
+    }
+    if (from.has_forward_map()) {
+      mutable_forward_map()->::TSCH::CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive::MergeFrom(from.forward_map());
+    }
+    if (from.has_reverse_map()) {
+      mutable_reverse_map()->::TSCH::CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive::MergeFrom(from.reverse_map());
+    }
+  }
+  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
+}
+
+void CommandMutatePropertiesArchive_ParagraphStyleDeltaMap::CopyFrom(const ::google::protobuf::Message& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void CommandMutatePropertiesArchive_ParagraphStyleDeltaMap::CopyFrom(const CommandMutatePropertiesArchive_ParagraphStyleDeltaMap& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool CommandMutatePropertiesArchive_ParagraphStyleDeltaMap::IsInitialized() const {
+
+  if (has_forward_map()) {
+    if (!this->forward_map().IsInitialized()) return false;
+  }
+  if (has_reverse_map()) {
+    if (!this->reverse_map().IsInitialized()) return false;
+  }
+  return true;
+}
+
+void CommandMutatePropertiesArchive_ParagraphStyleDeltaMap::Swap(CommandMutatePropertiesArchive_ParagraphStyleDeltaMap* other) {
+  if (other != this) {
+    std::swap(style_owner_type_, other->style_owner_type_);
+    std::swap(style_owner_index_, other->style_owner_index_);
+    std::swap(paragraph_style_index_property_, other->paragraph_style_index_property_);
+    std::swap(forward_map_, other->forward_map_);
+    std::swap(reverse_map_, other->reverse_map_);
+    std::swap(_has_bits_[0], other->_has_bits_[0]);
+    _unknown_fields_.Swap(&other->_unknown_fields_);
+    std::swap(_cached_size_, other->_cached_size_);
+  }
+}
+
+::google::protobuf::Metadata CommandMutatePropertiesArchive_ParagraphStyleDeltaMap::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_descriptor_;
+  metadata.reflection = CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_reflection_;
+  return metadata;
+}
+
+
+// -------------------------------------------------------------------
+
+#ifndef _MSC_VER
+const int CommandMutatePropertiesArchive::kSuperFieldNumber;
+const int CommandMutatePropertiesArchive::kRollbackCmdFieldNumber;
+const int CommandMutatePropertiesArchive::kGenericPropertyDeltaMapsFieldNumber;
+const int CommandMutatePropertiesArchive::kParagraphStyleDeltaMapsFieldNumber;
+#endif  // !_MSC_VER
+
+CommandMutatePropertiesArchive::CommandMutatePropertiesArchive()
+  : ::google::protobuf::Message() {
+  SharedCtor();
+}
+
+void CommandMutatePropertiesArchive::InitAsDefaultInstance() {
+  super_ = const_cast< ::TSCH::ChartCommandArchive*>(&::TSCH::ChartCommandArchive::default_instance());
+  rollback_cmd_ = const_cast< ::TSP::Reference*>(&::TSP::Reference::default_instance());
+}
+
+CommandMutatePropertiesArchive::CommandMutatePropertiesArchive(const CommandMutatePropertiesArchive& from)
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  MergeFrom(from);
+}
+
+void CommandMutatePropertiesArchive::SharedCtor() {
+  _cached_size_ = 0;
+  super_ = NULL;
+  rollback_cmd_ = NULL;
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+}
+
+CommandMutatePropertiesArchive::~CommandMutatePropertiesArchive() {
+  SharedDtor();
+}
+
+void CommandMutatePropertiesArchive::SharedDtor() {
+  if (this != default_instance_) {
+    delete super_;
+    delete rollback_cmd_;
+  }
+}
+
+void CommandMutatePropertiesArchive::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* CommandMutatePropertiesArchive::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return CommandMutatePropertiesArchive_descriptor_;
+}
+
+const CommandMutatePropertiesArchive& CommandMutatePropertiesArchive::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_TSCHCommandArchives_2eproto();
+  return *default_instance_;
+}
+
+CommandMutatePropertiesArchive* CommandMutatePropertiesArchive::default_instance_ = NULL;
+
+CommandMutatePropertiesArchive* CommandMutatePropertiesArchive::New() const {
+  return new CommandMutatePropertiesArchive;
+}
+
+void CommandMutatePropertiesArchive::Clear() {
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (has_super()) {
+      if (super_ != NULL) super_->::TSCH::ChartCommandArchive::Clear();
+    }
+    if (has_rollback_cmd()) {
+      if (rollback_cmd_ != NULL) rollback_cmd_->::TSP::Reference::Clear();
+    }
+  }
+  generic_property_delta_maps_.Clear();
+  paragraph_style_delta_maps_.Clear();
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+  mutable_unknown_fields()->Clear();
+}
+
+bool CommandMutatePropertiesArchive::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!(EXPRESSION)) return false
+  ::google::protobuf::uint32 tag;
+  while ((tag = input->ReadTag()) != 0) {
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // required .TSCH.ChartCommandArchive super = 1;
+      case 1: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_super()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(18)) goto parse_rollback_cmd;
+        break;
+      }
+
+      // optional .TSP.Reference rollback_cmd = 2;
+      case 2: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_rollback_cmd:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_rollback_cmd()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(26)) goto parse_generic_property_delta_maps;
+        break;
+      }
+
+      // repeated .TSCH.CommandMutatePropertiesArchive.GenericPropertyDeltaMap generic_property_delta_maps = 3;
+      case 3: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_generic_property_delta_maps:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+                input, add_generic_property_delta_maps()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(26)) goto parse_generic_property_delta_maps;
+        if (input->ExpectTag(34)) goto parse_paragraph_style_delta_maps;
+        break;
+      }
+
+      // repeated .TSCH.CommandMutatePropertiesArchive.ParagraphStyleDeltaMap paragraph_style_delta_maps = 4;
+      case 4: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_paragraph_style_delta_maps:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+                input, add_paragraph_style_delta_maps()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(34)) goto parse_paragraph_style_delta_maps;
+        if (input->ExpectAtEnd()) return true;
+        break;
+      }
+
+      default: {
+      handle_uninterpreted:
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          return true;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+  return true;
+#undef DO_
+}
+
+void CommandMutatePropertiesArchive::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // required .TSCH.ChartCommandArchive super = 1;
+  if (has_super()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, this->super(), output);
+  }
+
+  // optional .TSP.Reference rollback_cmd = 2;
+  if (has_rollback_cmd()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      2, this->rollback_cmd(), output);
+  }
+
+  // repeated .TSCH.CommandMutatePropertiesArchive.GenericPropertyDeltaMap generic_property_delta_maps = 3;
+  for (int i = 0; i < this->generic_property_delta_maps_size(); i++) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      3, this->generic_property_delta_maps(i), output);
+  }
+
+  // repeated .TSCH.CommandMutatePropertiesArchive.ParagraphStyleDeltaMap paragraph_style_delta_maps = 4;
+  for (int i = 0; i < this->paragraph_style_delta_maps_size(); i++) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      4, this->paragraph_style_delta_maps(i), output);
+  }
+
+  if (!unknown_fields().empty()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+}
+
+::google::protobuf::uint8* CommandMutatePropertiesArchive::SerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // required .TSCH.ChartCommandArchive super = 1;
+  if (has_super()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        1, this->super(), target);
+  }
+
+  // optional .TSP.Reference rollback_cmd = 2;
+  if (has_rollback_cmd()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        2, this->rollback_cmd(), target);
+  }
+
+  // repeated .TSCH.CommandMutatePropertiesArchive.GenericPropertyDeltaMap generic_property_delta_maps = 3;
+  for (int i = 0; i < this->generic_property_delta_maps_size(); i++) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        3, this->generic_property_delta_maps(i), target);
+  }
+
+  // repeated .TSCH.CommandMutatePropertiesArchive.ParagraphStyleDeltaMap paragraph_style_delta_maps = 4;
+  for (int i = 0; i < this->paragraph_style_delta_maps_size(); i++) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        4, this->paragraph_style_delta_maps(i), target);
+  }
+
+  if (!unknown_fields().empty()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  return target;
+}
+
+int CommandMutatePropertiesArchive::ByteSize() const {
+  int total_size = 0;
+
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    // required .TSCH.ChartCommandArchive super = 1;
+    if (has_super()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->super());
+    }
+
+    // optional .TSP.Reference rollback_cmd = 2;
+    if (has_rollback_cmd()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->rollback_cmd());
+    }
+
+  }
+  // repeated .TSCH.CommandMutatePropertiesArchive.GenericPropertyDeltaMap generic_property_delta_maps = 3;
+  total_size += 1 * this->generic_property_delta_maps_size();
+  for (int i = 0; i < this->generic_property_delta_maps_size(); i++) {
+    total_size +=
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+        this->generic_property_delta_maps(i));
+  }
+
+  // repeated .TSCH.CommandMutatePropertiesArchive.ParagraphStyleDeltaMap paragraph_style_delta_maps = 4;
+  total_size += 1 * this->paragraph_style_delta_maps_size();
+  for (int i = 0; i < this->paragraph_style_delta_maps_size(); i++) {
+    total_size +=
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+        this->paragraph_style_delta_maps(i));
+  }
+
+  if (!unknown_fields().empty()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = total_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void CommandMutatePropertiesArchive::MergeFrom(const ::google::protobuf::Message& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  const CommandMutatePropertiesArchive* source =
+    ::google::protobuf::internal::dynamic_cast_if_available<const CommandMutatePropertiesArchive*>(
+      &from);
+  if (source == NULL) {
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+    MergeFrom(*source);
+  }
+}
+
+void CommandMutatePropertiesArchive::MergeFrom(const CommandMutatePropertiesArchive& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  generic_property_delta_maps_.MergeFrom(from.generic_property_delta_maps_);
+  paragraph_style_delta_maps_.MergeFrom(from.paragraph_style_delta_maps_);
+  if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (from.has_super()) {
+      mutable_super()->::TSCH::ChartCommandArchive::MergeFrom(from.super());
+    }
+    if (from.has_rollback_cmd()) {
+      mutable_rollback_cmd()->::TSP::Reference::MergeFrom(from.rollback_cmd());
+    }
+  }
+  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
+}
+
+void CommandMutatePropertiesArchive::CopyFrom(const ::google::protobuf::Message& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void CommandMutatePropertiesArchive::CopyFrom(const CommandMutatePropertiesArchive& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool CommandMutatePropertiesArchive::IsInitialized() const {
+  if ((_has_bits_[0] & 0x00000001) != 0x00000001) return false;
+
+  if (has_super()) {
+    if (!this->super().IsInitialized()) return false;
+  }
+  if (has_rollback_cmd()) {
+    if (!this->rollback_cmd().IsInitialized()) return false;
+  }
+  for (int i = 0; i < generic_property_delta_maps_size(); i++) {
+    if (!this->generic_property_delta_maps(i).IsInitialized()) return false;
+  }
+  for (int i = 0; i < paragraph_style_delta_maps_size(); i++) {
+    if (!this->paragraph_style_delta_maps(i).IsInitialized()) return false;
+  }
+  return true;
+}
+
+void CommandMutatePropertiesArchive::Swap(CommandMutatePropertiesArchive* other) {
+  if (other != this) {
+    std::swap(super_, other->super_);
+    std::swap(rollback_cmd_, other->rollback_cmd_);
+    generic_property_delta_maps_.Swap(&other->generic_property_delta_maps_);
+    paragraph_style_delta_maps_.Swap(&other->paragraph_style_delta_maps_);
+    std::swap(_has_bits_[0], other->_has_bits_[0]);
+    _unknown_fields_.Swap(&other->_unknown_fields_);
+    std::swap(_cached_size_, other->_cached_size_);
+  }
+}
+
+::google::protobuf::Metadata CommandMutatePropertiesArchive::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = CommandMutatePropertiesArchive_descriptor_;
+  metadata.reflection = CommandMutatePropertiesArchive_reflection_;
+  return metadata;
+}
+
+
+// ===================================================================
+
+#ifndef _MSC_VER
+const int CommandScaleAllTextArchive::kSuperFieldNumber;
+const int CommandScaleAllTextArchive::kRollbackCmdFieldNumber;
+const int CommandScaleAllTextArchive::kScaleFactorFieldNumber;
+#endif  // !_MSC_VER
+
+CommandScaleAllTextArchive::CommandScaleAllTextArchive()
+  : ::google::protobuf::Message() {
+  SharedCtor();
+}
+
+void CommandScaleAllTextArchive::InitAsDefaultInstance() {
+  super_ = const_cast< ::TSCH::ChartCommandArchive*>(&::TSCH::ChartCommandArchive::default_instance());
+  rollback_cmd_ = const_cast< ::TSP::Reference*>(&::TSP::Reference::default_instance());
+}
+
+CommandScaleAllTextArchive::CommandScaleAllTextArchive(const CommandScaleAllTextArchive& from)
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  MergeFrom(from);
+}
+
+void CommandScaleAllTextArchive::SharedCtor() {
+  _cached_size_ = 0;
+  super_ = NULL;
+  rollback_cmd_ = NULL;
+  scale_factor_ = 0;
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+}
+
+CommandScaleAllTextArchive::~CommandScaleAllTextArchive() {
+  SharedDtor();
+}
+
+void CommandScaleAllTextArchive::SharedDtor() {
+  if (this != default_instance_) {
+    delete super_;
+    delete rollback_cmd_;
+  }
+}
+
+void CommandScaleAllTextArchive::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* CommandScaleAllTextArchive::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return CommandScaleAllTextArchive_descriptor_;
+}
+
+const CommandScaleAllTextArchive& CommandScaleAllTextArchive::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_TSCHCommandArchives_2eproto();
+  return *default_instance_;
+}
+
+CommandScaleAllTextArchive* CommandScaleAllTextArchive::default_instance_ = NULL;
+
+CommandScaleAllTextArchive* CommandScaleAllTextArchive::New() const {
+  return new CommandScaleAllTextArchive;
+}
+
+void CommandScaleAllTextArchive::Clear() {
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (has_super()) {
+      if (super_ != NULL) super_->::TSCH::ChartCommandArchive::Clear();
+    }
+    if (has_rollback_cmd()) {
+      if (rollback_cmd_ != NULL) rollback_cmd_->::TSP::Reference::Clear();
+    }
+    scale_factor_ = 0;
+  }
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+  mutable_unknown_fields()->Clear();
+}
+
+bool CommandScaleAllTextArchive::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!(EXPRESSION)) return false
+  ::google::protobuf::uint32 tag;
+  while ((tag = input->ReadTag()) != 0) {
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // required .TSCH.ChartCommandArchive super = 1;
+      case 1: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_super()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(18)) goto parse_rollback_cmd;
+        break;
+      }
+
+      // optional .TSP.Reference rollback_cmd = 2;
+      case 2: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_rollback_cmd:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_rollback_cmd()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(25)) goto parse_scale_factor;
+        break;
+      }
+
+      // optional double scale_factor = 3;
+      case 3: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_FIXED64) {
+         parse_scale_factor:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
+                 input, &scale_factor_)));
+          set_has_scale_factor();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectAtEnd()) return true;
+        break;
+      }
+
+      default: {
+      handle_uninterpreted:
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          return true;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+  return true;
+#undef DO_
+}
+
+void CommandScaleAllTextArchive::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // required .TSCH.ChartCommandArchive super = 1;
+  if (has_super()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, this->super(), output);
+  }
+
+  // optional .TSP.Reference rollback_cmd = 2;
+  if (has_rollback_cmd()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      2, this->rollback_cmd(), output);
+  }
+
+  // optional double scale_factor = 3;
+  if (has_scale_factor()) {
+    ::google::protobuf::internal::WireFormatLite::WriteDouble(3, this->scale_factor(), output);
+  }
+
+  if (!unknown_fields().empty()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+}
+
+::google::protobuf::uint8* CommandScaleAllTextArchive::SerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // required .TSCH.ChartCommandArchive super = 1;
+  if (has_super()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        1, this->super(), target);
+  }
+
+  // optional .TSP.Reference rollback_cmd = 2;
+  if (has_rollback_cmd()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        2, this->rollback_cmd(), target);
+  }
+
+  // optional double scale_factor = 3;
+  if (has_scale_factor()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(3, this->scale_factor(), target);
+  }
+
+  if (!unknown_fields().empty()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  return target;
+}
+
+int CommandScaleAllTextArchive::ByteSize() const {
+  int total_size = 0;
+
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    // required .TSCH.ChartCommandArchive super = 1;
+    if (has_super()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->super());
+    }
+
+    // optional .TSP.Reference rollback_cmd = 2;
+    if (has_rollback_cmd()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->rollback_cmd());
+    }
+
+    // optional double scale_factor = 3;
+    if (has_scale_factor()) {
+      total_size += 1 + 8;
+    }
+
+  }
+  if (!unknown_fields().empty()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = total_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void CommandScaleAllTextArchive::MergeFrom(const ::google::protobuf::Message& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  const CommandScaleAllTextArchive* source =
+    ::google::protobuf::internal::dynamic_cast_if_available<const CommandScaleAllTextArchive*>(
+      &from);
+  if (source == NULL) {
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+    MergeFrom(*source);
+  }
+}
+
+void CommandScaleAllTextArchive::MergeFrom(const CommandScaleAllTextArchive& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (from.has_super()) {
+      mutable_super()->::TSCH::ChartCommandArchive::MergeFrom(from.super());
+    }
+    if (from.has_rollback_cmd()) {
+      mutable_rollback_cmd()->::TSP::Reference::MergeFrom(from.rollback_cmd());
+    }
+    if (from.has_scale_factor()) {
+      set_scale_factor(from.scale_factor());
+    }
+  }
+  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
+}
+
+void CommandScaleAllTextArchive::CopyFrom(const ::google::protobuf::Message& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void CommandScaleAllTextArchive::CopyFrom(const CommandScaleAllTextArchive& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool CommandScaleAllTextArchive::IsInitialized() const {
+  if ((_has_bits_[0] & 0x00000001) != 0x00000001) return false;
+
+  if (has_super()) {
+    if (!this->super().IsInitialized()) return false;
+  }
+  if (has_rollback_cmd()) {
+    if (!this->rollback_cmd().IsInitialized()) return false;
+  }
+  return true;
+}
+
+void CommandScaleAllTextArchive::Swap(CommandScaleAllTextArchive* other) {
+  if (other != this) {
+    std::swap(super_, other->super_);
+    std::swap(rollback_cmd_, other->rollback_cmd_);
+    std::swap(scale_factor_, other->scale_factor_);
+    std::swap(_has_bits_[0], other->_has_bits_[0]);
+    _unknown_fields_.Swap(&other->_unknown_fields_);
+    std::swap(_cached_size_, other->_cached_size_);
+  }
+}
+
+::google::protobuf::Metadata CommandScaleAllTextArchive::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = CommandScaleAllTextArchive_descriptor_;
+  metadata.reflection = CommandScaleAllTextArchive_reflection_;
+  return metadata;
+}
+
+
+// ===================================================================
+
+#ifndef _MSC_VER
+const int CommandSetFontFamilyArchive::kSuperFieldNumber;
+const int CommandSetFontFamilyArchive::kRollbackCmdFieldNumber;
+const int CommandSetFontFamilyArchive::kNewFontFamilyFieldNumber;
+const int CommandSetFontFamilyArchive::kOldFontFamilyFieldNumber;
+const int CommandSetFontFamilyArchive::kParagraphStyleDeltaMapsFieldNumber;
+#endif  // !_MSC_VER
+
+CommandSetFontFamilyArchive::CommandSetFontFamilyArchive()
+  : ::google::protobuf::Message() {
+  SharedCtor();
+}
+
+void CommandSetFontFamilyArchive::InitAsDefaultInstance() {
+  super_ = const_cast< ::TSCH::ChartCommandArchive*>(&::TSCH::ChartCommandArchive::default_instance());
+  rollback_cmd_ = const_cast< ::TSP::Reference*>(&::TSP::Reference::default_instance());
+}
+
+CommandSetFontFamilyArchive::CommandSetFontFamilyArchive(const CommandSetFontFamilyArchive& from)
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  MergeFrom(from);
+}
+
+void CommandSetFontFamilyArchive::SharedCtor() {
+  _cached_size_ = 0;
+  super_ = NULL;
+  rollback_cmd_ = NULL;
+  new_font_family_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+  old_font_family_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+}
+
+CommandSetFontFamilyArchive::~CommandSetFontFamilyArchive() {
+  SharedDtor();
+}
+
+void CommandSetFontFamilyArchive::SharedDtor() {
+  if (new_font_family_ != &::google::protobuf::internal::kEmptyString) {
+    delete new_font_family_;
+  }
+  if (old_font_family_ != &::google::protobuf::internal::kEmptyString) {
+    delete old_font_family_;
+  }
+  if (this != default_instance_) {
+    delete super_;
+    delete rollback_cmd_;
+  }
+}
+
+void CommandSetFontFamilyArchive::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* CommandSetFontFamilyArchive::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return CommandSetFontFamilyArchive_descriptor_;
+}
+
+const CommandSetFontFamilyArchive& CommandSetFontFamilyArchive::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_TSCHCommandArchives_2eproto();
+  return *default_instance_;
+}
+
+CommandSetFontFamilyArchive* CommandSetFontFamilyArchive::default_instance_ = NULL;
+
+CommandSetFontFamilyArchive* CommandSetFontFamilyArchive::New() const {
+  return new CommandSetFontFamilyArchive;
+}
+
+void CommandSetFontFamilyArchive::Clear() {
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (has_super()) {
+      if (super_ != NULL) super_->::TSCH::ChartCommandArchive::Clear();
+    }
+    if (has_rollback_cmd()) {
+      if (rollback_cmd_ != NULL) rollback_cmd_->::TSP::Reference::Clear();
+    }
+    if (has_new_font_family()) {
+      if (new_font_family_ != &::google::protobuf::internal::kEmptyString) {
+        new_font_family_->clear();
+      }
+    }
+    if (has_old_font_family()) {
+      if (old_font_family_ != &::google::protobuf::internal::kEmptyString) {
+        old_font_family_->clear();
+      }
+    }
+  }
+  paragraph_style_delta_maps_.Clear();
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+  mutable_unknown_fields()->Clear();
+}
+
+bool CommandSetFontFamilyArchive::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!(EXPRESSION)) return false
+  ::google::protobuf::uint32 tag;
+  while ((tag = input->ReadTag()) != 0) {
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // required .TSCH.ChartCommandArchive super = 1;
+      case 1: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_super()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(18)) goto parse_rollback_cmd;
+        break;
+      }
+
+      // optional .TSP.Reference rollback_cmd = 2;
+      case 2: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_rollback_cmd:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_rollback_cmd()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(26)) goto parse_new_font_family;
+        break;
+      }
+
+      // optional string new_font_family = 3;
+      case 3: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_new_font_family:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_new_font_family()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+            this->new_font_family().data(), this->new_font_family().length(),
+            ::google::protobuf::internal::WireFormat::PARSE);
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(34)) goto parse_old_font_family;
+        break;
+      }
+
+      // optional string old_font_family = 4;
+      case 4: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_old_font_family:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_old_font_family()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+            this->old_font_family().data(), this->old_font_family().length(),
+            ::google::protobuf::internal::WireFormat::PARSE);
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(42)) goto parse_paragraph_style_delta_maps;
+        break;
+      }
+
+      // repeated .TSCH.CommandMutatePropertiesArchive.ParagraphStyleDeltaMap paragraph_style_delta_maps = 5;
+      case 5: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_paragraph_style_delta_maps:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+                input, add_paragraph_style_delta_maps()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(42)) goto parse_paragraph_style_delta_maps;
+        if (input->ExpectAtEnd()) return true;
+        break;
+      }
+
+      default: {
+      handle_uninterpreted:
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          return true;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+  return true;
+#undef DO_
+}
+
+void CommandSetFontFamilyArchive::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // required .TSCH.ChartCommandArchive super = 1;
+  if (has_super()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, this->super(), output);
+  }
+
+  // optional .TSP.Reference rollback_cmd = 2;
+  if (has_rollback_cmd()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      2, this->rollback_cmd(), output);
+  }
+
+  // optional string new_font_family = 3;
+  if (has_new_font_family()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+      this->new_font_family().data(), this->new_font_family().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE);
+    ::google::protobuf::internal::WireFormatLite::WriteString(
+      3, this->new_font_family(), output);
+  }
+
+  // optional string old_font_family = 4;
+  if (has_old_font_family()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+      this->old_font_family().data(), this->old_font_family().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE);
+    ::google::protobuf::internal::WireFormatLite::WriteString(
+      4, this->old_font_family(), output);
+  }
+
+  // repeated .TSCH.CommandMutatePropertiesArchive.ParagraphStyleDeltaMap paragraph_style_delta_maps = 5;
+  for (int i = 0; i < this->paragraph_style_delta_maps_size(); i++) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      5, this->paragraph_style_delta_maps(i), output);
+  }
+
+  if (!unknown_fields().empty()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+}
+
+::google::protobuf::uint8* CommandSetFontFamilyArchive::SerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // required .TSCH.ChartCommandArchive super = 1;
+  if (has_super()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        1, this->super(), target);
+  }
+
+  // optional .TSP.Reference rollback_cmd = 2;
+  if (has_rollback_cmd()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        2, this->rollback_cmd(), target);
+  }
+
+  // optional string new_font_family = 3;
+  if (has_new_font_family()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+      this->new_font_family().data(), this->new_font_family().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE);
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        3, this->new_font_family(), target);
+  }
+
+  // optional string old_font_family = 4;
+  if (has_old_font_family()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+      this->old_font_family().data(), this->old_font_family().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE);
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        4, this->old_font_family(), target);
+  }
+
+  // repeated .TSCH.CommandMutatePropertiesArchive.ParagraphStyleDeltaMap paragraph_style_delta_maps = 5;
+  for (int i = 0; i < this->paragraph_style_delta_maps_size(); i++) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        5, this->paragraph_style_delta_maps(i), target);
+  }
+
+  if (!unknown_fields().empty()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  return target;
+}
+
+int CommandSetFontFamilyArchive::ByteSize() const {
+  int total_size = 0;
+
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    // required .TSCH.ChartCommandArchive super = 1;
+    if (has_super()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->super());
+    }
+
+    // optional .TSP.Reference rollback_cmd = 2;
+    if (has_rollback_cmd()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->rollback_cmd());
+    }
+
+    // optional string new_font_family = 3;
+    if (has_new_font_family()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->new_font_family());
+    }
+
+    // optional string old_font_family = 4;
+    if (has_old_font_family()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->old_font_family());
+    }
+
+  }
+  // repeated .TSCH.CommandMutatePropertiesArchive.ParagraphStyleDeltaMap paragraph_style_delta_maps = 5;
+  total_size += 1 * this->paragraph_style_delta_maps_size();
+  for (int i = 0; i < this->paragraph_style_delta_maps_size(); i++) {
+    total_size +=
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+        this->paragraph_style_delta_maps(i));
+  }
+
+  if (!unknown_fields().empty()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = total_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void CommandSetFontFamilyArchive::MergeFrom(const ::google::protobuf::Message& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  const CommandSetFontFamilyArchive* source =
+    ::google::protobuf::internal::dynamic_cast_if_available<const CommandSetFontFamilyArchive*>(
+      &from);
+  if (source == NULL) {
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+    MergeFrom(*source);
+  }
+}
+
+void CommandSetFontFamilyArchive::MergeFrom(const CommandSetFontFamilyArchive& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  paragraph_style_delta_maps_.MergeFrom(from.paragraph_style_delta_maps_);
+  if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (from.has_super()) {
+      mutable_super()->::TSCH::ChartCommandArchive::MergeFrom(from.super());
+    }
+    if (from.has_rollback_cmd()) {
+      mutable_rollback_cmd()->::TSP::Reference::MergeFrom(from.rollback_cmd());
+    }
+    if (from.has_new_font_family()) {
+      set_new_font_family(from.new_font_family());
+    }
+    if (from.has_old_font_family()) {
+      set_old_font_family(from.old_font_family());
+    }
+  }
+  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
+}
+
+void CommandSetFontFamilyArchive::CopyFrom(const ::google::protobuf::Message& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void CommandSetFontFamilyArchive::CopyFrom(const CommandSetFontFamilyArchive& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool CommandSetFontFamilyArchive::IsInitialized() const {
+  if ((_has_bits_[0] & 0x00000001) != 0x00000001) return false;
+
+  if (has_super()) {
+    if (!this->super().IsInitialized()) return false;
+  }
+  if (has_rollback_cmd()) {
+    if (!this->rollback_cmd().IsInitialized()) return false;
+  }
+  for (int i = 0; i < paragraph_style_delta_maps_size(); i++) {
+    if (!this->paragraph_style_delta_maps(i).IsInitialized()) return false;
+  }
+  return true;
+}
+
+void CommandSetFontFamilyArchive::Swap(CommandSetFontFamilyArchive* other) {
+  if (other != this) {
+    std::swap(super_, other->super_);
+    std::swap(rollback_cmd_, other->rollback_cmd_);
+    std::swap(new_font_family_, other->new_font_family_);
+    std::swap(old_font_family_, other->old_font_family_);
+    paragraph_style_delta_maps_.Swap(&other->paragraph_style_delta_maps_);
+    std::swap(_has_bits_[0], other->_has_bits_[0]);
+    _unknown_fields_.Swap(&other->_unknown_fields_);
+    std::swap(_cached_size_, other->_cached_size_);
+  }
+}
+
+::google::protobuf::Metadata CommandSetFontFamilyArchive::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = CommandSetFontFamilyArchive_descriptor_;
+  metadata.reflection = CommandSetFontFamilyArchive_reflection_;
+  return metadata;
+}
+
+
+// ===================================================================
+
+#ifndef _MSC_VER
+const int CommandApplyFillSetArchive_CapturedFillSetArchive::kIdentifierFieldNumber;
+const int CommandApplyFillSetArchive_CapturedFillSetArchive::kNumberOfThemeSeriesStylesFieldNumber;
+const int CommandApplyFillSetArchive_CapturedFillSetArchive::kPropertyMapsFieldNumber;
+#endif  // !_MSC_VER
+
+CommandApplyFillSetArchive_CapturedFillSetArchive::CommandApplyFillSetArchive_CapturedFillSetArchive()
+  : ::google::protobuf::Message() {
+  SharedCtor();
+}
+
+void CommandApplyFillSetArchive_CapturedFillSetArchive::InitAsDefaultInstance() {
+}
+
+CommandApplyFillSetArchive_CapturedFillSetArchive::CommandApplyFillSetArchive_CapturedFillSetArchive(const CommandApplyFillSetArchive_CapturedFillSetArchive& from)
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  MergeFrom(from);
+}
+
+void CommandApplyFillSetArchive_CapturedFillSetArchive::SharedCtor() {
+  _cached_size_ = 0;
+  identifier_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+  number_of_theme_series_styles_ = 0u;
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+}
+
+CommandApplyFillSetArchive_CapturedFillSetArchive::~CommandApplyFillSetArchive_CapturedFillSetArchive() {
+  SharedDtor();
+}
+
+void CommandApplyFillSetArchive_CapturedFillSetArchive::SharedDtor() {
+  if (identifier_ != &::google::protobuf::internal::kEmptyString) {
+    delete identifier_;
+  }
+  if (this != default_instance_) {
+  }
+}
+
+void CommandApplyFillSetArchive_CapturedFillSetArchive::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* CommandApplyFillSetArchive_CapturedFillSetArchive::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return CommandApplyFillSetArchive_CapturedFillSetArchive_descriptor_;
+}
+
+const CommandApplyFillSetArchive_CapturedFillSetArchive& CommandApplyFillSetArchive_CapturedFillSetArchive::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_TSCHCommandArchives_2eproto();
+  return *default_instance_;
+}
+
+CommandApplyFillSetArchive_CapturedFillSetArchive* CommandApplyFillSetArchive_CapturedFillSetArchive::default_instance_ = NULL;
+
+CommandApplyFillSetArchive_CapturedFillSetArchive* CommandApplyFillSetArchive_CapturedFillSetArchive::New() const {
+  return new CommandApplyFillSetArchive_CapturedFillSetArchive;
+}
+
+void CommandApplyFillSetArchive_CapturedFillSetArchive::Clear() {
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (has_identifier()) {
+      if (identifier_ != &::google::protobuf::internal::kEmptyString) {
+        identifier_->clear();
+      }
+    }
+    number_of_theme_series_styles_ = 0u;
+  }
+  property_maps_.Clear();
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+  mutable_unknown_fields()->Clear();
+}
+
+bool CommandApplyFillSetArchive_CapturedFillSetArchive::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!(EXPRESSION)) return false
+  ::google::protobuf::uint32 tag;
+  while ((tag = input->ReadTag()) != 0) {
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // optional string identifier = 1;
+      case 1: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_identifier()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+            this->identifier().data(), this->identifier().length(),
+            ::google::protobuf::internal::WireFormat::PARSE);
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(16)) goto parse_number_of_theme_series_styles;
+        break;
+      }
+
+      // optional uint32 number_of_theme_series_styles = 2;
+      case 2: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_number_of_theme_series_styles:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                 input, &number_of_theme_series_styles_)));
+          set_has_number_of_theme_series_styles();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(26)) goto parse_property_maps;
+        break;
+      }
+
+      // repeated .TSCH.ChartSeriesStyleArchive property_maps = 3;
+      case 3: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_property_maps:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+                input, add_property_maps()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(26)) goto parse_property_maps;
+        if (input->ExpectAtEnd()) return true;
+        break;
+      }
+
+      default: {
+      handle_uninterpreted:
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          return true;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+  return true;
+#undef DO_
+}
+
+void CommandApplyFillSetArchive_CapturedFillSetArchive::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // optional string identifier = 1;
+  if (has_identifier()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+      this->identifier().data(), this->identifier().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE);
+    ::google::protobuf::internal::WireFormatLite::WriteString(
+      1, this->identifier(), output);
+  }
+
+  // optional uint32 number_of_theme_series_styles = 2;
+  if (has_number_of_theme_series_styles()) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(2, this->number_of_theme_series_styles(), output);
+  }
+
+  // repeated .TSCH.ChartSeriesStyleArchive property_maps = 3;
+  for (int i = 0; i < this->property_maps_size(); i++) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      3, this->property_maps(i), output);
+  }
+
+  if (!unknown_fields().empty()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+}
+
+::google::protobuf::uint8* CommandApplyFillSetArchive_CapturedFillSetArchive::SerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // optional string identifier = 1;
+  if (has_identifier()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+      this->identifier().data(), this->identifier().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE);
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        1, this->identifier(), target);
+  }
+
+  // optional uint32 number_of_theme_series_styles = 2;
+  if (has_number_of_theme_series_styles()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(2, this->number_of_theme_series_styles(), target);
+  }
+
+  // repeated .TSCH.ChartSeriesStyleArchive property_maps = 3;
+  for (int i = 0; i < this->property_maps_size(); i++) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        3, this->property_maps(i), target);
+  }
+
+  if (!unknown_fields().empty()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  return target;
+}
+
+int CommandApplyFillSetArchive_CapturedFillSetArchive::ByteSize() const {
+  int total_size = 0;
+
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    // optional string identifier = 1;
+    if (has_identifier()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->identifier());
+    }
+
+    // optional uint32 number_of_theme_series_styles = 2;
+    if (has_number_of_theme_series_styles()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::UInt32Size(
+          this->number_of_theme_series_styles());
+    }
+
+  }
+  // repeated .TSCH.ChartSeriesStyleArchive property_maps = 3;
+  total_size += 1 * this->property_maps_size();
+  for (int i = 0; i < this->property_maps_size(); i++) {
+    total_size +=
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+        this->property_maps(i));
+  }
+
+  if (!unknown_fields().empty()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = total_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void CommandApplyFillSetArchive_CapturedFillSetArchive::MergeFrom(const ::google::protobuf::Message& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  const CommandApplyFillSetArchive_CapturedFillSetArchive* source =
+    ::google::protobuf::internal::dynamic_cast_if_available<const CommandApplyFillSetArchive_CapturedFillSetArchive*>(
+      &from);
+  if (source == NULL) {
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+    MergeFrom(*source);
+  }
+}
+
+void CommandApplyFillSetArchive_CapturedFillSetArchive::MergeFrom(const CommandApplyFillSetArchive_CapturedFillSetArchive& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  property_maps_.MergeFrom(from.property_maps_);
+  if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (from.has_identifier()) {
+      set_identifier(from.identifier());
+    }
+    if (from.has_number_of_theme_series_styles()) {
+      set_number_of_theme_series_styles(from.number_of_theme_series_styles());
+    }
+  }
+  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
+}
+
+void CommandApplyFillSetArchive_CapturedFillSetArchive::CopyFrom(const ::google::protobuf::Message& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void CommandApplyFillSetArchive_CapturedFillSetArchive::CopyFrom(const CommandApplyFillSetArchive_CapturedFillSetArchive& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool CommandApplyFillSetArchive_CapturedFillSetArchive::IsInitialized() const {
+
+  for (int i = 0; i < property_maps_size(); i++) {
+    if (!this->property_maps(i).IsInitialized()) return false;
+  }
+  return true;
+}
+
+void CommandApplyFillSetArchive_CapturedFillSetArchive::Swap(CommandApplyFillSetArchive_CapturedFillSetArchive* other) {
+  if (other != this) {
+    std::swap(identifier_, other->identifier_);
+    std::swap(number_of_theme_series_styles_, other->number_of_theme_series_styles_);
+    property_maps_.Swap(&other->property_maps_);
+    std::swap(_has_bits_[0], other->_has_bits_[0]);
+    _unknown_fields_.Swap(&other->_unknown_fields_);
+    std::swap(_cached_size_, other->_cached_size_);
+  }
+}
+
+::google::protobuf::Metadata CommandApplyFillSetArchive_CapturedFillSetArchive::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = CommandApplyFillSetArchive_CapturedFillSetArchive_descriptor_;
+  metadata.reflection = CommandApplyFillSetArchive_CapturedFillSetArchive_reflection_;
+  return metadata;
+}
+
+
+// -------------------------------------------------------------------
+
+#ifndef _MSC_VER
+const int CommandApplyFillSetArchive::kSuperFieldNumber;
+const int CommandApplyFillSetArchive::kRollbackCmdFieldNumber;
+const int CommandApplyFillSetArchive::kFwdFillSetLookupStringFieldNumber;
+const int CommandApplyFillSetArchive::kRevFillSetLookupStringFieldNumber;
+const int CommandApplyFillSetArchive::kFwdCapturedFillSetFieldNumber;
+const int CommandApplyFillSetArchive::kRevCapturedFillSetFieldNumber;
+const int CommandApplyFillSetArchive::kRevLastAppliedFillSetLookupStringFieldNumber;
+#endif  // !_MSC_VER
+
+CommandApplyFillSetArchive::CommandApplyFillSetArchive()
+  : ::google::protobuf::Message() {
+  SharedCtor();
+}
+
+void CommandApplyFillSetArchive::InitAsDefaultInstance() {
+  super_ = const_cast< ::TSCH::ChartCommandArchive*>(&::TSCH::ChartCommandArchive::default_instance());
+  rollback_cmd_ = const_cast< ::TSP::Reference*>(&::TSP::Reference::default_instance());
+  fwd_captured_fill_set_ = const_cast< ::TSCH::CommandApplyFillSetArchive_CapturedFillSetArchive*>(&::TSCH::CommandApplyFillSetArchive_CapturedFillSetArchive::default_instance());
+  rev_captured_fill_set_ = const_cast< ::TSCH::CommandApplyFillSetArchive_CapturedFillSetArchive*>(&::TSCH::CommandApplyFillSetArchive_CapturedFillSetArchive::default_instance());
+}
+
+CommandApplyFillSetArchive::CommandApplyFillSetArchive(const CommandApplyFillSetArchive& from)
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  MergeFrom(from);
+}
+
+void CommandApplyFillSetArchive::SharedCtor() {
+  _cached_size_ = 0;
+  super_ = NULL;
+  rollback_cmd_ = NULL;
+  fwd_fill_set_lookup_string_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+  rev_fill_set_lookup_string_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+  fwd_captured_fill_set_ = NULL;
+  rev_captured_fill_set_ = NULL;
+  rev_last_applied_fill_set_lookup_string_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+}
+
+CommandApplyFillSetArchive::~CommandApplyFillSetArchive() {
+  SharedDtor();
+}
+
+void CommandApplyFillSetArchive::SharedDtor() {
+  if (fwd_fill_set_lookup_string_ != &::google::protobuf::internal::kEmptyString) {
+    delete fwd_fill_set_lookup_string_;
+  }
+  if (rev_fill_set_lookup_string_ != &::google::protobuf::internal::kEmptyString) {
+    delete rev_fill_set_lookup_string_;
+  }
+  if (rev_last_applied_fill_set_lookup_string_ != &::google::protobuf::internal::kEmptyString) {
+    delete rev_last_applied_fill_set_lookup_string_;
+  }
+  if (this != default_instance_) {
+    delete super_;
+    delete rollback_cmd_;
+    delete fwd_captured_fill_set_;
+    delete rev_captured_fill_set_;
+  }
+}
+
+void CommandApplyFillSetArchive::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* CommandApplyFillSetArchive::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return CommandApplyFillSetArchive_descriptor_;
+}
+
+const CommandApplyFillSetArchive& CommandApplyFillSetArchive::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_TSCHCommandArchives_2eproto();
+  return *default_instance_;
+}
+
+CommandApplyFillSetArchive* CommandApplyFillSetArchive::default_instance_ = NULL;
+
+CommandApplyFillSetArchive* CommandApplyFillSetArchive::New() const {
+  return new CommandApplyFillSetArchive;
+}
+
+void CommandApplyFillSetArchive::Clear() {
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (has_super()) {
+      if (super_ != NULL) super_->::TSCH::ChartCommandArchive::Clear();
+    }
+    if (has_rollback_cmd()) {
+      if (rollback_cmd_ != NULL) rollback_cmd_->::TSP::Reference::Clear();
+    }
+    if (has_fwd_fill_set_lookup_string()) {
+      if (fwd_fill_set_lookup_string_ != &::google::protobuf::internal::kEmptyString) {
+        fwd_fill_set_lookup_string_->clear();
+      }
+    }
+    if (has_rev_fill_set_lookup_string()) {
+      if (rev_fill_set_lookup_string_ != &::google::protobuf::internal::kEmptyString) {
+        rev_fill_set_lookup_string_->clear();
+      }
+    }
+    if (has_fwd_captured_fill_set()) {
+      if (fwd_captured_fill_set_ != NULL) fwd_captured_fill_set_->::TSCH::CommandApplyFillSetArchive_CapturedFillSetArchive::Clear();
+    }
+    if (has_rev_captured_fill_set()) {
+      if (rev_captured_fill_set_ != NULL) rev_captured_fill_set_->::TSCH::CommandApplyFillSetArchive_CapturedFillSetArchive::Clear();
+    }
+    if (has_rev_last_applied_fill_set_lookup_string()) {
+      if (rev_last_applied_fill_set_lookup_string_ != &::google::protobuf::internal::kEmptyString) {
+        rev_last_applied_fill_set_lookup_string_->clear();
+      }
+    }
+  }
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+  mutable_unknown_fields()->Clear();
+}
+
+bool CommandApplyFillSetArchive::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!(EXPRESSION)) return false
+  ::google::protobuf::uint32 tag;
+  while ((tag = input->ReadTag()) != 0) {
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // required .TSCH.ChartCommandArchive super = 1;
+      case 1: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_super()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(18)) goto parse_rollback_cmd;
+        break;
+      }
+
+      // optional .TSP.Reference rollback_cmd = 2;
+      case 2: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_rollback_cmd:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_rollback_cmd()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(26)) goto parse_fwd_fill_set_lookup_string;
+        break;
+      }
+
+      // optional string fwd_fill_set_lookup_string = 3;
+      case 3: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_fwd_fill_set_lookup_string:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_fwd_fill_set_lookup_string()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+            this->fwd_fill_set_lookup_string().data(), this->fwd_fill_set_lookup_string().length(),
+            ::google::protobuf::internal::WireFormat::PARSE);
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(34)) goto parse_rev_fill_set_lookup_string;
+        break;
+      }
+
+      // optional string rev_fill_set_lookup_string = 4;
+      case 4: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_rev_fill_set_lookup_string:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_rev_fill_set_lookup_string()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+            this->rev_fill_set_lookup_string().data(), this->rev_fill_set_lookup_string().length(),
+            ::google::protobuf::internal::WireFormat::PARSE);
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(42)) goto parse_fwd_captured_fill_set;
+        break;
+      }
+
+      // optional .TSCH.CommandApplyFillSetArchive.CapturedFillSetArchive fwd_captured_fill_set = 5;
+      case 5: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_fwd_captured_fill_set:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_fwd_captured_fill_set()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(50)) goto parse_rev_captured_fill_set;
+        break;
+      }
+
+      // optional .TSCH.CommandApplyFillSetArchive.CapturedFillSetArchive rev_captured_fill_set = 6;
+      case 6: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_rev_captured_fill_set:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_rev_captured_fill_set()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(58)) goto parse_rev_last_applied_fill_set_lookup_string;
+        break;
+      }
+
+      // optional string rev_last_applied_fill_set_lookup_string = 7;
+      case 7: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_rev_last_applied_fill_set_lookup_string:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_rev_last_applied_fill_set_lookup_string()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+            this->rev_last_applied_fill_set_lookup_string().data(), this->rev_last_applied_fill_set_lookup_string().length(),
+            ::google::protobuf::internal::WireFormat::PARSE);
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectAtEnd()) return true;
+        break;
+      }
+
+      default: {
+      handle_uninterpreted:
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          return true;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+  return true;
+#undef DO_
+}
+
+void CommandApplyFillSetArchive::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // required .TSCH.ChartCommandArchive super = 1;
+  if (has_super()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, this->super(), output);
+  }
+
+  // optional .TSP.Reference rollback_cmd = 2;
+  if (has_rollback_cmd()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      2, this->rollback_cmd(), output);
+  }
+
+  // optional string fwd_fill_set_lookup_string = 3;
+  if (has_fwd_fill_set_lookup_string()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+      this->fwd_fill_set_lookup_string().data(), this->fwd_fill_set_lookup_string().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE);
+    ::google::protobuf::internal::WireFormatLite::WriteString(
+      3, this->fwd_fill_set_lookup_string(), output);
+  }
+
+  // optional string rev_fill_set_lookup_string = 4;
+  if (has_rev_fill_set_lookup_string()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+      this->rev_fill_set_lookup_string().data(), this->rev_fill_set_lookup_string().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE);
+    ::google::protobuf::internal::WireFormatLite::WriteString(
+      4, this->rev_fill_set_lookup_string(), output);
+  }
+
+  // optional .TSCH.CommandApplyFillSetArchive.CapturedFillSetArchive fwd_captured_fill_set = 5;
+  if (has_fwd_captured_fill_set()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      5, this->fwd_captured_fill_set(), output);
+  }
+
+  // optional .TSCH.CommandApplyFillSetArchive.CapturedFillSetArchive rev_captured_fill_set = 6;
+  if (has_rev_captured_fill_set()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      6, this->rev_captured_fill_set(), output);
+  }
+
+  // optional string rev_last_applied_fill_set_lookup_string = 7;
+  if (has_rev_last_applied_fill_set_lookup_string()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+      this->rev_last_applied_fill_set_lookup_string().data(), this->rev_last_applied_fill_set_lookup_string().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE);
+    ::google::protobuf::internal::WireFormatLite::WriteString(
+      7, this->rev_last_applied_fill_set_lookup_string(), output);
+  }
+
+  if (!unknown_fields().empty()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+}
+
+::google::protobuf::uint8* CommandApplyFillSetArchive::SerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // required .TSCH.ChartCommandArchive super = 1;
+  if (has_super()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        1, this->super(), target);
+  }
+
+  // optional .TSP.Reference rollback_cmd = 2;
+  if (has_rollback_cmd()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        2, this->rollback_cmd(), target);
+  }
+
+  // optional string fwd_fill_set_lookup_string = 3;
+  if (has_fwd_fill_set_lookup_string()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+      this->fwd_fill_set_lookup_string().data(), this->fwd_fill_set_lookup_string().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE);
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        3, this->fwd_fill_set_lookup_string(), target);
+  }
+
+  // optional string rev_fill_set_lookup_string = 4;
+  if (has_rev_fill_set_lookup_string()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+      this->rev_fill_set_lookup_string().data(), this->rev_fill_set_lookup_string().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE);
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        4, this->rev_fill_set_lookup_string(), target);
+  }
+
+  // optional .TSCH.CommandApplyFillSetArchive.CapturedFillSetArchive fwd_captured_fill_set = 5;
+  if (has_fwd_captured_fill_set()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        5, this->fwd_captured_fill_set(), target);
+  }
+
+  // optional .TSCH.CommandApplyFillSetArchive.CapturedFillSetArchive rev_captured_fill_set = 6;
+  if (has_rev_captured_fill_set()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        6, this->rev_captured_fill_set(), target);
+  }
+
+  // optional string rev_last_applied_fill_set_lookup_string = 7;
+  if (has_rev_last_applied_fill_set_lookup_string()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+      this->rev_last_applied_fill_set_lookup_string().data(), this->rev_last_applied_fill_set_lookup_string().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE);
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        7, this->rev_last_applied_fill_set_lookup_string(), target);
+  }
+
+  if (!unknown_fields().empty()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  return target;
+}
+
+int CommandApplyFillSetArchive::ByteSize() const {
+  int total_size = 0;
+
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    // required .TSCH.ChartCommandArchive super = 1;
+    if (has_super()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->super());
+    }
+
+    // optional .TSP.Reference rollback_cmd = 2;
+    if (has_rollback_cmd()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->rollback_cmd());
+    }
+
+    // optional string fwd_fill_set_lookup_string = 3;
+    if (has_fwd_fill_set_lookup_string()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->fwd_fill_set_lookup_string());
+    }
+
+    // optional string rev_fill_set_lookup_string = 4;
+    if (has_rev_fill_set_lookup_string()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->rev_fill_set_lookup_string());
+    }
+
+    // optional .TSCH.CommandApplyFillSetArchive.CapturedFillSetArchive fwd_captured_fill_set = 5;
+    if (has_fwd_captured_fill_set()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->fwd_captured_fill_set());
+    }
+
+    // optional .TSCH.CommandApplyFillSetArchive.CapturedFillSetArchive rev_captured_fill_set = 6;
+    if (has_rev_captured_fill_set()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->rev_captured_fill_set());
+    }
+
+    // optional string rev_last_applied_fill_set_lookup_string = 7;
+    if (has_rev_last_applied_fill_set_lookup_string()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->rev_last_applied_fill_set_lookup_string());
+    }
+
+  }
+  if (!unknown_fields().empty()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = total_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void CommandApplyFillSetArchive::MergeFrom(const ::google::protobuf::Message& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  const CommandApplyFillSetArchive* source =
+    ::google::protobuf::internal::dynamic_cast_if_available<const CommandApplyFillSetArchive*>(
+      &from);
+  if (source == NULL) {
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+    MergeFrom(*source);
+  }
+}
+
+void CommandApplyFillSetArchive::MergeFrom(const CommandApplyFillSetArchive& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (from.has_super()) {
+      mutable_super()->::TSCH::ChartCommandArchive::MergeFrom(from.super());
+    }
+    if (from.has_rollback_cmd()) {
+      mutable_rollback_cmd()->::TSP::Reference::MergeFrom(from.rollback_cmd());
+    }
+    if (from.has_fwd_fill_set_lookup_string()) {
+      set_fwd_fill_set_lookup_string(from.fwd_fill_set_lookup_string());
+    }
+    if (from.has_rev_fill_set_lookup_string()) {
+      set_rev_fill_set_lookup_string(from.rev_fill_set_lookup_string());
+    }
+    if (from.has_fwd_captured_fill_set()) {
+      mutable_fwd_captured_fill_set()->::TSCH::CommandApplyFillSetArchive_CapturedFillSetArchive::MergeFrom(from.fwd_captured_fill_set());
+    }
+    if (from.has_rev_captured_fill_set()) {
+      mutable_rev_captured_fill_set()->::TSCH::CommandApplyFillSetArchive_CapturedFillSetArchive::MergeFrom(from.rev_captured_fill_set());
+    }
+    if (from.has_rev_last_applied_fill_set_lookup_string()) {
+      set_rev_last_applied_fill_set_lookup_string(from.rev_last_applied_fill_set_lookup_string());
+    }
+  }
+  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
+}
+
+void CommandApplyFillSetArchive::CopyFrom(const ::google::protobuf::Message& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void CommandApplyFillSetArchive::CopyFrom(const CommandApplyFillSetArchive& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool CommandApplyFillSetArchive::IsInitialized() const {
+  if ((_has_bits_[0] & 0x00000001) != 0x00000001) return false;
+
+  if (has_super()) {
+    if (!this->super().IsInitialized()) return false;
+  }
+  if (has_rollback_cmd()) {
+    if (!this->rollback_cmd().IsInitialized()) return false;
+  }
+  if (has_fwd_captured_fill_set()) {
+    if (!this->fwd_captured_fill_set().IsInitialized()) return false;
+  }
+  if (has_rev_captured_fill_set()) {
+    if (!this->rev_captured_fill_set().IsInitialized()) return false;
+  }
+  return true;
+}
+
+void CommandApplyFillSetArchive::Swap(CommandApplyFillSetArchive* other) {
+  if (other != this) {
+    std::swap(super_, other->super_);
+    std::swap(rollback_cmd_, other->rollback_cmd_);
+    std::swap(fwd_fill_set_lookup_string_, other->fwd_fill_set_lookup_string_);
+    std::swap(rev_fill_set_lookup_string_, other->rev_fill_set_lookup_string_);
+    std::swap(fwd_captured_fill_set_, other->fwd_captured_fill_set_);
+    std::swap(rev_captured_fill_set_, other->rev_captured_fill_set_);
+    std::swap(rev_last_applied_fill_set_lookup_string_, other->rev_last_applied_fill_set_lookup_string_);
+    std::swap(_has_bits_[0], other->_has_bits_[0]);
+    _unknown_fields_.Swap(&other->_unknown_fields_);
+    std::swap(_cached_size_, other->_cached_size_);
+  }
+}
+
+::google::protobuf::Metadata CommandApplyFillSetArchive::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = CommandApplyFillSetArchive_descriptor_;
+  metadata.reflection = CommandApplyFillSetArchive_reflection_;
   return metadata;
 }
 
@@ -3565,6 +6765,7 @@ const int CommandAddGridRowsArchive::kSuperFieldNumber;
 const int CommandAddGridRowsArchive::kLocationFieldNumber;
 const int CommandAddGridRowsArchive::kLengthFieldNumber;
 const int CommandAddGridRowsArchive::kNameFieldNumber;
+const int CommandAddGridRowsArchive::kIdsFieldNumber;
 #endif  // !_MSC_VER
 
 CommandAddGridRowsArchive::CommandAddGridRowsArchive()
@@ -3630,6 +6831,7 @@ void CommandAddGridRowsArchive::Clear() {
     length_ = 0u;
   }
   name_.Clear();
+  ids_.Clear();
   ::memset(_has_bits_, 0, sizeof(_has_bits_));
   mutable_unknown_fields()->Clear();
 }
@@ -3700,6 +6902,25 @@ bool CommandAddGridRowsArchive::MergePartialFromCodedStream(
           goto handle_uninterpreted;
         }
         if (input->ExpectTag(34)) goto parse_name;
+        if (input->ExpectTag(42)) goto parse_ids;
+        break;
+      }
+
+      // repeated string ids = 5;
+      case 5: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_ids:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->add_ids()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+            this->ids(this->ids_size() - 1).data(),
+            this->ids(this->ids_size() - 1).length(),
+            ::google::protobuf::internal::WireFormat::PARSE);
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(42)) goto parse_ids;
         if (input->ExpectAtEnd()) return true;
         break;
       }
@@ -3747,6 +6968,15 @@ void CommandAddGridRowsArchive::SerializeWithCachedSizes(
       4, this->name(i), output);
   }
 
+  // repeated string ids = 5;
+  for (int i = 0; i < this->ids_size(); i++) {
+  ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+    this->ids(i).data(), this->ids(i).length(),
+    ::google::protobuf::internal::WireFormat::SERIALIZE);
+    ::google::protobuf::internal::WireFormatLite::WriteString(
+      5, this->ids(i), output);
+  }
+
   if (!unknown_fields().empty()) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         unknown_fields(), output);
@@ -3779,6 +7009,15 @@ void CommandAddGridRowsArchive::SerializeWithCachedSizes(
       ::google::protobuf::internal::WireFormat::SERIALIZE);
     target = ::google::protobuf::internal::WireFormatLite::
       WriteStringToArray(4, this->name(i), target);
+  }
+
+  // repeated string ids = 5;
+  for (int i = 0; i < this->ids_size(); i++) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+      this->ids(i).data(), this->ids(i).length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE);
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteStringToArray(5, this->ids(i), target);
   }
 
   if (!unknown_fields().empty()) {
@@ -3821,6 +7060,13 @@ int CommandAddGridRowsArchive::ByteSize() const {
       this->name(i));
   }
 
+  // repeated string ids = 5;
+  total_size += 1 * this->ids_size();
+  for (int i = 0; i < this->ids_size(); i++) {
+    total_size += ::google::protobuf::internal::WireFormatLite::StringSize(
+      this->ids(i));
+  }
+
   if (!unknown_fields().empty()) {
     total_size +=
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
@@ -3847,6 +7093,7 @@ void CommandAddGridRowsArchive::MergeFrom(const ::google::protobuf::Message& fro
 void CommandAddGridRowsArchive::MergeFrom(const CommandAddGridRowsArchive& from) {
   GOOGLE_CHECK_NE(&from, this);
   name_.MergeFrom(from.name_);
+  ids_.MergeFrom(from.ids_);
   if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
     if (from.has_super()) {
       mutable_super()->::TSCH::ChartCommandArchive::MergeFrom(from.super());
@@ -3888,6 +7135,7 @@ void CommandAddGridRowsArchive::Swap(CommandAddGridRowsArchive* other) {
     std::swap(location_, other->location_);
     std::swap(length_, other->length_);
     name_.Swap(&other->name_);
+    ids_.Swap(&other->ids_);
     std::swap(_has_bits_[0], other->_has_bits_[0]);
     _unknown_fields_.Swap(&other->_unknown_fields_);
     std::swap(_cached_size_, other->_cached_size_);
@@ -3910,6 +7158,7 @@ const int CommandAddGridColumnsArchive::kSuperFieldNumber;
 const int CommandAddGridColumnsArchive::kLocationFieldNumber;
 const int CommandAddGridColumnsArchive::kLengthFieldNumber;
 const int CommandAddGridColumnsArchive::kNameFieldNumber;
+const int CommandAddGridColumnsArchive::kIdsFieldNumber;
 #endif  // !_MSC_VER
 
 CommandAddGridColumnsArchive::CommandAddGridColumnsArchive()
@@ -3975,6 +7224,7 @@ void CommandAddGridColumnsArchive::Clear() {
     length_ = 0u;
   }
   name_.Clear();
+  ids_.Clear();
   ::memset(_has_bits_, 0, sizeof(_has_bits_));
   mutable_unknown_fields()->Clear();
 }
@@ -4045,6 +7295,25 @@ bool CommandAddGridColumnsArchive::MergePartialFromCodedStream(
           goto handle_uninterpreted;
         }
         if (input->ExpectTag(34)) goto parse_name;
+        if (input->ExpectTag(42)) goto parse_ids;
+        break;
+      }
+
+      // repeated string ids = 5;
+      case 5: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_ids:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->add_ids()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+            this->ids(this->ids_size() - 1).data(),
+            this->ids(this->ids_size() - 1).length(),
+            ::google::protobuf::internal::WireFormat::PARSE);
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(42)) goto parse_ids;
         if (input->ExpectAtEnd()) return true;
         break;
       }
@@ -4092,6 +7361,15 @@ void CommandAddGridColumnsArchive::SerializeWithCachedSizes(
       4, this->name(i), output);
   }
 
+  // repeated string ids = 5;
+  for (int i = 0; i < this->ids_size(); i++) {
+  ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+    this->ids(i).data(), this->ids(i).length(),
+    ::google::protobuf::internal::WireFormat::SERIALIZE);
+    ::google::protobuf::internal::WireFormatLite::WriteString(
+      5, this->ids(i), output);
+  }
+
   if (!unknown_fields().empty()) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         unknown_fields(), output);
@@ -4124,6 +7402,15 @@ void CommandAddGridColumnsArchive::SerializeWithCachedSizes(
       ::google::protobuf::internal::WireFormat::SERIALIZE);
     target = ::google::protobuf::internal::WireFormatLite::
       WriteStringToArray(4, this->name(i), target);
+  }
+
+  // repeated string ids = 5;
+  for (int i = 0; i < this->ids_size(); i++) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+      this->ids(i).data(), this->ids(i).length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE);
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteStringToArray(5, this->ids(i), target);
   }
 
   if (!unknown_fields().empty()) {
@@ -4166,6 +7453,13 @@ int CommandAddGridColumnsArchive::ByteSize() const {
       this->name(i));
   }
 
+  // repeated string ids = 5;
+  total_size += 1 * this->ids_size();
+  for (int i = 0; i < this->ids_size(); i++) {
+    total_size += ::google::protobuf::internal::WireFormatLite::StringSize(
+      this->ids(i));
+  }
+
   if (!unknown_fields().empty()) {
     total_size +=
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
@@ -4192,6 +7486,7 @@ void CommandAddGridColumnsArchive::MergeFrom(const ::google::protobuf::Message& 
 void CommandAddGridColumnsArchive::MergeFrom(const CommandAddGridColumnsArchive& from) {
   GOOGLE_CHECK_NE(&from, this);
   name_.MergeFrom(from.name_);
+  ids_.MergeFrom(from.ids_);
   if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
     if (from.has_super()) {
       mutable_super()->::TSCH::ChartCommandArchive::MergeFrom(from.super());
@@ -4233,6 +7528,7 @@ void CommandAddGridColumnsArchive::Swap(CommandAddGridColumnsArchive* other) {
     std::swap(location_, other->location_);
     std::swap(length_, other->length_);
     name_.Swap(&other->name_);
+    ids_.Swap(&other->ids_);
     std::swap(_has_bits_[0], other->_has_bits_[0]);
     _unknown_fields_.Swap(&other->_unknown_fields_);
     std::swap(_cached_size_, other->_cached_size_);
@@ -5140,6 +8436,9 @@ const int CommandDeleteGridRowsArchive::kNamesFieldNumber;
 const int CommandDeleteGridRowsArchive::kValueRowFieldNumber;
 const int CommandDeleteGridRowsArchive::kRemovedAllRowsFieldNumber;
 const int CommandDeleteGridRowsArchive::kColumnNamesFieldNumber;
+const int CommandDeleteGridRowsArchive::kRowIdsFieldNumber;
+const int CommandDeleteGridRowsArchive::kColumnIdsFieldNumber;
+const int CommandDeleteGridRowsArchive::kAddDummyDataOnDeleteAllFieldNumber;
 #endif  // !_MSC_VER
 
 CommandDeleteGridRowsArchive::CommandDeleteGridRowsArchive()
@@ -5163,6 +8462,7 @@ void CommandDeleteGridRowsArchive::SharedCtor() {
   location_ = 0u;
   length_ = 0u;
   removed_all_rows_ = false;
+  add_dummy_data_on_delete_all_ = false;
   ::memset(_has_bits_, 0, sizeof(_has_bits_));
 }
 
@@ -5206,9 +8506,14 @@ void CommandDeleteGridRowsArchive::Clear() {
     length_ = 0u;
     removed_all_rows_ = false;
   }
+  if (_has_bits_[9 / 32] & (0xffu << (9 % 32))) {
+    add_dummy_data_on_delete_all_ = false;
+  }
   names_.Clear();
   value_row_.Clear();
   column_names_.Clear();
+  row_ids_.Clear();
+  column_ids_.Clear();
   ::memset(_has_bits_, 0, sizeof(_has_bits_));
   mutable_unknown_fields()->Clear();
 }
@@ -5329,6 +8634,60 @@ bool CommandDeleteGridRowsArchive::MergePartialFromCodedStream(
           goto handle_uninterpreted;
         }
         if (input->ExpectTag(66)) goto parse_column_names;
+        if (input->ExpectTag(74)) goto parse_row_ids;
+        break;
+      }
+
+      // repeated string row_ids = 9;
+      case 9: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_row_ids:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->add_row_ids()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+            this->row_ids(this->row_ids_size() - 1).data(),
+            this->row_ids(this->row_ids_size() - 1).length(),
+            ::google::protobuf::internal::WireFormat::PARSE);
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(74)) goto parse_row_ids;
+        if (input->ExpectTag(82)) goto parse_column_ids;
+        break;
+      }
+
+      // repeated string column_ids = 10;
+      case 10: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_column_ids:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->add_column_ids()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+            this->column_ids(this->column_ids_size() - 1).data(),
+            this->column_ids(this->column_ids_size() - 1).length(),
+            ::google::protobuf::internal::WireFormat::PARSE);
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(82)) goto parse_column_ids;
+        if (input->ExpectTag(88)) goto parse_add_dummy_data_on_delete_all;
+        break;
+      }
+
+      // required bool add_dummy_data_on_delete_all = 11;
+      case 11: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_add_dummy_data_on_delete_all:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &add_dummy_data_on_delete_all_)));
+          set_has_add_dummy_data_on_delete_all();
+        } else {
+          goto handle_uninterpreted;
+        }
         if (input->ExpectAtEnd()) return true;
         break;
       }
@@ -5396,6 +8755,29 @@ void CommandDeleteGridRowsArchive::SerializeWithCachedSizes(
       8, this->column_names(i), output);
   }
 
+  // repeated string row_ids = 9;
+  for (int i = 0; i < this->row_ids_size(); i++) {
+  ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+    this->row_ids(i).data(), this->row_ids(i).length(),
+    ::google::protobuf::internal::WireFormat::SERIALIZE);
+    ::google::protobuf::internal::WireFormatLite::WriteString(
+      9, this->row_ids(i), output);
+  }
+
+  // repeated string column_ids = 10;
+  for (int i = 0; i < this->column_ids_size(); i++) {
+  ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+    this->column_ids(i).data(), this->column_ids(i).length(),
+    ::google::protobuf::internal::WireFormat::SERIALIZE);
+    ::google::protobuf::internal::WireFormatLite::WriteString(
+      10, this->column_ids(i), output);
+  }
+
+  // required bool add_dummy_data_on_delete_all = 11;
+  if (has_add_dummy_data_on_delete_all()) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(11, this->add_dummy_data_on_delete_all(), output);
+  }
+
   if (!unknown_fields().empty()) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         unknown_fields(), output);
@@ -5451,6 +8833,29 @@ void CommandDeleteGridRowsArchive::SerializeWithCachedSizes(
       WriteStringToArray(8, this->column_names(i), target);
   }
 
+  // repeated string row_ids = 9;
+  for (int i = 0; i < this->row_ids_size(); i++) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+      this->row_ids(i).data(), this->row_ids(i).length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE);
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteStringToArray(9, this->row_ids(i), target);
+  }
+
+  // repeated string column_ids = 10;
+  for (int i = 0; i < this->column_ids_size(); i++) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+      this->column_ids(i).data(), this->column_ids(i).length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE);
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteStringToArray(10, this->column_ids(i), target);
+  }
+
+  // required bool add_dummy_data_on_delete_all = 11;
+  if (has_add_dummy_data_on_delete_all()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(11, this->add_dummy_data_on_delete_all(), target);
+  }
+
   if (!unknown_fields().empty()) {
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
         unknown_fields(), target);
@@ -5489,6 +8894,13 @@ int CommandDeleteGridRowsArchive::ByteSize() const {
     }
 
   }
+  if (_has_bits_[9 / 32] & (0xffu << (9 % 32))) {
+    // required bool add_dummy_data_on_delete_all = 11;
+    if (has_add_dummy_data_on_delete_all()) {
+      total_size += 1 + 1;
+    }
+
+  }
   // repeated string names = 4;
   total_size += 1 * this->names_size();
   for (int i = 0; i < this->names_size(); i++) {
@@ -5509,6 +8921,20 @@ int CommandDeleteGridRowsArchive::ByteSize() const {
   for (int i = 0; i < this->column_names_size(); i++) {
     total_size += ::google::protobuf::internal::WireFormatLite::StringSize(
       this->column_names(i));
+  }
+
+  // repeated string row_ids = 9;
+  total_size += 1 * this->row_ids_size();
+  for (int i = 0; i < this->row_ids_size(); i++) {
+    total_size += ::google::protobuf::internal::WireFormatLite::StringSize(
+      this->row_ids(i));
+  }
+
+  // repeated string column_ids = 10;
+  total_size += 1 * this->column_ids_size();
+  for (int i = 0; i < this->column_ids_size(); i++) {
+    total_size += ::google::protobuf::internal::WireFormatLite::StringSize(
+      this->column_ids(i));
   }
 
   if (!unknown_fields().empty()) {
@@ -5539,6 +8965,8 @@ void CommandDeleteGridRowsArchive::MergeFrom(const CommandDeleteGridRowsArchive&
   names_.MergeFrom(from.names_);
   value_row_.MergeFrom(from.value_row_);
   column_names_.MergeFrom(from.column_names_);
+  row_ids_.MergeFrom(from.row_ids_);
+  column_ids_.MergeFrom(from.column_ids_);
   if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
     if (from.has_super()) {
       mutable_super()->::TSCH::ChartCommandArchive::MergeFrom(from.super());
@@ -5551,6 +8979,11 @@ void CommandDeleteGridRowsArchive::MergeFrom(const CommandDeleteGridRowsArchive&
     }
     if (from.has_removed_all_rows()) {
       set_removed_all_rows(from.removed_all_rows());
+    }
+  }
+  if (from._has_bits_[9 / 32] & (0xffu << (9 % 32))) {
+    if (from.has_add_dummy_data_on_delete_all()) {
+      set_add_dummy_data_on_delete_all(from.add_dummy_data_on_delete_all());
     }
   }
   mutable_unknown_fields()->MergeFrom(from.unknown_fields());
@@ -5569,7 +9002,7 @@ void CommandDeleteGridRowsArchive::CopyFrom(const CommandDeleteGridRowsArchive& 
 }
 
 bool CommandDeleteGridRowsArchive::IsInitialized() const {
-  if ((_has_bits_[0] & 0x00000007) != 0x00000007) return false;
+  if ((_has_bits_[0] & 0x00000207) != 0x00000207) return false;
 
   if (has_super()) {
     if (!this->super().IsInitialized()) return false;
@@ -5586,6 +9019,9 @@ void CommandDeleteGridRowsArchive::Swap(CommandDeleteGridRowsArchive* other) {
     value_row_.Swap(&other->value_row_);
     std::swap(removed_all_rows_, other->removed_all_rows_);
     column_names_.Swap(&other->column_names_);
+    row_ids_.Swap(&other->row_ids_);
+    column_ids_.Swap(&other->column_ids_);
+    std::swap(add_dummy_data_on_delete_all_, other->add_dummy_data_on_delete_all_);
     std::swap(_has_bits_[0], other->_has_bits_[0]);
     _unknown_fields_.Swap(&other->_unknown_fields_);
     std::swap(_cached_size_, other->_cached_size_);
@@ -5819,6 +9255,9 @@ const int CommandDeleteGridColumnsArchive::kNamesFieldNumber;
 const int CommandDeleteGridColumnsArchive::kValueRowFieldNumber;
 const int CommandDeleteGridColumnsArchive::kRemovedAllColumnsFieldNumber;
 const int CommandDeleteGridColumnsArchive::kRowNamesFieldNumber;
+const int CommandDeleteGridColumnsArchive::kRowIdsFieldNumber;
+const int CommandDeleteGridColumnsArchive::kColumnIdsFieldNumber;
+const int CommandDeleteGridColumnsArchive::kAddDummyDataOnDeleteAllFieldNumber;
 #endif  // !_MSC_VER
 
 CommandDeleteGridColumnsArchive::CommandDeleteGridColumnsArchive()
@@ -5842,6 +9281,7 @@ void CommandDeleteGridColumnsArchive::SharedCtor() {
   location_ = 0u;
   length_ = 0u;
   removed_all_columns_ = false;
+  add_dummy_data_on_delete_all_ = false;
   ::memset(_has_bits_, 0, sizeof(_has_bits_));
 }
 
@@ -5885,9 +9325,14 @@ void CommandDeleteGridColumnsArchive::Clear() {
     length_ = 0u;
     removed_all_columns_ = false;
   }
+  if (_has_bits_[9 / 32] & (0xffu << (9 % 32))) {
+    add_dummy_data_on_delete_all_ = false;
+  }
   names_.Clear();
   value_row_.Clear();
   row_names_.Clear();
+  row_ids_.Clear();
+  column_ids_.Clear();
   ::memset(_has_bits_, 0, sizeof(_has_bits_));
   mutable_unknown_fields()->Clear();
 }
@@ -6008,6 +9453,60 @@ bool CommandDeleteGridColumnsArchive::MergePartialFromCodedStream(
           goto handle_uninterpreted;
         }
         if (input->ExpectTag(66)) goto parse_row_names;
+        if (input->ExpectTag(74)) goto parse_row_ids;
+        break;
+      }
+
+      // repeated string row_ids = 9;
+      case 9: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_row_ids:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->add_row_ids()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+            this->row_ids(this->row_ids_size() - 1).data(),
+            this->row_ids(this->row_ids_size() - 1).length(),
+            ::google::protobuf::internal::WireFormat::PARSE);
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(74)) goto parse_row_ids;
+        if (input->ExpectTag(82)) goto parse_column_ids;
+        break;
+      }
+
+      // repeated string column_ids = 10;
+      case 10: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_column_ids:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->add_column_ids()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+            this->column_ids(this->column_ids_size() - 1).data(),
+            this->column_ids(this->column_ids_size() - 1).length(),
+            ::google::protobuf::internal::WireFormat::PARSE);
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(82)) goto parse_column_ids;
+        if (input->ExpectTag(88)) goto parse_add_dummy_data_on_delete_all;
+        break;
+      }
+
+      // required bool add_dummy_data_on_delete_all = 11;
+      case 11: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_add_dummy_data_on_delete_all:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &add_dummy_data_on_delete_all_)));
+          set_has_add_dummy_data_on_delete_all();
+        } else {
+          goto handle_uninterpreted;
+        }
         if (input->ExpectAtEnd()) return true;
         break;
       }
@@ -6075,6 +9574,29 @@ void CommandDeleteGridColumnsArchive::SerializeWithCachedSizes(
       8, this->row_names(i), output);
   }
 
+  // repeated string row_ids = 9;
+  for (int i = 0; i < this->row_ids_size(); i++) {
+  ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+    this->row_ids(i).data(), this->row_ids(i).length(),
+    ::google::protobuf::internal::WireFormat::SERIALIZE);
+    ::google::protobuf::internal::WireFormatLite::WriteString(
+      9, this->row_ids(i), output);
+  }
+
+  // repeated string column_ids = 10;
+  for (int i = 0; i < this->column_ids_size(); i++) {
+  ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+    this->column_ids(i).data(), this->column_ids(i).length(),
+    ::google::protobuf::internal::WireFormat::SERIALIZE);
+    ::google::protobuf::internal::WireFormatLite::WriteString(
+      10, this->column_ids(i), output);
+  }
+
+  // required bool add_dummy_data_on_delete_all = 11;
+  if (has_add_dummy_data_on_delete_all()) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(11, this->add_dummy_data_on_delete_all(), output);
+  }
+
   if (!unknown_fields().empty()) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         unknown_fields(), output);
@@ -6130,6 +9652,29 @@ void CommandDeleteGridColumnsArchive::SerializeWithCachedSizes(
       WriteStringToArray(8, this->row_names(i), target);
   }
 
+  // repeated string row_ids = 9;
+  for (int i = 0; i < this->row_ids_size(); i++) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+      this->row_ids(i).data(), this->row_ids(i).length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE);
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteStringToArray(9, this->row_ids(i), target);
+  }
+
+  // repeated string column_ids = 10;
+  for (int i = 0; i < this->column_ids_size(); i++) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+      this->column_ids(i).data(), this->column_ids(i).length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE);
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteStringToArray(10, this->column_ids(i), target);
+  }
+
+  // required bool add_dummy_data_on_delete_all = 11;
+  if (has_add_dummy_data_on_delete_all()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(11, this->add_dummy_data_on_delete_all(), target);
+  }
+
   if (!unknown_fields().empty()) {
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
         unknown_fields(), target);
@@ -6168,6 +9713,13 @@ int CommandDeleteGridColumnsArchive::ByteSize() const {
     }
 
   }
+  if (_has_bits_[9 / 32] & (0xffu << (9 % 32))) {
+    // required bool add_dummy_data_on_delete_all = 11;
+    if (has_add_dummy_data_on_delete_all()) {
+      total_size += 1 + 1;
+    }
+
+  }
   // repeated string names = 4;
   total_size += 1 * this->names_size();
   for (int i = 0; i < this->names_size(); i++) {
@@ -6188,6 +9740,20 @@ int CommandDeleteGridColumnsArchive::ByteSize() const {
   for (int i = 0; i < this->row_names_size(); i++) {
     total_size += ::google::protobuf::internal::WireFormatLite::StringSize(
       this->row_names(i));
+  }
+
+  // repeated string row_ids = 9;
+  total_size += 1 * this->row_ids_size();
+  for (int i = 0; i < this->row_ids_size(); i++) {
+    total_size += ::google::protobuf::internal::WireFormatLite::StringSize(
+      this->row_ids(i));
+  }
+
+  // repeated string column_ids = 10;
+  total_size += 1 * this->column_ids_size();
+  for (int i = 0; i < this->column_ids_size(); i++) {
+    total_size += ::google::protobuf::internal::WireFormatLite::StringSize(
+      this->column_ids(i));
   }
 
   if (!unknown_fields().empty()) {
@@ -6218,6 +9784,8 @@ void CommandDeleteGridColumnsArchive::MergeFrom(const CommandDeleteGridColumnsAr
   names_.MergeFrom(from.names_);
   value_row_.MergeFrom(from.value_row_);
   row_names_.MergeFrom(from.row_names_);
+  row_ids_.MergeFrom(from.row_ids_);
+  column_ids_.MergeFrom(from.column_ids_);
   if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
     if (from.has_super()) {
       mutable_super()->::TSCH::ChartCommandArchive::MergeFrom(from.super());
@@ -6230,6 +9798,11 @@ void CommandDeleteGridColumnsArchive::MergeFrom(const CommandDeleteGridColumnsAr
     }
     if (from.has_removed_all_columns()) {
       set_removed_all_columns(from.removed_all_columns());
+    }
+  }
+  if (from._has_bits_[9 / 32] & (0xffu << (9 % 32))) {
+    if (from.has_add_dummy_data_on_delete_all()) {
+      set_add_dummy_data_on_delete_all(from.add_dummy_data_on_delete_all());
     }
   }
   mutable_unknown_fields()->MergeFrom(from.unknown_fields());
@@ -6248,7 +9821,7 @@ void CommandDeleteGridColumnsArchive::CopyFrom(const CommandDeleteGridColumnsArc
 }
 
 bool CommandDeleteGridColumnsArchive::IsInitialized() const {
-  if ((_has_bits_[0] & 0x00000007) != 0x00000007) return false;
+  if ((_has_bits_[0] & 0x00000207) != 0x00000207) return false;
 
   if (has_super()) {
     if (!this->super().IsInitialized()) return false;
@@ -6265,6 +9838,9 @@ void CommandDeleteGridColumnsArchive::Swap(CommandDeleteGridColumnsArchive* othe
     value_row_.Swap(&other->value_row_);
     std::swap(removed_all_columns_, other->removed_all_columns_);
     row_names_.Swap(&other->row_names_);
+    row_ids_.Swap(&other->row_ids_);
+    column_ids_.Swap(&other->column_ids_);
+    std::swap(add_dummy_data_on_delete_all_, other->add_dummy_data_on_delete_all_);
     std::swap(_has_bits_[0], other->_has_bits_[0]);
     _unknown_fields_.Swap(&other->_unknown_fields_);
     std::swap(_cached_size_, other->_cached_size_);
@@ -11047,6 +14623,8 @@ const int CommandReplaceGridValuesArchive::kOldColNamesFieldNumber;
 const int CommandReplaceGridValuesArchive::kNewColNamesFieldNumber;
 const int CommandReplaceGridValuesArchive::kRowsToAddFieldNumber;
 const int CommandReplaceGridValuesArchive::kColsToAddFieldNumber;
+const int CommandReplaceGridValuesArchive::kRowIdsFieldNumber;
+const int CommandReplaceGridValuesArchive::kColumnIdsFieldNumber;
 #endif  // !_MSC_VER
 
 CommandReplaceGridValuesArchive::CommandReplaceGridValuesArchive()
@@ -11123,6 +14701,8 @@ void CommandReplaceGridValuesArchive::Clear() {
   new_row_names_.Clear();
   old_col_names_.Clear();
   new_col_names_.Clear();
+  row_ids_.Clear();
+  column_ids_.Clear();
   ::memset(_has_bits_, 0, sizeof(_has_bits_));
   mutable_unknown_fields()->Clear();
 }
@@ -11312,6 +14892,44 @@ bool CommandReplaceGridValuesArchive::MergePartialFromCodedStream(
         } else {
           goto handle_uninterpreted;
         }
+        if (input->ExpectTag(98)) goto parse_row_ids;
+        break;
+      }
+
+      // repeated string row_ids = 12;
+      case 12: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_row_ids:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->add_row_ids()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+            this->row_ids(this->row_ids_size() - 1).data(),
+            this->row_ids(this->row_ids_size() - 1).length(),
+            ::google::protobuf::internal::WireFormat::PARSE);
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(98)) goto parse_row_ids;
+        if (input->ExpectTag(106)) goto parse_column_ids;
+        break;
+      }
+
+      // repeated string column_ids = 13;
+      case 13: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_column_ids:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->add_column_ids()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+            this->column_ids(this->column_ids_size() - 1).data(),
+            this->column_ids(this->column_ids_size() - 1).length(),
+            ::google::protobuf::internal::WireFormat::PARSE);
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(106)) goto parse_column_ids;
         if (input->ExpectAtEnd()) return true;
         break;
       }
@@ -11408,6 +15026,24 @@ void CommandReplaceGridValuesArchive::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteUInt32(11, this->cols_to_add(), output);
   }
 
+  // repeated string row_ids = 12;
+  for (int i = 0; i < this->row_ids_size(); i++) {
+  ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+    this->row_ids(i).data(), this->row_ids(i).length(),
+    ::google::protobuf::internal::WireFormat::SERIALIZE);
+    ::google::protobuf::internal::WireFormatLite::WriteString(
+      12, this->row_ids(i), output);
+  }
+
+  // repeated string column_ids = 13;
+  for (int i = 0; i < this->column_ids_size(); i++) {
+  ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+    this->column_ids(i).data(), this->column_ids(i).length(),
+    ::google::protobuf::internal::WireFormat::SERIALIZE);
+    ::google::protobuf::internal::WireFormatLite::WriteString(
+      13, this->column_ids(i), output);
+  }
+
   if (!unknown_fields().empty()) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         unknown_fields(), output);
@@ -11491,6 +15127,24 @@ void CommandReplaceGridValuesArchive::SerializeWithCachedSizes(
   // optional uint32 cols_to_add = 11;
   if (has_cols_to_add()) {
     target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(11, this->cols_to_add(), target);
+  }
+
+  // repeated string row_ids = 12;
+  for (int i = 0; i < this->row_ids_size(); i++) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+      this->row_ids(i).data(), this->row_ids(i).length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE);
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteStringToArray(12, this->row_ids(i), target);
+  }
+
+  // repeated string column_ids = 13;
+  for (int i = 0; i < this->column_ids_size(); i++) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+      this->column_ids(i).data(), this->column_ids(i).length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE);
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteStringToArray(13, this->column_ids(i), target);
   }
 
   if (!unknown_fields().empty()) {
@@ -11586,6 +15240,20 @@ int CommandReplaceGridValuesArchive::ByteSize() const {
       this->new_col_names(i));
   }
 
+  // repeated string row_ids = 12;
+  total_size += 1 * this->row_ids_size();
+  for (int i = 0; i < this->row_ids_size(); i++) {
+    total_size += ::google::protobuf::internal::WireFormatLite::StringSize(
+      this->row_ids(i));
+  }
+
+  // repeated string column_ids = 13;
+  total_size += 1 * this->column_ids_size();
+  for (int i = 0; i < this->column_ids_size(); i++) {
+    total_size += ::google::protobuf::internal::WireFormatLite::StringSize(
+      this->column_ids(i));
+  }
+
   if (!unknown_fields().empty()) {
     total_size +=
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
@@ -11617,6 +15285,8 @@ void CommandReplaceGridValuesArchive::MergeFrom(const CommandReplaceGridValuesAr
   new_row_names_.MergeFrom(from.new_row_names_);
   old_col_names_.MergeFrom(from.old_col_names_);
   new_col_names_.MergeFrom(from.new_col_names_);
+  row_ids_.MergeFrom(from.row_ids_);
+  column_ids_.MergeFrom(from.column_ids_);
   if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
     if (from.has_super()) {
       mutable_super()->::TSCH::ChartCommandArchive::MergeFrom(from.super());
@@ -11673,6 +15343,8 @@ void CommandReplaceGridValuesArchive::Swap(CommandReplaceGridValuesArchive* othe
     new_col_names_.Swap(&other->new_col_names_);
     std::swap(rows_to_add_, other->rows_to_add_);
     std::swap(cols_to_add_, other->cols_to_add_);
+    row_ids_.Swap(&other->row_ids_);
+    column_ids_.Swap(&other->column_ids_);
     std::swap(_has_bits_[0], other->_has_bits_[0]);
     _unknown_fields_.Swap(&other->_unknown_fields_);
     std::swap(_cached_size_, other->_cached_size_);
@@ -12619,6 +16291,1537 @@ void CommandInvalidateWPCaches::Swap(CommandInvalidateWPCaches* other) {
   ::google::protobuf::Metadata metadata;
   metadata.descriptor = CommandInvalidateWPCaches_descriptor_;
   metadata.reflection = CommandInvalidateWPCaches_reflection_;
+  return metadata;
+}
+
+
+// ===================================================================
+
+#ifndef _MSC_VER
+const int CommandSetGridColumnNameArchive::kSuperFieldNumber;
+const int CommandSetGridColumnNameArchive::kColumnindexFieldNumber;
+const int CommandSetGridColumnNameArchive::kOldvalueFieldNumber;
+const int CommandSetGridColumnNameArchive::kNewvalueFieldNumber;
+#endif  // !_MSC_VER
+
+CommandSetGridColumnNameArchive::CommandSetGridColumnNameArchive()
+  : ::google::protobuf::Message() {
+  SharedCtor();
+}
+
+void CommandSetGridColumnNameArchive::InitAsDefaultInstance() {
+  super_ = const_cast< ::TSCH::ChartCommandArchive*>(&::TSCH::ChartCommandArchive::default_instance());
+}
+
+CommandSetGridColumnNameArchive::CommandSetGridColumnNameArchive(const CommandSetGridColumnNameArchive& from)
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  MergeFrom(from);
+}
+
+void CommandSetGridColumnNameArchive::SharedCtor() {
+  _cached_size_ = 0;
+  super_ = NULL;
+  columnindex_ = 0u;
+  oldvalue_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+  newvalue_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+}
+
+CommandSetGridColumnNameArchive::~CommandSetGridColumnNameArchive() {
+  SharedDtor();
+}
+
+void CommandSetGridColumnNameArchive::SharedDtor() {
+  if (oldvalue_ != &::google::protobuf::internal::kEmptyString) {
+    delete oldvalue_;
+  }
+  if (newvalue_ != &::google::protobuf::internal::kEmptyString) {
+    delete newvalue_;
+  }
+  if (this != default_instance_) {
+    delete super_;
+  }
+}
+
+void CommandSetGridColumnNameArchive::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* CommandSetGridColumnNameArchive::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return CommandSetGridColumnNameArchive_descriptor_;
+}
+
+const CommandSetGridColumnNameArchive& CommandSetGridColumnNameArchive::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_TSCHCommandArchives_2eproto();
+  return *default_instance_;
+}
+
+CommandSetGridColumnNameArchive* CommandSetGridColumnNameArchive::default_instance_ = NULL;
+
+CommandSetGridColumnNameArchive* CommandSetGridColumnNameArchive::New() const {
+  return new CommandSetGridColumnNameArchive;
+}
+
+void CommandSetGridColumnNameArchive::Clear() {
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (has_super()) {
+      if (super_ != NULL) super_->::TSCH::ChartCommandArchive::Clear();
+    }
+    columnindex_ = 0u;
+    if (has_oldvalue()) {
+      if (oldvalue_ != &::google::protobuf::internal::kEmptyString) {
+        oldvalue_->clear();
+      }
+    }
+    if (has_newvalue()) {
+      if (newvalue_ != &::google::protobuf::internal::kEmptyString) {
+        newvalue_->clear();
+      }
+    }
+  }
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+  mutable_unknown_fields()->Clear();
+}
+
+bool CommandSetGridColumnNameArchive::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!(EXPRESSION)) return false
+  ::google::protobuf::uint32 tag;
+  while ((tag = input->ReadTag()) != 0) {
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // required .TSCH.ChartCommandArchive super = 1;
+      case 1: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_super()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(16)) goto parse_columnindex;
+        break;
+      }
+
+      // required uint32 columnindex = 2;
+      case 2: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_columnindex:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                 input, &columnindex_)));
+          set_has_columnindex();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(26)) goto parse_oldvalue;
+        break;
+      }
+
+      // required string oldvalue = 3;
+      case 3: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_oldvalue:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_oldvalue()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+            this->oldvalue().data(), this->oldvalue().length(),
+            ::google::protobuf::internal::WireFormat::PARSE);
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(34)) goto parse_newvalue;
+        break;
+      }
+
+      // required string newvalue = 4;
+      case 4: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_newvalue:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_newvalue()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+            this->newvalue().data(), this->newvalue().length(),
+            ::google::protobuf::internal::WireFormat::PARSE);
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectAtEnd()) return true;
+        break;
+      }
+
+      default: {
+      handle_uninterpreted:
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          return true;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+  return true;
+#undef DO_
+}
+
+void CommandSetGridColumnNameArchive::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // required .TSCH.ChartCommandArchive super = 1;
+  if (has_super()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, this->super(), output);
+  }
+
+  // required uint32 columnindex = 2;
+  if (has_columnindex()) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(2, this->columnindex(), output);
+  }
+
+  // required string oldvalue = 3;
+  if (has_oldvalue()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+      this->oldvalue().data(), this->oldvalue().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE);
+    ::google::protobuf::internal::WireFormatLite::WriteString(
+      3, this->oldvalue(), output);
+  }
+
+  // required string newvalue = 4;
+  if (has_newvalue()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+      this->newvalue().data(), this->newvalue().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE);
+    ::google::protobuf::internal::WireFormatLite::WriteString(
+      4, this->newvalue(), output);
+  }
+
+  if (!unknown_fields().empty()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+}
+
+::google::protobuf::uint8* CommandSetGridColumnNameArchive::SerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // required .TSCH.ChartCommandArchive super = 1;
+  if (has_super()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        1, this->super(), target);
+  }
+
+  // required uint32 columnindex = 2;
+  if (has_columnindex()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(2, this->columnindex(), target);
+  }
+
+  // required string oldvalue = 3;
+  if (has_oldvalue()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+      this->oldvalue().data(), this->oldvalue().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE);
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        3, this->oldvalue(), target);
+  }
+
+  // required string newvalue = 4;
+  if (has_newvalue()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+      this->newvalue().data(), this->newvalue().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE);
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        4, this->newvalue(), target);
+  }
+
+  if (!unknown_fields().empty()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  return target;
+}
+
+int CommandSetGridColumnNameArchive::ByteSize() const {
+  int total_size = 0;
+
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    // required .TSCH.ChartCommandArchive super = 1;
+    if (has_super()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->super());
+    }
+
+    // required uint32 columnindex = 2;
+    if (has_columnindex()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::UInt32Size(
+          this->columnindex());
+    }
+
+    // required string oldvalue = 3;
+    if (has_oldvalue()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->oldvalue());
+    }
+
+    // required string newvalue = 4;
+    if (has_newvalue()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->newvalue());
+    }
+
+  }
+  if (!unknown_fields().empty()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = total_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void CommandSetGridColumnNameArchive::MergeFrom(const ::google::protobuf::Message& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  const CommandSetGridColumnNameArchive* source =
+    ::google::protobuf::internal::dynamic_cast_if_available<const CommandSetGridColumnNameArchive*>(
+      &from);
+  if (source == NULL) {
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+    MergeFrom(*source);
+  }
+}
+
+void CommandSetGridColumnNameArchive::MergeFrom(const CommandSetGridColumnNameArchive& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (from.has_super()) {
+      mutable_super()->::TSCH::ChartCommandArchive::MergeFrom(from.super());
+    }
+    if (from.has_columnindex()) {
+      set_columnindex(from.columnindex());
+    }
+    if (from.has_oldvalue()) {
+      set_oldvalue(from.oldvalue());
+    }
+    if (from.has_newvalue()) {
+      set_newvalue(from.newvalue());
+    }
+  }
+  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
+}
+
+void CommandSetGridColumnNameArchive::CopyFrom(const ::google::protobuf::Message& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void CommandSetGridColumnNameArchive::CopyFrom(const CommandSetGridColumnNameArchive& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool CommandSetGridColumnNameArchive::IsInitialized() const {
+  if ((_has_bits_[0] & 0x0000000f) != 0x0000000f) return false;
+
+  if (has_super()) {
+    if (!this->super().IsInitialized()) return false;
+  }
+  return true;
+}
+
+void CommandSetGridColumnNameArchive::Swap(CommandSetGridColumnNameArchive* other) {
+  if (other != this) {
+    std::swap(super_, other->super_);
+    std::swap(columnindex_, other->columnindex_);
+    std::swap(oldvalue_, other->oldvalue_);
+    std::swap(newvalue_, other->newvalue_);
+    std::swap(_has_bits_[0], other->_has_bits_[0]);
+    _unknown_fields_.Swap(&other->_unknown_fields_);
+    std::swap(_cached_size_, other->_cached_size_);
+  }
+}
+
+::google::protobuf::Metadata CommandSetGridColumnNameArchive::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = CommandSetGridColumnNameArchive_descriptor_;
+  metadata.reflection = CommandSetGridColumnNameArchive_reflection_;
+  return metadata;
+}
+
+
+// ===================================================================
+
+#ifndef _MSC_VER
+const int CommandSetGridRowNameArchive::kSuperFieldNumber;
+const int CommandSetGridRowNameArchive::kRowindexFieldNumber;
+const int CommandSetGridRowNameArchive::kOldvalueFieldNumber;
+const int CommandSetGridRowNameArchive::kNewvalueFieldNumber;
+#endif  // !_MSC_VER
+
+CommandSetGridRowNameArchive::CommandSetGridRowNameArchive()
+  : ::google::protobuf::Message() {
+  SharedCtor();
+}
+
+void CommandSetGridRowNameArchive::InitAsDefaultInstance() {
+  super_ = const_cast< ::TSCH::ChartCommandArchive*>(&::TSCH::ChartCommandArchive::default_instance());
+}
+
+CommandSetGridRowNameArchive::CommandSetGridRowNameArchive(const CommandSetGridRowNameArchive& from)
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  MergeFrom(from);
+}
+
+void CommandSetGridRowNameArchive::SharedCtor() {
+  _cached_size_ = 0;
+  super_ = NULL;
+  rowindex_ = 0u;
+  oldvalue_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+  newvalue_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+}
+
+CommandSetGridRowNameArchive::~CommandSetGridRowNameArchive() {
+  SharedDtor();
+}
+
+void CommandSetGridRowNameArchive::SharedDtor() {
+  if (oldvalue_ != &::google::protobuf::internal::kEmptyString) {
+    delete oldvalue_;
+  }
+  if (newvalue_ != &::google::protobuf::internal::kEmptyString) {
+    delete newvalue_;
+  }
+  if (this != default_instance_) {
+    delete super_;
+  }
+}
+
+void CommandSetGridRowNameArchive::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* CommandSetGridRowNameArchive::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return CommandSetGridRowNameArchive_descriptor_;
+}
+
+const CommandSetGridRowNameArchive& CommandSetGridRowNameArchive::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_TSCHCommandArchives_2eproto();
+  return *default_instance_;
+}
+
+CommandSetGridRowNameArchive* CommandSetGridRowNameArchive::default_instance_ = NULL;
+
+CommandSetGridRowNameArchive* CommandSetGridRowNameArchive::New() const {
+  return new CommandSetGridRowNameArchive;
+}
+
+void CommandSetGridRowNameArchive::Clear() {
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (has_super()) {
+      if (super_ != NULL) super_->::TSCH::ChartCommandArchive::Clear();
+    }
+    rowindex_ = 0u;
+    if (has_oldvalue()) {
+      if (oldvalue_ != &::google::protobuf::internal::kEmptyString) {
+        oldvalue_->clear();
+      }
+    }
+    if (has_newvalue()) {
+      if (newvalue_ != &::google::protobuf::internal::kEmptyString) {
+        newvalue_->clear();
+      }
+    }
+  }
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+  mutable_unknown_fields()->Clear();
+}
+
+bool CommandSetGridRowNameArchive::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!(EXPRESSION)) return false
+  ::google::protobuf::uint32 tag;
+  while ((tag = input->ReadTag()) != 0) {
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // required .TSCH.ChartCommandArchive super = 1;
+      case 1: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_super()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(16)) goto parse_rowindex;
+        break;
+      }
+
+      // required uint32 rowindex = 2;
+      case 2: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_rowindex:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                 input, &rowindex_)));
+          set_has_rowindex();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(26)) goto parse_oldvalue;
+        break;
+      }
+
+      // required string oldvalue = 3;
+      case 3: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_oldvalue:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_oldvalue()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+            this->oldvalue().data(), this->oldvalue().length(),
+            ::google::protobuf::internal::WireFormat::PARSE);
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(34)) goto parse_newvalue;
+        break;
+      }
+
+      // required string newvalue = 4;
+      case 4: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_newvalue:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_newvalue()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+            this->newvalue().data(), this->newvalue().length(),
+            ::google::protobuf::internal::WireFormat::PARSE);
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectAtEnd()) return true;
+        break;
+      }
+
+      default: {
+      handle_uninterpreted:
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          return true;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+  return true;
+#undef DO_
+}
+
+void CommandSetGridRowNameArchive::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // required .TSCH.ChartCommandArchive super = 1;
+  if (has_super()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, this->super(), output);
+  }
+
+  // required uint32 rowindex = 2;
+  if (has_rowindex()) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(2, this->rowindex(), output);
+  }
+
+  // required string oldvalue = 3;
+  if (has_oldvalue()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+      this->oldvalue().data(), this->oldvalue().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE);
+    ::google::protobuf::internal::WireFormatLite::WriteString(
+      3, this->oldvalue(), output);
+  }
+
+  // required string newvalue = 4;
+  if (has_newvalue()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+      this->newvalue().data(), this->newvalue().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE);
+    ::google::protobuf::internal::WireFormatLite::WriteString(
+      4, this->newvalue(), output);
+  }
+
+  if (!unknown_fields().empty()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+}
+
+::google::protobuf::uint8* CommandSetGridRowNameArchive::SerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // required .TSCH.ChartCommandArchive super = 1;
+  if (has_super()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        1, this->super(), target);
+  }
+
+  // required uint32 rowindex = 2;
+  if (has_rowindex()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(2, this->rowindex(), target);
+  }
+
+  // required string oldvalue = 3;
+  if (has_oldvalue()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+      this->oldvalue().data(), this->oldvalue().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE);
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        3, this->oldvalue(), target);
+  }
+
+  // required string newvalue = 4;
+  if (has_newvalue()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+      this->newvalue().data(), this->newvalue().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE);
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        4, this->newvalue(), target);
+  }
+
+  if (!unknown_fields().empty()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  return target;
+}
+
+int CommandSetGridRowNameArchive::ByteSize() const {
+  int total_size = 0;
+
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    // required .TSCH.ChartCommandArchive super = 1;
+    if (has_super()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->super());
+    }
+
+    // required uint32 rowindex = 2;
+    if (has_rowindex()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::UInt32Size(
+          this->rowindex());
+    }
+
+    // required string oldvalue = 3;
+    if (has_oldvalue()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->oldvalue());
+    }
+
+    // required string newvalue = 4;
+    if (has_newvalue()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->newvalue());
+    }
+
+  }
+  if (!unknown_fields().empty()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = total_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void CommandSetGridRowNameArchive::MergeFrom(const ::google::protobuf::Message& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  const CommandSetGridRowNameArchive* source =
+    ::google::protobuf::internal::dynamic_cast_if_available<const CommandSetGridRowNameArchive*>(
+      &from);
+  if (source == NULL) {
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+    MergeFrom(*source);
+  }
+}
+
+void CommandSetGridRowNameArchive::MergeFrom(const CommandSetGridRowNameArchive& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (from.has_super()) {
+      mutable_super()->::TSCH::ChartCommandArchive::MergeFrom(from.super());
+    }
+    if (from.has_rowindex()) {
+      set_rowindex(from.rowindex());
+    }
+    if (from.has_oldvalue()) {
+      set_oldvalue(from.oldvalue());
+    }
+    if (from.has_newvalue()) {
+      set_newvalue(from.newvalue());
+    }
+  }
+  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
+}
+
+void CommandSetGridRowNameArchive::CopyFrom(const ::google::protobuf::Message& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void CommandSetGridRowNameArchive::CopyFrom(const CommandSetGridRowNameArchive& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool CommandSetGridRowNameArchive::IsInitialized() const {
+  if ((_has_bits_[0] & 0x0000000f) != 0x0000000f) return false;
+
+  if (has_super()) {
+    if (!this->super().IsInitialized()) return false;
+  }
+  return true;
+}
+
+void CommandSetGridRowNameArchive::Swap(CommandSetGridRowNameArchive* other) {
+  if (other != this) {
+    std::swap(super_, other->super_);
+    std::swap(rowindex_, other->rowindex_);
+    std::swap(oldvalue_, other->oldvalue_);
+    std::swap(newvalue_, other->newvalue_);
+    std::swap(_has_bits_[0], other->_has_bits_[0]);
+    _unknown_fields_.Swap(&other->_unknown_fields_);
+    std::swap(_cached_size_, other->_cached_size_);
+  }
+}
+
+::google::protobuf::Metadata CommandSetGridRowNameArchive::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = CommandSetGridRowNameArchive_descriptor_;
+  metadata.reflection = CommandSetGridRowNameArchive_reflection_;
+  return metadata;
+}
+
+
+// ===================================================================
+
+#ifndef _MSC_VER
+const int CommandReplaceCustomFormatArchive_FormatObjectMutation::kStyleOwnerTypeFieldNumber;
+const int CommandReplaceCustomFormatArchive_FormatObjectMutation::kStyleOwnerIndexFieldNumber;
+const int CommandReplaceCustomFormatArchive_FormatObjectMutation::kFormatObjectPropertyFieldNumber;
+const int CommandReplaceCustomFormatArchive_FormatObjectMutation::kFormatObjectFieldNumber;
+#endif  // !_MSC_VER
+
+CommandReplaceCustomFormatArchive_FormatObjectMutation::CommandReplaceCustomFormatArchive_FormatObjectMutation()
+  : ::google::protobuf::Message() {
+  SharedCtor();
+}
+
+void CommandReplaceCustomFormatArchive_FormatObjectMutation::InitAsDefaultInstance() {
+  format_object_ = const_cast< ::TSK::FormatStructArchive*>(&::TSK::FormatStructArchive::default_instance());
+}
+
+CommandReplaceCustomFormatArchive_FormatObjectMutation::CommandReplaceCustomFormatArchive_FormatObjectMutation(const CommandReplaceCustomFormatArchive_FormatObjectMutation& from)
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  MergeFrom(from);
+}
+
+void CommandReplaceCustomFormatArchive_FormatObjectMutation::SharedCtor() {
+  _cached_size_ = 0;
+  style_owner_type_ = 1;
+  style_owner_index_ = 0u;
+  format_object_property_ = 0u;
+  format_object_ = NULL;
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+}
+
+CommandReplaceCustomFormatArchive_FormatObjectMutation::~CommandReplaceCustomFormatArchive_FormatObjectMutation() {
+  SharedDtor();
+}
+
+void CommandReplaceCustomFormatArchive_FormatObjectMutation::SharedDtor() {
+  if (this != default_instance_) {
+    delete format_object_;
+  }
+}
+
+void CommandReplaceCustomFormatArchive_FormatObjectMutation::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* CommandReplaceCustomFormatArchive_FormatObjectMutation::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return CommandReplaceCustomFormatArchive_FormatObjectMutation_descriptor_;
+}
+
+const CommandReplaceCustomFormatArchive_FormatObjectMutation& CommandReplaceCustomFormatArchive_FormatObjectMutation::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_TSCHCommandArchives_2eproto();
+  return *default_instance_;
+}
+
+CommandReplaceCustomFormatArchive_FormatObjectMutation* CommandReplaceCustomFormatArchive_FormatObjectMutation::default_instance_ = NULL;
+
+CommandReplaceCustomFormatArchive_FormatObjectMutation* CommandReplaceCustomFormatArchive_FormatObjectMutation::New() const {
+  return new CommandReplaceCustomFormatArchive_FormatObjectMutation;
+}
+
+void CommandReplaceCustomFormatArchive_FormatObjectMutation::Clear() {
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    style_owner_type_ = 1;
+    style_owner_index_ = 0u;
+    format_object_property_ = 0u;
+    if (has_format_object()) {
+      if (format_object_ != NULL) format_object_->::TSK::FormatStructArchive::Clear();
+    }
+  }
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+  mutable_unknown_fields()->Clear();
+}
+
+bool CommandReplaceCustomFormatArchive_FormatObjectMutation::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!(EXPRESSION)) return false
+  ::google::protobuf::uint32 tag;
+  while ((tag = input->ReadTag()) != 0) {
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // optional .TSCH.StyleOwnerType style_owner_type = 1;
+      case 1: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+          int value;
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
+                 input, &value)));
+          if (::TSCH::StyleOwnerType_IsValid(value)) {
+            set_style_owner_type(static_cast< ::TSCH::StyleOwnerType >(value));
+          } else {
+            mutable_unknown_fields()->AddVarint(1, value);
+          }
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(16)) goto parse_style_owner_index;
+        break;
+      }
+
+      // optional uint32 style_owner_index = 2;
+      case 2: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_style_owner_index:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                 input, &style_owner_index_)));
+          set_has_style_owner_index();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(24)) goto parse_format_object_property;
+        break;
+      }
+
+      // optional uint32 format_object_property = 3;
+      case 3: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_format_object_property:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                 input, &format_object_property_)));
+          set_has_format_object_property();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(34)) goto parse_format_object;
+        break;
+      }
+
+      // optional .TSK.FormatStructArchive format_object = 4;
+      case 4: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_format_object:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_format_object()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectAtEnd()) return true;
+        break;
+      }
+
+      default: {
+      handle_uninterpreted:
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          return true;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+  return true;
+#undef DO_
+}
+
+void CommandReplaceCustomFormatArchive_FormatObjectMutation::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // optional .TSCH.StyleOwnerType style_owner_type = 1;
+  if (has_style_owner_type()) {
+    ::google::protobuf::internal::WireFormatLite::WriteEnum(
+      1, this->style_owner_type(), output);
+  }
+
+  // optional uint32 style_owner_index = 2;
+  if (has_style_owner_index()) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(2, this->style_owner_index(), output);
+  }
+
+  // optional uint32 format_object_property = 3;
+  if (has_format_object_property()) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(3, this->format_object_property(), output);
+  }
+
+  // optional .TSK.FormatStructArchive format_object = 4;
+  if (has_format_object()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      4, this->format_object(), output);
+  }
+
+  if (!unknown_fields().empty()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+}
+
+::google::protobuf::uint8* CommandReplaceCustomFormatArchive_FormatObjectMutation::SerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // optional .TSCH.StyleOwnerType style_owner_type = 1;
+  if (has_style_owner_type()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
+      1, this->style_owner_type(), target);
+  }
+
+  // optional uint32 style_owner_index = 2;
+  if (has_style_owner_index()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(2, this->style_owner_index(), target);
+  }
+
+  // optional uint32 format_object_property = 3;
+  if (has_format_object_property()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(3, this->format_object_property(), target);
+  }
+
+  // optional .TSK.FormatStructArchive format_object = 4;
+  if (has_format_object()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        4, this->format_object(), target);
+  }
+
+  if (!unknown_fields().empty()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  return target;
+}
+
+int CommandReplaceCustomFormatArchive_FormatObjectMutation::ByteSize() const {
+  int total_size = 0;
+
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    // optional .TSCH.StyleOwnerType style_owner_type = 1;
+    if (has_style_owner_type()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::EnumSize(this->style_owner_type());
+    }
+
+    // optional uint32 style_owner_index = 2;
+    if (has_style_owner_index()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::UInt32Size(
+          this->style_owner_index());
+    }
+
+    // optional uint32 format_object_property = 3;
+    if (has_format_object_property()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::UInt32Size(
+          this->format_object_property());
+    }
+
+    // optional .TSK.FormatStructArchive format_object = 4;
+    if (has_format_object()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->format_object());
+    }
+
+  }
+  if (!unknown_fields().empty()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = total_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void CommandReplaceCustomFormatArchive_FormatObjectMutation::MergeFrom(const ::google::protobuf::Message& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  const CommandReplaceCustomFormatArchive_FormatObjectMutation* source =
+    ::google::protobuf::internal::dynamic_cast_if_available<const CommandReplaceCustomFormatArchive_FormatObjectMutation*>(
+      &from);
+  if (source == NULL) {
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+    MergeFrom(*source);
+  }
+}
+
+void CommandReplaceCustomFormatArchive_FormatObjectMutation::MergeFrom(const CommandReplaceCustomFormatArchive_FormatObjectMutation& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (from.has_style_owner_type()) {
+      set_style_owner_type(from.style_owner_type());
+    }
+    if (from.has_style_owner_index()) {
+      set_style_owner_index(from.style_owner_index());
+    }
+    if (from.has_format_object_property()) {
+      set_format_object_property(from.format_object_property());
+    }
+    if (from.has_format_object()) {
+      mutable_format_object()->::TSK::FormatStructArchive::MergeFrom(from.format_object());
+    }
+  }
+  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
+}
+
+void CommandReplaceCustomFormatArchive_FormatObjectMutation::CopyFrom(const ::google::protobuf::Message& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void CommandReplaceCustomFormatArchive_FormatObjectMutation::CopyFrom(const CommandReplaceCustomFormatArchive_FormatObjectMutation& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool CommandReplaceCustomFormatArchive_FormatObjectMutation::IsInitialized() const {
+
+  if (has_format_object()) {
+    if (!this->format_object().IsInitialized()) return false;
+  }
+  return true;
+}
+
+void CommandReplaceCustomFormatArchive_FormatObjectMutation::Swap(CommandReplaceCustomFormatArchive_FormatObjectMutation* other) {
+  if (other != this) {
+    std::swap(style_owner_type_, other->style_owner_type_);
+    std::swap(style_owner_index_, other->style_owner_index_);
+    std::swap(format_object_property_, other->format_object_property_);
+    std::swap(format_object_, other->format_object_);
+    std::swap(_has_bits_[0], other->_has_bits_[0]);
+    _unknown_fields_.Swap(&other->_unknown_fields_);
+    std::swap(_cached_size_, other->_cached_size_);
+  }
+}
+
+::google::protobuf::Metadata CommandReplaceCustomFormatArchive_FormatObjectMutation::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = CommandReplaceCustomFormatArchive_FormatObjectMutation_descriptor_;
+  metadata.reflection = CommandReplaceCustomFormatArchive_FormatObjectMutation_reflection_;
+  return metadata;
+}
+
+
+// -------------------------------------------------------------------
+
+#ifndef _MSC_VER
+const int CommandReplaceCustomFormatArchive::kSuperFieldNumber;
+const int CommandReplaceCustomFormatArchive::kRollbackCmdFieldNumber;
+const int CommandReplaceCustomFormatArchive::kOldFormatObjectFieldNumber;
+const int CommandReplaceCustomFormatArchive::kNewFormatObjectFieldNumber;
+const int CommandReplaceCustomFormatArchive::kForwardMutationsFieldNumber;
+const int CommandReplaceCustomFormatArchive::kReverseMutationsFieldNumber;
+#endif  // !_MSC_VER
+
+CommandReplaceCustomFormatArchive::CommandReplaceCustomFormatArchive()
+  : ::google::protobuf::Message() {
+  SharedCtor();
+}
+
+void CommandReplaceCustomFormatArchive::InitAsDefaultInstance() {
+  super_ = const_cast< ::TSCH::ChartCommandArchive*>(&::TSCH::ChartCommandArchive::default_instance());
+  rollback_cmd_ = const_cast< ::TSP::Reference*>(&::TSP::Reference::default_instance());
+  old_format_object_ = const_cast< ::TSK::FormatStructArchive*>(&::TSK::FormatStructArchive::default_instance());
+  new_format_object_ = const_cast< ::TSK::FormatStructArchive*>(&::TSK::FormatStructArchive::default_instance());
+}
+
+CommandReplaceCustomFormatArchive::CommandReplaceCustomFormatArchive(const CommandReplaceCustomFormatArchive& from)
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  MergeFrom(from);
+}
+
+void CommandReplaceCustomFormatArchive::SharedCtor() {
+  _cached_size_ = 0;
+  super_ = NULL;
+  rollback_cmd_ = NULL;
+  old_format_object_ = NULL;
+  new_format_object_ = NULL;
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+}
+
+CommandReplaceCustomFormatArchive::~CommandReplaceCustomFormatArchive() {
+  SharedDtor();
+}
+
+void CommandReplaceCustomFormatArchive::SharedDtor() {
+  if (this != default_instance_) {
+    delete super_;
+    delete rollback_cmd_;
+    delete old_format_object_;
+    delete new_format_object_;
+  }
+}
+
+void CommandReplaceCustomFormatArchive::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* CommandReplaceCustomFormatArchive::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return CommandReplaceCustomFormatArchive_descriptor_;
+}
+
+const CommandReplaceCustomFormatArchive& CommandReplaceCustomFormatArchive::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_TSCHCommandArchives_2eproto();
+  return *default_instance_;
+}
+
+CommandReplaceCustomFormatArchive* CommandReplaceCustomFormatArchive::default_instance_ = NULL;
+
+CommandReplaceCustomFormatArchive* CommandReplaceCustomFormatArchive::New() const {
+  return new CommandReplaceCustomFormatArchive;
+}
+
+void CommandReplaceCustomFormatArchive::Clear() {
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (has_super()) {
+      if (super_ != NULL) super_->::TSCH::ChartCommandArchive::Clear();
+    }
+    if (has_rollback_cmd()) {
+      if (rollback_cmd_ != NULL) rollback_cmd_->::TSP::Reference::Clear();
+    }
+    if (has_old_format_object()) {
+      if (old_format_object_ != NULL) old_format_object_->::TSK::FormatStructArchive::Clear();
+    }
+    if (has_new_format_object()) {
+      if (new_format_object_ != NULL) new_format_object_->::TSK::FormatStructArchive::Clear();
+    }
+  }
+  forward_mutations_.Clear();
+  reverse_mutations_.Clear();
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+  mutable_unknown_fields()->Clear();
+}
+
+bool CommandReplaceCustomFormatArchive::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!(EXPRESSION)) return false
+  ::google::protobuf::uint32 tag;
+  while ((tag = input->ReadTag()) != 0) {
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // required .TSCH.ChartCommandArchive super = 1;
+      case 1: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_super()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(18)) goto parse_rollback_cmd;
+        break;
+      }
+
+      // optional .TSP.Reference rollback_cmd = 2;
+      case 2: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_rollback_cmd:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_rollback_cmd()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(26)) goto parse_old_format_object;
+        break;
+      }
+
+      // optional .TSK.FormatStructArchive old_format_object = 3;
+      case 3: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_old_format_object:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_old_format_object()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(34)) goto parse_new_format_object;
+        break;
+      }
+
+      // optional .TSK.FormatStructArchive new_format_object = 4;
+      case 4: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_new_format_object:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_new_format_object()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(42)) goto parse_forward_mutations;
+        break;
+      }
+
+      // repeated .TSCH.CommandReplaceCustomFormatArchive.FormatObjectMutation forward_mutations = 5;
+      case 5: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_forward_mutations:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+                input, add_forward_mutations()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(42)) goto parse_forward_mutations;
+        if (input->ExpectTag(50)) goto parse_reverse_mutations;
+        break;
+      }
+
+      // repeated .TSCH.CommandReplaceCustomFormatArchive.FormatObjectMutation reverse_mutations = 6;
+      case 6: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_reverse_mutations:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+                input, add_reverse_mutations()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(50)) goto parse_reverse_mutations;
+        if (input->ExpectAtEnd()) return true;
+        break;
+      }
+
+      default: {
+      handle_uninterpreted:
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          return true;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+  return true;
+#undef DO_
+}
+
+void CommandReplaceCustomFormatArchive::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // required .TSCH.ChartCommandArchive super = 1;
+  if (has_super()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, this->super(), output);
+  }
+
+  // optional .TSP.Reference rollback_cmd = 2;
+  if (has_rollback_cmd()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      2, this->rollback_cmd(), output);
+  }
+
+  // optional .TSK.FormatStructArchive old_format_object = 3;
+  if (has_old_format_object()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      3, this->old_format_object(), output);
+  }
+
+  // optional .TSK.FormatStructArchive new_format_object = 4;
+  if (has_new_format_object()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      4, this->new_format_object(), output);
+  }
+
+  // repeated .TSCH.CommandReplaceCustomFormatArchive.FormatObjectMutation forward_mutations = 5;
+  for (int i = 0; i < this->forward_mutations_size(); i++) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      5, this->forward_mutations(i), output);
+  }
+
+  // repeated .TSCH.CommandReplaceCustomFormatArchive.FormatObjectMutation reverse_mutations = 6;
+  for (int i = 0; i < this->reverse_mutations_size(); i++) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      6, this->reverse_mutations(i), output);
+  }
+
+  if (!unknown_fields().empty()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+}
+
+::google::protobuf::uint8* CommandReplaceCustomFormatArchive::SerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // required .TSCH.ChartCommandArchive super = 1;
+  if (has_super()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        1, this->super(), target);
+  }
+
+  // optional .TSP.Reference rollback_cmd = 2;
+  if (has_rollback_cmd()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        2, this->rollback_cmd(), target);
+  }
+
+  // optional .TSK.FormatStructArchive old_format_object = 3;
+  if (has_old_format_object()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        3, this->old_format_object(), target);
+  }
+
+  // optional .TSK.FormatStructArchive new_format_object = 4;
+  if (has_new_format_object()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        4, this->new_format_object(), target);
+  }
+
+  // repeated .TSCH.CommandReplaceCustomFormatArchive.FormatObjectMutation forward_mutations = 5;
+  for (int i = 0; i < this->forward_mutations_size(); i++) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        5, this->forward_mutations(i), target);
+  }
+
+  // repeated .TSCH.CommandReplaceCustomFormatArchive.FormatObjectMutation reverse_mutations = 6;
+  for (int i = 0; i < this->reverse_mutations_size(); i++) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        6, this->reverse_mutations(i), target);
+  }
+
+  if (!unknown_fields().empty()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  return target;
+}
+
+int CommandReplaceCustomFormatArchive::ByteSize() const {
+  int total_size = 0;
+
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    // required .TSCH.ChartCommandArchive super = 1;
+    if (has_super()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->super());
+    }
+
+    // optional .TSP.Reference rollback_cmd = 2;
+    if (has_rollback_cmd()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->rollback_cmd());
+    }
+
+    // optional .TSK.FormatStructArchive old_format_object = 3;
+    if (has_old_format_object()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->old_format_object());
+    }
+
+    // optional .TSK.FormatStructArchive new_format_object = 4;
+    if (has_new_format_object()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->new_format_object());
+    }
+
+  }
+  // repeated .TSCH.CommandReplaceCustomFormatArchive.FormatObjectMutation forward_mutations = 5;
+  total_size += 1 * this->forward_mutations_size();
+  for (int i = 0; i < this->forward_mutations_size(); i++) {
+    total_size +=
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+        this->forward_mutations(i));
+  }
+
+  // repeated .TSCH.CommandReplaceCustomFormatArchive.FormatObjectMutation reverse_mutations = 6;
+  total_size += 1 * this->reverse_mutations_size();
+  for (int i = 0; i < this->reverse_mutations_size(); i++) {
+    total_size +=
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+        this->reverse_mutations(i));
+  }
+
+  if (!unknown_fields().empty()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = total_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void CommandReplaceCustomFormatArchive::MergeFrom(const ::google::protobuf::Message& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  const CommandReplaceCustomFormatArchive* source =
+    ::google::protobuf::internal::dynamic_cast_if_available<const CommandReplaceCustomFormatArchive*>(
+      &from);
+  if (source == NULL) {
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+    MergeFrom(*source);
+  }
+}
+
+void CommandReplaceCustomFormatArchive::MergeFrom(const CommandReplaceCustomFormatArchive& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  forward_mutations_.MergeFrom(from.forward_mutations_);
+  reverse_mutations_.MergeFrom(from.reverse_mutations_);
+  if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (from.has_super()) {
+      mutable_super()->::TSCH::ChartCommandArchive::MergeFrom(from.super());
+    }
+    if (from.has_rollback_cmd()) {
+      mutable_rollback_cmd()->::TSP::Reference::MergeFrom(from.rollback_cmd());
+    }
+    if (from.has_old_format_object()) {
+      mutable_old_format_object()->::TSK::FormatStructArchive::MergeFrom(from.old_format_object());
+    }
+    if (from.has_new_format_object()) {
+      mutable_new_format_object()->::TSK::FormatStructArchive::MergeFrom(from.new_format_object());
+    }
+  }
+  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
+}
+
+void CommandReplaceCustomFormatArchive::CopyFrom(const ::google::protobuf::Message& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void CommandReplaceCustomFormatArchive::CopyFrom(const CommandReplaceCustomFormatArchive& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool CommandReplaceCustomFormatArchive::IsInitialized() const {
+  if ((_has_bits_[0] & 0x00000001) != 0x00000001) return false;
+
+  if (has_super()) {
+    if (!this->super().IsInitialized()) return false;
+  }
+  if (has_rollback_cmd()) {
+    if (!this->rollback_cmd().IsInitialized()) return false;
+  }
+  if (has_old_format_object()) {
+    if (!this->old_format_object().IsInitialized()) return false;
+  }
+  if (has_new_format_object()) {
+    if (!this->new_format_object().IsInitialized()) return false;
+  }
+  for (int i = 0; i < forward_mutations_size(); i++) {
+    if (!this->forward_mutations(i).IsInitialized()) return false;
+  }
+  for (int i = 0; i < reverse_mutations_size(); i++) {
+    if (!this->reverse_mutations(i).IsInitialized()) return false;
+  }
+  return true;
+}
+
+void CommandReplaceCustomFormatArchive::Swap(CommandReplaceCustomFormatArchive* other) {
+  if (other != this) {
+    std::swap(super_, other->super_);
+    std::swap(rollback_cmd_, other->rollback_cmd_);
+    std::swap(old_format_object_, other->old_format_object_);
+    std::swap(new_format_object_, other->new_format_object_);
+    forward_mutations_.Swap(&other->forward_mutations_);
+    reverse_mutations_.Swap(&other->reverse_mutations_);
+    std::swap(_has_bits_[0], other->_has_bits_[0]);
+    _unknown_fields_.Swap(&other->_unknown_fields_);
+    std::swap(_cached_size_, other->_cached_size_);
+  }
+}
+
+::google::protobuf::Metadata CommandReplaceCustomFormatArchive::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = CommandReplaceCustomFormatArchive_descriptor_;
+  metadata.reflection = CommandReplaceCustomFormatArchive_reflection_;
   return metadata;
 }
 

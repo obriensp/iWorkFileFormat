@@ -438,11 +438,14 @@ enum ListStyleArchive_NumberType {
   ListStyleArchive_NumberType_kHebrewAlphaDecimalKind = 58,
   ListStyleArchive_NumberType_kHebrewAlphaDoubleParenKind = 59,
   ListStyleArchive_NumberType_kHebrewAlphaRightParenKind = 60,
-  ListStyleArchive_NumberType_kHebrewBiblicalStandardKind = 61
+  ListStyleArchive_NumberType_kHebrewBiblicalStandardKind = 61,
+  ListStyleArchive_NumberType_kHebrewBiblicalDecimalKind = 62,
+  ListStyleArchive_NumberType_kHebrewBiblicalDoubleParenKind = 63,
+  ListStyleArchive_NumberType_kHebrewBiblicalRightParenKind = 64
 };
 bool ListStyleArchive_NumberType_IsValid(int value);
 const ListStyleArchive_NumberType ListStyleArchive_NumberType_NumberType_MIN = ListStyleArchive_NumberType_kNumericDecimal;
-const ListStyleArchive_NumberType ListStyleArchive_NumberType_NumberType_MAX = ListStyleArchive_NumberType_kHebrewBiblicalStandardKind;
+const ListStyleArchive_NumberType ListStyleArchive_NumberType_NumberType_MAX = ListStyleArchive_NumberType_kHebrewBiblicalRightParenKind;
 const int ListStyleArchive_NumberType_NumberType_ARRAYSIZE = ListStyleArchive_NumberType_NumberType_MAX + 1;
 
 const ::google::protobuf::EnumDescriptor* ListStyleArchive_NumberType_descriptor();
@@ -4252,6 +4255,9 @@ class ListStyleArchive : public ::google::protobuf::Message {
   static const NumberType kHebrewAlphaDoubleParenKind = ListStyleArchive_NumberType_kHebrewAlphaDoubleParenKind;
   static const NumberType kHebrewAlphaRightParenKind = ListStyleArchive_NumberType_kHebrewAlphaRightParenKind;
   static const NumberType kHebrewBiblicalStandardKind = ListStyleArchive_NumberType_kHebrewBiblicalStandardKind;
+  static const NumberType kHebrewBiblicalDecimalKind = ListStyleArchive_NumberType_kHebrewBiblicalDecimalKind;
+  static const NumberType kHebrewBiblicalDoubleParenKind = ListStyleArchive_NumberType_kHebrewBiblicalDoubleParenKind;
+  static const NumberType kHebrewBiblicalRightParenKind = ListStyleArchive_NumberType_kHebrewBiblicalRightParenKind;
   static inline bool NumberType_IsValid(int value) {
     return ListStyleArchive_NumberType_IsValid(value);
   }
@@ -6521,6 +6527,29 @@ class TOCEntryInstanceArchive : public ::google::protobuf::Message {
   inline ::TSP::Reference* release_indexed_style();
   inline void set_allocated_indexed_style(::TSP::Reference* indexed_style);
 
+  // optional .TSP.Reference indexed_list_style = 6;
+  inline bool has_indexed_list_style() const;
+  inline void clear_indexed_list_style();
+  static const int kIndexedListStyleFieldNumber = 6;
+  inline const ::TSP::Reference& indexed_list_style() const;
+  inline ::TSP::Reference* mutable_indexed_list_style();
+  inline ::TSP::Reference* release_indexed_list_style();
+  inline void set_allocated_indexed_list_style(::TSP::Reference* indexed_list_style);
+
+  // optional uint32 indexed_list_start = 7;
+  inline bool has_indexed_list_start() const;
+  inline void clear_indexed_list_start();
+  static const int kIndexedListStartFieldNumber = 7;
+  inline ::google::protobuf::uint32 indexed_list_start() const;
+  inline void set_indexed_list_start(::google::protobuf::uint32 value);
+
+  // optional uint32 indexed_paragraph_level = 8;
+  inline bool has_indexed_paragraph_level() const;
+  inline void clear_indexed_paragraph_level();
+  static const int kIndexedParagraphLevelFieldNumber = 8;
+  inline ::google::protobuf::uint32 indexed_paragraph_level() const;
+  inline void set_indexed_paragraph_level(::google::protobuf::uint32 value);
+
   // @@protoc_insertion_point(class_scope:TSWP.TOCEntryInstanceArchive)
  private:
   inline void set_has_paragraph_index();
@@ -6533,6 +6562,12 @@ class TOCEntryInstanceArchive : public ::google::protobuf::Message {
   inline void clear_has_heading();
   inline void set_has_indexed_style();
   inline void clear_has_indexed_style();
+  inline void set_has_indexed_list_style();
+  inline void clear_has_indexed_list_style();
+  inline void set_has_indexed_list_start();
+  inline void clear_has_indexed_list_start();
+  inline void set_has_indexed_paragraph_level();
+  inline void clear_has_indexed_paragraph_level();
 
   ::google::protobuf::UnknownFieldSet _unknown_fields_;
 
@@ -6541,9 +6576,12 @@ class TOCEntryInstanceArchive : public ::google::protobuf::Message {
   ::std::string* heading_;
   ::TSP::Reference* indexed_style_;
   ::google::protobuf::uint32 number_format_;
+  ::google::protobuf::uint32 indexed_list_start_;
+  ::TSP::Reference* indexed_list_style_;
+  ::google::protobuf::uint32 indexed_paragraph_level_;
 
   mutable int _cached_size_;
-  ::google::protobuf::uint32 _has_bits_[(5 + 31) / 32];
+  ::google::protobuf::uint32 _has_bits_[(8 + 31) / 32];
 
   friend void  protobuf_AddDesc_TSWPArchives_2eproto();
   friend void protobuf_AssignDesc_TSWPArchives_2eproto();
@@ -18418,6 +18456,88 @@ inline void TOCEntryInstanceArchive::set_allocated_indexed_style(::TSP::Referenc
   } else {
     clear_has_indexed_style();
   }
+}
+
+// optional .TSP.Reference indexed_list_style = 6;
+inline bool TOCEntryInstanceArchive::has_indexed_list_style() const {
+  return (_has_bits_[0] & 0x00000020u) != 0;
+}
+inline void TOCEntryInstanceArchive::set_has_indexed_list_style() {
+  _has_bits_[0] |= 0x00000020u;
+}
+inline void TOCEntryInstanceArchive::clear_has_indexed_list_style() {
+  _has_bits_[0] &= ~0x00000020u;
+}
+inline void TOCEntryInstanceArchive::clear_indexed_list_style() {
+  if (indexed_list_style_ != NULL) indexed_list_style_->::TSP::Reference::Clear();
+  clear_has_indexed_list_style();
+}
+inline const ::TSP::Reference& TOCEntryInstanceArchive::indexed_list_style() const {
+  return indexed_list_style_ != NULL ? *indexed_list_style_ : *default_instance_->indexed_list_style_;
+}
+inline ::TSP::Reference* TOCEntryInstanceArchive::mutable_indexed_list_style() {
+  set_has_indexed_list_style();
+  if (indexed_list_style_ == NULL) indexed_list_style_ = new ::TSP::Reference;
+  return indexed_list_style_;
+}
+inline ::TSP::Reference* TOCEntryInstanceArchive::release_indexed_list_style() {
+  clear_has_indexed_list_style();
+  ::TSP::Reference* temp = indexed_list_style_;
+  indexed_list_style_ = NULL;
+  return temp;
+}
+inline void TOCEntryInstanceArchive::set_allocated_indexed_list_style(::TSP::Reference* indexed_list_style) {
+  delete indexed_list_style_;
+  indexed_list_style_ = indexed_list_style;
+  if (indexed_list_style) {
+    set_has_indexed_list_style();
+  } else {
+    clear_has_indexed_list_style();
+  }
+}
+
+// optional uint32 indexed_list_start = 7;
+inline bool TOCEntryInstanceArchive::has_indexed_list_start() const {
+  return (_has_bits_[0] & 0x00000040u) != 0;
+}
+inline void TOCEntryInstanceArchive::set_has_indexed_list_start() {
+  _has_bits_[0] |= 0x00000040u;
+}
+inline void TOCEntryInstanceArchive::clear_has_indexed_list_start() {
+  _has_bits_[0] &= ~0x00000040u;
+}
+inline void TOCEntryInstanceArchive::clear_indexed_list_start() {
+  indexed_list_start_ = 0u;
+  clear_has_indexed_list_start();
+}
+inline ::google::protobuf::uint32 TOCEntryInstanceArchive::indexed_list_start() const {
+  return indexed_list_start_;
+}
+inline void TOCEntryInstanceArchive::set_indexed_list_start(::google::protobuf::uint32 value) {
+  set_has_indexed_list_start();
+  indexed_list_start_ = value;
+}
+
+// optional uint32 indexed_paragraph_level = 8;
+inline bool TOCEntryInstanceArchive::has_indexed_paragraph_level() const {
+  return (_has_bits_[0] & 0x00000080u) != 0;
+}
+inline void TOCEntryInstanceArchive::set_has_indexed_paragraph_level() {
+  _has_bits_[0] |= 0x00000080u;
+}
+inline void TOCEntryInstanceArchive::clear_has_indexed_paragraph_level() {
+  _has_bits_[0] &= ~0x00000080u;
+}
+inline void TOCEntryInstanceArchive::clear_indexed_paragraph_level() {
+  indexed_paragraph_level_ = 0u;
+  clear_has_indexed_paragraph_level();
+}
+inline ::google::protobuf::uint32 TOCEntryInstanceArchive::indexed_paragraph_level() const {
+  return indexed_paragraph_level_;
+}
+inline void TOCEntryInstanceArchive::set_indexed_paragraph_level(::google::protobuf::uint32 value) {
+  set_has_indexed_paragraph_level();
+  indexed_paragraph_level_ = value;
 }
 
 // -------------------------------------------------------------------

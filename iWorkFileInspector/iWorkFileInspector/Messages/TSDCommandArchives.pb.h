@@ -3955,6 +3955,15 @@ class CommandSelectionBehaviorArchive : public ::google::protobuf::Message {
   inline ::TSP::Reference* release_archived_new_selection();
   inline void set_allocated_archived_new_selection(::TSP::Reference* archived_new_selection);
 
+  // optional .TSP.Reference old_model_for_selection = 6;
+  inline bool has_old_model_for_selection() const;
+  inline void clear_old_model_for_selection();
+  static const int kOldModelForSelectionFieldNumber = 6;
+  inline const ::TSP::Reference& old_model_for_selection() const;
+  inline ::TSP::Reference* mutable_old_model_for_selection();
+  inline ::TSP::Reference* release_old_model_for_selection();
+  inline void set_allocated_old_model_for_selection(::TSP::Reference* old_model_for_selection);
+
   // @@protoc_insertion_point(class_scope:TSD.CommandSelectionBehaviorArchive)
  private:
   inline void set_has_model_for_selection();
@@ -3965,16 +3974,19 @@ class CommandSelectionBehaviorArchive : public ::google::protobuf::Message {
   inline void clear_has_archived_selection();
   inline void set_has_archived_new_selection();
   inline void clear_has_archived_new_selection();
+  inline void set_has_old_model_for_selection();
+  inline void clear_has_old_model_for_selection();
 
   ::google::protobuf::UnknownFieldSet _unknown_fields_;
 
   ::TSP::Reference* model_for_selection_;
   ::TSP::Reference* archived_selection_;
   ::TSP::Reference* archived_new_selection_;
+  ::TSP::Reference* old_model_for_selection_;
   int type_;
 
   mutable int _cached_size_;
-  ::google::protobuf::uint32 _has_bits_[(4 + 31) / 32];
+  ::google::protobuf::uint32 _has_bits_[(5 + 31) / 32];
 
   friend void  protobuf_AddDesc_TSDCommandArchives_2eproto();
   friend void protobuf_AssignDesc_TSDCommandArchives_2eproto();
@@ -4543,6 +4555,15 @@ class GuideCommandArchive : public ::google::protobuf::Message {
   inline ::TSD::GuideCommandArchive_GuideCommandMode mode() const;
   inline void set_mode(::TSD::GuideCommandArchive_GuideCommandMode value);
 
+  // optional .TSP.Reference old_storage = 6;
+  inline bool has_old_storage() const;
+  inline void clear_old_storage();
+  static const int kOldStorageFieldNumber = 6;
+  inline const ::TSP::Reference& old_storage() const;
+  inline ::TSP::Reference* mutable_old_storage();
+  inline ::TSP::Reference* release_old_storage();
+  inline void set_allocated_old_storage(::TSP::Reference* old_storage);
+
   // @@protoc_insertion_point(class_scope:TSD.GuideCommandArchive)
  private:
   inline void set_has_super();
@@ -4555,6 +4576,8 @@ class GuideCommandArchive : public ::google::protobuf::Message {
   inline void clear_has_new_guide();
   inline void set_has_mode();
   inline void clear_has_mode();
+  inline void set_has_old_storage();
+  inline void clear_has_old_storage();
 
   ::google::protobuf::UnknownFieldSet _unknown_fields_;
 
@@ -4562,10 +4585,11 @@ class GuideCommandArchive : public ::google::protobuf::Message {
   ::TSP::Reference* storage_;
   ::TSD::UserDefinedGuideArchive* old_guide_;
   ::TSD::UserDefinedGuideArchive* new_guide_;
+  ::TSP::Reference* old_storage_;
   int mode_;
 
   mutable int _cached_size_;
-  ::google::protobuf::uint32 _has_bits_[(5 + 31) / 32];
+  ::google::protobuf::uint32 _has_bits_[(6 + 31) / 32];
 
   friend void  protobuf_AddDesc_TSDCommandArchives_2eproto();
   friend void protobuf_AssignDesc_TSDCommandArchives_2eproto();
@@ -9831,6 +9855,44 @@ inline void CommandSelectionBehaviorArchive::set_allocated_archived_new_selectio
   }
 }
 
+// optional .TSP.Reference old_model_for_selection = 6;
+inline bool CommandSelectionBehaviorArchive::has_old_model_for_selection() const {
+  return (_has_bits_[0] & 0x00000010u) != 0;
+}
+inline void CommandSelectionBehaviorArchive::set_has_old_model_for_selection() {
+  _has_bits_[0] |= 0x00000010u;
+}
+inline void CommandSelectionBehaviorArchive::clear_has_old_model_for_selection() {
+  _has_bits_[0] &= ~0x00000010u;
+}
+inline void CommandSelectionBehaviorArchive::clear_old_model_for_selection() {
+  if (old_model_for_selection_ != NULL) old_model_for_selection_->::TSP::Reference::Clear();
+  clear_has_old_model_for_selection();
+}
+inline const ::TSP::Reference& CommandSelectionBehaviorArchive::old_model_for_selection() const {
+  return old_model_for_selection_ != NULL ? *old_model_for_selection_ : *default_instance_->old_model_for_selection_;
+}
+inline ::TSP::Reference* CommandSelectionBehaviorArchive::mutable_old_model_for_selection() {
+  set_has_old_model_for_selection();
+  if (old_model_for_selection_ == NULL) old_model_for_selection_ = new ::TSP::Reference;
+  return old_model_for_selection_;
+}
+inline ::TSP::Reference* CommandSelectionBehaviorArchive::release_old_model_for_selection() {
+  clear_has_old_model_for_selection();
+  ::TSP::Reference* temp = old_model_for_selection_;
+  old_model_for_selection_ = NULL;
+  return temp;
+}
+inline void CommandSelectionBehaviorArchive::set_allocated_old_model_for_selection(::TSP::Reference* old_model_for_selection) {
+  delete old_model_for_selection_;
+  old_model_for_selection_ = old_model_for_selection;
+  if (old_model_for_selection) {
+    set_has_old_model_for_selection();
+  } else {
+    clear_has_old_model_for_selection();
+  }
+}
+
 // -------------------------------------------------------------------
 
 // ImageReplaceCommandArchive
@@ -10528,6 +10590,44 @@ inline void GuideCommandArchive::set_mode(::TSD::GuideCommandArchive_GuideComman
   assert(::TSD::GuideCommandArchive_GuideCommandMode_IsValid(value));
   set_has_mode();
   mode_ = value;
+}
+
+// optional .TSP.Reference old_storage = 6;
+inline bool GuideCommandArchive::has_old_storage() const {
+  return (_has_bits_[0] & 0x00000020u) != 0;
+}
+inline void GuideCommandArchive::set_has_old_storage() {
+  _has_bits_[0] |= 0x00000020u;
+}
+inline void GuideCommandArchive::clear_has_old_storage() {
+  _has_bits_[0] &= ~0x00000020u;
+}
+inline void GuideCommandArchive::clear_old_storage() {
+  if (old_storage_ != NULL) old_storage_->::TSP::Reference::Clear();
+  clear_has_old_storage();
+}
+inline const ::TSP::Reference& GuideCommandArchive::old_storage() const {
+  return old_storage_ != NULL ? *old_storage_ : *default_instance_->old_storage_;
+}
+inline ::TSP::Reference* GuideCommandArchive::mutable_old_storage() {
+  set_has_old_storage();
+  if (old_storage_ == NULL) old_storage_ = new ::TSP::Reference;
+  return old_storage_;
+}
+inline ::TSP::Reference* GuideCommandArchive::release_old_storage() {
+  clear_has_old_storage();
+  ::TSP::Reference* temp = old_storage_;
+  old_storage_ = NULL;
+  return temp;
+}
+inline void GuideCommandArchive::set_allocated_old_storage(::TSP::Reference* old_storage) {
+  delete old_storage_;
+  old_storage_ = old_storage;
+  if (old_storage) {
+    set_has_old_storage();
+  } else {
+    clear_has_old_storage();
+  }
 }
 
 // -------------------------------------------------------------------

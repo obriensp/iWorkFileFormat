@@ -1,0 +1,69 @@
+
+iWorkFileInspector/Externals/intermediate
+iWorkFileInspector/Externals/packages
+iWorkFileInspector/Externals/prebuilt
+iWorkFileInspector/Externals/build
+
+iWorkFileInspector/Externals/proto*
+iWorkFileInspector/Externals/snappy*
+
+# OSX Specific System Files
+.DS_Store
+*.swp
+.Spotlight-V100
+.Trashes
+
+# Win Specific System Files
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+*.ipa
+
+# Xcode Specific Files
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+*.xcworkspace
+!default.xcworkspace
+xcuserdata
+*.moved-aside
+*.xccheckout
+
+# CMake build-system
+CMakeCache.txt
+CMakeFiles
+Makefile
+install_manifest.txt
+cmake_install.cmake
+cmake_uninstall.cmake
+
+# Subversion files
+.svn

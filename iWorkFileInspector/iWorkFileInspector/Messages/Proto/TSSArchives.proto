@@ -4,6 +4,13 @@ import "TSPMessages.proto";
 import "TSKArchives.proto";
 package TSS;
 
+enum ValueType {
+  ObjectType = 0;
+  IntType = 1;
+  FloatType = 2;
+  DoubleType = 3;
+}
+
 message StyleArchive {
   optional string name = 1;
   optional string style_identifier = 2;

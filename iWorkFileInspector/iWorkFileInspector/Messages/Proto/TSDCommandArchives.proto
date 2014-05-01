@@ -242,6 +242,7 @@ message CommandSelectionBehaviorArchive {
   optional .TSD.CommandSelectionBehaviorArchive.CommandSelectionBehaviorType type = 3;
   optional .TSP.Reference archived_selection = 4;
   optional .TSP.Reference archived_new_selection = 5;
+  optional .TSP.Reference old_model_for_selection = 6;
 }
 
 message ImageReplaceCommandArchive {
@@ -279,6 +280,7 @@ message GuideCommandArchive {
   optional .TSD.UserDefinedGuideArchive old_guide = 3;
   optional .TSD.UserDefinedGuideArchive new_guide = 4;
   optional .TSD.GuideCommandArchive.GuideCommandMode mode = 5;
+  optional .TSP.Reference old_storage = 6;
 }
 
 message DrawableAspectRatioLockedCommandArchive {

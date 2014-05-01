@@ -90,6 +90,8 @@ message VolatileDependenciesArchive {
   repeated uint32 volatile_location_cell_row = 6;
   repeated uint32 volatile_compass_cell_column = 7;
   repeated uint32 volatile_compass_cell_row = 8;
+  repeated uint32 volatile_sheet_table_name_cell_column = 17;
+  repeated uint32 volatile_sheet_table_name_cell_row = 18;
   repeated uint32 calculated_dependency_cell_column = 9;
   repeated uint32 calculated_dependency_cell_row = 10;
   repeated .TSCE.CellReferenceArchive volatile_geometry_cell_reference = 13;
@@ -187,8 +189,8 @@ message OwnerIDMapArchive {
 
 message DependencyTrackerArchive {
   repeated .TSCE.FormulaOwnerInfoArchive formula_owner_info = 1;
-  repeated .TSCE.CellReferenceArchive dirty_leaf = 2;
-  repeated .TSCE.InternalCellReferenceArchive internal_dirty_leaf = 4;
+  repeated .TSCE.CellReferenceArchive dirty_leaf = 2 [deprecated = true];
+  repeated .TSCE.InternalCellReferenceArchive internal_dirty_leaf = 4 [deprecated = true];
   optional .TSCE.OwnerIDMapArchive owner_id_map = 3;
 }
 
@@ -498,7 +500,8 @@ message DateCellValueArchive {
 
 message NumberCellValueArchive {
   required double value = 1;
-  required int32 unit = 2;
+  optional int32 unit_index = 2;
+  optional string currency_code = 5;
   required .TSK.FormatStructArchive format = 3;
   optional bool format_is_implicit = 4 [default = true];
 }

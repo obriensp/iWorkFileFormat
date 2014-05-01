@@ -124,6 +124,43 @@ message PopUpMenuModel {
   repeated .TSCE.CellValueArchive tsce_item = 2;
 }
 
+message ImportWarningSetArchive {
+  message FormulaImportWarning {
+    required .TST.ImportWarningSetArchive.FormulaWarningType formula_warning_type = 1;
+    optional string original_formula = 2;
+    optional string supplementary_text = 3;
+  }
+  enum FormulaWarningType {
+    THREE_D_REFERENCE = 1;
+    ARRAYED_FORMULA = 2;
+    DIFFERENT_BEHAVIOR_FOR_FUNCTION = 3;
+    ERROR_TOKEN = 4;
+    EXTERNAL_REFERENCE = 5;
+    NATURAL_LANGUAGE_FORMULA = 6;
+    REFERENCE_OUT_OF_BOUNDS = 7;
+    SHARED_FORMULA_BASE_NOT_FOUND = 8;
+    UNKNOWN_NAME = 9;
+    UNSUPPORTED_FORMULA = 10;
+    UNSUPPORTED_FUNCTION = 11;
+    UNSUPPORTED_NAME = 12;
+  }
+  optional .TST.ImportWarningSetArchive.FormulaImportWarning formula_import_warning = 1;
+  optional bool cond_format_above_avg_equal_avg = 2 [default = false];
+  optional bool cond_format_above_avg_std_dev = 3 [default = false];
+  optional bool cond_format_complex_formula = 4 [default = false];
+  optional bool cond_format_contains_errors = 5 [default = false];
+  optional bool cond_format_expr = 6 [default = false];
+  optional bool cond_format_not_contains_errors = 7 [default = false];
+  optional bool cond_format_parameters_not_all_same_type = 8 [default = false];
+  optional bool cond_format_stop_if_true = 9 [default = false];
+  optional bool cond_format_unsupported_operator = 10 [default = false];
+  optional bool cond_format_unsupported_styling = 11 [default = false];
+  optional bool cond_format_unsupported_time_period = 12 [default = false];
+  optional bool error_cell_with_no_formula = 13 [default = false];
+  optional bool unsupported_cond_format = 14 [default = false];
+  optional string original_data_format = 15;
+}
+
 message TableDataList {
   message ListEntry {
     required uint32 key = 1;
@@ -136,6 +173,7 @@ message TableDataList {
     optional .TSK.CustomFormatArchive custom_format = 8;
     optional .TSP.Reference richTextPayload = 9;
     optional .TSP.Reference comment_storage = 10;
+    optional .TST.ImportWarningSetArchive import_warning_set = 11;
   }
   enum ListType {
     STRING = 1;
@@ -148,6 +186,7 @@ message TableDataList {
     RICH_TEXT_PAYLOAD = 8;
     CONDITIONAL_STYLE = 9;
     COMMENT_STORAGE = 10;
+    IMPORT_WARNING = 11;
   }
   required .TST.TableDataList.ListType listType = 1;
   required uint32 nextListID = 2;
@@ -200,6 +239,7 @@ message DataStore {
   optional .TSP.Reference richTextPayloadTable = 17;
   optional .TSP.Reference conditionalstyletable = 18;
   optional .TSP.Reference commentStorageTable = 19;
+  optional .TSP.Reference importWarningSetTable = 20;
 }
 
 message TableInfoArchive {
@@ -236,6 +276,27 @@ message TableStyleNetworkArchive {
   optional .TSP.Reference table_name_style = 10;
   optional .TSP.Reference table_name_shape_style = 11;
   optional uint32 preset_index = 12;
+}
+
+message TableSortOrderArchive {
+  message SortRuleArchive {
+    enum Direction {
+      ascending = 0;
+      descending = 1;
+    }
+    required uint32 column = 1;
+    required .TST.TableSortOrderArchive.SortRuleArchive.Direction direction = 2;
+  }
+  enum SortType {
+    entire_table = 0;
+    row_range = 1;
+  }
+  required .TST.TableSortOrderArchive.SortType type = 1;
+  repeated .TST.TableSortOrderArchive.SortRuleArchive rules = 2;
+}
+
+message SortRuleReferenceTrackerArchive {
+  required .TSP.Reference reference_tracker = 1;
 }
 
 message TableModelArchive {
@@ -280,7 +341,9 @@ message TableModelArchive {
   optional .TSP.Reference hidden_state_formula_owner_for_columns = 34;
   optional .TSP.Reference hidden_state_formula_owner_for_rows = 35;
   optional .TSP.Reference filter_set = 38;
+  optional .TST.TableSortOrderArchive sort_order = 44;
   optional .TSCE.CFUUIDArchive conditional_style_formula_owner_id = 39;
+  optional .TST.SortRuleReferenceTrackerArchive sort_rule_reference_tracker = 45;
 }
 
 message DurationWrapperArchive {
@@ -310,6 +373,7 @@ message Cell {
   optional .TSP.Reference multiple_choice_list = 22;
   optional .TSP.Reference comment_storage = 23;
   optional uint32 conditional_style_applied_rule = 24;
+  optional .TST.ImportWarningSetArchive import_warning_set = 25;
 }
 
 message MergeRegionMapArchive {
@@ -327,6 +391,43 @@ message CellMapArchive {
   optional bool may_modify_formulas_in_cells = 4 [default = true];
   optional bool may_modify_values_referenced_by_formulas = 5 [default = true];
   optional bool applies_to_hidden = 6 [default = false];
+}
+
+message CellMapTileArchive {
+  message CellMapEntry {
+    required .TST.CellID cellID = 1;
+    optional .TST.Cell cell = 2;
+  }
+  repeated .TST.CellMapTileArchive.CellMapEntry cellmap_entry = 2;
+}
+
+message TiledCellMapArchive {
+  repeated .TSP.Reference cellmap_tile = 1;
+  optional bool may_modify_formulas_in_cells = 2 [default = true];
+  optional bool may_modify_values_referenced_by_formulas = 3 [default = true];
+  optional bool applies_to_hidden = 4 [default = false];
+}
+
+message PropertyMapEntryArchive {
+  required uint32 property = 1;
+  required .TSS.ValueType valueType = 2;
+  optional int32 int_value = 3;
+  optional float float_value = 4;
+  optional double double_value = 5;
+  optional bool is_nsnull = 6 [default = false];
+  optional .TSP.Reference tsp_reference = 7;
+  optional .TSD.FillArchive fill = 8;
+  optional .TST.ImportWarningSetArchive import_warning_set = 9;
+}
+
+message CellDiffArchive {
+  repeated .TST.PropertyMapEntryArchive property_map_to_set = 1;
+  repeated .TST.PropertyMapEntryArchive property_map_to_reset = 2;
+}
+
+message CellDiffMapArchive {
+  repeated .TST.CellID cell_ids = 1;
+  repeated .TSP.Reference cell_diffs = 2;
 }
 
 message DoubleStyleMapArchive {
@@ -611,5 +712,28 @@ message FormulaEqualsTokenAttachmentArchive {
 
 message CellRegion {
   repeated .TST.CellRange cell_ranges = 1;
+}
+
+message CellFillStandIn {
+  required .TSD.FillArchive fill = 1;
+  optional bool type_is_mixed = 2;
+  optional bool color_has_been_modified = 3;
+  optional bool color_is_mixed = 4;
+  optional bool first_color_has_been_modified = 5;
+  optional bool first_color_is_mixed = 6;
+  optional bool last_color_has_been_modified = 7;
+  optional bool last_color_is_mixed = 8;
+  optional bool gradient_type_has_been_modified = 9;
+  optional bool gradient_type_is_mixed = 10;
+  optional bool gradient_angle_has_been_modified = 11;
+  optional bool gradient_angle_is_mixed = 12;
+  optional bool image_data_has_been_modified = 13;
+  optional bool image_data_is_mixed = 14;
+  optional bool tint_color_has_been_modified = 15;
+  optional bool tint_color_is_mixed = 16;
+  optional bool scale_has_been_modified = 17;
+  optional bool scale_is_mixed = 18;
+  optional bool technique_has_been_modified = 19;
+  optional bool technique_is_mixed = 20;
 }
 

@@ -16,6 +16,7 @@ message DocumentArchive {
   optional .TSP.Reference tables_custom_format_list = 7;
   optional bool needs_movie_compatibility_upgrade = 8;
   optional string template_identifier = 9;
+  optional .TSP.Reference shortcut_controller = 10;
 }
 
 message FunctionBrowserStateArchive {
@@ -30,7 +31,43 @@ message TestDocumentArchive {
   optional string value = 2;
 }
 
+message ShortcutControllerArchive {
+  message ShortcutMapEntry {
+    required string shortcut = 1;
+    required .TSP.Reference style = 2;
+  }
+  repeated .TSA.ShortcutControllerArchive.ShortcutMapEntry entries = 1;
+}
+
 message PropagatePresetCommandArchive {
   required .TSK.CommandArchive super = 1;
+}
+
+message ShortcutCommandArchive {
+  optional .TSK.CommandArchive super = 1;
+  optional .TSP.Reference old_style = 2;
+  optional .TSP.Reference new_style = 3;
+  optional string old_shortcut = 4;
+  optional string new_shortcut = 5;
+}
+
+message AddCustomFormatCommandArchive {
+  required .TSK.CommandArchive super = 1;
+  optional .TSK.CustomFormatArchive custom_format = 2;
+  optional bool for_replacement = 3;
+}
+
+message UpdateCustomFormatCommandArchive {
+  optional .TSK.CommandArchive super = 1;
+  optional .TSK.CustomFormatArchive custom_format = 2;
+  optional .TSK.CustomFormatArchive old_custom_format = 3;
+  optional uint32 custom_format_id = 4;
+}
+
+message ReplaceCustomFormatCommandArchive {
+  optional .TSK.CommandArchive super = 1;
+  optional .TSK.CustomFormatArchive custom_format = 2;
+  optional uint32 custom_format_id = 3;
+  optional .TSK.FormatStructArchive replacement_format = 4;
 }
 

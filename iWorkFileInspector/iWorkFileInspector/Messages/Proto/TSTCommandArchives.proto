@@ -28,6 +28,13 @@ message TableCommandArchive {
   optional uint32 editing_mode_at_start = 4;
 }
 
+message CommandApplyCellDiffArchive {
+  required .TST.TableCommandArchive super = 1;
+  required .TST.CellRegion cell_region = 2;
+  required .TSP.Reference cell_diff = 3;
+  required .TSP.Reference inverse_cell_diff_map = 4;
+}
+
 message CommandChangeFreezeHeaderStateArchive {
   required .TST.CommandDirectionArchive direction = 1;
   required bool new_freeze_state = 2;
@@ -104,6 +111,12 @@ message CommandSetAutomaticDurationUnitsArchive {
   required .TST.TableCommandArchive super = 6;
 }
 
+message CommandReplaceCustomFormatArchive {
+  required .TST.CellMapArchive undo_map = 1;
+  required .TST.CellMapArchive redo_map = 2;
+  required .TST.TableCommandArchive super = 6;
+}
+
 message CommandInsertColumnsOrRowsArchive {
   message StyleIndexPair {
     required .TSP.Reference style = 1;
@@ -136,8 +149,8 @@ message CommandInsertColumnsOrRowsArchive {
 message CommandPasteArchive {
   required .TST.SelectionArchive user_selection = 1;
   required .TST.SelectionArchive final_selection = 2;
-  required .TST.CellMapArchive undo_cell_map = 3;
-  required .TST.CellMapArchive redo_cell_map = 4;
+  required .TST.TiledCellMapArchive undo_cell_map = 3;
+  required .TST.TiledCellMapArchive redo_cell_map = 4;
   optional .TSP.Reference command_undo = 6;
   required bool invalidate_comments = 7;
   required .TST.TableCommandArchive super = 11;
@@ -285,6 +298,15 @@ message CommandStyleCellsArchive {
   optional .TSP.Reference text_undo = 6;
 }
 
+message CommandSetFillPropertyArchive {
+  required .TST.TableCommandArchive super = 1;
+  optional .TSD.FillArchive fill = 2;
+  optional .TST.CellFillStandIn cell_fill_stand_in = 3;
+  required .TST.SelectionArchive selection = 4;
+  required .TST.CellMapArchive undo_cell_map = 5;
+  required .TST.CellMapArchive redo_cell_map = 6;
+}
+
 message CommandStyleTableArchive {
   required .TST.TableCommandArchive super = 1;
   optional .TSP.ReferenceDictionary format_properties = 2;
@@ -362,6 +384,28 @@ message CommandApplyStrokePresetArchive {
   required int32 preset_index = 5;
 }
 
+message CommandAddTableStylePresetArchive {
+  required .TST.TableCommandArchive super = 1;
+  required int32 preset_index = 2;
+  required .TST.TableStyleNetworkArchive table_styles = 3;
+  required bool send_notification = 4;
+}
+
+message CommandRemoveTableStylePresetArchive {
+  required .TSK.CommandArchive super = 1;
+  required .TSP.Reference theme = 2;
+  required .TST.TableStyleNetworkArchive removed_table_styles = 3;
+  required int32 preset_id = 4;
+  required int32 preset_index_in_theme = 5;
+}
+
+message CommandReplaceTableStylePresetArchive {
+  required .TSK.CommandArchive super = 1;
+  required .TSP.Reference theme = 2;
+  required .TST.TableStyleNetworkArchive old_table_styles = 3;
+  required .TST.TableStyleNetworkArchive new_table_styles = 4;
+}
+
 message CommandApplyTableStylePresetArchive {
   message StyleIndexTuple {
     required uint32 index = 1;
@@ -373,7 +417,7 @@ message CommandApplyTableStylePresetArchive {
   required .TST.CellMapArchive redo_cell_map = 4;
   required int32 preset_index = 5;
   required .TST.TableStyleNetworkArchive old_table_styles = 7;
-  required .TST.TableStyleNetworkArchive new_table_styles = 8;
+  optional .TST.TableStyleNetworkArchive new_table_styles = 8 [deprecated = true];
   optional bool apply_clears_all = 10;
   optional .TSP.Reference font_size_command = 11;
   optional .TSP.Reference set_style_apply_clears_all_flag_command = 12;
@@ -769,5 +813,31 @@ message CommandSetStorageLanguageArchive {
   required uint32 range_location = 4;
   required uint32 range_length = 5;
   optional .TSWP.UndoTransaction undo_transaction = 6;
+}
+
+message CommandSetSortOrderArchive {
+  required .TST.TableCommandArchive super = 1;
+  optional .TST.TableSortOrderArchive old_sort_order = 2;
+  optional .TST.TableSortOrderArchive new_sort_order = 3;
+}
+
+message CommandRewriteSortOrderForTectonicShiftArchive {
+  required .TST.TableCommandArchive super = 1;
+  required .TSCE.TectonicShiftArchive tectonic_shift = 2;
+  optional .TST.TableSortOrderArchive old_sort_order = 3;
+  optional .TST.TableSortOrderArchive new_sort_order = 4;
+}
+
+message CommandRewriteSortOrderForSortArchive {
+  required .TST.TableCommandArchive super = 1;
+  required .TSK.ShuffleMappingArchive sort_mapping = 2;
+  optional .TST.TableSortOrderArchive old_sort_order = 3;
+  optional .TST.TableSortOrderArchive new_sort_order = 4;
+}
+
+message CommandRewriteSortOrderForTableResizeArchive {
+  required .TST.TableCommandArchive super = 1;
+  optional .TST.TableSortOrderArchive old_sort_order = 2;
+  optional .TST.TableSortOrderArchive new_sort_order = 3;
 }
 

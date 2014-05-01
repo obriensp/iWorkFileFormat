@@ -48,9 +48,9 @@ message ComponentInfo {
   repeated uint32 write_version = 5 [packed = true];
   repeated .TSP.ComponentExternalReference external_references = 6;
   repeated .TSP.ComponentDataReference data_references = 7;
-  optional bool allows_duplicates_outside_of_document_package = 8 [default = false];
-  optional bool dirties_document_package = 9 [default = true];
+  repeated .TSP.ObjectUUIDMapEntry object_uuid_map_entries = 11;
   optional bool is_stored_outside_object_archive = 10 [default = false];
+  optional uint64 save_token = 12 [default = 0];
 }
 
 message ComponentExternalReference {
@@ -63,12 +63,30 @@ message ComponentDataReference {
   required uint64 data_identifier = 1;
 }
 
+message UUIDInternal {
+  required uint64 lower = 1;
+  required uint64 upper = 2;
+}
+
+message ObjectUUIDMapEntry {
+  required uint64 identifier = 1;
+  required .TSP.UUIDInternal uuid = 2;
+}
+
 message PackageMetadata {
   required uint64 last_object_identifier = 1;
+  optional .TSP.DocumentRevision revision = 2;
   repeated .TSP.ComponentInfo components = 3;
   repeated .TSP.DataInfo datas = 4;
   repeated uint32 read_version = 5 [packed = true];
   repeated uint32 write_version = 6 [packed = true];
+  repeated uint32 file_format_version = 7 [packed = true];
+  optional uint64 save_token = 8 [default = 0];
+}
+
+message DocumentRevision {
+  optional uint64 sequence = 1 [default = 0];
+  optional string identifier = 2;
 }
 
 message PasteboardMetadata {

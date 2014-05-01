@@ -29,9 +29,27 @@ const ::google::protobuf::internal::GeneratedMessageReflection*
 const ::google::protobuf::Descriptor* TestDocumentArchive_descriptor_ = NULL;
 const ::google::protobuf::internal::GeneratedMessageReflection*
   TestDocumentArchive_reflection_ = NULL;
+const ::google::protobuf::Descriptor* ShortcutControllerArchive_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  ShortcutControllerArchive_reflection_ = NULL;
+const ::google::protobuf::Descriptor* ShortcutControllerArchive_ShortcutMapEntry_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  ShortcutControllerArchive_ShortcutMapEntry_reflection_ = NULL;
 const ::google::protobuf::Descriptor* PropagatePresetCommandArchive_descriptor_ = NULL;
 const ::google::protobuf::internal::GeneratedMessageReflection*
   PropagatePresetCommandArchive_reflection_ = NULL;
+const ::google::protobuf::Descriptor* ShortcutCommandArchive_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  ShortcutCommandArchive_reflection_ = NULL;
+const ::google::protobuf::Descriptor* AddCustomFormatCommandArchive_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  AddCustomFormatCommandArchive_reflection_ = NULL;
+const ::google::protobuf::Descriptor* UpdateCustomFormatCommandArchive_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  UpdateCustomFormatCommandArchive_reflection_ = NULL;
+const ::google::protobuf::Descriptor* ReplaceCustomFormatCommandArchive_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  ReplaceCustomFormatCommandArchive_reflection_ = NULL;
 
 }  // namespace
 
@@ -43,7 +61,7 @@ void protobuf_AssignDesc_TSAArchives_2eproto() {
       "TSAArchives.proto");
   GOOGLE_CHECK(file != NULL);
   DocumentArchive_descriptor_ = file->message_type(0);
-  static const int DocumentArchive_offsets_[9] = {
+  static const int DocumentArchive_offsets_[10] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(DocumentArchive, super_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(DocumentArchive, text_preset_display_items_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(DocumentArchive, creation_language_),
@@ -53,6 +71,7 @@ void protobuf_AssignDesc_TSAArchives_2eproto() {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(DocumentArchive, tables_custom_format_list_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(DocumentArchive, needs_movie_compatibility_upgrade_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(DocumentArchive, template_identifier_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(DocumentArchive, shortcut_controller_),
   };
   DocumentArchive_reflection_ =
     new ::google::protobuf::internal::GeneratedMessageReflection(
@@ -99,7 +118,38 @@ void protobuf_AssignDesc_TSAArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(TestDocumentArchive));
-  PropagatePresetCommandArchive_descriptor_ = file->message_type(3);
+  ShortcutControllerArchive_descriptor_ = file->message_type(3);
+  static const int ShortcutControllerArchive_offsets_[1] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ShortcutControllerArchive, entries_),
+  };
+  ShortcutControllerArchive_reflection_ =
+    new ::google::protobuf::internal::GeneratedMessageReflection(
+      ShortcutControllerArchive_descriptor_,
+      ShortcutControllerArchive::default_instance_,
+      ShortcutControllerArchive_offsets_,
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ShortcutControllerArchive, _has_bits_[0]),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ShortcutControllerArchive, _unknown_fields_),
+      -1,
+      ::google::protobuf::DescriptorPool::generated_pool(),
+      ::google::protobuf::MessageFactory::generated_factory(),
+      sizeof(ShortcutControllerArchive));
+  ShortcutControllerArchive_ShortcutMapEntry_descriptor_ = ShortcutControllerArchive_descriptor_->nested_type(0);
+  static const int ShortcutControllerArchive_ShortcutMapEntry_offsets_[2] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ShortcutControllerArchive_ShortcutMapEntry, shortcut_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ShortcutControllerArchive_ShortcutMapEntry, style_),
+  };
+  ShortcutControllerArchive_ShortcutMapEntry_reflection_ =
+    new ::google::protobuf::internal::GeneratedMessageReflection(
+      ShortcutControllerArchive_ShortcutMapEntry_descriptor_,
+      ShortcutControllerArchive_ShortcutMapEntry::default_instance_,
+      ShortcutControllerArchive_ShortcutMapEntry_offsets_,
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ShortcutControllerArchive_ShortcutMapEntry, _has_bits_[0]),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ShortcutControllerArchive_ShortcutMapEntry, _unknown_fields_),
+      -1,
+      ::google::protobuf::DescriptorPool::generated_pool(),
+      ::google::protobuf::MessageFactory::generated_factory(),
+      sizeof(ShortcutControllerArchive_ShortcutMapEntry));
+  PropagatePresetCommandArchive_descriptor_ = file->message_type(4);
   static const int PropagatePresetCommandArchive_offsets_[1] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PropagatePresetCommandArchive, super_),
   };
@@ -114,6 +164,78 @@ void protobuf_AssignDesc_TSAArchives_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(PropagatePresetCommandArchive));
+  ShortcutCommandArchive_descriptor_ = file->message_type(5);
+  static const int ShortcutCommandArchive_offsets_[5] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ShortcutCommandArchive, super_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ShortcutCommandArchive, old_style_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ShortcutCommandArchive, new_style_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ShortcutCommandArchive, old_shortcut_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ShortcutCommandArchive, new_shortcut_),
+  };
+  ShortcutCommandArchive_reflection_ =
+    new ::google::protobuf::internal::GeneratedMessageReflection(
+      ShortcutCommandArchive_descriptor_,
+      ShortcutCommandArchive::default_instance_,
+      ShortcutCommandArchive_offsets_,
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ShortcutCommandArchive, _has_bits_[0]),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ShortcutCommandArchive, _unknown_fields_),
+      -1,
+      ::google::protobuf::DescriptorPool::generated_pool(),
+      ::google::protobuf::MessageFactory::generated_factory(),
+      sizeof(ShortcutCommandArchive));
+  AddCustomFormatCommandArchive_descriptor_ = file->message_type(6);
+  static const int AddCustomFormatCommandArchive_offsets_[3] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(AddCustomFormatCommandArchive, super_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(AddCustomFormatCommandArchive, custom_format_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(AddCustomFormatCommandArchive, for_replacement_),
+  };
+  AddCustomFormatCommandArchive_reflection_ =
+    new ::google::protobuf::internal::GeneratedMessageReflection(
+      AddCustomFormatCommandArchive_descriptor_,
+      AddCustomFormatCommandArchive::default_instance_,
+      AddCustomFormatCommandArchive_offsets_,
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(AddCustomFormatCommandArchive, _has_bits_[0]),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(AddCustomFormatCommandArchive, _unknown_fields_),
+      -1,
+      ::google::protobuf::DescriptorPool::generated_pool(),
+      ::google::protobuf::MessageFactory::generated_factory(),
+      sizeof(AddCustomFormatCommandArchive));
+  UpdateCustomFormatCommandArchive_descriptor_ = file->message_type(7);
+  static const int UpdateCustomFormatCommandArchive_offsets_[4] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(UpdateCustomFormatCommandArchive, super_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(UpdateCustomFormatCommandArchive, custom_format_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(UpdateCustomFormatCommandArchive, old_custom_format_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(UpdateCustomFormatCommandArchive, custom_format_id_),
+  };
+  UpdateCustomFormatCommandArchive_reflection_ =
+    new ::google::protobuf::internal::GeneratedMessageReflection(
+      UpdateCustomFormatCommandArchive_descriptor_,
+      UpdateCustomFormatCommandArchive::default_instance_,
+      UpdateCustomFormatCommandArchive_offsets_,
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(UpdateCustomFormatCommandArchive, _has_bits_[0]),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(UpdateCustomFormatCommandArchive, _unknown_fields_),
+      -1,
+      ::google::protobuf::DescriptorPool::generated_pool(),
+      ::google::protobuf::MessageFactory::generated_factory(),
+      sizeof(UpdateCustomFormatCommandArchive));
+  ReplaceCustomFormatCommandArchive_descriptor_ = file->message_type(8);
+  static const int ReplaceCustomFormatCommandArchive_offsets_[4] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ReplaceCustomFormatCommandArchive, super_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ReplaceCustomFormatCommandArchive, custom_format_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ReplaceCustomFormatCommandArchive, custom_format_id_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ReplaceCustomFormatCommandArchive, replacement_format_),
+  };
+  ReplaceCustomFormatCommandArchive_reflection_ =
+    new ::google::protobuf::internal::GeneratedMessageReflection(
+      ReplaceCustomFormatCommandArchive_descriptor_,
+      ReplaceCustomFormatCommandArchive::default_instance_,
+      ReplaceCustomFormatCommandArchive_offsets_,
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ReplaceCustomFormatCommandArchive, _has_bits_[0]),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ReplaceCustomFormatCommandArchive, _unknown_fields_),
+      -1,
+      ::google::protobuf::DescriptorPool::generated_pool(),
+      ::google::protobuf::MessageFactory::generated_factory(),
+      sizeof(ReplaceCustomFormatCommandArchive));
 }
 
 namespace {
@@ -133,7 +255,19 @@ void protobuf_RegisterTypes(const ::std::string&) {
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
     TestDocumentArchive_descriptor_, &TestDocumentArchive::default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+    ShortcutControllerArchive_descriptor_, &ShortcutControllerArchive::default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+    ShortcutControllerArchive_ShortcutMapEntry_descriptor_, &ShortcutControllerArchive_ShortcutMapEntry::default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
     PropagatePresetCommandArchive_descriptor_, &PropagatePresetCommandArchive::default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+    ShortcutCommandArchive_descriptor_, &ShortcutCommandArchive::default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+    AddCustomFormatCommandArchive_descriptor_, &AddCustomFormatCommandArchive::default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+    UpdateCustomFormatCommandArchive_descriptor_, &UpdateCustomFormatCommandArchive::default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+    ReplaceCustomFormatCommandArchive_descriptor_, &ReplaceCustomFormatCommandArchive::default_instance());
 }
 
 }  // namespace
@@ -145,8 +279,20 @@ void protobuf_ShutdownFile_TSAArchives_2eproto() {
   delete FunctionBrowserStateArchive_reflection_;
   delete TestDocumentArchive::default_instance_;
   delete TestDocumentArchive_reflection_;
+  delete ShortcutControllerArchive::default_instance_;
+  delete ShortcutControllerArchive_reflection_;
+  delete ShortcutControllerArchive_ShortcutMapEntry::default_instance_;
+  delete ShortcutControllerArchive_ShortcutMapEntry_reflection_;
   delete PropagatePresetCommandArchive::default_instance_;
   delete PropagatePresetCommandArchive_reflection_;
+  delete ShortcutCommandArchive::default_instance_;
+  delete ShortcutCommandArchive_reflection_;
+  delete AddCustomFormatCommandArchive::default_instance_;
+  delete AddCustomFormatCommandArchive_reflection_;
+  delete UpdateCustomFormatCommandArchive::default_instance_;
+  delete UpdateCustomFormatCommandArchive_reflection_;
+  delete ReplaceCustomFormatCommandArchive::default_instance_;
+  delete ReplaceCustomFormatCommandArchive_reflection_;
 }
 
 void protobuf_AddDesc_TSAArchives_2eproto() {
@@ -162,7 +308,7 @@ void protobuf_AddDesc_TSAArchives_2eproto() {
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
     "\n\021TSAArchives.proto\022\003TSA\032\021TSKArchives.pr"
     "oto\032\021TSPMessages.proto\032\022TSWPArchives.pro"
-    "to\032\021TSSArchives.proto\"\223\003\n\017DocumentArchiv"
+    "to\032\021TSSArchives.proto\"\300\003\n\017DocumentArchiv"
     "e\022#\n\005super\030\001 \002(\0132\024.TSK.DocumentArchive\022E"
     "\n\031text_preset_display_items\030\002 \003(\0132\".TSWP"
     ".TextPresetDisplayItemArchive\022\031\n\021creatio"
@@ -172,24 +318,60 @@ void protobuf_AddDesc_TSAArchives_2eproto() {
     "te\030\006 \001(\0132\016.TSP.Reference\0221\n\031tables_custo"
     "m_format_list\030\007 \001(\0132\016.TSP.Reference\022)\n!n"
     "eeds_movie_compatibility_upgrade\030\010 \001(\010\022\033"
-    "\n\023template_identifier\030\t \001(\t\"\204\001\n\033Function"
-    "BrowserStateArchive\022\030\n\020recent_functions\030"
-    "\001 \003(\r\022\026\n\016back_functions\030\002 \003(\r\022\031\n\021forward"
-    "_functions\030\003 \003(\r\022\030\n\020current_function\030\004 \001"
-    "(\r\"I\n\023TestDocumentArchive\022#\n\005super\030\001 \002(\013"
-    "2\024.TSA.DocumentArchive\022\r\n\005value\030\002 \001(\t\"C\n"
-    "\035PropagatePresetCommandArchive\022\"\n\005super\030"
-    "\001 \002(\0132\023.TSK.CommandArchive", 786);
+    "\n\023template_identifier\030\t \001(\t\022+\n\023shortcut_"
+    "controller\030\n \001(\0132\016.TSP.Reference\"\204\001\n\033Fun"
+    "ctionBrowserStateArchive\022\030\n\020recent_funct"
+    "ions\030\001 \003(\r\022\026\n\016back_functions\030\002 \003(\r\022\031\n\021fo"
+    "rward_functions\030\003 \003(\r\022\030\n\020current_functio"
+    "n\030\004 \001(\r\"I\n\023TestDocumentArchive\022#\n\005super\030"
+    "\001 \002(\0132\024.TSA.DocumentArchive\022\r\n\005value\030\002 \001"
+    "(\t\"\242\001\n\031ShortcutControllerArchive\022@\n\007entr"
+    "ies\030\001 \003(\0132/.TSA.ShortcutControllerArchiv"
+    "e.ShortcutMapEntry\032C\n\020ShortcutMapEntry\022\020"
+    "\n\010shortcut\030\001 \002(\t\022\035\n\005style\030\002 \002(\0132\016.TSP.Re"
+    "ference\"C\n\035PropagatePresetCommandArchive"
+    "\022\"\n\005super\030\001 \002(\0132\023.TSK.CommandArchive\"\256\001\n"
+    "\026ShortcutCommandArchive\022\"\n\005super\030\001 \001(\0132\023"
+    ".TSK.CommandArchive\022!\n\told_style\030\002 \001(\0132\016"
+    ".TSP.Reference\022!\n\tnew_style\030\003 \001(\0132\016.TSP."
+    "Reference\022\024\n\014old_shortcut\030\004 \001(\t\022\024\n\014new_s"
+    "hortcut\030\005 \001(\t\"\215\001\n\035AddCustomFormatCommand"
+    "Archive\022\"\n\005super\030\001 \002(\0132\023.TSK.CommandArch"
+    "ive\022/\n\rcustom_format\030\002 \001(\0132\030.TSK.CustomF"
+    "ormatArchive\022\027\n\017for_replacement\030\003 \001(\010\"\306\001"
+    "\n UpdateCustomFormatCommandArchive\022\"\n\005su"
+    "per\030\001 \001(\0132\023.TSK.CommandArchive\022/\n\rcustom"
+    "_format\030\002 \001(\0132\030.TSK.CustomFormatArchive\022"
+    "3\n\021old_custom_format\030\003 \001(\0132\030.TSK.CustomF"
+    "ormatArchive\022\030\n\020custom_format_id\030\004 \001(\r\"\310"
+    "\001\n!ReplaceCustomFormatCommandArchive\022\"\n\005"
+    "super\030\001 \001(\0132\023.TSK.CommandArchive\022/\n\rcust"
+    "om_format\030\002 \001(\0132\030.TSK.CustomFormatArchiv"
+    "e\022\030\n\020custom_format_id\030\003 \001(\r\0224\n\022replaceme"
+    "nt_format\030\004 \001(\0132\030.TSK.FormatStructArchiv"
+    "e", 1721);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "TSAArchives.proto", &protobuf_RegisterTypes);
   DocumentArchive::default_instance_ = new DocumentArchive();
   FunctionBrowserStateArchive::default_instance_ = new FunctionBrowserStateArchive();
   TestDocumentArchive::default_instance_ = new TestDocumentArchive();
+  ShortcutControllerArchive::default_instance_ = new ShortcutControllerArchive();
+  ShortcutControllerArchive_ShortcutMapEntry::default_instance_ = new ShortcutControllerArchive_ShortcutMapEntry();
   PropagatePresetCommandArchive::default_instance_ = new PropagatePresetCommandArchive();
+  ShortcutCommandArchive::default_instance_ = new ShortcutCommandArchive();
+  AddCustomFormatCommandArchive::default_instance_ = new AddCustomFormatCommandArchive();
+  UpdateCustomFormatCommandArchive::default_instance_ = new UpdateCustomFormatCommandArchive();
+  ReplaceCustomFormatCommandArchive::default_instance_ = new ReplaceCustomFormatCommandArchive();
   DocumentArchive::default_instance_->InitAsDefaultInstance();
   FunctionBrowserStateArchive::default_instance_->InitAsDefaultInstance();
   TestDocumentArchive::default_instance_->InitAsDefaultInstance();
+  ShortcutControllerArchive::default_instance_->InitAsDefaultInstance();
+  ShortcutControllerArchive_ShortcutMapEntry::default_instance_->InitAsDefaultInstance();
   PropagatePresetCommandArchive::default_instance_->InitAsDefaultInstance();
+  ShortcutCommandArchive::default_instance_->InitAsDefaultInstance();
+  AddCustomFormatCommandArchive::default_instance_->InitAsDefaultInstance();
+  UpdateCustomFormatCommandArchive::default_instance_->InitAsDefaultInstance();
+  ReplaceCustomFormatCommandArchive::default_instance_->InitAsDefaultInstance();
   ::google::protobuf::internal::OnShutdown(&protobuf_ShutdownFile_TSAArchives_2eproto);
 }
 
@@ -212,6 +394,7 @@ const int DocumentArchive::kFunctionBrowserStateFieldNumber;
 const int DocumentArchive::kTablesCustomFormatListFieldNumber;
 const int DocumentArchive::kNeedsMovieCompatibilityUpgradeFieldNumber;
 const int DocumentArchive::kTemplateIdentifierFieldNumber;
+const int DocumentArchive::kShortcutControllerFieldNumber;
 #endif  // !_MSC_VER
 
 DocumentArchive::DocumentArchive()
@@ -225,6 +408,7 @@ void DocumentArchive::InitAsDefaultInstance() {
   view_state_ = const_cast< ::TSP::Reference*>(&::TSP::Reference::default_instance());
   function_browser_state_ = const_cast< ::TSP::Reference*>(&::TSP::Reference::default_instance());
   tables_custom_format_list_ = const_cast< ::TSP::Reference*>(&::TSP::Reference::default_instance());
+  shortcut_controller_ = const_cast< ::TSP::Reference*>(&::TSP::Reference::default_instance());
 }
 
 DocumentArchive::DocumentArchive(const DocumentArchive& from)
@@ -243,6 +427,7 @@ void DocumentArchive::SharedCtor() {
   tables_custom_format_list_ = NULL;
   needs_movie_compatibility_upgrade_ = false;
   template_identifier_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+  shortcut_controller_ = NULL;
   ::memset(_has_bits_, 0, sizeof(_has_bits_));
 }
 
@@ -263,6 +448,7 @@ void DocumentArchive::SharedDtor() {
     delete view_state_;
     delete function_browser_state_;
     delete tables_custom_format_list_;
+    delete shortcut_controller_;
   }
 }
 
@@ -316,6 +502,9 @@ void DocumentArchive::Clear() {
       if (template_identifier_ != &::google::protobuf::internal::kEmptyString) {
         template_identifier_->clear();
       }
+    }
+    if (has_shortcut_controller()) {
+      if (shortcut_controller_ != NULL) shortcut_controller_->::TSP::Reference::Clear();
     }
   }
   text_preset_display_items_.Clear();
@@ -459,6 +648,20 @@ bool DocumentArchive::MergePartialFromCodedStream(
         } else {
           goto handle_uninterpreted;
         }
+        if (input->ExpectTag(82)) goto parse_shortcut_controller;
+        break;
+      }
+
+      // optional .TSP.Reference shortcut_controller = 10;
+      case 10: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_shortcut_controller:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_shortcut_controller()));
+        } else {
+          goto handle_uninterpreted;
+        }
         if (input->ExpectAtEnd()) return true;
         break;
       }
@@ -540,6 +743,12 @@ void DocumentArchive::SerializeWithCachedSizes(
       9, this->template_identifier(), output);
   }
 
+  // optional .TSP.Reference shortcut_controller = 10;
+  if (has_shortcut_controller()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      10, this->shortcut_controller(), output);
+  }
+
   if (!unknown_fields().empty()) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         unknown_fields(), output);
@@ -615,6 +824,13 @@ void DocumentArchive::SerializeWithCachedSizes(
         9, this->template_identifier(), target);
   }
 
+  // optional .TSP.Reference shortcut_controller = 10;
+  if (has_shortcut_controller()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        10, this->shortcut_controller(), target);
+  }
+
   if (!unknown_fields().empty()) {
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
         unknown_fields(), target);
@@ -682,6 +898,13 @@ int DocumentArchive::ByteSize() const {
           this->template_identifier());
     }
 
+    // optional .TSP.Reference shortcut_controller = 10;
+    if (has_shortcut_controller()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->shortcut_controller());
+    }
+
   }
   // repeated .TSWP.TextPresetDisplayItemArchive text_preset_display_items = 2;
   total_size += 1 * this->text_preset_display_items_size();
@@ -744,6 +967,9 @@ void DocumentArchive::MergeFrom(const DocumentArchive& from) {
     if (from.has_template_identifier()) {
       set_template_identifier(from.template_identifier());
     }
+    if (from.has_shortcut_controller()) {
+      mutable_shortcut_controller()->::TSP::Reference::MergeFrom(from.shortcut_controller());
+    }
   }
   mutable_unknown_fields()->MergeFrom(from.unknown_fields());
 }
@@ -781,6 +1007,9 @@ bool DocumentArchive::IsInitialized() const {
   if (has_tables_custom_format_list()) {
     if (!this->tables_custom_format_list().IsInitialized()) return false;
   }
+  if (has_shortcut_controller()) {
+    if (!this->shortcut_controller().IsInitialized()) return false;
+  }
   return true;
 }
 
@@ -795,6 +1024,7 @@ void DocumentArchive::Swap(DocumentArchive* other) {
     std::swap(tables_custom_format_list_, other->tables_custom_format_list_);
     std::swap(needs_movie_compatibility_upgrade_, other->needs_movie_compatibility_upgrade_);
     std::swap(template_identifier_, other->template_identifier_);
+    std::swap(shortcut_controller_, other->shortcut_controller_);
     std::swap(_has_bits_[0], other->_has_bits_[0]);
     _unknown_fields_.Swap(&other->_unknown_fields_);
     std::swap(_cached_size_, other->_cached_size_);
@@ -1440,6 +1670,486 @@ void TestDocumentArchive::Swap(TestDocumentArchive* other) {
 // ===================================================================
 
 #ifndef _MSC_VER
+const int ShortcutControllerArchive_ShortcutMapEntry::kShortcutFieldNumber;
+const int ShortcutControllerArchive_ShortcutMapEntry::kStyleFieldNumber;
+#endif  // !_MSC_VER
+
+ShortcutControllerArchive_ShortcutMapEntry::ShortcutControllerArchive_ShortcutMapEntry()
+  : ::google::protobuf::Message() {
+  SharedCtor();
+}
+
+void ShortcutControllerArchive_ShortcutMapEntry::InitAsDefaultInstance() {
+  style_ = const_cast< ::TSP::Reference*>(&::TSP::Reference::default_instance());
+}
+
+ShortcutControllerArchive_ShortcutMapEntry::ShortcutControllerArchive_ShortcutMapEntry(const ShortcutControllerArchive_ShortcutMapEntry& from)
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  MergeFrom(from);
+}
+
+void ShortcutControllerArchive_ShortcutMapEntry::SharedCtor() {
+  _cached_size_ = 0;
+  shortcut_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+  style_ = NULL;
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+}
+
+ShortcutControllerArchive_ShortcutMapEntry::~ShortcutControllerArchive_ShortcutMapEntry() {
+  SharedDtor();
+}
+
+void ShortcutControllerArchive_ShortcutMapEntry::SharedDtor() {
+  if (shortcut_ != &::google::protobuf::internal::kEmptyString) {
+    delete shortcut_;
+  }
+  if (this != default_instance_) {
+    delete style_;
+  }
+}
+
+void ShortcutControllerArchive_ShortcutMapEntry::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* ShortcutControllerArchive_ShortcutMapEntry::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return ShortcutControllerArchive_ShortcutMapEntry_descriptor_;
+}
+
+const ShortcutControllerArchive_ShortcutMapEntry& ShortcutControllerArchive_ShortcutMapEntry::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_TSAArchives_2eproto();
+  return *default_instance_;
+}
+
+ShortcutControllerArchive_ShortcutMapEntry* ShortcutControllerArchive_ShortcutMapEntry::default_instance_ = NULL;
+
+ShortcutControllerArchive_ShortcutMapEntry* ShortcutControllerArchive_ShortcutMapEntry::New() const {
+  return new ShortcutControllerArchive_ShortcutMapEntry;
+}
+
+void ShortcutControllerArchive_ShortcutMapEntry::Clear() {
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (has_shortcut()) {
+      if (shortcut_ != &::google::protobuf::internal::kEmptyString) {
+        shortcut_->clear();
+      }
+    }
+    if (has_style()) {
+      if (style_ != NULL) style_->::TSP::Reference::Clear();
+    }
+  }
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+  mutable_unknown_fields()->Clear();
+}
+
+bool ShortcutControllerArchive_ShortcutMapEntry::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!(EXPRESSION)) return false
+  ::google::protobuf::uint32 tag;
+  while ((tag = input->ReadTag()) != 0) {
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // required string shortcut = 1;
+      case 1: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_shortcut()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+            this->shortcut().data(), this->shortcut().length(),
+            ::google::protobuf::internal::WireFormat::PARSE);
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(18)) goto parse_style;
+        break;
+      }
+
+      // required .TSP.Reference style = 2;
+      case 2: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_style:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_style()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectAtEnd()) return true;
+        break;
+      }
+
+      default: {
+      handle_uninterpreted:
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          return true;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+  return true;
+#undef DO_
+}
+
+void ShortcutControllerArchive_ShortcutMapEntry::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // required string shortcut = 1;
+  if (has_shortcut()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+      this->shortcut().data(), this->shortcut().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE);
+    ::google::protobuf::internal::WireFormatLite::WriteString(
+      1, this->shortcut(), output);
+  }
+
+  // required .TSP.Reference style = 2;
+  if (has_style()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      2, this->style(), output);
+  }
+
+  if (!unknown_fields().empty()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+}
+
+::google::protobuf::uint8* ShortcutControllerArchive_ShortcutMapEntry::SerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // required string shortcut = 1;
+  if (has_shortcut()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+      this->shortcut().data(), this->shortcut().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE);
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        1, this->shortcut(), target);
+  }
+
+  // required .TSP.Reference style = 2;
+  if (has_style()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        2, this->style(), target);
+  }
+
+  if (!unknown_fields().empty()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  return target;
+}
+
+int ShortcutControllerArchive_ShortcutMapEntry::ByteSize() const {
+  int total_size = 0;
+
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    // required string shortcut = 1;
+    if (has_shortcut()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->shortcut());
+    }
+
+    // required .TSP.Reference style = 2;
+    if (has_style()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->style());
+    }
+
+  }
+  if (!unknown_fields().empty()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = total_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void ShortcutControllerArchive_ShortcutMapEntry::MergeFrom(const ::google::protobuf::Message& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  const ShortcutControllerArchive_ShortcutMapEntry* source =
+    ::google::protobuf::internal::dynamic_cast_if_available<const ShortcutControllerArchive_ShortcutMapEntry*>(
+      &from);
+  if (source == NULL) {
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+    MergeFrom(*source);
+  }
+}
+
+void ShortcutControllerArchive_ShortcutMapEntry::MergeFrom(const ShortcutControllerArchive_ShortcutMapEntry& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (from.has_shortcut()) {
+      set_shortcut(from.shortcut());
+    }
+    if (from.has_style()) {
+      mutable_style()->::TSP::Reference::MergeFrom(from.style());
+    }
+  }
+  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
+}
+
+void ShortcutControllerArchive_ShortcutMapEntry::CopyFrom(const ::google::protobuf::Message& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void ShortcutControllerArchive_ShortcutMapEntry::CopyFrom(const ShortcutControllerArchive_ShortcutMapEntry& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool ShortcutControllerArchive_ShortcutMapEntry::IsInitialized() const {
+  if ((_has_bits_[0] & 0x00000003) != 0x00000003) return false;
+
+  if (has_style()) {
+    if (!this->style().IsInitialized()) return false;
+  }
+  return true;
+}
+
+void ShortcutControllerArchive_ShortcutMapEntry::Swap(ShortcutControllerArchive_ShortcutMapEntry* other) {
+  if (other != this) {
+    std::swap(shortcut_, other->shortcut_);
+    std::swap(style_, other->style_);
+    std::swap(_has_bits_[0], other->_has_bits_[0]);
+    _unknown_fields_.Swap(&other->_unknown_fields_);
+    std::swap(_cached_size_, other->_cached_size_);
+  }
+}
+
+::google::protobuf::Metadata ShortcutControllerArchive_ShortcutMapEntry::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = ShortcutControllerArchive_ShortcutMapEntry_descriptor_;
+  metadata.reflection = ShortcutControllerArchive_ShortcutMapEntry_reflection_;
+  return metadata;
+}
+
+
+// -------------------------------------------------------------------
+
+#ifndef _MSC_VER
+const int ShortcutControllerArchive::kEntriesFieldNumber;
+#endif  // !_MSC_VER
+
+ShortcutControllerArchive::ShortcutControllerArchive()
+  : ::google::protobuf::Message() {
+  SharedCtor();
+}
+
+void ShortcutControllerArchive::InitAsDefaultInstance() {
+}
+
+ShortcutControllerArchive::ShortcutControllerArchive(const ShortcutControllerArchive& from)
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  MergeFrom(from);
+}
+
+void ShortcutControllerArchive::SharedCtor() {
+  _cached_size_ = 0;
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+}
+
+ShortcutControllerArchive::~ShortcutControllerArchive() {
+  SharedDtor();
+}
+
+void ShortcutControllerArchive::SharedDtor() {
+  if (this != default_instance_) {
+  }
+}
+
+void ShortcutControllerArchive::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* ShortcutControllerArchive::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return ShortcutControllerArchive_descriptor_;
+}
+
+const ShortcutControllerArchive& ShortcutControllerArchive::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_TSAArchives_2eproto();
+  return *default_instance_;
+}
+
+ShortcutControllerArchive* ShortcutControllerArchive::default_instance_ = NULL;
+
+ShortcutControllerArchive* ShortcutControllerArchive::New() const {
+  return new ShortcutControllerArchive;
+}
+
+void ShortcutControllerArchive::Clear() {
+  entries_.Clear();
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+  mutable_unknown_fields()->Clear();
+}
+
+bool ShortcutControllerArchive::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!(EXPRESSION)) return false
+  ::google::protobuf::uint32 tag;
+  while ((tag = input->ReadTag()) != 0) {
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // repeated .TSA.ShortcutControllerArchive.ShortcutMapEntry entries = 1;
+      case 1: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_entries:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+                input, add_entries()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(10)) goto parse_entries;
+        if (input->ExpectAtEnd()) return true;
+        break;
+      }
+
+      default: {
+      handle_uninterpreted:
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          return true;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+  return true;
+#undef DO_
+}
+
+void ShortcutControllerArchive::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // repeated .TSA.ShortcutControllerArchive.ShortcutMapEntry entries = 1;
+  for (int i = 0; i < this->entries_size(); i++) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, this->entries(i), output);
+  }
+
+  if (!unknown_fields().empty()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+}
+
+::google::protobuf::uint8* ShortcutControllerArchive::SerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // repeated .TSA.ShortcutControllerArchive.ShortcutMapEntry entries = 1;
+  for (int i = 0; i < this->entries_size(); i++) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        1, this->entries(i), target);
+  }
+
+  if (!unknown_fields().empty()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  return target;
+}
+
+int ShortcutControllerArchive::ByteSize() const {
+  int total_size = 0;
+
+  // repeated .TSA.ShortcutControllerArchive.ShortcutMapEntry entries = 1;
+  total_size += 1 * this->entries_size();
+  for (int i = 0; i < this->entries_size(); i++) {
+    total_size +=
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+        this->entries(i));
+  }
+
+  if (!unknown_fields().empty()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = total_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void ShortcutControllerArchive::MergeFrom(const ::google::protobuf::Message& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  const ShortcutControllerArchive* source =
+    ::google::protobuf::internal::dynamic_cast_if_available<const ShortcutControllerArchive*>(
+      &from);
+  if (source == NULL) {
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+    MergeFrom(*source);
+  }
+}
+
+void ShortcutControllerArchive::MergeFrom(const ShortcutControllerArchive& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  entries_.MergeFrom(from.entries_);
+  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
+}
+
+void ShortcutControllerArchive::CopyFrom(const ::google::protobuf::Message& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void ShortcutControllerArchive::CopyFrom(const ShortcutControllerArchive& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool ShortcutControllerArchive::IsInitialized() const {
+
+  for (int i = 0; i < entries_size(); i++) {
+    if (!this->entries(i).IsInitialized()) return false;
+  }
+  return true;
+}
+
+void ShortcutControllerArchive::Swap(ShortcutControllerArchive* other) {
+  if (other != this) {
+    entries_.Swap(&other->entries_);
+    std::swap(_has_bits_[0], other->_has_bits_[0]);
+    _unknown_fields_.Swap(&other->_unknown_fields_);
+    std::swap(_cached_size_, other->_cached_size_);
+  }
+}
+
+::google::protobuf::Metadata ShortcutControllerArchive::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = ShortcutControllerArchive_descriptor_;
+  metadata.reflection = ShortcutControllerArchive_reflection_;
+  return metadata;
+}
+
+
+// ===================================================================
+
+#ifndef _MSC_VER
 const int PropagatePresetCommandArchive::kSuperFieldNumber;
 #endif  // !_MSC_VER
 
@@ -1650,6 +2360,1439 @@ void PropagatePresetCommandArchive::Swap(PropagatePresetCommandArchive* other) {
   ::google::protobuf::Metadata metadata;
   metadata.descriptor = PropagatePresetCommandArchive_descriptor_;
   metadata.reflection = PropagatePresetCommandArchive_reflection_;
+  return metadata;
+}
+
+
+// ===================================================================
+
+#ifndef _MSC_VER
+const int ShortcutCommandArchive::kSuperFieldNumber;
+const int ShortcutCommandArchive::kOldStyleFieldNumber;
+const int ShortcutCommandArchive::kNewStyleFieldNumber;
+const int ShortcutCommandArchive::kOldShortcutFieldNumber;
+const int ShortcutCommandArchive::kNewShortcutFieldNumber;
+#endif  // !_MSC_VER
+
+ShortcutCommandArchive::ShortcutCommandArchive()
+  : ::google::protobuf::Message() {
+  SharedCtor();
+}
+
+void ShortcutCommandArchive::InitAsDefaultInstance() {
+  super_ = const_cast< ::TSK::CommandArchive*>(&::TSK::CommandArchive::default_instance());
+  old_style_ = const_cast< ::TSP::Reference*>(&::TSP::Reference::default_instance());
+  new_style_ = const_cast< ::TSP::Reference*>(&::TSP::Reference::default_instance());
+}
+
+ShortcutCommandArchive::ShortcutCommandArchive(const ShortcutCommandArchive& from)
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  MergeFrom(from);
+}
+
+void ShortcutCommandArchive::SharedCtor() {
+  _cached_size_ = 0;
+  super_ = NULL;
+  old_style_ = NULL;
+  new_style_ = NULL;
+  old_shortcut_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+  new_shortcut_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+}
+
+ShortcutCommandArchive::~ShortcutCommandArchive() {
+  SharedDtor();
+}
+
+void ShortcutCommandArchive::SharedDtor() {
+  if (old_shortcut_ != &::google::protobuf::internal::kEmptyString) {
+    delete old_shortcut_;
+  }
+  if (new_shortcut_ != &::google::protobuf::internal::kEmptyString) {
+    delete new_shortcut_;
+  }
+  if (this != default_instance_) {
+    delete super_;
+    delete old_style_;
+    delete new_style_;
+  }
+}
+
+void ShortcutCommandArchive::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* ShortcutCommandArchive::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return ShortcutCommandArchive_descriptor_;
+}
+
+const ShortcutCommandArchive& ShortcutCommandArchive::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_TSAArchives_2eproto();
+  return *default_instance_;
+}
+
+ShortcutCommandArchive* ShortcutCommandArchive::default_instance_ = NULL;
+
+ShortcutCommandArchive* ShortcutCommandArchive::New() const {
+  return new ShortcutCommandArchive;
+}
+
+void ShortcutCommandArchive::Clear() {
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (has_super()) {
+      if (super_ != NULL) super_->::TSK::CommandArchive::Clear();
+    }
+    if (has_old_style()) {
+      if (old_style_ != NULL) old_style_->::TSP::Reference::Clear();
+    }
+    if (has_new_style()) {
+      if (new_style_ != NULL) new_style_->::TSP::Reference::Clear();
+    }
+    if (has_old_shortcut()) {
+      if (old_shortcut_ != &::google::protobuf::internal::kEmptyString) {
+        old_shortcut_->clear();
+      }
+    }
+    if (has_new_shortcut()) {
+      if (new_shortcut_ != &::google::protobuf::internal::kEmptyString) {
+        new_shortcut_->clear();
+      }
+    }
+  }
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+  mutable_unknown_fields()->Clear();
+}
+
+bool ShortcutCommandArchive::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!(EXPRESSION)) return false
+  ::google::protobuf::uint32 tag;
+  while ((tag = input->ReadTag()) != 0) {
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // optional .TSK.CommandArchive super = 1;
+      case 1: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_super()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(18)) goto parse_old_style;
+        break;
+      }
+
+      // optional .TSP.Reference old_style = 2;
+      case 2: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_old_style:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_old_style()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(26)) goto parse_new_style;
+        break;
+      }
+
+      // optional .TSP.Reference new_style = 3;
+      case 3: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_new_style:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_new_style()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(34)) goto parse_old_shortcut;
+        break;
+      }
+
+      // optional string old_shortcut = 4;
+      case 4: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_old_shortcut:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_old_shortcut()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+            this->old_shortcut().data(), this->old_shortcut().length(),
+            ::google::protobuf::internal::WireFormat::PARSE);
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(42)) goto parse_new_shortcut;
+        break;
+      }
+
+      // optional string new_shortcut = 5;
+      case 5: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_new_shortcut:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_new_shortcut()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+            this->new_shortcut().data(), this->new_shortcut().length(),
+            ::google::protobuf::internal::WireFormat::PARSE);
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectAtEnd()) return true;
+        break;
+      }
+
+      default: {
+      handle_uninterpreted:
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          return true;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+  return true;
+#undef DO_
+}
+
+void ShortcutCommandArchive::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // optional .TSK.CommandArchive super = 1;
+  if (has_super()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, this->super(), output);
+  }
+
+  // optional .TSP.Reference old_style = 2;
+  if (has_old_style()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      2, this->old_style(), output);
+  }
+
+  // optional .TSP.Reference new_style = 3;
+  if (has_new_style()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      3, this->new_style(), output);
+  }
+
+  // optional string old_shortcut = 4;
+  if (has_old_shortcut()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+      this->old_shortcut().data(), this->old_shortcut().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE);
+    ::google::protobuf::internal::WireFormatLite::WriteString(
+      4, this->old_shortcut(), output);
+  }
+
+  // optional string new_shortcut = 5;
+  if (has_new_shortcut()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+      this->new_shortcut().data(), this->new_shortcut().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE);
+    ::google::protobuf::internal::WireFormatLite::WriteString(
+      5, this->new_shortcut(), output);
+  }
+
+  if (!unknown_fields().empty()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+}
+
+::google::protobuf::uint8* ShortcutCommandArchive::SerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // optional .TSK.CommandArchive super = 1;
+  if (has_super()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        1, this->super(), target);
+  }
+
+  // optional .TSP.Reference old_style = 2;
+  if (has_old_style()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        2, this->old_style(), target);
+  }
+
+  // optional .TSP.Reference new_style = 3;
+  if (has_new_style()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        3, this->new_style(), target);
+  }
+
+  // optional string old_shortcut = 4;
+  if (has_old_shortcut()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+      this->old_shortcut().data(), this->old_shortcut().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE);
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        4, this->old_shortcut(), target);
+  }
+
+  // optional string new_shortcut = 5;
+  if (has_new_shortcut()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+      this->new_shortcut().data(), this->new_shortcut().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE);
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        5, this->new_shortcut(), target);
+  }
+
+  if (!unknown_fields().empty()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  return target;
+}
+
+int ShortcutCommandArchive::ByteSize() const {
+  int total_size = 0;
+
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    // optional .TSK.CommandArchive super = 1;
+    if (has_super()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->super());
+    }
+
+    // optional .TSP.Reference old_style = 2;
+    if (has_old_style()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->old_style());
+    }
+
+    // optional .TSP.Reference new_style = 3;
+    if (has_new_style()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->new_style());
+    }
+
+    // optional string old_shortcut = 4;
+    if (has_old_shortcut()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->old_shortcut());
+    }
+
+    // optional string new_shortcut = 5;
+    if (has_new_shortcut()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->new_shortcut());
+    }
+
+  }
+  if (!unknown_fields().empty()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = total_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void ShortcutCommandArchive::MergeFrom(const ::google::protobuf::Message& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  const ShortcutCommandArchive* source =
+    ::google::protobuf::internal::dynamic_cast_if_available<const ShortcutCommandArchive*>(
+      &from);
+  if (source == NULL) {
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+    MergeFrom(*source);
+  }
+}
+
+void ShortcutCommandArchive::MergeFrom(const ShortcutCommandArchive& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (from.has_super()) {
+      mutable_super()->::TSK::CommandArchive::MergeFrom(from.super());
+    }
+    if (from.has_old_style()) {
+      mutable_old_style()->::TSP::Reference::MergeFrom(from.old_style());
+    }
+    if (from.has_new_style()) {
+      mutable_new_style()->::TSP::Reference::MergeFrom(from.new_style());
+    }
+    if (from.has_old_shortcut()) {
+      set_old_shortcut(from.old_shortcut());
+    }
+    if (from.has_new_shortcut()) {
+      set_new_shortcut(from.new_shortcut());
+    }
+  }
+  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
+}
+
+void ShortcutCommandArchive::CopyFrom(const ::google::protobuf::Message& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void ShortcutCommandArchive::CopyFrom(const ShortcutCommandArchive& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool ShortcutCommandArchive::IsInitialized() const {
+
+  if (has_super()) {
+    if (!this->super().IsInitialized()) return false;
+  }
+  if (has_old_style()) {
+    if (!this->old_style().IsInitialized()) return false;
+  }
+  if (has_new_style()) {
+    if (!this->new_style().IsInitialized()) return false;
+  }
+  return true;
+}
+
+void ShortcutCommandArchive::Swap(ShortcutCommandArchive* other) {
+  if (other != this) {
+    std::swap(super_, other->super_);
+    std::swap(old_style_, other->old_style_);
+    std::swap(new_style_, other->new_style_);
+    std::swap(old_shortcut_, other->old_shortcut_);
+    std::swap(new_shortcut_, other->new_shortcut_);
+    std::swap(_has_bits_[0], other->_has_bits_[0]);
+    _unknown_fields_.Swap(&other->_unknown_fields_);
+    std::swap(_cached_size_, other->_cached_size_);
+  }
+}
+
+::google::protobuf::Metadata ShortcutCommandArchive::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = ShortcutCommandArchive_descriptor_;
+  metadata.reflection = ShortcutCommandArchive_reflection_;
+  return metadata;
+}
+
+
+// ===================================================================
+
+#ifndef _MSC_VER
+const int AddCustomFormatCommandArchive::kSuperFieldNumber;
+const int AddCustomFormatCommandArchive::kCustomFormatFieldNumber;
+const int AddCustomFormatCommandArchive::kForReplacementFieldNumber;
+#endif  // !_MSC_VER
+
+AddCustomFormatCommandArchive::AddCustomFormatCommandArchive()
+  : ::google::protobuf::Message() {
+  SharedCtor();
+}
+
+void AddCustomFormatCommandArchive::InitAsDefaultInstance() {
+  super_ = const_cast< ::TSK::CommandArchive*>(&::TSK::CommandArchive::default_instance());
+  custom_format_ = const_cast< ::TSK::CustomFormatArchive*>(&::TSK::CustomFormatArchive::default_instance());
+}
+
+AddCustomFormatCommandArchive::AddCustomFormatCommandArchive(const AddCustomFormatCommandArchive& from)
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  MergeFrom(from);
+}
+
+void AddCustomFormatCommandArchive::SharedCtor() {
+  _cached_size_ = 0;
+  super_ = NULL;
+  custom_format_ = NULL;
+  for_replacement_ = false;
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+}
+
+AddCustomFormatCommandArchive::~AddCustomFormatCommandArchive() {
+  SharedDtor();
+}
+
+void AddCustomFormatCommandArchive::SharedDtor() {
+  if (this != default_instance_) {
+    delete super_;
+    delete custom_format_;
+  }
+}
+
+void AddCustomFormatCommandArchive::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* AddCustomFormatCommandArchive::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return AddCustomFormatCommandArchive_descriptor_;
+}
+
+const AddCustomFormatCommandArchive& AddCustomFormatCommandArchive::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_TSAArchives_2eproto();
+  return *default_instance_;
+}
+
+AddCustomFormatCommandArchive* AddCustomFormatCommandArchive::default_instance_ = NULL;
+
+AddCustomFormatCommandArchive* AddCustomFormatCommandArchive::New() const {
+  return new AddCustomFormatCommandArchive;
+}
+
+void AddCustomFormatCommandArchive::Clear() {
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (has_super()) {
+      if (super_ != NULL) super_->::TSK::CommandArchive::Clear();
+    }
+    if (has_custom_format()) {
+      if (custom_format_ != NULL) custom_format_->::TSK::CustomFormatArchive::Clear();
+    }
+    for_replacement_ = false;
+  }
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+  mutable_unknown_fields()->Clear();
+}
+
+bool AddCustomFormatCommandArchive::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!(EXPRESSION)) return false
+  ::google::protobuf::uint32 tag;
+  while ((tag = input->ReadTag()) != 0) {
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // required .TSK.CommandArchive super = 1;
+      case 1: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_super()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(18)) goto parse_custom_format;
+        break;
+      }
+
+      // optional .TSK.CustomFormatArchive custom_format = 2;
+      case 2: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_custom_format:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_custom_format()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(24)) goto parse_for_replacement;
+        break;
+      }
+
+      // optional bool for_replacement = 3;
+      case 3: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_for_replacement:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &for_replacement_)));
+          set_has_for_replacement();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectAtEnd()) return true;
+        break;
+      }
+
+      default: {
+      handle_uninterpreted:
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          return true;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+  return true;
+#undef DO_
+}
+
+void AddCustomFormatCommandArchive::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // required .TSK.CommandArchive super = 1;
+  if (has_super()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, this->super(), output);
+  }
+
+  // optional .TSK.CustomFormatArchive custom_format = 2;
+  if (has_custom_format()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      2, this->custom_format(), output);
+  }
+
+  // optional bool for_replacement = 3;
+  if (has_for_replacement()) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(3, this->for_replacement(), output);
+  }
+
+  if (!unknown_fields().empty()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+}
+
+::google::protobuf::uint8* AddCustomFormatCommandArchive::SerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // required .TSK.CommandArchive super = 1;
+  if (has_super()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        1, this->super(), target);
+  }
+
+  // optional .TSK.CustomFormatArchive custom_format = 2;
+  if (has_custom_format()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        2, this->custom_format(), target);
+  }
+
+  // optional bool for_replacement = 3;
+  if (has_for_replacement()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(3, this->for_replacement(), target);
+  }
+
+  if (!unknown_fields().empty()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  return target;
+}
+
+int AddCustomFormatCommandArchive::ByteSize() const {
+  int total_size = 0;
+
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    // required .TSK.CommandArchive super = 1;
+    if (has_super()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->super());
+    }
+
+    // optional .TSK.CustomFormatArchive custom_format = 2;
+    if (has_custom_format()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->custom_format());
+    }
+
+    // optional bool for_replacement = 3;
+    if (has_for_replacement()) {
+      total_size += 1 + 1;
+    }
+
+  }
+  if (!unknown_fields().empty()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = total_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void AddCustomFormatCommandArchive::MergeFrom(const ::google::protobuf::Message& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  const AddCustomFormatCommandArchive* source =
+    ::google::protobuf::internal::dynamic_cast_if_available<const AddCustomFormatCommandArchive*>(
+      &from);
+  if (source == NULL) {
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+    MergeFrom(*source);
+  }
+}
+
+void AddCustomFormatCommandArchive::MergeFrom(const AddCustomFormatCommandArchive& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (from.has_super()) {
+      mutable_super()->::TSK::CommandArchive::MergeFrom(from.super());
+    }
+    if (from.has_custom_format()) {
+      mutable_custom_format()->::TSK::CustomFormatArchive::MergeFrom(from.custom_format());
+    }
+    if (from.has_for_replacement()) {
+      set_for_replacement(from.for_replacement());
+    }
+  }
+  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
+}
+
+void AddCustomFormatCommandArchive::CopyFrom(const ::google::protobuf::Message& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void AddCustomFormatCommandArchive::CopyFrom(const AddCustomFormatCommandArchive& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool AddCustomFormatCommandArchive::IsInitialized() const {
+  if ((_has_bits_[0] & 0x00000001) != 0x00000001) return false;
+
+  if (has_super()) {
+    if (!this->super().IsInitialized()) return false;
+  }
+  if (has_custom_format()) {
+    if (!this->custom_format().IsInitialized()) return false;
+  }
+  return true;
+}
+
+void AddCustomFormatCommandArchive::Swap(AddCustomFormatCommandArchive* other) {
+  if (other != this) {
+    std::swap(super_, other->super_);
+    std::swap(custom_format_, other->custom_format_);
+    std::swap(for_replacement_, other->for_replacement_);
+    std::swap(_has_bits_[0], other->_has_bits_[0]);
+    _unknown_fields_.Swap(&other->_unknown_fields_);
+    std::swap(_cached_size_, other->_cached_size_);
+  }
+}
+
+::google::protobuf::Metadata AddCustomFormatCommandArchive::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = AddCustomFormatCommandArchive_descriptor_;
+  metadata.reflection = AddCustomFormatCommandArchive_reflection_;
+  return metadata;
+}
+
+
+// ===================================================================
+
+#ifndef _MSC_VER
+const int UpdateCustomFormatCommandArchive::kSuperFieldNumber;
+const int UpdateCustomFormatCommandArchive::kCustomFormatFieldNumber;
+const int UpdateCustomFormatCommandArchive::kOldCustomFormatFieldNumber;
+const int UpdateCustomFormatCommandArchive::kCustomFormatIdFieldNumber;
+#endif  // !_MSC_VER
+
+UpdateCustomFormatCommandArchive::UpdateCustomFormatCommandArchive()
+  : ::google::protobuf::Message() {
+  SharedCtor();
+}
+
+void UpdateCustomFormatCommandArchive::InitAsDefaultInstance() {
+  super_ = const_cast< ::TSK::CommandArchive*>(&::TSK::CommandArchive::default_instance());
+  custom_format_ = const_cast< ::TSK::CustomFormatArchive*>(&::TSK::CustomFormatArchive::default_instance());
+  old_custom_format_ = const_cast< ::TSK::CustomFormatArchive*>(&::TSK::CustomFormatArchive::default_instance());
+}
+
+UpdateCustomFormatCommandArchive::UpdateCustomFormatCommandArchive(const UpdateCustomFormatCommandArchive& from)
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  MergeFrom(from);
+}
+
+void UpdateCustomFormatCommandArchive::SharedCtor() {
+  _cached_size_ = 0;
+  super_ = NULL;
+  custom_format_ = NULL;
+  old_custom_format_ = NULL;
+  custom_format_id_ = 0u;
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+}
+
+UpdateCustomFormatCommandArchive::~UpdateCustomFormatCommandArchive() {
+  SharedDtor();
+}
+
+void UpdateCustomFormatCommandArchive::SharedDtor() {
+  if (this != default_instance_) {
+    delete super_;
+    delete custom_format_;
+    delete old_custom_format_;
+  }
+}
+
+void UpdateCustomFormatCommandArchive::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* UpdateCustomFormatCommandArchive::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return UpdateCustomFormatCommandArchive_descriptor_;
+}
+
+const UpdateCustomFormatCommandArchive& UpdateCustomFormatCommandArchive::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_TSAArchives_2eproto();
+  return *default_instance_;
+}
+
+UpdateCustomFormatCommandArchive* UpdateCustomFormatCommandArchive::default_instance_ = NULL;
+
+UpdateCustomFormatCommandArchive* UpdateCustomFormatCommandArchive::New() const {
+  return new UpdateCustomFormatCommandArchive;
+}
+
+void UpdateCustomFormatCommandArchive::Clear() {
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (has_super()) {
+      if (super_ != NULL) super_->::TSK::CommandArchive::Clear();
+    }
+    if (has_custom_format()) {
+      if (custom_format_ != NULL) custom_format_->::TSK::CustomFormatArchive::Clear();
+    }
+    if (has_old_custom_format()) {
+      if (old_custom_format_ != NULL) old_custom_format_->::TSK::CustomFormatArchive::Clear();
+    }
+    custom_format_id_ = 0u;
+  }
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+  mutable_unknown_fields()->Clear();
+}
+
+bool UpdateCustomFormatCommandArchive::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!(EXPRESSION)) return false
+  ::google::protobuf::uint32 tag;
+  while ((tag = input->ReadTag()) != 0) {
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // optional .TSK.CommandArchive super = 1;
+      case 1: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_super()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(18)) goto parse_custom_format;
+        break;
+      }
+
+      // optional .TSK.CustomFormatArchive custom_format = 2;
+      case 2: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_custom_format:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_custom_format()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(26)) goto parse_old_custom_format;
+        break;
+      }
+
+      // optional .TSK.CustomFormatArchive old_custom_format = 3;
+      case 3: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_old_custom_format:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_old_custom_format()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(32)) goto parse_custom_format_id;
+        break;
+      }
+
+      // optional uint32 custom_format_id = 4;
+      case 4: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_custom_format_id:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                 input, &custom_format_id_)));
+          set_has_custom_format_id();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectAtEnd()) return true;
+        break;
+      }
+
+      default: {
+      handle_uninterpreted:
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          return true;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+  return true;
+#undef DO_
+}
+
+void UpdateCustomFormatCommandArchive::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // optional .TSK.CommandArchive super = 1;
+  if (has_super()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, this->super(), output);
+  }
+
+  // optional .TSK.CustomFormatArchive custom_format = 2;
+  if (has_custom_format()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      2, this->custom_format(), output);
+  }
+
+  // optional .TSK.CustomFormatArchive old_custom_format = 3;
+  if (has_old_custom_format()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      3, this->old_custom_format(), output);
+  }
+
+  // optional uint32 custom_format_id = 4;
+  if (has_custom_format_id()) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(4, this->custom_format_id(), output);
+  }
+
+  if (!unknown_fields().empty()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+}
+
+::google::protobuf::uint8* UpdateCustomFormatCommandArchive::SerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // optional .TSK.CommandArchive super = 1;
+  if (has_super()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        1, this->super(), target);
+  }
+
+  // optional .TSK.CustomFormatArchive custom_format = 2;
+  if (has_custom_format()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        2, this->custom_format(), target);
+  }
+
+  // optional .TSK.CustomFormatArchive old_custom_format = 3;
+  if (has_old_custom_format()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        3, this->old_custom_format(), target);
+  }
+
+  // optional uint32 custom_format_id = 4;
+  if (has_custom_format_id()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(4, this->custom_format_id(), target);
+  }
+
+  if (!unknown_fields().empty()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  return target;
+}
+
+int UpdateCustomFormatCommandArchive::ByteSize() const {
+  int total_size = 0;
+
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    // optional .TSK.CommandArchive super = 1;
+    if (has_super()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->super());
+    }
+
+    // optional .TSK.CustomFormatArchive custom_format = 2;
+    if (has_custom_format()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->custom_format());
+    }
+
+    // optional .TSK.CustomFormatArchive old_custom_format = 3;
+    if (has_old_custom_format()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->old_custom_format());
+    }
+
+    // optional uint32 custom_format_id = 4;
+    if (has_custom_format_id()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::UInt32Size(
+          this->custom_format_id());
+    }
+
+  }
+  if (!unknown_fields().empty()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = total_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void UpdateCustomFormatCommandArchive::MergeFrom(const ::google::protobuf::Message& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  const UpdateCustomFormatCommandArchive* source =
+    ::google::protobuf::internal::dynamic_cast_if_available<const UpdateCustomFormatCommandArchive*>(
+      &from);
+  if (source == NULL) {
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+    MergeFrom(*source);
+  }
+}
+
+void UpdateCustomFormatCommandArchive::MergeFrom(const UpdateCustomFormatCommandArchive& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (from.has_super()) {
+      mutable_super()->::TSK::CommandArchive::MergeFrom(from.super());
+    }
+    if (from.has_custom_format()) {
+      mutable_custom_format()->::TSK::CustomFormatArchive::MergeFrom(from.custom_format());
+    }
+    if (from.has_old_custom_format()) {
+      mutable_old_custom_format()->::TSK::CustomFormatArchive::MergeFrom(from.old_custom_format());
+    }
+    if (from.has_custom_format_id()) {
+      set_custom_format_id(from.custom_format_id());
+    }
+  }
+  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
+}
+
+void UpdateCustomFormatCommandArchive::CopyFrom(const ::google::protobuf::Message& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void UpdateCustomFormatCommandArchive::CopyFrom(const UpdateCustomFormatCommandArchive& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool UpdateCustomFormatCommandArchive::IsInitialized() const {
+
+  if (has_super()) {
+    if (!this->super().IsInitialized()) return false;
+  }
+  if (has_custom_format()) {
+    if (!this->custom_format().IsInitialized()) return false;
+  }
+  if (has_old_custom_format()) {
+    if (!this->old_custom_format().IsInitialized()) return false;
+  }
+  return true;
+}
+
+void UpdateCustomFormatCommandArchive::Swap(UpdateCustomFormatCommandArchive* other) {
+  if (other != this) {
+    std::swap(super_, other->super_);
+    std::swap(custom_format_, other->custom_format_);
+    std::swap(old_custom_format_, other->old_custom_format_);
+    std::swap(custom_format_id_, other->custom_format_id_);
+    std::swap(_has_bits_[0], other->_has_bits_[0]);
+    _unknown_fields_.Swap(&other->_unknown_fields_);
+    std::swap(_cached_size_, other->_cached_size_);
+  }
+}
+
+::google::protobuf::Metadata UpdateCustomFormatCommandArchive::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = UpdateCustomFormatCommandArchive_descriptor_;
+  metadata.reflection = UpdateCustomFormatCommandArchive_reflection_;
+  return metadata;
+}
+
+
+// ===================================================================
+
+#ifndef _MSC_VER
+const int ReplaceCustomFormatCommandArchive::kSuperFieldNumber;
+const int ReplaceCustomFormatCommandArchive::kCustomFormatFieldNumber;
+const int ReplaceCustomFormatCommandArchive::kCustomFormatIdFieldNumber;
+const int ReplaceCustomFormatCommandArchive::kReplacementFormatFieldNumber;
+#endif  // !_MSC_VER
+
+ReplaceCustomFormatCommandArchive::ReplaceCustomFormatCommandArchive()
+  : ::google::protobuf::Message() {
+  SharedCtor();
+}
+
+void ReplaceCustomFormatCommandArchive::InitAsDefaultInstance() {
+  super_ = const_cast< ::TSK::CommandArchive*>(&::TSK::CommandArchive::default_instance());
+  custom_format_ = const_cast< ::TSK::CustomFormatArchive*>(&::TSK::CustomFormatArchive::default_instance());
+  replacement_format_ = const_cast< ::TSK::FormatStructArchive*>(&::TSK::FormatStructArchive::default_instance());
+}
+
+ReplaceCustomFormatCommandArchive::ReplaceCustomFormatCommandArchive(const ReplaceCustomFormatCommandArchive& from)
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  MergeFrom(from);
+}
+
+void ReplaceCustomFormatCommandArchive::SharedCtor() {
+  _cached_size_ = 0;
+  super_ = NULL;
+  custom_format_ = NULL;
+  custom_format_id_ = 0u;
+  replacement_format_ = NULL;
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+}
+
+ReplaceCustomFormatCommandArchive::~ReplaceCustomFormatCommandArchive() {
+  SharedDtor();
+}
+
+void ReplaceCustomFormatCommandArchive::SharedDtor() {
+  if (this != default_instance_) {
+    delete super_;
+    delete custom_format_;
+    delete replacement_format_;
+  }
+}
+
+void ReplaceCustomFormatCommandArchive::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* ReplaceCustomFormatCommandArchive::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return ReplaceCustomFormatCommandArchive_descriptor_;
+}
+
+const ReplaceCustomFormatCommandArchive& ReplaceCustomFormatCommandArchive::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_TSAArchives_2eproto();
+  return *default_instance_;
+}
+
+ReplaceCustomFormatCommandArchive* ReplaceCustomFormatCommandArchive::default_instance_ = NULL;
+
+ReplaceCustomFormatCommandArchive* ReplaceCustomFormatCommandArchive::New() const {
+  return new ReplaceCustomFormatCommandArchive;
+}
+
+void ReplaceCustomFormatCommandArchive::Clear() {
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (has_super()) {
+      if (super_ != NULL) super_->::TSK::CommandArchive::Clear();
+    }
+    if (has_custom_format()) {
+      if (custom_format_ != NULL) custom_format_->::TSK::CustomFormatArchive::Clear();
+    }
+    custom_format_id_ = 0u;
+    if (has_replacement_format()) {
+      if (replacement_format_ != NULL) replacement_format_->::TSK::FormatStructArchive::Clear();
+    }
+  }
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+  mutable_unknown_fields()->Clear();
+}
+
+bool ReplaceCustomFormatCommandArchive::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!(EXPRESSION)) return false
+  ::google::protobuf::uint32 tag;
+  while ((tag = input->ReadTag()) != 0) {
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // optional .TSK.CommandArchive super = 1;
+      case 1: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_super()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(18)) goto parse_custom_format;
+        break;
+      }
+
+      // optional .TSK.CustomFormatArchive custom_format = 2;
+      case 2: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_custom_format:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_custom_format()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(24)) goto parse_custom_format_id;
+        break;
+      }
+
+      // optional uint32 custom_format_id = 3;
+      case 3: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_custom_format_id:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                 input, &custom_format_id_)));
+          set_has_custom_format_id();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(34)) goto parse_replacement_format;
+        break;
+      }
+
+      // optional .TSK.FormatStructArchive replacement_format = 4;
+      case 4: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_replacement_format:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_replacement_format()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectAtEnd()) return true;
+        break;
+      }
+
+      default: {
+      handle_uninterpreted:
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          return true;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+  return true;
+#undef DO_
+}
+
+void ReplaceCustomFormatCommandArchive::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // optional .TSK.CommandArchive super = 1;
+  if (has_super()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, this->super(), output);
+  }
+
+  // optional .TSK.CustomFormatArchive custom_format = 2;
+  if (has_custom_format()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      2, this->custom_format(), output);
+  }
+
+  // optional uint32 custom_format_id = 3;
+  if (has_custom_format_id()) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(3, this->custom_format_id(), output);
+  }
+
+  // optional .TSK.FormatStructArchive replacement_format = 4;
+  if (has_replacement_format()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      4, this->replacement_format(), output);
+  }
+
+  if (!unknown_fields().empty()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+}
+
+::google::protobuf::uint8* ReplaceCustomFormatCommandArchive::SerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // optional .TSK.CommandArchive super = 1;
+  if (has_super()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        1, this->super(), target);
+  }
+
+  // optional .TSK.CustomFormatArchive custom_format = 2;
+  if (has_custom_format()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        2, this->custom_format(), target);
+  }
+
+  // optional uint32 custom_format_id = 3;
+  if (has_custom_format_id()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(3, this->custom_format_id(), target);
+  }
+
+  // optional .TSK.FormatStructArchive replacement_format = 4;
+  if (has_replacement_format()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        4, this->replacement_format(), target);
+  }
+
+  if (!unknown_fields().empty()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  return target;
+}
+
+int ReplaceCustomFormatCommandArchive::ByteSize() const {
+  int total_size = 0;
+
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    // optional .TSK.CommandArchive super = 1;
+    if (has_super()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->super());
+    }
+
+    // optional .TSK.CustomFormatArchive custom_format = 2;
+    if (has_custom_format()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->custom_format());
+    }
+
+    // optional uint32 custom_format_id = 3;
+    if (has_custom_format_id()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::UInt32Size(
+          this->custom_format_id());
+    }
+
+    // optional .TSK.FormatStructArchive replacement_format = 4;
+    if (has_replacement_format()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->replacement_format());
+    }
+
+  }
+  if (!unknown_fields().empty()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = total_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void ReplaceCustomFormatCommandArchive::MergeFrom(const ::google::protobuf::Message& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  const ReplaceCustomFormatCommandArchive* source =
+    ::google::protobuf::internal::dynamic_cast_if_available<const ReplaceCustomFormatCommandArchive*>(
+      &from);
+  if (source == NULL) {
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+    MergeFrom(*source);
+  }
+}
+
+void ReplaceCustomFormatCommandArchive::MergeFrom(const ReplaceCustomFormatCommandArchive& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (from.has_super()) {
+      mutable_super()->::TSK::CommandArchive::MergeFrom(from.super());
+    }
+    if (from.has_custom_format()) {
+      mutable_custom_format()->::TSK::CustomFormatArchive::MergeFrom(from.custom_format());
+    }
+    if (from.has_custom_format_id()) {
+      set_custom_format_id(from.custom_format_id());
+    }
+    if (from.has_replacement_format()) {
+      mutable_replacement_format()->::TSK::FormatStructArchive::MergeFrom(from.replacement_format());
+    }
+  }
+  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
+}
+
+void ReplaceCustomFormatCommandArchive::CopyFrom(const ::google::protobuf::Message& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void ReplaceCustomFormatCommandArchive::CopyFrom(const ReplaceCustomFormatCommandArchive& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool ReplaceCustomFormatCommandArchive::IsInitialized() const {
+
+  if (has_super()) {
+    if (!this->super().IsInitialized()) return false;
+  }
+  if (has_custom_format()) {
+    if (!this->custom_format().IsInitialized()) return false;
+  }
+  if (has_replacement_format()) {
+    if (!this->replacement_format().IsInitialized()) return false;
+  }
+  return true;
+}
+
+void ReplaceCustomFormatCommandArchive::Swap(ReplaceCustomFormatCommandArchive* other) {
+  if (other != this) {
+    std::swap(super_, other->super_);
+    std::swap(custom_format_, other->custom_format_);
+    std::swap(custom_format_id_, other->custom_format_id_);
+    std::swap(replacement_format_, other->replacement_format_);
+    std::swap(_has_bits_[0], other->_has_bits_[0]);
+    _unknown_fields_.Swap(&other->_unknown_fields_);
+    std::swap(_cached_size_, other->_cached_size_);
+  }
+}
+
+::google::protobuf::Metadata ReplaceCustomFormatCommandArchive::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = ReplaceCustomFormatCommandArchive_descriptor_;
+  metadata.reflection = ReplaceCustomFormatCommandArchive_reflection_;
   return metadata;
 }
 

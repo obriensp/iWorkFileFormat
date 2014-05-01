@@ -43,9 +43,18 @@ const ::google::protobuf::internal::GeneratedMessageReflection*
 const ::google::protobuf::Descriptor* ComponentDataReference_descriptor_ = NULL;
 const ::google::protobuf::internal::GeneratedMessageReflection*
   ComponentDataReference_reflection_ = NULL;
+const ::google::protobuf::Descriptor* UUIDInternal_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  UUIDInternal_reflection_ = NULL;
+const ::google::protobuf::Descriptor* ObjectUUIDMapEntry_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  ObjectUUIDMapEntry_reflection_ = NULL;
 const ::google::protobuf::Descriptor* PackageMetadata_descriptor_ = NULL;
 const ::google::protobuf::internal::GeneratedMessageReflection*
   PackageMetadata_reflection_ = NULL;
+const ::google::protobuf::Descriptor* DocumentRevision_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  DocumentRevision_reflection_ = NULL;
 const ::google::protobuf::Descriptor* PasteboardMetadata_descriptor_ = NULL;
 const ::google::protobuf::internal::GeneratedMessageReflection*
   PasteboardMetadata_reflection_ = NULL;
@@ -146,9 +155,9 @@ void protobuf_AssignDesc_TSPArchiveMessages_2eproto() {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ComponentInfo, write_version_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ComponentInfo, external_references_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ComponentInfo, data_references_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ComponentInfo, allows_duplicates_outside_of_document_package_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ComponentInfo, dirties_document_package_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ComponentInfo, object_uuid_map_entries_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ComponentInfo, is_stored_outside_object_archive_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ComponentInfo, save_token_),
   };
   ComponentInfo_reflection_ =
     new ::google::protobuf::internal::GeneratedMessageReflection(
@@ -193,13 +202,48 @@ void protobuf_AssignDesc_TSPArchiveMessages_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(ComponentDataReference));
-  PackageMetadata_descriptor_ = file->message_type(7);
-  static const int PackageMetadata_offsets_[5] = {
+  UUIDInternal_descriptor_ = file->message_type(7);
+  static const int UUIDInternal_offsets_[2] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(UUIDInternal, lower_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(UUIDInternal, upper_),
+  };
+  UUIDInternal_reflection_ =
+    new ::google::protobuf::internal::GeneratedMessageReflection(
+      UUIDInternal_descriptor_,
+      UUIDInternal::default_instance_,
+      UUIDInternal_offsets_,
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(UUIDInternal, _has_bits_[0]),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(UUIDInternal, _unknown_fields_),
+      -1,
+      ::google::protobuf::DescriptorPool::generated_pool(),
+      ::google::protobuf::MessageFactory::generated_factory(),
+      sizeof(UUIDInternal));
+  ObjectUUIDMapEntry_descriptor_ = file->message_type(8);
+  static const int ObjectUUIDMapEntry_offsets_[2] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ObjectUUIDMapEntry, identifier_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ObjectUUIDMapEntry, uuid_),
+  };
+  ObjectUUIDMapEntry_reflection_ =
+    new ::google::protobuf::internal::GeneratedMessageReflection(
+      ObjectUUIDMapEntry_descriptor_,
+      ObjectUUIDMapEntry::default_instance_,
+      ObjectUUIDMapEntry_offsets_,
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ObjectUUIDMapEntry, _has_bits_[0]),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ObjectUUIDMapEntry, _unknown_fields_),
+      -1,
+      ::google::protobuf::DescriptorPool::generated_pool(),
+      ::google::protobuf::MessageFactory::generated_factory(),
+      sizeof(ObjectUUIDMapEntry));
+  PackageMetadata_descriptor_ = file->message_type(9);
+  static const int PackageMetadata_offsets_[8] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PackageMetadata, last_object_identifier_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PackageMetadata, revision_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PackageMetadata, components_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PackageMetadata, datas_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PackageMetadata, read_version_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PackageMetadata, write_version_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PackageMetadata, file_format_version_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PackageMetadata, save_token_),
   };
   PackageMetadata_reflection_ =
     new ::google::protobuf::internal::GeneratedMessageReflection(
@@ -212,7 +256,23 @@ void protobuf_AssignDesc_TSPArchiveMessages_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(PackageMetadata));
-  PasteboardMetadata_descriptor_ = file->message_type(8);
+  DocumentRevision_descriptor_ = file->message_type(10);
+  static const int DocumentRevision_offsets_[2] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(DocumentRevision, sequence_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(DocumentRevision, identifier_),
+  };
+  DocumentRevision_reflection_ =
+    new ::google::protobuf::internal::GeneratedMessageReflection(
+      DocumentRevision_descriptor_,
+      DocumentRevision::default_instance_,
+      DocumentRevision_offsets_,
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(DocumentRevision, _has_bits_[0]),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(DocumentRevision, _unknown_fields_),
+      -1,
+      ::google::protobuf::DescriptorPool::generated_pool(),
+      ::google::protobuf::MessageFactory::generated_factory(),
+      sizeof(DocumentRevision));
+  PasteboardMetadata_descriptor_ = file->message_type(11);
   static const int PasteboardMetadata_offsets_[4] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PasteboardMetadata, version_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PasteboardMetadata, app_name_),
@@ -230,7 +290,7 @@ void protobuf_AssignDesc_TSPArchiveMessages_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(PasteboardMetadata));
-  DataInfo_descriptor_ = file->message_type(9);
+  DataInfo_descriptor_ = file->message_type(12);
   static const int DataInfo_offsets_[7] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(DataInfo, identifier_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(DataInfo, digest_),
@@ -251,7 +311,7 @@ void protobuf_AssignDesc_TSPArchiveMessages_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(DataInfo));
-  ViewStateMetadata_descriptor_ = file->message_type(10);
+  ViewStateMetadata_descriptor_ = file->message_type(13);
   static const int ViewStateMetadata_offsets_[3] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ViewStateMetadata, version_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ViewStateMetadata, document_version_uuid_),
@@ -295,7 +355,13 @@ void protobuf_RegisterTypes(const ::std::string&) {
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
     ComponentDataReference_descriptor_, &ComponentDataReference::default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+    UUIDInternal_descriptor_, &UUIDInternal::default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+    ObjectUUIDMapEntry_descriptor_, &ObjectUUIDMapEntry::default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
     PackageMetadata_descriptor_, &PackageMetadata::default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+    DocumentRevision_descriptor_, &DocumentRevision::default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
     PasteboardMetadata_descriptor_, &PasteboardMetadata::default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
@@ -321,8 +387,14 @@ void protobuf_ShutdownFile_TSPArchiveMessages_2eproto() {
   delete ComponentExternalReference_reflection_;
   delete ComponentDataReference::default_instance_;
   delete ComponentDataReference_reflection_;
+  delete UUIDInternal::default_instance_;
+  delete UUIDInternal_reflection_;
+  delete ObjectUUIDMapEntry::default_instance_;
+  delete ObjectUUIDMapEntry_reflection_;
   delete PackageMetadata::default_instance_;
   delete PackageMetadata_reflection_;
+  delete DocumentRevision::default_instance_;
+  delete DocumentRevision_reflection_;
   delete PasteboardMetadata::default_instance_;
   delete PasteboardMetadata_reflection_;
   delete DataInfo::default_instance_;
@@ -354,36 +426,43 @@ void protobuf_AddDesc_TSPArchiveMessages_2eproto() {
     "ence\020\002\022\013\n\007Message\020\003\"_\n\004Rule\022\021\n\rIgnoreAnd"
     "Drop\020\000\022\025\n\021IgnoreAndPreserve\020\001\022\022\n\016MustUnd"
     "erstand\020\002\022\031\n\014NotSupported\020\377\377\377\377\377\377\377\377\377\001\"\035\n\t"
-    "FieldPath\022\020\n\004path\030\001 \003(\rB\002\020\001\"\217\003\n\rComponen"
+    "FieldPath\022\020\n\004path\030\001 \003(\rB\002\020\001\"\372\002\n\rComponen"
     "tInfo\022\022\n\nidentifier\030\001 \002(\004\022\031\n\021preferred_l"
     "ocator\030\002 \002(\t\022\017\n\007locator\030\003 \001(\t\022\030\n\014read_ve"
     "rsion\030\004 \003(\rB\002\020\001\022\031\n\rwrite_version\030\005 \003(\rB\002"
     "\020\001\022<\n\023external_references\030\006 \003(\0132\037.TSP.Co"
     "mponentExternalReference\0224\n\017data_referen"
-    "ces\030\007 \003(\0132\033.TSP.ComponentDataReference\022<"
-    "\n-allows_duplicates_outside_of_document_"
-    "package\030\010 \001(\010:\005false\022&\n\030dirties_document"
-    "_package\030\t \001(\010:\004true\022/\n is_stored_outsid"
-    "e_object_archive\030\n \001(\010:\005false\"f\n\032Compone"
-    "ntExternalReference\022\034\n\024component_identif"
-    "ier\030\001 \002(\004\022\031\n\021object_identifier\030\002 \001(\004\022\017\n\007"
-    "is_weak\030\003 \001(\010\"1\n\026ComponentDataReference\022"
-    "\027\n\017data_identifier\030\001 \002(\004\"\254\001\n\017PackageMeta"
-    "data\022\036\n\026last_object_identifier\030\001 \002(\004\022&\n\n"
-    "components\030\003 \003(\0132\022.TSP.ComponentInfo\022\034\n\005"
-    "datas\030\004 \003(\0132\r.TSP.DataInfo\022\030\n\014read_versi"
-    "on\030\005 \003(\rB\002\020\001\022\031\n\rwrite_version\030\006 \003(\rB\002\020\001\""
-    "w\n\022PasteboardMetadata\022\023\n\007version\030\001 \003(\rB\002"
-    "\020\001\022\020\n\010app_name\030\002 \002(\t\022\034\n\005datas\030\003 \003(\0132\r.TS"
-    "P.DataInfo\022\034\n\024source_document_uuid\030\004 \001(\t"
-    "\"\306\001\n\010DataInfo\022\022\n\nidentifier\030\001 \002(\004\022\016\n\006dig"
-    "est\030\002 \002(\014\022\033\n\023preferred_file_name\030\003 \002(\t\022\021"
-    "\n\tfile_name\030\004 \001(\t\022!\n\031document_resource_l"
-    "ocator\030\005 \001(\t\022\034\n\024source_bookmark_data\030\006 \001"
-    "(\014\022%\n\035pasteboard_external_file_path\030c \001("
-    "\t\"n\n\021ViewStateMetadata\022\023\n\007version\030\001 \003(\rB"
-    "\002\020\001\022\035\n\025document_version_uuid\030\002 \002(\t\022%\n\tco"
-    "mponent\030\003 \002(\0132\022.TSP.ComponentInfo", 1833);
+    "ces\030\007 \003(\0132\033.TSP.ComponentDataReference\0228"
+    "\n\027object_uuid_map_entries\030\013 \003(\0132\027.TSP.Ob"
+    "jectUUIDMapEntry\022/\n is_stored_outside_ob"
+    "ject_archive\030\n \001(\010:\005false\022\025\n\nsave_token\030"
+    "\014 \001(\004:\0010\"f\n\032ComponentExternalReference\022\034"
+    "\n\024component_identifier\030\001 \002(\004\022\031\n\021object_i"
+    "dentifier\030\002 \001(\004\022\017\n\007is_weak\030\003 \001(\010\"1\n\026Comp"
+    "onentDataReference\022\027\n\017data_identifier\030\001 "
+    "\002(\004\",\n\014UUIDInternal\022\r\n\005lower\030\001 \002(\004\022\r\n\005up"
+    "per\030\002 \002(\004\"I\n\022ObjectUUIDMapEntry\022\022\n\nident"
+    "ifier\030\001 \002(\004\022\037\n\004uuid\030\002 \002(\0132\021.TSP.UUIDInte"
+    "rnal\"\215\002\n\017PackageMetadata\022\036\n\026last_object_"
+    "identifier\030\001 \002(\004\022\'\n\010revision\030\002 \001(\0132\025.TSP"
+    ".DocumentRevision\022&\n\ncomponents\030\003 \003(\0132\022."
+    "TSP.ComponentInfo\022\034\n\005datas\030\004 \003(\0132\r.TSP.D"
+    "ataInfo\022\030\n\014read_version\030\005 \003(\rB\002\020\001\022\031\n\rwri"
+    "te_version\030\006 \003(\rB\002\020\001\022\037\n\023file_format_vers"
+    "ion\030\007 \003(\rB\002\020\001\022\025\n\nsave_token\030\010 \001(\004:\0010\";\n\020"
+    "DocumentRevision\022\023\n\010sequence\030\001 \001(\004:\0010\022\022\n"
+    "\nidentifier\030\002 \001(\t\"w\n\022PasteboardMetadata\022"
+    "\023\n\007version\030\001 \003(\rB\002\020\001\022\020\n\010app_name\030\002 \002(\t\022\034"
+    "\n\005datas\030\003 \003(\0132\r.TSP.DataInfo\022\034\n\024source_d"
+    "ocument_uuid\030\004 \001(\t\"\306\001\n\010DataInfo\022\022\n\nident"
+    "ifier\030\001 \002(\004\022\016\n\006digest\030\002 \002(\014\022\033\n\023preferred"
+    "_file_name\030\003 \002(\t\022\021\n\tfile_name\030\004 \001(\t\022!\n\031d"
+    "ocument_resource_locator\030\005 \001(\t\022\034\n\024source"
+    "_bookmark_data\030\006 \001(\014\022%\n\035pasteboard_exter"
+    "nal_file_path\030c \001(\t\"n\n\021ViewStateMetadata"
+    "\022\023\n\007version\030\001 \003(\rB\002\020\001\022\035\n\025document_versio"
+    "n_uuid\030\002 \002(\t\022%\n\tcomponent\030\003 \002(\0132\022.TSP.Co"
+    "mponentInfo", 2091);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "TSPArchiveMessages.proto", &protobuf_RegisterTypes);
   ArchiveInfo::default_instance_ = new ArchiveInfo();
@@ -393,7 +472,10 @@ void protobuf_AddDesc_TSPArchiveMessages_2eproto() {
   ComponentInfo::default_instance_ = new ComponentInfo();
   ComponentExternalReference::default_instance_ = new ComponentExternalReference();
   ComponentDataReference::default_instance_ = new ComponentDataReference();
+  UUIDInternal::default_instance_ = new UUIDInternal();
+  ObjectUUIDMapEntry::default_instance_ = new ObjectUUIDMapEntry();
   PackageMetadata::default_instance_ = new PackageMetadata();
+  DocumentRevision::default_instance_ = new DocumentRevision();
   PasteboardMetadata::default_instance_ = new PasteboardMetadata();
   DataInfo::default_instance_ = new DataInfo();
   ViewStateMetadata::default_instance_ = new ViewStateMetadata();
@@ -404,7 +486,10 @@ void protobuf_AddDesc_TSPArchiveMessages_2eproto() {
   ComponentInfo::default_instance_->InitAsDefaultInstance();
   ComponentExternalReference::default_instance_->InitAsDefaultInstance();
   ComponentDataReference::default_instance_->InitAsDefaultInstance();
+  UUIDInternal::default_instance_->InitAsDefaultInstance();
+  ObjectUUIDMapEntry::default_instance_->InitAsDefaultInstance();
   PackageMetadata::default_instance_->InitAsDefaultInstance();
+  DocumentRevision::default_instance_->InitAsDefaultInstance();
   PasteboardMetadata::default_instance_->InitAsDefaultInstance();
   DataInfo::default_instance_->InitAsDefaultInstance();
   ViewStateMetadata::default_instance_->InitAsDefaultInstance();
@@ -1885,9 +1970,9 @@ const int ComponentInfo::kReadVersionFieldNumber;
 const int ComponentInfo::kWriteVersionFieldNumber;
 const int ComponentInfo::kExternalReferencesFieldNumber;
 const int ComponentInfo::kDataReferencesFieldNumber;
-const int ComponentInfo::kAllowsDuplicatesOutsideOfDocumentPackageFieldNumber;
-const int ComponentInfo::kDirtiesDocumentPackageFieldNumber;
+const int ComponentInfo::kObjectUuidMapEntriesFieldNumber;
 const int ComponentInfo::kIsStoredOutsideObjectArchiveFieldNumber;
+const int ComponentInfo::kSaveTokenFieldNumber;
 #endif  // !_MSC_VER
 
 ComponentInfo::ComponentInfo()
@@ -1909,9 +1994,8 @@ void ComponentInfo::SharedCtor() {
   identifier_ = GOOGLE_ULONGLONG(0);
   preferred_locator_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
   locator_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
-  allows_duplicates_outside_of_document_package_ = false;
-  dirties_document_package_ = true;
   is_stored_outside_object_archive_ = false;
+  save_token_ = GOOGLE_ULONGLONG(0);
   ::memset(_has_bits_, 0, sizeof(_has_bits_));
 }
 
@@ -1964,16 +2048,16 @@ void ComponentInfo::Clear() {
         locator_->clear();
       }
     }
-    allows_duplicates_outside_of_document_package_ = false;
   }
   if (_has_bits_[8 / 32] & (0xffu << (8 % 32))) {
-    dirties_document_package_ = true;
     is_stored_outside_object_archive_ = false;
+    save_token_ = GOOGLE_ULONGLONG(0);
   }
   read_version_.Clear();
   write_version_.Clear();
   external_references_.Clear();
   data_references_.Clear();
+  object_uuid_map_entries_.Clear();
   ::memset(_has_bits_, 0, sizeof(_has_bits_));
   mutable_unknown_fields()->Clear();
 }
@@ -2101,38 +2185,6 @@ bool ComponentInfo::MergePartialFromCodedStream(
           goto handle_uninterpreted;
         }
         if (input->ExpectTag(58)) goto parse_data_references;
-        if (input->ExpectTag(64)) goto parse_allows_duplicates_outside_of_document_package;
-        break;
-      }
-
-      // optional bool allows_duplicates_outside_of_document_package = 8 [default = false];
-      case 8: {
-        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
-         parse_allows_duplicates_outside_of_document_package:
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
-                 input, &allows_duplicates_outside_of_document_package_)));
-          set_has_allows_duplicates_outside_of_document_package();
-        } else {
-          goto handle_uninterpreted;
-        }
-        if (input->ExpectTag(72)) goto parse_dirties_document_package;
-        break;
-      }
-
-      // optional bool dirties_document_package = 9 [default = true];
-      case 9: {
-        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
-         parse_dirties_document_package:
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
-                 input, &dirties_document_package_)));
-          set_has_dirties_document_package();
-        } else {
-          goto handle_uninterpreted;
-        }
         if (input->ExpectTag(80)) goto parse_is_stored_outside_object_archive;
         break;
       }
@@ -2146,6 +2198,37 @@ bool ComponentInfo::MergePartialFromCodedStream(
                    bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
                  input, &is_stored_outside_object_archive_)));
           set_has_is_stored_outside_object_archive();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(90)) goto parse_object_uuid_map_entries;
+        break;
+      }
+
+      // repeated .TSP.ObjectUUIDMapEntry object_uuid_map_entries = 11;
+      case 11: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_object_uuid_map_entries:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+                input, add_object_uuid_map_entries()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(90)) goto parse_object_uuid_map_entries;
+        if (input->ExpectTag(96)) goto parse_save_token;
+        break;
+      }
+
+      // optional uint64 save_token = 12 [default = 0];
+      case 12: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_save_token:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint64, ::google::protobuf::internal::WireFormatLite::TYPE_UINT64>(
+                 input, &save_token_)));
+          set_has_save_token();
         } else {
           goto handle_uninterpreted;
         }
@@ -2226,19 +2309,20 @@ void ComponentInfo::SerializeWithCachedSizes(
       7, this->data_references(i), output);
   }
 
-  // optional bool allows_duplicates_outside_of_document_package = 8 [default = false];
-  if (has_allows_duplicates_outside_of_document_package()) {
-    ::google::protobuf::internal::WireFormatLite::WriteBool(8, this->allows_duplicates_outside_of_document_package(), output);
-  }
-
-  // optional bool dirties_document_package = 9 [default = true];
-  if (has_dirties_document_package()) {
-    ::google::protobuf::internal::WireFormatLite::WriteBool(9, this->dirties_document_package(), output);
-  }
-
   // optional bool is_stored_outside_object_archive = 10 [default = false];
   if (has_is_stored_outside_object_archive()) {
     ::google::protobuf::internal::WireFormatLite::WriteBool(10, this->is_stored_outside_object_archive(), output);
+  }
+
+  // repeated .TSP.ObjectUUIDMapEntry object_uuid_map_entries = 11;
+  for (int i = 0; i < this->object_uuid_map_entries_size(); i++) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      11, this->object_uuid_map_entries(i), output);
+  }
+
+  // optional uint64 save_token = 12 [default = 0];
+  if (has_save_token()) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt64(12, this->save_token(), output);
   }
 
   if (!unknown_fields().empty()) {
@@ -2316,19 +2400,21 @@ void ComponentInfo::SerializeWithCachedSizes(
         7, this->data_references(i), target);
   }
 
-  // optional bool allows_duplicates_outside_of_document_package = 8 [default = false];
-  if (has_allows_duplicates_outside_of_document_package()) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(8, this->allows_duplicates_outside_of_document_package(), target);
-  }
-
-  // optional bool dirties_document_package = 9 [default = true];
-  if (has_dirties_document_package()) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(9, this->dirties_document_package(), target);
-  }
-
   // optional bool is_stored_outside_object_archive = 10 [default = false];
   if (has_is_stored_outside_object_archive()) {
     target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(10, this->is_stored_outside_object_archive(), target);
+  }
+
+  // repeated .TSP.ObjectUUIDMapEntry object_uuid_map_entries = 11;
+  for (int i = 0; i < this->object_uuid_map_entries_size(); i++) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        11, this->object_uuid_map_entries(i), target);
+  }
+
+  // optional uint64 save_token = 12 [default = 0];
+  if (has_save_token()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt64ToArray(12, this->save_token(), target);
   }
 
   if (!unknown_fields().empty()) {
@@ -2363,21 +2449,18 @@ int ComponentInfo::ByteSize() const {
           this->locator());
     }
 
-    // optional bool allows_duplicates_outside_of_document_package = 8 [default = false];
-    if (has_allows_duplicates_outside_of_document_package()) {
-      total_size += 1 + 1;
-    }
-
   }
   if (_has_bits_[8 / 32] & (0xffu << (8 % 32))) {
-    // optional bool dirties_document_package = 9 [default = true];
-    if (has_dirties_document_package()) {
-      total_size += 1 + 1;
-    }
-
     // optional bool is_stored_outside_object_archive = 10 [default = false];
     if (has_is_stored_outside_object_archive()) {
       total_size += 1 + 1;
+    }
+
+    // optional uint64 save_token = 12 [default = 0];
+    if (has_save_token()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::UInt64Size(
+          this->save_token());
     }
 
   }
@@ -2431,6 +2514,14 @@ int ComponentInfo::ByteSize() const {
         this->data_references(i));
   }
 
+  // repeated .TSP.ObjectUUIDMapEntry object_uuid_map_entries = 11;
+  total_size += 1 * this->object_uuid_map_entries_size();
+  for (int i = 0; i < this->object_uuid_map_entries_size(); i++) {
+    total_size +=
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+        this->object_uuid_map_entries(i));
+  }
+
   if (!unknown_fields().empty()) {
     total_size +=
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
@@ -2460,6 +2551,7 @@ void ComponentInfo::MergeFrom(const ComponentInfo& from) {
   write_version_.MergeFrom(from.write_version_);
   external_references_.MergeFrom(from.external_references_);
   data_references_.MergeFrom(from.data_references_);
+  object_uuid_map_entries_.MergeFrom(from.object_uuid_map_entries_);
   if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
     if (from.has_identifier()) {
       set_identifier(from.identifier());
@@ -2470,16 +2562,13 @@ void ComponentInfo::MergeFrom(const ComponentInfo& from) {
     if (from.has_locator()) {
       set_locator(from.locator());
     }
-    if (from.has_allows_duplicates_outside_of_document_package()) {
-      set_allows_duplicates_outside_of_document_package(from.allows_duplicates_outside_of_document_package());
-    }
   }
   if (from._has_bits_[8 / 32] & (0xffu << (8 % 32))) {
-    if (from.has_dirties_document_package()) {
-      set_dirties_document_package(from.dirties_document_package());
-    }
     if (from.has_is_stored_outside_object_archive()) {
       set_is_stored_outside_object_archive(from.is_stored_outside_object_archive());
+    }
+    if (from.has_save_token()) {
+      set_save_token(from.save_token());
     }
   }
   mutable_unknown_fields()->MergeFrom(from.unknown_fields());
@@ -2506,6 +2595,9 @@ bool ComponentInfo::IsInitialized() const {
   for (int i = 0; i < data_references_size(); i++) {
     if (!this->data_references(i).IsInitialized()) return false;
   }
+  for (int i = 0; i < object_uuid_map_entries_size(); i++) {
+    if (!this->object_uuid_map_entries(i).IsInitialized()) return false;
+  }
   return true;
 }
 
@@ -2518,9 +2610,9 @@ void ComponentInfo::Swap(ComponentInfo* other) {
     write_version_.Swap(&other->write_version_);
     external_references_.Swap(&other->external_references_);
     data_references_.Swap(&other->data_references_);
-    std::swap(allows_duplicates_outside_of_document_package_, other->allows_duplicates_outside_of_document_package_);
-    std::swap(dirties_document_package_, other->dirties_document_package_);
+    object_uuid_map_entries_.Swap(&other->object_uuid_map_entries_);
     std::swap(is_stored_outside_object_archive_, other->is_stored_outside_object_archive_);
+    std::swap(save_token_, other->save_token_);
     std::swap(_has_bits_[0], other->_has_bits_[0]);
     _unknown_fields_.Swap(&other->_unknown_fields_);
     std::swap(_cached_size_, other->_cached_size_);
@@ -3035,11 +3127,520 @@ void ComponentDataReference::Swap(ComponentDataReference* other) {
 // ===================================================================
 
 #ifndef _MSC_VER
+const int UUIDInternal::kLowerFieldNumber;
+const int UUIDInternal::kUpperFieldNumber;
+#endif  // !_MSC_VER
+
+UUIDInternal::UUIDInternal()
+  : ::google::protobuf::Message() {
+  SharedCtor();
+}
+
+void UUIDInternal::InitAsDefaultInstance() {
+}
+
+UUIDInternal::UUIDInternal(const UUIDInternal& from)
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  MergeFrom(from);
+}
+
+void UUIDInternal::SharedCtor() {
+  _cached_size_ = 0;
+  lower_ = GOOGLE_ULONGLONG(0);
+  upper_ = GOOGLE_ULONGLONG(0);
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+}
+
+UUIDInternal::~UUIDInternal() {
+  SharedDtor();
+}
+
+void UUIDInternal::SharedDtor() {
+  if (this != default_instance_) {
+  }
+}
+
+void UUIDInternal::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* UUIDInternal::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return UUIDInternal_descriptor_;
+}
+
+const UUIDInternal& UUIDInternal::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_TSPArchiveMessages_2eproto();
+  return *default_instance_;
+}
+
+UUIDInternal* UUIDInternal::default_instance_ = NULL;
+
+UUIDInternal* UUIDInternal::New() const {
+  return new UUIDInternal;
+}
+
+void UUIDInternal::Clear() {
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    lower_ = GOOGLE_ULONGLONG(0);
+    upper_ = GOOGLE_ULONGLONG(0);
+  }
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+  mutable_unknown_fields()->Clear();
+}
+
+bool UUIDInternal::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!(EXPRESSION)) return false
+  ::google::protobuf::uint32 tag;
+  while ((tag = input->ReadTag()) != 0) {
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // required uint64 lower = 1;
+      case 1: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint64, ::google::protobuf::internal::WireFormatLite::TYPE_UINT64>(
+                 input, &lower_)));
+          set_has_lower();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(16)) goto parse_upper;
+        break;
+      }
+
+      // required uint64 upper = 2;
+      case 2: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_upper:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint64, ::google::protobuf::internal::WireFormatLite::TYPE_UINT64>(
+                 input, &upper_)));
+          set_has_upper();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectAtEnd()) return true;
+        break;
+      }
+
+      default: {
+      handle_uninterpreted:
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          return true;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+  return true;
+#undef DO_
+}
+
+void UUIDInternal::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // required uint64 lower = 1;
+  if (has_lower()) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt64(1, this->lower(), output);
+  }
+
+  // required uint64 upper = 2;
+  if (has_upper()) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt64(2, this->upper(), output);
+  }
+
+  if (!unknown_fields().empty()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+}
+
+::google::protobuf::uint8* UUIDInternal::SerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // required uint64 lower = 1;
+  if (has_lower()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt64ToArray(1, this->lower(), target);
+  }
+
+  // required uint64 upper = 2;
+  if (has_upper()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt64ToArray(2, this->upper(), target);
+  }
+
+  if (!unknown_fields().empty()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  return target;
+}
+
+int UUIDInternal::ByteSize() const {
+  int total_size = 0;
+
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    // required uint64 lower = 1;
+    if (has_lower()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::UInt64Size(
+          this->lower());
+    }
+
+    // required uint64 upper = 2;
+    if (has_upper()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::UInt64Size(
+          this->upper());
+    }
+
+  }
+  if (!unknown_fields().empty()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = total_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void UUIDInternal::MergeFrom(const ::google::protobuf::Message& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  const UUIDInternal* source =
+    ::google::protobuf::internal::dynamic_cast_if_available<const UUIDInternal*>(
+      &from);
+  if (source == NULL) {
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+    MergeFrom(*source);
+  }
+}
+
+void UUIDInternal::MergeFrom(const UUIDInternal& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (from.has_lower()) {
+      set_lower(from.lower());
+    }
+    if (from.has_upper()) {
+      set_upper(from.upper());
+    }
+  }
+  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
+}
+
+void UUIDInternal::CopyFrom(const ::google::protobuf::Message& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void UUIDInternal::CopyFrom(const UUIDInternal& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool UUIDInternal::IsInitialized() const {
+  if ((_has_bits_[0] & 0x00000003) != 0x00000003) return false;
+
+  return true;
+}
+
+void UUIDInternal::Swap(UUIDInternal* other) {
+  if (other != this) {
+    std::swap(lower_, other->lower_);
+    std::swap(upper_, other->upper_);
+    std::swap(_has_bits_[0], other->_has_bits_[0]);
+    _unknown_fields_.Swap(&other->_unknown_fields_);
+    std::swap(_cached_size_, other->_cached_size_);
+  }
+}
+
+::google::protobuf::Metadata UUIDInternal::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = UUIDInternal_descriptor_;
+  metadata.reflection = UUIDInternal_reflection_;
+  return metadata;
+}
+
+
+// ===================================================================
+
+#ifndef _MSC_VER
+const int ObjectUUIDMapEntry::kIdentifierFieldNumber;
+const int ObjectUUIDMapEntry::kUuidFieldNumber;
+#endif  // !_MSC_VER
+
+ObjectUUIDMapEntry::ObjectUUIDMapEntry()
+  : ::google::protobuf::Message() {
+  SharedCtor();
+}
+
+void ObjectUUIDMapEntry::InitAsDefaultInstance() {
+  uuid_ = const_cast< ::TSP::UUIDInternal*>(&::TSP::UUIDInternal::default_instance());
+}
+
+ObjectUUIDMapEntry::ObjectUUIDMapEntry(const ObjectUUIDMapEntry& from)
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  MergeFrom(from);
+}
+
+void ObjectUUIDMapEntry::SharedCtor() {
+  _cached_size_ = 0;
+  identifier_ = GOOGLE_ULONGLONG(0);
+  uuid_ = NULL;
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+}
+
+ObjectUUIDMapEntry::~ObjectUUIDMapEntry() {
+  SharedDtor();
+}
+
+void ObjectUUIDMapEntry::SharedDtor() {
+  if (this != default_instance_) {
+    delete uuid_;
+  }
+}
+
+void ObjectUUIDMapEntry::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* ObjectUUIDMapEntry::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return ObjectUUIDMapEntry_descriptor_;
+}
+
+const ObjectUUIDMapEntry& ObjectUUIDMapEntry::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_TSPArchiveMessages_2eproto();
+  return *default_instance_;
+}
+
+ObjectUUIDMapEntry* ObjectUUIDMapEntry::default_instance_ = NULL;
+
+ObjectUUIDMapEntry* ObjectUUIDMapEntry::New() const {
+  return new ObjectUUIDMapEntry;
+}
+
+void ObjectUUIDMapEntry::Clear() {
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    identifier_ = GOOGLE_ULONGLONG(0);
+    if (has_uuid()) {
+      if (uuid_ != NULL) uuid_->::TSP::UUIDInternal::Clear();
+    }
+  }
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+  mutable_unknown_fields()->Clear();
+}
+
+bool ObjectUUIDMapEntry::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!(EXPRESSION)) return false
+  ::google::protobuf::uint32 tag;
+  while ((tag = input->ReadTag()) != 0) {
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // required uint64 identifier = 1;
+      case 1: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint64, ::google::protobuf::internal::WireFormatLite::TYPE_UINT64>(
+                 input, &identifier_)));
+          set_has_identifier();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(18)) goto parse_uuid;
+        break;
+      }
+
+      // required .TSP.UUIDInternal uuid = 2;
+      case 2: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_uuid:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_uuid()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectAtEnd()) return true;
+        break;
+      }
+
+      default: {
+      handle_uninterpreted:
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          return true;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+  return true;
+#undef DO_
+}
+
+void ObjectUUIDMapEntry::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // required uint64 identifier = 1;
+  if (has_identifier()) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt64(1, this->identifier(), output);
+  }
+
+  // required .TSP.UUIDInternal uuid = 2;
+  if (has_uuid()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      2, this->uuid(), output);
+  }
+
+  if (!unknown_fields().empty()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+}
+
+::google::protobuf::uint8* ObjectUUIDMapEntry::SerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // required uint64 identifier = 1;
+  if (has_identifier()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt64ToArray(1, this->identifier(), target);
+  }
+
+  // required .TSP.UUIDInternal uuid = 2;
+  if (has_uuid()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        2, this->uuid(), target);
+  }
+
+  if (!unknown_fields().empty()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  return target;
+}
+
+int ObjectUUIDMapEntry::ByteSize() const {
+  int total_size = 0;
+
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    // required uint64 identifier = 1;
+    if (has_identifier()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::UInt64Size(
+          this->identifier());
+    }
+
+    // required .TSP.UUIDInternal uuid = 2;
+    if (has_uuid()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->uuid());
+    }
+
+  }
+  if (!unknown_fields().empty()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = total_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void ObjectUUIDMapEntry::MergeFrom(const ::google::protobuf::Message& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  const ObjectUUIDMapEntry* source =
+    ::google::protobuf::internal::dynamic_cast_if_available<const ObjectUUIDMapEntry*>(
+      &from);
+  if (source == NULL) {
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+    MergeFrom(*source);
+  }
+}
+
+void ObjectUUIDMapEntry::MergeFrom(const ObjectUUIDMapEntry& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (from.has_identifier()) {
+      set_identifier(from.identifier());
+    }
+    if (from.has_uuid()) {
+      mutable_uuid()->::TSP::UUIDInternal::MergeFrom(from.uuid());
+    }
+  }
+  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
+}
+
+void ObjectUUIDMapEntry::CopyFrom(const ::google::protobuf::Message& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void ObjectUUIDMapEntry::CopyFrom(const ObjectUUIDMapEntry& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool ObjectUUIDMapEntry::IsInitialized() const {
+  if ((_has_bits_[0] & 0x00000003) != 0x00000003) return false;
+
+  if (has_uuid()) {
+    if (!this->uuid().IsInitialized()) return false;
+  }
+  return true;
+}
+
+void ObjectUUIDMapEntry::Swap(ObjectUUIDMapEntry* other) {
+  if (other != this) {
+    std::swap(identifier_, other->identifier_);
+    std::swap(uuid_, other->uuid_);
+    std::swap(_has_bits_[0], other->_has_bits_[0]);
+    _unknown_fields_.Swap(&other->_unknown_fields_);
+    std::swap(_cached_size_, other->_cached_size_);
+  }
+}
+
+::google::protobuf::Metadata ObjectUUIDMapEntry::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = ObjectUUIDMapEntry_descriptor_;
+  metadata.reflection = ObjectUUIDMapEntry_reflection_;
+  return metadata;
+}
+
+
+// ===================================================================
+
+#ifndef _MSC_VER
 const int PackageMetadata::kLastObjectIdentifierFieldNumber;
+const int PackageMetadata::kRevisionFieldNumber;
 const int PackageMetadata::kComponentsFieldNumber;
 const int PackageMetadata::kDatasFieldNumber;
 const int PackageMetadata::kReadVersionFieldNumber;
 const int PackageMetadata::kWriteVersionFieldNumber;
+const int PackageMetadata::kFileFormatVersionFieldNumber;
+const int PackageMetadata::kSaveTokenFieldNumber;
 #endif  // !_MSC_VER
 
 PackageMetadata::PackageMetadata()
@@ -3048,6 +3649,7 @@ PackageMetadata::PackageMetadata()
 }
 
 void PackageMetadata::InitAsDefaultInstance() {
+  revision_ = const_cast< ::TSP::DocumentRevision*>(&::TSP::DocumentRevision::default_instance());
 }
 
 PackageMetadata::PackageMetadata(const PackageMetadata& from)
@@ -3059,6 +3661,8 @@ PackageMetadata::PackageMetadata(const PackageMetadata& from)
 void PackageMetadata::SharedCtor() {
   _cached_size_ = 0;
   last_object_identifier_ = GOOGLE_ULONGLONG(0);
+  revision_ = NULL;
+  save_token_ = GOOGLE_ULONGLONG(0);
   ::memset(_has_bits_, 0, sizeof(_has_bits_));
 }
 
@@ -3068,6 +3672,7 @@ PackageMetadata::~PackageMetadata() {
 
 void PackageMetadata::SharedDtor() {
   if (this != default_instance_) {
+    delete revision_;
   }
 }
 
@@ -3095,11 +3700,16 @@ PackageMetadata* PackageMetadata::New() const {
 void PackageMetadata::Clear() {
   if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
     last_object_identifier_ = GOOGLE_ULONGLONG(0);
+    if (has_revision()) {
+      if (revision_ != NULL) revision_->::TSP::DocumentRevision::Clear();
+    }
+    save_token_ = GOOGLE_ULONGLONG(0);
   }
   components_.Clear();
   datas_.Clear();
   read_version_.Clear();
   write_version_.Clear();
+  file_format_version_.Clear();
   ::memset(_has_bits_, 0, sizeof(_has_bits_));
   mutable_unknown_fields()->Clear();
 }
@@ -3118,6 +3728,20 @@ bool PackageMetadata::MergePartialFromCodedStream(
                    ::google::protobuf::uint64, ::google::protobuf::internal::WireFormatLite::TYPE_UINT64>(
                  input, &last_object_identifier_)));
           set_has_last_object_identifier();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(18)) goto parse_revision;
+        break;
+      }
+
+      // optional .TSP.DocumentRevision revision = 2;
+      case 2: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_revision:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_revision()));
         } else {
           goto handle_uninterpreted;
         }
@@ -3193,6 +3817,43 @@ bool PackageMetadata::MergePartialFromCodedStream(
         } else {
           goto handle_uninterpreted;
         }
+        if (input->ExpectTag(58)) goto parse_file_format_version;
+        break;
+      }
+
+      // repeated uint32 file_format_version = 7 [packed = true];
+      case 7: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_file_format_version:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPackedPrimitive<
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                 input, this->mutable_file_format_version())));
+        } else if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag)
+                   == ::google::protobuf::internal::WireFormatLite::
+                      WIRETYPE_VARINT) {
+          DO_((::google::protobuf::internal::WireFormatLite::ReadRepeatedPrimitiveNoInline<
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                 1, 58, input, this->mutable_file_format_version())));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(64)) goto parse_save_token;
+        break;
+      }
+
+      // optional uint64 save_token = 8 [default = 0];
+      case 8: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_save_token:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint64, ::google::protobuf::internal::WireFormatLite::TYPE_UINT64>(
+                 input, &save_token_)));
+          set_has_save_token();
+        } else {
+          goto handle_uninterpreted;
+        }
         if (input->ExpectAtEnd()) return true;
         break;
       }
@@ -3218,6 +3879,12 @@ void PackageMetadata::SerializeWithCachedSizes(
   // required uint64 last_object_identifier = 1;
   if (has_last_object_identifier()) {
     ::google::protobuf::internal::WireFormatLite::WriteUInt64(1, this->last_object_identifier(), output);
+  }
+
+  // optional .TSP.DocumentRevision revision = 2;
+  if (has_revision()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      2, this->revision(), output);
   }
 
   // repeated .TSP.ComponentInfo components = 3;
@@ -3252,6 +3919,21 @@ void PackageMetadata::SerializeWithCachedSizes(
       this->write_version(i), output);
   }
 
+  // repeated uint32 file_format_version = 7 [packed = true];
+  if (this->file_format_version_size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteTag(7, ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED, output);
+    output->WriteVarint32(_file_format_version_cached_byte_size_);
+  }
+  for (int i = 0; i < this->file_format_version_size(); i++) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32NoTag(
+      this->file_format_version(i), output);
+  }
+
+  // optional uint64 save_token = 8 [default = 0];
+  if (has_save_token()) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt64(8, this->save_token(), output);
+  }
+
   if (!unknown_fields().empty()) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         unknown_fields(), output);
@@ -3263,6 +3945,13 @@ void PackageMetadata::SerializeWithCachedSizes(
   // required uint64 last_object_identifier = 1;
   if (has_last_object_identifier()) {
     target = ::google::protobuf::internal::WireFormatLite::WriteUInt64ToArray(1, this->last_object_identifier(), target);
+  }
+
+  // optional .TSP.DocumentRevision revision = 2;
+  if (has_revision()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        2, this->revision(), target);
   }
 
   // repeated .TSP.ComponentInfo components = 3;
@@ -3307,6 +3996,25 @@ void PackageMetadata::SerializeWithCachedSizes(
       WriteUInt32NoTagToArray(this->write_version(i), target);
   }
 
+  // repeated uint32 file_format_version = 7 [packed = true];
+  if (this->file_format_version_size() > 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteTagToArray(
+      7,
+      ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED,
+      target);
+    target = ::google::protobuf::io::CodedOutputStream::WriteVarint32ToArray(
+      _file_format_version_cached_byte_size_, target);
+  }
+  for (int i = 0; i < this->file_format_version_size(); i++) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteUInt32NoTagToArray(this->file_format_version(i), target);
+  }
+
+  // optional uint64 save_token = 8 [default = 0];
+  if (has_save_token()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt64ToArray(8, this->save_token(), target);
+  }
+
   if (!unknown_fields().empty()) {
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
         unknown_fields(), target);
@@ -3323,6 +4031,20 @@ int PackageMetadata::ByteSize() const {
       total_size += 1 +
         ::google::protobuf::internal::WireFormatLite::UInt64Size(
           this->last_object_identifier());
+    }
+
+    // optional .TSP.DocumentRevision revision = 2;
+    if (has_revision()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->revision());
+    }
+
+    // optional uint64 save_token = 8 [default = 0];
+    if (has_save_token()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::UInt64Size(
+          this->save_token());
     }
 
   }
@@ -3376,6 +4098,23 @@ int PackageMetadata::ByteSize() const {
     total_size += data_size;
   }
 
+  // repeated uint32 file_format_version = 7 [packed = true];
+  {
+    int data_size = 0;
+    for (int i = 0; i < this->file_format_version_size(); i++) {
+      data_size += ::google::protobuf::internal::WireFormatLite::
+        UInt32Size(this->file_format_version(i));
+    }
+    if (data_size > 0) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::Int32Size(data_size);
+    }
+    GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+    _file_format_version_cached_byte_size_ = data_size;
+    GOOGLE_SAFE_CONCURRENT_WRITES_END();
+    total_size += data_size;
+  }
+
   if (!unknown_fields().empty()) {
     total_size +=
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
@@ -3405,9 +4144,16 @@ void PackageMetadata::MergeFrom(const PackageMetadata& from) {
   datas_.MergeFrom(from.datas_);
   read_version_.MergeFrom(from.read_version_);
   write_version_.MergeFrom(from.write_version_);
+  file_format_version_.MergeFrom(from.file_format_version_);
   if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
     if (from.has_last_object_identifier()) {
       set_last_object_identifier(from.last_object_identifier());
+    }
+    if (from.has_revision()) {
+      mutable_revision()->::TSP::DocumentRevision::MergeFrom(from.revision());
+    }
+    if (from.has_save_token()) {
+      set_save_token(from.save_token());
     }
   }
   mutable_unknown_fields()->MergeFrom(from.unknown_fields());
@@ -3440,10 +4186,13 @@ bool PackageMetadata::IsInitialized() const {
 void PackageMetadata::Swap(PackageMetadata* other) {
   if (other != this) {
     std::swap(last_object_identifier_, other->last_object_identifier_);
+    std::swap(revision_, other->revision_);
     components_.Swap(&other->components_);
     datas_.Swap(&other->datas_);
     read_version_.Swap(&other->read_version_);
     write_version_.Swap(&other->write_version_);
+    file_format_version_.Swap(&other->file_format_version_);
+    std::swap(save_token_, other->save_token_);
     std::swap(_has_bits_[0], other->_has_bits_[0]);
     _unknown_fields_.Swap(&other->_unknown_fields_);
     std::swap(_cached_size_, other->_cached_size_);
@@ -3455,6 +4204,271 @@ void PackageMetadata::Swap(PackageMetadata* other) {
   ::google::protobuf::Metadata metadata;
   metadata.descriptor = PackageMetadata_descriptor_;
   metadata.reflection = PackageMetadata_reflection_;
+  return metadata;
+}
+
+
+// ===================================================================
+
+#ifndef _MSC_VER
+const int DocumentRevision::kSequenceFieldNumber;
+const int DocumentRevision::kIdentifierFieldNumber;
+#endif  // !_MSC_VER
+
+DocumentRevision::DocumentRevision()
+  : ::google::protobuf::Message() {
+  SharedCtor();
+}
+
+void DocumentRevision::InitAsDefaultInstance() {
+}
+
+DocumentRevision::DocumentRevision(const DocumentRevision& from)
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  MergeFrom(from);
+}
+
+void DocumentRevision::SharedCtor() {
+  _cached_size_ = 0;
+  sequence_ = GOOGLE_ULONGLONG(0);
+  identifier_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+}
+
+DocumentRevision::~DocumentRevision() {
+  SharedDtor();
+}
+
+void DocumentRevision::SharedDtor() {
+  if (identifier_ != &::google::protobuf::internal::kEmptyString) {
+    delete identifier_;
+  }
+  if (this != default_instance_) {
+  }
+}
+
+void DocumentRevision::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* DocumentRevision::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return DocumentRevision_descriptor_;
+}
+
+const DocumentRevision& DocumentRevision::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_TSPArchiveMessages_2eproto();
+  return *default_instance_;
+}
+
+DocumentRevision* DocumentRevision::default_instance_ = NULL;
+
+DocumentRevision* DocumentRevision::New() const {
+  return new DocumentRevision;
+}
+
+void DocumentRevision::Clear() {
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    sequence_ = GOOGLE_ULONGLONG(0);
+    if (has_identifier()) {
+      if (identifier_ != &::google::protobuf::internal::kEmptyString) {
+        identifier_->clear();
+      }
+    }
+  }
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+  mutable_unknown_fields()->Clear();
+}
+
+bool DocumentRevision::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!(EXPRESSION)) return false
+  ::google::protobuf::uint32 tag;
+  while ((tag = input->ReadTag()) != 0) {
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // optional uint64 sequence = 1 [default = 0];
+      case 1: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint64, ::google::protobuf::internal::WireFormatLite::TYPE_UINT64>(
+                 input, &sequence_)));
+          set_has_sequence();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(18)) goto parse_identifier;
+        break;
+      }
+
+      // optional string identifier = 2;
+      case 2: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_identifier:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_identifier()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+            this->identifier().data(), this->identifier().length(),
+            ::google::protobuf::internal::WireFormat::PARSE);
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectAtEnd()) return true;
+        break;
+      }
+
+      default: {
+      handle_uninterpreted:
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          return true;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+  return true;
+#undef DO_
+}
+
+void DocumentRevision::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // optional uint64 sequence = 1 [default = 0];
+  if (has_sequence()) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt64(1, this->sequence(), output);
+  }
+
+  // optional string identifier = 2;
+  if (has_identifier()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+      this->identifier().data(), this->identifier().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE);
+    ::google::protobuf::internal::WireFormatLite::WriteString(
+      2, this->identifier(), output);
+  }
+
+  if (!unknown_fields().empty()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+}
+
+::google::protobuf::uint8* DocumentRevision::SerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // optional uint64 sequence = 1 [default = 0];
+  if (has_sequence()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt64ToArray(1, this->sequence(), target);
+  }
+
+  // optional string identifier = 2;
+  if (has_identifier()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+      this->identifier().data(), this->identifier().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE);
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        2, this->identifier(), target);
+  }
+
+  if (!unknown_fields().empty()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  return target;
+}
+
+int DocumentRevision::ByteSize() const {
+  int total_size = 0;
+
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    // optional uint64 sequence = 1 [default = 0];
+    if (has_sequence()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::UInt64Size(
+          this->sequence());
+    }
+
+    // optional string identifier = 2;
+    if (has_identifier()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->identifier());
+    }
+
+  }
+  if (!unknown_fields().empty()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = total_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void DocumentRevision::MergeFrom(const ::google::protobuf::Message& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  const DocumentRevision* source =
+    ::google::protobuf::internal::dynamic_cast_if_available<const DocumentRevision*>(
+      &from);
+  if (source == NULL) {
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+    MergeFrom(*source);
+  }
+}
+
+void DocumentRevision::MergeFrom(const DocumentRevision& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (from.has_sequence()) {
+      set_sequence(from.sequence());
+    }
+    if (from.has_identifier()) {
+      set_identifier(from.identifier());
+    }
+  }
+  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
+}
+
+void DocumentRevision::CopyFrom(const ::google::protobuf::Message& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void DocumentRevision::CopyFrom(const DocumentRevision& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool DocumentRevision::IsInitialized() const {
+
+  return true;
+}
+
+void DocumentRevision::Swap(DocumentRevision* other) {
+  if (other != this) {
+    std::swap(sequence_, other->sequence_);
+    std::swap(identifier_, other->identifier_);
+    std::swap(_has_bits_[0], other->_has_bits_[0]);
+    _unknown_fields_.Swap(&other->_unknown_fields_);
+    std::swap(_cached_size_, other->_cached_size_);
+  }
+}
+
+::google::protobuf::Metadata DocumentRevision::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = DocumentRevision_descriptor_;
+  metadata.reflection = DocumentRevision_reflection_;
   return metadata;
 }
 

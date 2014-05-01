@@ -687,11 +687,12 @@ void protobuf_AssignDesc_TSDCommandArchives_2eproto() {
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(DrawableHyperlinkCommandArchive));
   CommandSelectionBehaviorArchive_descriptor_ = file->message_type(27);
-  static const int CommandSelectionBehaviorArchive_offsets_[4] = {
+  static const int CommandSelectionBehaviorArchive_offsets_[5] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSelectionBehaviorArchive, model_for_selection_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSelectionBehaviorArchive, type_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSelectionBehaviorArchive, archived_selection_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSelectionBehaviorArchive, archived_new_selection_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandSelectionBehaviorArchive, old_model_for_selection_),
   };
   CommandSelectionBehaviorArchive_reflection_ =
     new ::google::protobuf::internal::GeneratedMessageReflection(
@@ -774,12 +775,13 @@ void protobuf_AssignDesc_TSDCommandArchives_2eproto() {
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(CommentStorageApplyCommandArchive));
   GuideCommandArchive_descriptor_ = file->message_type(32);
-  static const int GuideCommandArchive_offsets_[5] = {
+  static const int GuideCommandArchive_offsets_[6] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GuideCommandArchive, super_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GuideCommandArchive, storage_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GuideCommandArchive, old_guide_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GuideCommandArchive, new_guide_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GuideCommandArchive, mode_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GuideCommandArchive, old_storage_),
   };
   GuideCommandArchive_reflection_ =
     new ::google::protobuf::internal::GeneratedMessageReflection(
@@ -1181,47 +1183,49 @@ void protobuf_AddDesc_TSDCommandArchives_2eproto() {
     "rawableHyperlinkCommandArchive\022\"\n\005super\030"
     "\001 \002(\0132\023.TSK.CommandArchive\022\034\n\004info\030\002 \001(\013"
     "2\016.TSP.Reference\022\030\n\020oldhyperlink_url\030\003 \001"
-    "(\t\022\030\n\020newhyperlink_url\030\004 \001(\t\"\330\002\n\037Command"
+    "(\t\022\030\n\020newhyperlink_url\030\004 \001(\t\"\211\003\n\037Command"
     "SelectionBehaviorArchive\022+\n\023model_for_se"
     "lection\030\002 \001(\0132\016.TSP.Reference\022O\n\004type\030\003 "
     "\001(\0162A.TSD.CommandSelectionBehaviorArchiv"
     "e.CommandSelectionBehaviorType\022*\n\022archiv"
     "ed_selection\030\004 \001(\0132\016.TSP.Reference\022.\n\026ar"
     "chived_new_selection\030\005 \001(\0132\016.TSP.Referen"
-    "ce\"[\n\034CommandSelectionBehaviorType\022\020\n\014Co"
-    "nstructive\020\001\022\017\n\013Destructive\020\002\022\013\n\007InPlace"
-    "\020\003\022\013\n\007Replace\020\004\"@\n\032ImageReplaceCommandAr"
-    "chive\022\"\n\005super\030\001 \002(\0132\023.TSK.CommandArchiv"
-    "e\"l\n\032DrawableLockCommandArchive\022\"\n\005super"
-    "\030\001 \002(\0132\023.TSK.CommandArchive\022\034\n\004info\030\002 \001("
-    "\0132\016.TSP.Reference\022\014\n\004lock\030\003 \001(\010\"\257\001\n!Draw"
-    "ableInfoCommentCommandArchive\022\"\n\005super\030\001"
-    " \002(\0132\023.TSK.CommandArchive\022\034\n\004info\030\002 \001(\0132"
-    "\016.TSP.Reference\022#\n\013old_comment\030\003 \001(\0132\016.T"
-    "SP.Reference\022#\n\013new_comment\030\004 \001(\0132\016.TSP."
-    "Reference\"\244\001\n!CommentStorageApplyCommand"
-    "Archive\022\"\n\005super\030\001 \002(\0132\023.TSK.CommandArch"
-    "ive\022\'\n\017comment_storage\030\002 \002(\0132\016.TSP.Refer"
-    "ence\022\026\n\016comment_string\030\003 \002(\t\022\032\n\022old_comm"
-    "ent_string\030\004 \002(\t\"\253\002\n\023GuideCommandArchive"
-    "\022\"\n\005super\030\001 \002(\0132\023.TSK.CommandArchive\022\037\n\007"
-    "storage\030\002 \001(\0132\016.TSP.Reference\022/\n\told_gui"
-    "de\030\003 \001(\0132\034.TSD.UserDefinedGuideArchive\022/"
-    "\n\tnew_guide\030\004 \001(\0132\034.TSD.UserDefinedGuide"
-    "Archive\0227\n\004mode\030\005 \001(\0162).TSD.GuideCommand"
-    "Archive.GuideCommandMode\"4\n\020GuideCommand"
-    "Mode\022\007\n\003Add\020\001\022\013\n\007Replace\020\002\022\n\n\006Delete\020\003\"\210"
-    "\001\n\'DrawableAspectRatioLockedCommandArchi"
-    "ve\022\"\n\005super\030\001 \002(\0132\023.TSK.CommandArchive\022\034"
-    "\n\004info\030\002 \001(\0132\016.TSP.Reference\022\033\n\023aspect_r"
-    "atio_locked\030\003 \001(\010\"\225\001\n.DrawableAccessibil"
-    "ityDescriptionCommandArchive\022\"\n\005super\030\001 "
-    "\002(\0132\023.TSK.CommandArchive\022\034\n\004info\030\002 \001(\0132\016"
-    ".TSP.Reference\022!\n\031accessibility_descript"
-    "ion\030\003 \001(\t\"\206\001\n\030PasteStyleCommandArchive\022\""
-    "\n\005super\030\001 \002(\0132\023.TSK.CommandArchive\022!\n\tde"
-    "st_info\030\002 \002(\0132\016.TSP.Reference\022#\n\013shape_s"
-    "tyle\030\003 \001(\0132\016.TSP.Reference", 7826);
+    "ce\022/\n\027old_model_for_selection\030\006 \001(\0132\016.TS"
+    "P.Reference\"[\n\034CommandSelectionBehaviorT"
+    "ype\022\020\n\014Constructive\020\001\022\017\n\013Destructive\020\002\022\013"
+    "\n\007InPlace\020\003\022\013\n\007Replace\020\004\"@\n\032ImageReplace"
+    "CommandArchive\022\"\n\005super\030\001 \002(\0132\023.TSK.Comm"
+    "andArchive\"l\n\032DrawableLockCommandArchive"
+    "\022\"\n\005super\030\001 \002(\0132\023.TSK.CommandArchive\022\034\n\004"
+    "info\030\002 \001(\0132\016.TSP.Reference\022\014\n\004lock\030\003 \001(\010"
+    "\"\257\001\n!DrawableInfoCommentCommandArchive\022\""
+    "\n\005super\030\001 \002(\0132\023.TSK.CommandArchive\022\034\n\004in"
+    "fo\030\002 \001(\0132\016.TSP.Reference\022#\n\013old_comment\030"
+    "\003 \001(\0132\016.TSP.Reference\022#\n\013new_comment\030\004 \001"
+    "(\0132\016.TSP.Reference\"\244\001\n!CommentStorageApp"
+    "lyCommandArchive\022\"\n\005super\030\001 \002(\0132\023.TSK.Co"
+    "mmandArchive\022\'\n\017comment_storage\030\002 \002(\0132\016."
+    "TSP.Reference\022\026\n\016comment_string\030\003 \002(\t\022\032\n"
+    "\022old_comment_string\030\004 \002(\t\"\320\002\n\023GuideComma"
+    "ndArchive\022\"\n\005super\030\001 \002(\0132\023.TSK.CommandAr"
+    "chive\022\037\n\007storage\030\002 \001(\0132\016.TSP.Reference\022/"
+    "\n\told_guide\030\003 \001(\0132\034.TSD.UserDefinedGuide"
+    "Archive\022/\n\tnew_guide\030\004 \001(\0132\034.TSD.UserDef"
+    "inedGuideArchive\0227\n\004mode\030\005 \001(\0162).TSD.Gui"
+    "deCommandArchive.GuideCommandMode\022#\n\013old"
+    "_storage\030\006 \001(\0132\016.TSP.Reference\"4\n\020GuideC"
+    "ommandMode\022\007\n\003Add\020\001\022\013\n\007Replace\020\002\022\n\n\006Dele"
+    "te\020\003\"\210\001\n\'DrawableAspectRatioLockedComman"
+    "dArchive\022\"\n\005super\030\001 \002(\0132\023.TSK.CommandArc"
+    "hive\022\034\n\004info\030\002 \001(\0132\016.TSP.Reference\022\033\n\023as"
+    "pect_ratio_locked\030\003 \001(\010\"\225\001\n.DrawableAcce"
+    "ssibilityDescriptionCommandArchive\022\"\n\005su"
+    "per\030\001 \002(\0132\023.TSK.CommandArchive\022\034\n\004info\030\002"
+    " \001(\0132\016.TSP.Reference\022!\n\031accessibility_de"
+    "scription\030\003 \001(\t\"\206\001\n\030PasteStyleCommandArc"
+    "hive\022\"\n\005super\030\001 \002(\0132\023.TSK.CommandArchive"
+    "\022!\n\tdest_info\030\002 \002(\0132\016.TSP.Reference\022#\n\013s"
+    "hape_style\030\003 \001(\0132\016.TSP.Reference", 7912);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "TSDCommandArchives.proto", &protobuf_RegisterTypes);
   ConnectionLineConnectCommandArchive::default_instance_ = new ConnectionLineConnectCommandArchive();
@@ -12366,6 +12370,7 @@ const int CommandSelectionBehaviorArchive::kModelForSelectionFieldNumber;
 const int CommandSelectionBehaviorArchive::kTypeFieldNumber;
 const int CommandSelectionBehaviorArchive::kArchivedSelectionFieldNumber;
 const int CommandSelectionBehaviorArchive::kArchivedNewSelectionFieldNumber;
+const int CommandSelectionBehaviorArchive::kOldModelForSelectionFieldNumber;
 #endif  // !_MSC_VER
 
 CommandSelectionBehaviorArchive::CommandSelectionBehaviorArchive()
@@ -12377,6 +12382,7 @@ void CommandSelectionBehaviorArchive::InitAsDefaultInstance() {
   model_for_selection_ = const_cast< ::TSP::Reference*>(&::TSP::Reference::default_instance());
   archived_selection_ = const_cast< ::TSP::Reference*>(&::TSP::Reference::default_instance());
   archived_new_selection_ = const_cast< ::TSP::Reference*>(&::TSP::Reference::default_instance());
+  old_model_for_selection_ = const_cast< ::TSP::Reference*>(&::TSP::Reference::default_instance());
 }
 
 CommandSelectionBehaviorArchive::CommandSelectionBehaviorArchive(const CommandSelectionBehaviorArchive& from)
@@ -12391,6 +12397,7 @@ void CommandSelectionBehaviorArchive::SharedCtor() {
   type_ = 1;
   archived_selection_ = NULL;
   archived_new_selection_ = NULL;
+  old_model_for_selection_ = NULL;
   ::memset(_has_bits_, 0, sizeof(_has_bits_));
 }
 
@@ -12403,6 +12410,7 @@ void CommandSelectionBehaviorArchive::SharedDtor() {
     delete model_for_selection_;
     delete archived_selection_;
     delete archived_new_selection_;
+    delete old_model_for_selection_;
   }
 }
 
@@ -12438,6 +12446,9 @@ void CommandSelectionBehaviorArchive::Clear() {
     }
     if (has_archived_new_selection()) {
       if (archived_new_selection_ != NULL) archived_new_selection_->::TSP::Reference::Clear();
+    }
+    if (has_old_model_for_selection()) {
+      if (old_model_for_selection_ != NULL) old_model_for_selection_->::TSP::Reference::Clear();
     }
   }
   ::memset(_has_bits_, 0, sizeof(_has_bits_));
@@ -12508,6 +12519,20 @@ bool CommandSelectionBehaviorArchive::MergePartialFromCodedStream(
         } else {
           goto handle_uninterpreted;
         }
+        if (input->ExpectTag(50)) goto parse_old_model_for_selection;
+        break;
+      }
+
+      // optional .TSP.Reference old_model_for_selection = 6;
+      case 6: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_old_model_for_selection:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_old_model_for_selection()));
+        } else {
+          goto handle_uninterpreted;
+        }
         if (input->ExpectAtEnd()) return true;
         break;
       }
@@ -12554,6 +12579,12 @@ void CommandSelectionBehaviorArchive::SerializeWithCachedSizes(
       5, this->archived_new_selection(), output);
   }
 
+  // optional .TSP.Reference old_model_for_selection = 6;
+  if (has_old_model_for_selection()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      6, this->old_model_for_selection(), output);
+  }
+
   if (!unknown_fields().empty()) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         unknown_fields(), output);
@@ -12587,6 +12618,13 @@ void CommandSelectionBehaviorArchive::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormatLite::
       WriteMessageNoVirtualToArray(
         5, this->archived_new_selection(), target);
+  }
+
+  // optional .TSP.Reference old_model_for_selection = 6;
+  if (has_old_model_for_selection()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        6, this->old_model_for_selection(), target);
   }
 
   if (!unknown_fields().empty()) {
@@ -12625,6 +12663,13 @@ int CommandSelectionBehaviorArchive::ByteSize() const {
       total_size += 1 +
         ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
           this->archived_new_selection());
+    }
+
+    // optional .TSP.Reference old_model_for_selection = 6;
+    if (has_old_model_for_selection()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->old_model_for_selection());
     }
 
   }
@@ -12666,6 +12711,9 @@ void CommandSelectionBehaviorArchive::MergeFrom(const CommandSelectionBehaviorAr
     if (from.has_archived_new_selection()) {
       mutable_archived_new_selection()->::TSP::Reference::MergeFrom(from.archived_new_selection());
     }
+    if (from.has_old_model_for_selection()) {
+      mutable_old_model_for_selection()->::TSP::Reference::MergeFrom(from.old_model_for_selection());
+    }
   }
   mutable_unknown_fields()->MergeFrom(from.unknown_fields());
 }
@@ -12693,6 +12741,9 @@ bool CommandSelectionBehaviorArchive::IsInitialized() const {
   if (has_archived_new_selection()) {
     if (!this->archived_new_selection().IsInitialized()) return false;
   }
+  if (has_old_model_for_selection()) {
+    if (!this->old_model_for_selection().IsInitialized()) return false;
+  }
   return true;
 }
 
@@ -12702,6 +12753,7 @@ void CommandSelectionBehaviorArchive::Swap(CommandSelectionBehaviorArchive* othe
     std::swap(type_, other->type_);
     std::swap(archived_selection_, other->archived_selection_);
     std::swap(archived_new_selection_, other->archived_new_selection_);
+    std::swap(old_model_for_selection_, other->old_model_for_selection_);
     std::swap(_has_bits_[0], other->_has_bits_[0]);
     _unknown_fields_.Swap(&other->_unknown_fields_);
     std::swap(_cached_size_, other->_cached_size_);
@@ -14008,6 +14060,7 @@ const int GuideCommandArchive::kStorageFieldNumber;
 const int GuideCommandArchive::kOldGuideFieldNumber;
 const int GuideCommandArchive::kNewGuideFieldNumber;
 const int GuideCommandArchive::kModeFieldNumber;
+const int GuideCommandArchive::kOldStorageFieldNumber;
 #endif  // !_MSC_VER
 
 GuideCommandArchive::GuideCommandArchive()
@@ -14020,6 +14073,7 @@ void GuideCommandArchive::InitAsDefaultInstance() {
   storage_ = const_cast< ::TSP::Reference*>(&::TSP::Reference::default_instance());
   old_guide_ = const_cast< ::TSD::UserDefinedGuideArchive*>(&::TSD::UserDefinedGuideArchive::default_instance());
   new_guide_ = const_cast< ::TSD::UserDefinedGuideArchive*>(&::TSD::UserDefinedGuideArchive::default_instance());
+  old_storage_ = const_cast< ::TSP::Reference*>(&::TSP::Reference::default_instance());
 }
 
 GuideCommandArchive::GuideCommandArchive(const GuideCommandArchive& from)
@@ -14035,6 +14089,7 @@ void GuideCommandArchive::SharedCtor() {
   old_guide_ = NULL;
   new_guide_ = NULL;
   mode_ = 1;
+  old_storage_ = NULL;
   ::memset(_has_bits_, 0, sizeof(_has_bits_));
 }
 
@@ -14048,6 +14103,7 @@ void GuideCommandArchive::SharedDtor() {
     delete storage_;
     delete old_guide_;
     delete new_guide_;
+    delete old_storage_;
   }
 }
 
@@ -14087,6 +14143,9 @@ void GuideCommandArchive::Clear() {
       if (new_guide_ != NULL) new_guide_->::TSD::UserDefinedGuideArchive::Clear();
     }
     mode_ = 1;
+    if (has_old_storage()) {
+      if (old_storage_ != NULL) old_storage_->::TSP::Reference::Clear();
+    }
   }
   ::memset(_has_bits_, 0, sizeof(_has_bits_));
   mutable_unknown_fields()->Clear();
@@ -14170,6 +14229,20 @@ bool GuideCommandArchive::MergePartialFromCodedStream(
         } else {
           goto handle_uninterpreted;
         }
+        if (input->ExpectTag(50)) goto parse_old_storage;
+        break;
+      }
+
+      // optional .TSP.Reference old_storage = 6;
+      case 6: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_old_storage:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_old_storage()));
+        } else {
+          goto handle_uninterpreted;
+        }
         if (input->ExpectAtEnd()) return true;
         break;
       }
@@ -14222,6 +14295,12 @@ void GuideCommandArchive::SerializeWithCachedSizes(
       5, this->mode(), output);
   }
 
+  // optional .TSP.Reference old_storage = 6;
+  if (has_old_storage()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      6, this->old_storage(), output);
+  }
+
   if (!unknown_fields().empty()) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         unknown_fields(), output);
@@ -14262,6 +14341,13 @@ void GuideCommandArchive::SerializeWithCachedSizes(
   if (has_mode()) {
     target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
       5, this->mode(), target);
+  }
+
+  // optional .TSP.Reference old_storage = 6;
+  if (has_old_storage()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        6, this->old_storage(), target);
   }
 
   if (!unknown_fields().empty()) {
@@ -14309,6 +14395,13 @@ int GuideCommandArchive::ByteSize() const {
         ::google::protobuf::internal::WireFormatLite::EnumSize(this->mode());
     }
 
+    // optional .TSP.Reference old_storage = 6;
+    if (has_old_storage()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->old_storage());
+    }
+
   }
   if (!unknown_fields().empty()) {
     total_size +=
@@ -14351,6 +14444,9 @@ void GuideCommandArchive::MergeFrom(const GuideCommandArchive& from) {
     if (from.has_mode()) {
       set_mode(from.mode());
     }
+    if (from.has_old_storage()) {
+      mutable_old_storage()->::TSP::Reference::MergeFrom(from.old_storage());
+    }
   }
   mutable_unknown_fields()->MergeFrom(from.unknown_fields());
 }
@@ -14376,6 +14472,9 @@ bool GuideCommandArchive::IsInitialized() const {
   if (has_storage()) {
     if (!this->storage().IsInitialized()) return false;
   }
+  if (has_old_storage()) {
+    if (!this->old_storage().IsInitialized()) return false;
+  }
   return true;
 }
 
@@ -14386,6 +14485,7 @@ void GuideCommandArchive::Swap(GuideCommandArchive* other) {
     std::swap(old_guide_, other->old_guide_);
     std::swap(new_guide_, other->new_guide_);
     std::swap(mode_, other->mode_);
+    std::swap(old_storage_, other->old_storage_);
     std::swap(_has_bits_[0], other->_has_bits_[0]);
     _unknown_fields_.Swap(&other->_unknown_fields_);
     std::swap(_cached_size_, other->_cached_size_);

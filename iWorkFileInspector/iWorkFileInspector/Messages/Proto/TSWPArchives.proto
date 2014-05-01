@@ -374,6 +374,9 @@ message ListStyleArchive {
     kHebrewAlphaDoubleParenKind = 59;
     kHebrewAlphaRightParenKind = 60;
     kHebrewBiblicalStandardKind = 61;
+    kHebrewBiblicalDecimalKind = 62;
+    kHebrewBiblicalDoubleParenKind = 63;
+    kHebrewBiblicalRightParenKind = 64;
   }
   required .TSS.StyleArchive super = 1;
   optional uint32 override_count = 10 [default = 0];
@@ -522,6 +525,9 @@ message TOCEntryInstanceArchive {
   required uint32 number_format = 3;
   required string heading = 4;
   required .TSP.Reference indexed_style = 5;
+  optional .TSP.Reference indexed_list_style = 6;
+  optional uint32 indexed_list_start = 7;
+  optional uint32 indexed_paragraph_level = 8;
 }
 
 message UndoTransaction {

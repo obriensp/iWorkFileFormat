@@ -41,7 +41,10 @@ class FieldPath;
 class ComponentInfo;
 class ComponentExternalReference;
 class ComponentDataReference;
+class UUIDInternal;
+class ObjectUUIDMapEntry;
 class PackageMetadata;
+class DocumentRevision;
 class PasteboardMetadata;
 class DataInfo;
 class ViewStateMetadata;
@@ -735,19 +738,17 @@ class ComponentInfo : public ::google::protobuf::Message {
   inline ::google::protobuf::RepeatedPtrField< ::TSP::ComponentDataReference >*
       mutable_data_references();
 
-  // optional bool allows_duplicates_outside_of_document_package = 8 [default = false];
-  inline bool has_allows_duplicates_outside_of_document_package() const;
-  inline void clear_allows_duplicates_outside_of_document_package();
-  static const int kAllowsDuplicatesOutsideOfDocumentPackageFieldNumber = 8;
-  inline bool allows_duplicates_outside_of_document_package() const;
-  inline void set_allows_duplicates_outside_of_document_package(bool value);
-
-  // optional bool dirties_document_package = 9 [default = true];
-  inline bool has_dirties_document_package() const;
-  inline void clear_dirties_document_package();
-  static const int kDirtiesDocumentPackageFieldNumber = 9;
-  inline bool dirties_document_package() const;
-  inline void set_dirties_document_package(bool value);
+  // repeated .TSP.ObjectUUIDMapEntry object_uuid_map_entries = 11;
+  inline int object_uuid_map_entries_size() const;
+  inline void clear_object_uuid_map_entries();
+  static const int kObjectUuidMapEntriesFieldNumber = 11;
+  inline const ::TSP::ObjectUUIDMapEntry& object_uuid_map_entries(int index) const;
+  inline ::TSP::ObjectUUIDMapEntry* mutable_object_uuid_map_entries(int index);
+  inline ::TSP::ObjectUUIDMapEntry* add_object_uuid_map_entries();
+  inline const ::google::protobuf::RepeatedPtrField< ::TSP::ObjectUUIDMapEntry >&
+      object_uuid_map_entries() const;
+  inline ::google::protobuf::RepeatedPtrField< ::TSP::ObjectUUIDMapEntry >*
+      mutable_object_uuid_map_entries();
 
   // optional bool is_stored_outside_object_archive = 10 [default = false];
   inline bool has_is_stored_outside_object_archive() const;
@@ -755,6 +756,13 @@ class ComponentInfo : public ::google::protobuf::Message {
   static const int kIsStoredOutsideObjectArchiveFieldNumber = 10;
   inline bool is_stored_outside_object_archive() const;
   inline void set_is_stored_outside_object_archive(bool value);
+
+  // optional uint64 save_token = 12 [default = 0];
+  inline bool has_save_token() const;
+  inline void clear_save_token();
+  static const int kSaveTokenFieldNumber = 12;
+  inline ::google::protobuf::uint64 save_token() const;
+  inline void set_save_token(::google::protobuf::uint64 value);
 
   // @@protoc_insertion_point(class_scope:TSP.ComponentInfo)
  private:
@@ -764,12 +772,10 @@ class ComponentInfo : public ::google::protobuf::Message {
   inline void clear_has_preferred_locator();
   inline void set_has_locator();
   inline void clear_has_locator();
-  inline void set_has_allows_duplicates_outside_of_document_package();
-  inline void clear_has_allows_duplicates_outside_of_document_package();
-  inline void set_has_dirties_document_package();
-  inline void clear_has_dirties_document_package();
   inline void set_has_is_stored_outside_object_archive();
   inline void clear_has_is_stored_outside_object_archive();
+  inline void set_has_save_token();
+  inline void clear_has_save_token();
 
   ::google::protobuf::UnknownFieldSet _unknown_fields_;
 
@@ -782,8 +788,8 @@ class ComponentInfo : public ::google::protobuf::Message {
   mutable int _write_version_cached_byte_size_;
   ::google::protobuf::RepeatedPtrField< ::TSP::ComponentExternalReference > external_references_;
   ::google::protobuf::RepeatedPtrField< ::TSP::ComponentDataReference > data_references_;
-  bool allows_duplicates_outside_of_document_package_;
-  bool dirties_document_package_;
+  ::google::protobuf::RepeatedPtrField< ::TSP::ObjectUUIDMapEntry > object_uuid_map_entries_;
+  ::google::protobuf::uint64 save_token_;
   bool is_stored_outside_object_archive_;
 
   mutable int _cached_size_;
@@ -982,6 +988,192 @@ class ComponentDataReference : public ::google::protobuf::Message {
 };
 // -------------------------------------------------------------------
 
+class UUIDInternal : public ::google::protobuf::Message {
+ public:
+  UUIDInternal();
+  virtual ~UUIDInternal();
+
+  UUIDInternal(const UUIDInternal& from);
+
+  inline UUIDInternal& operator=(const UUIDInternal& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _unknown_fields_;
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return &_unknown_fields_;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const UUIDInternal& default_instance();
+
+  void Swap(UUIDInternal* other);
+
+  // implements Message ----------------------------------------------
+
+  UUIDInternal* New() const;
+  void CopyFrom(const ::google::protobuf::Message& from);
+  void MergeFrom(const ::google::protobuf::Message& from);
+  void CopyFrom(const UUIDInternal& from);
+  void MergeFrom(const UUIDInternal& from);
+  void Clear();
+  bool IsInitialized() const;
+
+  int ByteSize() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // required uint64 lower = 1;
+  inline bool has_lower() const;
+  inline void clear_lower();
+  static const int kLowerFieldNumber = 1;
+  inline ::google::protobuf::uint64 lower() const;
+  inline void set_lower(::google::protobuf::uint64 value);
+
+  // required uint64 upper = 2;
+  inline bool has_upper() const;
+  inline void clear_upper();
+  static const int kUpperFieldNumber = 2;
+  inline ::google::protobuf::uint64 upper() const;
+  inline void set_upper(::google::protobuf::uint64 value);
+
+  // @@protoc_insertion_point(class_scope:TSP.UUIDInternal)
+ private:
+  inline void set_has_lower();
+  inline void clear_has_lower();
+  inline void set_has_upper();
+  inline void clear_has_upper();
+
+  ::google::protobuf::UnknownFieldSet _unknown_fields_;
+
+  ::google::protobuf::uint64 lower_;
+  ::google::protobuf::uint64 upper_;
+
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 _has_bits_[(2 + 31) / 32];
+
+  friend void  protobuf_AddDesc_TSPArchiveMessages_2eproto();
+  friend void protobuf_AssignDesc_TSPArchiveMessages_2eproto();
+  friend void protobuf_ShutdownFile_TSPArchiveMessages_2eproto();
+
+  void InitAsDefaultInstance();
+  static UUIDInternal* default_instance_;
+};
+// -------------------------------------------------------------------
+
+class ObjectUUIDMapEntry : public ::google::protobuf::Message {
+ public:
+  ObjectUUIDMapEntry();
+  virtual ~ObjectUUIDMapEntry();
+
+  ObjectUUIDMapEntry(const ObjectUUIDMapEntry& from);
+
+  inline ObjectUUIDMapEntry& operator=(const ObjectUUIDMapEntry& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _unknown_fields_;
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return &_unknown_fields_;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const ObjectUUIDMapEntry& default_instance();
+
+  void Swap(ObjectUUIDMapEntry* other);
+
+  // implements Message ----------------------------------------------
+
+  ObjectUUIDMapEntry* New() const;
+  void CopyFrom(const ::google::protobuf::Message& from);
+  void MergeFrom(const ::google::protobuf::Message& from);
+  void CopyFrom(const ObjectUUIDMapEntry& from);
+  void MergeFrom(const ObjectUUIDMapEntry& from);
+  void Clear();
+  bool IsInitialized() const;
+
+  int ByteSize() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // required uint64 identifier = 1;
+  inline bool has_identifier() const;
+  inline void clear_identifier();
+  static const int kIdentifierFieldNumber = 1;
+  inline ::google::protobuf::uint64 identifier() const;
+  inline void set_identifier(::google::protobuf::uint64 value);
+
+  // required .TSP.UUIDInternal uuid = 2;
+  inline bool has_uuid() const;
+  inline void clear_uuid();
+  static const int kUuidFieldNumber = 2;
+  inline const ::TSP::UUIDInternal& uuid() const;
+  inline ::TSP::UUIDInternal* mutable_uuid();
+  inline ::TSP::UUIDInternal* release_uuid();
+  inline void set_allocated_uuid(::TSP::UUIDInternal* uuid);
+
+  // @@protoc_insertion_point(class_scope:TSP.ObjectUUIDMapEntry)
+ private:
+  inline void set_has_identifier();
+  inline void clear_has_identifier();
+  inline void set_has_uuid();
+  inline void clear_has_uuid();
+
+  ::google::protobuf::UnknownFieldSet _unknown_fields_;
+
+  ::google::protobuf::uint64 identifier_;
+  ::TSP::UUIDInternal* uuid_;
+
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 _has_bits_[(2 + 31) / 32];
+
+  friend void  protobuf_AddDesc_TSPArchiveMessages_2eproto();
+  friend void protobuf_AssignDesc_TSPArchiveMessages_2eproto();
+  friend void protobuf_ShutdownFile_TSPArchiveMessages_2eproto();
+
+  void InitAsDefaultInstance();
+  static ObjectUUIDMapEntry* default_instance_;
+};
+// -------------------------------------------------------------------
+
 class PackageMetadata : public ::google::protobuf::Message {
  public:
   PackageMetadata();
@@ -1043,6 +1235,15 @@ class PackageMetadata : public ::google::protobuf::Message {
   inline ::google::protobuf::uint64 last_object_identifier() const;
   inline void set_last_object_identifier(::google::protobuf::uint64 value);
 
+  // optional .TSP.DocumentRevision revision = 2;
+  inline bool has_revision() const;
+  inline void clear_revision();
+  static const int kRevisionFieldNumber = 2;
+  inline const ::TSP::DocumentRevision& revision() const;
+  inline ::TSP::DocumentRevision* mutable_revision();
+  inline ::TSP::DocumentRevision* release_revision();
+  inline void set_allocated_revision(::TSP::DocumentRevision* revision);
+
   // repeated .TSP.ComponentInfo components = 3;
   inline int components_size() const;
   inline void clear_components();
@@ -1091,23 +1292,50 @@ class PackageMetadata : public ::google::protobuf::Message {
   inline ::google::protobuf::RepeatedField< ::google::protobuf::uint32 >*
       mutable_write_version();
 
+  // repeated uint32 file_format_version = 7 [packed = true];
+  inline int file_format_version_size() const;
+  inline void clear_file_format_version();
+  static const int kFileFormatVersionFieldNumber = 7;
+  inline ::google::protobuf::uint32 file_format_version(int index) const;
+  inline void set_file_format_version(int index, ::google::protobuf::uint32 value);
+  inline void add_file_format_version(::google::protobuf::uint32 value);
+  inline const ::google::protobuf::RepeatedField< ::google::protobuf::uint32 >&
+      file_format_version() const;
+  inline ::google::protobuf::RepeatedField< ::google::protobuf::uint32 >*
+      mutable_file_format_version();
+
+  // optional uint64 save_token = 8 [default = 0];
+  inline bool has_save_token() const;
+  inline void clear_save_token();
+  static const int kSaveTokenFieldNumber = 8;
+  inline ::google::protobuf::uint64 save_token() const;
+  inline void set_save_token(::google::protobuf::uint64 value);
+
   // @@protoc_insertion_point(class_scope:TSP.PackageMetadata)
  private:
   inline void set_has_last_object_identifier();
   inline void clear_has_last_object_identifier();
+  inline void set_has_revision();
+  inline void clear_has_revision();
+  inline void set_has_save_token();
+  inline void clear_has_save_token();
 
   ::google::protobuf::UnknownFieldSet _unknown_fields_;
 
   ::google::protobuf::uint64 last_object_identifier_;
+  ::TSP::DocumentRevision* revision_;
   ::google::protobuf::RepeatedPtrField< ::TSP::ComponentInfo > components_;
   ::google::protobuf::RepeatedPtrField< ::TSP::DataInfo > datas_;
   ::google::protobuf::RepeatedField< ::google::protobuf::uint32 > read_version_;
   mutable int _read_version_cached_byte_size_;
   ::google::protobuf::RepeatedField< ::google::protobuf::uint32 > write_version_;
   mutable int _write_version_cached_byte_size_;
+  ::google::protobuf::RepeatedField< ::google::protobuf::uint32 > file_format_version_;
+  mutable int _file_format_version_cached_byte_size_;
+  ::google::protobuf::uint64 save_token_;
 
   mutable int _cached_size_;
-  ::google::protobuf::uint32 _has_bits_[(5 + 31) / 32];
+  ::google::protobuf::uint32 _has_bits_[(8 + 31) / 32];
 
   friend void  protobuf_AddDesc_TSPArchiveMessages_2eproto();
   friend void protobuf_AssignDesc_TSPArchiveMessages_2eproto();
@@ -1115,6 +1343,103 @@ class PackageMetadata : public ::google::protobuf::Message {
 
   void InitAsDefaultInstance();
   static PackageMetadata* default_instance_;
+};
+// -------------------------------------------------------------------
+
+class DocumentRevision : public ::google::protobuf::Message {
+ public:
+  DocumentRevision();
+  virtual ~DocumentRevision();
+
+  DocumentRevision(const DocumentRevision& from);
+
+  inline DocumentRevision& operator=(const DocumentRevision& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _unknown_fields_;
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return &_unknown_fields_;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const DocumentRevision& default_instance();
+
+  void Swap(DocumentRevision* other);
+
+  // implements Message ----------------------------------------------
+
+  DocumentRevision* New() const;
+  void CopyFrom(const ::google::protobuf::Message& from);
+  void MergeFrom(const ::google::protobuf::Message& from);
+  void CopyFrom(const DocumentRevision& from);
+  void MergeFrom(const DocumentRevision& from);
+  void Clear();
+  bool IsInitialized() const;
+
+  int ByteSize() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional uint64 sequence = 1 [default = 0];
+  inline bool has_sequence() const;
+  inline void clear_sequence();
+  static const int kSequenceFieldNumber = 1;
+  inline ::google::protobuf::uint64 sequence() const;
+  inline void set_sequence(::google::protobuf::uint64 value);
+
+  // optional string identifier = 2;
+  inline bool has_identifier() const;
+  inline void clear_identifier();
+  static const int kIdentifierFieldNumber = 2;
+  inline const ::std::string& identifier() const;
+  inline void set_identifier(const ::std::string& value);
+  inline void set_identifier(const char* value);
+  inline void set_identifier(const char* value, size_t size);
+  inline ::std::string* mutable_identifier();
+  inline ::std::string* release_identifier();
+  inline void set_allocated_identifier(::std::string* identifier);
+
+  // @@protoc_insertion_point(class_scope:TSP.DocumentRevision)
+ private:
+  inline void set_has_sequence();
+  inline void clear_has_sequence();
+  inline void set_has_identifier();
+  inline void clear_has_identifier();
+
+  ::google::protobuf::UnknownFieldSet _unknown_fields_;
+
+  ::google::protobuf::uint64 sequence_;
+  ::std::string* identifier_;
+
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 _has_bits_[(2 + 31) / 32];
+
+  friend void  protobuf_AddDesc_TSPArchiveMessages_2eproto();
+  friend void protobuf_AssignDesc_TSPArchiveMessages_2eproto();
+  friend void protobuf_ShutdownFile_TSPArchiveMessages_2eproto();
+
+  void InitAsDefaultInstance();
+  static DocumentRevision* default_instance_;
 };
 // -------------------------------------------------------------------
 
@@ -2165,59 +2490,40 @@ ComponentInfo::mutable_data_references() {
   return &data_references_;
 }
 
-// optional bool allows_duplicates_outside_of_document_package = 8 [default = false];
-inline bool ComponentInfo::has_allows_duplicates_outside_of_document_package() const {
-  return (_has_bits_[0] & 0x00000080u) != 0;
+// repeated .TSP.ObjectUUIDMapEntry object_uuid_map_entries = 11;
+inline int ComponentInfo::object_uuid_map_entries_size() const {
+  return object_uuid_map_entries_.size();
 }
-inline void ComponentInfo::set_has_allows_duplicates_outside_of_document_package() {
-  _has_bits_[0] |= 0x00000080u;
+inline void ComponentInfo::clear_object_uuid_map_entries() {
+  object_uuid_map_entries_.Clear();
 }
-inline void ComponentInfo::clear_has_allows_duplicates_outside_of_document_package() {
-  _has_bits_[0] &= ~0x00000080u;
+inline const ::TSP::ObjectUUIDMapEntry& ComponentInfo::object_uuid_map_entries(int index) const {
+  return object_uuid_map_entries_.Get(index);
 }
-inline void ComponentInfo::clear_allows_duplicates_outside_of_document_package() {
-  allows_duplicates_outside_of_document_package_ = false;
-  clear_has_allows_duplicates_outside_of_document_package();
+inline ::TSP::ObjectUUIDMapEntry* ComponentInfo::mutable_object_uuid_map_entries(int index) {
+  return object_uuid_map_entries_.Mutable(index);
 }
-inline bool ComponentInfo::allows_duplicates_outside_of_document_package() const {
-  return allows_duplicates_outside_of_document_package_;
+inline ::TSP::ObjectUUIDMapEntry* ComponentInfo::add_object_uuid_map_entries() {
+  return object_uuid_map_entries_.Add();
 }
-inline void ComponentInfo::set_allows_duplicates_outside_of_document_package(bool value) {
-  set_has_allows_duplicates_outside_of_document_package();
-  allows_duplicates_outside_of_document_package_ = value;
+inline const ::google::protobuf::RepeatedPtrField< ::TSP::ObjectUUIDMapEntry >&
+ComponentInfo::object_uuid_map_entries() const {
+  return object_uuid_map_entries_;
 }
-
-// optional bool dirties_document_package = 9 [default = true];
-inline bool ComponentInfo::has_dirties_document_package() const {
-  return (_has_bits_[0] & 0x00000100u) != 0;
-}
-inline void ComponentInfo::set_has_dirties_document_package() {
-  _has_bits_[0] |= 0x00000100u;
-}
-inline void ComponentInfo::clear_has_dirties_document_package() {
-  _has_bits_[0] &= ~0x00000100u;
-}
-inline void ComponentInfo::clear_dirties_document_package() {
-  dirties_document_package_ = true;
-  clear_has_dirties_document_package();
-}
-inline bool ComponentInfo::dirties_document_package() const {
-  return dirties_document_package_;
-}
-inline void ComponentInfo::set_dirties_document_package(bool value) {
-  set_has_dirties_document_package();
-  dirties_document_package_ = value;
+inline ::google::protobuf::RepeatedPtrField< ::TSP::ObjectUUIDMapEntry >*
+ComponentInfo::mutable_object_uuid_map_entries() {
+  return &object_uuid_map_entries_;
 }
 
 // optional bool is_stored_outside_object_archive = 10 [default = false];
 inline bool ComponentInfo::has_is_stored_outside_object_archive() const {
-  return (_has_bits_[0] & 0x00000200u) != 0;
+  return (_has_bits_[0] & 0x00000100u) != 0;
 }
 inline void ComponentInfo::set_has_is_stored_outside_object_archive() {
-  _has_bits_[0] |= 0x00000200u;
+  _has_bits_[0] |= 0x00000100u;
 }
 inline void ComponentInfo::clear_has_is_stored_outside_object_archive() {
-  _has_bits_[0] &= ~0x00000200u;
+  _has_bits_[0] &= ~0x00000100u;
 }
 inline void ComponentInfo::clear_is_stored_outside_object_archive() {
   is_stored_outside_object_archive_ = false;
@@ -2229,6 +2535,28 @@ inline bool ComponentInfo::is_stored_outside_object_archive() const {
 inline void ComponentInfo::set_is_stored_outside_object_archive(bool value) {
   set_has_is_stored_outside_object_archive();
   is_stored_outside_object_archive_ = value;
+}
+
+// optional uint64 save_token = 12 [default = 0];
+inline bool ComponentInfo::has_save_token() const {
+  return (_has_bits_[0] & 0x00000200u) != 0;
+}
+inline void ComponentInfo::set_has_save_token() {
+  _has_bits_[0] |= 0x00000200u;
+}
+inline void ComponentInfo::clear_has_save_token() {
+  _has_bits_[0] &= ~0x00000200u;
+}
+inline void ComponentInfo::clear_save_token() {
+  save_token_ = GOOGLE_ULONGLONG(0);
+  clear_has_save_token();
+}
+inline ::google::protobuf::uint64 ComponentInfo::save_token() const {
+  return save_token_;
+}
+inline void ComponentInfo::set_save_token(::google::protobuf::uint64 value) {
+  set_has_save_token();
+  save_token_ = value;
 }
 
 // -------------------------------------------------------------------
@@ -2329,6 +2657,118 @@ inline void ComponentDataReference::set_data_identifier(::google::protobuf::uint
 
 // -------------------------------------------------------------------
 
+// UUIDInternal
+
+// required uint64 lower = 1;
+inline bool UUIDInternal::has_lower() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void UUIDInternal::set_has_lower() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void UUIDInternal::clear_has_lower() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void UUIDInternal::clear_lower() {
+  lower_ = GOOGLE_ULONGLONG(0);
+  clear_has_lower();
+}
+inline ::google::protobuf::uint64 UUIDInternal::lower() const {
+  return lower_;
+}
+inline void UUIDInternal::set_lower(::google::protobuf::uint64 value) {
+  set_has_lower();
+  lower_ = value;
+}
+
+// required uint64 upper = 2;
+inline bool UUIDInternal::has_upper() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void UUIDInternal::set_has_upper() {
+  _has_bits_[0] |= 0x00000002u;
+}
+inline void UUIDInternal::clear_has_upper() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline void UUIDInternal::clear_upper() {
+  upper_ = GOOGLE_ULONGLONG(0);
+  clear_has_upper();
+}
+inline ::google::protobuf::uint64 UUIDInternal::upper() const {
+  return upper_;
+}
+inline void UUIDInternal::set_upper(::google::protobuf::uint64 value) {
+  set_has_upper();
+  upper_ = value;
+}
+
+// -------------------------------------------------------------------
+
+// ObjectUUIDMapEntry
+
+// required uint64 identifier = 1;
+inline bool ObjectUUIDMapEntry::has_identifier() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void ObjectUUIDMapEntry::set_has_identifier() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void ObjectUUIDMapEntry::clear_has_identifier() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void ObjectUUIDMapEntry::clear_identifier() {
+  identifier_ = GOOGLE_ULONGLONG(0);
+  clear_has_identifier();
+}
+inline ::google::protobuf::uint64 ObjectUUIDMapEntry::identifier() const {
+  return identifier_;
+}
+inline void ObjectUUIDMapEntry::set_identifier(::google::protobuf::uint64 value) {
+  set_has_identifier();
+  identifier_ = value;
+}
+
+// required .TSP.UUIDInternal uuid = 2;
+inline bool ObjectUUIDMapEntry::has_uuid() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void ObjectUUIDMapEntry::set_has_uuid() {
+  _has_bits_[0] |= 0x00000002u;
+}
+inline void ObjectUUIDMapEntry::clear_has_uuid() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline void ObjectUUIDMapEntry::clear_uuid() {
+  if (uuid_ != NULL) uuid_->::TSP::UUIDInternal::Clear();
+  clear_has_uuid();
+}
+inline const ::TSP::UUIDInternal& ObjectUUIDMapEntry::uuid() const {
+  return uuid_ != NULL ? *uuid_ : *default_instance_->uuid_;
+}
+inline ::TSP::UUIDInternal* ObjectUUIDMapEntry::mutable_uuid() {
+  set_has_uuid();
+  if (uuid_ == NULL) uuid_ = new ::TSP::UUIDInternal;
+  return uuid_;
+}
+inline ::TSP::UUIDInternal* ObjectUUIDMapEntry::release_uuid() {
+  clear_has_uuid();
+  ::TSP::UUIDInternal* temp = uuid_;
+  uuid_ = NULL;
+  return temp;
+}
+inline void ObjectUUIDMapEntry::set_allocated_uuid(::TSP::UUIDInternal* uuid) {
+  delete uuid_;
+  uuid_ = uuid;
+  if (uuid) {
+    set_has_uuid();
+  } else {
+    clear_has_uuid();
+  }
+}
+
+// -------------------------------------------------------------------
+
 // PackageMetadata
 
 // required uint64 last_object_identifier = 1;
@@ -2351,6 +2791,44 @@ inline ::google::protobuf::uint64 PackageMetadata::last_object_identifier() cons
 inline void PackageMetadata::set_last_object_identifier(::google::protobuf::uint64 value) {
   set_has_last_object_identifier();
   last_object_identifier_ = value;
+}
+
+// optional .TSP.DocumentRevision revision = 2;
+inline bool PackageMetadata::has_revision() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void PackageMetadata::set_has_revision() {
+  _has_bits_[0] |= 0x00000002u;
+}
+inline void PackageMetadata::clear_has_revision() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline void PackageMetadata::clear_revision() {
+  if (revision_ != NULL) revision_->::TSP::DocumentRevision::Clear();
+  clear_has_revision();
+}
+inline const ::TSP::DocumentRevision& PackageMetadata::revision() const {
+  return revision_ != NULL ? *revision_ : *default_instance_->revision_;
+}
+inline ::TSP::DocumentRevision* PackageMetadata::mutable_revision() {
+  set_has_revision();
+  if (revision_ == NULL) revision_ = new ::TSP::DocumentRevision;
+  return revision_;
+}
+inline ::TSP::DocumentRevision* PackageMetadata::release_revision() {
+  clear_has_revision();
+  ::TSP::DocumentRevision* temp = revision_;
+  revision_ = NULL;
+  return temp;
+}
+inline void PackageMetadata::set_allocated_revision(::TSP::DocumentRevision* revision) {
+  delete revision_;
+  revision_ = revision;
+  if (revision) {
+    set_has_revision();
+  } else {
+    clear_has_revision();
+  }
 }
 
 // repeated .TSP.ComponentInfo components = 3;
@@ -2451,6 +2929,149 @@ PackageMetadata::write_version() const {
 inline ::google::protobuf::RepeatedField< ::google::protobuf::uint32 >*
 PackageMetadata::mutable_write_version() {
   return &write_version_;
+}
+
+// repeated uint32 file_format_version = 7 [packed = true];
+inline int PackageMetadata::file_format_version_size() const {
+  return file_format_version_.size();
+}
+inline void PackageMetadata::clear_file_format_version() {
+  file_format_version_.Clear();
+}
+inline ::google::protobuf::uint32 PackageMetadata::file_format_version(int index) const {
+  return file_format_version_.Get(index);
+}
+inline void PackageMetadata::set_file_format_version(int index, ::google::protobuf::uint32 value) {
+  file_format_version_.Set(index, value);
+}
+inline void PackageMetadata::add_file_format_version(::google::protobuf::uint32 value) {
+  file_format_version_.Add(value);
+}
+inline const ::google::protobuf::RepeatedField< ::google::protobuf::uint32 >&
+PackageMetadata::file_format_version() const {
+  return file_format_version_;
+}
+inline ::google::protobuf::RepeatedField< ::google::protobuf::uint32 >*
+PackageMetadata::mutable_file_format_version() {
+  return &file_format_version_;
+}
+
+// optional uint64 save_token = 8 [default = 0];
+inline bool PackageMetadata::has_save_token() const {
+  return (_has_bits_[0] & 0x00000080u) != 0;
+}
+inline void PackageMetadata::set_has_save_token() {
+  _has_bits_[0] |= 0x00000080u;
+}
+inline void PackageMetadata::clear_has_save_token() {
+  _has_bits_[0] &= ~0x00000080u;
+}
+inline void PackageMetadata::clear_save_token() {
+  save_token_ = GOOGLE_ULONGLONG(0);
+  clear_has_save_token();
+}
+inline ::google::protobuf::uint64 PackageMetadata::save_token() const {
+  return save_token_;
+}
+inline void PackageMetadata::set_save_token(::google::protobuf::uint64 value) {
+  set_has_save_token();
+  save_token_ = value;
+}
+
+// -------------------------------------------------------------------
+
+// DocumentRevision
+
+// optional uint64 sequence = 1 [default = 0];
+inline bool DocumentRevision::has_sequence() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void DocumentRevision::set_has_sequence() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void DocumentRevision::clear_has_sequence() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void DocumentRevision::clear_sequence() {
+  sequence_ = GOOGLE_ULONGLONG(0);
+  clear_has_sequence();
+}
+inline ::google::protobuf::uint64 DocumentRevision::sequence() const {
+  return sequence_;
+}
+inline void DocumentRevision::set_sequence(::google::protobuf::uint64 value) {
+  set_has_sequence();
+  sequence_ = value;
+}
+
+// optional string identifier = 2;
+inline bool DocumentRevision::has_identifier() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void DocumentRevision::set_has_identifier() {
+  _has_bits_[0] |= 0x00000002u;
+}
+inline void DocumentRevision::clear_has_identifier() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline void DocumentRevision::clear_identifier() {
+  if (identifier_ != &::google::protobuf::internal::kEmptyString) {
+    identifier_->clear();
+  }
+  clear_has_identifier();
+}
+inline const ::std::string& DocumentRevision::identifier() const {
+  return *identifier_;
+}
+inline void DocumentRevision::set_identifier(const ::std::string& value) {
+  set_has_identifier();
+  if (identifier_ == &::google::protobuf::internal::kEmptyString) {
+    identifier_ = new ::std::string;
+  }
+  identifier_->assign(value);
+}
+inline void DocumentRevision::set_identifier(const char* value) {
+  set_has_identifier();
+  if (identifier_ == &::google::protobuf::internal::kEmptyString) {
+    identifier_ = new ::std::string;
+  }
+  identifier_->assign(value);
+}
+inline void DocumentRevision::set_identifier(const char* value, size_t size) {
+  set_has_identifier();
+  if (identifier_ == &::google::protobuf::internal::kEmptyString) {
+    identifier_ = new ::std::string;
+  }
+  identifier_->assign(reinterpret_cast<const char*>(value), size);
+}
+inline ::std::string* DocumentRevision::mutable_identifier() {
+  set_has_identifier();
+  if (identifier_ == &::google::protobuf::internal::kEmptyString) {
+    identifier_ = new ::std::string;
+  }
+  return identifier_;
+}
+inline ::std::string* DocumentRevision::release_identifier() {
+  clear_has_identifier();
+  if (identifier_ == &::google::protobuf::internal::kEmptyString) {
+    return NULL;
+  } else {
+    ::std::string* temp = identifier_;
+    identifier_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+    return temp;
+  }
+}
+inline void DocumentRevision::set_allocated_identifier(::std::string* identifier) {
+  if (identifier_ != &::google::protobuf::internal::kEmptyString) {
+    delete identifier_;
+  }
+  if (identifier) {
+    set_has_identifier();
+    identifier_ = identifier;
+  } else {
+    clear_has_identifier();
+    identifier_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+  }
 }
 
 // -------------------------------------------------------------------

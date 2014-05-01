@@ -33,6 +33,7 @@
 #include "TSCHArchives.GEN.pb.h"
 #include "TSCH3DArchives.pb.h"
 #include "TSCHArchives.pb.h"
+#include "TSWPArchives.pb.h"
 // @@protoc_insertion_point(includes)
 
 namespace TSCH {
@@ -43,9 +44,17 @@ void protobuf_AssignDesc_TSCHCommandArchives_2eproto();
 void protobuf_ShutdownFile_TSCHCommandArchives_2eproto();
 
 class CommandSetChartTypeArchive;
-class PropertyMutationUndoTupleArchive;
 class StyleSwapUndoTupleArchive;
 class CommandStyleSwapArchive;
+class CommandMutatePropertiesArchive;
+class CommandMutatePropertiesArchive_GenericPropertyDeltaMap;
+class CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion;
+class CommandMutatePropertiesArchive_ParagraphStyleDeltaMap;
+class CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive;
+class CommandScaleAllTextArchive;
+class CommandSetFontFamilyArchive;
+class CommandApplyFillSetArchive;
+class CommandApplyFillSetArchive_CapturedFillSetArchive;
 class CommandSetSeriesNameArchive;
 class CommandSetCategoryNameArchive;
 class CommandAddGridRowsArchive;
@@ -75,6 +84,10 @@ class CommandReplaceGridValuesArchive_ValueRow;
 class CommandReplaceThemePresetArchive;
 class CommandReplaceThemePresetArchive_StyleAndIdentifierPair;
 class CommandInvalidateWPCaches;
+class CommandSetGridColumnNameArchive;
+class CommandSetGridRowNameArchive;
+class CommandReplaceCustomFormatArchive;
+class CommandReplaceCustomFormatArchive_FormatObjectMutation;
 
 enum StyleOwnerType {
   chart_info = 1,
@@ -285,158 +298,6 @@ class CommandSetChartTypeArchive : public ::google::protobuf::Message {
 
   void InitAsDefaultInstance();
   static CommandSetChartTypeArchive* default_instance_;
-};
-// -------------------------------------------------------------------
-
-class PropertyMutationUndoTupleArchive : public ::google::protobuf::Message {
- public:
-  PropertyMutationUndoTupleArchive();
-  virtual ~PropertyMutationUndoTupleArchive();
-
-  PropertyMutationUndoTupleArchive(const PropertyMutationUndoTupleArchive& from);
-
-  inline PropertyMutationUndoTupleArchive& operator=(const PropertyMutationUndoTupleArchive& from) {
-    CopyFrom(from);
-    return *this;
-  }
-
-  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
-    return _unknown_fields_;
-  }
-
-  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
-    return &_unknown_fields_;
-  }
-
-  static const ::google::protobuf::Descriptor* descriptor();
-  static const PropertyMutationUndoTupleArchive& default_instance();
-
-  void Swap(PropertyMutationUndoTupleArchive* other);
-
-  // implements Message ----------------------------------------------
-
-  PropertyMutationUndoTupleArchive* New() const;
-  void CopyFrom(const ::google::protobuf::Message& from);
-  void MergeFrom(const ::google::protobuf::Message& from);
-  void CopyFrom(const PropertyMutationUndoTupleArchive& from);
-  void MergeFrom(const PropertyMutationUndoTupleArchive& from);
-  void Clear();
-  bool IsInitialized() const;
-
-  int ByteSize() const;
-  bool MergePartialFromCodedStream(
-      ::google::protobuf::io::CodedInputStream* input);
-  void SerializeWithCachedSizes(
-      ::google::protobuf::io::CodedOutputStream* output) const;
-  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
-  int GetCachedSize() const { return _cached_size_; }
-  private:
-  void SharedCtor();
-  void SharedDtor();
-  void SetCachedSize(int size) const;
-  public:
-
-  ::google::protobuf::Metadata GetMetadata() const;
-
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-
-  // optional .TSP.Reference chart_info = 1;
-  inline bool has_chart_info() const;
-  inline void clear_chart_info();
-  static const int kChartInfoFieldNumber = 1;
-  inline const ::TSP::Reference& chart_info() const;
-  inline ::TSP::Reference* mutable_chart_info();
-  inline ::TSP::Reference* release_chart_info();
-  inline void set_allocated_chart_info(::TSP::Reference* chart_info);
-
-  // optional .TSCH.StyleOwnerType style_owner_type = 2;
-  inline bool has_style_owner_type() const;
-  inline void clear_style_owner_type();
-  static const int kStyleOwnerTypeFieldNumber = 2;
-  inline ::TSCH::StyleOwnerType style_owner_type() const;
-  inline void set_style_owner_type(::TSCH::StyleOwnerType value);
-
-  // optional uint32 index = 3;
-  inline bool has_index() const;
-  inline void clear_index();
-  static const int kIndexFieldNumber = 3;
-  inline ::google::protobuf::uint32 index() const;
-  inline void set_index(::google::protobuf::uint32 value);
-
-  // optional .TSP.Reference old_style = 4;
-  inline bool has_old_style() const;
-  inline void clear_old_style();
-  static const int kOldStyleFieldNumber = 4;
-  inline const ::TSP::Reference& old_style() const;
-  inline ::TSP::Reference* mutable_old_style();
-  inline ::TSP::Reference* release_old_style();
-  inline void set_allocated_old_style(::TSP::Reference* old_style);
-
-  // optional .TSP.Reference new_style = 5;
-  inline bool has_new_style() const;
-  inline void clear_new_style();
-  static const int kNewStyleFieldNumber = 5;
-  inline const ::TSP::Reference& new_style() const;
-  inline ::TSP::Reference* mutable_new_style();
-  inline ::TSP::Reference* release_new_style();
-  inline void set_allocated_new_style(::TSP::Reference* new_style);
-
-  // optional .TSP.Reference old_non_style = 6;
-  inline bool has_old_non_style() const;
-  inline void clear_old_non_style();
-  static const int kOldNonStyleFieldNumber = 6;
-  inline const ::TSP::Reference& old_non_style() const;
-  inline ::TSP::Reference* mutable_old_non_style();
-  inline ::TSP::Reference* release_old_non_style();
-  inline void set_allocated_old_non_style(::TSP::Reference* old_non_style);
-
-  // optional .TSP.Reference new_non_style = 7;
-  inline bool has_new_non_style() const;
-  inline void clear_new_non_style();
-  static const int kNewNonStyleFieldNumber = 7;
-  inline const ::TSP::Reference& new_non_style() const;
-  inline ::TSP::Reference* mutable_new_non_style();
-  inline ::TSP::Reference* release_new_non_style();
-  inline void set_allocated_new_non_style(::TSP::Reference* new_non_style);
-
-  // @@protoc_insertion_point(class_scope:TSCH.PropertyMutationUndoTupleArchive)
- private:
-  inline void set_has_chart_info();
-  inline void clear_has_chart_info();
-  inline void set_has_style_owner_type();
-  inline void clear_has_style_owner_type();
-  inline void set_has_index();
-  inline void clear_has_index();
-  inline void set_has_old_style();
-  inline void clear_has_old_style();
-  inline void set_has_new_style();
-  inline void clear_has_new_style();
-  inline void set_has_old_non_style();
-  inline void clear_has_old_non_style();
-  inline void set_has_new_non_style();
-  inline void clear_has_new_non_style();
-
-  ::google::protobuf::UnknownFieldSet _unknown_fields_;
-
-  ::TSP::Reference* chart_info_;
-  int style_owner_type_;
-  ::google::protobuf::uint32 index_;
-  ::TSP::Reference* old_style_;
-  ::TSP::Reference* new_style_;
-  ::TSP::Reference* old_non_style_;
-  ::TSP::Reference* new_non_style_;
-
-  mutable int _cached_size_;
-  ::google::protobuf::uint32 _has_bits_[(7 + 31) / 32];
-
-  friend void  protobuf_AddDesc_TSCHCommandArchives_2eproto();
-  friend void protobuf_AssignDesc_TSCHCommandArchives_2eproto();
-  friend void protobuf_ShutdownFile_TSCHCommandArchives_2eproto();
-
-  void InitAsDefaultInstance();
-  static PropertyMutationUndoTupleArchive* default_instance_;
 };
 // -------------------------------------------------------------------
 
@@ -662,6 +523,1115 @@ class CommandStyleSwapArchive : public ::google::protobuf::Message {
 
   void InitAsDefaultInstance();
   static CommandStyleSwapArchive* default_instance_;
+};
+// -------------------------------------------------------------------
+
+class CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion : public ::google::protobuf::Message {
+ public:
+  CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion();
+  virtual ~CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion();
+
+  CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion(const CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion& from);
+
+  inline CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion& operator=(const CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _unknown_fields_;
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return &_unknown_fields_;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion& default_instance();
+
+  void Swap(CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion* other);
+
+  // implements Message ----------------------------------------------
+
+  CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion* New() const;
+  void CopyFrom(const ::google::protobuf::Message& from);
+  void MergeFrom(const ::google::protobuf::Message& from);
+  void CopyFrom(const CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion& from);
+  void MergeFrom(const CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion& from);
+  void Clear();
+  bool IsInitialized() const;
+
+  int ByteSize() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional .TSCH.Generated.ChartGenericPropertyMapArchive chart_map = 2;
+  inline bool has_chart_map() const;
+  inline void clear_chart_map();
+  static const int kChartMapFieldNumber = 2;
+  inline const ::TSCH::Generated::ChartGenericPropertyMapArchive& chart_map() const;
+  inline ::TSCH::Generated::ChartGenericPropertyMapArchive* mutable_chart_map();
+  inline ::TSCH::Generated::ChartGenericPropertyMapArchive* release_chart_map();
+  inline void set_allocated_chart_map(::TSCH::Generated::ChartGenericPropertyMapArchive* chart_map);
+
+  // optional .TSCH.Generated.LegendGenericPropertyMapArchive legend_map = 3;
+  inline bool has_legend_map() const;
+  inline void clear_legend_map();
+  static const int kLegendMapFieldNumber = 3;
+  inline const ::TSCH::Generated::LegendGenericPropertyMapArchive& legend_map() const;
+  inline ::TSCH::Generated::LegendGenericPropertyMapArchive* mutable_legend_map();
+  inline ::TSCH::Generated::LegendGenericPropertyMapArchive* release_legend_map();
+  inline void set_allocated_legend_map(::TSCH::Generated::LegendGenericPropertyMapArchive* legend_map);
+
+  // optional .TSCH.Generated.ChartAxisGenericPropertyMapArchive axis_map = 4;
+  inline bool has_axis_map() const;
+  inline void clear_axis_map();
+  static const int kAxisMapFieldNumber = 4;
+  inline const ::TSCH::Generated::ChartAxisGenericPropertyMapArchive& axis_map() const;
+  inline ::TSCH::Generated::ChartAxisGenericPropertyMapArchive* mutable_axis_map();
+  inline ::TSCH::Generated::ChartAxisGenericPropertyMapArchive* release_axis_map();
+  inline void set_allocated_axis_map(::TSCH::Generated::ChartAxisGenericPropertyMapArchive* axis_map);
+
+  // optional .TSCH.Generated.ChartSeriesGenericPropertyMapArchive series_map = 5;
+  inline bool has_series_map() const;
+  inline void clear_series_map();
+  static const int kSeriesMapFieldNumber = 5;
+  inline const ::TSCH::Generated::ChartSeriesGenericPropertyMapArchive& series_map() const;
+  inline ::TSCH::Generated::ChartSeriesGenericPropertyMapArchive* mutable_series_map();
+  inline ::TSCH::Generated::ChartSeriesGenericPropertyMapArchive* release_series_map();
+  inline void set_allocated_series_map(::TSCH::Generated::ChartSeriesGenericPropertyMapArchive* series_map);
+
+  // @@protoc_insertion_point(class_scope:TSCH.CommandMutatePropertiesArchive.GenericPropertyDeltaMap.GenericMapUnion)
+ private:
+  inline void set_has_chart_map();
+  inline void clear_has_chart_map();
+  inline void set_has_legend_map();
+  inline void clear_has_legend_map();
+  inline void set_has_axis_map();
+  inline void clear_has_axis_map();
+  inline void set_has_series_map();
+  inline void clear_has_series_map();
+
+  ::google::protobuf::UnknownFieldSet _unknown_fields_;
+
+  ::TSCH::Generated::ChartGenericPropertyMapArchive* chart_map_;
+  ::TSCH::Generated::LegendGenericPropertyMapArchive* legend_map_;
+  ::TSCH::Generated::ChartAxisGenericPropertyMapArchive* axis_map_;
+  ::TSCH::Generated::ChartSeriesGenericPropertyMapArchive* series_map_;
+
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 _has_bits_[(4 + 31) / 32];
+
+  friend void  protobuf_AddDesc_TSCHCommandArchives_2eproto();
+  friend void protobuf_AssignDesc_TSCHCommandArchives_2eproto();
+  friend void protobuf_ShutdownFile_TSCHCommandArchives_2eproto();
+
+  void InitAsDefaultInstance();
+  static CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion* default_instance_;
+};
+// -------------------------------------------------------------------
+
+class CommandMutatePropertiesArchive_GenericPropertyDeltaMap : public ::google::protobuf::Message {
+ public:
+  CommandMutatePropertiesArchive_GenericPropertyDeltaMap();
+  virtual ~CommandMutatePropertiesArchive_GenericPropertyDeltaMap();
+
+  CommandMutatePropertiesArchive_GenericPropertyDeltaMap(const CommandMutatePropertiesArchive_GenericPropertyDeltaMap& from);
+
+  inline CommandMutatePropertiesArchive_GenericPropertyDeltaMap& operator=(const CommandMutatePropertiesArchive_GenericPropertyDeltaMap& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _unknown_fields_;
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return &_unknown_fields_;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const CommandMutatePropertiesArchive_GenericPropertyDeltaMap& default_instance();
+
+  void Swap(CommandMutatePropertiesArchive_GenericPropertyDeltaMap* other);
+
+  // implements Message ----------------------------------------------
+
+  CommandMutatePropertiesArchive_GenericPropertyDeltaMap* New() const;
+  void CopyFrom(const ::google::protobuf::Message& from);
+  void MergeFrom(const ::google::protobuf::Message& from);
+  void CopyFrom(const CommandMutatePropertiesArchive_GenericPropertyDeltaMap& from);
+  void MergeFrom(const CommandMutatePropertiesArchive_GenericPropertyDeltaMap& from);
+  void Clear();
+  bool IsInitialized() const;
+
+  int ByteSize() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const;
+
+  // nested types ----------------------------------------------------
+
+  typedef CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion GenericMapUnion;
+
+  // accessors -------------------------------------------------------
+
+  // optional .TSCH.StyleOwnerType style_owner_type = 1;
+  inline bool has_style_owner_type() const;
+  inline void clear_style_owner_type();
+  static const int kStyleOwnerTypeFieldNumber = 1;
+  inline ::TSCH::StyleOwnerType style_owner_type() const;
+  inline void set_style_owner_type(::TSCH::StyleOwnerType value);
+
+  // optional uint32 style_owner_index = 2;
+  inline bool has_style_owner_index() const;
+  inline void clear_style_owner_index();
+  static const int kStyleOwnerIndexFieldNumber = 2;
+  inline ::google::protobuf::uint32 style_owner_index() const;
+  inline void set_style_owner_index(::google::protobuf::uint32 value);
+
+  // optional .TSCH.CommandMutatePropertiesArchive.GenericPropertyDeltaMap.GenericMapUnion forward_map = 3;
+  inline bool has_forward_map() const;
+  inline void clear_forward_map();
+  static const int kForwardMapFieldNumber = 3;
+  inline const ::TSCH::CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion& forward_map() const;
+  inline ::TSCH::CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion* mutable_forward_map();
+  inline ::TSCH::CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion* release_forward_map();
+  inline void set_allocated_forward_map(::TSCH::CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion* forward_map);
+
+  // optional .TSCH.CommandMutatePropertiesArchive.GenericPropertyDeltaMap.GenericMapUnion reverse_map = 4;
+  inline bool has_reverse_map() const;
+  inline void clear_reverse_map();
+  static const int kReverseMapFieldNumber = 4;
+  inline const ::TSCH::CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion& reverse_map() const;
+  inline ::TSCH::CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion* mutable_reverse_map();
+  inline ::TSCH::CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion* release_reverse_map();
+  inline void set_allocated_reverse_map(::TSCH::CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion* reverse_map);
+
+  // @@protoc_insertion_point(class_scope:TSCH.CommandMutatePropertiesArchive.GenericPropertyDeltaMap)
+ private:
+  inline void set_has_style_owner_type();
+  inline void clear_has_style_owner_type();
+  inline void set_has_style_owner_index();
+  inline void clear_has_style_owner_index();
+  inline void set_has_forward_map();
+  inline void clear_has_forward_map();
+  inline void set_has_reverse_map();
+  inline void clear_has_reverse_map();
+
+  ::google::protobuf::UnknownFieldSet _unknown_fields_;
+
+  int style_owner_type_;
+  ::google::protobuf::uint32 style_owner_index_;
+  ::TSCH::CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion* forward_map_;
+  ::TSCH::CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion* reverse_map_;
+
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 _has_bits_[(4 + 31) / 32];
+
+  friend void  protobuf_AddDesc_TSCHCommandArchives_2eproto();
+  friend void protobuf_AssignDesc_TSCHCommandArchives_2eproto();
+  friend void protobuf_ShutdownFile_TSCHCommandArchives_2eproto();
+
+  void InitAsDefaultInstance();
+  static CommandMutatePropertiesArchive_GenericPropertyDeltaMap* default_instance_;
+};
+// -------------------------------------------------------------------
+
+class CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive : public ::google::protobuf::Message {
+ public:
+  CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive();
+  virtual ~CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive();
+
+  CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive(const CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive& from);
+
+  inline CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive& operator=(const CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _unknown_fields_;
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return &_unknown_fields_;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive& default_instance();
+
+  void Swap(CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive* other);
+
+  // implements Message ----------------------------------------------
+
+  CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive* New() const;
+  void CopyFrom(const ::google::protobuf::Message& from);
+  void MergeFrom(const ::google::protobuf::Message& from);
+  void CopyFrom(const CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive& from);
+  void MergeFrom(const CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive& from);
+  void Clear();
+  bool IsInitialized() const;
+
+  int ByteSize() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional .TSWP.CharacterStylePropertiesArchive char_properties = 1;
+  inline bool has_char_properties() const;
+  inline void clear_char_properties();
+  static const int kCharPropertiesFieldNumber = 1;
+  inline const ::TSWP::CharacterStylePropertiesArchive& char_properties() const;
+  inline ::TSWP::CharacterStylePropertiesArchive* mutable_char_properties();
+  inline ::TSWP::CharacterStylePropertiesArchive* release_char_properties();
+  inline void set_allocated_char_properties(::TSWP::CharacterStylePropertiesArchive* char_properties);
+
+  // optional .TSWP.ParagraphStylePropertiesArchive para_properties = 2;
+  inline bool has_para_properties() const;
+  inline void clear_para_properties();
+  static const int kParaPropertiesFieldNumber = 2;
+  inline const ::TSWP::ParagraphStylePropertiesArchive& para_properties() const;
+  inline ::TSWP::ParagraphStylePropertiesArchive* mutable_para_properties();
+  inline ::TSWP::ParagraphStylePropertiesArchive* release_para_properties();
+  inline void set_allocated_para_properties(::TSWP::ParagraphStylePropertiesArchive* para_properties);
+
+  // @@protoc_insertion_point(class_scope:TSCH.CommandMutatePropertiesArchive.ParagraphStyleDeltaMap.ParagraphStylePropertyMapArchive)
+ private:
+  inline void set_has_char_properties();
+  inline void clear_has_char_properties();
+  inline void set_has_para_properties();
+  inline void clear_has_para_properties();
+
+  ::google::protobuf::UnknownFieldSet _unknown_fields_;
+
+  ::TSWP::CharacterStylePropertiesArchive* char_properties_;
+  ::TSWP::ParagraphStylePropertiesArchive* para_properties_;
+
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 _has_bits_[(2 + 31) / 32];
+
+  friend void  protobuf_AddDesc_TSCHCommandArchives_2eproto();
+  friend void protobuf_AssignDesc_TSCHCommandArchives_2eproto();
+  friend void protobuf_ShutdownFile_TSCHCommandArchives_2eproto();
+
+  void InitAsDefaultInstance();
+  static CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive* default_instance_;
+};
+// -------------------------------------------------------------------
+
+class CommandMutatePropertiesArchive_ParagraphStyleDeltaMap : public ::google::protobuf::Message {
+ public:
+  CommandMutatePropertiesArchive_ParagraphStyleDeltaMap();
+  virtual ~CommandMutatePropertiesArchive_ParagraphStyleDeltaMap();
+
+  CommandMutatePropertiesArchive_ParagraphStyleDeltaMap(const CommandMutatePropertiesArchive_ParagraphStyleDeltaMap& from);
+
+  inline CommandMutatePropertiesArchive_ParagraphStyleDeltaMap& operator=(const CommandMutatePropertiesArchive_ParagraphStyleDeltaMap& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _unknown_fields_;
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return &_unknown_fields_;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const CommandMutatePropertiesArchive_ParagraphStyleDeltaMap& default_instance();
+
+  void Swap(CommandMutatePropertiesArchive_ParagraphStyleDeltaMap* other);
+
+  // implements Message ----------------------------------------------
+
+  CommandMutatePropertiesArchive_ParagraphStyleDeltaMap* New() const;
+  void CopyFrom(const ::google::protobuf::Message& from);
+  void MergeFrom(const ::google::protobuf::Message& from);
+  void CopyFrom(const CommandMutatePropertiesArchive_ParagraphStyleDeltaMap& from);
+  void MergeFrom(const CommandMutatePropertiesArchive_ParagraphStyleDeltaMap& from);
+  void Clear();
+  bool IsInitialized() const;
+
+  int ByteSize() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const;
+
+  // nested types ----------------------------------------------------
+
+  typedef CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive ParagraphStylePropertyMapArchive;
+
+  // accessors -------------------------------------------------------
+
+  // optional .TSCH.StyleOwnerType style_owner_type = 1;
+  inline bool has_style_owner_type() const;
+  inline void clear_style_owner_type();
+  static const int kStyleOwnerTypeFieldNumber = 1;
+  inline ::TSCH::StyleOwnerType style_owner_type() const;
+  inline void set_style_owner_type(::TSCH::StyleOwnerType value);
+
+  // optional uint32 style_owner_index = 2;
+  inline bool has_style_owner_index() const;
+  inline void clear_style_owner_index();
+  static const int kStyleOwnerIndexFieldNumber = 2;
+  inline ::google::protobuf::uint32 style_owner_index() const;
+  inline void set_style_owner_index(::google::protobuf::uint32 value);
+
+  // optional uint32 paragraph_style_index_property = 3;
+  inline bool has_paragraph_style_index_property() const;
+  inline void clear_paragraph_style_index_property();
+  static const int kParagraphStyleIndexPropertyFieldNumber = 3;
+  inline ::google::protobuf::uint32 paragraph_style_index_property() const;
+  inline void set_paragraph_style_index_property(::google::protobuf::uint32 value);
+
+  // optional .TSCH.CommandMutatePropertiesArchive.ParagraphStyleDeltaMap.ParagraphStylePropertyMapArchive forward_map = 4;
+  inline bool has_forward_map() const;
+  inline void clear_forward_map();
+  static const int kForwardMapFieldNumber = 4;
+  inline const ::TSCH::CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive& forward_map() const;
+  inline ::TSCH::CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive* mutable_forward_map();
+  inline ::TSCH::CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive* release_forward_map();
+  inline void set_allocated_forward_map(::TSCH::CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive* forward_map);
+
+  // optional .TSCH.CommandMutatePropertiesArchive.ParagraphStyleDeltaMap.ParagraphStylePropertyMapArchive reverse_map = 5;
+  inline bool has_reverse_map() const;
+  inline void clear_reverse_map();
+  static const int kReverseMapFieldNumber = 5;
+  inline const ::TSCH::CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive& reverse_map() const;
+  inline ::TSCH::CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive* mutable_reverse_map();
+  inline ::TSCH::CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive* release_reverse_map();
+  inline void set_allocated_reverse_map(::TSCH::CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive* reverse_map);
+
+  // @@protoc_insertion_point(class_scope:TSCH.CommandMutatePropertiesArchive.ParagraphStyleDeltaMap)
+ private:
+  inline void set_has_style_owner_type();
+  inline void clear_has_style_owner_type();
+  inline void set_has_style_owner_index();
+  inline void clear_has_style_owner_index();
+  inline void set_has_paragraph_style_index_property();
+  inline void clear_has_paragraph_style_index_property();
+  inline void set_has_forward_map();
+  inline void clear_has_forward_map();
+  inline void set_has_reverse_map();
+  inline void clear_has_reverse_map();
+
+  ::google::protobuf::UnknownFieldSet _unknown_fields_;
+
+  int style_owner_type_;
+  ::google::protobuf::uint32 style_owner_index_;
+  ::TSCH::CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive* forward_map_;
+  ::TSCH::CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive* reverse_map_;
+  ::google::protobuf::uint32 paragraph_style_index_property_;
+
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 _has_bits_[(5 + 31) / 32];
+
+  friend void  protobuf_AddDesc_TSCHCommandArchives_2eproto();
+  friend void protobuf_AssignDesc_TSCHCommandArchives_2eproto();
+  friend void protobuf_ShutdownFile_TSCHCommandArchives_2eproto();
+
+  void InitAsDefaultInstance();
+  static CommandMutatePropertiesArchive_ParagraphStyleDeltaMap* default_instance_;
+};
+// -------------------------------------------------------------------
+
+class CommandMutatePropertiesArchive : public ::google::protobuf::Message {
+ public:
+  CommandMutatePropertiesArchive();
+  virtual ~CommandMutatePropertiesArchive();
+
+  CommandMutatePropertiesArchive(const CommandMutatePropertiesArchive& from);
+
+  inline CommandMutatePropertiesArchive& operator=(const CommandMutatePropertiesArchive& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _unknown_fields_;
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return &_unknown_fields_;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const CommandMutatePropertiesArchive& default_instance();
+
+  void Swap(CommandMutatePropertiesArchive* other);
+
+  // implements Message ----------------------------------------------
+
+  CommandMutatePropertiesArchive* New() const;
+  void CopyFrom(const ::google::protobuf::Message& from);
+  void MergeFrom(const ::google::protobuf::Message& from);
+  void CopyFrom(const CommandMutatePropertiesArchive& from);
+  void MergeFrom(const CommandMutatePropertiesArchive& from);
+  void Clear();
+  bool IsInitialized() const;
+
+  int ByteSize() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const;
+
+  // nested types ----------------------------------------------------
+
+  typedef CommandMutatePropertiesArchive_GenericPropertyDeltaMap GenericPropertyDeltaMap;
+  typedef CommandMutatePropertiesArchive_ParagraphStyleDeltaMap ParagraphStyleDeltaMap;
+
+  // accessors -------------------------------------------------------
+
+  // required .TSCH.ChartCommandArchive super = 1;
+  inline bool has_super() const;
+  inline void clear_super();
+  static const int kSuperFieldNumber = 1;
+  inline const ::TSCH::ChartCommandArchive& super() const;
+  inline ::TSCH::ChartCommandArchive* mutable_super();
+  inline ::TSCH::ChartCommandArchive* release_super();
+  inline void set_allocated_super(::TSCH::ChartCommandArchive* super);
+
+  // optional .TSP.Reference rollback_cmd = 2;
+  inline bool has_rollback_cmd() const;
+  inline void clear_rollback_cmd();
+  static const int kRollbackCmdFieldNumber = 2;
+  inline const ::TSP::Reference& rollback_cmd() const;
+  inline ::TSP::Reference* mutable_rollback_cmd();
+  inline ::TSP::Reference* release_rollback_cmd();
+  inline void set_allocated_rollback_cmd(::TSP::Reference* rollback_cmd);
+
+  // repeated .TSCH.CommandMutatePropertiesArchive.GenericPropertyDeltaMap generic_property_delta_maps = 3;
+  inline int generic_property_delta_maps_size() const;
+  inline void clear_generic_property_delta_maps();
+  static const int kGenericPropertyDeltaMapsFieldNumber = 3;
+  inline const ::TSCH::CommandMutatePropertiesArchive_GenericPropertyDeltaMap& generic_property_delta_maps(int index) const;
+  inline ::TSCH::CommandMutatePropertiesArchive_GenericPropertyDeltaMap* mutable_generic_property_delta_maps(int index);
+  inline ::TSCH::CommandMutatePropertiesArchive_GenericPropertyDeltaMap* add_generic_property_delta_maps();
+  inline const ::google::protobuf::RepeatedPtrField< ::TSCH::CommandMutatePropertiesArchive_GenericPropertyDeltaMap >&
+      generic_property_delta_maps() const;
+  inline ::google::protobuf::RepeatedPtrField< ::TSCH::CommandMutatePropertiesArchive_GenericPropertyDeltaMap >*
+      mutable_generic_property_delta_maps();
+
+  // repeated .TSCH.CommandMutatePropertiesArchive.ParagraphStyleDeltaMap paragraph_style_delta_maps = 4;
+  inline int paragraph_style_delta_maps_size() const;
+  inline void clear_paragraph_style_delta_maps();
+  static const int kParagraphStyleDeltaMapsFieldNumber = 4;
+  inline const ::TSCH::CommandMutatePropertiesArchive_ParagraphStyleDeltaMap& paragraph_style_delta_maps(int index) const;
+  inline ::TSCH::CommandMutatePropertiesArchive_ParagraphStyleDeltaMap* mutable_paragraph_style_delta_maps(int index);
+  inline ::TSCH::CommandMutatePropertiesArchive_ParagraphStyleDeltaMap* add_paragraph_style_delta_maps();
+  inline const ::google::protobuf::RepeatedPtrField< ::TSCH::CommandMutatePropertiesArchive_ParagraphStyleDeltaMap >&
+      paragraph_style_delta_maps() const;
+  inline ::google::protobuf::RepeatedPtrField< ::TSCH::CommandMutatePropertiesArchive_ParagraphStyleDeltaMap >*
+      mutable_paragraph_style_delta_maps();
+
+  // @@protoc_insertion_point(class_scope:TSCH.CommandMutatePropertiesArchive)
+ private:
+  inline void set_has_super();
+  inline void clear_has_super();
+  inline void set_has_rollback_cmd();
+  inline void clear_has_rollback_cmd();
+
+  ::google::protobuf::UnknownFieldSet _unknown_fields_;
+
+  ::TSCH::ChartCommandArchive* super_;
+  ::TSP::Reference* rollback_cmd_;
+  ::google::protobuf::RepeatedPtrField< ::TSCH::CommandMutatePropertiesArchive_GenericPropertyDeltaMap > generic_property_delta_maps_;
+  ::google::protobuf::RepeatedPtrField< ::TSCH::CommandMutatePropertiesArchive_ParagraphStyleDeltaMap > paragraph_style_delta_maps_;
+
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 _has_bits_[(4 + 31) / 32];
+
+  friend void  protobuf_AddDesc_TSCHCommandArchives_2eproto();
+  friend void protobuf_AssignDesc_TSCHCommandArchives_2eproto();
+  friend void protobuf_ShutdownFile_TSCHCommandArchives_2eproto();
+
+  void InitAsDefaultInstance();
+  static CommandMutatePropertiesArchive* default_instance_;
+};
+// -------------------------------------------------------------------
+
+class CommandScaleAllTextArchive : public ::google::protobuf::Message {
+ public:
+  CommandScaleAllTextArchive();
+  virtual ~CommandScaleAllTextArchive();
+
+  CommandScaleAllTextArchive(const CommandScaleAllTextArchive& from);
+
+  inline CommandScaleAllTextArchive& operator=(const CommandScaleAllTextArchive& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _unknown_fields_;
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return &_unknown_fields_;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const CommandScaleAllTextArchive& default_instance();
+
+  void Swap(CommandScaleAllTextArchive* other);
+
+  // implements Message ----------------------------------------------
+
+  CommandScaleAllTextArchive* New() const;
+  void CopyFrom(const ::google::protobuf::Message& from);
+  void MergeFrom(const ::google::protobuf::Message& from);
+  void CopyFrom(const CommandScaleAllTextArchive& from);
+  void MergeFrom(const CommandScaleAllTextArchive& from);
+  void Clear();
+  bool IsInitialized() const;
+
+  int ByteSize() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // required .TSCH.ChartCommandArchive super = 1;
+  inline bool has_super() const;
+  inline void clear_super();
+  static const int kSuperFieldNumber = 1;
+  inline const ::TSCH::ChartCommandArchive& super() const;
+  inline ::TSCH::ChartCommandArchive* mutable_super();
+  inline ::TSCH::ChartCommandArchive* release_super();
+  inline void set_allocated_super(::TSCH::ChartCommandArchive* super);
+
+  // optional .TSP.Reference rollback_cmd = 2;
+  inline bool has_rollback_cmd() const;
+  inline void clear_rollback_cmd();
+  static const int kRollbackCmdFieldNumber = 2;
+  inline const ::TSP::Reference& rollback_cmd() const;
+  inline ::TSP::Reference* mutable_rollback_cmd();
+  inline ::TSP::Reference* release_rollback_cmd();
+  inline void set_allocated_rollback_cmd(::TSP::Reference* rollback_cmd);
+
+  // optional double scale_factor = 3;
+  inline bool has_scale_factor() const;
+  inline void clear_scale_factor();
+  static const int kScaleFactorFieldNumber = 3;
+  inline double scale_factor() const;
+  inline void set_scale_factor(double value);
+
+  // @@protoc_insertion_point(class_scope:TSCH.CommandScaleAllTextArchive)
+ private:
+  inline void set_has_super();
+  inline void clear_has_super();
+  inline void set_has_rollback_cmd();
+  inline void clear_has_rollback_cmd();
+  inline void set_has_scale_factor();
+  inline void clear_has_scale_factor();
+
+  ::google::protobuf::UnknownFieldSet _unknown_fields_;
+
+  ::TSCH::ChartCommandArchive* super_;
+  ::TSP::Reference* rollback_cmd_;
+  double scale_factor_;
+
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 _has_bits_[(3 + 31) / 32];
+
+  friend void  protobuf_AddDesc_TSCHCommandArchives_2eproto();
+  friend void protobuf_AssignDesc_TSCHCommandArchives_2eproto();
+  friend void protobuf_ShutdownFile_TSCHCommandArchives_2eproto();
+
+  void InitAsDefaultInstance();
+  static CommandScaleAllTextArchive* default_instance_;
+};
+// -------------------------------------------------------------------
+
+class CommandSetFontFamilyArchive : public ::google::protobuf::Message {
+ public:
+  CommandSetFontFamilyArchive();
+  virtual ~CommandSetFontFamilyArchive();
+
+  CommandSetFontFamilyArchive(const CommandSetFontFamilyArchive& from);
+
+  inline CommandSetFontFamilyArchive& operator=(const CommandSetFontFamilyArchive& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _unknown_fields_;
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return &_unknown_fields_;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const CommandSetFontFamilyArchive& default_instance();
+
+  void Swap(CommandSetFontFamilyArchive* other);
+
+  // implements Message ----------------------------------------------
+
+  CommandSetFontFamilyArchive* New() const;
+  void CopyFrom(const ::google::protobuf::Message& from);
+  void MergeFrom(const ::google::protobuf::Message& from);
+  void CopyFrom(const CommandSetFontFamilyArchive& from);
+  void MergeFrom(const CommandSetFontFamilyArchive& from);
+  void Clear();
+  bool IsInitialized() const;
+
+  int ByteSize() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // required .TSCH.ChartCommandArchive super = 1;
+  inline bool has_super() const;
+  inline void clear_super();
+  static const int kSuperFieldNumber = 1;
+  inline const ::TSCH::ChartCommandArchive& super() const;
+  inline ::TSCH::ChartCommandArchive* mutable_super();
+  inline ::TSCH::ChartCommandArchive* release_super();
+  inline void set_allocated_super(::TSCH::ChartCommandArchive* super);
+
+  // optional .TSP.Reference rollback_cmd = 2;
+  inline bool has_rollback_cmd() const;
+  inline void clear_rollback_cmd();
+  static const int kRollbackCmdFieldNumber = 2;
+  inline const ::TSP::Reference& rollback_cmd() const;
+  inline ::TSP::Reference* mutable_rollback_cmd();
+  inline ::TSP::Reference* release_rollback_cmd();
+  inline void set_allocated_rollback_cmd(::TSP::Reference* rollback_cmd);
+
+  // optional string new_font_family = 3;
+  inline bool has_new_font_family() const;
+  inline void clear_new_font_family();
+  static const int kNewFontFamilyFieldNumber = 3;
+  inline const ::std::string& new_font_family() const;
+  inline void set_new_font_family(const ::std::string& value);
+  inline void set_new_font_family(const char* value);
+  inline void set_new_font_family(const char* value, size_t size);
+  inline ::std::string* mutable_new_font_family();
+  inline ::std::string* release_new_font_family();
+  inline void set_allocated_new_font_family(::std::string* new_font_family);
+
+  // optional string old_font_family = 4;
+  inline bool has_old_font_family() const;
+  inline void clear_old_font_family();
+  static const int kOldFontFamilyFieldNumber = 4;
+  inline const ::std::string& old_font_family() const;
+  inline void set_old_font_family(const ::std::string& value);
+  inline void set_old_font_family(const char* value);
+  inline void set_old_font_family(const char* value, size_t size);
+  inline ::std::string* mutable_old_font_family();
+  inline ::std::string* release_old_font_family();
+  inline void set_allocated_old_font_family(::std::string* old_font_family);
+
+  // repeated .TSCH.CommandMutatePropertiesArchive.ParagraphStyleDeltaMap paragraph_style_delta_maps = 5;
+  inline int paragraph_style_delta_maps_size() const;
+  inline void clear_paragraph_style_delta_maps();
+  static const int kParagraphStyleDeltaMapsFieldNumber = 5;
+  inline const ::TSCH::CommandMutatePropertiesArchive_ParagraphStyleDeltaMap& paragraph_style_delta_maps(int index) const;
+  inline ::TSCH::CommandMutatePropertiesArchive_ParagraphStyleDeltaMap* mutable_paragraph_style_delta_maps(int index);
+  inline ::TSCH::CommandMutatePropertiesArchive_ParagraphStyleDeltaMap* add_paragraph_style_delta_maps();
+  inline const ::google::protobuf::RepeatedPtrField< ::TSCH::CommandMutatePropertiesArchive_ParagraphStyleDeltaMap >&
+      paragraph_style_delta_maps() const;
+  inline ::google::protobuf::RepeatedPtrField< ::TSCH::CommandMutatePropertiesArchive_ParagraphStyleDeltaMap >*
+      mutable_paragraph_style_delta_maps();
+
+  // @@protoc_insertion_point(class_scope:TSCH.CommandSetFontFamilyArchive)
+ private:
+  inline void set_has_super();
+  inline void clear_has_super();
+  inline void set_has_rollback_cmd();
+  inline void clear_has_rollback_cmd();
+  inline void set_has_new_font_family();
+  inline void clear_has_new_font_family();
+  inline void set_has_old_font_family();
+  inline void clear_has_old_font_family();
+
+  ::google::protobuf::UnknownFieldSet _unknown_fields_;
+
+  ::TSCH::ChartCommandArchive* super_;
+  ::TSP::Reference* rollback_cmd_;
+  ::std::string* new_font_family_;
+  ::std::string* old_font_family_;
+  ::google::protobuf::RepeatedPtrField< ::TSCH::CommandMutatePropertiesArchive_ParagraphStyleDeltaMap > paragraph_style_delta_maps_;
+
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 _has_bits_[(5 + 31) / 32];
+
+  friend void  protobuf_AddDesc_TSCHCommandArchives_2eproto();
+  friend void protobuf_AssignDesc_TSCHCommandArchives_2eproto();
+  friend void protobuf_ShutdownFile_TSCHCommandArchives_2eproto();
+
+  void InitAsDefaultInstance();
+  static CommandSetFontFamilyArchive* default_instance_;
+};
+// -------------------------------------------------------------------
+
+class CommandApplyFillSetArchive_CapturedFillSetArchive : public ::google::protobuf::Message {
+ public:
+  CommandApplyFillSetArchive_CapturedFillSetArchive();
+  virtual ~CommandApplyFillSetArchive_CapturedFillSetArchive();
+
+  CommandApplyFillSetArchive_CapturedFillSetArchive(const CommandApplyFillSetArchive_CapturedFillSetArchive& from);
+
+  inline CommandApplyFillSetArchive_CapturedFillSetArchive& operator=(const CommandApplyFillSetArchive_CapturedFillSetArchive& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _unknown_fields_;
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return &_unknown_fields_;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const CommandApplyFillSetArchive_CapturedFillSetArchive& default_instance();
+
+  void Swap(CommandApplyFillSetArchive_CapturedFillSetArchive* other);
+
+  // implements Message ----------------------------------------------
+
+  CommandApplyFillSetArchive_CapturedFillSetArchive* New() const;
+  void CopyFrom(const ::google::protobuf::Message& from);
+  void MergeFrom(const ::google::protobuf::Message& from);
+  void CopyFrom(const CommandApplyFillSetArchive_CapturedFillSetArchive& from);
+  void MergeFrom(const CommandApplyFillSetArchive_CapturedFillSetArchive& from);
+  void Clear();
+  bool IsInitialized() const;
+
+  int ByteSize() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional string identifier = 1;
+  inline bool has_identifier() const;
+  inline void clear_identifier();
+  static const int kIdentifierFieldNumber = 1;
+  inline const ::std::string& identifier() const;
+  inline void set_identifier(const ::std::string& value);
+  inline void set_identifier(const char* value);
+  inline void set_identifier(const char* value, size_t size);
+  inline ::std::string* mutable_identifier();
+  inline ::std::string* release_identifier();
+  inline void set_allocated_identifier(::std::string* identifier);
+
+  // optional uint32 number_of_theme_series_styles = 2;
+  inline bool has_number_of_theme_series_styles() const;
+  inline void clear_number_of_theme_series_styles();
+  static const int kNumberOfThemeSeriesStylesFieldNumber = 2;
+  inline ::google::protobuf::uint32 number_of_theme_series_styles() const;
+  inline void set_number_of_theme_series_styles(::google::protobuf::uint32 value);
+
+  // repeated .TSCH.ChartSeriesStyleArchive property_maps = 3;
+  inline int property_maps_size() const;
+  inline void clear_property_maps();
+  static const int kPropertyMapsFieldNumber = 3;
+  inline const ::TSCH::ChartSeriesStyleArchive& property_maps(int index) const;
+  inline ::TSCH::ChartSeriesStyleArchive* mutable_property_maps(int index);
+  inline ::TSCH::ChartSeriesStyleArchive* add_property_maps();
+  inline const ::google::protobuf::RepeatedPtrField< ::TSCH::ChartSeriesStyleArchive >&
+      property_maps() const;
+  inline ::google::protobuf::RepeatedPtrField< ::TSCH::ChartSeriesStyleArchive >*
+      mutable_property_maps();
+
+  // @@protoc_insertion_point(class_scope:TSCH.CommandApplyFillSetArchive.CapturedFillSetArchive)
+ private:
+  inline void set_has_identifier();
+  inline void clear_has_identifier();
+  inline void set_has_number_of_theme_series_styles();
+  inline void clear_has_number_of_theme_series_styles();
+
+  ::google::protobuf::UnknownFieldSet _unknown_fields_;
+
+  ::std::string* identifier_;
+  ::google::protobuf::RepeatedPtrField< ::TSCH::ChartSeriesStyleArchive > property_maps_;
+  ::google::protobuf::uint32 number_of_theme_series_styles_;
+
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 _has_bits_[(3 + 31) / 32];
+
+  friend void  protobuf_AddDesc_TSCHCommandArchives_2eproto();
+  friend void protobuf_AssignDesc_TSCHCommandArchives_2eproto();
+  friend void protobuf_ShutdownFile_TSCHCommandArchives_2eproto();
+
+  void InitAsDefaultInstance();
+  static CommandApplyFillSetArchive_CapturedFillSetArchive* default_instance_;
+};
+// -------------------------------------------------------------------
+
+class CommandApplyFillSetArchive : public ::google::protobuf::Message {
+ public:
+  CommandApplyFillSetArchive();
+  virtual ~CommandApplyFillSetArchive();
+
+  CommandApplyFillSetArchive(const CommandApplyFillSetArchive& from);
+
+  inline CommandApplyFillSetArchive& operator=(const CommandApplyFillSetArchive& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _unknown_fields_;
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return &_unknown_fields_;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const CommandApplyFillSetArchive& default_instance();
+
+  void Swap(CommandApplyFillSetArchive* other);
+
+  // implements Message ----------------------------------------------
+
+  CommandApplyFillSetArchive* New() const;
+  void CopyFrom(const ::google::protobuf::Message& from);
+  void MergeFrom(const ::google::protobuf::Message& from);
+  void CopyFrom(const CommandApplyFillSetArchive& from);
+  void MergeFrom(const CommandApplyFillSetArchive& from);
+  void Clear();
+  bool IsInitialized() const;
+
+  int ByteSize() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const;
+
+  // nested types ----------------------------------------------------
+
+  typedef CommandApplyFillSetArchive_CapturedFillSetArchive CapturedFillSetArchive;
+
+  // accessors -------------------------------------------------------
+
+  // required .TSCH.ChartCommandArchive super = 1;
+  inline bool has_super() const;
+  inline void clear_super();
+  static const int kSuperFieldNumber = 1;
+  inline const ::TSCH::ChartCommandArchive& super() const;
+  inline ::TSCH::ChartCommandArchive* mutable_super();
+  inline ::TSCH::ChartCommandArchive* release_super();
+  inline void set_allocated_super(::TSCH::ChartCommandArchive* super);
+
+  // optional .TSP.Reference rollback_cmd = 2;
+  inline bool has_rollback_cmd() const;
+  inline void clear_rollback_cmd();
+  static const int kRollbackCmdFieldNumber = 2;
+  inline const ::TSP::Reference& rollback_cmd() const;
+  inline ::TSP::Reference* mutable_rollback_cmd();
+  inline ::TSP::Reference* release_rollback_cmd();
+  inline void set_allocated_rollback_cmd(::TSP::Reference* rollback_cmd);
+
+  // optional string fwd_fill_set_lookup_string = 3;
+  inline bool has_fwd_fill_set_lookup_string() const;
+  inline void clear_fwd_fill_set_lookup_string();
+  static const int kFwdFillSetLookupStringFieldNumber = 3;
+  inline const ::std::string& fwd_fill_set_lookup_string() const;
+  inline void set_fwd_fill_set_lookup_string(const ::std::string& value);
+  inline void set_fwd_fill_set_lookup_string(const char* value);
+  inline void set_fwd_fill_set_lookup_string(const char* value, size_t size);
+  inline ::std::string* mutable_fwd_fill_set_lookup_string();
+  inline ::std::string* release_fwd_fill_set_lookup_string();
+  inline void set_allocated_fwd_fill_set_lookup_string(::std::string* fwd_fill_set_lookup_string);
+
+  // optional string rev_fill_set_lookup_string = 4;
+  inline bool has_rev_fill_set_lookup_string() const;
+  inline void clear_rev_fill_set_lookup_string();
+  static const int kRevFillSetLookupStringFieldNumber = 4;
+  inline const ::std::string& rev_fill_set_lookup_string() const;
+  inline void set_rev_fill_set_lookup_string(const ::std::string& value);
+  inline void set_rev_fill_set_lookup_string(const char* value);
+  inline void set_rev_fill_set_lookup_string(const char* value, size_t size);
+  inline ::std::string* mutable_rev_fill_set_lookup_string();
+  inline ::std::string* release_rev_fill_set_lookup_string();
+  inline void set_allocated_rev_fill_set_lookup_string(::std::string* rev_fill_set_lookup_string);
+
+  // optional .TSCH.CommandApplyFillSetArchive.CapturedFillSetArchive fwd_captured_fill_set = 5;
+  inline bool has_fwd_captured_fill_set() const;
+  inline void clear_fwd_captured_fill_set();
+  static const int kFwdCapturedFillSetFieldNumber = 5;
+  inline const ::TSCH::CommandApplyFillSetArchive_CapturedFillSetArchive& fwd_captured_fill_set() const;
+  inline ::TSCH::CommandApplyFillSetArchive_CapturedFillSetArchive* mutable_fwd_captured_fill_set();
+  inline ::TSCH::CommandApplyFillSetArchive_CapturedFillSetArchive* release_fwd_captured_fill_set();
+  inline void set_allocated_fwd_captured_fill_set(::TSCH::CommandApplyFillSetArchive_CapturedFillSetArchive* fwd_captured_fill_set);
+
+  // optional .TSCH.CommandApplyFillSetArchive.CapturedFillSetArchive rev_captured_fill_set = 6;
+  inline bool has_rev_captured_fill_set() const;
+  inline void clear_rev_captured_fill_set();
+  static const int kRevCapturedFillSetFieldNumber = 6;
+  inline const ::TSCH::CommandApplyFillSetArchive_CapturedFillSetArchive& rev_captured_fill_set() const;
+  inline ::TSCH::CommandApplyFillSetArchive_CapturedFillSetArchive* mutable_rev_captured_fill_set();
+  inline ::TSCH::CommandApplyFillSetArchive_CapturedFillSetArchive* release_rev_captured_fill_set();
+  inline void set_allocated_rev_captured_fill_set(::TSCH::CommandApplyFillSetArchive_CapturedFillSetArchive* rev_captured_fill_set);
+
+  // optional string rev_last_applied_fill_set_lookup_string = 7;
+  inline bool has_rev_last_applied_fill_set_lookup_string() const;
+  inline void clear_rev_last_applied_fill_set_lookup_string();
+  static const int kRevLastAppliedFillSetLookupStringFieldNumber = 7;
+  inline const ::std::string& rev_last_applied_fill_set_lookup_string() const;
+  inline void set_rev_last_applied_fill_set_lookup_string(const ::std::string& value);
+  inline void set_rev_last_applied_fill_set_lookup_string(const char* value);
+  inline void set_rev_last_applied_fill_set_lookup_string(const char* value, size_t size);
+  inline ::std::string* mutable_rev_last_applied_fill_set_lookup_string();
+  inline ::std::string* release_rev_last_applied_fill_set_lookup_string();
+  inline void set_allocated_rev_last_applied_fill_set_lookup_string(::std::string* rev_last_applied_fill_set_lookup_string);
+
+  // @@protoc_insertion_point(class_scope:TSCH.CommandApplyFillSetArchive)
+ private:
+  inline void set_has_super();
+  inline void clear_has_super();
+  inline void set_has_rollback_cmd();
+  inline void clear_has_rollback_cmd();
+  inline void set_has_fwd_fill_set_lookup_string();
+  inline void clear_has_fwd_fill_set_lookup_string();
+  inline void set_has_rev_fill_set_lookup_string();
+  inline void clear_has_rev_fill_set_lookup_string();
+  inline void set_has_fwd_captured_fill_set();
+  inline void clear_has_fwd_captured_fill_set();
+  inline void set_has_rev_captured_fill_set();
+  inline void clear_has_rev_captured_fill_set();
+  inline void set_has_rev_last_applied_fill_set_lookup_string();
+  inline void clear_has_rev_last_applied_fill_set_lookup_string();
+
+  ::google::protobuf::UnknownFieldSet _unknown_fields_;
+
+  ::TSCH::ChartCommandArchive* super_;
+  ::TSP::Reference* rollback_cmd_;
+  ::std::string* fwd_fill_set_lookup_string_;
+  ::std::string* rev_fill_set_lookup_string_;
+  ::TSCH::CommandApplyFillSetArchive_CapturedFillSetArchive* fwd_captured_fill_set_;
+  ::TSCH::CommandApplyFillSetArchive_CapturedFillSetArchive* rev_captured_fill_set_;
+  ::std::string* rev_last_applied_fill_set_lookup_string_;
+
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 _has_bits_[(7 + 31) / 32];
+
+  friend void  protobuf_AddDesc_TSCHCommandArchives_2eproto();
+  friend void protobuf_AssignDesc_TSCHCommandArchives_2eproto();
+  friend void protobuf_ShutdownFile_TSCHCommandArchives_2eproto();
+
+  void InitAsDefaultInstance();
+  static CommandApplyFillSetArchive* default_instance_;
 };
 // -------------------------------------------------------------------
 
@@ -1016,6 +1986,22 @@ class CommandAddGridRowsArchive : public ::google::protobuf::Message {
   inline const ::google::protobuf::RepeatedPtrField< ::std::string>& name() const;
   inline ::google::protobuf::RepeatedPtrField< ::std::string>* mutable_name();
 
+  // repeated string ids = 5;
+  inline int ids_size() const;
+  inline void clear_ids();
+  static const int kIdsFieldNumber = 5;
+  inline const ::std::string& ids(int index) const;
+  inline ::std::string* mutable_ids(int index);
+  inline void set_ids(int index, const ::std::string& value);
+  inline void set_ids(int index, const char* value);
+  inline void set_ids(int index, const char* value, size_t size);
+  inline ::std::string* add_ids();
+  inline void add_ids(const ::std::string& value);
+  inline void add_ids(const char* value);
+  inline void add_ids(const char* value, size_t size);
+  inline const ::google::protobuf::RepeatedPtrField< ::std::string>& ids() const;
+  inline ::google::protobuf::RepeatedPtrField< ::std::string>* mutable_ids();
+
   // @@protoc_insertion_point(class_scope:TSCH.CommandAddGridRowsArchive)
  private:
   inline void set_has_super();
@@ -1031,9 +2017,10 @@ class CommandAddGridRowsArchive : public ::google::protobuf::Message {
   ::google::protobuf::uint32 location_;
   ::google::protobuf::uint32 length_;
   ::google::protobuf::RepeatedPtrField< ::std::string> name_;
+  ::google::protobuf::RepeatedPtrField< ::std::string> ids_;
 
   mutable int _cached_size_;
-  ::google::protobuf::uint32 _has_bits_[(4 + 31) / 32];
+  ::google::protobuf::uint32 _has_bits_[(5 + 31) / 32];
 
   friend void  protobuf_AddDesc_TSCHCommandArchives_2eproto();
   friend void protobuf_AssignDesc_TSCHCommandArchives_2eproto();
@@ -1137,6 +2124,22 @@ class CommandAddGridColumnsArchive : public ::google::protobuf::Message {
   inline const ::google::protobuf::RepeatedPtrField< ::std::string>& name() const;
   inline ::google::protobuf::RepeatedPtrField< ::std::string>* mutable_name();
 
+  // repeated string ids = 5;
+  inline int ids_size() const;
+  inline void clear_ids();
+  static const int kIdsFieldNumber = 5;
+  inline const ::std::string& ids(int index) const;
+  inline ::std::string* mutable_ids(int index);
+  inline void set_ids(int index, const ::std::string& value);
+  inline void set_ids(int index, const char* value);
+  inline void set_ids(int index, const char* value, size_t size);
+  inline ::std::string* add_ids();
+  inline void add_ids(const ::std::string& value);
+  inline void add_ids(const char* value);
+  inline void add_ids(const char* value, size_t size);
+  inline const ::google::protobuf::RepeatedPtrField< ::std::string>& ids() const;
+  inline ::google::protobuf::RepeatedPtrField< ::std::string>* mutable_ids();
+
   // @@protoc_insertion_point(class_scope:TSCH.CommandAddGridColumnsArchive)
  private:
   inline void set_has_super();
@@ -1152,9 +2155,10 @@ class CommandAddGridColumnsArchive : public ::google::protobuf::Message {
   ::google::protobuf::uint32 location_;
   ::google::protobuf::uint32 length_;
   ::google::protobuf::RepeatedPtrField< ::std::string> name_;
+  ::google::protobuf::RepeatedPtrField< ::std::string> ids_;
 
   mutable int _cached_size_;
-  ::google::protobuf::uint32 _has_bits_[(4 + 31) / 32];
+  ::google::protobuf::uint32 _has_bits_[(5 + 31) / 32];
 
   friend void  protobuf_AddDesc_TSCHCommandArchives_2eproto();
   friend void protobuf_AssignDesc_TSCHCommandArchives_2eproto();
@@ -1608,6 +2612,45 @@ class CommandDeleteGridRowsArchive : public ::google::protobuf::Message {
   inline const ::google::protobuf::RepeatedPtrField< ::std::string>& column_names() const;
   inline ::google::protobuf::RepeatedPtrField< ::std::string>* mutable_column_names();
 
+  // repeated string row_ids = 9;
+  inline int row_ids_size() const;
+  inline void clear_row_ids();
+  static const int kRowIdsFieldNumber = 9;
+  inline const ::std::string& row_ids(int index) const;
+  inline ::std::string* mutable_row_ids(int index);
+  inline void set_row_ids(int index, const ::std::string& value);
+  inline void set_row_ids(int index, const char* value);
+  inline void set_row_ids(int index, const char* value, size_t size);
+  inline ::std::string* add_row_ids();
+  inline void add_row_ids(const ::std::string& value);
+  inline void add_row_ids(const char* value);
+  inline void add_row_ids(const char* value, size_t size);
+  inline const ::google::protobuf::RepeatedPtrField< ::std::string>& row_ids() const;
+  inline ::google::protobuf::RepeatedPtrField< ::std::string>* mutable_row_ids();
+
+  // repeated string column_ids = 10;
+  inline int column_ids_size() const;
+  inline void clear_column_ids();
+  static const int kColumnIdsFieldNumber = 10;
+  inline const ::std::string& column_ids(int index) const;
+  inline ::std::string* mutable_column_ids(int index);
+  inline void set_column_ids(int index, const ::std::string& value);
+  inline void set_column_ids(int index, const char* value);
+  inline void set_column_ids(int index, const char* value, size_t size);
+  inline ::std::string* add_column_ids();
+  inline void add_column_ids(const ::std::string& value);
+  inline void add_column_ids(const char* value);
+  inline void add_column_ids(const char* value, size_t size);
+  inline const ::google::protobuf::RepeatedPtrField< ::std::string>& column_ids() const;
+  inline ::google::protobuf::RepeatedPtrField< ::std::string>* mutable_column_ids();
+
+  // required bool add_dummy_data_on_delete_all = 11;
+  inline bool has_add_dummy_data_on_delete_all() const;
+  inline void clear_add_dummy_data_on_delete_all();
+  static const int kAddDummyDataOnDeleteAllFieldNumber = 11;
+  inline bool add_dummy_data_on_delete_all() const;
+  inline void set_add_dummy_data_on_delete_all(bool value);
+
   // @@protoc_insertion_point(class_scope:TSCH.CommandDeleteGridRowsArchive)
  private:
   inline void set_has_super();
@@ -1618,6 +2661,8 @@ class CommandDeleteGridRowsArchive : public ::google::protobuf::Message {
   inline void clear_has_length();
   inline void set_has_removed_all_rows();
   inline void clear_has_removed_all_rows();
+  inline void set_has_add_dummy_data_on_delete_all();
+  inline void clear_has_add_dummy_data_on_delete_all();
 
   ::google::protobuf::UnknownFieldSet _unknown_fields_;
 
@@ -1627,10 +2672,13 @@ class CommandDeleteGridRowsArchive : public ::google::protobuf::Message {
   ::google::protobuf::RepeatedPtrField< ::std::string> names_;
   ::google::protobuf::RepeatedPtrField< ::TSCH::CommandDeleteGridRowsArchive_ValueRow > value_row_;
   ::google::protobuf::RepeatedPtrField< ::std::string> column_names_;
+  ::google::protobuf::RepeatedPtrField< ::std::string> row_ids_;
+  ::google::protobuf::RepeatedPtrField< ::std::string> column_ids_;
   bool removed_all_rows_;
+  bool add_dummy_data_on_delete_all_;
 
   mutable int _cached_size_;
-  ::google::protobuf::uint32 _has_bits_[(7 + 31) / 32];
+  ::google::protobuf::uint32 _has_bits_[(10 + 31) / 32];
 
   friend void  protobuf_AddDesc_TSCHCommandArchives_2eproto();
   friend void protobuf_AssignDesc_TSCHCommandArchives_2eproto();
@@ -1856,6 +2904,45 @@ class CommandDeleteGridColumnsArchive : public ::google::protobuf::Message {
   inline const ::google::protobuf::RepeatedPtrField< ::std::string>& row_names() const;
   inline ::google::protobuf::RepeatedPtrField< ::std::string>* mutable_row_names();
 
+  // repeated string row_ids = 9;
+  inline int row_ids_size() const;
+  inline void clear_row_ids();
+  static const int kRowIdsFieldNumber = 9;
+  inline const ::std::string& row_ids(int index) const;
+  inline ::std::string* mutable_row_ids(int index);
+  inline void set_row_ids(int index, const ::std::string& value);
+  inline void set_row_ids(int index, const char* value);
+  inline void set_row_ids(int index, const char* value, size_t size);
+  inline ::std::string* add_row_ids();
+  inline void add_row_ids(const ::std::string& value);
+  inline void add_row_ids(const char* value);
+  inline void add_row_ids(const char* value, size_t size);
+  inline const ::google::protobuf::RepeatedPtrField< ::std::string>& row_ids() const;
+  inline ::google::protobuf::RepeatedPtrField< ::std::string>* mutable_row_ids();
+
+  // repeated string column_ids = 10;
+  inline int column_ids_size() const;
+  inline void clear_column_ids();
+  static const int kColumnIdsFieldNumber = 10;
+  inline const ::std::string& column_ids(int index) const;
+  inline ::std::string* mutable_column_ids(int index);
+  inline void set_column_ids(int index, const ::std::string& value);
+  inline void set_column_ids(int index, const char* value);
+  inline void set_column_ids(int index, const char* value, size_t size);
+  inline ::std::string* add_column_ids();
+  inline void add_column_ids(const ::std::string& value);
+  inline void add_column_ids(const char* value);
+  inline void add_column_ids(const char* value, size_t size);
+  inline const ::google::protobuf::RepeatedPtrField< ::std::string>& column_ids() const;
+  inline ::google::protobuf::RepeatedPtrField< ::std::string>* mutable_column_ids();
+
+  // required bool add_dummy_data_on_delete_all = 11;
+  inline bool has_add_dummy_data_on_delete_all() const;
+  inline void clear_add_dummy_data_on_delete_all();
+  static const int kAddDummyDataOnDeleteAllFieldNumber = 11;
+  inline bool add_dummy_data_on_delete_all() const;
+  inline void set_add_dummy_data_on_delete_all(bool value);
+
   // @@protoc_insertion_point(class_scope:TSCH.CommandDeleteGridColumnsArchive)
  private:
   inline void set_has_super();
@@ -1866,6 +2953,8 @@ class CommandDeleteGridColumnsArchive : public ::google::protobuf::Message {
   inline void clear_has_length();
   inline void set_has_removed_all_columns();
   inline void clear_has_removed_all_columns();
+  inline void set_has_add_dummy_data_on_delete_all();
+  inline void clear_has_add_dummy_data_on_delete_all();
 
   ::google::protobuf::UnknownFieldSet _unknown_fields_;
 
@@ -1875,10 +2964,13 @@ class CommandDeleteGridColumnsArchive : public ::google::protobuf::Message {
   ::google::protobuf::RepeatedPtrField< ::std::string> names_;
   ::google::protobuf::RepeatedPtrField< ::TSCH::CommandDeleteGridColumnsArchive_ValueRow > value_row_;
   ::google::protobuf::RepeatedPtrField< ::std::string> row_names_;
+  ::google::protobuf::RepeatedPtrField< ::std::string> row_ids_;
+  ::google::protobuf::RepeatedPtrField< ::std::string> column_ids_;
   bool removed_all_columns_;
+  bool add_dummy_data_on_delete_all_;
 
   mutable int _cached_size_;
-  ::google::protobuf::uint32 _has_bits_[(7 + 31) / 32];
+  ::google::protobuf::uint32 _has_bits_[(10 + 31) / 32];
 
   friend void  protobuf_AddDesc_TSCHCommandArchives_2eproto();
   friend void protobuf_AssignDesc_TSCHCommandArchives_2eproto();
@@ -3710,6 +4802,38 @@ class CommandReplaceGridValuesArchive : public ::google::protobuf::Message {
   inline ::google::protobuf::uint32 cols_to_add() const;
   inline void set_cols_to_add(::google::protobuf::uint32 value);
 
+  // repeated string row_ids = 12;
+  inline int row_ids_size() const;
+  inline void clear_row_ids();
+  static const int kRowIdsFieldNumber = 12;
+  inline const ::std::string& row_ids(int index) const;
+  inline ::std::string* mutable_row_ids(int index);
+  inline void set_row_ids(int index, const ::std::string& value);
+  inline void set_row_ids(int index, const char* value);
+  inline void set_row_ids(int index, const char* value, size_t size);
+  inline ::std::string* add_row_ids();
+  inline void add_row_ids(const ::std::string& value);
+  inline void add_row_ids(const char* value);
+  inline void add_row_ids(const char* value, size_t size);
+  inline const ::google::protobuf::RepeatedPtrField< ::std::string>& row_ids() const;
+  inline ::google::protobuf::RepeatedPtrField< ::std::string>* mutable_row_ids();
+
+  // repeated string column_ids = 13;
+  inline int column_ids_size() const;
+  inline void clear_column_ids();
+  static const int kColumnIdsFieldNumber = 13;
+  inline const ::std::string& column_ids(int index) const;
+  inline ::std::string* mutable_column_ids(int index);
+  inline void set_column_ids(int index, const ::std::string& value);
+  inline void set_column_ids(int index, const char* value);
+  inline void set_column_ids(int index, const char* value, size_t size);
+  inline ::std::string* add_column_ids();
+  inline void add_column_ids(const ::std::string& value);
+  inline void add_column_ids(const char* value);
+  inline void add_column_ids(const char* value, size_t size);
+  inline const ::google::protobuf::RepeatedPtrField< ::std::string>& column_ids() const;
+  inline ::google::protobuf::RepeatedPtrField< ::std::string>* mutable_column_ids();
+
   // @@protoc_insertion_point(class_scope:TSCH.CommandReplaceGridValuesArchive)
  private:
   inline void set_has_super();
@@ -3736,9 +4860,11 @@ class CommandReplaceGridValuesArchive : public ::google::protobuf::Message {
   ::google::protobuf::RepeatedPtrField< ::std::string> new_col_names_;
   ::google::protobuf::uint32 rows_to_add_;
   ::google::protobuf::uint32 cols_to_add_;
+  ::google::protobuf::RepeatedPtrField< ::std::string> row_ids_;
+  ::google::protobuf::RepeatedPtrField< ::std::string> column_ids_;
 
   mutable int _cached_size_;
-  ::google::protobuf::uint32 _has_bits_[(11 + 31) / 32];
+  ::google::protobuf::uint32 _has_bits_[(13 + 31) / 32];
 
   friend void  protobuf_AddDesc_TSCHCommandArchives_2eproto();
   friend void protobuf_AssignDesc_TSCHCommandArchives_2eproto();
@@ -4075,6 +5201,516 @@ class CommandInvalidateWPCaches : public ::google::protobuf::Message {
   void InitAsDefaultInstance();
   static CommandInvalidateWPCaches* default_instance_;
 };
+// -------------------------------------------------------------------
+
+class CommandSetGridColumnNameArchive : public ::google::protobuf::Message {
+ public:
+  CommandSetGridColumnNameArchive();
+  virtual ~CommandSetGridColumnNameArchive();
+
+  CommandSetGridColumnNameArchive(const CommandSetGridColumnNameArchive& from);
+
+  inline CommandSetGridColumnNameArchive& operator=(const CommandSetGridColumnNameArchive& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _unknown_fields_;
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return &_unknown_fields_;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const CommandSetGridColumnNameArchive& default_instance();
+
+  void Swap(CommandSetGridColumnNameArchive* other);
+
+  // implements Message ----------------------------------------------
+
+  CommandSetGridColumnNameArchive* New() const;
+  void CopyFrom(const ::google::protobuf::Message& from);
+  void MergeFrom(const ::google::protobuf::Message& from);
+  void CopyFrom(const CommandSetGridColumnNameArchive& from);
+  void MergeFrom(const CommandSetGridColumnNameArchive& from);
+  void Clear();
+  bool IsInitialized() const;
+
+  int ByteSize() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // required .TSCH.ChartCommandArchive super = 1;
+  inline bool has_super() const;
+  inline void clear_super();
+  static const int kSuperFieldNumber = 1;
+  inline const ::TSCH::ChartCommandArchive& super() const;
+  inline ::TSCH::ChartCommandArchive* mutable_super();
+  inline ::TSCH::ChartCommandArchive* release_super();
+  inline void set_allocated_super(::TSCH::ChartCommandArchive* super);
+
+  // required uint32 columnindex = 2;
+  inline bool has_columnindex() const;
+  inline void clear_columnindex();
+  static const int kColumnindexFieldNumber = 2;
+  inline ::google::protobuf::uint32 columnindex() const;
+  inline void set_columnindex(::google::protobuf::uint32 value);
+
+  // required string oldvalue = 3;
+  inline bool has_oldvalue() const;
+  inline void clear_oldvalue();
+  static const int kOldvalueFieldNumber = 3;
+  inline const ::std::string& oldvalue() const;
+  inline void set_oldvalue(const ::std::string& value);
+  inline void set_oldvalue(const char* value);
+  inline void set_oldvalue(const char* value, size_t size);
+  inline ::std::string* mutable_oldvalue();
+  inline ::std::string* release_oldvalue();
+  inline void set_allocated_oldvalue(::std::string* oldvalue);
+
+  // required string newvalue = 4;
+  inline bool has_newvalue() const;
+  inline void clear_newvalue();
+  static const int kNewvalueFieldNumber = 4;
+  inline const ::std::string& newvalue() const;
+  inline void set_newvalue(const ::std::string& value);
+  inline void set_newvalue(const char* value);
+  inline void set_newvalue(const char* value, size_t size);
+  inline ::std::string* mutable_newvalue();
+  inline ::std::string* release_newvalue();
+  inline void set_allocated_newvalue(::std::string* newvalue);
+
+  // @@protoc_insertion_point(class_scope:TSCH.CommandSetGridColumnNameArchive)
+ private:
+  inline void set_has_super();
+  inline void clear_has_super();
+  inline void set_has_columnindex();
+  inline void clear_has_columnindex();
+  inline void set_has_oldvalue();
+  inline void clear_has_oldvalue();
+  inline void set_has_newvalue();
+  inline void clear_has_newvalue();
+
+  ::google::protobuf::UnknownFieldSet _unknown_fields_;
+
+  ::TSCH::ChartCommandArchive* super_;
+  ::std::string* oldvalue_;
+  ::std::string* newvalue_;
+  ::google::protobuf::uint32 columnindex_;
+
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 _has_bits_[(4 + 31) / 32];
+
+  friend void  protobuf_AddDesc_TSCHCommandArchives_2eproto();
+  friend void protobuf_AssignDesc_TSCHCommandArchives_2eproto();
+  friend void protobuf_ShutdownFile_TSCHCommandArchives_2eproto();
+
+  void InitAsDefaultInstance();
+  static CommandSetGridColumnNameArchive* default_instance_;
+};
+// -------------------------------------------------------------------
+
+class CommandSetGridRowNameArchive : public ::google::protobuf::Message {
+ public:
+  CommandSetGridRowNameArchive();
+  virtual ~CommandSetGridRowNameArchive();
+
+  CommandSetGridRowNameArchive(const CommandSetGridRowNameArchive& from);
+
+  inline CommandSetGridRowNameArchive& operator=(const CommandSetGridRowNameArchive& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _unknown_fields_;
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return &_unknown_fields_;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const CommandSetGridRowNameArchive& default_instance();
+
+  void Swap(CommandSetGridRowNameArchive* other);
+
+  // implements Message ----------------------------------------------
+
+  CommandSetGridRowNameArchive* New() const;
+  void CopyFrom(const ::google::protobuf::Message& from);
+  void MergeFrom(const ::google::protobuf::Message& from);
+  void CopyFrom(const CommandSetGridRowNameArchive& from);
+  void MergeFrom(const CommandSetGridRowNameArchive& from);
+  void Clear();
+  bool IsInitialized() const;
+
+  int ByteSize() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // required .TSCH.ChartCommandArchive super = 1;
+  inline bool has_super() const;
+  inline void clear_super();
+  static const int kSuperFieldNumber = 1;
+  inline const ::TSCH::ChartCommandArchive& super() const;
+  inline ::TSCH::ChartCommandArchive* mutable_super();
+  inline ::TSCH::ChartCommandArchive* release_super();
+  inline void set_allocated_super(::TSCH::ChartCommandArchive* super);
+
+  // required uint32 rowindex = 2;
+  inline bool has_rowindex() const;
+  inline void clear_rowindex();
+  static const int kRowindexFieldNumber = 2;
+  inline ::google::protobuf::uint32 rowindex() const;
+  inline void set_rowindex(::google::protobuf::uint32 value);
+
+  // required string oldvalue = 3;
+  inline bool has_oldvalue() const;
+  inline void clear_oldvalue();
+  static const int kOldvalueFieldNumber = 3;
+  inline const ::std::string& oldvalue() const;
+  inline void set_oldvalue(const ::std::string& value);
+  inline void set_oldvalue(const char* value);
+  inline void set_oldvalue(const char* value, size_t size);
+  inline ::std::string* mutable_oldvalue();
+  inline ::std::string* release_oldvalue();
+  inline void set_allocated_oldvalue(::std::string* oldvalue);
+
+  // required string newvalue = 4;
+  inline bool has_newvalue() const;
+  inline void clear_newvalue();
+  static const int kNewvalueFieldNumber = 4;
+  inline const ::std::string& newvalue() const;
+  inline void set_newvalue(const ::std::string& value);
+  inline void set_newvalue(const char* value);
+  inline void set_newvalue(const char* value, size_t size);
+  inline ::std::string* mutable_newvalue();
+  inline ::std::string* release_newvalue();
+  inline void set_allocated_newvalue(::std::string* newvalue);
+
+  // @@protoc_insertion_point(class_scope:TSCH.CommandSetGridRowNameArchive)
+ private:
+  inline void set_has_super();
+  inline void clear_has_super();
+  inline void set_has_rowindex();
+  inline void clear_has_rowindex();
+  inline void set_has_oldvalue();
+  inline void clear_has_oldvalue();
+  inline void set_has_newvalue();
+  inline void clear_has_newvalue();
+
+  ::google::protobuf::UnknownFieldSet _unknown_fields_;
+
+  ::TSCH::ChartCommandArchive* super_;
+  ::std::string* oldvalue_;
+  ::std::string* newvalue_;
+  ::google::protobuf::uint32 rowindex_;
+
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 _has_bits_[(4 + 31) / 32];
+
+  friend void  protobuf_AddDesc_TSCHCommandArchives_2eproto();
+  friend void protobuf_AssignDesc_TSCHCommandArchives_2eproto();
+  friend void protobuf_ShutdownFile_TSCHCommandArchives_2eproto();
+
+  void InitAsDefaultInstance();
+  static CommandSetGridRowNameArchive* default_instance_;
+};
+// -------------------------------------------------------------------
+
+class CommandReplaceCustomFormatArchive_FormatObjectMutation : public ::google::protobuf::Message {
+ public:
+  CommandReplaceCustomFormatArchive_FormatObjectMutation();
+  virtual ~CommandReplaceCustomFormatArchive_FormatObjectMutation();
+
+  CommandReplaceCustomFormatArchive_FormatObjectMutation(const CommandReplaceCustomFormatArchive_FormatObjectMutation& from);
+
+  inline CommandReplaceCustomFormatArchive_FormatObjectMutation& operator=(const CommandReplaceCustomFormatArchive_FormatObjectMutation& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _unknown_fields_;
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return &_unknown_fields_;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const CommandReplaceCustomFormatArchive_FormatObjectMutation& default_instance();
+
+  void Swap(CommandReplaceCustomFormatArchive_FormatObjectMutation* other);
+
+  // implements Message ----------------------------------------------
+
+  CommandReplaceCustomFormatArchive_FormatObjectMutation* New() const;
+  void CopyFrom(const ::google::protobuf::Message& from);
+  void MergeFrom(const ::google::protobuf::Message& from);
+  void CopyFrom(const CommandReplaceCustomFormatArchive_FormatObjectMutation& from);
+  void MergeFrom(const CommandReplaceCustomFormatArchive_FormatObjectMutation& from);
+  void Clear();
+  bool IsInitialized() const;
+
+  int ByteSize() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional .TSCH.StyleOwnerType style_owner_type = 1;
+  inline bool has_style_owner_type() const;
+  inline void clear_style_owner_type();
+  static const int kStyleOwnerTypeFieldNumber = 1;
+  inline ::TSCH::StyleOwnerType style_owner_type() const;
+  inline void set_style_owner_type(::TSCH::StyleOwnerType value);
+
+  // optional uint32 style_owner_index = 2;
+  inline bool has_style_owner_index() const;
+  inline void clear_style_owner_index();
+  static const int kStyleOwnerIndexFieldNumber = 2;
+  inline ::google::protobuf::uint32 style_owner_index() const;
+  inline void set_style_owner_index(::google::protobuf::uint32 value);
+
+  // optional uint32 format_object_property = 3;
+  inline bool has_format_object_property() const;
+  inline void clear_format_object_property();
+  static const int kFormatObjectPropertyFieldNumber = 3;
+  inline ::google::protobuf::uint32 format_object_property() const;
+  inline void set_format_object_property(::google::protobuf::uint32 value);
+
+  // optional .TSK.FormatStructArchive format_object = 4;
+  inline bool has_format_object() const;
+  inline void clear_format_object();
+  static const int kFormatObjectFieldNumber = 4;
+  inline const ::TSK::FormatStructArchive& format_object() const;
+  inline ::TSK::FormatStructArchive* mutable_format_object();
+  inline ::TSK::FormatStructArchive* release_format_object();
+  inline void set_allocated_format_object(::TSK::FormatStructArchive* format_object);
+
+  // @@protoc_insertion_point(class_scope:TSCH.CommandReplaceCustomFormatArchive.FormatObjectMutation)
+ private:
+  inline void set_has_style_owner_type();
+  inline void clear_has_style_owner_type();
+  inline void set_has_style_owner_index();
+  inline void clear_has_style_owner_index();
+  inline void set_has_format_object_property();
+  inline void clear_has_format_object_property();
+  inline void set_has_format_object();
+  inline void clear_has_format_object();
+
+  ::google::protobuf::UnknownFieldSet _unknown_fields_;
+
+  int style_owner_type_;
+  ::google::protobuf::uint32 style_owner_index_;
+  ::TSK::FormatStructArchive* format_object_;
+  ::google::protobuf::uint32 format_object_property_;
+
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 _has_bits_[(4 + 31) / 32];
+
+  friend void  protobuf_AddDesc_TSCHCommandArchives_2eproto();
+  friend void protobuf_AssignDesc_TSCHCommandArchives_2eproto();
+  friend void protobuf_ShutdownFile_TSCHCommandArchives_2eproto();
+
+  void InitAsDefaultInstance();
+  static CommandReplaceCustomFormatArchive_FormatObjectMutation* default_instance_;
+};
+// -------------------------------------------------------------------
+
+class CommandReplaceCustomFormatArchive : public ::google::protobuf::Message {
+ public:
+  CommandReplaceCustomFormatArchive();
+  virtual ~CommandReplaceCustomFormatArchive();
+
+  CommandReplaceCustomFormatArchive(const CommandReplaceCustomFormatArchive& from);
+
+  inline CommandReplaceCustomFormatArchive& operator=(const CommandReplaceCustomFormatArchive& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _unknown_fields_;
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return &_unknown_fields_;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const CommandReplaceCustomFormatArchive& default_instance();
+
+  void Swap(CommandReplaceCustomFormatArchive* other);
+
+  // implements Message ----------------------------------------------
+
+  CommandReplaceCustomFormatArchive* New() const;
+  void CopyFrom(const ::google::protobuf::Message& from);
+  void MergeFrom(const ::google::protobuf::Message& from);
+  void CopyFrom(const CommandReplaceCustomFormatArchive& from);
+  void MergeFrom(const CommandReplaceCustomFormatArchive& from);
+  void Clear();
+  bool IsInitialized() const;
+
+  int ByteSize() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const;
+
+  // nested types ----------------------------------------------------
+
+  typedef CommandReplaceCustomFormatArchive_FormatObjectMutation FormatObjectMutation;
+
+  // accessors -------------------------------------------------------
+
+  // required .TSCH.ChartCommandArchive super = 1;
+  inline bool has_super() const;
+  inline void clear_super();
+  static const int kSuperFieldNumber = 1;
+  inline const ::TSCH::ChartCommandArchive& super() const;
+  inline ::TSCH::ChartCommandArchive* mutable_super();
+  inline ::TSCH::ChartCommandArchive* release_super();
+  inline void set_allocated_super(::TSCH::ChartCommandArchive* super);
+
+  // optional .TSP.Reference rollback_cmd = 2;
+  inline bool has_rollback_cmd() const;
+  inline void clear_rollback_cmd();
+  static const int kRollbackCmdFieldNumber = 2;
+  inline const ::TSP::Reference& rollback_cmd() const;
+  inline ::TSP::Reference* mutable_rollback_cmd();
+  inline ::TSP::Reference* release_rollback_cmd();
+  inline void set_allocated_rollback_cmd(::TSP::Reference* rollback_cmd);
+
+  // optional .TSK.FormatStructArchive old_format_object = 3;
+  inline bool has_old_format_object() const;
+  inline void clear_old_format_object();
+  static const int kOldFormatObjectFieldNumber = 3;
+  inline const ::TSK::FormatStructArchive& old_format_object() const;
+  inline ::TSK::FormatStructArchive* mutable_old_format_object();
+  inline ::TSK::FormatStructArchive* release_old_format_object();
+  inline void set_allocated_old_format_object(::TSK::FormatStructArchive* old_format_object);
+
+  // optional .TSK.FormatStructArchive new_format_object = 4;
+  inline bool has_new_format_object() const;
+  inline void clear_new_format_object();
+  static const int kNewFormatObjectFieldNumber = 4;
+  inline const ::TSK::FormatStructArchive& new_format_object() const;
+  inline ::TSK::FormatStructArchive* mutable_new_format_object();
+  inline ::TSK::FormatStructArchive* release_new_format_object();
+  inline void set_allocated_new_format_object(::TSK::FormatStructArchive* new_format_object);
+
+  // repeated .TSCH.CommandReplaceCustomFormatArchive.FormatObjectMutation forward_mutations = 5;
+  inline int forward_mutations_size() const;
+  inline void clear_forward_mutations();
+  static const int kForwardMutationsFieldNumber = 5;
+  inline const ::TSCH::CommandReplaceCustomFormatArchive_FormatObjectMutation& forward_mutations(int index) const;
+  inline ::TSCH::CommandReplaceCustomFormatArchive_FormatObjectMutation* mutable_forward_mutations(int index);
+  inline ::TSCH::CommandReplaceCustomFormatArchive_FormatObjectMutation* add_forward_mutations();
+  inline const ::google::protobuf::RepeatedPtrField< ::TSCH::CommandReplaceCustomFormatArchive_FormatObjectMutation >&
+      forward_mutations() const;
+  inline ::google::protobuf::RepeatedPtrField< ::TSCH::CommandReplaceCustomFormatArchive_FormatObjectMutation >*
+      mutable_forward_mutations();
+
+  // repeated .TSCH.CommandReplaceCustomFormatArchive.FormatObjectMutation reverse_mutations = 6;
+  inline int reverse_mutations_size() const;
+  inline void clear_reverse_mutations();
+  static const int kReverseMutationsFieldNumber = 6;
+  inline const ::TSCH::CommandReplaceCustomFormatArchive_FormatObjectMutation& reverse_mutations(int index) const;
+  inline ::TSCH::CommandReplaceCustomFormatArchive_FormatObjectMutation* mutable_reverse_mutations(int index);
+  inline ::TSCH::CommandReplaceCustomFormatArchive_FormatObjectMutation* add_reverse_mutations();
+  inline const ::google::protobuf::RepeatedPtrField< ::TSCH::CommandReplaceCustomFormatArchive_FormatObjectMutation >&
+      reverse_mutations() const;
+  inline ::google::protobuf::RepeatedPtrField< ::TSCH::CommandReplaceCustomFormatArchive_FormatObjectMutation >*
+      mutable_reverse_mutations();
+
+  // @@protoc_insertion_point(class_scope:TSCH.CommandReplaceCustomFormatArchive)
+ private:
+  inline void set_has_super();
+  inline void clear_has_super();
+  inline void set_has_rollback_cmd();
+  inline void clear_has_rollback_cmd();
+  inline void set_has_old_format_object();
+  inline void clear_has_old_format_object();
+  inline void set_has_new_format_object();
+  inline void clear_has_new_format_object();
+
+  ::google::protobuf::UnknownFieldSet _unknown_fields_;
+
+  ::TSCH::ChartCommandArchive* super_;
+  ::TSP::Reference* rollback_cmd_;
+  ::TSK::FormatStructArchive* old_format_object_;
+  ::TSK::FormatStructArchive* new_format_object_;
+  ::google::protobuf::RepeatedPtrField< ::TSCH::CommandReplaceCustomFormatArchive_FormatObjectMutation > forward_mutations_;
+  ::google::protobuf::RepeatedPtrField< ::TSCH::CommandReplaceCustomFormatArchive_FormatObjectMutation > reverse_mutations_;
+
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 _has_bits_[(6 + 31) / 32];
+
+  friend void  protobuf_AddDesc_TSCHCommandArchives_2eproto();
+  friend void protobuf_AssignDesc_TSCHCommandArchives_2eproto();
+  friend void protobuf_ShutdownFile_TSCHCommandArchives_2eproto();
+
+  void InitAsDefaultInstance();
+  static CommandReplaceCustomFormatArchive* default_instance_;
+};
 // ===================================================================
 
 
@@ -4277,245 +5913,6 @@ inline void CommandSetChartTypeArchive::set_allocated_original_legend_rect(::TSC
     set_has_original_legend_rect();
   } else {
     clear_has_original_legend_rect();
-  }
-}
-
-// -------------------------------------------------------------------
-
-// PropertyMutationUndoTupleArchive
-
-// optional .TSP.Reference chart_info = 1;
-inline bool PropertyMutationUndoTupleArchive::has_chart_info() const {
-  return (_has_bits_[0] & 0x00000001u) != 0;
-}
-inline void PropertyMutationUndoTupleArchive::set_has_chart_info() {
-  _has_bits_[0] |= 0x00000001u;
-}
-inline void PropertyMutationUndoTupleArchive::clear_has_chart_info() {
-  _has_bits_[0] &= ~0x00000001u;
-}
-inline void PropertyMutationUndoTupleArchive::clear_chart_info() {
-  if (chart_info_ != NULL) chart_info_->::TSP::Reference::Clear();
-  clear_has_chart_info();
-}
-inline const ::TSP::Reference& PropertyMutationUndoTupleArchive::chart_info() const {
-  return chart_info_ != NULL ? *chart_info_ : *default_instance_->chart_info_;
-}
-inline ::TSP::Reference* PropertyMutationUndoTupleArchive::mutable_chart_info() {
-  set_has_chart_info();
-  if (chart_info_ == NULL) chart_info_ = new ::TSP::Reference;
-  return chart_info_;
-}
-inline ::TSP::Reference* PropertyMutationUndoTupleArchive::release_chart_info() {
-  clear_has_chart_info();
-  ::TSP::Reference* temp = chart_info_;
-  chart_info_ = NULL;
-  return temp;
-}
-inline void PropertyMutationUndoTupleArchive::set_allocated_chart_info(::TSP::Reference* chart_info) {
-  delete chart_info_;
-  chart_info_ = chart_info;
-  if (chart_info) {
-    set_has_chart_info();
-  } else {
-    clear_has_chart_info();
-  }
-}
-
-// optional .TSCH.StyleOwnerType style_owner_type = 2;
-inline bool PropertyMutationUndoTupleArchive::has_style_owner_type() const {
-  return (_has_bits_[0] & 0x00000002u) != 0;
-}
-inline void PropertyMutationUndoTupleArchive::set_has_style_owner_type() {
-  _has_bits_[0] |= 0x00000002u;
-}
-inline void PropertyMutationUndoTupleArchive::clear_has_style_owner_type() {
-  _has_bits_[0] &= ~0x00000002u;
-}
-inline void PropertyMutationUndoTupleArchive::clear_style_owner_type() {
-  style_owner_type_ = 1;
-  clear_has_style_owner_type();
-}
-inline ::TSCH::StyleOwnerType PropertyMutationUndoTupleArchive::style_owner_type() const {
-  return static_cast< ::TSCH::StyleOwnerType >(style_owner_type_);
-}
-inline void PropertyMutationUndoTupleArchive::set_style_owner_type(::TSCH::StyleOwnerType value) {
-  assert(::TSCH::StyleOwnerType_IsValid(value));
-  set_has_style_owner_type();
-  style_owner_type_ = value;
-}
-
-// optional uint32 index = 3;
-inline bool PropertyMutationUndoTupleArchive::has_index() const {
-  return (_has_bits_[0] & 0x00000004u) != 0;
-}
-inline void PropertyMutationUndoTupleArchive::set_has_index() {
-  _has_bits_[0] |= 0x00000004u;
-}
-inline void PropertyMutationUndoTupleArchive::clear_has_index() {
-  _has_bits_[0] &= ~0x00000004u;
-}
-inline void PropertyMutationUndoTupleArchive::clear_index() {
-  index_ = 0u;
-  clear_has_index();
-}
-inline ::google::protobuf::uint32 PropertyMutationUndoTupleArchive::index() const {
-  return index_;
-}
-inline void PropertyMutationUndoTupleArchive::set_index(::google::protobuf::uint32 value) {
-  set_has_index();
-  index_ = value;
-}
-
-// optional .TSP.Reference old_style = 4;
-inline bool PropertyMutationUndoTupleArchive::has_old_style() const {
-  return (_has_bits_[0] & 0x00000008u) != 0;
-}
-inline void PropertyMutationUndoTupleArchive::set_has_old_style() {
-  _has_bits_[0] |= 0x00000008u;
-}
-inline void PropertyMutationUndoTupleArchive::clear_has_old_style() {
-  _has_bits_[0] &= ~0x00000008u;
-}
-inline void PropertyMutationUndoTupleArchive::clear_old_style() {
-  if (old_style_ != NULL) old_style_->::TSP::Reference::Clear();
-  clear_has_old_style();
-}
-inline const ::TSP::Reference& PropertyMutationUndoTupleArchive::old_style() const {
-  return old_style_ != NULL ? *old_style_ : *default_instance_->old_style_;
-}
-inline ::TSP::Reference* PropertyMutationUndoTupleArchive::mutable_old_style() {
-  set_has_old_style();
-  if (old_style_ == NULL) old_style_ = new ::TSP::Reference;
-  return old_style_;
-}
-inline ::TSP::Reference* PropertyMutationUndoTupleArchive::release_old_style() {
-  clear_has_old_style();
-  ::TSP::Reference* temp = old_style_;
-  old_style_ = NULL;
-  return temp;
-}
-inline void PropertyMutationUndoTupleArchive::set_allocated_old_style(::TSP::Reference* old_style) {
-  delete old_style_;
-  old_style_ = old_style;
-  if (old_style) {
-    set_has_old_style();
-  } else {
-    clear_has_old_style();
-  }
-}
-
-// optional .TSP.Reference new_style = 5;
-inline bool PropertyMutationUndoTupleArchive::has_new_style() const {
-  return (_has_bits_[0] & 0x00000010u) != 0;
-}
-inline void PropertyMutationUndoTupleArchive::set_has_new_style() {
-  _has_bits_[0] |= 0x00000010u;
-}
-inline void PropertyMutationUndoTupleArchive::clear_has_new_style() {
-  _has_bits_[0] &= ~0x00000010u;
-}
-inline void PropertyMutationUndoTupleArchive::clear_new_style() {
-  if (new_style_ != NULL) new_style_->::TSP::Reference::Clear();
-  clear_has_new_style();
-}
-inline const ::TSP::Reference& PropertyMutationUndoTupleArchive::new_style() const {
-  return new_style_ != NULL ? *new_style_ : *default_instance_->new_style_;
-}
-inline ::TSP::Reference* PropertyMutationUndoTupleArchive::mutable_new_style() {
-  set_has_new_style();
-  if (new_style_ == NULL) new_style_ = new ::TSP::Reference;
-  return new_style_;
-}
-inline ::TSP::Reference* PropertyMutationUndoTupleArchive::release_new_style() {
-  clear_has_new_style();
-  ::TSP::Reference* temp = new_style_;
-  new_style_ = NULL;
-  return temp;
-}
-inline void PropertyMutationUndoTupleArchive::set_allocated_new_style(::TSP::Reference* new_style) {
-  delete new_style_;
-  new_style_ = new_style;
-  if (new_style) {
-    set_has_new_style();
-  } else {
-    clear_has_new_style();
-  }
-}
-
-// optional .TSP.Reference old_non_style = 6;
-inline bool PropertyMutationUndoTupleArchive::has_old_non_style() const {
-  return (_has_bits_[0] & 0x00000020u) != 0;
-}
-inline void PropertyMutationUndoTupleArchive::set_has_old_non_style() {
-  _has_bits_[0] |= 0x00000020u;
-}
-inline void PropertyMutationUndoTupleArchive::clear_has_old_non_style() {
-  _has_bits_[0] &= ~0x00000020u;
-}
-inline void PropertyMutationUndoTupleArchive::clear_old_non_style() {
-  if (old_non_style_ != NULL) old_non_style_->::TSP::Reference::Clear();
-  clear_has_old_non_style();
-}
-inline const ::TSP::Reference& PropertyMutationUndoTupleArchive::old_non_style() const {
-  return old_non_style_ != NULL ? *old_non_style_ : *default_instance_->old_non_style_;
-}
-inline ::TSP::Reference* PropertyMutationUndoTupleArchive::mutable_old_non_style() {
-  set_has_old_non_style();
-  if (old_non_style_ == NULL) old_non_style_ = new ::TSP::Reference;
-  return old_non_style_;
-}
-inline ::TSP::Reference* PropertyMutationUndoTupleArchive::release_old_non_style() {
-  clear_has_old_non_style();
-  ::TSP::Reference* temp = old_non_style_;
-  old_non_style_ = NULL;
-  return temp;
-}
-inline void PropertyMutationUndoTupleArchive::set_allocated_old_non_style(::TSP::Reference* old_non_style) {
-  delete old_non_style_;
-  old_non_style_ = old_non_style;
-  if (old_non_style) {
-    set_has_old_non_style();
-  } else {
-    clear_has_old_non_style();
-  }
-}
-
-// optional .TSP.Reference new_non_style = 7;
-inline bool PropertyMutationUndoTupleArchive::has_new_non_style() const {
-  return (_has_bits_[0] & 0x00000040u) != 0;
-}
-inline void PropertyMutationUndoTupleArchive::set_has_new_non_style() {
-  _has_bits_[0] |= 0x00000040u;
-}
-inline void PropertyMutationUndoTupleArchive::clear_has_new_non_style() {
-  _has_bits_[0] &= ~0x00000040u;
-}
-inline void PropertyMutationUndoTupleArchive::clear_new_non_style() {
-  if (new_non_style_ != NULL) new_non_style_->::TSP::Reference::Clear();
-  clear_has_new_non_style();
-}
-inline const ::TSP::Reference& PropertyMutationUndoTupleArchive::new_non_style() const {
-  return new_non_style_ != NULL ? *new_non_style_ : *default_instance_->new_non_style_;
-}
-inline ::TSP::Reference* PropertyMutationUndoTupleArchive::mutable_new_non_style() {
-  set_has_new_non_style();
-  if (new_non_style_ == NULL) new_non_style_ = new ::TSP::Reference;
-  return new_non_style_;
-}
-inline ::TSP::Reference* PropertyMutationUndoTupleArchive::release_new_non_style() {
-  clear_has_new_non_style();
-  ::TSP::Reference* temp = new_non_style_;
-  new_non_style_ = NULL;
-  return temp;
-}
-inline void PropertyMutationUndoTupleArchive::set_allocated_new_non_style(::TSP::Reference* new_non_style) {
-  delete new_non_style_;
-  new_non_style_ = new_non_style;
-  if (new_non_style) {
-    set_has_new_non_style();
-  } else {
-    clear_has_new_non_style();
   }
 }
 
@@ -4747,6 +6144,1478 @@ CommandStyleSwapArchive::undo_tuples() const {
 inline ::google::protobuf::RepeatedPtrField< ::TSCH::StyleSwapUndoTupleArchive >*
 CommandStyleSwapArchive::mutable_undo_tuples() {
   return &undo_tuples_;
+}
+
+// -------------------------------------------------------------------
+
+// CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion
+
+// optional .TSCH.Generated.ChartGenericPropertyMapArchive chart_map = 2;
+inline bool CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion::has_chart_map() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion::set_has_chart_map() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion::clear_has_chart_map() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion::clear_chart_map() {
+  if (chart_map_ != NULL) chart_map_->::TSCH::Generated::ChartGenericPropertyMapArchive::Clear();
+  clear_has_chart_map();
+}
+inline const ::TSCH::Generated::ChartGenericPropertyMapArchive& CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion::chart_map() const {
+  return chart_map_ != NULL ? *chart_map_ : *default_instance_->chart_map_;
+}
+inline ::TSCH::Generated::ChartGenericPropertyMapArchive* CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion::mutable_chart_map() {
+  set_has_chart_map();
+  if (chart_map_ == NULL) chart_map_ = new ::TSCH::Generated::ChartGenericPropertyMapArchive;
+  return chart_map_;
+}
+inline ::TSCH::Generated::ChartGenericPropertyMapArchive* CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion::release_chart_map() {
+  clear_has_chart_map();
+  ::TSCH::Generated::ChartGenericPropertyMapArchive* temp = chart_map_;
+  chart_map_ = NULL;
+  return temp;
+}
+inline void CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion::set_allocated_chart_map(::TSCH::Generated::ChartGenericPropertyMapArchive* chart_map) {
+  delete chart_map_;
+  chart_map_ = chart_map;
+  if (chart_map) {
+    set_has_chart_map();
+  } else {
+    clear_has_chart_map();
+  }
+}
+
+// optional .TSCH.Generated.LegendGenericPropertyMapArchive legend_map = 3;
+inline bool CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion::has_legend_map() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion::set_has_legend_map() {
+  _has_bits_[0] |= 0x00000002u;
+}
+inline void CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion::clear_has_legend_map() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline void CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion::clear_legend_map() {
+  if (legend_map_ != NULL) legend_map_->::TSCH::Generated::LegendGenericPropertyMapArchive::Clear();
+  clear_has_legend_map();
+}
+inline const ::TSCH::Generated::LegendGenericPropertyMapArchive& CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion::legend_map() const {
+  return legend_map_ != NULL ? *legend_map_ : *default_instance_->legend_map_;
+}
+inline ::TSCH::Generated::LegendGenericPropertyMapArchive* CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion::mutable_legend_map() {
+  set_has_legend_map();
+  if (legend_map_ == NULL) legend_map_ = new ::TSCH::Generated::LegendGenericPropertyMapArchive;
+  return legend_map_;
+}
+inline ::TSCH::Generated::LegendGenericPropertyMapArchive* CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion::release_legend_map() {
+  clear_has_legend_map();
+  ::TSCH::Generated::LegendGenericPropertyMapArchive* temp = legend_map_;
+  legend_map_ = NULL;
+  return temp;
+}
+inline void CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion::set_allocated_legend_map(::TSCH::Generated::LegendGenericPropertyMapArchive* legend_map) {
+  delete legend_map_;
+  legend_map_ = legend_map;
+  if (legend_map) {
+    set_has_legend_map();
+  } else {
+    clear_has_legend_map();
+  }
+}
+
+// optional .TSCH.Generated.ChartAxisGenericPropertyMapArchive axis_map = 4;
+inline bool CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion::has_axis_map() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion::set_has_axis_map() {
+  _has_bits_[0] |= 0x00000004u;
+}
+inline void CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion::clear_has_axis_map() {
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline void CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion::clear_axis_map() {
+  if (axis_map_ != NULL) axis_map_->::TSCH::Generated::ChartAxisGenericPropertyMapArchive::Clear();
+  clear_has_axis_map();
+}
+inline const ::TSCH::Generated::ChartAxisGenericPropertyMapArchive& CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion::axis_map() const {
+  return axis_map_ != NULL ? *axis_map_ : *default_instance_->axis_map_;
+}
+inline ::TSCH::Generated::ChartAxisGenericPropertyMapArchive* CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion::mutable_axis_map() {
+  set_has_axis_map();
+  if (axis_map_ == NULL) axis_map_ = new ::TSCH::Generated::ChartAxisGenericPropertyMapArchive;
+  return axis_map_;
+}
+inline ::TSCH::Generated::ChartAxisGenericPropertyMapArchive* CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion::release_axis_map() {
+  clear_has_axis_map();
+  ::TSCH::Generated::ChartAxisGenericPropertyMapArchive* temp = axis_map_;
+  axis_map_ = NULL;
+  return temp;
+}
+inline void CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion::set_allocated_axis_map(::TSCH::Generated::ChartAxisGenericPropertyMapArchive* axis_map) {
+  delete axis_map_;
+  axis_map_ = axis_map;
+  if (axis_map) {
+    set_has_axis_map();
+  } else {
+    clear_has_axis_map();
+  }
+}
+
+// optional .TSCH.Generated.ChartSeriesGenericPropertyMapArchive series_map = 5;
+inline bool CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion::has_series_map() const {
+  return (_has_bits_[0] & 0x00000008u) != 0;
+}
+inline void CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion::set_has_series_map() {
+  _has_bits_[0] |= 0x00000008u;
+}
+inline void CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion::clear_has_series_map() {
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline void CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion::clear_series_map() {
+  if (series_map_ != NULL) series_map_->::TSCH::Generated::ChartSeriesGenericPropertyMapArchive::Clear();
+  clear_has_series_map();
+}
+inline const ::TSCH::Generated::ChartSeriesGenericPropertyMapArchive& CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion::series_map() const {
+  return series_map_ != NULL ? *series_map_ : *default_instance_->series_map_;
+}
+inline ::TSCH::Generated::ChartSeriesGenericPropertyMapArchive* CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion::mutable_series_map() {
+  set_has_series_map();
+  if (series_map_ == NULL) series_map_ = new ::TSCH::Generated::ChartSeriesGenericPropertyMapArchive;
+  return series_map_;
+}
+inline ::TSCH::Generated::ChartSeriesGenericPropertyMapArchive* CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion::release_series_map() {
+  clear_has_series_map();
+  ::TSCH::Generated::ChartSeriesGenericPropertyMapArchive* temp = series_map_;
+  series_map_ = NULL;
+  return temp;
+}
+inline void CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion::set_allocated_series_map(::TSCH::Generated::ChartSeriesGenericPropertyMapArchive* series_map) {
+  delete series_map_;
+  series_map_ = series_map;
+  if (series_map) {
+    set_has_series_map();
+  } else {
+    clear_has_series_map();
+  }
+}
+
+// -------------------------------------------------------------------
+
+// CommandMutatePropertiesArchive_GenericPropertyDeltaMap
+
+// optional .TSCH.StyleOwnerType style_owner_type = 1;
+inline bool CommandMutatePropertiesArchive_GenericPropertyDeltaMap::has_style_owner_type() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void CommandMutatePropertiesArchive_GenericPropertyDeltaMap::set_has_style_owner_type() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void CommandMutatePropertiesArchive_GenericPropertyDeltaMap::clear_has_style_owner_type() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void CommandMutatePropertiesArchive_GenericPropertyDeltaMap::clear_style_owner_type() {
+  style_owner_type_ = 1;
+  clear_has_style_owner_type();
+}
+inline ::TSCH::StyleOwnerType CommandMutatePropertiesArchive_GenericPropertyDeltaMap::style_owner_type() const {
+  return static_cast< ::TSCH::StyleOwnerType >(style_owner_type_);
+}
+inline void CommandMutatePropertiesArchive_GenericPropertyDeltaMap::set_style_owner_type(::TSCH::StyleOwnerType value) {
+  assert(::TSCH::StyleOwnerType_IsValid(value));
+  set_has_style_owner_type();
+  style_owner_type_ = value;
+}
+
+// optional uint32 style_owner_index = 2;
+inline bool CommandMutatePropertiesArchive_GenericPropertyDeltaMap::has_style_owner_index() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void CommandMutatePropertiesArchive_GenericPropertyDeltaMap::set_has_style_owner_index() {
+  _has_bits_[0] |= 0x00000002u;
+}
+inline void CommandMutatePropertiesArchive_GenericPropertyDeltaMap::clear_has_style_owner_index() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline void CommandMutatePropertiesArchive_GenericPropertyDeltaMap::clear_style_owner_index() {
+  style_owner_index_ = 0u;
+  clear_has_style_owner_index();
+}
+inline ::google::protobuf::uint32 CommandMutatePropertiesArchive_GenericPropertyDeltaMap::style_owner_index() const {
+  return style_owner_index_;
+}
+inline void CommandMutatePropertiesArchive_GenericPropertyDeltaMap::set_style_owner_index(::google::protobuf::uint32 value) {
+  set_has_style_owner_index();
+  style_owner_index_ = value;
+}
+
+// optional .TSCH.CommandMutatePropertiesArchive.GenericPropertyDeltaMap.GenericMapUnion forward_map = 3;
+inline bool CommandMutatePropertiesArchive_GenericPropertyDeltaMap::has_forward_map() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void CommandMutatePropertiesArchive_GenericPropertyDeltaMap::set_has_forward_map() {
+  _has_bits_[0] |= 0x00000004u;
+}
+inline void CommandMutatePropertiesArchive_GenericPropertyDeltaMap::clear_has_forward_map() {
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline void CommandMutatePropertiesArchive_GenericPropertyDeltaMap::clear_forward_map() {
+  if (forward_map_ != NULL) forward_map_->::TSCH::CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion::Clear();
+  clear_has_forward_map();
+}
+inline const ::TSCH::CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion& CommandMutatePropertiesArchive_GenericPropertyDeltaMap::forward_map() const {
+  return forward_map_ != NULL ? *forward_map_ : *default_instance_->forward_map_;
+}
+inline ::TSCH::CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion* CommandMutatePropertiesArchive_GenericPropertyDeltaMap::mutable_forward_map() {
+  set_has_forward_map();
+  if (forward_map_ == NULL) forward_map_ = new ::TSCH::CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion;
+  return forward_map_;
+}
+inline ::TSCH::CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion* CommandMutatePropertiesArchive_GenericPropertyDeltaMap::release_forward_map() {
+  clear_has_forward_map();
+  ::TSCH::CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion* temp = forward_map_;
+  forward_map_ = NULL;
+  return temp;
+}
+inline void CommandMutatePropertiesArchive_GenericPropertyDeltaMap::set_allocated_forward_map(::TSCH::CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion* forward_map) {
+  delete forward_map_;
+  forward_map_ = forward_map;
+  if (forward_map) {
+    set_has_forward_map();
+  } else {
+    clear_has_forward_map();
+  }
+}
+
+// optional .TSCH.CommandMutatePropertiesArchive.GenericPropertyDeltaMap.GenericMapUnion reverse_map = 4;
+inline bool CommandMutatePropertiesArchive_GenericPropertyDeltaMap::has_reverse_map() const {
+  return (_has_bits_[0] & 0x00000008u) != 0;
+}
+inline void CommandMutatePropertiesArchive_GenericPropertyDeltaMap::set_has_reverse_map() {
+  _has_bits_[0] |= 0x00000008u;
+}
+inline void CommandMutatePropertiesArchive_GenericPropertyDeltaMap::clear_has_reverse_map() {
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline void CommandMutatePropertiesArchive_GenericPropertyDeltaMap::clear_reverse_map() {
+  if (reverse_map_ != NULL) reverse_map_->::TSCH::CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion::Clear();
+  clear_has_reverse_map();
+}
+inline const ::TSCH::CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion& CommandMutatePropertiesArchive_GenericPropertyDeltaMap::reverse_map() const {
+  return reverse_map_ != NULL ? *reverse_map_ : *default_instance_->reverse_map_;
+}
+inline ::TSCH::CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion* CommandMutatePropertiesArchive_GenericPropertyDeltaMap::mutable_reverse_map() {
+  set_has_reverse_map();
+  if (reverse_map_ == NULL) reverse_map_ = new ::TSCH::CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion;
+  return reverse_map_;
+}
+inline ::TSCH::CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion* CommandMutatePropertiesArchive_GenericPropertyDeltaMap::release_reverse_map() {
+  clear_has_reverse_map();
+  ::TSCH::CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion* temp = reverse_map_;
+  reverse_map_ = NULL;
+  return temp;
+}
+inline void CommandMutatePropertiesArchive_GenericPropertyDeltaMap::set_allocated_reverse_map(::TSCH::CommandMutatePropertiesArchive_GenericPropertyDeltaMap_GenericMapUnion* reverse_map) {
+  delete reverse_map_;
+  reverse_map_ = reverse_map;
+  if (reverse_map) {
+    set_has_reverse_map();
+  } else {
+    clear_has_reverse_map();
+  }
+}
+
+// -------------------------------------------------------------------
+
+// CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive
+
+// optional .TSWP.CharacterStylePropertiesArchive char_properties = 1;
+inline bool CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive::has_char_properties() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive::set_has_char_properties() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive::clear_has_char_properties() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive::clear_char_properties() {
+  if (char_properties_ != NULL) char_properties_->::TSWP::CharacterStylePropertiesArchive::Clear();
+  clear_has_char_properties();
+}
+inline const ::TSWP::CharacterStylePropertiesArchive& CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive::char_properties() const {
+  return char_properties_ != NULL ? *char_properties_ : *default_instance_->char_properties_;
+}
+inline ::TSWP::CharacterStylePropertiesArchive* CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive::mutable_char_properties() {
+  set_has_char_properties();
+  if (char_properties_ == NULL) char_properties_ = new ::TSWP::CharacterStylePropertiesArchive;
+  return char_properties_;
+}
+inline ::TSWP::CharacterStylePropertiesArchive* CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive::release_char_properties() {
+  clear_has_char_properties();
+  ::TSWP::CharacterStylePropertiesArchive* temp = char_properties_;
+  char_properties_ = NULL;
+  return temp;
+}
+inline void CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive::set_allocated_char_properties(::TSWP::CharacterStylePropertiesArchive* char_properties) {
+  delete char_properties_;
+  char_properties_ = char_properties;
+  if (char_properties) {
+    set_has_char_properties();
+  } else {
+    clear_has_char_properties();
+  }
+}
+
+// optional .TSWP.ParagraphStylePropertiesArchive para_properties = 2;
+inline bool CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive::has_para_properties() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive::set_has_para_properties() {
+  _has_bits_[0] |= 0x00000002u;
+}
+inline void CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive::clear_has_para_properties() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline void CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive::clear_para_properties() {
+  if (para_properties_ != NULL) para_properties_->::TSWP::ParagraphStylePropertiesArchive::Clear();
+  clear_has_para_properties();
+}
+inline const ::TSWP::ParagraphStylePropertiesArchive& CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive::para_properties() const {
+  return para_properties_ != NULL ? *para_properties_ : *default_instance_->para_properties_;
+}
+inline ::TSWP::ParagraphStylePropertiesArchive* CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive::mutable_para_properties() {
+  set_has_para_properties();
+  if (para_properties_ == NULL) para_properties_ = new ::TSWP::ParagraphStylePropertiesArchive;
+  return para_properties_;
+}
+inline ::TSWP::ParagraphStylePropertiesArchive* CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive::release_para_properties() {
+  clear_has_para_properties();
+  ::TSWP::ParagraphStylePropertiesArchive* temp = para_properties_;
+  para_properties_ = NULL;
+  return temp;
+}
+inline void CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive::set_allocated_para_properties(::TSWP::ParagraphStylePropertiesArchive* para_properties) {
+  delete para_properties_;
+  para_properties_ = para_properties;
+  if (para_properties) {
+    set_has_para_properties();
+  } else {
+    clear_has_para_properties();
+  }
+}
+
+// -------------------------------------------------------------------
+
+// CommandMutatePropertiesArchive_ParagraphStyleDeltaMap
+
+// optional .TSCH.StyleOwnerType style_owner_type = 1;
+inline bool CommandMutatePropertiesArchive_ParagraphStyleDeltaMap::has_style_owner_type() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void CommandMutatePropertiesArchive_ParagraphStyleDeltaMap::set_has_style_owner_type() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void CommandMutatePropertiesArchive_ParagraphStyleDeltaMap::clear_has_style_owner_type() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void CommandMutatePropertiesArchive_ParagraphStyleDeltaMap::clear_style_owner_type() {
+  style_owner_type_ = 1;
+  clear_has_style_owner_type();
+}
+inline ::TSCH::StyleOwnerType CommandMutatePropertiesArchive_ParagraphStyleDeltaMap::style_owner_type() const {
+  return static_cast< ::TSCH::StyleOwnerType >(style_owner_type_);
+}
+inline void CommandMutatePropertiesArchive_ParagraphStyleDeltaMap::set_style_owner_type(::TSCH::StyleOwnerType value) {
+  assert(::TSCH::StyleOwnerType_IsValid(value));
+  set_has_style_owner_type();
+  style_owner_type_ = value;
+}
+
+// optional uint32 style_owner_index = 2;
+inline bool CommandMutatePropertiesArchive_ParagraphStyleDeltaMap::has_style_owner_index() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void CommandMutatePropertiesArchive_ParagraphStyleDeltaMap::set_has_style_owner_index() {
+  _has_bits_[0] |= 0x00000002u;
+}
+inline void CommandMutatePropertiesArchive_ParagraphStyleDeltaMap::clear_has_style_owner_index() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline void CommandMutatePropertiesArchive_ParagraphStyleDeltaMap::clear_style_owner_index() {
+  style_owner_index_ = 0u;
+  clear_has_style_owner_index();
+}
+inline ::google::protobuf::uint32 CommandMutatePropertiesArchive_ParagraphStyleDeltaMap::style_owner_index() const {
+  return style_owner_index_;
+}
+inline void CommandMutatePropertiesArchive_ParagraphStyleDeltaMap::set_style_owner_index(::google::protobuf::uint32 value) {
+  set_has_style_owner_index();
+  style_owner_index_ = value;
+}
+
+// optional uint32 paragraph_style_index_property = 3;
+inline bool CommandMutatePropertiesArchive_ParagraphStyleDeltaMap::has_paragraph_style_index_property() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void CommandMutatePropertiesArchive_ParagraphStyleDeltaMap::set_has_paragraph_style_index_property() {
+  _has_bits_[0] |= 0x00000004u;
+}
+inline void CommandMutatePropertiesArchive_ParagraphStyleDeltaMap::clear_has_paragraph_style_index_property() {
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline void CommandMutatePropertiesArchive_ParagraphStyleDeltaMap::clear_paragraph_style_index_property() {
+  paragraph_style_index_property_ = 0u;
+  clear_has_paragraph_style_index_property();
+}
+inline ::google::protobuf::uint32 CommandMutatePropertiesArchive_ParagraphStyleDeltaMap::paragraph_style_index_property() const {
+  return paragraph_style_index_property_;
+}
+inline void CommandMutatePropertiesArchive_ParagraphStyleDeltaMap::set_paragraph_style_index_property(::google::protobuf::uint32 value) {
+  set_has_paragraph_style_index_property();
+  paragraph_style_index_property_ = value;
+}
+
+// optional .TSCH.CommandMutatePropertiesArchive.ParagraphStyleDeltaMap.ParagraphStylePropertyMapArchive forward_map = 4;
+inline bool CommandMutatePropertiesArchive_ParagraphStyleDeltaMap::has_forward_map() const {
+  return (_has_bits_[0] & 0x00000008u) != 0;
+}
+inline void CommandMutatePropertiesArchive_ParagraphStyleDeltaMap::set_has_forward_map() {
+  _has_bits_[0] |= 0x00000008u;
+}
+inline void CommandMutatePropertiesArchive_ParagraphStyleDeltaMap::clear_has_forward_map() {
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline void CommandMutatePropertiesArchive_ParagraphStyleDeltaMap::clear_forward_map() {
+  if (forward_map_ != NULL) forward_map_->::TSCH::CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive::Clear();
+  clear_has_forward_map();
+}
+inline const ::TSCH::CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive& CommandMutatePropertiesArchive_ParagraphStyleDeltaMap::forward_map() const {
+  return forward_map_ != NULL ? *forward_map_ : *default_instance_->forward_map_;
+}
+inline ::TSCH::CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive* CommandMutatePropertiesArchive_ParagraphStyleDeltaMap::mutable_forward_map() {
+  set_has_forward_map();
+  if (forward_map_ == NULL) forward_map_ = new ::TSCH::CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive;
+  return forward_map_;
+}
+inline ::TSCH::CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive* CommandMutatePropertiesArchive_ParagraphStyleDeltaMap::release_forward_map() {
+  clear_has_forward_map();
+  ::TSCH::CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive* temp = forward_map_;
+  forward_map_ = NULL;
+  return temp;
+}
+inline void CommandMutatePropertiesArchive_ParagraphStyleDeltaMap::set_allocated_forward_map(::TSCH::CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive* forward_map) {
+  delete forward_map_;
+  forward_map_ = forward_map;
+  if (forward_map) {
+    set_has_forward_map();
+  } else {
+    clear_has_forward_map();
+  }
+}
+
+// optional .TSCH.CommandMutatePropertiesArchive.ParagraphStyleDeltaMap.ParagraphStylePropertyMapArchive reverse_map = 5;
+inline bool CommandMutatePropertiesArchive_ParagraphStyleDeltaMap::has_reverse_map() const {
+  return (_has_bits_[0] & 0x00000010u) != 0;
+}
+inline void CommandMutatePropertiesArchive_ParagraphStyleDeltaMap::set_has_reverse_map() {
+  _has_bits_[0] |= 0x00000010u;
+}
+inline void CommandMutatePropertiesArchive_ParagraphStyleDeltaMap::clear_has_reverse_map() {
+  _has_bits_[0] &= ~0x00000010u;
+}
+inline void CommandMutatePropertiesArchive_ParagraphStyleDeltaMap::clear_reverse_map() {
+  if (reverse_map_ != NULL) reverse_map_->::TSCH::CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive::Clear();
+  clear_has_reverse_map();
+}
+inline const ::TSCH::CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive& CommandMutatePropertiesArchive_ParagraphStyleDeltaMap::reverse_map() const {
+  return reverse_map_ != NULL ? *reverse_map_ : *default_instance_->reverse_map_;
+}
+inline ::TSCH::CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive* CommandMutatePropertiesArchive_ParagraphStyleDeltaMap::mutable_reverse_map() {
+  set_has_reverse_map();
+  if (reverse_map_ == NULL) reverse_map_ = new ::TSCH::CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive;
+  return reverse_map_;
+}
+inline ::TSCH::CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive* CommandMutatePropertiesArchive_ParagraphStyleDeltaMap::release_reverse_map() {
+  clear_has_reverse_map();
+  ::TSCH::CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive* temp = reverse_map_;
+  reverse_map_ = NULL;
+  return temp;
+}
+inline void CommandMutatePropertiesArchive_ParagraphStyleDeltaMap::set_allocated_reverse_map(::TSCH::CommandMutatePropertiesArchive_ParagraphStyleDeltaMap_ParagraphStylePropertyMapArchive* reverse_map) {
+  delete reverse_map_;
+  reverse_map_ = reverse_map;
+  if (reverse_map) {
+    set_has_reverse_map();
+  } else {
+    clear_has_reverse_map();
+  }
+}
+
+// -------------------------------------------------------------------
+
+// CommandMutatePropertiesArchive
+
+// required .TSCH.ChartCommandArchive super = 1;
+inline bool CommandMutatePropertiesArchive::has_super() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void CommandMutatePropertiesArchive::set_has_super() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void CommandMutatePropertiesArchive::clear_has_super() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void CommandMutatePropertiesArchive::clear_super() {
+  if (super_ != NULL) super_->::TSCH::ChartCommandArchive::Clear();
+  clear_has_super();
+}
+inline const ::TSCH::ChartCommandArchive& CommandMutatePropertiesArchive::super() const {
+  return super_ != NULL ? *super_ : *default_instance_->super_;
+}
+inline ::TSCH::ChartCommandArchive* CommandMutatePropertiesArchive::mutable_super() {
+  set_has_super();
+  if (super_ == NULL) super_ = new ::TSCH::ChartCommandArchive;
+  return super_;
+}
+inline ::TSCH::ChartCommandArchive* CommandMutatePropertiesArchive::release_super() {
+  clear_has_super();
+  ::TSCH::ChartCommandArchive* temp = super_;
+  super_ = NULL;
+  return temp;
+}
+inline void CommandMutatePropertiesArchive::set_allocated_super(::TSCH::ChartCommandArchive* super) {
+  delete super_;
+  super_ = super;
+  if (super) {
+    set_has_super();
+  } else {
+    clear_has_super();
+  }
+}
+
+// optional .TSP.Reference rollback_cmd = 2;
+inline bool CommandMutatePropertiesArchive::has_rollback_cmd() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void CommandMutatePropertiesArchive::set_has_rollback_cmd() {
+  _has_bits_[0] |= 0x00000002u;
+}
+inline void CommandMutatePropertiesArchive::clear_has_rollback_cmd() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline void CommandMutatePropertiesArchive::clear_rollback_cmd() {
+  if (rollback_cmd_ != NULL) rollback_cmd_->::TSP::Reference::Clear();
+  clear_has_rollback_cmd();
+}
+inline const ::TSP::Reference& CommandMutatePropertiesArchive::rollback_cmd() const {
+  return rollback_cmd_ != NULL ? *rollback_cmd_ : *default_instance_->rollback_cmd_;
+}
+inline ::TSP::Reference* CommandMutatePropertiesArchive::mutable_rollback_cmd() {
+  set_has_rollback_cmd();
+  if (rollback_cmd_ == NULL) rollback_cmd_ = new ::TSP::Reference;
+  return rollback_cmd_;
+}
+inline ::TSP::Reference* CommandMutatePropertiesArchive::release_rollback_cmd() {
+  clear_has_rollback_cmd();
+  ::TSP::Reference* temp = rollback_cmd_;
+  rollback_cmd_ = NULL;
+  return temp;
+}
+inline void CommandMutatePropertiesArchive::set_allocated_rollback_cmd(::TSP::Reference* rollback_cmd) {
+  delete rollback_cmd_;
+  rollback_cmd_ = rollback_cmd;
+  if (rollback_cmd) {
+    set_has_rollback_cmd();
+  } else {
+    clear_has_rollback_cmd();
+  }
+}
+
+// repeated .TSCH.CommandMutatePropertiesArchive.GenericPropertyDeltaMap generic_property_delta_maps = 3;
+inline int CommandMutatePropertiesArchive::generic_property_delta_maps_size() const {
+  return generic_property_delta_maps_.size();
+}
+inline void CommandMutatePropertiesArchive::clear_generic_property_delta_maps() {
+  generic_property_delta_maps_.Clear();
+}
+inline const ::TSCH::CommandMutatePropertiesArchive_GenericPropertyDeltaMap& CommandMutatePropertiesArchive::generic_property_delta_maps(int index) const {
+  return generic_property_delta_maps_.Get(index);
+}
+inline ::TSCH::CommandMutatePropertiesArchive_GenericPropertyDeltaMap* CommandMutatePropertiesArchive::mutable_generic_property_delta_maps(int index) {
+  return generic_property_delta_maps_.Mutable(index);
+}
+inline ::TSCH::CommandMutatePropertiesArchive_GenericPropertyDeltaMap* CommandMutatePropertiesArchive::add_generic_property_delta_maps() {
+  return generic_property_delta_maps_.Add();
+}
+inline const ::google::protobuf::RepeatedPtrField< ::TSCH::CommandMutatePropertiesArchive_GenericPropertyDeltaMap >&
+CommandMutatePropertiesArchive::generic_property_delta_maps() const {
+  return generic_property_delta_maps_;
+}
+inline ::google::protobuf::RepeatedPtrField< ::TSCH::CommandMutatePropertiesArchive_GenericPropertyDeltaMap >*
+CommandMutatePropertiesArchive::mutable_generic_property_delta_maps() {
+  return &generic_property_delta_maps_;
+}
+
+// repeated .TSCH.CommandMutatePropertiesArchive.ParagraphStyleDeltaMap paragraph_style_delta_maps = 4;
+inline int CommandMutatePropertiesArchive::paragraph_style_delta_maps_size() const {
+  return paragraph_style_delta_maps_.size();
+}
+inline void CommandMutatePropertiesArchive::clear_paragraph_style_delta_maps() {
+  paragraph_style_delta_maps_.Clear();
+}
+inline const ::TSCH::CommandMutatePropertiesArchive_ParagraphStyleDeltaMap& CommandMutatePropertiesArchive::paragraph_style_delta_maps(int index) const {
+  return paragraph_style_delta_maps_.Get(index);
+}
+inline ::TSCH::CommandMutatePropertiesArchive_ParagraphStyleDeltaMap* CommandMutatePropertiesArchive::mutable_paragraph_style_delta_maps(int index) {
+  return paragraph_style_delta_maps_.Mutable(index);
+}
+inline ::TSCH::CommandMutatePropertiesArchive_ParagraphStyleDeltaMap* CommandMutatePropertiesArchive::add_paragraph_style_delta_maps() {
+  return paragraph_style_delta_maps_.Add();
+}
+inline const ::google::protobuf::RepeatedPtrField< ::TSCH::CommandMutatePropertiesArchive_ParagraphStyleDeltaMap >&
+CommandMutatePropertiesArchive::paragraph_style_delta_maps() const {
+  return paragraph_style_delta_maps_;
+}
+inline ::google::protobuf::RepeatedPtrField< ::TSCH::CommandMutatePropertiesArchive_ParagraphStyleDeltaMap >*
+CommandMutatePropertiesArchive::mutable_paragraph_style_delta_maps() {
+  return &paragraph_style_delta_maps_;
+}
+
+// -------------------------------------------------------------------
+
+// CommandScaleAllTextArchive
+
+// required .TSCH.ChartCommandArchive super = 1;
+inline bool CommandScaleAllTextArchive::has_super() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void CommandScaleAllTextArchive::set_has_super() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void CommandScaleAllTextArchive::clear_has_super() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void CommandScaleAllTextArchive::clear_super() {
+  if (super_ != NULL) super_->::TSCH::ChartCommandArchive::Clear();
+  clear_has_super();
+}
+inline const ::TSCH::ChartCommandArchive& CommandScaleAllTextArchive::super() const {
+  return super_ != NULL ? *super_ : *default_instance_->super_;
+}
+inline ::TSCH::ChartCommandArchive* CommandScaleAllTextArchive::mutable_super() {
+  set_has_super();
+  if (super_ == NULL) super_ = new ::TSCH::ChartCommandArchive;
+  return super_;
+}
+inline ::TSCH::ChartCommandArchive* CommandScaleAllTextArchive::release_super() {
+  clear_has_super();
+  ::TSCH::ChartCommandArchive* temp = super_;
+  super_ = NULL;
+  return temp;
+}
+inline void CommandScaleAllTextArchive::set_allocated_super(::TSCH::ChartCommandArchive* super) {
+  delete super_;
+  super_ = super;
+  if (super) {
+    set_has_super();
+  } else {
+    clear_has_super();
+  }
+}
+
+// optional .TSP.Reference rollback_cmd = 2;
+inline bool CommandScaleAllTextArchive::has_rollback_cmd() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void CommandScaleAllTextArchive::set_has_rollback_cmd() {
+  _has_bits_[0] |= 0x00000002u;
+}
+inline void CommandScaleAllTextArchive::clear_has_rollback_cmd() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline void CommandScaleAllTextArchive::clear_rollback_cmd() {
+  if (rollback_cmd_ != NULL) rollback_cmd_->::TSP::Reference::Clear();
+  clear_has_rollback_cmd();
+}
+inline const ::TSP::Reference& CommandScaleAllTextArchive::rollback_cmd() const {
+  return rollback_cmd_ != NULL ? *rollback_cmd_ : *default_instance_->rollback_cmd_;
+}
+inline ::TSP::Reference* CommandScaleAllTextArchive::mutable_rollback_cmd() {
+  set_has_rollback_cmd();
+  if (rollback_cmd_ == NULL) rollback_cmd_ = new ::TSP::Reference;
+  return rollback_cmd_;
+}
+inline ::TSP::Reference* CommandScaleAllTextArchive::release_rollback_cmd() {
+  clear_has_rollback_cmd();
+  ::TSP::Reference* temp = rollback_cmd_;
+  rollback_cmd_ = NULL;
+  return temp;
+}
+inline void CommandScaleAllTextArchive::set_allocated_rollback_cmd(::TSP::Reference* rollback_cmd) {
+  delete rollback_cmd_;
+  rollback_cmd_ = rollback_cmd;
+  if (rollback_cmd) {
+    set_has_rollback_cmd();
+  } else {
+    clear_has_rollback_cmd();
+  }
+}
+
+// optional double scale_factor = 3;
+inline bool CommandScaleAllTextArchive::has_scale_factor() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void CommandScaleAllTextArchive::set_has_scale_factor() {
+  _has_bits_[0] |= 0x00000004u;
+}
+inline void CommandScaleAllTextArchive::clear_has_scale_factor() {
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline void CommandScaleAllTextArchive::clear_scale_factor() {
+  scale_factor_ = 0;
+  clear_has_scale_factor();
+}
+inline double CommandScaleAllTextArchive::scale_factor() const {
+  return scale_factor_;
+}
+inline void CommandScaleAllTextArchive::set_scale_factor(double value) {
+  set_has_scale_factor();
+  scale_factor_ = value;
+}
+
+// -------------------------------------------------------------------
+
+// CommandSetFontFamilyArchive
+
+// required .TSCH.ChartCommandArchive super = 1;
+inline bool CommandSetFontFamilyArchive::has_super() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void CommandSetFontFamilyArchive::set_has_super() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void CommandSetFontFamilyArchive::clear_has_super() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void CommandSetFontFamilyArchive::clear_super() {
+  if (super_ != NULL) super_->::TSCH::ChartCommandArchive::Clear();
+  clear_has_super();
+}
+inline const ::TSCH::ChartCommandArchive& CommandSetFontFamilyArchive::super() const {
+  return super_ != NULL ? *super_ : *default_instance_->super_;
+}
+inline ::TSCH::ChartCommandArchive* CommandSetFontFamilyArchive::mutable_super() {
+  set_has_super();
+  if (super_ == NULL) super_ = new ::TSCH::ChartCommandArchive;
+  return super_;
+}
+inline ::TSCH::ChartCommandArchive* CommandSetFontFamilyArchive::release_super() {
+  clear_has_super();
+  ::TSCH::ChartCommandArchive* temp = super_;
+  super_ = NULL;
+  return temp;
+}
+inline void CommandSetFontFamilyArchive::set_allocated_super(::TSCH::ChartCommandArchive* super) {
+  delete super_;
+  super_ = super;
+  if (super) {
+    set_has_super();
+  } else {
+    clear_has_super();
+  }
+}
+
+// optional .TSP.Reference rollback_cmd = 2;
+inline bool CommandSetFontFamilyArchive::has_rollback_cmd() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void CommandSetFontFamilyArchive::set_has_rollback_cmd() {
+  _has_bits_[0] |= 0x00000002u;
+}
+inline void CommandSetFontFamilyArchive::clear_has_rollback_cmd() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline void CommandSetFontFamilyArchive::clear_rollback_cmd() {
+  if (rollback_cmd_ != NULL) rollback_cmd_->::TSP::Reference::Clear();
+  clear_has_rollback_cmd();
+}
+inline const ::TSP::Reference& CommandSetFontFamilyArchive::rollback_cmd() const {
+  return rollback_cmd_ != NULL ? *rollback_cmd_ : *default_instance_->rollback_cmd_;
+}
+inline ::TSP::Reference* CommandSetFontFamilyArchive::mutable_rollback_cmd() {
+  set_has_rollback_cmd();
+  if (rollback_cmd_ == NULL) rollback_cmd_ = new ::TSP::Reference;
+  return rollback_cmd_;
+}
+inline ::TSP::Reference* CommandSetFontFamilyArchive::release_rollback_cmd() {
+  clear_has_rollback_cmd();
+  ::TSP::Reference* temp = rollback_cmd_;
+  rollback_cmd_ = NULL;
+  return temp;
+}
+inline void CommandSetFontFamilyArchive::set_allocated_rollback_cmd(::TSP::Reference* rollback_cmd) {
+  delete rollback_cmd_;
+  rollback_cmd_ = rollback_cmd;
+  if (rollback_cmd) {
+    set_has_rollback_cmd();
+  } else {
+    clear_has_rollback_cmd();
+  }
+}
+
+// optional string new_font_family = 3;
+inline bool CommandSetFontFamilyArchive::has_new_font_family() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void CommandSetFontFamilyArchive::set_has_new_font_family() {
+  _has_bits_[0] |= 0x00000004u;
+}
+inline void CommandSetFontFamilyArchive::clear_has_new_font_family() {
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline void CommandSetFontFamilyArchive::clear_new_font_family() {
+  if (new_font_family_ != &::google::protobuf::internal::kEmptyString) {
+    new_font_family_->clear();
+  }
+  clear_has_new_font_family();
+}
+inline const ::std::string& CommandSetFontFamilyArchive::new_font_family() const {
+  return *new_font_family_;
+}
+inline void CommandSetFontFamilyArchive::set_new_font_family(const ::std::string& value) {
+  set_has_new_font_family();
+  if (new_font_family_ == &::google::protobuf::internal::kEmptyString) {
+    new_font_family_ = new ::std::string;
+  }
+  new_font_family_->assign(value);
+}
+inline void CommandSetFontFamilyArchive::set_new_font_family(const char* value) {
+  set_has_new_font_family();
+  if (new_font_family_ == &::google::protobuf::internal::kEmptyString) {
+    new_font_family_ = new ::std::string;
+  }
+  new_font_family_->assign(value);
+}
+inline void CommandSetFontFamilyArchive::set_new_font_family(const char* value, size_t size) {
+  set_has_new_font_family();
+  if (new_font_family_ == &::google::protobuf::internal::kEmptyString) {
+    new_font_family_ = new ::std::string;
+  }
+  new_font_family_->assign(reinterpret_cast<const char*>(value), size);
+}
+inline ::std::string* CommandSetFontFamilyArchive::mutable_new_font_family() {
+  set_has_new_font_family();
+  if (new_font_family_ == &::google::protobuf::internal::kEmptyString) {
+    new_font_family_ = new ::std::string;
+  }
+  return new_font_family_;
+}
+inline ::std::string* CommandSetFontFamilyArchive::release_new_font_family() {
+  clear_has_new_font_family();
+  if (new_font_family_ == &::google::protobuf::internal::kEmptyString) {
+    return NULL;
+  } else {
+    ::std::string* temp = new_font_family_;
+    new_font_family_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+    return temp;
+  }
+}
+inline void CommandSetFontFamilyArchive::set_allocated_new_font_family(::std::string* new_font_family) {
+  if (new_font_family_ != &::google::protobuf::internal::kEmptyString) {
+    delete new_font_family_;
+  }
+  if (new_font_family) {
+    set_has_new_font_family();
+    new_font_family_ = new_font_family;
+  } else {
+    clear_has_new_font_family();
+    new_font_family_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+  }
+}
+
+// optional string old_font_family = 4;
+inline bool CommandSetFontFamilyArchive::has_old_font_family() const {
+  return (_has_bits_[0] & 0x00000008u) != 0;
+}
+inline void CommandSetFontFamilyArchive::set_has_old_font_family() {
+  _has_bits_[0] |= 0x00000008u;
+}
+inline void CommandSetFontFamilyArchive::clear_has_old_font_family() {
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline void CommandSetFontFamilyArchive::clear_old_font_family() {
+  if (old_font_family_ != &::google::protobuf::internal::kEmptyString) {
+    old_font_family_->clear();
+  }
+  clear_has_old_font_family();
+}
+inline const ::std::string& CommandSetFontFamilyArchive::old_font_family() const {
+  return *old_font_family_;
+}
+inline void CommandSetFontFamilyArchive::set_old_font_family(const ::std::string& value) {
+  set_has_old_font_family();
+  if (old_font_family_ == &::google::protobuf::internal::kEmptyString) {
+    old_font_family_ = new ::std::string;
+  }
+  old_font_family_->assign(value);
+}
+inline void CommandSetFontFamilyArchive::set_old_font_family(const char* value) {
+  set_has_old_font_family();
+  if (old_font_family_ == &::google::protobuf::internal::kEmptyString) {
+    old_font_family_ = new ::std::string;
+  }
+  old_font_family_->assign(value);
+}
+inline void CommandSetFontFamilyArchive::set_old_font_family(const char* value, size_t size) {
+  set_has_old_font_family();
+  if (old_font_family_ == &::google::protobuf::internal::kEmptyString) {
+    old_font_family_ = new ::std::string;
+  }
+  old_font_family_->assign(reinterpret_cast<const char*>(value), size);
+}
+inline ::std::string* CommandSetFontFamilyArchive::mutable_old_font_family() {
+  set_has_old_font_family();
+  if (old_font_family_ == &::google::protobuf::internal::kEmptyString) {
+    old_font_family_ = new ::std::string;
+  }
+  return old_font_family_;
+}
+inline ::std::string* CommandSetFontFamilyArchive::release_old_font_family() {
+  clear_has_old_font_family();
+  if (old_font_family_ == &::google::protobuf::internal::kEmptyString) {
+    return NULL;
+  } else {
+    ::std::string* temp = old_font_family_;
+    old_font_family_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+    return temp;
+  }
+}
+inline void CommandSetFontFamilyArchive::set_allocated_old_font_family(::std::string* old_font_family) {
+  if (old_font_family_ != &::google::protobuf::internal::kEmptyString) {
+    delete old_font_family_;
+  }
+  if (old_font_family) {
+    set_has_old_font_family();
+    old_font_family_ = old_font_family;
+  } else {
+    clear_has_old_font_family();
+    old_font_family_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+  }
+}
+
+// repeated .TSCH.CommandMutatePropertiesArchive.ParagraphStyleDeltaMap paragraph_style_delta_maps = 5;
+inline int CommandSetFontFamilyArchive::paragraph_style_delta_maps_size() const {
+  return paragraph_style_delta_maps_.size();
+}
+inline void CommandSetFontFamilyArchive::clear_paragraph_style_delta_maps() {
+  paragraph_style_delta_maps_.Clear();
+}
+inline const ::TSCH::CommandMutatePropertiesArchive_ParagraphStyleDeltaMap& CommandSetFontFamilyArchive::paragraph_style_delta_maps(int index) const {
+  return paragraph_style_delta_maps_.Get(index);
+}
+inline ::TSCH::CommandMutatePropertiesArchive_ParagraphStyleDeltaMap* CommandSetFontFamilyArchive::mutable_paragraph_style_delta_maps(int index) {
+  return paragraph_style_delta_maps_.Mutable(index);
+}
+inline ::TSCH::CommandMutatePropertiesArchive_ParagraphStyleDeltaMap* CommandSetFontFamilyArchive::add_paragraph_style_delta_maps() {
+  return paragraph_style_delta_maps_.Add();
+}
+inline const ::google::protobuf::RepeatedPtrField< ::TSCH::CommandMutatePropertiesArchive_ParagraphStyleDeltaMap >&
+CommandSetFontFamilyArchive::paragraph_style_delta_maps() const {
+  return paragraph_style_delta_maps_;
+}
+inline ::google::protobuf::RepeatedPtrField< ::TSCH::CommandMutatePropertiesArchive_ParagraphStyleDeltaMap >*
+CommandSetFontFamilyArchive::mutable_paragraph_style_delta_maps() {
+  return &paragraph_style_delta_maps_;
+}
+
+// -------------------------------------------------------------------
+
+// CommandApplyFillSetArchive_CapturedFillSetArchive
+
+// optional string identifier = 1;
+inline bool CommandApplyFillSetArchive_CapturedFillSetArchive::has_identifier() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void CommandApplyFillSetArchive_CapturedFillSetArchive::set_has_identifier() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void CommandApplyFillSetArchive_CapturedFillSetArchive::clear_has_identifier() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void CommandApplyFillSetArchive_CapturedFillSetArchive::clear_identifier() {
+  if (identifier_ != &::google::protobuf::internal::kEmptyString) {
+    identifier_->clear();
+  }
+  clear_has_identifier();
+}
+inline const ::std::string& CommandApplyFillSetArchive_CapturedFillSetArchive::identifier() const {
+  return *identifier_;
+}
+inline void CommandApplyFillSetArchive_CapturedFillSetArchive::set_identifier(const ::std::string& value) {
+  set_has_identifier();
+  if (identifier_ == &::google::protobuf::internal::kEmptyString) {
+    identifier_ = new ::std::string;
+  }
+  identifier_->assign(value);
+}
+inline void CommandApplyFillSetArchive_CapturedFillSetArchive::set_identifier(const char* value) {
+  set_has_identifier();
+  if (identifier_ == &::google::protobuf::internal::kEmptyString) {
+    identifier_ = new ::std::string;
+  }
+  identifier_->assign(value);
+}
+inline void CommandApplyFillSetArchive_CapturedFillSetArchive::set_identifier(const char* value, size_t size) {
+  set_has_identifier();
+  if (identifier_ == &::google::protobuf::internal::kEmptyString) {
+    identifier_ = new ::std::string;
+  }
+  identifier_->assign(reinterpret_cast<const char*>(value), size);
+}
+inline ::std::string* CommandApplyFillSetArchive_CapturedFillSetArchive::mutable_identifier() {
+  set_has_identifier();
+  if (identifier_ == &::google::protobuf::internal::kEmptyString) {
+    identifier_ = new ::std::string;
+  }
+  return identifier_;
+}
+inline ::std::string* CommandApplyFillSetArchive_CapturedFillSetArchive::release_identifier() {
+  clear_has_identifier();
+  if (identifier_ == &::google::protobuf::internal::kEmptyString) {
+    return NULL;
+  } else {
+    ::std::string* temp = identifier_;
+    identifier_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+    return temp;
+  }
+}
+inline void CommandApplyFillSetArchive_CapturedFillSetArchive::set_allocated_identifier(::std::string* identifier) {
+  if (identifier_ != &::google::protobuf::internal::kEmptyString) {
+    delete identifier_;
+  }
+  if (identifier) {
+    set_has_identifier();
+    identifier_ = identifier;
+  } else {
+    clear_has_identifier();
+    identifier_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+  }
+}
+
+// optional uint32 number_of_theme_series_styles = 2;
+inline bool CommandApplyFillSetArchive_CapturedFillSetArchive::has_number_of_theme_series_styles() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void CommandApplyFillSetArchive_CapturedFillSetArchive::set_has_number_of_theme_series_styles() {
+  _has_bits_[0] |= 0x00000002u;
+}
+inline void CommandApplyFillSetArchive_CapturedFillSetArchive::clear_has_number_of_theme_series_styles() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline void CommandApplyFillSetArchive_CapturedFillSetArchive::clear_number_of_theme_series_styles() {
+  number_of_theme_series_styles_ = 0u;
+  clear_has_number_of_theme_series_styles();
+}
+inline ::google::protobuf::uint32 CommandApplyFillSetArchive_CapturedFillSetArchive::number_of_theme_series_styles() const {
+  return number_of_theme_series_styles_;
+}
+inline void CommandApplyFillSetArchive_CapturedFillSetArchive::set_number_of_theme_series_styles(::google::protobuf::uint32 value) {
+  set_has_number_of_theme_series_styles();
+  number_of_theme_series_styles_ = value;
+}
+
+// repeated .TSCH.ChartSeriesStyleArchive property_maps = 3;
+inline int CommandApplyFillSetArchive_CapturedFillSetArchive::property_maps_size() const {
+  return property_maps_.size();
+}
+inline void CommandApplyFillSetArchive_CapturedFillSetArchive::clear_property_maps() {
+  property_maps_.Clear();
+}
+inline const ::TSCH::ChartSeriesStyleArchive& CommandApplyFillSetArchive_CapturedFillSetArchive::property_maps(int index) const {
+  return property_maps_.Get(index);
+}
+inline ::TSCH::ChartSeriesStyleArchive* CommandApplyFillSetArchive_CapturedFillSetArchive::mutable_property_maps(int index) {
+  return property_maps_.Mutable(index);
+}
+inline ::TSCH::ChartSeriesStyleArchive* CommandApplyFillSetArchive_CapturedFillSetArchive::add_property_maps() {
+  return property_maps_.Add();
+}
+inline const ::google::protobuf::RepeatedPtrField< ::TSCH::ChartSeriesStyleArchive >&
+CommandApplyFillSetArchive_CapturedFillSetArchive::property_maps() const {
+  return property_maps_;
+}
+inline ::google::protobuf::RepeatedPtrField< ::TSCH::ChartSeriesStyleArchive >*
+CommandApplyFillSetArchive_CapturedFillSetArchive::mutable_property_maps() {
+  return &property_maps_;
+}
+
+// -------------------------------------------------------------------
+
+// CommandApplyFillSetArchive
+
+// required .TSCH.ChartCommandArchive super = 1;
+inline bool CommandApplyFillSetArchive::has_super() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void CommandApplyFillSetArchive::set_has_super() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void CommandApplyFillSetArchive::clear_has_super() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void CommandApplyFillSetArchive::clear_super() {
+  if (super_ != NULL) super_->::TSCH::ChartCommandArchive::Clear();
+  clear_has_super();
+}
+inline const ::TSCH::ChartCommandArchive& CommandApplyFillSetArchive::super() const {
+  return super_ != NULL ? *super_ : *default_instance_->super_;
+}
+inline ::TSCH::ChartCommandArchive* CommandApplyFillSetArchive::mutable_super() {
+  set_has_super();
+  if (super_ == NULL) super_ = new ::TSCH::ChartCommandArchive;
+  return super_;
+}
+inline ::TSCH::ChartCommandArchive* CommandApplyFillSetArchive::release_super() {
+  clear_has_super();
+  ::TSCH::ChartCommandArchive* temp = super_;
+  super_ = NULL;
+  return temp;
+}
+inline void CommandApplyFillSetArchive::set_allocated_super(::TSCH::ChartCommandArchive* super) {
+  delete super_;
+  super_ = super;
+  if (super) {
+    set_has_super();
+  } else {
+    clear_has_super();
+  }
+}
+
+// optional .TSP.Reference rollback_cmd = 2;
+inline bool CommandApplyFillSetArchive::has_rollback_cmd() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void CommandApplyFillSetArchive::set_has_rollback_cmd() {
+  _has_bits_[0] |= 0x00000002u;
+}
+inline void CommandApplyFillSetArchive::clear_has_rollback_cmd() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline void CommandApplyFillSetArchive::clear_rollback_cmd() {
+  if (rollback_cmd_ != NULL) rollback_cmd_->::TSP::Reference::Clear();
+  clear_has_rollback_cmd();
+}
+inline const ::TSP::Reference& CommandApplyFillSetArchive::rollback_cmd() const {
+  return rollback_cmd_ != NULL ? *rollback_cmd_ : *default_instance_->rollback_cmd_;
+}
+inline ::TSP::Reference* CommandApplyFillSetArchive::mutable_rollback_cmd() {
+  set_has_rollback_cmd();
+  if (rollback_cmd_ == NULL) rollback_cmd_ = new ::TSP::Reference;
+  return rollback_cmd_;
+}
+inline ::TSP::Reference* CommandApplyFillSetArchive::release_rollback_cmd() {
+  clear_has_rollback_cmd();
+  ::TSP::Reference* temp = rollback_cmd_;
+  rollback_cmd_ = NULL;
+  return temp;
+}
+inline void CommandApplyFillSetArchive::set_allocated_rollback_cmd(::TSP::Reference* rollback_cmd) {
+  delete rollback_cmd_;
+  rollback_cmd_ = rollback_cmd;
+  if (rollback_cmd) {
+    set_has_rollback_cmd();
+  } else {
+    clear_has_rollback_cmd();
+  }
+}
+
+// optional string fwd_fill_set_lookup_string = 3;
+inline bool CommandApplyFillSetArchive::has_fwd_fill_set_lookup_string() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void CommandApplyFillSetArchive::set_has_fwd_fill_set_lookup_string() {
+  _has_bits_[0] |= 0x00000004u;
+}
+inline void CommandApplyFillSetArchive::clear_has_fwd_fill_set_lookup_string() {
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline void CommandApplyFillSetArchive::clear_fwd_fill_set_lookup_string() {
+  if (fwd_fill_set_lookup_string_ != &::google::protobuf::internal::kEmptyString) {
+    fwd_fill_set_lookup_string_->clear();
+  }
+  clear_has_fwd_fill_set_lookup_string();
+}
+inline const ::std::string& CommandApplyFillSetArchive::fwd_fill_set_lookup_string() const {
+  return *fwd_fill_set_lookup_string_;
+}
+inline void CommandApplyFillSetArchive::set_fwd_fill_set_lookup_string(const ::std::string& value) {
+  set_has_fwd_fill_set_lookup_string();
+  if (fwd_fill_set_lookup_string_ == &::google::protobuf::internal::kEmptyString) {
+    fwd_fill_set_lookup_string_ = new ::std::string;
+  }
+  fwd_fill_set_lookup_string_->assign(value);
+}
+inline void CommandApplyFillSetArchive::set_fwd_fill_set_lookup_string(const char* value) {
+  set_has_fwd_fill_set_lookup_string();
+  if (fwd_fill_set_lookup_string_ == &::google::protobuf::internal::kEmptyString) {
+    fwd_fill_set_lookup_string_ = new ::std::string;
+  }
+  fwd_fill_set_lookup_string_->assign(value);
+}
+inline void CommandApplyFillSetArchive::set_fwd_fill_set_lookup_string(const char* value, size_t size) {
+  set_has_fwd_fill_set_lookup_string();
+  if (fwd_fill_set_lookup_string_ == &::google::protobuf::internal::kEmptyString) {
+    fwd_fill_set_lookup_string_ = new ::std::string;
+  }
+  fwd_fill_set_lookup_string_->assign(reinterpret_cast<const char*>(value), size);
+}
+inline ::std::string* CommandApplyFillSetArchive::mutable_fwd_fill_set_lookup_string() {
+  set_has_fwd_fill_set_lookup_string();
+  if (fwd_fill_set_lookup_string_ == &::google::protobuf::internal::kEmptyString) {
+    fwd_fill_set_lookup_string_ = new ::std::string;
+  }
+  return fwd_fill_set_lookup_string_;
+}
+inline ::std::string* CommandApplyFillSetArchive::release_fwd_fill_set_lookup_string() {
+  clear_has_fwd_fill_set_lookup_string();
+  if (fwd_fill_set_lookup_string_ == &::google::protobuf::internal::kEmptyString) {
+    return NULL;
+  } else {
+    ::std::string* temp = fwd_fill_set_lookup_string_;
+    fwd_fill_set_lookup_string_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+    return temp;
+  }
+}
+inline void CommandApplyFillSetArchive::set_allocated_fwd_fill_set_lookup_string(::std::string* fwd_fill_set_lookup_string) {
+  if (fwd_fill_set_lookup_string_ != &::google::protobuf::internal::kEmptyString) {
+    delete fwd_fill_set_lookup_string_;
+  }
+  if (fwd_fill_set_lookup_string) {
+    set_has_fwd_fill_set_lookup_string();
+    fwd_fill_set_lookup_string_ = fwd_fill_set_lookup_string;
+  } else {
+    clear_has_fwd_fill_set_lookup_string();
+    fwd_fill_set_lookup_string_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+  }
+}
+
+// optional string rev_fill_set_lookup_string = 4;
+inline bool CommandApplyFillSetArchive::has_rev_fill_set_lookup_string() const {
+  return (_has_bits_[0] & 0x00000008u) != 0;
+}
+inline void CommandApplyFillSetArchive::set_has_rev_fill_set_lookup_string() {
+  _has_bits_[0] |= 0x00000008u;
+}
+inline void CommandApplyFillSetArchive::clear_has_rev_fill_set_lookup_string() {
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline void CommandApplyFillSetArchive::clear_rev_fill_set_lookup_string() {
+  if (rev_fill_set_lookup_string_ != &::google::protobuf::internal::kEmptyString) {
+    rev_fill_set_lookup_string_->clear();
+  }
+  clear_has_rev_fill_set_lookup_string();
+}
+inline const ::std::string& CommandApplyFillSetArchive::rev_fill_set_lookup_string() const {
+  return *rev_fill_set_lookup_string_;
+}
+inline void CommandApplyFillSetArchive::set_rev_fill_set_lookup_string(const ::std::string& value) {
+  set_has_rev_fill_set_lookup_string();
+  if (rev_fill_set_lookup_string_ == &::google::protobuf::internal::kEmptyString) {
+    rev_fill_set_lookup_string_ = new ::std::string;
+  }
+  rev_fill_set_lookup_string_->assign(value);
+}
+inline void CommandApplyFillSetArchive::set_rev_fill_set_lookup_string(const char* value) {
+  set_has_rev_fill_set_lookup_string();
+  if (rev_fill_set_lookup_string_ == &::google::protobuf::internal::kEmptyString) {
+    rev_fill_set_lookup_string_ = new ::std::string;
+  }
+  rev_fill_set_lookup_string_->assign(value);
+}
+inline void CommandApplyFillSetArchive::set_rev_fill_set_lookup_string(const char* value, size_t size) {
+  set_has_rev_fill_set_lookup_string();
+  if (rev_fill_set_lookup_string_ == &::google::protobuf::internal::kEmptyString) {
+    rev_fill_set_lookup_string_ = new ::std::string;
+  }
+  rev_fill_set_lookup_string_->assign(reinterpret_cast<const char*>(value), size);
+}
+inline ::std::string* CommandApplyFillSetArchive::mutable_rev_fill_set_lookup_string() {
+  set_has_rev_fill_set_lookup_string();
+  if (rev_fill_set_lookup_string_ == &::google::protobuf::internal::kEmptyString) {
+    rev_fill_set_lookup_string_ = new ::std::string;
+  }
+  return rev_fill_set_lookup_string_;
+}
+inline ::std::string* CommandApplyFillSetArchive::release_rev_fill_set_lookup_string() {
+  clear_has_rev_fill_set_lookup_string();
+  if (rev_fill_set_lookup_string_ == &::google::protobuf::internal::kEmptyString) {
+    return NULL;
+  } else {
+    ::std::string* temp = rev_fill_set_lookup_string_;
+    rev_fill_set_lookup_string_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+    return temp;
+  }
+}
+inline void CommandApplyFillSetArchive::set_allocated_rev_fill_set_lookup_string(::std::string* rev_fill_set_lookup_string) {
+  if (rev_fill_set_lookup_string_ != &::google::protobuf::internal::kEmptyString) {
+    delete rev_fill_set_lookup_string_;
+  }
+  if (rev_fill_set_lookup_string) {
+    set_has_rev_fill_set_lookup_string();
+    rev_fill_set_lookup_string_ = rev_fill_set_lookup_string;
+  } else {
+    clear_has_rev_fill_set_lookup_string();
+    rev_fill_set_lookup_string_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+  }
+}
+
+// optional .TSCH.CommandApplyFillSetArchive.CapturedFillSetArchive fwd_captured_fill_set = 5;
+inline bool CommandApplyFillSetArchive::has_fwd_captured_fill_set() const {
+  return (_has_bits_[0] & 0x00000010u) != 0;
+}
+inline void CommandApplyFillSetArchive::set_has_fwd_captured_fill_set() {
+  _has_bits_[0] |= 0x00000010u;
+}
+inline void CommandApplyFillSetArchive::clear_has_fwd_captured_fill_set() {
+  _has_bits_[0] &= ~0x00000010u;
+}
+inline void CommandApplyFillSetArchive::clear_fwd_captured_fill_set() {
+  if (fwd_captured_fill_set_ != NULL) fwd_captured_fill_set_->::TSCH::CommandApplyFillSetArchive_CapturedFillSetArchive::Clear();
+  clear_has_fwd_captured_fill_set();
+}
+inline const ::TSCH::CommandApplyFillSetArchive_CapturedFillSetArchive& CommandApplyFillSetArchive::fwd_captured_fill_set() const {
+  return fwd_captured_fill_set_ != NULL ? *fwd_captured_fill_set_ : *default_instance_->fwd_captured_fill_set_;
+}
+inline ::TSCH::CommandApplyFillSetArchive_CapturedFillSetArchive* CommandApplyFillSetArchive::mutable_fwd_captured_fill_set() {
+  set_has_fwd_captured_fill_set();
+  if (fwd_captured_fill_set_ == NULL) fwd_captured_fill_set_ = new ::TSCH::CommandApplyFillSetArchive_CapturedFillSetArchive;
+  return fwd_captured_fill_set_;
+}
+inline ::TSCH::CommandApplyFillSetArchive_CapturedFillSetArchive* CommandApplyFillSetArchive::release_fwd_captured_fill_set() {
+  clear_has_fwd_captured_fill_set();
+  ::TSCH::CommandApplyFillSetArchive_CapturedFillSetArchive* temp = fwd_captured_fill_set_;
+  fwd_captured_fill_set_ = NULL;
+  return temp;
+}
+inline void CommandApplyFillSetArchive::set_allocated_fwd_captured_fill_set(::TSCH::CommandApplyFillSetArchive_CapturedFillSetArchive* fwd_captured_fill_set) {
+  delete fwd_captured_fill_set_;
+  fwd_captured_fill_set_ = fwd_captured_fill_set;
+  if (fwd_captured_fill_set) {
+    set_has_fwd_captured_fill_set();
+  } else {
+    clear_has_fwd_captured_fill_set();
+  }
+}
+
+// optional .TSCH.CommandApplyFillSetArchive.CapturedFillSetArchive rev_captured_fill_set = 6;
+inline bool CommandApplyFillSetArchive::has_rev_captured_fill_set() const {
+  return (_has_bits_[0] & 0x00000020u) != 0;
+}
+inline void CommandApplyFillSetArchive::set_has_rev_captured_fill_set() {
+  _has_bits_[0] |= 0x00000020u;
+}
+inline void CommandApplyFillSetArchive::clear_has_rev_captured_fill_set() {
+  _has_bits_[0] &= ~0x00000020u;
+}
+inline void CommandApplyFillSetArchive::clear_rev_captured_fill_set() {
+  if (rev_captured_fill_set_ != NULL) rev_captured_fill_set_->::TSCH::CommandApplyFillSetArchive_CapturedFillSetArchive::Clear();
+  clear_has_rev_captured_fill_set();
+}
+inline const ::TSCH::CommandApplyFillSetArchive_CapturedFillSetArchive& CommandApplyFillSetArchive::rev_captured_fill_set() const {
+  return rev_captured_fill_set_ != NULL ? *rev_captured_fill_set_ : *default_instance_->rev_captured_fill_set_;
+}
+inline ::TSCH::CommandApplyFillSetArchive_CapturedFillSetArchive* CommandApplyFillSetArchive::mutable_rev_captured_fill_set() {
+  set_has_rev_captured_fill_set();
+  if (rev_captured_fill_set_ == NULL) rev_captured_fill_set_ = new ::TSCH::CommandApplyFillSetArchive_CapturedFillSetArchive;
+  return rev_captured_fill_set_;
+}
+inline ::TSCH::CommandApplyFillSetArchive_CapturedFillSetArchive* CommandApplyFillSetArchive::release_rev_captured_fill_set() {
+  clear_has_rev_captured_fill_set();
+  ::TSCH::CommandApplyFillSetArchive_CapturedFillSetArchive* temp = rev_captured_fill_set_;
+  rev_captured_fill_set_ = NULL;
+  return temp;
+}
+inline void CommandApplyFillSetArchive::set_allocated_rev_captured_fill_set(::TSCH::CommandApplyFillSetArchive_CapturedFillSetArchive* rev_captured_fill_set) {
+  delete rev_captured_fill_set_;
+  rev_captured_fill_set_ = rev_captured_fill_set;
+  if (rev_captured_fill_set) {
+    set_has_rev_captured_fill_set();
+  } else {
+    clear_has_rev_captured_fill_set();
+  }
+}
+
+// optional string rev_last_applied_fill_set_lookup_string = 7;
+inline bool CommandApplyFillSetArchive::has_rev_last_applied_fill_set_lookup_string() const {
+  return (_has_bits_[0] & 0x00000040u) != 0;
+}
+inline void CommandApplyFillSetArchive::set_has_rev_last_applied_fill_set_lookup_string() {
+  _has_bits_[0] |= 0x00000040u;
+}
+inline void CommandApplyFillSetArchive::clear_has_rev_last_applied_fill_set_lookup_string() {
+  _has_bits_[0] &= ~0x00000040u;
+}
+inline void CommandApplyFillSetArchive::clear_rev_last_applied_fill_set_lookup_string() {
+  if (rev_last_applied_fill_set_lookup_string_ != &::google::protobuf::internal::kEmptyString) {
+    rev_last_applied_fill_set_lookup_string_->clear();
+  }
+  clear_has_rev_last_applied_fill_set_lookup_string();
+}
+inline const ::std::string& CommandApplyFillSetArchive::rev_last_applied_fill_set_lookup_string() const {
+  return *rev_last_applied_fill_set_lookup_string_;
+}
+inline void CommandApplyFillSetArchive::set_rev_last_applied_fill_set_lookup_string(const ::std::string& value) {
+  set_has_rev_last_applied_fill_set_lookup_string();
+  if (rev_last_applied_fill_set_lookup_string_ == &::google::protobuf::internal::kEmptyString) {
+    rev_last_applied_fill_set_lookup_string_ = new ::std::string;
+  }
+  rev_last_applied_fill_set_lookup_string_->assign(value);
+}
+inline void CommandApplyFillSetArchive::set_rev_last_applied_fill_set_lookup_string(const char* value) {
+  set_has_rev_last_applied_fill_set_lookup_string();
+  if (rev_last_applied_fill_set_lookup_string_ == &::google::protobuf::internal::kEmptyString) {
+    rev_last_applied_fill_set_lookup_string_ = new ::std::string;
+  }
+  rev_last_applied_fill_set_lookup_string_->assign(value);
+}
+inline void CommandApplyFillSetArchive::set_rev_last_applied_fill_set_lookup_string(const char* value, size_t size) {
+  set_has_rev_last_applied_fill_set_lookup_string();
+  if (rev_last_applied_fill_set_lookup_string_ == &::google::protobuf::internal::kEmptyString) {
+    rev_last_applied_fill_set_lookup_string_ = new ::std::string;
+  }
+  rev_last_applied_fill_set_lookup_string_->assign(reinterpret_cast<const char*>(value), size);
+}
+inline ::std::string* CommandApplyFillSetArchive::mutable_rev_last_applied_fill_set_lookup_string() {
+  set_has_rev_last_applied_fill_set_lookup_string();
+  if (rev_last_applied_fill_set_lookup_string_ == &::google::protobuf::internal::kEmptyString) {
+    rev_last_applied_fill_set_lookup_string_ = new ::std::string;
+  }
+  return rev_last_applied_fill_set_lookup_string_;
+}
+inline ::std::string* CommandApplyFillSetArchive::release_rev_last_applied_fill_set_lookup_string() {
+  clear_has_rev_last_applied_fill_set_lookup_string();
+  if (rev_last_applied_fill_set_lookup_string_ == &::google::protobuf::internal::kEmptyString) {
+    return NULL;
+  } else {
+    ::std::string* temp = rev_last_applied_fill_set_lookup_string_;
+    rev_last_applied_fill_set_lookup_string_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+    return temp;
+  }
+}
+inline void CommandApplyFillSetArchive::set_allocated_rev_last_applied_fill_set_lookup_string(::std::string* rev_last_applied_fill_set_lookup_string) {
+  if (rev_last_applied_fill_set_lookup_string_ != &::google::protobuf::internal::kEmptyString) {
+    delete rev_last_applied_fill_set_lookup_string_;
+  }
+  if (rev_last_applied_fill_set_lookup_string) {
+    set_has_rev_last_applied_fill_set_lookup_string();
+    rev_last_applied_fill_set_lookup_string_ = rev_last_applied_fill_set_lookup_string;
+  } else {
+    clear_has_rev_last_applied_fill_set_lookup_string();
+    rev_last_applied_fill_set_lookup_string_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+  }
 }
 
 // -------------------------------------------------------------------
@@ -5309,6 +8178,50 @@ CommandAddGridRowsArchive::mutable_name() {
   return &name_;
 }
 
+// repeated string ids = 5;
+inline int CommandAddGridRowsArchive::ids_size() const {
+  return ids_.size();
+}
+inline void CommandAddGridRowsArchive::clear_ids() {
+  ids_.Clear();
+}
+inline const ::std::string& CommandAddGridRowsArchive::ids(int index) const {
+  return ids_.Get(index);
+}
+inline ::std::string* CommandAddGridRowsArchive::mutable_ids(int index) {
+  return ids_.Mutable(index);
+}
+inline void CommandAddGridRowsArchive::set_ids(int index, const ::std::string& value) {
+  ids_.Mutable(index)->assign(value);
+}
+inline void CommandAddGridRowsArchive::set_ids(int index, const char* value) {
+  ids_.Mutable(index)->assign(value);
+}
+inline void CommandAddGridRowsArchive::set_ids(int index, const char* value, size_t size) {
+  ids_.Mutable(index)->assign(
+    reinterpret_cast<const char*>(value), size);
+}
+inline ::std::string* CommandAddGridRowsArchive::add_ids() {
+  return ids_.Add();
+}
+inline void CommandAddGridRowsArchive::add_ids(const ::std::string& value) {
+  ids_.Add()->assign(value);
+}
+inline void CommandAddGridRowsArchive::add_ids(const char* value) {
+  ids_.Add()->assign(value);
+}
+inline void CommandAddGridRowsArchive::add_ids(const char* value, size_t size) {
+  ids_.Add()->assign(reinterpret_cast<const char*>(value), size);
+}
+inline const ::google::protobuf::RepeatedPtrField< ::std::string>&
+CommandAddGridRowsArchive::ids() const {
+  return ids_;
+}
+inline ::google::protobuf::RepeatedPtrField< ::std::string>*
+CommandAddGridRowsArchive::mutable_ids() {
+  return &ids_;
+}
+
 // -------------------------------------------------------------------
 
 // CommandAddGridColumnsArchive
@@ -5437,6 +8350,50 @@ CommandAddGridColumnsArchive::name() const {
 inline ::google::protobuf::RepeatedPtrField< ::std::string>*
 CommandAddGridColumnsArchive::mutable_name() {
   return &name_;
+}
+
+// repeated string ids = 5;
+inline int CommandAddGridColumnsArchive::ids_size() const {
+  return ids_.size();
+}
+inline void CommandAddGridColumnsArchive::clear_ids() {
+  ids_.Clear();
+}
+inline const ::std::string& CommandAddGridColumnsArchive::ids(int index) const {
+  return ids_.Get(index);
+}
+inline ::std::string* CommandAddGridColumnsArchive::mutable_ids(int index) {
+  return ids_.Mutable(index);
+}
+inline void CommandAddGridColumnsArchive::set_ids(int index, const ::std::string& value) {
+  ids_.Mutable(index)->assign(value);
+}
+inline void CommandAddGridColumnsArchive::set_ids(int index, const char* value) {
+  ids_.Mutable(index)->assign(value);
+}
+inline void CommandAddGridColumnsArchive::set_ids(int index, const char* value, size_t size) {
+  ids_.Mutable(index)->assign(
+    reinterpret_cast<const char*>(value), size);
+}
+inline ::std::string* CommandAddGridColumnsArchive::add_ids() {
+  return ids_.Add();
+}
+inline void CommandAddGridColumnsArchive::add_ids(const ::std::string& value) {
+  ids_.Add()->assign(value);
+}
+inline void CommandAddGridColumnsArchive::add_ids(const char* value) {
+  ids_.Add()->assign(value);
+}
+inline void CommandAddGridColumnsArchive::add_ids(const char* value, size_t size) {
+  ids_.Add()->assign(reinterpret_cast<const char*>(value), size);
+}
+inline const ::google::protobuf::RepeatedPtrField< ::std::string>&
+CommandAddGridColumnsArchive::ids() const {
+  return ids_;
+}
+inline ::google::protobuf::RepeatedPtrField< ::std::string>*
+CommandAddGridColumnsArchive::mutable_ids() {
+  return &ids_;
 }
 
 // -------------------------------------------------------------------
@@ -5905,6 +8862,116 @@ CommandDeleteGridRowsArchive::mutable_column_names() {
   return &column_names_;
 }
 
+// repeated string row_ids = 9;
+inline int CommandDeleteGridRowsArchive::row_ids_size() const {
+  return row_ids_.size();
+}
+inline void CommandDeleteGridRowsArchive::clear_row_ids() {
+  row_ids_.Clear();
+}
+inline const ::std::string& CommandDeleteGridRowsArchive::row_ids(int index) const {
+  return row_ids_.Get(index);
+}
+inline ::std::string* CommandDeleteGridRowsArchive::mutable_row_ids(int index) {
+  return row_ids_.Mutable(index);
+}
+inline void CommandDeleteGridRowsArchive::set_row_ids(int index, const ::std::string& value) {
+  row_ids_.Mutable(index)->assign(value);
+}
+inline void CommandDeleteGridRowsArchive::set_row_ids(int index, const char* value) {
+  row_ids_.Mutable(index)->assign(value);
+}
+inline void CommandDeleteGridRowsArchive::set_row_ids(int index, const char* value, size_t size) {
+  row_ids_.Mutable(index)->assign(
+    reinterpret_cast<const char*>(value), size);
+}
+inline ::std::string* CommandDeleteGridRowsArchive::add_row_ids() {
+  return row_ids_.Add();
+}
+inline void CommandDeleteGridRowsArchive::add_row_ids(const ::std::string& value) {
+  row_ids_.Add()->assign(value);
+}
+inline void CommandDeleteGridRowsArchive::add_row_ids(const char* value) {
+  row_ids_.Add()->assign(value);
+}
+inline void CommandDeleteGridRowsArchive::add_row_ids(const char* value, size_t size) {
+  row_ids_.Add()->assign(reinterpret_cast<const char*>(value), size);
+}
+inline const ::google::protobuf::RepeatedPtrField< ::std::string>&
+CommandDeleteGridRowsArchive::row_ids() const {
+  return row_ids_;
+}
+inline ::google::protobuf::RepeatedPtrField< ::std::string>*
+CommandDeleteGridRowsArchive::mutable_row_ids() {
+  return &row_ids_;
+}
+
+// repeated string column_ids = 10;
+inline int CommandDeleteGridRowsArchive::column_ids_size() const {
+  return column_ids_.size();
+}
+inline void CommandDeleteGridRowsArchive::clear_column_ids() {
+  column_ids_.Clear();
+}
+inline const ::std::string& CommandDeleteGridRowsArchive::column_ids(int index) const {
+  return column_ids_.Get(index);
+}
+inline ::std::string* CommandDeleteGridRowsArchive::mutable_column_ids(int index) {
+  return column_ids_.Mutable(index);
+}
+inline void CommandDeleteGridRowsArchive::set_column_ids(int index, const ::std::string& value) {
+  column_ids_.Mutable(index)->assign(value);
+}
+inline void CommandDeleteGridRowsArchive::set_column_ids(int index, const char* value) {
+  column_ids_.Mutable(index)->assign(value);
+}
+inline void CommandDeleteGridRowsArchive::set_column_ids(int index, const char* value, size_t size) {
+  column_ids_.Mutable(index)->assign(
+    reinterpret_cast<const char*>(value), size);
+}
+inline ::std::string* CommandDeleteGridRowsArchive::add_column_ids() {
+  return column_ids_.Add();
+}
+inline void CommandDeleteGridRowsArchive::add_column_ids(const ::std::string& value) {
+  column_ids_.Add()->assign(value);
+}
+inline void CommandDeleteGridRowsArchive::add_column_ids(const char* value) {
+  column_ids_.Add()->assign(value);
+}
+inline void CommandDeleteGridRowsArchive::add_column_ids(const char* value, size_t size) {
+  column_ids_.Add()->assign(reinterpret_cast<const char*>(value), size);
+}
+inline const ::google::protobuf::RepeatedPtrField< ::std::string>&
+CommandDeleteGridRowsArchive::column_ids() const {
+  return column_ids_;
+}
+inline ::google::protobuf::RepeatedPtrField< ::std::string>*
+CommandDeleteGridRowsArchive::mutable_column_ids() {
+  return &column_ids_;
+}
+
+// required bool add_dummy_data_on_delete_all = 11;
+inline bool CommandDeleteGridRowsArchive::has_add_dummy_data_on_delete_all() const {
+  return (_has_bits_[0] & 0x00000200u) != 0;
+}
+inline void CommandDeleteGridRowsArchive::set_has_add_dummy_data_on_delete_all() {
+  _has_bits_[0] |= 0x00000200u;
+}
+inline void CommandDeleteGridRowsArchive::clear_has_add_dummy_data_on_delete_all() {
+  _has_bits_[0] &= ~0x00000200u;
+}
+inline void CommandDeleteGridRowsArchive::clear_add_dummy_data_on_delete_all() {
+  add_dummy_data_on_delete_all_ = false;
+  clear_has_add_dummy_data_on_delete_all();
+}
+inline bool CommandDeleteGridRowsArchive::add_dummy_data_on_delete_all() const {
+  return add_dummy_data_on_delete_all_;
+}
+inline void CommandDeleteGridRowsArchive::set_add_dummy_data_on_delete_all(bool value) {
+  set_has_add_dummy_data_on_delete_all();
+  add_dummy_data_on_delete_all_ = value;
+}
+
 // -------------------------------------------------------------------
 
 // CommandDeleteGridColumnsArchive_ValueRow
@@ -6153,6 +9220,116 @@ CommandDeleteGridColumnsArchive::row_names() const {
 inline ::google::protobuf::RepeatedPtrField< ::std::string>*
 CommandDeleteGridColumnsArchive::mutable_row_names() {
   return &row_names_;
+}
+
+// repeated string row_ids = 9;
+inline int CommandDeleteGridColumnsArchive::row_ids_size() const {
+  return row_ids_.size();
+}
+inline void CommandDeleteGridColumnsArchive::clear_row_ids() {
+  row_ids_.Clear();
+}
+inline const ::std::string& CommandDeleteGridColumnsArchive::row_ids(int index) const {
+  return row_ids_.Get(index);
+}
+inline ::std::string* CommandDeleteGridColumnsArchive::mutable_row_ids(int index) {
+  return row_ids_.Mutable(index);
+}
+inline void CommandDeleteGridColumnsArchive::set_row_ids(int index, const ::std::string& value) {
+  row_ids_.Mutable(index)->assign(value);
+}
+inline void CommandDeleteGridColumnsArchive::set_row_ids(int index, const char* value) {
+  row_ids_.Mutable(index)->assign(value);
+}
+inline void CommandDeleteGridColumnsArchive::set_row_ids(int index, const char* value, size_t size) {
+  row_ids_.Mutable(index)->assign(
+    reinterpret_cast<const char*>(value), size);
+}
+inline ::std::string* CommandDeleteGridColumnsArchive::add_row_ids() {
+  return row_ids_.Add();
+}
+inline void CommandDeleteGridColumnsArchive::add_row_ids(const ::std::string& value) {
+  row_ids_.Add()->assign(value);
+}
+inline void CommandDeleteGridColumnsArchive::add_row_ids(const char* value) {
+  row_ids_.Add()->assign(value);
+}
+inline void CommandDeleteGridColumnsArchive::add_row_ids(const char* value, size_t size) {
+  row_ids_.Add()->assign(reinterpret_cast<const char*>(value), size);
+}
+inline const ::google::protobuf::RepeatedPtrField< ::std::string>&
+CommandDeleteGridColumnsArchive::row_ids() const {
+  return row_ids_;
+}
+inline ::google::protobuf::RepeatedPtrField< ::std::string>*
+CommandDeleteGridColumnsArchive::mutable_row_ids() {
+  return &row_ids_;
+}
+
+// repeated string column_ids = 10;
+inline int CommandDeleteGridColumnsArchive::column_ids_size() const {
+  return column_ids_.size();
+}
+inline void CommandDeleteGridColumnsArchive::clear_column_ids() {
+  column_ids_.Clear();
+}
+inline const ::std::string& CommandDeleteGridColumnsArchive::column_ids(int index) const {
+  return column_ids_.Get(index);
+}
+inline ::std::string* CommandDeleteGridColumnsArchive::mutable_column_ids(int index) {
+  return column_ids_.Mutable(index);
+}
+inline void CommandDeleteGridColumnsArchive::set_column_ids(int index, const ::std::string& value) {
+  column_ids_.Mutable(index)->assign(value);
+}
+inline void CommandDeleteGridColumnsArchive::set_column_ids(int index, const char* value) {
+  column_ids_.Mutable(index)->assign(value);
+}
+inline void CommandDeleteGridColumnsArchive::set_column_ids(int index, const char* value, size_t size) {
+  column_ids_.Mutable(index)->assign(
+    reinterpret_cast<const char*>(value), size);
+}
+inline ::std::string* CommandDeleteGridColumnsArchive::add_column_ids() {
+  return column_ids_.Add();
+}
+inline void CommandDeleteGridColumnsArchive::add_column_ids(const ::std::string& value) {
+  column_ids_.Add()->assign(value);
+}
+inline void CommandDeleteGridColumnsArchive::add_column_ids(const char* value) {
+  column_ids_.Add()->assign(value);
+}
+inline void CommandDeleteGridColumnsArchive::add_column_ids(const char* value, size_t size) {
+  column_ids_.Add()->assign(reinterpret_cast<const char*>(value), size);
+}
+inline const ::google::protobuf::RepeatedPtrField< ::std::string>&
+CommandDeleteGridColumnsArchive::column_ids() const {
+  return column_ids_;
+}
+inline ::google::protobuf::RepeatedPtrField< ::std::string>*
+CommandDeleteGridColumnsArchive::mutable_column_ids() {
+  return &column_ids_;
+}
+
+// required bool add_dummy_data_on_delete_all = 11;
+inline bool CommandDeleteGridColumnsArchive::has_add_dummy_data_on_delete_all() const {
+  return (_has_bits_[0] & 0x00000200u) != 0;
+}
+inline void CommandDeleteGridColumnsArchive::set_has_add_dummy_data_on_delete_all() {
+  _has_bits_[0] |= 0x00000200u;
+}
+inline void CommandDeleteGridColumnsArchive::clear_has_add_dummy_data_on_delete_all() {
+  _has_bits_[0] &= ~0x00000200u;
+}
+inline void CommandDeleteGridColumnsArchive::clear_add_dummy_data_on_delete_all() {
+  add_dummy_data_on_delete_all_ = false;
+  clear_has_add_dummy_data_on_delete_all();
+}
+inline bool CommandDeleteGridColumnsArchive::add_dummy_data_on_delete_all() const {
+  return add_dummy_data_on_delete_all_;
+}
+inline void CommandDeleteGridColumnsArchive::set_add_dummy_data_on_delete_all(bool value) {
+  set_has_add_dummy_data_on_delete_all();
+  add_dummy_data_on_delete_all_ = value;
 }
 
 // -------------------------------------------------------------------
@@ -8168,6 +11345,94 @@ inline void CommandReplaceGridValuesArchive::set_cols_to_add(::google::protobuf:
   cols_to_add_ = value;
 }
 
+// repeated string row_ids = 12;
+inline int CommandReplaceGridValuesArchive::row_ids_size() const {
+  return row_ids_.size();
+}
+inline void CommandReplaceGridValuesArchive::clear_row_ids() {
+  row_ids_.Clear();
+}
+inline const ::std::string& CommandReplaceGridValuesArchive::row_ids(int index) const {
+  return row_ids_.Get(index);
+}
+inline ::std::string* CommandReplaceGridValuesArchive::mutable_row_ids(int index) {
+  return row_ids_.Mutable(index);
+}
+inline void CommandReplaceGridValuesArchive::set_row_ids(int index, const ::std::string& value) {
+  row_ids_.Mutable(index)->assign(value);
+}
+inline void CommandReplaceGridValuesArchive::set_row_ids(int index, const char* value) {
+  row_ids_.Mutable(index)->assign(value);
+}
+inline void CommandReplaceGridValuesArchive::set_row_ids(int index, const char* value, size_t size) {
+  row_ids_.Mutable(index)->assign(
+    reinterpret_cast<const char*>(value), size);
+}
+inline ::std::string* CommandReplaceGridValuesArchive::add_row_ids() {
+  return row_ids_.Add();
+}
+inline void CommandReplaceGridValuesArchive::add_row_ids(const ::std::string& value) {
+  row_ids_.Add()->assign(value);
+}
+inline void CommandReplaceGridValuesArchive::add_row_ids(const char* value) {
+  row_ids_.Add()->assign(value);
+}
+inline void CommandReplaceGridValuesArchive::add_row_ids(const char* value, size_t size) {
+  row_ids_.Add()->assign(reinterpret_cast<const char*>(value), size);
+}
+inline const ::google::protobuf::RepeatedPtrField< ::std::string>&
+CommandReplaceGridValuesArchive::row_ids() const {
+  return row_ids_;
+}
+inline ::google::protobuf::RepeatedPtrField< ::std::string>*
+CommandReplaceGridValuesArchive::mutable_row_ids() {
+  return &row_ids_;
+}
+
+// repeated string column_ids = 13;
+inline int CommandReplaceGridValuesArchive::column_ids_size() const {
+  return column_ids_.size();
+}
+inline void CommandReplaceGridValuesArchive::clear_column_ids() {
+  column_ids_.Clear();
+}
+inline const ::std::string& CommandReplaceGridValuesArchive::column_ids(int index) const {
+  return column_ids_.Get(index);
+}
+inline ::std::string* CommandReplaceGridValuesArchive::mutable_column_ids(int index) {
+  return column_ids_.Mutable(index);
+}
+inline void CommandReplaceGridValuesArchive::set_column_ids(int index, const ::std::string& value) {
+  column_ids_.Mutable(index)->assign(value);
+}
+inline void CommandReplaceGridValuesArchive::set_column_ids(int index, const char* value) {
+  column_ids_.Mutable(index)->assign(value);
+}
+inline void CommandReplaceGridValuesArchive::set_column_ids(int index, const char* value, size_t size) {
+  column_ids_.Mutable(index)->assign(
+    reinterpret_cast<const char*>(value), size);
+}
+inline ::std::string* CommandReplaceGridValuesArchive::add_column_ids() {
+  return column_ids_.Add();
+}
+inline void CommandReplaceGridValuesArchive::add_column_ids(const ::std::string& value) {
+  column_ids_.Add()->assign(value);
+}
+inline void CommandReplaceGridValuesArchive::add_column_ids(const char* value) {
+  column_ids_.Add()->assign(value);
+}
+inline void CommandReplaceGridValuesArchive::add_column_ids(const char* value, size_t size) {
+  column_ids_.Add()->assign(reinterpret_cast<const char*>(value), size);
+}
+inline const ::google::protobuf::RepeatedPtrField< ::std::string>&
+CommandReplaceGridValuesArchive::column_ids() const {
+  return column_ids_;
+}
+inline ::google::protobuf::RepeatedPtrField< ::std::string>*
+CommandReplaceGridValuesArchive::mutable_column_ids() {
+  return &column_ids_;
+}
+
 // -------------------------------------------------------------------
 
 // CommandReplaceThemePresetArchive_StyleAndIdentifierPair
@@ -8523,6 +11788,729 @@ inline void CommandInvalidateWPCaches::set_allocated_super(::TSK::CommandArchive
   } else {
     clear_has_super();
   }
+}
+
+// -------------------------------------------------------------------
+
+// CommandSetGridColumnNameArchive
+
+// required .TSCH.ChartCommandArchive super = 1;
+inline bool CommandSetGridColumnNameArchive::has_super() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void CommandSetGridColumnNameArchive::set_has_super() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void CommandSetGridColumnNameArchive::clear_has_super() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void CommandSetGridColumnNameArchive::clear_super() {
+  if (super_ != NULL) super_->::TSCH::ChartCommandArchive::Clear();
+  clear_has_super();
+}
+inline const ::TSCH::ChartCommandArchive& CommandSetGridColumnNameArchive::super() const {
+  return super_ != NULL ? *super_ : *default_instance_->super_;
+}
+inline ::TSCH::ChartCommandArchive* CommandSetGridColumnNameArchive::mutable_super() {
+  set_has_super();
+  if (super_ == NULL) super_ = new ::TSCH::ChartCommandArchive;
+  return super_;
+}
+inline ::TSCH::ChartCommandArchive* CommandSetGridColumnNameArchive::release_super() {
+  clear_has_super();
+  ::TSCH::ChartCommandArchive* temp = super_;
+  super_ = NULL;
+  return temp;
+}
+inline void CommandSetGridColumnNameArchive::set_allocated_super(::TSCH::ChartCommandArchive* super) {
+  delete super_;
+  super_ = super;
+  if (super) {
+    set_has_super();
+  } else {
+    clear_has_super();
+  }
+}
+
+// required uint32 columnindex = 2;
+inline bool CommandSetGridColumnNameArchive::has_columnindex() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void CommandSetGridColumnNameArchive::set_has_columnindex() {
+  _has_bits_[0] |= 0x00000002u;
+}
+inline void CommandSetGridColumnNameArchive::clear_has_columnindex() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline void CommandSetGridColumnNameArchive::clear_columnindex() {
+  columnindex_ = 0u;
+  clear_has_columnindex();
+}
+inline ::google::protobuf::uint32 CommandSetGridColumnNameArchive::columnindex() const {
+  return columnindex_;
+}
+inline void CommandSetGridColumnNameArchive::set_columnindex(::google::protobuf::uint32 value) {
+  set_has_columnindex();
+  columnindex_ = value;
+}
+
+// required string oldvalue = 3;
+inline bool CommandSetGridColumnNameArchive::has_oldvalue() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void CommandSetGridColumnNameArchive::set_has_oldvalue() {
+  _has_bits_[0] |= 0x00000004u;
+}
+inline void CommandSetGridColumnNameArchive::clear_has_oldvalue() {
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline void CommandSetGridColumnNameArchive::clear_oldvalue() {
+  if (oldvalue_ != &::google::protobuf::internal::kEmptyString) {
+    oldvalue_->clear();
+  }
+  clear_has_oldvalue();
+}
+inline const ::std::string& CommandSetGridColumnNameArchive::oldvalue() const {
+  return *oldvalue_;
+}
+inline void CommandSetGridColumnNameArchive::set_oldvalue(const ::std::string& value) {
+  set_has_oldvalue();
+  if (oldvalue_ == &::google::protobuf::internal::kEmptyString) {
+    oldvalue_ = new ::std::string;
+  }
+  oldvalue_->assign(value);
+}
+inline void CommandSetGridColumnNameArchive::set_oldvalue(const char* value) {
+  set_has_oldvalue();
+  if (oldvalue_ == &::google::protobuf::internal::kEmptyString) {
+    oldvalue_ = new ::std::string;
+  }
+  oldvalue_->assign(value);
+}
+inline void CommandSetGridColumnNameArchive::set_oldvalue(const char* value, size_t size) {
+  set_has_oldvalue();
+  if (oldvalue_ == &::google::protobuf::internal::kEmptyString) {
+    oldvalue_ = new ::std::string;
+  }
+  oldvalue_->assign(reinterpret_cast<const char*>(value), size);
+}
+inline ::std::string* CommandSetGridColumnNameArchive::mutable_oldvalue() {
+  set_has_oldvalue();
+  if (oldvalue_ == &::google::protobuf::internal::kEmptyString) {
+    oldvalue_ = new ::std::string;
+  }
+  return oldvalue_;
+}
+inline ::std::string* CommandSetGridColumnNameArchive::release_oldvalue() {
+  clear_has_oldvalue();
+  if (oldvalue_ == &::google::protobuf::internal::kEmptyString) {
+    return NULL;
+  } else {
+    ::std::string* temp = oldvalue_;
+    oldvalue_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+    return temp;
+  }
+}
+inline void CommandSetGridColumnNameArchive::set_allocated_oldvalue(::std::string* oldvalue) {
+  if (oldvalue_ != &::google::protobuf::internal::kEmptyString) {
+    delete oldvalue_;
+  }
+  if (oldvalue) {
+    set_has_oldvalue();
+    oldvalue_ = oldvalue;
+  } else {
+    clear_has_oldvalue();
+    oldvalue_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+  }
+}
+
+// required string newvalue = 4;
+inline bool CommandSetGridColumnNameArchive::has_newvalue() const {
+  return (_has_bits_[0] & 0x00000008u) != 0;
+}
+inline void CommandSetGridColumnNameArchive::set_has_newvalue() {
+  _has_bits_[0] |= 0x00000008u;
+}
+inline void CommandSetGridColumnNameArchive::clear_has_newvalue() {
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline void CommandSetGridColumnNameArchive::clear_newvalue() {
+  if (newvalue_ != &::google::protobuf::internal::kEmptyString) {
+    newvalue_->clear();
+  }
+  clear_has_newvalue();
+}
+inline const ::std::string& CommandSetGridColumnNameArchive::newvalue() const {
+  return *newvalue_;
+}
+inline void CommandSetGridColumnNameArchive::set_newvalue(const ::std::string& value) {
+  set_has_newvalue();
+  if (newvalue_ == &::google::protobuf::internal::kEmptyString) {
+    newvalue_ = new ::std::string;
+  }
+  newvalue_->assign(value);
+}
+inline void CommandSetGridColumnNameArchive::set_newvalue(const char* value) {
+  set_has_newvalue();
+  if (newvalue_ == &::google::protobuf::internal::kEmptyString) {
+    newvalue_ = new ::std::string;
+  }
+  newvalue_->assign(value);
+}
+inline void CommandSetGridColumnNameArchive::set_newvalue(const char* value, size_t size) {
+  set_has_newvalue();
+  if (newvalue_ == &::google::protobuf::internal::kEmptyString) {
+    newvalue_ = new ::std::string;
+  }
+  newvalue_->assign(reinterpret_cast<const char*>(value), size);
+}
+inline ::std::string* CommandSetGridColumnNameArchive::mutable_newvalue() {
+  set_has_newvalue();
+  if (newvalue_ == &::google::protobuf::internal::kEmptyString) {
+    newvalue_ = new ::std::string;
+  }
+  return newvalue_;
+}
+inline ::std::string* CommandSetGridColumnNameArchive::release_newvalue() {
+  clear_has_newvalue();
+  if (newvalue_ == &::google::protobuf::internal::kEmptyString) {
+    return NULL;
+  } else {
+    ::std::string* temp = newvalue_;
+    newvalue_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+    return temp;
+  }
+}
+inline void CommandSetGridColumnNameArchive::set_allocated_newvalue(::std::string* newvalue) {
+  if (newvalue_ != &::google::protobuf::internal::kEmptyString) {
+    delete newvalue_;
+  }
+  if (newvalue) {
+    set_has_newvalue();
+    newvalue_ = newvalue;
+  } else {
+    clear_has_newvalue();
+    newvalue_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+  }
+}
+
+// -------------------------------------------------------------------
+
+// CommandSetGridRowNameArchive
+
+// required .TSCH.ChartCommandArchive super = 1;
+inline bool CommandSetGridRowNameArchive::has_super() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void CommandSetGridRowNameArchive::set_has_super() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void CommandSetGridRowNameArchive::clear_has_super() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void CommandSetGridRowNameArchive::clear_super() {
+  if (super_ != NULL) super_->::TSCH::ChartCommandArchive::Clear();
+  clear_has_super();
+}
+inline const ::TSCH::ChartCommandArchive& CommandSetGridRowNameArchive::super() const {
+  return super_ != NULL ? *super_ : *default_instance_->super_;
+}
+inline ::TSCH::ChartCommandArchive* CommandSetGridRowNameArchive::mutable_super() {
+  set_has_super();
+  if (super_ == NULL) super_ = new ::TSCH::ChartCommandArchive;
+  return super_;
+}
+inline ::TSCH::ChartCommandArchive* CommandSetGridRowNameArchive::release_super() {
+  clear_has_super();
+  ::TSCH::ChartCommandArchive* temp = super_;
+  super_ = NULL;
+  return temp;
+}
+inline void CommandSetGridRowNameArchive::set_allocated_super(::TSCH::ChartCommandArchive* super) {
+  delete super_;
+  super_ = super;
+  if (super) {
+    set_has_super();
+  } else {
+    clear_has_super();
+  }
+}
+
+// required uint32 rowindex = 2;
+inline bool CommandSetGridRowNameArchive::has_rowindex() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void CommandSetGridRowNameArchive::set_has_rowindex() {
+  _has_bits_[0] |= 0x00000002u;
+}
+inline void CommandSetGridRowNameArchive::clear_has_rowindex() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline void CommandSetGridRowNameArchive::clear_rowindex() {
+  rowindex_ = 0u;
+  clear_has_rowindex();
+}
+inline ::google::protobuf::uint32 CommandSetGridRowNameArchive::rowindex() const {
+  return rowindex_;
+}
+inline void CommandSetGridRowNameArchive::set_rowindex(::google::protobuf::uint32 value) {
+  set_has_rowindex();
+  rowindex_ = value;
+}
+
+// required string oldvalue = 3;
+inline bool CommandSetGridRowNameArchive::has_oldvalue() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void CommandSetGridRowNameArchive::set_has_oldvalue() {
+  _has_bits_[0] |= 0x00000004u;
+}
+inline void CommandSetGridRowNameArchive::clear_has_oldvalue() {
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline void CommandSetGridRowNameArchive::clear_oldvalue() {
+  if (oldvalue_ != &::google::protobuf::internal::kEmptyString) {
+    oldvalue_->clear();
+  }
+  clear_has_oldvalue();
+}
+inline const ::std::string& CommandSetGridRowNameArchive::oldvalue() const {
+  return *oldvalue_;
+}
+inline void CommandSetGridRowNameArchive::set_oldvalue(const ::std::string& value) {
+  set_has_oldvalue();
+  if (oldvalue_ == &::google::protobuf::internal::kEmptyString) {
+    oldvalue_ = new ::std::string;
+  }
+  oldvalue_->assign(value);
+}
+inline void CommandSetGridRowNameArchive::set_oldvalue(const char* value) {
+  set_has_oldvalue();
+  if (oldvalue_ == &::google::protobuf::internal::kEmptyString) {
+    oldvalue_ = new ::std::string;
+  }
+  oldvalue_->assign(value);
+}
+inline void CommandSetGridRowNameArchive::set_oldvalue(const char* value, size_t size) {
+  set_has_oldvalue();
+  if (oldvalue_ == &::google::protobuf::internal::kEmptyString) {
+    oldvalue_ = new ::std::string;
+  }
+  oldvalue_->assign(reinterpret_cast<const char*>(value), size);
+}
+inline ::std::string* CommandSetGridRowNameArchive::mutable_oldvalue() {
+  set_has_oldvalue();
+  if (oldvalue_ == &::google::protobuf::internal::kEmptyString) {
+    oldvalue_ = new ::std::string;
+  }
+  return oldvalue_;
+}
+inline ::std::string* CommandSetGridRowNameArchive::release_oldvalue() {
+  clear_has_oldvalue();
+  if (oldvalue_ == &::google::protobuf::internal::kEmptyString) {
+    return NULL;
+  } else {
+    ::std::string* temp = oldvalue_;
+    oldvalue_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+    return temp;
+  }
+}
+inline void CommandSetGridRowNameArchive::set_allocated_oldvalue(::std::string* oldvalue) {
+  if (oldvalue_ != &::google::protobuf::internal::kEmptyString) {
+    delete oldvalue_;
+  }
+  if (oldvalue) {
+    set_has_oldvalue();
+    oldvalue_ = oldvalue;
+  } else {
+    clear_has_oldvalue();
+    oldvalue_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+  }
+}
+
+// required string newvalue = 4;
+inline bool CommandSetGridRowNameArchive::has_newvalue() const {
+  return (_has_bits_[0] & 0x00000008u) != 0;
+}
+inline void CommandSetGridRowNameArchive::set_has_newvalue() {
+  _has_bits_[0] |= 0x00000008u;
+}
+inline void CommandSetGridRowNameArchive::clear_has_newvalue() {
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline void CommandSetGridRowNameArchive::clear_newvalue() {
+  if (newvalue_ != &::google::protobuf::internal::kEmptyString) {
+    newvalue_->clear();
+  }
+  clear_has_newvalue();
+}
+inline const ::std::string& CommandSetGridRowNameArchive::newvalue() const {
+  return *newvalue_;
+}
+inline void CommandSetGridRowNameArchive::set_newvalue(const ::std::string& value) {
+  set_has_newvalue();
+  if (newvalue_ == &::google::protobuf::internal::kEmptyString) {
+    newvalue_ = new ::std::string;
+  }
+  newvalue_->assign(value);
+}
+inline void CommandSetGridRowNameArchive::set_newvalue(const char* value) {
+  set_has_newvalue();
+  if (newvalue_ == &::google::protobuf::internal::kEmptyString) {
+    newvalue_ = new ::std::string;
+  }
+  newvalue_->assign(value);
+}
+inline void CommandSetGridRowNameArchive::set_newvalue(const char* value, size_t size) {
+  set_has_newvalue();
+  if (newvalue_ == &::google::protobuf::internal::kEmptyString) {
+    newvalue_ = new ::std::string;
+  }
+  newvalue_->assign(reinterpret_cast<const char*>(value), size);
+}
+inline ::std::string* CommandSetGridRowNameArchive::mutable_newvalue() {
+  set_has_newvalue();
+  if (newvalue_ == &::google::protobuf::internal::kEmptyString) {
+    newvalue_ = new ::std::string;
+  }
+  return newvalue_;
+}
+inline ::std::string* CommandSetGridRowNameArchive::release_newvalue() {
+  clear_has_newvalue();
+  if (newvalue_ == &::google::protobuf::internal::kEmptyString) {
+    return NULL;
+  } else {
+    ::std::string* temp = newvalue_;
+    newvalue_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+    return temp;
+  }
+}
+inline void CommandSetGridRowNameArchive::set_allocated_newvalue(::std::string* newvalue) {
+  if (newvalue_ != &::google::protobuf::internal::kEmptyString) {
+    delete newvalue_;
+  }
+  if (newvalue) {
+    set_has_newvalue();
+    newvalue_ = newvalue;
+  } else {
+    clear_has_newvalue();
+    newvalue_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+  }
+}
+
+// -------------------------------------------------------------------
+
+// CommandReplaceCustomFormatArchive_FormatObjectMutation
+
+// optional .TSCH.StyleOwnerType style_owner_type = 1;
+inline bool CommandReplaceCustomFormatArchive_FormatObjectMutation::has_style_owner_type() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void CommandReplaceCustomFormatArchive_FormatObjectMutation::set_has_style_owner_type() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void CommandReplaceCustomFormatArchive_FormatObjectMutation::clear_has_style_owner_type() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void CommandReplaceCustomFormatArchive_FormatObjectMutation::clear_style_owner_type() {
+  style_owner_type_ = 1;
+  clear_has_style_owner_type();
+}
+inline ::TSCH::StyleOwnerType CommandReplaceCustomFormatArchive_FormatObjectMutation::style_owner_type() const {
+  return static_cast< ::TSCH::StyleOwnerType >(style_owner_type_);
+}
+inline void CommandReplaceCustomFormatArchive_FormatObjectMutation::set_style_owner_type(::TSCH::StyleOwnerType value) {
+  assert(::TSCH::StyleOwnerType_IsValid(value));
+  set_has_style_owner_type();
+  style_owner_type_ = value;
+}
+
+// optional uint32 style_owner_index = 2;
+inline bool CommandReplaceCustomFormatArchive_FormatObjectMutation::has_style_owner_index() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void CommandReplaceCustomFormatArchive_FormatObjectMutation::set_has_style_owner_index() {
+  _has_bits_[0] |= 0x00000002u;
+}
+inline void CommandReplaceCustomFormatArchive_FormatObjectMutation::clear_has_style_owner_index() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline void CommandReplaceCustomFormatArchive_FormatObjectMutation::clear_style_owner_index() {
+  style_owner_index_ = 0u;
+  clear_has_style_owner_index();
+}
+inline ::google::protobuf::uint32 CommandReplaceCustomFormatArchive_FormatObjectMutation::style_owner_index() const {
+  return style_owner_index_;
+}
+inline void CommandReplaceCustomFormatArchive_FormatObjectMutation::set_style_owner_index(::google::protobuf::uint32 value) {
+  set_has_style_owner_index();
+  style_owner_index_ = value;
+}
+
+// optional uint32 format_object_property = 3;
+inline bool CommandReplaceCustomFormatArchive_FormatObjectMutation::has_format_object_property() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void CommandReplaceCustomFormatArchive_FormatObjectMutation::set_has_format_object_property() {
+  _has_bits_[0] |= 0x00000004u;
+}
+inline void CommandReplaceCustomFormatArchive_FormatObjectMutation::clear_has_format_object_property() {
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline void CommandReplaceCustomFormatArchive_FormatObjectMutation::clear_format_object_property() {
+  format_object_property_ = 0u;
+  clear_has_format_object_property();
+}
+inline ::google::protobuf::uint32 CommandReplaceCustomFormatArchive_FormatObjectMutation::format_object_property() const {
+  return format_object_property_;
+}
+inline void CommandReplaceCustomFormatArchive_FormatObjectMutation::set_format_object_property(::google::protobuf::uint32 value) {
+  set_has_format_object_property();
+  format_object_property_ = value;
+}
+
+// optional .TSK.FormatStructArchive format_object = 4;
+inline bool CommandReplaceCustomFormatArchive_FormatObjectMutation::has_format_object() const {
+  return (_has_bits_[0] & 0x00000008u) != 0;
+}
+inline void CommandReplaceCustomFormatArchive_FormatObjectMutation::set_has_format_object() {
+  _has_bits_[0] |= 0x00000008u;
+}
+inline void CommandReplaceCustomFormatArchive_FormatObjectMutation::clear_has_format_object() {
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline void CommandReplaceCustomFormatArchive_FormatObjectMutation::clear_format_object() {
+  if (format_object_ != NULL) format_object_->::TSK::FormatStructArchive::Clear();
+  clear_has_format_object();
+}
+inline const ::TSK::FormatStructArchive& CommandReplaceCustomFormatArchive_FormatObjectMutation::format_object() const {
+  return format_object_ != NULL ? *format_object_ : *default_instance_->format_object_;
+}
+inline ::TSK::FormatStructArchive* CommandReplaceCustomFormatArchive_FormatObjectMutation::mutable_format_object() {
+  set_has_format_object();
+  if (format_object_ == NULL) format_object_ = new ::TSK::FormatStructArchive;
+  return format_object_;
+}
+inline ::TSK::FormatStructArchive* CommandReplaceCustomFormatArchive_FormatObjectMutation::release_format_object() {
+  clear_has_format_object();
+  ::TSK::FormatStructArchive* temp = format_object_;
+  format_object_ = NULL;
+  return temp;
+}
+inline void CommandReplaceCustomFormatArchive_FormatObjectMutation::set_allocated_format_object(::TSK::FormatStructArchive* format_object) {
+  delete format_object_;
+  format_object_ = format_object;
+  if (format_object) {
+    set_has_format_object();
+  } else {
+    clear_has_format_object();
+  }
+}
+
+// -------------------------------------------------------------------
+
+// CommandReplaceCustomFormatArchive
+
+// required .TSCH.ChartCommandArchive super = 1;
+inline bool CommandReplaceCustomFormatArchive::has_super() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void CommandReplaceCustomFormatArchive::set_has_super() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void CommandReplaceCustomFormatArchive::clear_has_super() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void CommandReplaceCustomFormatArchive::clear_super() {
+  if (super_ != NULL) super_->::TSCH::ChartCommandArchive::Clear();
+  clear_has_super();
+}
+inline const ::TSCH::ChartCommandArchive& CommandReplaceCustomFormatArchive::super() const {
+  return super_ != NULL ? *super_ : *default_instance_->super_;
+}
+inline ::TSCH::ChartCommandArchive* CommandReplaceCustomFormatArchive::mutable_super() {
+  set_has_super();
+  if (super_ == NULL) super_ = new ::TSCH::ChartCommandArchive;
+  return super_;
+}
+inline ::TSCH::ChartCommandArchive* CommandReplaceCustomFormatArchive::release_super() {
+  clear_has_super();
+  ::TSCH::ChartCommandArchive* temp = super_;
+  super_ = NULL;
+  return temp;
+}
+inline void CommandReplaceCustomFormatArchive::set_allocated_super(::TSCH::ChartCommandArchive* super) {
+  delete super_;
+  super_ = super;
+  if (super) {
+    set_has_super();
+  } else {
+    clear_has_super();
+  }
+}
+
+// optional .TSP.Reference rollback_cmd = 2;
+inline bool CommandReplaceCustomFormatArchive::has_rollback_cmd() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void CommandReplaceCustomFormatArchive::set_has_rollback_cmd() {
+  _has_bits_[0] |= 0x00000002u;
+}
+inline void CommandReplaceCustomFormatArchive::clear_has_rollback_cmd() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline void CommandReplaceCustomFormatArchive::clear_rollback_cmd() {
+  if (rollback_cmd_ != NULL) rollback_cmd_->::TSP::Reference::Clear();
+  clear_has_rollback_cmd();
+}
+inline const ::TSP::Reference& CommandReplaceCustomFormatArchive::rollback_cmd() const {
+  return rollback_cmd_ != NULL ? *rollback_cmd_ : *default_instance_->rollback_cmd_;
+}
+inline ::TSP::Reference* CommandReplaceCustomFormatArchive::mutable_rollback_cmd() {
+  set_has_rollback_cmd();
+  if (rollback_cmd_ == NULL) rollback_cmd_ = new ::TSP::Reference;
+  return rollback_cmd_;
+}
+inline ::TSP::Reference* CommandReplaceCustomFormatArchive::release_rollback_cmd() {
+  clear_has_rollback_cmd();
+  ::TSP::Reference* temp = rollback_cmd_;
+  rollback_cmd_ = NULL;
+  return temp;
+}
+inline void CommandReplaceCustomFormatArchive::set_allocated_rollback_cmd(::TSP::Reference* rollback_cmd) {
+  delete rollback_cmd_;
+  rollback_cmd_ = rollback_cmd;
+  if (rollback_cmd) {
+    set_has_rollback_cmd();
+  } else {
+    clear_has_rollback_cmd();
+  }
+}
+
+// optional .TSK.FormatStructArchive old_format_object = 3;
+inline bool CommandReplaceCustomFormatArchive::has_old_format_object() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void CommandReplaceCustomFormatArchive::set_has_old_format_object() {
+  _has_bits_[0] |= 0x00000004u;
+}
+inline void CommandReplaceCustomFormatArchive::clear_has_old_format_object() {
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline void CommandReplaceCustomFormatArchive::clear_old_format_object() {
+  if (old_format_object_ != NULL) old_format_object_->::TSK::FormatStructArchive::Clear();
+  clear_has_old_format_object();
+}
+inline const ::TSK::FormatStructArchive& CommandReplaceCustomFormatArchive::old_format_object() const {
+  return old_format_object_ != NULL ? *old_format_object_ : *default_instance_->old_format_object_;
+}
+inline ::TSK::FormatStructArchive* CommandReplaceCustomFormatArchive::mutable_old_format_object() {
+  set_has_old_format_object();
+  if (old_format_object_ == NULL) old_format_object_ = new ::TSK::FormatStructArchive;
+  return old_format_object_;
+}
+inline ::TSK::FormatStructArchive* CommandReplaceCustomFormatArchive::release_old_format_object() {
+  clear_has_old_format_object();
+  ::TSK::FormatStructArchive* temp = old_format_object_;
+  old_format_object_ = NULL;
+  return temp;
+}
+inline void CommandReplaceCustomFormatArchive::set_allocated_old_format_object(::TSK::FormatStructArchive* old_format_object) {
+  delete old_format_object_;
+  old_format_object_ = old_format_object;
+  if (old_format_object) {
+    set_has_old_format_object();
+  } else {
+    clear_has_old_format_object();
+  }
+}
+
+// optional .TSK.FormatStructArchive new_format_object = 4;
+inline bool CommandReplaceCustomFormatArchive::has_new_format_object() const {
+  return (_has_bits_[0] & 0x00000008u) != 0;
+}
+inline void CommandReplaceCustomFormatArchive::set_has_new_format_object() {
+  _has_bits_[0] |= 0x00000008u;
+}
+inline void CommandReplaceCustomFormatArchive::clear_has_new_format_object() {
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline void CommandReplaceCustomFormatArchive::clear_new_format_object() {
+  if (new_format_object_ != NULL) new_format_object_->::TSK::FormatStructArchive::Clear();
+  clear_has_new_format_object();
+}
+inline const ::TSK::FormatStructArchive& CommandReplaceCustomFormatArchive::new_format_object() const {
+  return new_format_object_ != NULL ? *new_format_object_ : *default_instance_->new_format_object_;
+}
+inline ::TSK::FormatStructArchive* CommandReplaceCustomFormatArchive::mutable_new_format_object() {
+  set_has_new_format_object();
+  if (new_format_object_ == NULL) new_format_object_ = new ::TSK::FormatStructArchive;
+  return new_format_object_;
+}
+inline ::TSK::FormatStructArchive* CommandReplaceCustomFormatArchive::release_new_format_object() {
+  clear_has_new_format_object();
+  ::TSK::FormatStructArchive* temp = new_format_object_;
+  new_format_object_ = NULL;
+  return temp;
+}
+inline void CommandReplaceCustomFormatArchive::set_allocated_new_format_object(::TSK::FormatStructArchive* new_format_object) {
+  delete new_format_object_;
+  new_format_object_ = new_format_object;
+  if (new_format_object) {
+    set_has_new_format_object();
+  } else {
+    clear_has_new_format_object();
+  }
+}
+
+// repeated .TSCH.CommandReplaceCustomFormatArchive.FormatObjectMutation forward_mutations = 5;
+inline int CommandReplaceCustomFormatArchive::forward_mutations_size() const {
+  return forward_mutations_.size();
+}
+inline void CommandReplaceCustomFormatArchive::clear_forward_mutations() {
+  forward_mutations_.Clear();
+}
+inline const ::TSCH::CommandReplaceCustomFormatArchive_FormatObjectMutation& CommandReplaceCustomFormatArchive::forward_mutations(int index) const {
+  return forward_mutations_.Get(index);
+}
+inline ::TSCH::CommandReplaceCustomFormatArchive_FormatObjectMutation* CommandReplaceCustomFormatArchive::mutable_forward_mutations(int index) {
+  return forward_mutations_.Mutable(index);
+}
+inline ::TSCH::CommandReplaceCustomFormatArchive_FormatObjectMutation* CommandReplaceCustomFormatArchive::add_forward_mutations() {
+  return forward_mutations_.Add();
+}
+inline const ::google::protobuf::RepeatedPtrField< ::TSCH::CommandReplaceCustomFormatArchive_FormatObjectMutation >&
+CommandReplaceCustomFormatArchive::forward_mutations() const {
+  return forward_mutations_;
+}
+inline ::google::protobuf::RepeatedPtrField< ::TSCH::CommandReplaceCustomFormatArchive_FormatObjectMutation >*
+CommandReplaceCustomFormatArchive::mutable_forward_mutations() {
+  return &forward_mutations_;
+}
+
+// repeated .TSCH.CommandReplaceCustomFormatArchive.FormatObjectMutation reverse_mutations = 6;
+inline int CommandReplaceCustomFormatArchive::reverse_mutations_size() const {
+  return reverse_mutations_.size();
+}
+inline void CommandReplaceCustomFormatArchive::clear_reverse_mutations() {
+  reverse_mutations_.Clear();
+}
+inline const ::TSCH::CommandReplaceCustomFormatArchive_FormatObjectMutation& CommandReplaceCustomFormatArchive::reverse_mutations(int index) const {
+  return reverse_mutations_.Get(index);
+}
+inline ::TSCH::CommandReplaceCustomFormatArchive_FormatObjectMutation* CommandReplaceCustomFormatArchive::mutable_reverse_mutations(int index) {
+  return reverse_mutations_.Mutable(index);
+}
+inline ::TSCH::CommandReplaceCustomFormatArchive_FormatObjectMutation* CommandReplaceCustomFormatArchive::add_reverse_mutations() {
+  return reverse_mutations_.Add();
+}
+inline const ::google::protobuf::RepeatedPtrField< ::TSCH::CommandReplaceCustomFormatArchive_FormatObjectMutation >&
+CommandReplaceCustomFormatArchive::reverse_mutations() const {
+  return reverse_mutations_;
+}
+inline ::google::protobuf::RepeatedPtrField< ::TSCH::CommandReplaceCustomFormatArchive_FormatObjectMutation >*
+CommandReplaceCustomFormatArchive::mutable_reverse_mutations() {
+  return &reverse_mutations_;
 }
 
 

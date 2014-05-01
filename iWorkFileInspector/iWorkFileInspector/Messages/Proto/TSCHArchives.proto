@@ -48,6 +48,7 @@ message ChartPasteboardAdditionsArchive {
   extend .TSCH.ChartArchive {
     optional uint32 preset_index_for_pasteboard = 10000;
     optional bytes preset_uuid_for_pasteboard = 10001;
+    optional .TSP.Reference custom_format_list_for_pasteboard = 10003;
   }
 }
 
@@ -55,13 +56,24 @@ message ChartGridArchive {
   message GridRow {
     message GridValue {
       optional double numeric_value = 1;
-      optional double date_value = 2;
+      optional double date_value_1_0 = 2;
+      optional double duration_value = 3;
+      optional double date_value = 4;
     }
     repeated .TSCH.ChartGridArchive.GridRow.GridValue value = 1;
+  }
+  message ChartGridRowColumnIdMap {
+    message Entry {
+      required string uniqueId = 1;
+      required uint32 index = 2;
+    }
+    repeated .TSCH.ChartGridArchive.ChartGridRowColumnIdMap.Entry row_id_map = 1;
+    repeated .TSCH.ChartGridArchive.ChartGridRowColumnIdMap.Entry column_id_map = 2;
   }
   repeated string row_name = 1;
   repeated string column_name = 2;
   repeated .TSCH.ChartGridArchive.GridRow grid_row = 3;
+  optional .TSCH.ChartGridArchive.ChartGridRowColumnIdMap idMap = 4;
 }
 
 message ChartMediatorArchive {
@@ -140,6 +152,7 @@ message ChartUIState {
   optional int32 cde_last_col_selected = 3;
   optional int32 cde_last_row_count = 4;
   optional int32 cde_last_col_count = 5;
+  optional bool cde_use_full_keyboard = 6;
 }
 
 message ChartFormatStructExtensions {
@@ -151,5 +164,16 @@ message ChartFormatStructExtensions {
 
 extend .TSCH.ChartArchive {
   optional bool scene3d_settings_constant_depth = 10002;
+  optional string last_applied_fill_set_lookup_string = 10004;
+}
+
+extend .TSCH.ChartSeriesNonStyleArchive {
+  optional bool series_supports_custom_number_format = 10001;
+  optional bool series_supports_custom_date_format = 10002;
+}
+
+extend .TSCH.ChartAxisNonStyleArchive {
+  optional bool axis_supports_custom_number_format = 10001;
+  optional bool axis_supports_custom_date_format = 10002;
 }
 
