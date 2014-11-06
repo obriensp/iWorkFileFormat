@@ -31,18 +31,33 @@ NSString * const IWBundlePasswordVerifierFileName = @".iwpv2";
 
 - (instancetype)initWithURL:(NSURL *)fileURL decryptionKey:(NSData *)decryptionKey
 {
-	self = [super init];
-	if (self == nil) {
-		return nil;
-	}
-	
-	_objectArchive = [[IWZipArchive alloc] initWithURL:[fileURL URLByAppendingPathComponent:IWBundleComponentZipFileName]];
-	if (_objectArchive == nil) {
-		return nil;
-	}
-	
-	_decryptionKey = decryptionKey;
-	
+    self = [super init];
+    if (self) {
+        _decryptionKey = decryptionKey;
+        
+        /*
+         The object archive can be in one of two places, depending
+         on which version of iWork was used:
+         
+         1. The top level file (iWork '14)
+         2. In the bundle zip component file (iWork '13)
+         */
+
+
+        // Start with iWork '13 structure
+        _objectArchive = [[IWZipArchive alloc] initWithURL:[fileURL URLByAppendingPathComponent:IWBundleComponentZipFileName]];
+        if (_objectArchive == nil) {
+            // Try again with iWork '14
+            _objectArchive = [[IWZipArchive alloc] initWithURL:fileURL];
+        }
+        
+        
+        if (_objectArchive == nil) {
+            return nil;
+        }
+    }
+    
+		
 	return self;
 }
 
