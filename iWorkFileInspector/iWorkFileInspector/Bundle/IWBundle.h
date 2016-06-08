@@ -7,6 +7,11 @@
 
 #import <Foundation/Foundation.h>
 
+typedef enum {
+    IWBundleType2015,
+    IWBundleType2013
+} IWBundleType;
+
 
 @class IWBundleProperties, IWPasswordVerifier;
 
@@ -16,6 +21,7 @@
 - (instancetype)initWithURL:(NSURL *)fileURL decryptionKey:(NSData *)decryptionKey;
 
 @property(readonly) NSArray *componentNames;
+@property (assign, readonly) IWBundleType bundleType;
 
 - (NSData *)dataForComponentName:(NSString *)componentName;
 

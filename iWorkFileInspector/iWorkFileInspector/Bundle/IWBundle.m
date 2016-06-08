@@ -36,7 +36,25 @@ NSString * const IWBundlePasswordVerifierFileName = @".iwpv2";
 		return nil;
 	}
 	
-	_objectArchive = [[IWZipArchive alloc] initWithURL:[fileURL URLByAppendingPathComponent:IWBundleComponentZipFileName]];
+    BOOL isDirectory;
+    
+    if ([[NSFileManager defaultManager] fileExistsAtPath:[fileURL.absoluteString stringByReplacingOccurrencesOfString:@"file://" withString:@"/"] isDirectory:&isDirectory]) {
+        if (!isDirectory) {
+            _bundleType = IWBundleType2015;
+        }else{
+            _bundleType = IWBundleType2013;
+        }
+        
+    }else{
+        return nil;
+    }
+    
+    if (self.bundleType == IWBundleType2013) {
+        _objectArchive = [[IWZipArchive alloc] initWithURL:[fileURL URLByAppendingPathComponent:IWBundleComponentZipFileName]];
+    }else if (self.bundleType == IWBundleType2015) {
+        _objectArchive = [[IWZipArchive alloc] initWithURL:fileURL];
+    }
+	
 	if (_objectArchive == nil) {
 		return nil;
 	}
@@ -91,12 +109,23 @@ NSString * const IWBundlePasswordVerifierFileName = @".iwpv2";
 
 + (BOOL)validBundleExistsAtURL:(NSURL *)fileURL
 {
-	if (!fileURL.isFileURL) {
-		return NO;
-	}
-	
-	NSURL *componentArchiveURL = [fileURL URLByAppendingPathComponent:IWBundleComponentZipFileName];
-	return [componentArchiveURL checkResourceIsReachableAndReturnError:NULL];
+    //For 2015+
+    BOOL isDirectory;
+    if (![[NSFileManager defaultManager] fileExistsAtPath:[fileURL.absoluteString stringByReplacingOccurrencesOfString:@"file://" withString:@"/"] isDirectory:&isDirectory]) {
+        return NO;
+        
+    }
+	if (!isDirectory) {
+        IWZipArchive *tempArchive = [[IWZipArchive alloc] initWithURL:fileURL];
+        if (tempArchive && [tempArchive dataForEntryName:@"Index/Document.iwa"]) {
+            return YES;
+        }
+        return NO;
+        
+    }else{ //For 2013
+        NSURL *componentArchiveURL = [fileURL URLByAppendingPathComponent:IWBundleComponentZipFileName];
+        return [componentArchiveURL checkResourceIsReachableAndReturnError:NULL];
+    }
 }
 
 + (IWBundleProperties *)propertiesForBundleURL:(NSURL *)fileURL

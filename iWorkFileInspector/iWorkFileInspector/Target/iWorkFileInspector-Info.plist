@@ -8,11 +8,13 @@
 	<array>
 		<dict>
 			<key>CFBundleTypeIconFile</key>
-			<string></string>
+			<string>KeyDocument</string>
 			<key>CFBundleTypeName</key>
 			<string>com.apple.iwork.keynote.document</string>
 			<key>CFBundleTypeRole</key>
-			<string>Viewer</string>
+			<string>Editor</string>
+			<key>LSHandlerRank</key>
+			<string>Owner</string>
 			<key>LSItemContentTypes</key>
 			<array>
 				<string>com.apple.iwork.keynote.key</string>
@@ -21,17 +23,43 @@
 			<string>IWDocument</string>
 			<key>NSIsRelatedItemType</key>
 			<true/>
+			<key>NSUbiquitousDocumentUserActivityType</key>
+			<string>com.apple.keynote.documentEditing</string>
 		</dict>
 		<dict>
 			<key>CFBundleTypeIconFile</key>
-			<string></string>
+			<string>KeyDocument</string>
 			<key>CFBundleTypeName</key>
-			<string>com.apple.iwork.pages.document</string>
+			<string>com.apple.iwork.keynote.alt-document</string>
 			<key>CFBundleTypeRole</key>
-			<string>Viewer</string>
+			<string>Editor</string>
+			<key>LSHandlerRank</key>
+			<string>Owner</string>
 			<key>LSItemContentTypes</key>
 			<array>
-				<string>com.apple.iwork.pages.pages</string>
+				<string>com.apple.iwork.keynote.sffkey</string>
+				<string>com.apple.iwork.keynote.key-tef</string>
+			</array>
+			<key>NSDocumentClass</key>
+			<string>IWDocument</string>
+			<key>NSIsRelatedItemType</key>
+			<true/>
+			<key>NSUbiquitousDocumentUserActivityType</key>
+			<string>com.apple.keynote.documentEditing</string>
+		</dict>
+		<dict>
+			<key>CFBundleTypeIconFile</key>
+			<string>KeynoteTheme</string>
+			<key>CFBundleTypeName</key>
+			<string>com.apple.iwork.keynote.template</string>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>LSHandlerRank</key>
+			<string>Owner</string>
+			<key>LSItemContentTypes</key>
+			<array>
+				<string>com.apple.iwork.keynote.kth</string>
+				<string>com.apple.iwork.keynote.sffkth</string>
 			</array>
 			<key>NSDocumentClass</key>
 			<string>IWDocument</string>
@@ -39,20 +67,40 @@
 			<true/>
 		</dict>
 		<dict>
-			<key>CFBundleTypeIconFile</key>
-			<string></string>
 			<key>CFBundleTypeName</key>
-			<string>com.apple.iwork.numbers.document</string>
+			<string>com.apple.iwork.keynote.powerpoint</string>
 			<key>CFBundleTypeRole</key>
-			<string>Viewer</string>
+			<string>Editor</string>
+			<key>LSHandlerRank</key>
+			<string>Default</string>
 			<key>LSItemContentTypes</key>
 			<array>
-				<string>com.apple.iwork.numbers.numbers</string>
+				<string>com.microsoft.powerpoint.ppt</string>
+				<string>org.openxmlformats.presentationml.presentation</string>
+				<string>org.openxmlformats.presentationml.presentation.macroenabled</string>
+				<string>com.microsoft.powerpoint.pps</string>
+				<string>org.openxmlformats.presentationml.slideshow</string>
+				<string>org.openxmlformats.presentationml.slideshow.macroenabled</string>
+				<string>com.microsoft.powerpoint.pot</string>
+				<string>org.openxmlformats.presentationml.template</string>
+				<string>org.openxmlformats.presentationml.template.macroenabled</string>
 			</array>
 			<key>NSDocumentClass</key>
 			<string>IWDocument</string>
-			<key>NSIsRelatedItemType</key>
-			<true/>
+		</dict>
+		<dict>
+			<key>CFBundleTypeName</key>
+			<string>com.apple.iwork.keynote.pd-import</string>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>LSItemContentTypes</key>
+			<array>
+				<string>com.apple.iwork.keynote.kpdc</string>
+			</array>
+			<key>LSTypeIsPackage</key>
+			<integer>0</integer>
+			<key>NSDocumentClass</key>
+			<string>KNMacPresenterDisplayConfigurationDocument</string>
 		</dict>
 	</array>
 	<key>CFBundleExecutable</key>
@@ -93,6 +141,26 @@
 			<string>KeyDocument</string>
 			<key>UTTypeIdentifier</key>
 			<string>com.apple.iwork.keynote.key</string>
+			<key>UTTypeTagSpecification</key>
+			<dict>
+				<key>public.filename-extension</key>
+				<array>
+					<string>key</string>
+				</array>
+			</dict>
+		</dict>
+		<dict>
+			<key>UTTypeConformsTo</key>
+			<array>
+				<string>com.apple.package</string>
+				<string>public.presentation</string>
+			</array>
+			<key>UTTypeDescription</key>
+			<string>Keynote Presentation</string>
+			<key>UTTypeIconFile</key>
+			<string>KeyDocument</string>
+			<key>UTTypeIdentifier</key>
+			<string>com.apple.keynote.key</string>
 			<key>UTTypeTagSpecification</key>
 			<dict>
 				<key>public.filename-extension</key>

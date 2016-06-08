@@ -76,12 +76,8 @@
 
 - (BOOL)readFromURL:(NSURL *)url ofType:(NSString *)typeName error:(NSError **)outError
 {
-	if (!url.isFileURL) {
-		return NO;
-	}
-	
-	// Make sure it's an iWork '13 file. We don't support other iWork formats.
-	if (![IWBundle validBundleExistsAtURL:url]) {
+	// Make sure it's an iWork file (2013 or 2015)
+    if (![IWBundle validBundleExistsAtURL:url]) {
 		return NO;
 	}
 	
@@ -131,11 +127,9 @@
 	// Load the messages from each component.
 	for (NSString *componentName in _componentNames) {
 		NSArray *documentMessages = [self readDocumentMessagesForComponentName:componentName messageTypeRegistry:messageTypeRegistry];
-		if (documentMessages == nil) {
-			return NO;
-		}
-		
-		documentMessagesByComponentName[componentName] = documentMessages;
+		if (documentMessages != nil) {
+            documentMessagesByComponentName[componentName] = documentMessages;
+        }
 	}
 	
 	_documentMessagesByComponentName = documentMessagesByComponentName;
